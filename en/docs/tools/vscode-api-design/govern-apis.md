@@ -9,7 +9,7 @@ tags:
   - api-design
   - governance
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-06-23
+last_updated: 2026-08-10
 content_type: "how-to"
 ---
 
@@ -74,6 +74,55 @@ You can resolve findings using:
 
 - Some fixes are **breaking** (for example path renames). Treat those as API **versioning** decisions, not silent edits.
 - Security items may require **real** URLs, policies, or auth server metadata—do not invent production values with AI.
+
+## Custom rulesets and overrides
+
+By default, API Designer runs the three bundled Spectral rulesets listed above. You can point it at your own ruleset folder instead, either to override individual rules or to replace a report's rules entirely.
+
+**To configure it from the Settings UI:**
+
+1. Open Settings: `Ctrl+,` / `Cmd+,`, or open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **Preferences: Open Settings (UI)**.
+2. Search for `apiDesigner.spectral.rulesetFolder`.
+3. Choose the **User** tab to apply it across all of VS Code, or the **Workspace** tab to scope it to the current project only.
+4. Enter a GitHub folder URL (for example `https://github.com/<org>/<repo>/tree/main/<path>`) or an absolute local directory path, then reload the folder if prompted.
+
+**To configure it via `settings.json` directly:**
+
+1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
+2. Run **Preferences: Open User Settings (JSON)** for a setting shared across all of VS Code, or **Preferences: Open Workspace Settings (JSON)** to scope it to the current project only.
+3. Add the setting:
+
+   ```json
+   {
+     "apiDesigner.spectral.rulesetFolder": "https://github.com/<org>/<repo>/tree/main/<path>"
+   }
+   ```
+
+Use the Workspace option (`.vscode/settings.json`) when different projects need different ruleset folders — otherwise a single User-level setting applies to every workspace you open.
+
+**Start from the bundled rulesets.** The simplest way to build a custom ruleset is to copy WSO2's bundled ones and customize them:
+
+[wso2/vscode-extensions → workspaces/api-designer/api-designer-extension/spectral-rulesets](https://github.com/wso2/vscode-extensions/tree/main/workspaces/api-designer/api-designer-extension/spectral-rulesets)
+
+**Name your file to match the report you're overriding:**
+
+| Report | Required filename |
+|---|---|
+| WSO2 REST API AI Readiness Guidelines | `ai-readiness.yaml` |
+| OWASP API Security Top 10 | `owasp_top_10.yaml` |
+| WSO2 REST API Design Guidelines | `wso2_rest_api_design_guidelines.yaml` |
+
+If a custom ruleset fails to load or parse, API Designer shows a warning and falls back to the bundled default for that report, so analysis is never blocked.
+
+**Debugging ruleset failures**
+
+If a report unexpectedly shows the bundled default instead of your custom ruleset, check the **API Designer** output channel for the underlying error:
+
+1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **View: Toggle Output** (or use **View > Output** from the menu).
+2. In the output panel's channel dropdown (top-right), select **API Designer**.
+3. Re-run analysis and look for a `[Governance]` or `[Spectral]` log line describing the failure — for example a YAML parse error, a missing `rules` property in the ruleset, or a 401/403 error fetching a private GitHub folder.
+
+Fix the reported issue in your ruleset file (or your GitHub folder's access permissions), then re-run analysis to confirm the custom ruleset now loads.
 
 ## Related topics
 
