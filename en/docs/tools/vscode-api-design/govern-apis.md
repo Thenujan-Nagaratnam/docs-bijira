@@ -112,6 +112,8 @@ Use the Workspace option (`.vscode/settings.json`) when different projects need 
 | OWASP API Security Top 10 | `owasp_top_10.yaml` |
 | WSO2 REST API Design Guidelines | `wso2_rest_api_design_guidelines.yaml` |
 
+**Overriding an existing rule vs. adding a new one:** editing an existing rule works correctly across all three reports. If you want to add new rules to OWASP, use the same format as the bundled rules — `owasp:apiN:2023-<description>` (for example `owasp:api1:2023-custom-check`) — so they're categorized correctly. For REST API Design Guidelines, new rules are grouped under a general **Others** category instead of a specific theme.
+
 If a custom ruleset fails to load or parse, API Designer shows a warning and falls back to the bundled default for that report, so analysis is never blocked.
 
 **Debugging ruleset failures**
