@@ -8,7 +8,7 @@ tags:
   - quickstart
   - docker
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-05
+last_updated: 2026-08-11
 content_type: "quickstart"
 ---
 
