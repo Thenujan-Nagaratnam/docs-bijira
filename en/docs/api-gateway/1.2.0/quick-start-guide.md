@@ -1,5 +1,5 @@
 ---
-title: "API Platform Gateway Quick Start Guide"
+title: "API Platform Gateway quick start guide"
 description: "Run API Platform Gateway with Docker Compose, deploy your first REST API configuration, and invoke it through the gateway in minutes."
 canonical_url: https://wso2.com/api-platform/docs/api-gateway/quick-start-guide/
 md_url: https://wso2.com/api-platform/docs/api-gateway/quick-start-guide.md
@@ -8,11 +8,11 @@ tags:
   - quickstart
   - docker
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-10
+last_updated: 2026-08-11
 content_type: "quickstart"
 ---
 
-# Quick Start Guide
+# Quick start guide
 
 ### Using Docker Compose (Recommended)
 
@@ -59,7 +59,7 @@ Go inside the root directory of the Gateway distribution folder:
 cd wso2apip-api-gateway-1.2.0/
 ```
 
-### Step 2: Run the Setup Script
+### Step 2: Run the setup script
 Run the following script for a one-time setup.
 
 ```bash
@@ -75,12 +75,12 @@ This provisions the following:
 
 The script prints the admin password once — copy it.
 
-### Step 3: Export Admin Credentials
+### Step 3: Export admin credentials
 Export the admin credentials so the management-API calls below can authenticate. 
 The username defaults to `admin`. Use the password the setup script `setup.sh` printed 
 in the preceding step.
 
-```
+```bash
 export ADMIN_USERNAME=admin
 export ADMIN_PASSWORD='<the password scripts/setup.sh printed>'
 ```
@@ -89,11 +89,11 @@ export ADMIN_PASSWORD='<the password scripts/setup.sh printed>'
 Start the complete gateway stack using Docker Compose:
 
 ```bash
-docker compose up
+docker compose up -d
 ```
 
 ### Step 5: Verify the Gateway
-Verify the gateway controller admin endpoint is running and healthy:
+Verify that the Gateway Controller is healthy::
 
 ```bash
 curl http://localhost:9094/api/admin/v1/health
