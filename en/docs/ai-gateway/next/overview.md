@@ -8,7 +8,7 @@ tags:
   - llm
   - mcp
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-07
+last_updated: 2026-08-10
 content_type: "concept"
 ---
 
@@ -18,8 +18,8 @@ A gateway for managing and securing AI traffic, including Large Language Model (
 
 ## Quick Start
 
-- [LLM Quick Start Guide](./llm-proxy/quick-start-guide.md)—Install the gateway, confirm the Gateway Controller admin health endpoint reports it healthy, and route traffic to an LLM provider such as OpenAI.
-- [MCP Quick Start Guide](./mcp-proxy/quick-start-guide.md)—Install the gateway, confirm the Gateway Controller admin health endpoint reports it healthy, and route traffic to an MCP server.
+- [Quick Start Guide](quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to LLM providers like OpenAI
+- [MCP Quick Start Guide](mcp-proxy/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to MCP servers
 
 ## Key Concepts
 
@@ -118,11 +118,11 @@ The following table lists the AI Gateway documentation sections and what each on
 
 | Section | Description |
 |---------|-------------|
-| [LLM](./llm-proxy/quick-start-guide.md) | LLM provider configuration, guardrails, prompt management, and semantic caching |
-| [MCP](./mcp-proxy/quick-start-guide.md) | MCP proxy setup and policies |
-| [Real-time AI streaming](./streaming-responses.md) | Streamed responses across providers and proxies, and how policies and analytics behave |
-| [Observability](./observability/logging.md) | Logging and tracing configuration |
-| [Analytics](./analytics/moesif-analytics.md) | Analytics integrations (Moesif) |
+| [LLM](quick-start-guide.md) | LLM provider configuration, guardrails, prompt management, and semantic caching |
+| [MCP](mcp-proxy/quick-start-guide.md) | MCP proxy setup and policies |
+| [Real-time AI streaming](streaming-responses.md) | Streamed responses across providers and proxies, and how policies and analytics behave |
+| [Observability](observability/logging.md) | Logging and tracing configuration |
+| [Analytics](analytics/moesif-analytics.md) | Analytics integrations (Moesif) |
 | [Policies and Guardrails](https://github.com/wso2/gateway-controllers/blob/main/docs/README.md) | Gateway policies and guardrails for AI traffic control |
 | [Gateway Controller Management API](./gateway-controller-management-api/overview.md) | REST API reference for managing LLM providers, LLM proxies, MCP proxies, certificates, and secrets |
 | [Production deployment](./deployment/production-deployment/overview.md) | High-availability Kubernetes deployment with Helm, an external database, replicated workloads, and AI workload tuning |

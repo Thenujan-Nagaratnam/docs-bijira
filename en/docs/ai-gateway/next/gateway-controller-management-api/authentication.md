@@ -1,5 +1,5 @@
 ---
-title: "Authentication and Authorization in Gateway Controller"
+title: "Secure the management API"
 description: "Configure Basic Auth or JWT/IDP authentication and role-based authorization for the AI Gateway Controller REST API."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-controller-management-api/authentication/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-controller-management-api/authentication.md
@@ -8,11 +8,11 @@ tags:
   - security
   - authentication
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-07
+last_updated: 2026-08-10
 content_type: "how-to"
 ---
 
-# Authentication & Authorization in Gateway Controller
+# Secure the management API
 
 ## Overview
 The Gateway Controller REST API (the control-plane API used to manage gateway configuration) can be protected using either locally configured users (Basic Auth) or an external Identity Provider (JWT validation via JWKS). Authorization is role-based and enforced per API route.

@@ -309,7 +309,7 @@
 ## AI Gateway (Standalone)
 
 - [AI Gateway Overview](https://wso2.com/api-platform/docs/ai-gateway/overview.md): Overview of the standalone AI Gateway: LLM proxy, MCP proxy, deployment, and observability
-- [LLM Proxy Quick Start](https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/quick-start-guide.md): Deploy the standalone AI Gateway and route your first LLM request
+- [AI Gateway Quick Start](https://wso2.com/api-platform/docs/ai-gateway/quick-start-guide.md): Deploy the standalone AI Gateway and route your first LLM request
 - [LLM Provider Templates](https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/llm-templates.md): Provider templates for OpenAI, Anthropic, Azure OpenAI, AWS Bedrock, Gemini, and Azure AI Foundry
 - [Semantic Caching](https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/semantic-caching.md): Cache LLM responses by semantic similarity in the standalone gateway
 - [Model Round Robin](https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/load-balancing/model-round-robin.md): Distribute LLM traffic evenly across multiple providers or model endpoints

@@ -9,7 +9,7 @@ tags:
   - mcp
   - streaming
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-05
+last_updated: 2026-08-10
 content_type: "concept"
 ---
 
@@ -98,6 +98,6 @@ If a streamed response carries no `usage` block, the gateway has no token counts
 
 ## Related documentation
 
-- [LLM Proxy Quick Start Guide](llm-proxy/quick-start-guide.md) — deploy a provider and a proxy, then send your first request
+- [Quick Start Guide](quick-start-guide.md) — deploy a provider and a proxy, then send your first request
 - [MCP Proxy Quick Start Guide](mcp-proxy/quick-start-guide.md) — deploy an MCP proxy
 - [Sentence Count Guardrail](llm-proxy/guardrails/sentence-count.md) — a guardrail that gates a stream until it can evaluate the content

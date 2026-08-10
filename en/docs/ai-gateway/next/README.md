@@ -18,7 +18,7 @@ A gateway for managing and securing AI traffic, including Large Language Model (
 
 ## Quick Start
 
-- [LLM Quick Start Guide](llm-proxy/quick-start-guide.md) - Set up the gateway and route traffic to LLM providers like OpenAI
+- [LLM Quick Start Guide](quick-start-guide.md) - Set up the gateway and route traffic to LLM providers like OpenAI
 - [MCP Quick Start Guide](mcp-proxy/quick-start-guide.md) - Set up the gateway and route traffic to MCP servers
 
 ## Key Concepts
