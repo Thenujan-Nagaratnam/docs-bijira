@@ -8,7 +8,7 @@ tags:
   - quickstart
   - docker
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-05
+last_updated: 2026-08-11
 content_type: "quickstart"
 ---
 
@@ -44,8 +44,8 @@ docker compose version
 Run this command in your terminal to download and unzip the API Platform Gateway distribution:
 
 ```bash
-wget https://github.com/wso2/api-platform/releases/download/gateway/v1.1.0/wso2apip-api-gateway-1.1.0.zip
-unzip wso2apip-api-gateway-1.1.0.zip
+wget https://github.com/wso2/api-platform/releases/download/gateway/v1.0.0/wso2apip-api-gateway-1.0.0.zip
+unzip wso2apip-api-gateway-1.0.0.zip
 ```
 
 ### Step 2: Start the Gateway
@@ -53,14 +53,14 @@ unzip wso2apip-api-gateway-1.1.0.zip
 Navigate to the extracted directory and start the complete gateway stack using Docker Compose:
 
 ```bash
-cd wso2apip-api-gateway-1.1.0/
+cd wso2apip-api-gateway-1.0.0/
 docker compose up -d
 ```
 
 !!! tip "Port 8080, 8443, 9090, or 9094 already taken?"
     If the start command fails with a port binding error, identify what is already listening on the default ports:
 
-  On macOS or Linux, run:
+    On macOS or Linux, run:
 
     ```bash
     lsof -nP -iTCP:8080 -sTCP:LISTEN
@@ -69,11 +69,11 @@ docker compose up -d
     lsof -nP -iTCP:9094 -sTCP:LISTEN
     ```
 
-  On Windows PowerShell, run:
+    On Windows PowerShell, run:
 
-  ```powershell
-  Get-NetTCPConnection -State Listen -LocalPort 8080,8443,9090,9094 | Select-Object LocalAddress, LocalPort, OwningProcess
-  ```
+    ```powershell
+    Get-NetTCPConnection -State Listen -LocalPort 8080,8443,9090,9094 | Select-Object LocalAddress, LocalPort, OwningProcess
+    ```
 
     Stop the conflicting service if you don't need it. If you need to keep it running, change the host-side value of the relevant `ports:` mapping in `docker-compose.yaml`. Then use the remapped host port in the verification and test commands on this page.
 
