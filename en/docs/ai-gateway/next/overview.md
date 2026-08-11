@@ -8,7 +8,7 @@ tags:
   - llm
   - mcp
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-10
+last_updated: 2026-08-11
 content_type: "concept"
 ---
 
@@ -18,8 +18,8 @@ A gateway for managing and securing AI traffic, including Large Language Model (
 
 ## Quick Start
 
-- [Quick Start Guide](quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to LLM providers like OpenAI
-- [MCP Quick Start Guide](mcp-proxy/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to MCP servers
+- [Quick Start Guide](quick-start-guide.md)—Set up the gateway, verify the controller admin health endpoint, and route traffic to LLM providers like OpenAI
+- [MCP Quick Start Guide](mcp-proxy/quick-start-guide.md)—Set up the gateway, verify the controller admin health endpoint, and route traffic to MCP servers
 
 ## Key Concepts
 

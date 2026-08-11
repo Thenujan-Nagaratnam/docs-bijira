@@ -10,23 +10,23 @@ tags:
   - quickstart
   - docker
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-10
+last_updated: 2026-08-11
 content_type: "quickstart"
 ---
 
-# Quick Start Guide
+# Quick start guide
 
 This guide takes you from a downloaded distribution to a large language model (LLM) request routed through the API Platform AI Gateway. It then shows you how to govern that gateway from [AI Workspace](../../ai-workspace/next/overview.md), the control plane for AI traffic.
 
 ## Prerequisites
 
-A Docker-compatible container runtime such as:
+Use one of these Docker-compatible container runtimes:
 
 - [Docker Desktop](https://docs.docker.com/desktop/) (Windows / macOS)
 - [Podman Desktop](https://podman-desktop.io/) or [Podman](https://podman.io/docs/installation) (Windows / macOS / Linux)
 - [Rancher Desktop](https://rancherdesktop.io/) (Windows / macOS)
 - [Colima](https://github.com/abiosoft/colima) (macOS)
-- [Docker Engine](https://docs.docker.com/engine/install/) + [Compose plugin](https://docs.docker.com/compose/install/linux/) (Linux)
+- [Docker Engine](https://docs.docker.com/engine/install/) and [Compose plugin](https://docs.docker.com/compose/install/linux/) (Linux)
 
 These examples use `docker compose`. If you use another Compose-compatible runtime, use the equivalent commands.
 
@@ -49,16 +49,16 @@ The commands below use version `1.2.0`. Substitute the API Platform AI Gateway r
 
     ```bash
     # Download distribution.
-    wget https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
+    curl -fL -o wso2apip-ai-gateway-1.2.0.zip https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
 
     # Unzip the downloaded distribution.
     unzip wso2apip-ai-gateway-1.2.0.zip
 
     cd wso2apip-ai-gateway-1.2.0/
 
-    # Run the one-time setup. This provisions the AES-256 at-rest encryption key, the router HTTPS
-    # listener certificate, api-platform.env, and the gateway-controller admin credentials. It prints
-    # the admin password once — copy it.
+    # Run the one-time setup. This provisions the Advanced Encryption Standard (AES)-256 at-rest
+    # encryption key, the router HTTPS listener certificate, api-platform.env, and the
+    # gateway-controller admin credentials. It prints the admin password once — copy it.
     ./scripts/setup.sh
 
     # Export the admin credentials so the management-API calls below can authenticate.
@@ -84,10 +84,10 @@ The commands below use version `1.2.0`. Substitute the API Platform AI Gateway r
 
     Set-Location wso2apip-ai-gateway-1.2.0
 
-    # Run the one-time setup. This provisions the AES-256 at-rest encryption key, the router HTTPS
-    # listener certificate, api-platform.env, and the gateway-controller admin credentials. It prints
-    # the admin password once — copy it.
-    powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
+    # Run the one-time setup. This provisions the Advanced Encryption Standard (AES)-256 at-rest
+    # encryption key, the router HTTPS listener certificate, api-platform.env, and the
+    # gateway-controller admin credentials. It prints the admin password once — copy it.
+    pwsh -ExecutionPolicy Bypass -File .\scripts\setup.ps1
 
     # Set the admin credentials so the management-API calls below can authenticate.
     # The username defaults to "admin"; use the password setup.ps1 just printed.
@@ -103,7 +103,7 @@ The commands below use version `1.2.0`. Substitute the API Platform AI Gateway r
 
     Note the `.exe`, since `curl` is an alias for `Invoke-WebRequest` in Windows PowerShell. PowerShell 7 removes that alias, and `curl.exe` works in both versions.
 
-    The remaining `curl` commands on this page pipe their YAML payload in through a shell heredoc (`--data-binary @- <<'EOF'`), which PowerShell does not support. Either run them from Git Bash or WSL, or use the **Windows (PowerShell)** tab on each command below, which saves the YAML to a file and posts that file explicitly.
+    The two management API requests below—the LLM provider `POST` and the LLM proxy `POST`—pipe their YAML payload in through a shell heredoc (`--data-binary @- <<'EOF'`). PowerShell doesn't support heredocs. Either run those two requests from Git Bash or WSL, or use the **Windows (PowerShell)** tab on each one, which saves the YAML to a file and posts that file explicitly.
 
 !!! tip "Port 8080, 8443, 9090, or 9094 already taken?"
     If the start command fails with a port binding error, identify what is already listening on the default ports:
@@ -130,7 +130,7 @@ The commands below use version `1.2.0`. Substitute the API Platform AI Gateway r
 
 ## Deploy an OpenAI LLM provider configuration
 
-The API Platform Gateway includes first-class support for the OpenAI LLM provider. As a platform administrator, replace `<openai-apikey>` with your OpenAI API key and run the following command to deploy a sample OpenAI LLM provider.
+The API Platform Gateway supports the OpenAI LLM provider. As a platform administrator, replace `<openai-apikey>` with your OpenAI API key and run the following command to deploy a sample OpenAI LLM provider.
 
 === "Linux / macOS"
 
@@ -234,9 +234,12 @@ To test LLM provider traffic routing through the gateway, invoke the following r
       -d '{"model": "gpt-4o-mini", "messages": [{"role": "user", "content": "Hi"}]}' -k
     ```
 
+!!! note "Why these commands pass `-k`"
+    The `-k` flag tells `curl` to skip Transport Layer Security (TLS) certificate verification. The router presents the self-signed listener certificate that `setup.sh` or `setup.ps1` generates, and no certificate authority trusts it. Outside local testing, give the router a certificate from a trusted certificate authority and remove `-k`.
+
 ## Deploy an LLM proxy configuration to consume an LLM provider
 
-The API Platform Gateway provides first-class support for configuring and deploying LLM proxies. As an AI developer, run the following command to deploy a sample LLM proxy that consumes the OpenAI LLM provider the platform administrator deployed above.
+The API Platform Gateway supports configuring and deploying LLM proxies. As an AI developer, run the following command to deploy a sample LLM proxy that consumes the OpenAI LLM provider the platform administrator deployed above.
 
 === "Linux / macOS"
 
