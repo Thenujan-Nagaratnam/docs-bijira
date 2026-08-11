@@ -14,7 +14,7 @@ last_updated: 2026-08-11
 content_type: "quickstart"
 ---
 
-# Quick start guide
+# Quick Start Guide
 
 This guide takes you from a downloaded distribution to a large language model (LLM) request routed through the API Platform AI Gateway. It then shows you how to govern that gateway from [AI Workspace](../../ai-workspace/next/overview.md), the control plane for AI traffic.
 
