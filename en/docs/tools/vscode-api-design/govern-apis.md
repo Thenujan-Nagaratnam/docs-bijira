@@ -110,7 +110,7 @@ Use the Workspace option (`.vscode/settings.json`) when different projects need 
 | OWASP API Security Top 10 | `owasp_top_10.yaml` |
 | WSO2 REST API Design Guidelines | `wso2_rest_api_design_guidelines.yaml` |
 
-**Overriding an existing rule vs. adding a new one:** editing an existing rule works correctly across all three reports. If you want to add new rules to OWASP, use the same format as the bundled rules — `owasp:apiN:2023-<description>` (for example `owasp:api1:2023-custom-check`) — so they're categorized correctly. For REST API Design Guidelines, new rules are grouped under a general **Others** category instead of a specific theme. We recommend against adding new rules to AI Readiness, since that report doesn't support them.
+**Overriding an existing rule vs. adding a new one:** editing an existing rule works correctly across all three reports. If you want to add new rules to OWASP, use the same format as the bundled rules—`owasp:apiN:2023-<description>` (for example `owasp:api1:2023-custom-check`)—so they're categorized correctly. For REST API Design Guidelines, new rules are grouped under a general **Others** category instead of a specific theme. We recommend against adding new rules to AI Readiness, since that report doesn't support them.
 
 If a custom ruleset fails to load or parse, API Designer shows a warning. It then falls back to the bundled default for that report, so analysis is never blocked.
 
@@ -122,7 +122,7 @@ If a report unexpectedly shows the bundled default instead of your custom rulese
 2. In the output panel's channel dropdown (top right), select **API Designer**.
 3. Re-run analysis and look for a `[Governance]` or `[Spectral]` log line describing the failure. For example, a YAML (YAML Ain't Markup Language) parse error, a missing `rules` property, or a `401` or `403` error on a private GitHub folder.
 
-Fix the reported issue in your ruleset file, or your GitHub folder's access permissions. Then re-run analysis to confirm the custom ruleset now loads.
+Fix the reported issue in your ruleset file. For a `401` or `403` on a private GitHub folder, check your GitHub sign-in and repository access. Then re-run analysis to confirm the custom ruleset now loads.
 
 ## Related topics
 
