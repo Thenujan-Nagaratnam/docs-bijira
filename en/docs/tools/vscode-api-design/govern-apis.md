@@ -77,19 +77,19 @@ You can resolve findings using:
 
 ## Custom rulesets and overrides
 
-By default, API Designer runs the three bundled Spectral rulesets listed above. You can point it at your own ruleset folder instead, either to override individual rules or to replace a report's rules entirely.
+By default, API Designer runs the three bundled Spectral rulesets listed above. You can point it at a ruleset folder instead, either to override individual rules or to replace a report's rules entirely. Configure this from the settings user interface (UI), or by editing `settings.json` directly.
 
-**To configure it from the Settings UI:**
+**Using the Settings UI:**
 
-1. Open Settings: `Ctrl+,` / `Cmd+,`, or open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **Preferences: Open Settings (UI)**.
+1. Open **Settings**: press <kbd>Ctrl+,</kbd> (<kbd>Cmd+,</kbd> on macOS). You can also open the **Command Palette** (<kbd>Ctrl+Shift+P</kbd> / <kbd>Cmd+Shift+P</kbd>) and run **Preferences: Open Settings (UI)**.
 2. Search for `apiDesigner.spectral.rulesetFolder`.
-3. Choose the **User** tab to apply it across all of VS Code, or the **Workspace** tab to scope it to the current project only.
-4. Enter a GitHub folder URL (for example `https://github.com/<org>/<repo>/tree/main/<path>`) or an absolute local directory path, then reload the folder if prompted.
+3. Choose the **User** tab to apply the setting across all of VS Code, or the **Workspace** tab to scope it to the current project.
+4. Enter a GitHub folder URL (for example `https://github.com/<org>/<repo>/tree/main/<path>`) or an absolute local directory path. API Designer rescans the folder automatically.
 
-**To configure it via `settings.json` directly:**
+**Using `settings.json`:**
 
-1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
-2. Run **Preferences: Open User Settings (JSON)** for a setting shared across all of VS Code, or **Preferences: Open Workspace Settings (JSON)** to scope it to the current project only.
+1. Open the **Command Palette** (<kbd>Ctrl+Shift+P</kbd> / <kbd>Cmd+Shift+P</kbd>).
+2. Run **Preferences: Open User Settings (JSON)** for a setting shared across all of VS Code, or **Preferences: Open Workspace Settings (JSON)** to scope it to the current project.
 3. Add the setting:
 
    ```json
@@ -98,11 +98,9 @@ By default, API Designer runs the three bundled Spectral rulesets listed above. 
    }
    ```
 
-Use the Workspace option (`.vscode/settings.json`) when different projects need different ruleset folders — otherwise a single User-level setting applies to every workspace you open.
+Use the Workspace option (`.vscode/settings.json`) when different projects need different ruleset folders. Otherwise, a single User-level setting applies to every workspace you open.
 
-**Start from the bundled rulesets.** The simplest way to build a custom ruleset is to copy WSO2's bundled ones and customize them:
-
-[wso2/vscode-extensions → workspaces/api-designer/api-designer-extension/spectral-rulesets](https://github.com/wso2/vscode-extensions/tree/main/workspaces/api-designer/api-designer-extension/spectral-rulesets)
+**Start from the bundled rulesets.** The simplest way to build a custom ruleset is to copy WSO2's bundled ones and customize them: [WSO2 bundled Spectral rulesets](https://github.com/wso2/vscode-extensions/tree/main/workspaces/api-designer/api-designer-extension/spectral-rulesets).
 
 **Name your file to match the report you're overriding:**
 
@@ -112,19 +110,19 @@ Use the Workspace option (`.vscode/settings.json`) when different projects need 
 | OWASP API Security Top 10 | `owasp_top_10.yaml` |
 | WSO2 REST API Design Guidelines | `wso2_rest_api_design_guidelines.yaml` |
 
-**Overriding an existing rule vs. adding a new one:** editing an existing rule works correctly across all three reports. If you want to add new rules to OWASP, use the same format as the bundled rules — `owasp:apiN:2023-<description>` (for example `owasp:api1:2023-custom-check`) — so they're categorized correctly. For REST API Design Guidelines, new rules are grouped under a general **Others** category instead of a specific theme.
+**Overriding an existing rule vs. adding a new one:** editing an existing rule works correctly across all three reports. If you want to add new rules to OWASP, use the same format as the bundled rules — `owasp:apiN:2023-<description>` (for example `owasp:api1:2023-custom-check`) — so they're categorized correctly. For REST API Design Guidelines, new rules are grouped under a general **Others** category instead of a specific theme. We recommend against adding new rules to AI Readiness, since that report doesn't support them.
 
-If a custom ruleset fails to load or parse, API Designer shows a warning and falls back to the bundled default for that report, so analysis is never blocked.
+If a custom ruleset fails to load or parse, API Designer shows a warning. It then falls back to the bundled default for that report, so analysis is never blocked.
 
 **Debugging ruleset failures**
 
 If a report unexpectedly shows the bundled default instead of your custom ruleset, check the **API Designer** output channel for the underlying error:
 
-1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **View: Toggle Output** (or use **View > Output** from the menu).
-2. In the output panel's channel dropdown (top-right), select **API Designer**.
-3. Re-run analysis and look for a `[Governance]` or `[Spectral]` log line describing the failure — for example a YAML parse error, a missing `rules` property in the ruleset, or a 401/403 error fetching a private GitHub folder.
+1. Open the **Command Palette** (<kbd>Ctrl+Shift+P</kbd> / <kbd>Cmd+Shift+P</kbd>) and run **View: Toggle Output**. You can also use **View > Output** from the menu.
+2. In the output panel's channel dropdown (top right), select **API Designer**.
+3. Re-run analysis and look for a `[Governance]` or `[Spectral]` log line describing the failure. For example, a YAML (YAML Ain't Markup Language) parse error, a missing `rules` property, or a `401` or `403` error on a private GitHub folder.
 
-Fix the reported issue in your ruleset file (or your GitHub folder's access permissions), then re-run analysis to confirm the custom ruleset now loads.
+Fix the reported issue in your ruleset file, or your GitHub folder's access permissions. Then re-run analysis to confirm the custom ruleset now loads.
 
 ## Related topics
 
