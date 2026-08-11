@@ -126,7 +126,7 @@ The commands below use version `1.2.0`. Substitute the API Platform AI Gateway r
     Stop the conflicting service if you don't need it. If you need to keep it running, change the host-side value of the relevant `ports:` mapping in `docker-compose.yaml`. Then use the remapped host port in the verification and test commands on this page.
 
 !!! tip "Customizing configuration"
-    The setup script (`setup.sh`, or `setup.ps1` on Windows) writes `api-platform.env`, which is loaded into the containers via Docker Compose `env_file`. To change the storage backend, connect to a control plane, or tune other settings, edit that file (or the `config.toml` interpolation tokens directly). See [Gateway Configuration and Environment Interpolation](./setup/configuration.md).
+    The setup script (`setup.sh`, or `setup.ps1` on Windows) writes `api-platform.env`, which is loaded into the containers via Docker Compose `env_file`. To change the storage backend, connect to a control plane, or tune other settings, edit that file (or the `config.toml` interpolation tokens directly). See [Gateway Configuration and Environment Interpolation](./run-the-gateway/configuration.md).
 
 ## Deploy an OpenAI LLM provider configuration
 
@@ -350,9 +350,9 @@ This stops the containers and removes the `controller-data` volume. The next sta
 
 ## Next steps
 
-- Route to more than one provider, with failover: [Multi-provider routing](./llm-proxy/multi-provider-routing.md)
-- Add guardrails to a proxy, such as [PII masking](./llm-proxy/guardrails/pii-masking-regex.md) or a [JSON schema guardrail](./llm-proxy/guardrails/json-schema.md)
-- Expose an MCP server through the gateway: [MCP proxy quick start guide](./mcp-proxy/quick-start-guide.md)
+- Route to more than one provider, with failover: [Multi-provider routing](./expose-llms/multi-provider-routing.md)
+- Add guardrails to a proxy, such as [PII masking](./control-content/pii-masking-regex.md) or a [JSON schema guardrail](./control-content/json-schema.md)
+- Expose an MCP server through the gateway: [MCP proxy quick start guide](./mcp-proxy/create-an-mcp-proxy.md)
 - Govern AI traffic across all your gateways from the control plane: [AI Workspace overview](../../ai-workspace/next/overview.md)
-- Take this gateway to production on Kubernetes: [Production deployment overview](./deployment/production-deployment/overview.md)
-- Register a production gateway with the control plane: [Connect to AI Workspace](./deployment/production-deployment/control-plane-connection.md)
+- Take this gateway to production on Kubernetes: [Production deployment overview](./run-the-gateway/production-deployment/overview.md)
+- Register a production gateway with the control plane: [Connect to AI Workspace](./run-the-gateway/production-deployment/control-plane-connection.md)

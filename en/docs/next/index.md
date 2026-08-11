@@ -159,8 +159,8 @@ The following is a complete view of all components and where to find their docum
 | Run everything on my own infrastructure with a UI | [API Manager](../api-manager/overview.md) |
 | Run a lightweight API gateway with no UI | [API Gateway](../api-gateway/next/overview.md) |
 | Govern LLM traffic (rate limits, guardrails, cost control) | [AI Gateway Quick Start Guide](../ai-gateway/next/quick-start-guide.md) |
-| Expose my APIs as MCP tools for AI agents | [AI Gateway MCP Proxy](../ai-gateway/next/mcp-proxy/quick-start-guide.md) |
-| Govern MCP traffic (inbound + outbound) | [AI Gateway MCP Proxy](../ai-gateway/next/mcp-proxy/quick-start-guide.md) |
+| Expose my APIs as MCP tools for AI agents | [AI Gateway MCP Proxy](../ai-gateway/next/mcp-proxy/create-an-mcp-proxy.md) |
+| Govern MCP traffic (inbound + outbound) | [AI Gateway MCP Proxy](../ai-gateway/next/mcp-proxy/create-an-mcp-proxy.md) |
 | Manage LLM providers and AI policies at the organizational level | [AI Workspace](../ai-workspace/next/overview.md) |
 | Set up an API Portal & MCP Hub for API discovery | [API Portal](api-portal/overview.md) |
 | Monitor traffic and monetize my APIs | [Analytics](../analytics/overview.md) and [Monetization](../monetization/overview.md) |
