@@ -161,7 +161,7 @@ A successful response returns a list of books from the upstream service, confirm
 
 When you are done, you have two options for stopping the gateway:
 
-**Option 1: Stop and keep data (persisted APIs and configuration)**
+### Keep data and configurations
 
 ```bash
 docker compose down
@@ -169,7 +169,7 @@ docker compose down
 
 This stops the containers but preserves the `controller-data` volume. When you restart with `docker compose up`, all your deployed API configurations will be restored.
 
-**Option 2: Stop and remove all data (clean start)**
+### Delete data for a fresh start
 
 ```bash
 docker compose down -v

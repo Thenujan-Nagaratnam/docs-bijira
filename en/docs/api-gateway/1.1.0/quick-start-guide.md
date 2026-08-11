@@ -59,7 +59,8 @@ Go inside the root directory of the Gateway distribution folder:
 cd wso2apip-api-gateway-1.1.0/
 ```
 
-### Step 2: Start the Gateway  
+### Step 2: Start the Gateway
+
 Start the complete gateway stack using Docker Compose:
 
 ```bash
@@ -67,7 +68,8 @@ docker compose up -d
 ```
 
 ### Step 3: Verify the Gateway
-Verify that the Gateway Controller is healthy::
+
+Verify that the Gateway Controller is healthy:
 
 ```bash
 curl http://localhost:9094/api/admin/v0.9/health
@@ -76,7 +78,9 @@ curl http://localhost:9094/api/admin/v0.9/health
 A successful response confirms the gateway is running and ready to accept API configurations.
 
 ## Deploy an API
+
 ### Step 1: Deploy an API configuration
+
 Use the gateway's management API to deploy a sample Reading List REST API:
 
 ```bash
@@ -122,7 +126,8 @@ EOF
 ```
 
 
-### Step 2: Invoke the API 
+### Step 2: Invoke the API
+
 Send a request to the deployed API through the gateway:
 
 **Over HTTP:**
@@ -132,6 +137,7 @@ curl -i http://localhost:8080/reading-list/v1.0/books
 ```
 
 **Over HTTPS (with self-signed certificate):**
+
 ```bash
 curl -ik https://localhost:8443/reading-list/v1.0/books
 ```
@@ -163,7 +169,8 @@ A successful response returns a list of books from the upstream service, confirm
 
 When stopping the gateway, you have two options:
 
-### Option 1 
+### Keep data and configurations
+
 This option stops the runtime while keeping data: APIs and configurations are persisted:
 
 ```bash
@@ -172,7 +179,7 @@ docker compose down
 
 This stops the containers but preserves the `controller-data` volume. When you restart with `docker compose up`, all your API configurations will be restored.
 
-### Option 2
+### Delete data for a fresh start
 This option performs a complete shutdown with data cleanup (fresh start):
 
 ```bash
