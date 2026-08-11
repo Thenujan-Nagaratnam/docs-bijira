@@ -619,7 +619,6 @@ nav:
             - Configuration & Interpolation: ai-gateway/next/setup/configuration.md
             - Setting Up the Database: ai-gateway/next/setup/database-setup.md
         - LLM Proxy:
-            - Quick Start Guide: ai-gateway/next/llm-proxy/quick-start-guide.md
             - LLM Provider Templates: ai-gateway/next/llm-proxy/llm-templates.md
             - Multi-Provider Routing: ai-gateway/next/llm-proxy/multi-provider-routing.md
             - Guardrails:
@@ -679,7 +678,7 @@ nav:
             - AI Gateway runtime with four CPUs: ai-gateway/next/performance/ai-gateway-runtime-with-four-cpus.md
         - Management API:
             - Overview: ai-gateway/next/gateway-controller-management-api/overview.md
-            - Authentication: ai-gateway/next/gateway-controller-management-api/authentication.md
+            - Secure the Management API: ai-gateway/next/gateway-controller-management-api/authentication.md
             - LLM Provider Template Management: ai-gateway/next/gateway-controller-management-api/llm-provider-template-management.md
             - LLM Provider Management: ai-gateway/next/gateway-controller-management-api/llm-provider-management.md
             - LLM Proxy Management: ai-gateway/next/gateway-controller-management-api/llm-proxy-management.md
@@ -1429,6 +1428,8 @@ plugins:
         api-gateway/setup/artifact-templating.md: api-gateway/1.1.0/setup/artifact-templating.md
         api-gateway/setup/storage-and-backends.md: api-gateway/1.1.0/setup/storage-and-backends.md
         api-gateway/setup/upstream-timeouts.md: api-gateway/1.1.0/setup/upstream-timeouts.md
+        # AI Gateway revamp phase 0: the two quick starts merged into one canonical page
+        ai-gateway/next/llm-proxy/quick-start-guide.md: ai-gateway/next/quick-start-guide.md
         # AI Workspace self-hosted docs moved from next/ai-workspace to the
         # versioned ai-workspace/<version> layout; 1.0.0 is the latest release.
         next/ai-workspace/index.md: ai-workspace/1.0.0/overview.md
