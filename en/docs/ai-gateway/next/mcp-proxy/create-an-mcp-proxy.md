@@ -14,9 +14,9 @@ content_type: "quickstart"
 
 # Create an MCP proxy
 
-## Quick Start
+## Quick start
 
-### Using Docker Compose (Recommended)
+### Using Docker Compose (recommended)
 
 
 ### Prerequisites
@@ -145,7 +145,7 @@ http://localhost:8080/everything/mcp
 
 The gateway syncs the artifacts you deploy on it up to [AI Workspace](../../../ai-workspace/next/overview.md), the control plane for AI traffic across your organization. The `everything-mcp-v1.0` proxy you deployed above appears there without being re-declared, in the `default` project named in its `project-id` annotation. See [Manage Gateway-deployed AI artifacts in AI Workspace](../../../ai-workspace/next/sync-gateway-created-artifacts.md).
 
-## Stopping the Gateway
+## Stopping the gateway
 
 Stop and remove the MCP backend first.
 
