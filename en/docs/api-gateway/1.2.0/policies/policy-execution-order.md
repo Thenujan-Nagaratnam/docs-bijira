@@ -63,7 +63,7 @@ Client ◄── [Policy 1] ◄── [Policy 2] ◄── ... ◄── [Policy
 
 The following diagram shows how a request passes through the policy chain in forward order and the response returns in reverse order:
 
-![Policy chain execution order diagram showing request flowing left-to-right through Policy 1, Policy 2, and Policy N to Upstream across the request phases, then response flowing right-to-left through the same policies in reverse order across the response phases](../../../assets/img/api-gateway/gateway-policy-execution-order.svg)
+![Policy chain execution order diagram showing request flowing left-to-right through Policy 1, Policy 2, and Policy N to Upstream across the request phases, then response flowing right-to-left through the same policies in reverse order across the response phases](../../../assets/img/api-gateway/gateway-policy-execution-order.png)
 <!-- image source: https://docs.google.com/drawings/d/1EJhRx9bNtAGmJ9jI2ay1WZaLgNKMLKoF8AkVKHcE6_s/edit?usp=sharing -->
 
 ## Short-circuit behavior
@@ -84,7 +84,7 @@ In streaming mode, `OnRequestBodyChunk` and `OnResponseBodyChunk` replace the bu
 
 The following diagram shows how each body chunk flows through the policy chain when streaming mode is active:
 
-![Streaming policy chain execution order diagram showing request body chunks flowing through the policy chain via OnRequestBodyChunk in forward order, and response chunks flowing in reverse order via OnResponseBodyChunk](../../../assets/img/api-gateway/gateway-policy-execution-order-streaming.svg)
+![Streaming policy chain execution order diagram showing request body chunks flowing through the policy chain via OnRequestBodyChunk in forward order, and response chunks flowing in reverse order via OnResponseBodyChunk](../../../assets/img/api-gateway/gateway-policy-execution-order-streaming.png)
 <!-- image source: https://docs.google.com/drawings/d/1HyceTR0htslHoBm3xintrMkZo0jqKfHhnhAcctGgUDs/edit?usp=sharing -->
 
 ## Related topics
