@@ -653,7 +653,7 @@ nav:
             - MCP Access Control Lists: ai-gateway/next/mcp-proxy/mcp-acl-list.md
         - Control Access:
             - Secure the Management API: ai-gateway/next/control-access/secure-the-management-api.md
-        - Control Content:
+        - Control Content (Guardrails):
             - Guardrails Overview: ai-gateway/next/control-content/overview.md
             - Guardrail execution order: ai-gateway/next/control-content/execution-order.md
             - Regex Guardrail: ai-gateway/next/control-content/regex.md
