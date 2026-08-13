@@ -1,6 +1,6 @@
 ---
 title: "AI Gateway Quick Start Guide"
-description: "Run API Platform AI Gateway with Docker, deploy an LLM provider and an LLM proxy, route your first LLM request, and govern the gateway from AI Workspace."
+description: "Run API Platform AI Gateway with Docker Compose, deploy an LLM provider, route your first LLM request, and govern the gateway from AI Workspace."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/quick-start-guide/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/quick-start-guide.md
 tags:
