@@ -22,6 +22,8 @@ LLM Provider Templates define the characteristics and behaviors specific to an A
 - **Model Information**: Request and response model identifiers
 - **Rate Limiting Data**: Remaining token allowances from response
 
+This page is the reference for that extraction mechanism: which templates ship, what each one reads out of a provider response, and how to define a template of your own. It does not carry the settings that connect the gateway to a provider. For an upstream URL, authentication and a working provider configuration, see [OpenAI](supported-providers/openai.md), [Anthropic](supported-providers/anthropic.md), or [AWS Bedrock](supported-providers/aws-bedrock.md).
+
 ## Out-of-the-Box Supported Templates
 
 The API Platform Gateway ships with the following pre-configured LLM provider templates that platform administrators can use immediately without any additional configuration:
@@ -86,7 +88,7 @@ Templates support four types of extraction locations:
 
 ### OpenAI
 
-The OpenAI template extracts metadata from OpenAI API responses.
+The OpenAI template extracts metadata from OpenAI API responses. To connect the gateway to OpenAI, see [OpenAI](supported-providers/openai.md).
 
 ```yaml
 apiVersion: gateway.api-platform.wso2.com/v1
@@ -172,7 +174,7 @@ spec:
 
 ### Anthropic
 
-The Anthropic template extracts metadata from Anthropic Claude API responses.
+The Anthropic template extracts metadata from Anthropic Claude API responses. To connect the gateway to Anthropic, see [Anthropic](supported-providers/anthropic.md).
 
 ```yaml
 apiVersion: gateway.api-platform.wso2.com/v1
@@ -271,7 +273,7 @@ spec:
 
 ### AWS Bedrock
 
-The AWS Bedrock template is designed for the AWS Bedrock unified API. To configure and deploy a provider with bearer or AWS Signature Version 4 (SigV4) authentication, see [Configure an AWS Bedrock Large Language Model provider](configure-aws-bedrock-provider.md).
+The AWS Bedrock template is designed for the AWS Bedrock unified API. To connect the gateway to Bedrock with either bearer or AWS Signature Version 4 (SigV4) authentication, see [AWS Bedrock](supported-providers/aws-bedrock.md).
 
 ```yaml
 apiVersion: gateway.api-platform.wso2.com/v1

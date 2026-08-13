@@ -642,8 +642,11 @@ nav:
                 - AI Gateway runtime with four CPUs: ai-gateway/next/run-the-gateway/sizing-and-performance/ai-gateway-runtime-with-four-cpus.md
         - Connect LLM Providers:
             - Overview: ai-gateway/next/connect-llm-providers/overview.md
+            - Supported Providers:
+                - OpenAI: ai-gateway/next/connect-llm-providers/supported-providers/openai.md
+                - Anthropic: ai-gateway/next/connect-llm-providers/supported-providers/anthropic.md
+                - AWS Bedrock: ai-gateway/next/connect-llm-providers/supported-providers/aws-bedrock.md
             - Provider Templates: ai-gateway/next/connect-llm-providers/llm-templates.md
-            - Configure an AWS Bedrock LLM Provider: ai-gateway/next/connect-llm-providers/configure-aws-bedrock-provider.md
         - Expose LLMs to Applications:
             - Overview: ai-gateway/next/expose-llms/overview.md
             - Route Across Multiple Providers: ai-gateway/next/expose-llms/multi-provider-routing.md
@@ -1451,7 +1454,8 @@ plugins:
         ai-gateway/next/performance/ai-gateway-runtime-with-two-cpus.md: ai-gateway/next/run-the-gateway/sizing-and-performance/ai-gateway-runtime-with-two-cpus.md
         ai-gateway/next/performance/ai-gateway-runtime-with-four-cpus.md: ai-gateway/next/run-the-gateway/sizing-and-performance/ai-gateway-runtime-with-four-cpus.md
         ai-gateway/next/llm-proxy/llm-templates.md: ai-gateway/next/connect-llm-providers/llm-templates.md
-        ai-gateway/next/llm-proxy/configure-aws-bedrock-provider.md: ai-gateway/next/connect-llm-providers/configure-aws-bedrock-provider.md
+        ai-gateway/next/llm-proxy/configure-aws-bedrock-provider.md: ai-gateway/next/connect-llm-providers/supported-providers/aws-bedrock.md
+        ai-gateway/next/connect-llm-providers/configure-aws-bedrock-provider.md: ai-gateway/next/connect-llm-providers/supported-providers/aws-bedrock.md
         ai-gateway/next/llm-proxy/multi-provider-routing.md: ai-gateway/next/expose-llms/multi-provider-routing.md
         ai-gateway/next/streaming-responses.md: ai-gateway/next/expose-llms/streaming-responses.md
         ai-gateway/next/mcp-proxy/quick-start-guide.md: ai-gateway/next/mcp-proxy/create-an-mcp-proxy.md

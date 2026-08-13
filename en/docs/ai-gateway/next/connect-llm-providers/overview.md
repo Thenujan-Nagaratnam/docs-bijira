@@ -1,6 +1,6 @@
 ---
 title: "Connect LLM providers"
-description: "Connect the AI Gateway to an LLM backend: what an LLM Provider holds, who configures it, and the provider templates and AWS Bedrock setup available."
+description: "Connect the AI Gateway to an LLM backend: what an LLM Provider holds, who configures it, and the OpenAI, Anthropic, and AWS Bedrock connection guides."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/connect-llm-providers/overview/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/connect-llm-providers/overview.md
 tags:
@@ -8,7 +8,7 @@ tags:
   - llm-provider
   - llm
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-12
+last_updated: 2026-08-13
 content_type: "concept"
 ---
 
@@ -25,20 +25,22 @@ An LLM Provider represents a connection to an AI backend service such as OpenAI,
 
 Once configured, the LLM Provider allows traffic to flow through the gateway to the AI backend.
 
-To connect the gateway to AWS Bedrock, see [Configure an AWS Bedrock LLM Provider](configure-aws-bedrock-provider.md). The guide covers both Bedrock bearer API keys and AWS Signature Version 4 (SigV4) authentication.
-
 ## Who configures this
 
 Platform administrators own LLM providers. An administrator holds the upstream credentials, decides which endpoints the provider exposes, and sets the organization-wide policies that every LLM proxy consuming the provider inherits.
 
 ## In this section
 
+The three provider pages carry connection documentation: the upstream URL, the authentication each provider expects, and a working definition you can deploy as it stands. The gateway ships more provider templates than these three; [Provider templates](llm-templates.md) lists every one it loads at startup.
+
 This section contains the following pages:
 
 | Page | What it covers |
 |------|----------------|
+| [OpenAI](supported-providers/openai.md) | Connect the AI Gateway to OpenAI: the upstream URL, API key authentication, the endpoints the provider exposes, and a request that tests the connection. |
+| [Anthropic](supported-providers/anthropic.md) | Connect the AI Gateway to the Anthropic Messages API: the upstream URL, x-api-key authentication, and the endpoint the provider exposes. |
+| [AWS Bedrock](supported-providers/aws-bedrock.md) | Connect API Platform AI Gateway to AWS Bedrock using a bearer API key or AWS Signature Version 4 authentication, then invoke a model through the gateway. |
 | [Provider templates](llm-templates.md) | Reference for LLM Provider Templates in API Platform AI Gateway, covering built-in templates for OpenAI, Anthropic, Gemini, and more. |
-| [Configure an AWS Bedrock LLM provider](configure-aws-bedrock-provider.md) | Connect API Platform AI Gateway to AWS Bedrock using a bearer API key or AWS Signature Version 4 authentication, then invoke a model through the gateway. |
 
 ## Related guides
 

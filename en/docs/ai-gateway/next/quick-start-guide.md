@@ -128,85 +128,289 @@ The commands below use version `1.2.0`. Substitute the API Platform AI Gateway r
 !!! tip "Customizing configuration"
     The setup script (`setup.sh`, or `setup.ps1` on Windows) writes `api-platform.env`, which is loaded into the containers via Docker Compose `env_file`. To change the storage backend, connect to a control plane, or tune other settings, edit that file (or the `config.toml` interpolation tokens directly). See [Gateway Configuration and Environment Interpolation](./run-the-gateway/configuration.md).
 
-## Deploy an OpenAI LLM provider configuration
+## Deploy an LLM provider configuration
 
-The API Platform Gateway supports the OpenAI LLM provider. As a platform administrator, replace `<openai-apikey>` with your OpenAI API key and run the following command to deploy a sample OpenAI LLM provider.
+As a platform administrator, deploy an LLM provider for the vendor whose API key you hold. Select a provider below; each tab carries the complete definition for that provider.
 
-=== "Linux / macOS"
+=== "OpenAI"
 
-    ```bash
-    curl -X POST http://localhost:9090/api/management/v1/llm-providers \
-      -H "Content-Type: application/yaml" \
-      -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
-      --data-binary @- <<'EOF'
-    apiVersion: gateway.api-platform.wso2.com/v1
-    kind: LlmProvider
-    metadata:
-      name: openai-provider
-    spec:
-      displayName: OpenAI Provider
-      version: v1.0
-      template: openai
-      context: /openai/latest
-      upstream:
-        url: https://api.openai.com/v1
-        auth:
-          type: api-key
-          header: Authorization
-          value: <openai-apikey>
-      accessControl:
-        mode: deny_all
-        exceptions:
-          - path: /chat/completions
-            methods: [POST]
-          - path: /models
-            methods: [GET]
-          - path: /models/{modelId}
-            methods: [GET]
-    EOF
-    ```
+    Replace *`<openai-api-key>`* with your OpenAI API key, keeping the `Bearer ` prefix.
 
-=== "Windows (PowerShell)"
+    === "Linux / macOS"
 
-    Save the provider definition to `openai-provider.yaml`:
+        ```bash
+        curl -X POST http://localhost:9090/api/management/v1/llm-providers \
+          -H "Content-Type: application/yaml" \
+          -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
+          --data-binary @- <<'EOF'
+        apiVersion: gateway.api-platform.wso2.com/v1
+        kind: LlmProvider
+        metadata:
+          name: openai-provider
+        spec:
+          displayName: OpenAI Provider
+          version: v1.0
+          template: openai
+          context: /openai/latest
+          upstream:
+            url: https://api.openai.com/v1
+            auth:
+              type: api-key
+              header: Authorization
+              value: Bearer <openai-api-key>
+          accessControl:
+            mode: deny_all
+            exceptions:
+              - path: /chat/completions
+                methods: [POST]
+              - path: /models
+                methods: [GET]
+              - path: /models/{modelId}
+                methods: [GET]
+        EOF
+        ```
 
-    ```powershell
-    @'
-    apiVersion: gateway.api-platform.wso2.com/v1
-    kind: LlmProvider
-    metadata:
-      name: openai-provider
-    spec:
-      displayName: OpenAI Provider
-      version: v1.0
-      template: openai
-      context: /openai/latest
-      upstream:
-        url: https://api.openai.com/v1
-        auth:
-          type: api-key
-          header: Authorization
-          value: <openai-apikey>
-      accessControl:
-        mode: deny_all
-        exceptions:
-          - path: /chat/completions
-            methods: [POST]
-          - path: /models
-            methods: [GET]
-          - path: /models/{modelId}
-            methods: [GET]
-    '@ | Set-Content -Path openai-provider.yaml -Encoding utf8
-    ```
+    === "Windows (PowerShell)"
 
-    Then post it:
+        Save the provider definition to `openai-provider.yaml`:
 
-    ```powershell
-    curl.exe -X POST http://localhost:9090/api/management/v1/llm-providers `
-      -H "Content-Type: application/yaml" `
-      -u "${env:ADMIN_USERNAME}:${env:ADMIN_PASSWORD}" `
-      --data-binary "@openai-provider.yaml"
-    ```
+        ```powershell
+        @'
+        apiVersion: gateway.api-platform.wso2.com/v1
+        kind: LlmProvider
+        metadata:
+          name: openai-provider
+        spec:
+          displayName: OpenAI Provider
+          version: v1.0
+          template: openai
+          context: /openai/latest
+          upstream:
+            url: https://api.openai.com/v1
+            auth:
+              type: api-key
+              header: Authorization
+              value: Bearer <openai-api-key>
+          accessControl:
+            mode: deny_all
+            exceptions:
+              - path: /chat/completions
+                methods: [POST]
+              - path: /models
+                methods: [GET]
+              - path: /models/{modelId}
+                methods: [GET]
+        '@ | Set-Content -Path openai-provider.yaml -Encoding utf8
+        ```
+
+        Then post it:
+
+        ```powershell
+        curl.exe -X POST http://localhost:9090/api/management/v1/llm-providers `
+          -H "Content-Type: application/yaml" `
+          -u "${env:ADMIN_USERNAME}:${env:ADMIN_PASSWORD}" `
+          --data-binary "@openai-provider.yaml"
+        ```
+
+=== "Anthropic"
+
+    Replace *`<anthropic-api-key>`* with your Anthropic API key. Anthropic reads the key from an `x-api-key` header, so the value carries no prefix.
+
+    === "Linux / macOS"
+
+        ```bash
+        curl -X POST http://localhost:9090/api/management/v1/llm-providers \
+          -H "Content-Type: application/yaml" \
+          -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
+          --data-binary @- <<'EOF'
+        apiVersion: gateway.api-platform.wso2.com/v1
+        kind: LlmProvider
+        metadata:
+          name: anthropic-provider
+        spec:
+          displayName: Anthropic Provider
+          version: v1.0
+          template: anthropic
+          context: /providers/anthropic
+          upstream:
+            url: https://api.anthropic.com
+            auth:
+              type: api-key
+              header: x-api-key
+              value: <anthropic-api-key>
+          accessControl:
+            mode: deny_all
+            exceptions:
+              - path: /v1/messages
+                methods: [POST]
+        EOF
+        ```
+
+    === "Windows (PowerShell)"
+
+        Save the provider definition to `anthropic-provider.yaml`:
+
+        ```powershell
+        @'
+        apiVersion: gateway.api-platform.wso2.com/v1
+        kind: LlmProvider
+        metadata:
+          name: anthropic-provider
+        spec:
+          displayName: Anthropic Provider
+          version: v1.0
+          template: anthropic
+          context: /providers/anthropic
+          upstream:
+            url: https://api.anthropic.com
+            auth:
+              type: api-key
+              header: x-api-key
+              value: <anthropic-api-key>
+          accessControl:
+            mode: deny_all
+            exceptions:
+              - path: /v1/messages
+                methods: [POST]
+        '@ | Set-Content -Path anthropic-provider.yaml -Encoding utf8
+        ```
+
+        Then post it:
+
+        ```powershell
+        curl.exe -X POST http://localhost:9090/api/management/v1/llm-providers `
+          -H "Content-Type: application/yaml" `
+          -u "${env:ADMIN_USERNAME}:${env:ADMIN_PASSWORD}" `
+          --data-binary "@anthropic-provider.yaml"
+        ```
+
+=== "AWS Bedrock"
+
+    Replace *`<aws-region>`* with the AWS Region hosting your model, and *`<bedrock-api-key>`* with an AWS Bedrock API key. For SigV4 authentication and the IAM permissions Bedrock needs, see [AWS Bedrock](./connect-llm-providers/supported-providers/aws-bedrock.md).
+
+    === "Linux / macOS"
+
+        Store the Bedrock API key as a gateway secret:
+
+        ```bash
+        export AWS_REGION="<aws-region>"
+        export AWS_BEARER_TOKEN_BEDROCK="<bedrock-api-key>"
+
+        curl --fail-with-body -X POST \
+          http://localhost:9090/api/management/v1/secrets \
+          -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
+          -H "Content-Type: application/yaml" \
+          --data-binary @- <<EOF
+        apiVersion: gateway.api-platform.wso2.com/v1
+        kind: Secret
+        metadata:
+          name: bedrock-api-key
+        spec:
+          displayName: AWS Bedrock API Key
+          value: "${AWS_BEARER_TOKEN_BEDROCK}"
+        EOF
+        ```
+
+        Then deploy the provider:
+
+    {% raw %}
+
+        ```bash
+        curl --fail-with-body -X POST \
+          http://localhost:9090/api/management/v1/llm-providers \
+          -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
+          -H "Content-Type: application/yaml" \
+          --data-binary @- <<EOF
+        apiVersion: gateway.api-platform.wso2.com/v1
+        kind: LlmProvider
+        metadata:
+          name: bedrock-provider
+        spec:
+          displayName: AWS Bedrock Provider
+          version: v1.0
+          template: awsbedrock
+          context: /bedrock
+          upstream:
+            url: https://bedrock-runtime.${AWS_REGION}.amazonaws.com
+            auth:
+              type: api-key
+              header: Authorization
+              value: 'Bearer {{ secret "bedrock-api-key" }}'
+          accessControl:
+            mode: deny_all
+            exceptions:
+              - path: /model/{modelId}/converse
+                methods: [POST]
+              - path: /model/{modelId}/converse-stream
+                methods: [POST]
+        EOF
+        ```
+
+    {% endraw %}
+
+    === "Windows (PowerShell)"
+
+        Store the Bedrock API key as a gateway secret:
+
+        ```powershell
+        $env:AWS_REGION = "<aws-region>"
+        $env:AWS_BEARER_TOKEN_BEDROCK = "<bedrock-api-key>"
+
+        @"
+        apiVersion: gateway.api-platform.wso2.com/v1
+        kind: Secret
+        metadata:
+          name: bedrock-api-key
+        spec:
+          displayName: AWS Bedrock API Key
+          value: "${AWS_BEARER_TOKEN_BEDROCK}"
+        "@ | Set-Content -Path bedrock-secret.yaml -Encoding utf8
+
+        curl.exe -X POST http://localhost:9090/api/management/v1/secrets `
+          -H "Content-Type: application/yaml" `
+          -u "${env:ADMIN_USERNAME}:${env:ADMIN_PASSWORD}" `
+          --data-binary "@bedrock-secret.yaml"
+        ```
+
+        Then deploy the provider:
+
+    {% raw %}
+
+        ```powershell
+        @"
+        apiVersion: gateway.api-platform.wso2.com/v1
+        kind: LlmProvider
+        metadata:
+          name: bedrock-provider
+        spec:
+          displayName: AWS Bedrock Provider
+          version: v1.0
+          template: awsbedrock
+          context: /bedrock
+          upstream:
+            url: https://bedrock-runtime.${AWS_REGION}.amazonaws.com
+            auth:
+              type: api-key
+              header: Authorization
+              value: 'Bearer {{ secret "bedrock-api-key" }}'
+          accessControl:
+            mode: deny_all
+            exceptions:
+              - path: /model/{modelId}/converse
+                methods: [POST]
+              - path: /model/{modelId}/converse-stream
+                methods: [POST]
+        "@ | Set-Content -Path bedrock-provider.yaml -Encoding utf8
+
+        curl.exe -X POST http://localhost:9090/api/management/v1/llm-providers `
+          -H "Content-Type: application/yaml" `
+          -u "${env:ADMIN_USERNAME}:${env:ADMIN_PASSWORD}" `
+          --data-binary "@bedrock-provider.yaml"
+        ```
+
+    {% endraw %}
+
+The remaining steps on this page use the OpenAI provider, because the LLM proxy they build sends requests in the OpenAI format. To consume an Anthropic or AWS Bedrock provider through a proxy, see [Route across multiple providers](./expose-llms/multi-provider-routing.md), which adds the transformer that converts between the two formats.
 
 To test LLM provider traffic routing through the gateway, invoke the following request.
 

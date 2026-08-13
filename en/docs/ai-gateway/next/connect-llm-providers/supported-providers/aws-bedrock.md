@@ -1,19 +1,20 @@
 ---
-title: "Configure an AWS Bedrock Large Language Model provider"
+title: "AWS Bedrock"
 description: "Connect API Platform AI Gateway to AWS Bedrock using a bearer API key or AWS Signature Version 4 authentication, then invoke a model through the gateway."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/connect-llm-providers/configure-aws-bedrock-provider/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/connect-llm-providers/configure-aws-bedrock-provider.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/connect-llm-providers/supported-providers/aws-bedrock/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/connect-llm-providers/supported-providers/aws-bedrock.md
 tags:
   - ai-gateway
+  - llm-provider
   - llm
   - aws-bedrock
   - authentication
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-11
-content_type: "guide"
+last_updated: 2026-08-13
+content_type: "how-to"
 ---
 
-# Configure an AWS Bedrock Large Language Model provider
+# AWS Bedrock
 
 Connect API Platform AI Gateway directly to the regional AWS Bedrock Runtime endpoint. You can authenticate the gateway to Bedrock in either of these ways:
 
@@ -21,6 +22,19 @@ Connect API Platform AI Gateway directly to the regional AWS Bedrock Runtime end
 - **AWS Signature Version 4 (SigV4)** with IAM credentials or a workload role
 
 Both methods expose the native Bedrock `Converse` and `ConverseStream` operations through the gateway. They use the regional Bedrock Runtime endpoint, not the Bedrock Mantle endpoint. For a base model ID, choose an AWS Region where that model is available, and use the same Region in the Bedrock endpoint, SigV4 policy, and model ID. For an inference profile ID, invoke Bedrock through the source Region endpoint where the profile is supported; the profile may route requests to destination Regions. In this case, the SigV4 Region must match the source Region in the endpoint.
+
+## Connection details
+
+The `awsbedrock` template and these connection settings apply to every Bedrock provider you create:
+
+| Setting | Value |
+|---------|-------|
+| Template ID | `awsbedrock` |
+| Upstream URL | `https://bedrock-runtime.${AWS_REGION}.amazonaws.com` |
+| Auth type | `api-key` for a bearer key, or none for SigV4 |
+| Auth header | `Authorization` |
+
+Under SigV4, leave `spec.upstream.auth` unset. The `aws-authentication` policy builds the `Authorization` header itself, as described in [Option 2: SigV4 authentication](#option-2-sigv4-authentication).
 
 ## Before you begin
 
@@ -465,6 +479,10 @@ URL-encode the model ID if it contains characters that are not safe in a URL pat
 
 If the gateway uses a certificate signed by a public or locally trusted certificate authority (CA), omit `--cacert`. For a local self-signed certificate, add the issuing CA certificate to your trust store or pass it with `--cacert`.
 
+## Supported models
+
+AWS publishes its model list in the [AWS Bedrock supported models reference](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html). Any model Bedrock exposes in the configured Region works through the gateway; set it as the model ID in the request path, as `BEDROCK_MODEL_ID` above.
+
 ## Troubleshooting
 
 ### Bedrock returns `AccessDeniedException`
@@ -495,3 +513,9 @@ Check both sides of the relationship: the source identity must be allowed to cal
 - Restrict IAM permissions to the required model and inference profile resources.
 - Expose only the required Bedrock operations through `accessControl`.
 - Use HTTPS for Bedrock and production gateway endpoints.
+
+## Related pages
+
+- [Provider templates](../llm-templates.md) — the token and model metadata the `awsbedrock` template extracts.
+- [Route across multiple providers](../../expose-llms/multi-provider-routing.md) — put an LLM proxy in front of this provider and route to others alongside it.
+- [OpenAI](openai.md) and [Anthropic](anthropic.md) — the same setup for providers that authenticate with a single API key header.

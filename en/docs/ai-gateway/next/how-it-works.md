@@ -57,14 +57,19 @@ You attach policies at three points: on an LLM Proxy, on an LLM Provider, and on
 
 An LLM Provider Template defines the characteristics and behaviors specific to an AI service provider, such as OpenAI, Azure OpenAI, or other LLM platforms. It describes how the gateway should interpret and extract usage and operational metadata, including prompt, completion, total, and remaining token information, as well as request and response model metadata.
 
-Following templates are shipped out-of-the-box
+The gateway ships with these provider templates, loaded at startup:
 
-- OpenAI
-- Azure OpenAI
-- Anthropic
-- AWS Bedrock
-- Azure AI Foundry
-- Gemini
+| Template ID | Provider |
+|-------------|----------|
+| `openai` | OpenAI |
+| `azure-openai` | Azure OpenAI |
+| `anthropic` | Anthropic |
+| `gemini` | Gemini |
+| `mistralai` | MistralAI |
+| `awsbedrock` | AWS Bedrock |
+| `azureai-foundry` | Azure AI Foundry |
+
+For the extraction configuration each template applies, see [LLM provider templates](./connect-llm-providers/llm-templates.md).
 
 ## Streaming
 
