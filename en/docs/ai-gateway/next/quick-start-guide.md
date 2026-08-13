@@ -351,7 +351,7 @@ This stops the containers and removes the `controller-data` volume. The next sta
 ## Next steps
 
 - Route to more than one provider, with failover: [Multi-provider routing](./expose-llms/multi-provider-routing.md)
-- Add guardrails to a proxy, such as [PII masking](./control-content/pii-masking-regex.md) or a [JSON schema guardrail](./control-content/json-schema.md)
+- Add guardrails to a proxy, such as [PII masking](https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex) or a [JSON schema guardrail](https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail)
 - Expose an MCP server through the gateway: [MCP proxy quick start guide](./mcp-proxy/create-an-mcp-proxy.md)
 - Govern AI traffic across all your gateways from the control plane: [AI Workspace overview](../../ai-workspace/next/overview.md)
 - Take this gateway to production on Kubernetes: [Production deployment overview](./run-the-gateway/production-deployment/overview.md)

@@ -310,27 +310,16 @@
 
 - [AI Gateway Overview](https://wso2.com/api-platform/docs/ai-gateway/overview.md): Overview of the standalone AI Gateway: LLM proxy, MCP proxy, deployment, and observability
 - [AI Gateway Quick Start](https://wso2.com/api-platform/docs/ai-gateway/quick-start-guide.md): Deploy the standalone AI Gateway and route your first LLM request
+- [AI Gateway How It Works](https://wso2.com/api-platform/docs/ai-gateway/how-it-works.md): How the AI Gateway handles AI traffic: LLM proxies, LLM providers, MCP proxies, where policies attach, provider templates, and streaming responses.
+- [Connect LLM Providers Overview](https://wso2.com/api-platform/docs/ai-gateway/connect-llm-providers/overview.md): Connect the AI Gateway to an LLM backend: what an LLM Provider holds, who configures it, and the provider templates and AWS Bedrock setup available.
 - [LLM Provider Templates](https://wso2.com/api-platform/docs/ai-gateway/connect-llm-providers/llm-templates.md): Provider templates for OpenAI, Anthropic, Azure OpenAI, AWS Bedrock, Gemini, and Azure AI Foundry
-- [Semantic Caching](https://wso2.com/api-platform/docs/ai-gateway/control-cost-and-traffic/semantic-caching.md): Cache LLM responses by semantic similarity in the standalone gateway
-- [Model Round Robin](https://wso2.com/api-platform/docs/ai-gateway/control-cost-and-traffic/model-round-robin.md): Distribute LLM traffic evenly across multiple providers or model endpoints
-- [Model Weighted Round Robin](https://wso2.com/api-platform/docs/ai-gateway/control-cost-and-traffic/model-weighted-round-robin.md): Distribute LLM traffic across providers with configurable traffic weights
-- [Prompt Decorator](https://wso2.com/api-platform/docs/ai-gateway/control-content/prompt-decorator.md): Prepend or append system-level instructions to every LLM request at the gateway level
-- [Prompt Template](https://wso2.com/api-platform/docs/ai-gateway/control-content/prompt-template.md): Replace 'template://' URI references in LLM request payloads with predefined, parameterized prompt templates
-- [AWS Bedrock Guardrail](https://wso2.com/api-platform/docs/ai-gateway/control-content/aws-bedrock-guardrail.md): AWS Bedrock Guardrail for enterprise-grade content filtering, topic detection, and PII protection
-- [Azure Content Safety](https://wso2.com/api-platform/docs/ai-gateway/control-content/azure-content-safety.md): Azure Content Safety integration for detecting hate speech, sexual content, violence, and self-harm
-- [Content Length Guardrail](https://wso2.com/api-platform/docs/ai-gateway/control-content/content-length.md): Enforce byte-length limits on LLM inputs and outputs
-- [JSON Schema Guardrail](https://wso2.com/api-platform/docs/ai-gateway/control-content/json-schema.md): Validate LLM request and response body content against a JSON schema definition to enforce structured data formats
-- [PII Masking Regex Guardrail](https://wso2.com/api-platform/docs/ai-gateway/control-content/pii-masking-regex.md): Mask personally identifiable information using configurable regex patterns
-- [Regex Guardrail](https://wso2.com/api-platform/docs/ai-gateway/control-content/regex.md): Block or allow content matching a regular expression pattern
-- [Semantic Prompt Guard](https://wso2.com/api-platform/docs/ai-gateway/control-content/semantic-prompt-guard.md): Block semantically similar prompts using embedding-based similarity matching against allow/deny phrase lists
-- [Sentence Count Guardrail](https://wso2.com/api-platform/docs/ai-gateway/control-content/sentence-count.md): Enforce min/max sentence count on LLM inputs and outputs
-- [URL Guardrail](https://wso2.com/api-platform/docs/ai-gateway/control-content/url.md): Validate and block URLs in LLM prompts or completions
-- [Word Count Guardrail](https://wso2.com/api-platform/docs/ai-gateway/control-content/word-count.md): Enforce min/max word count on LLM inputs and outputs
+- [Expose LLMs to Applications Overview](https://wso2.com/api-platform/docs/ai-gateway/expose-llms/overview.md): Expose an LLM provider to applications through an LLM proxy: its own URL context, per-application policies, and the provider-level rules it inherits.
+- [Control Cost and Traffic Overview](https://wso2.com/api-platform/docs/ai-gateway/control-cost-and-traffic/overview.md): Keep LLM spend and traffic volume predictable: distribute requests across model endpoints, cache equivalent prompts, and set timeouts on a resource.
+- [AI Gateway Timeouts](https://wso2.com/api-platform/docs/ai-gateway/control-cost-and-traffic/timeouts.md): Configure gateway-level and API-level timeouts (connect, route, idle, and HTTP connection manager) to protect against slow or unreachable backends and slow clients.
+- [Guardrails Overview](https://wso2.com/api-platform/docs/ai-gateway/control-content/overview.md): AI Gateway guardrails: LLM-aware policies for content filtering, safety, and compliance, with per-policy reference in the WSO2 API Platform Policy Hub.
+- [Guardrail Execution Order](https://wso2.com/api-platform/docs/ai-gateway/control-content/execution-order.md): How guardrails execute across phases in the AI Gateway dual-hop model: the LLM Proxy chain runs before the LLM Provider chain on request, and in reverse on response.
+- [MCP Proxy Overview](https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/overview.md): Route Model Context Protocol traffic through the AI Gateway with an MCP proxy, and apply authentication, authorization, and access control to that traffic.
 - [MCP Proxy Quick Start](https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/create-an-mcp-proxy.md): Set up a standalone MCP proxy and invoke it through an MCP client
-- [MCP Access Control List](https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/mcp-acl-list.md): Control access to MCP tools, resources, and prompts using allow or deny mode with exceptions
-- [MCP Authentication](https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/mcp-authentication.md): Enforce authentication on inbound MCP traffic
-- [MCP Authorization](https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/mcp-authorization.md): Define fine-grained access control rules for MCP tools, resources, and prompts based on JWT claims and scopes
-- [MCP Rewrite](https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/mcp-rewrite.md): Expose user-facing names for MCP tools, resources, and prompts while mapping them to different backend capability names
 - [AI Gateway Immutable Deployment](https://wso2.com/api-platform/docs/ai-gateway/run-the-gateway/immutable-gateway.md): Run the standalone AI Gateway in immutable mode, loading all configuration from files at startup
 - [AI Gateway Kubernetes Overview](https://wso2.com/api-platform/docs/ai-gateway/run-the-gateway/kubernetes/overview.md): Overview of Kubernetes deployment for the standalone AI Gateway
 - [AI Gateway Kubernetes Standalone](https://wso2.com/api-platform/docs/ai-gateway/run-the-gateway/kubernetes/kubernetes-standalone.md): Deploy the standalone AI Gateway on Kubernetes without an operator
@@ -346,7 +335,9 @@
 - [AI Gateway Tracing](https://wso2.com/api-platform/docs/ai-gateway/monitor-traffic/tracing.md): Configure distributed tracing for the standalone AI Gateway
 - [AI Gateway Moesif Analytics](https://wso2.com/api-platform/docs/ai-gateway/monitor-traffic/moesif-analytics.md): Integrate the standalone AI Gateway with Moesif for LLM usage analytics and cost tracking
 - [AI Gateway Analytics Header Filter](https://wso2.com/api-platform/docs/ai-gateway/monitor-traffic/analytics-header-filter.md): Control which request and response headers are sent to analytics backends using allow or deny mode
+- [Control Access Overview](https://wso2.com/api-platform/docs/ai-gateway/control-access/overview.md): Control access to the AI Gateway: authentication and role-based authorization on the management API, and provider-level rules for upstream endpoints.
 - [AI Gateway Controller Authentication](https://wso2.com/api-platform/docs/ai-gateway/control-access/secure-the-management-api.md): Configure Basic Auth or JWT/IDP authentication and role-based authorization for the AI Gateway Controller REST API
+- [AI Gateway Default Ports](https://wso2.com/api-platform/docs/ai-gateway/reference/default-ports.md): Default ports the AI Gateway listens on: router HTTP and HTTPS traffic, the Gateway-Controller REST API, and the admin health endpoints.
 
 ## Policy Hub
 

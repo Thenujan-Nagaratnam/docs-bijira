@@ -85,7 +85,7 @@ operationPolicies:
 
 The policy rewrites the model at the location defined by the provider template. It can rewrite a model in the request payload, a header, a query parameter, or a path parameter.
 
-See [Model Round Robin](../control-cost-and-traffic/model-round-robin.md) for its complete configuration.
+See [Model Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-round-robin) for its complete configuration.
 
 ### Model weighted round robin
 
@@ -110,7 +110,7 @@ operationPolicies:
 
 This example produces the repeating sequence `gpt-4o`, `gpt-4o`, `claude-sonnet-4-5-20250929` while both targets are available. It provides proportional deterministic distribution, not random or performance-based load balancing.
 
-See [Model Weighted Round Robin](../control-cost-and-traffic/model-weighted-round-robin.md) for its complete configuration.
+See [Model Weighted Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin) for its complete configuration.
 
 ## Configure Providers
 
@@ -984,7 +984,7 @@ For a larger configuration containing OpenAI, Anthropic, Azure OpenAI, Mistral, 
 
 For automatic traffic distribution across models and providers, see:
 
-- [Model Round Robin](../control-cost-and-traffic/model-round-robin.md)
-- [Model Weighted Round Robin](../control-cost-and-traffic/model-weighted-round-robin.md)
+- [Model Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-round-robin)
+- [Model Weighted Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin)
 
 AWS Bedrock usage can also be evaluated by the [LLM Cost policy](../../../ai-workspace/next/policies/overview.md#llm-cost).

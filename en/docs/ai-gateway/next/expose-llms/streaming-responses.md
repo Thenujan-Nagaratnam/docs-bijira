@@ -100,4 +100,4 @@ If a streamed response carries no `usage` block, the gateway has no token counts
 
 - [Quick Start Guide](../quick-start-guide.md) — deploy a provider and a proxy, then send your first request
 - [MCP Proxy Quick Start Guide](../mcp-proxy/create-an-mcp-proxy.md) — deploy an MCP proxy
-- [Sentence Count Guardrail](../control-content/sentence-count.md) — a guardrail that gates a stream until it can evaluate the content
+- [Sentence Count Guardrail](https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail) — a guardrail that gates a stream until it can evaluate the content
