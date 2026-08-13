@@ -10,7 +10,7 @@ tags:
   - quickstart
   - docker
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-04
+last_updated: 2026-08-13
 content_type: "quickstart"
 ---
 
@@ -40,44 +40,86 @@ A Docker-compatible container runtime such as:
 - Colima (macOS)
 - Docker Engine + Compose plugin (Linux)
 
-Ensure `docker` and `docker compose` commands are available.
+These examples use `docker compose`. If you use another Compose-compatible runtime, use the equivalent commands.
+
+Ensure `docker` and `docker compose` commands are available:
 
 ```bash
 docker --version
 docker compose version
 ```
 
-To call an LLM through the gateway, you also need an OpenAI API key.
+This guide uses OpenAI as the upstream LLM provider. To call the OpenAI API through the 
+gateway, you also need an OpenAI API key.
 
-## Start the gateway
+## Set up the Gateway
 
 The commands below use version `1.2.0`. Substitute the API Platform AI Gateway release version you want to run in the download URL, the archive name, and the directory name.
 
-```bash
-# Download distribution.
+### Step 1: Download the Gateway
+Run this command in your terminal to download the AI Gateway distribution:
+
+``` bash
 wget https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
+```
 
-# Unzip the downloaded distribution.
+Then extract the content:
+
+```bash
 unzip wso2apip-ai-gateway-1.2.0.zip
+```
 
+Go inside the root directory of the Gateway distribution folder:
+
+```bash
 cd wso2apip-ai-gateway-1.2.0/
+```
 
-# Run the one-time setup. This provisions the AES-256 at-rest encryption key, the router HTTPS
-# listener certificate, api-platform.env, and the gateway-controller admin credentials. It prints
-# the admin password once — copy it.
+### Step 2: Run the setup script
+
+Run the following script for a one-time setup.
+
+```bash
 ./scripts/setup.sh
+```
 
-# Export the admin credentials so the management-API calls below can authenticate.
-# The username defaults to "admin"; use the password setup.sh just printed.
+This provisions the following:
+
+* AES-256 at-rest encryption key
+* The router HTTPS listener certificate
+* The `api-platform.env` file
+* The gateway-controller admin credentials 
+
+The script prints the admin password once — copy it.
+
+### Step 3: Export admin credentials
+
+Export the admin credentials so the management-API calls below can authenticate. 
+The username defaults to `admin`. Use the password the setup script `setup.sh` printed 
+in the preceding step.
+
+```bash
 export ADMIN_USERNAME=admin
 export ADMIN_PASSWORD='<the password scripts/setup.sh printed>'
+```
 
-# Start the complete stack
-docker compose up
+### Step 4: Start the Gateway  
 
-# Verify gateway controller admin endpoint is running
+Start the complete gateway stack using Docker Compose:
+
+```bash
+docker compose up -d
+```
+
+### Step 5: Verify the Gateway
+
+Verify that the Gateway Controller is healthy::
+
+```bash
 curl http://localhost:9094/api/admin/v1/health
 ```
+
+A successful response confirms the gateway is running and ready to accept API configurations.
 
 !!! note "Running on Windows"
     The commands above assume a Linux/macOS shell. On Windows, run the one-time setup with the PowerShell script instead — it takes the same flags and provisions the same files:
@@ -100,7 +142,8 @@ curl http://localhost:9094/api/admin/v1/health
 !!! tip "Customizing configuration"
     The setup script (`setup.sh`, or `setup.ps1` on Windows) writes `api-platform.env`, which is loaded into the containers via Docker Compose `env_file`. To change the storage backend, connect to a control plane, or tune other settings, edit that file (or the `config.toml` interpolation tokens directly). See [Gateway Configuration and Environment Interpolation](./setup/configuration.md).
 
-## Deploy an OpenAI LLM provider configuration
+## Deploy an API
+### Step 1: Deploy an OpenAI LLM provider configuration
 
 The API Platform Gateway includes first-class support for the OpenAI LLM provider. As a platform administrator, replace `<openai-apikey>` with your OpenAI API key and run the following command to deploy a sample OpenAI LLM provider.
 
@@ -136,49 +179,11 @@ spec:
 EOF
 ```
 
+### Step 2: Invoke the API 
 To test LLM provider traffic routing through the gateway, invoke the following request.
 
 ```bash
 curl -X POST https://localhost:8443/openai/latest/chat/completions \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "gpt-4o-mini",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Hi"
-      }
-    ]
-  }' -k
-```
-
-## Deploy an LLM proxy configuration to consume an LLM provider
-
-The API Platform Gateway provides first-class support for configuring and deploying LLM proxies. As an AI developer, run the following command to deploy a sample LLM proxy that consumes the OpenAI LLM provider the platform administrator deployed above.
-
-```bash
-curl -X POST http://localhost:9090/api/management/v1/llm-proxies \
-  -H "Content-Type: application/yaml" \
-  -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
-  --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1
-kind: LlmProxy
-metadata:
-  name: openai-assistant
-spec:
-  displayName: OpenAI Assistant
-  version: v1.0
-  context: /assistant
-  provider:
-    id: openai-provider
-  policies: []
-EOF
-```
-
-To test LLM proxy traffic routing through the gateway and consume the LLM provider, invoke the following request.
-
-```bash
-curl -X POST "https://localhost:8443/assistant/chat/completions" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "gpt-4o-mini",
@@ -202,25 +207,27 @@ Both directions work, and you can use them together:
 
 The gateway keeps serving traffic either way. If AI Workspace is unreachable, the gateway carries on and the sync catches up once the connection is restored.
 
-## Stopping the gateway
+## Stopping the Gateway
 
 When stopping the gateway, you have two options:
 
-**Option 1: Stop runtime, keep data (persisted proxies and configuration)**
+### Keep data and configurations 
+This option stops the runtime while keeping data: APIs and configurations are persisted:
 
 ```bash
 docker compose down
 ```
 
-This stops the containers but preserves the `controller-data` volume. When you restart with `docker compose up`, all your configurations are restored.
+This stops the containers but preserves the `controller-data` volume. When you restart with `docker compose up`, all your API configurations will be restored.
 
-**Option 2: Complete shutdown with data cleanup (fresh start)**
+### Delete data for a fresh start
+This option performs a complete shutdown with data cleanup (fresh start):
 
 ```bash
 docker compose down -v
 ```
 
-This stops the containers and removes the `controller-data` volume. The next startup is a clean slate with no persisted templates or provider configuration.
+This stops containers and removes the `controller-data` volume. Next startup will be a clean slate with no persisted APIs or configuration.
 
 ## Next steps
 
