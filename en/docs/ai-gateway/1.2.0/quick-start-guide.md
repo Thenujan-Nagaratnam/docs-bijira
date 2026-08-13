@@ -1,6 +1,6 @@
 ---
 title: "AI Gateway Quick Start Guide"
-description: "Run API Platform AI Gateway with Docker Compose, deploy an LLM provider and an LLM proxy, route your first LLM request, and govern the gateway from AI Workspace."
+description: "Run API Platform AI Gateway with Docker, deploy an LLM provider and an LLM proxy, route your first LLM request, and govern the gateway from AI Workspace."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/quick-start-guide/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/quick-start-guide.md
 tags:
@@ -57,6 +57,7 @@ gateway, you also need an OpenAI API key.
 The commands below use version `1.2.0`. Substitute the API Platform AI Gateway release version you want to run in the download URL, the archive name, and the directory name.
 
 ### Step 1: Download the Gateway
+
 Run this command in your terminal to download the AI Gateway distribution:
 
 ``` bash
@@ -142,7 +143,8 @@ A successful response confirms the gateway is running and ready to accept API co
 !!! tip "Customizing configuration"
     The setup script (`setup.sh`, or `setup.ps1` on Windows) writes `api-platform.env`, which is loaded into the containers via Docker Compose `env_file`. To change the storage backend, connect to a control plane, or tune other settings, edit that file (or the `config.toml` interpolation tokens directly). See [Gateway Configuration and Environment Interpolation](./setup/configuration.md).
 
-## Deploy an API
+## Deploy an LLM Provider
+
 ### Step 1: Deploy an OpenAI LLM provider configuration
 
 The API Platform Gateway includes first-class support for the OpenAI LLM provider. As a platform administrator, replace `<openai-apikey>` with your OpenAI API key and run the following command to deploy a sample OpenAI LLM provider.
@@ -180,6 +182,7 @@ EOF
 ```
 
 ### Step 2: Invoke the API 
+
 To test LLM provider traffic routing through the gateway, invoke the following request.
 
 ```bash
@@ -212,6 +215,7 @@ The gateway keeps serving traffic either way. If AI Workspace is unreachable, th
 When stopping the gateway, you have two options:
 
 ### Keep data and configurations 
+
 This option stops the runtime while keeping data: APIs and configurations are persisted:
 
 ```bash
@@ -221,6 +225,7 @@ docker compose down
 This stops the containers but preserves the `controller-data` volume. When you restart with `docker compose up`, all your API configurations will be restored.
 
 ### Delete data for a fresh start
+
 This option performs a complete shutdown with data cleanup (fresh start):
 
 ```bash
