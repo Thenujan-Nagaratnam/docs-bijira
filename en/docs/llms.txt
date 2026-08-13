@@ -338,7 +338,8 @@
 - [AI Gateway Tracing](https://wso2.com/api-platform/docs/ai-gateway/monitor-traffic/tracing.md): Configure distributed tracing for the standalone AI Gateway
 - [AI Gateway Moesif Analytics](https://wso2.com/api-platform/docs/ai-gateway/monitor-traffic/moesif-analytics.md): Integrate the standalone AI Gateway with Moesif for LLM usage analytics and cost tracking
 - [AI Gateway Analytics Header Filter](https://wso2.com/api-platform/docs/ai-gateway/monitor-traffic/analytics-header-filter.md): Control which request and response headers are sent to analytics backends using allow or deny mode
-- [Control Access Overview](https://wso2.com/api-platform/docs/ai-gateway/control-access/overview.md): Control access to the AI Gateway: authentication and role-based authorization on the management API, and provider-level rules for upstream endpoints.
+- [Control Access Overview](https://wso2.com/api-platform/docs/ai-gateway/control-access/overview.md): Control access to the AI Gateway: client authentication on proxies and providers, authentication and role-based authorization on the management API, and provider-level rules for upstream endpoints.
+- [Authenticate Clients](https://wso2.com/api-platform/docs/ai-gateway/control-access/authenticate-clients.md): Protect an LLM proxy or provider with the api-key-auth policy, issue consumer API keys through the management API, and manage the key lifecycle.
 - [AI Gateway Controller Authentication](https://wso2.com/api-platform/docs/ai-gateway/control-access/secure-the-management-api.md): Configure Basic Auth or JWT/IDP authentication and role-based authorization for the AI Gateway Controller REST API
 - [AI Gateway Default Ports](https://wso2.com/api-platform/docs/ai-gateway/reference/default-ports.md): Default ports the AI Gateway listens on: router HTTP and HTTPS traffic, the Gateway-Controller REST API, and the admin health endpoints.
 

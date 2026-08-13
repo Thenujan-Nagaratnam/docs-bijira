@@ -656,6 +656,7 @@ nav:
             - Create an MCP Proxy: ai-gateway/next/mcp-proxy/create-an-mcp-proxy.md
         - Control Access:
             - Overview: ai-gateway/next/control-access/overview.md
+            - Authenticate Clients: ai-gateway/next/control-access/authenticate-clients.md
             - Secure the Management API: ai-gateway/next/control-access/secure-the-management-api.md
         - Control Content (Guardrails):
             - Guardrails Overview: ai-gateway/next/control-content/overview.md
