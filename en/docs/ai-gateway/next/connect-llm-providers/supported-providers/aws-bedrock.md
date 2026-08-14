@@ -10,7 +10,7 @@ tags:
   - aws-bedrock
   - authentication
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-13
+last_updated: 2026-08-14
 content_type: "how-to"
 ---
 
@@ -174,7 +174,7 @@ Continue to [Create a gateway consumer API key](#create-a-gateway-consumer-api-k
 
 The `aws-authentication` policy signs each outbound request with SigV4. Do not configure `spec.upstream.auth` when using this option because the policy creates the AWS `Authorization` header.
 
-See the [AWS Authentication policy reference](https://github.com/wso2/gateway-controllers/blob/main/docs/aws-authentication/v0.10/docs/aws-authentication.md) for the complete parameter and error-response reference.
+See the [AWS Authentication policy reference](https://wso2.com/api-platform/policy-hub/policies/aws-authentication) for the complete parameter and error-response reference.
 
 All SigV4 examples use:
 

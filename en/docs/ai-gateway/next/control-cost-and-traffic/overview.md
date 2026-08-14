@@ -8,7 +8,7 @@ tags:
   - cost
   - traffic
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-12
+last_updated: 2026-08-14
 content_type: "concept"
 ---
 
@@ -40,6 +40,8 @@ These policies are documented in the [Policy Hub](https://wso2.com/api-platform/
 | [Model Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-round-robin) | Distributes requests evenly across a pool of AI model endpoints |
 | [Model Weighted Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin) | Distributes requests across model endpoints according to configured weights |
 | [Respond](https://wso2.com/api-platform/policy-hub/policies/respond) | Returns an immediate response without forwarding to the upstream backend |
+
+For plain request-rate limiting, which counts requests rather than tokens or cost, see the [Rate Limit - Basic](https://wso2.com/api-platform/policy-hub/policies/basic-ratelimit) and [Rate Limit - Advanced](https://wso2.com/api-platform/policy-hub/policies/advanced-ratelimit) policies. Both apply to any API, not only to LLM traffic.
 
 ## Related guides
 

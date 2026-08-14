@@ -9,7 +9,7 @@ tags:
   - authentication
   - api-keys
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-13
+last_updated: 2026-08-14
 content_type: "how-to"
 ---
 
@@ -42,6 +42,8 @@ Add `api-key-auth` to the proxy's `operationPolicies`, scoped to the paths and m
 The `params.key` value sets the header name the gateway reads the key from, and `params.in` sets where to look for it. Header matching is case-insensitive. Only operations listed under `paths` require a key, so an operation you leave out stays open.
 
 An LLM provider takes the same block under its own `spec.operationPolicies`. For a provider that protects two operations this way, see [AWS Bedrock](../connect-llm-providers/supported-providers/aws-bedrock.md).
+
+The policy's full parameter reference is in the [API Key Auth policy](https://wso2.com/api-platform/policy-hub/policies/api-key-auth) in Policy Hub.
 
 !!! note "`operationPolicies` compared with `policies`"
     Some configurations attach policies under `spec.policies`. That field is deprecated and the gateway treats it identically to `operationPolicies`. Use `operationPolicies` in new configuration.
