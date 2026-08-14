@@ -664,6 +664,9 @@ nav:
         - Control Cost & Traffic:
             - Overview: ai-gateway/next/control-cost-and-traffic/overview.md
             - Timeouts: ai-gateway/next/control-cost-and-traffic/timeouts.md
+        - AI Workspace:
+            - What AI Workspace Adds: ai-gateway/next/ai-workspace/what-ai-workspace-adds.md
+            - Connect the Gateway to AI Workspace: ai-gateway/next/ai-workspace/connect-the-gateway.md
         - Monitor Traffic:
             - Logging: ai-gateway/next/monitor-traffic/logging.md
             - Tracing: ai-gateway/next/monitor-traffic/tracing.md

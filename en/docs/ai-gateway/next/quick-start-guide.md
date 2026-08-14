@@ -10,7 +10,7 @@ tags:
   - quickstart
   - docker
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-11
+last_updated: 2026-08-13
 content_type: "quickstart"
 ---
 
@@ -531,6 +531,8 @@ Both directions work, and you can use them together:
 - **Bottom-up.** Keep deploying through the management API, as this guide does. The gateway syncs every artifact you create to AI Workspace automatically, where each one appears as a copy the gateway owns. The OpenAI provider and the `openai-assistant` proxy from this guide appear there without being re-declared. To see what a synced artifact looks like, and what stays editable, see [Manage Gateway-deployed AI artifacts in AI Workspace](../../ai-workspace/next/sync-gateway-created-artifacts.md).
 
 The gateway keeps serving traffic either way. If AI Workspace is unreachable, the gateway carries on and the sync catches up once the connection is restored.
+
+To weigh up the two products before you connect them, see [What AI Workspace adds](./ai-workspace/what-ai-workspace-adds.md). For the connection path that suits your runtime, see [Connect the gateway to AI Workspace](./ai-workspace/connect-the-gateway.md).
 
 ## Stopping the gateway
 
