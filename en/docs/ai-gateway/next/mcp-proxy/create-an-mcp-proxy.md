@@ -1,6 +1,6 @@
 ---
 title: "Create an MCP proxy"
-description: "Run API Platform AI Gateway with Docker Compose, configure an MCP proxy, and route your first MCP traffic through the gateway."
+description: "Deploy an MCP proxy on a running API Platform AI Gateway, route MCP traffic through it from an MCP client, and view the proxy in AI Workspace."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/create-an-mcp-proxy/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/create-an-mcp-proxy.md
 tags:
@@ -8,99 +8,25 @@ tags:
   - mcp
   - quickstart
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-11
+last_updated: 2026-08-17
 content_type: "quickstart"
 ---
 
 # Create an MCP proxy
 
-## Quick start
+## Prerequisites
 
-### Using Docker Compose (recommended)
+- A running AI Gateway, with `ADMIN_USERNAME` and `ADMIN_PASSWORD` exported in the shell you run these commands from. See [Install the gateway](../setup-and-deployment/install-the-gateway.md).
+- The sample MCP server below joins the gateway's Compose network as `ai-gateway_gateway-network`, so start the gateway with `docker compose -p ai-gateway up`. If you started it under a different project name, use that project's network name in the `docker run` command.
 
+The `curl` commands on this page pipe their YAML payload in through a shell heredoc (`--data-binary @- <<'EOF'`), which PowerShell doesn't support. On Windows, either run them from Git Bash or WSL, or save the YAML between the `EOF` markers to a file and post that file explicitly — note the `.exe`, since `curl` is an alias for `Invoke-WebRequest` in Windows PowerShell:
 
-### Prerequisites
-
-A Docker-compatible container runtime such as:
-
-- Docker Desktop (Windows / macOS)
-- Podman Desktop or Podman (Windows / macOS / Linux)
-- Rancher Desktop (Windows / macOS)
-- Colima (macOS)
-- Docker Engine + Compose plugin (Linux)
-
-These examples use `docker compose`. If you use another Compose-compatible runtime, use the equivalent commands.
-
-Verify the commands for your runtime are available. For Docker:
-
-```bash
-docker --version
-docker compose version
+```powershell
+curl.exe -X POST http://localhost:9090/api/management/v1/mcp-proxies `
+  -H "Content-Type: application/yaml" `
+  -u "${env:ADMIN_USERNAME}:${env:ADMIN_PASSWORD}" `
+  --data-binary "@mcp-proxy.yaml"
 ```
-
-```bash
-# Download distribution.
-wget https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
-
-# Unzip the downloaded distribution.
-unzip wso2apip-ai-gateway-1.2.0.zip
-
-cd wso2apip-ai-gateway-1.2.0/
-
-# Run the one-time setup. This provisions the AES-256 at-rest encryption key, the router HTTPS
-# listener certificate, api-platform.env, and the gateway-controller admin credentials. It prints
-# the admin password once — copy it.
-./scripts/setup.sh
-
-# Export the admin credentials so the management-API calls below can authenticate.
-# The username defaults to "admin"; use the password setup.sh just printed.
-export ADMIN_USERNAME=admin
-export ADMIN_PASSWORD='<the password scripts/setup.sh printed>'
-
-# Start the complete stack
-docker compose -p ai-gateway up -d
-
-# Verify gateway controller admin endpoint is running
-curl http://localhost:9094/api/admin/v1/health
-```
-
-!!! tip "Port 8080, 8443, 9090, or 9094 already taken?"
-    If the start command fails with a port binding error, identify what is already listening on the default ports:
-
-  On macOS or Linux, run:
-
-    ```bash
-    lsof -nP -iTCP:8080 -sTCP:LISTEN
-    lsof -nP -iTCP:8443 -sTCP:LISTEN
-    lsof -nP -iTCP:9090 -sTCP:LISTEN
-    lsof -nP -iTCP:9094 -sTCP:LISTEN
-    ```
-
-  On Windows PowerShell, run:
-
-  ```powershell
-  Get-NetTCPConnection -State Listen -LocalPort 8080,8443,9090,9094 | Select-Object LocalAddress, LocalPort, OwningProcess
-  ```
-
-    Stop the conflicting service if you don't need it. If you need to keep it running, change the host-side value of the relevant `ports:` mapping in `docker-compose.yaml`. Then use the remapped host port in the verification and test commands on this page.
-
-!!! note "Running on Windows"
-    The commands above assume a Linux/macOS shell. On Windows, run the one-time setup with the PowerShell script instead — it takes the same flags and provisions the same files:
-
-    ```powershell
-    powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
-    ```
-
-    Then set the admin credentials with `$env:ADMIN_USERNAME='admin'` and `$env:ADMIN_PASSWORD='<the password setup.ps1 printed>'` in place of the `export` lines.
-
-    The remaining `curl` commands on this page pipe their YAML payload in through a shell heredoc (`--data-binary @- <<'EOF'`), which PowerShell does not support. Either run them from Git Bash or WSL, or save the YAML between `EOF` markers to a file and post that file explicitly — note the `.exe`, since `curl` is an alias for `Invoke-WebRequest` in Windows PowerShell:
-
-    ```powershell
-    curl.exe -X POST http://localhost:9090/api/management/v1/mcp-proxies `
-      -H "Content-Type: application/yaml" `
-      -u "${env:ADMIN_USERNAME}:${env:ADMIN_PASSWORD}" `
-      --data-binary "@mcp-proxy.yaml"
-    ```
 
 ## Deploy an MCP proxy configuration
 
@@ -145,28 +71,7 @@ http://localhost:8080/everything/mcp
 
 The gateway syncs the artifacts you deploy on it up to [AI Workspace](../../../ai-workspace/next/overview.md), the control plane for AI traffic across your organization. The `everything-mcp-v1.0` proxy you deployed above appears there without being re-declared, in the `default` project named in its `project-id` annotation. See [Manage Gateway-deployed AI artifacts in AI Workspace](../../../ai-workspace/next/sync-gateway-created-artifacts.md).
 
-## Stopping the gateway
+## Next steps
 
-Stop and remove the MCP backend first.
-
-```bash
-docker stop everything
-docker rm everything
-```
-
-When stopping the gateway, you have two options:
-
-### Option 1: Stop runtime, keep data (persisted proxies and configuration)
-
-```bash
-docker compose -p ai-gateway down
-```
-
-This stops the containers but preserves the `controller-data` volume. When you restart with `docker compose -p ai-gateway up`, all your API configurations will be restored.
-
-### Option 2: Complete shutdown with data cleanup (fresh start)
-
-```bash
-docker compose -p ai-gateway down -v
-```
-This stops containers and removes the `controller-data` volume. Next startup will be a clean slate with no persisted proxies or configuration.
+- Stop the sample MCP backend when you're done with it: `docker stop everything` and `docker rm everything`.
+- Govern this proxy alongside every other AI artifact you run: [AI Workspace overview](../../../ai-workspace/next/overview.md)

@@ -21,14 +21,14 @@ Base URLs:
 
 ## Table of Contents
 
-### [Authentication](../../control-access/secure-the-management-api.md)
+### [Authentication](../../setup-and-deployment/secure-the-management-api.md)
 
-- [Overview](../../control-access/secure-the-management-api.md#overview)
-- [How It Works](../../control-access/secure-the-management-api.md#how-it-works)
-- [Configuration](../../control-access/secure-the-management-api.md#configuration)
-- [Role Mapping Semantics](../../control-access/secure-the-management-api.md#role-mapping-semantics)
-- [Troubleshooting (What you’ll observe)](../../control-access/secure-the-management-api.md#troubleshooting-what-youll-observe)
-- [Testing](../../control-access/secure-the-management-api.md#testing)
+- [Overview](../../setup-and-deployment/secure-the-management-api.md#overview)
+- [How It Works](../../setup-and-deployment/secure-the-management-api.md#how-it-works)
+- [Configuration](../../setup-and-deployment/secure-the-management-api.md#configuration)
+- [Role Mapping Semantics](../../setup-and-deployment/secure-the-management-api.md#role-mapping-semantics)
+- [Troubleshooting (What you’ll observe)](../../setup-and-deployment/secure-the-management-api.md#troubleshooting-what-youll-observe)
+- [Testing](../../setup-and-deployment/secure-the-management-api.md#testing)
 
 ### [MCP Proxy Management](mcp-proxy-management.md)
 

@@ -50,7 +50,7 @@ An LLM Provider represents a connection to an AI backend service such as OpenAI,
 
 Once configured, the LLM Provider allows traffic to flow through the gateway to the AI backend.
 
-To connect the gateway to AWS Bedrock, see [Configure an AWS Bedrock LLM Provider](connect-llm-providers/supported-providers/aws-bedrock.md). The guide covers both Bedrock bearer API keys and AWS Signature Version 4 (SigV4) authentication.
+To connect the gateway to AWS Bedrock, see [Configure an AWS Bedrock LLM Provider](llm-provider/supported-providers/aws-bedrock.md). The guide covers both Bedrock bearer API keys and AWS Signature Version 4 (SigV4) authentication.
 
 ### LLM Proxy
 
