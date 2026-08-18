@@ -8,7 +8,7 @@ tags:
   - api-portal
   - webhooks
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-07-31
+last_updated: 2026-08-18
 content_type: "how-to"
 ---
 
@@ -73,3 +73,4 @@ You can read delivery history, including failures and their HTTP status, through
 - [Webhook Subscribers](../rest-api/webhook-subscribers.md): manage subscribers through the Management API
 - [Webhook Events](../rest-api/webhook-events.md): read delivery history through the Management API
 - [Manage API Keys](../consume-an-api/manage-api-keys.md): the lifecycle behind the `apikey.*` events
+- [Configurations](../references/configurations.md): global delivery tuning—poll interval, batch size, signature tolerance

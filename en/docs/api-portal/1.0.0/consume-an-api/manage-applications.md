@@ -8,7 +8,7 @@ tags:
   - api-portal
   - applications
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-07-31
+last_updated: 2026-08-18
 content_type: "how-to"
 ---
 
@@ -77,6 +77,14 @@ Deleting is irreversible, and it's narrower than the confirmation dialog suggest
 - **Dissociates any API keys** that were linked to it. The keys themselves survive and keep working—only the analytics association goes.
 - **Leaves your subscriptions untouched.** Subscriptions are held against the API, not the application, so they're unaffected either way.
 - **Doesn't contact the key manager.** The OAuth application there stays exactly as it was, and access tokens already issued stay valid until they expire. To invalidate those, use the key manager's own console or revocation endpoint.
+
+## Application lifecycle events
+
+When you create, edit, or delete an application, the portal publishes a webhook event to every subscriber configured for it. Delivery is attempted exactly once, so a timeout or a non-2xx response leaves the subscriber unaware of the change, and any queueing or processing on its side adds delay.
+
+Deleting an application also publishes one `apikey.application_updated` event for each key that was associated with it, with the association cleared. The keys themselves stay valid.
+
+For the payload of each event, see the [Webhook Event Catalog](../references/webhook-event-catalog.md); to register a subscriber, see [Webhook Integration](../admin-settings/webhook-integration.md).
 
 ## Related
 
