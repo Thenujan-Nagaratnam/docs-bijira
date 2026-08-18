@@ -9,7 +9,7 @@ tags:
   - webhooks
   - reference
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-07-31
+last_updated: 2026-08-18
 content_type: "reference"
 ---
 
@@ -248,3 +248,4 @@ Deleting an application also fires one `apikey.application_updated` per key that
 - [Webhook Events](../rest-api/webhook-events.md): read delivery history through the Management API
 - [Manage API Keys](../consume-an-api/manage-api-keys.md): the lifecycle behind the `apikey.*` events
 - [Manage Subscriptions](../consume-an-api/manage-subscriptions.md): the lifecycle behind the `subscription.*` events
+- [Configurations](configurations.md): global delivery tuning—poll interval, batch size, signature tolerance
