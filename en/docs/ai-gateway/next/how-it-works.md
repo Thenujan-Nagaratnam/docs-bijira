@@ -69,7 +69,7 @@ The gateway ships with these provider templates, loaded at startup:
 | `awsbedrock` | AWS Bedrock |
 | `azureai-foundry` | Azure AI Foundry |
 
-For the extraction configuration each template applies, see [LLM provider templates](./llm-provider/llm-templates.md).
+For the extraction configuration each template applies, see [LLM provider templates](./reference/llm-templates.md).
 
 ## Streaming
 

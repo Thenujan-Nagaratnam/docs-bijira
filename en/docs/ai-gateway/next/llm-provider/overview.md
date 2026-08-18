@@ -1,6 +1,6 @@
 ---
 title: "LLM provider"
-description: "Connect the AI Gateway to an LLM backend: what an LLM Provider holds, who configures it, and the OpenAI, Anthropic, and AWS Bedrock connection guides."
+description: "Connect the AI Gateway to an LLM backend: what an LLM Provider holds, who configures it, and a connection guide for every provider template the gateway ships."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/overview/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/overview.md
 tags:
@@ -31,7 +31,7 @@ Platform administrators own LLM providers. An administrator holds the upstream c
 
 ## In this section
 
-The three provider pages carry connection documentation: the upstream URL, the authentication each provider expects, and a working definition you can deploy as it stands. The gateway ships more provider templates than these three; [Provider templates](llm-templates.md) lists every one it loads at startup.
+Every template the gateway ships has a provider page under Supported Providers. Three of them — OpenAI, Anthropic and AWS Bedrock — carry a fixed upstream URL, the authentication the provider expects, and a definition you can deploy as it stands. For the other four, the endpoint and the credential belong to your own account or resource, so those pages name what to obtain and link the provider that defines it. A further page covers a service with no shipped template at all. [Provider templates](../reference/llm-templates.md) is the reference for what each template extracts.
 
 This section contains the following pages:
 
@@ -39,9 +39,13 @@ This section contains the following pages:
 |------|----------------|
 | [Create and configure an LLM provider](create-and-configure-an-llm-provider.md) | Create an LLM provider on the AI Gateway: choose a template, set the upstream URL and credentials, deploy it with the management API, and test the connection. |
 | [OpenAI](supported-providers/openai.md) | Connect the AI Gateway to OpenAI: the upstream URL, API key authentication, the endpoints the provider exposes, and a request that tests the connection. |
+| [Azure OpenAI](supported-providers/azure-openai.md) | Connect the AI Gateway to Azure OpenAI: the values your Azure resource supplies, what the azure-openai template extracts, and OpenAI-format compatibility. |
 | [Anthropic](supported-providers/anthropic.md) | Connect the AI Gateway to the Anthropic Messages API: the upstream URL, x-api-key authentication, and the endpoint the provider exposes. |
+| [Gemini](supported-providers/gemini.md) | Connect the AI Gateway to the Gemini API: the values Google supplies, what the gemini template extracts, and OpenAI-format compatibility. |
+| [MistralAI](supported-providers/mistralai.md) | Connect the AI Gateway to the Mistral AI API: the values Mistral AI supplies, what the mistralai template extracts, and OpenAI-format compatibility. |
 | [AWS Bedrock](supported-providers/aws-bedrock.md) | Connect API Platform AI Gateway to AWS Bedrock using a bearer API key or AWS Signature Version 4 authentication, then invoke a model through the gateway. |
-| [Provider templates](llm-templates.md) | Reference for LLM Provider Templates in API Platform AI Gateway, covering built-in templates for OpenAI, Anthropic, Gemini, and more. |
+| [Azure AI Foundry](supported-providers/azure-ai-foundry.md) | Connect the AI Gateway to Azure AI Foundry: the values your Foundry resource supplies, and what the azureai-foundry template extracts from responses. |
+| [Custom provider](supported-providers/custom-provider.md) | Connect the AI Gateway to an LLM service with no shipped template: define an LlmProviderTemplate of your own, deploy it, and create a provider that uses it. |
 
 ## Related guides
 

@@ -648,9 +648,13 @@ nav:
             - Create and Configure an LLM Provider: ai-gateway/next/llm-provider/create-and-configure-an-llm-provider.md
             - Supported Providers:
                 - OpenAI: ai-gateway/next/llm-provider/supported-providers/openai.md
+                - Azure OpenAI: ai-gateway/next/llm-provider/supported-providers/azure-openai.md
                 - Anthropic: ai-gateway/next/llm-provider/supported-providers/anthropic.md
+                - Gemini: ai-gateway/next/llm-provider/supported-providers/gemini.md
+                - MistralAI: ai-gateway/next/llm-provider/supported-providers/mistralai.md
                 - AWS Bedrock: ai-gateway/next/llm-provider/supported-providers/aws-bedrock.md
-            - Provider Templates: ai-gateway/next/llm-provider/llm-templates.md
+                - Azure AI Foundry: ai-gateway/next/llm-provider/supported-providers/azure-ai-foundry.md
+                - Custom Provider: ai-gateway/next/llm-provider/supported-providers/custom-provider.md
         - LLM Proxy:
             - Overview: ai-gateway/next/llm-proxy/overview.md
             - Create and Configure an LLM Proxy: ai-gateway/next/llm-proxy/create-and-configure-an-llm-proxy.md
@@ -693,6 +697,7 @@ nav:
                 - Configure OpenAI Codex CLI with AI Gateway: guides/ai-and-mcp/ai-coding-assistants/codex-configuration-with-ai-gateway.md
         - Reference:
             - Overview: ai-gateway/next/reference/overview.md
+            - Provider Templates: ai-gateway/next/reference/llm-templates.md
             - Management REST API:
                 - Overview: ai-gateway/next/reference/management-api/overview.md
                 - LLM Provider Template Management: ai-gateway/next/reference/management-api/llm-provider-template-management.md
@@ -1463,7 +1468,7 @@ plugins:
         ai-gateway/next/performance/overview.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/overview.md
         ai-gateway/next/performance/ai-gateway-runtime-with-two-cpus.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/ai-gateway-runtime-with-two-cpus.md
         ai-gateway/next/performance/ai-gateway-runtime-with-four-cpus.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/ai-gateway-runtime-with-four-cpus.md
-        ai-gateway/next/llm-proxy/llm-templates.md: ai-gateway/next/llm-provider/llm-templates.md
+        ai-gateway/next/llm-proxy/llm-templates.md: ai-gateway/next/reference/llm-templates.md
         ai-gateway/next/llm-proxy/configure-aws-bedrock-provider.md: ai-gateway/next/llm-provider/supported-providers/aws-bedrock.md
         ai-gateway/next/connect-llm-providers/configure-aws-bedrock-provider.md: ai-gateway/next/llm-provider/supported-providers/aws-bedrock.md
         ai-gateway/next/streaming-responses.md: ai-gateway/next/llm-proxy/streaming-responses.md
@@ -1520,6 +1525,7 @@ plugins:
         ai-gateway/next/observability/tracing.md: ai-gateway/next/monitor-traffic/tracing.md
         ai-gateway/next/analytics/moesif-analytics.md: ai-gateway/next/monitor-traffic/moesif-analytics.md
         ai-gateway/next/analytics/analytics-header-filter.md: ai-gateway/next/monitor-traffic/analytics-header-filter.md
+        ai-gateway/next/llm-provider/llm-templates.md: ai-gateway/next/reference/llm-templates.md
         ai-gateway/next/gateway-controller-management-api/overview.md: ai-gateway/next/reference/management-api/overview.md
         ai-gateway/next/gateway-controller-management-api/llm-provider-template-management.md: ai-gateway/next/reference/management-api/llm-provider-template-management.md
         ai-gateway/next/gateway-controller-management-api/llm-provider-management.md: ai-gateway/next/reference/management-api/llm-provider-management.md
@@ -1546,7 +1552,7 @@ plugins:
         ai-gateway/next/run-the-gateway/sizing-and-performance/ai-gateway-runtime-with-two-cpus.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/ai-gateway-runtime-with-two-cpus.md
         ai-gateway/next/run-the-gateway/sizing-and-performance/overview.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/overview.md
         # AI Gateway revamp phase 7: Connect LLM Providers renamed to LLM Provider
-        ai-gateway/next/connect-llm-providers/llm-templates.md: ai-gateway/next/llm-provider/llm-templates.md
+        ai-gateway/next/connect-llm-providers/llm-templates.md: ai-gateway/next/reference/llm-templates.md
         ai-gateway/next/connect-llm-providers/overview.md: ai-gateway/next/llm-provider/overview.md
         ai-gateway/next/connect-llm-providers/supported-providers/anthropic.md: ai-gateway/next/llm-provider/supported-providers/anthropic.md
         ai-gateway/next/connect-llm-providers/supported-providers/aws-bedrock.md: ai-gateway/next/llm-provider/supported-providers/aws-bedrock.md

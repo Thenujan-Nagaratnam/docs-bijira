@@ -37,7 +37,7 @@ docker --version
 docker compose version
 ```
 
-To call an LLM through the gateway, you also need an OpenAI API key.
+To call an LLM through the gateway, you also need an API key from the specific LLM service.
 
 The **Windows (PowerShell)** examples on this page require PowerShell 7.3 or later.
 

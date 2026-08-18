@@ -27,7 +27,7 @@ This page is for platform administrators, who hold the upstream credentials.
 
 Every provider names a template in its `template` field. The template tells the gateway how to read that vendor's API: which paths carry chat traffic, and where to find the model name and token counts in a request and response. The gateway loads its templates at startup, so you select one by ID rather than defining it.
 
-For the template IDs the gateway ships with, and the metadata each one extracts, see [Provider templates](llm-templates.md). The example below uses the `openai` template.
+For the template IDs the gateway ships with, and the metadata each one extracts, see [Provider templates](../reference/llm-templates.md). The example below uses the `openai` template.
 
 ## Configure the provider
 
@@ -162,4 +162,4 @@ The upstream URL, the authentication each vendor expects, and the paths worth ex
 
 - Expose this provider to applications: [Create and configure an LLM proxy](../llm-proxy/create-and-configure-an-llm-proxy.md)
 - Put one proxy in front of several providers: [Route across multiple providers](../llm-proxy/multi-provider-routing.md)
-- See how the gateway reads token and model metadata: [Provider templates](llm-templates.md)
+- See how the gateway reads token and model metadata: [Provider templates](../reference/llm-templates.md)

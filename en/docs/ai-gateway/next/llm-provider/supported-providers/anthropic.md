@@ -89,6 +89,6 @@ When an LLM proxy routes to this provider, the proxy applies a transformer and m
 
 ## Related pages
 
-- [Provider templates](../llm-templates.md) — the token and model metadata the `anthropic` template extracts.
+- [Provider templates](../../reference/llm-templates.md) — the token and model metadata the `anthropic` template extracts.
 - [Route across multiple providers](../../llm-proxy/multi-provider-routing.md) — the proxy that consumes this provider.
 - [OpenAI](openai.md) — the same setup for a provider that uses `Authorization` and the OpenAI wire format.
