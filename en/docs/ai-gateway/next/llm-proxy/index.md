@@ -1,22 +1,31 @@
 ---
-title: "Create and configure an LLM proxy"
-description: "Create an LLM proxy on the AI Gateway: give it a URL context, name the LLM provider it consumes, deploy it with the management API, and route a request through it."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/create-and-configure-an-llm-proxy/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/create-and-configure-an-llm-proxy.md
+title: "LLM proxy"
+description: "Expose an LLM provider through an LLM proxy and deploy one: its own URL context, per-application policies, and the provider rules it inherits."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy.md
 tags:
   - ai-gateway
   - llm-proxy
   - llm
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-17
+last_updated: 2026-08-20
 content_type: "how-to"
 ---
 
-# Create and configure an LLM proxy
+# LLM proxy
 
-An LLM Proxy is a custom API endpoint that consumes an LLM provider. It gets its own URL context, such as `/assistant`, carries its own policies for the one application it serves, and inherits the access control, budgeting, and organization-wide policies the administrator set on the provider. This page takes you through deploying one and routing a request through it.
+An LLM Proxy allows developers to create custom API endpoints that consume an LLM Provider, while inheriting administrator-enforced access control, budgeting and organization-wide policies defined at the provider level. Each proxy gets its own URL context (e.g., `/assistant`) and can have its own policies applied. This enables:
 
-This page is for AI developers, who own LLM proxies.
+- Multiple AI applications to share a single LLM Provider
+- A single OpenAI-compatible endpoint to route requests to multiple LLM providers. See [Multi-provider routing](../multi-provider-routing.md).
+- Per-application policies such as prompt management and guardrails
+- Separation between platform administration and application development
+
+This page is for AI developers, who own LLM proxies. It takes you through deploying one and routing a request through it.
+
+## Who configures this
+
+AI developers own LLM proxies. A developer creates the proxy, names the LLM provider it consumes, and attaches the policies one application needs. The access control, budgeting, and organization-wide policies set on the provider still apply.
 
 ## Prerequisites
 
@@ -113,8 +122,20 @@ Send a chat completion request to the proxy's context on the gateway:
 
 The `-k` flag tells `curl` to skip Transport Layer Security (TLS) certificate verification. The router presents the self-signed listener certificate that `setup.sh` or `setup.ps1` generates, and no certificate authority trusts it. Outside local testing, give the router a certificate from a trusted certificate authority and remove `-k`.
 
+## Policies
+
+The routing policies that select a provider for a proxy, and the failover behavior that comes with them, are covered in [Load balancing and failover](../load-balancing-and-failover.md).
+
 ## Next steps
 
-- Protect the proxy, which is the client-facing endpoint: [Authenticate clients](../access-control/authenticate-clients.md)
-- Send requests on one proxy to more than one provider: [Route across multiple providers](multi-provider-routing.md)
-- Return responses chunk by chunk: [Stream responses](streaming-responses.md)
+- Protect the proxy, which is the client-facing endpoint: [Authenticate clients](../authenticate-clients.md)
+- Send requests on one proxy to more than one provider: [Multi-provider routing](../multi-provider-routing.md)
+- Return responses chunk by chunk: [Stream responses](../streaming-responses.md)
+
+## Related guides
+
+- [Set up a governed multi-model LLM proxy](../../../guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md) — distributes traffic across models behind one proxy, with per-team token budgets, PII masking, and semantic caching.
+- [Enforce a consistent AI persona with the prompt decorator policy](../../../guides/ai-and-mcp/using-prompt-decorator-policy.md) — prepends a persona system message to every request on an LLM proxy, without changing client code.
+- [Configure Claude Code with AI Gateway](../../../guides/ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway.md) — routes Claude Code through an Anthropic provider and an LLM proxy.
+- [Configure Gemini CLI with AI Gateway](../../../guides/ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway.md) — routes Google Gemini CLI through a Gemini provider and an LLM proxy.
+- [Configure OpenAI Codex CLI with AI Gateway](../../../guides/ai-and-mcp/ai-coding-assistants/codex-configuration-with-ai-gateway.md) — routes OpenAI Codex CLI through an OpenAI provider and an LLM proxy.

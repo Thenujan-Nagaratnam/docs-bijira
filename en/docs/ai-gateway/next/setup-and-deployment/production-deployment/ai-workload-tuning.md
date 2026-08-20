@@ -40,7 +40,7 @@ gateway:
 
 The two idle timeouts are what keep a streaming response alive. `route_idle_timeout_ms` bounds the gap between chunks arriving from the provider, and `stream_idle_timeout` bounds the same gap on the client side. Set both longer than the longest pause you expect between tokens, not longer than the response as a whole.
 
-Individual proxies can override the route timeouts through their `resilience` block, which is useful when one model is much slower than the rest. For the full precedence order between the `resilience` block and these defaults, see [Timeouts](../../traffic-and-usage-control/timeouts.md).
+Individual proxies can override the route timeouts through their `resilience` block, which is useful when one model is much slower than the rest. For the full precedence order between the `resilience` block and these defaults, see [Timeouts](../../timeouts-and-resilience.md).
 
 !!! note
     Raise the matching timeouts on whatever sits in front of the gateway as well. An ingress controller or load balancer with a 60-second read timeout cuts the response off regardless of what the gateway allows.
@@ -154,7 +154,7 @@ gateway:
 ```
 
 !!! warning "Prompts and completions are sensitive"
-    Debug-level logging can record request and response bodies, which on an AI Gateway means user prompts and model completions. Before you enable debug-level logging in production, confirm that your log retention and access controls suit that content. If you forward traffic data to an external analytics service, control what leaves the gateway with the [analytics header filter](../../monitor-traffic/analytics-header-filter.md). For where the logs go and how to read them, see [Gateway logging](../../monitor-traffic/logging.md).
+    Debug-level logging can record request and response bodies, which on an AI Gateway means user prompts and model completions. Before you enable debug-level logging in production, confirm that your log retention and access controls suit that content. If you forward traffic data to an external analytics service, control what leaves the gateway with the [analytics header filter](../../analytics/analytics-header-filter.md). For where the logs go and how to read them, see [Gateway logs](../../gateway-logs.md).
 
 ---
 

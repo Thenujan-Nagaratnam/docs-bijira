@@ -1,18 +1,20 @@
 ---
-title: "Multi-Provider Routing for LLM Proxies"
+title: "Multi-provider routing"
 description: "Route OpenAI-compatible LLM proxy requests to multiple providers using header-based selection and provider-specific transformers."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/multi-provider-routing/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/multi-provider-routing.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/multi-provider-routing/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/multi-provider-routing.md
 tags:
   - ai-gateway
   - llm
   - routing
+  - troubleshooting
+  - fallback
 author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
-content_type: "guide"
+content_type: "how-to"
 ---
 
-# Multi-Provider Routing for LLM Proxies
+# Multi-provider routing
 
 ## Overview
 
@@ -987,4 +989,4 @@ For automatic traffic distribution across models and providers, see:
 - [Model Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-round-robin)
 - [Model Weighted Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin)
 
-AWS Bedrock usage can also be evaluated by the [LLM Cost policy](../../../ai-workspace/next/policies/overview.md#llm-cost).
+AWS Bedrock usage can also be evaluated by the [LLM Cost policy](../../ai-workspace/next/policies/overview.md#llm-cost).

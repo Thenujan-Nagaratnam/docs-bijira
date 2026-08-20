@@ -7,6 +7,7 @@ tags:
   - ai-gateway
   - security
   - authentication
+  - troubleshooting
 author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"

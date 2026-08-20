@@ -1,21 +1,25 @@
 ---
-title: "Configure Gateway Timeouts"
-description: "Configure gateway-level and API-level timeouts (connect, route, idle, and HTTP connection manager) in the API Platform AI Gateway to protect against slow or unreachable backends and slow clients."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/traffic-and-usage-control/timeouts/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/traffic-and-usage-control/timeouts.md
+title: "Timeouts and resilience"
+description: "Configure connect, route, idle, and HTTP connection manager timeouts at gateway and API level, so slow or unreachable backends fail predictably."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/timeouts-and-resilience/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/timeouts-and-resilience.md
 tags:
   - ai-gateway
   - configuration
   - networking
   - resiliency
+  - timeout
+  - resilience
 author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
 
-# Configuring Timeouts
+# Timeouts and resilience
 
 This guide explains how to configure **timeouts** for the API Platform Gateway so that requests to slow or unreachable backends, and slow downstream clients, fail within a predictable time instead of hanging indefinitely.
+
+Timeouts work differently from the policies you attach to a proxy or provider. You configure them through the `resilience` block on an `LlmProvider`, `LlmProxy`, or `Mcp` resource, rather than by attaching a policy.
 
 Timeouts are configured at **two levels**:
 
@@ -258,6 +262,11 @@ spec:
 
 - `request_headers_timeout` is a useful protection against slow-header (Slowloris-style) clients; enable it with a small value (for example `"5s"`) if your clients are expected to send headers promptly.
 - `request_timeout` is disabled by default; enable it only if you want a hard cap on how long the gateway will spend receiving an entire downstream request.
+
+## Related topics
+
+- [Load balancing and failover](load-balancing-and-failover.md) — what happens after a timeout: the pool suspends the failing model and traffic moves to the rest.
+- [Stream responses](streaming-responses.md) — why a streamed response needs a longer route timeout than a single reply.
 
 ## Example scenarios
 

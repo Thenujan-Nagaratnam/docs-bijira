@@ -1,18 +1,21 @@
 ---
-title: "Gateway Logging"
+title: "Gateway logs"
 description: "Configure centralized log collection for API Platform AI Gateway using Fluent Bit, OpenSearch, and alternative logging stacks."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/monitor-traffic/logging/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/monitor-traffic/logging.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-logs/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-logs.md
 tags:
   - ai-gateway
   - observability
   - devops
+  - troubleshooting
+  - opensearch
+  - fluent-bit
 author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-11
 content_type: "how-to"
 ---
 
-# Gateway Logging
+# Gateway logs
 
 This guide explains how to implement and configure logging for the API Platform Gateway components.
 
@@ -338,6 +341,11 @@ Configure Fluent Bit to forward to Splunk HEC:
     TLS.Verify Off
 ```
 
+
+## Related topics
+
+- [Log requests and responses](log-requests-and-responses.md) — record the payload and headers of the traffic itself, which these logs don't carry.
+- [Gateway tracing](tracing.md) — follow one request across hops rather than reading what the gateway logged about it.
 
 ## Additional Resources
 

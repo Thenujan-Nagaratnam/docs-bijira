@@ -111,7 +111,7 @@ Gemini uses its own request and response format. When an LLM proxy routes OpenAI
 
 The transformer takes two parameters. `model` is required. `apiVersion` is optional and defaults to `v1beta`. This parameter configures the transformer only, and does not supply any part of the endpoint URL.
 
-For the request, response and streaming behavior the transformer covers, see the Gemini entry in the [provider capability matrix](../../llm-proxy/multi-provider-routing.md#provider-capability-matrix).
+For the request, response and streaming behavior the transformer covers, see the Gemini entry in the [provider capability matrix](../../multi-provider-routing.md#provider-capability-matrix).
 
 Google documents [OpenAI compatibility](https://ai.google.dev/gemini-api/docs/openai) for the Gemini API as well.
 

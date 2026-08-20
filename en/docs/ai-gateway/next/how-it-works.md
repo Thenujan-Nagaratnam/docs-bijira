@@ -73,4 +73,4 @@ For the extraction configuration each template applies, see [LLM provider templa
 
 ## Streaming
 
-When an upstream service streams its response, the gateway relays it to the client chunk by chunk instead of buffering the whole response. This holds for LLM providers and LLM proxies, and needs no configuration. On MCP proxies, request bodies stream, but response bodies stay buffered. See [Real-time AI streaming](./llm-proxy/streaming-responses.md).
+When an upstream service streams its response, the gateway relays it to the client chunk by chunk instead of buffering the whole response. This holds for LLM providers and LLM proxies, and needs no configuration. On MCP proxies, request bodies stream, but response bodies stay buffered. See [Real-time AI streaming](./streaming-responses.md).

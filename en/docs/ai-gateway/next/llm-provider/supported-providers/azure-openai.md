@@ -120,7 +120,7 @@ Azure OpenAI accepts the OpenAI wire format, but on a path built from your deplo
 
 The transformer takes three parameters. `apiVersion` is required. `model` is optional and falls back to the model in the request body. `pathSuffix` is optional and defaults to `/chat/completions`.
 
-For the request, response and streaming behavior the transformer covers, see the Azure OpenAI entry in the [provider capability matrix](../../llm-proxy/multi-provider-routing.md#provider-capability-matrix).
+For the request, response and streaming behavior the transformer covers, see the Azure OpenAI entry in the [provider capability matrix](../../multi-provider-routing.md#provider-capability-matrix).
 
 ## Related pages
 

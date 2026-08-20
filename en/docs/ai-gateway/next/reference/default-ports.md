@@ -7,6 +7,7 @@ tags:
   - ai-gateway
   - reference
   - ports
+  - endpoints
 author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-12
 content_type: "reference"

@@ -7,6 +7,8 @@ tags:
   - ai-gateway
   - management-api
   - security
+  - secrets
+  - vault
 author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-11
 content_type: "reference"

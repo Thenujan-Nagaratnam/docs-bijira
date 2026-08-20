@@ -20,10 +20,10 @@ A gateway for managing and securing AI traffic, including Large Language Model (
 
 Run the AI Gateway when AI traffic needs the controls you already apply to your APIs. With it, you can:
 
-- Apply guardrails that validate, filter, or transform content before it reaches a model or a client. See [Guardrails](guardrails/overview.md).
-- Serve one OpenAI-compatible endpoint that routes requests to multiple LLM providers. See [Route across multiple providers](llm-proxy/multi-provider-routing.md).
-- Expose MCP servers through a central gateway, and apply authentication and access control to MCP traffic. See [Create an MCP proxy](mcp-proxy/create-an-mcp-proxy.md).
-- Collect logs, traces, and analytics for the traffic the gateway handles. See [Logging](monitor-traffic/logging.md).
+- Apply guardrails that validate, filter, or transform content before it reaches a model or a client. See [Guardrails](guardrails/index.md).
+- Serve one OpenAI-compatible endpoint that routes requests to multiple LLM providers. See [Multi-provider routing](multi-provider-routing.md).
+- Expose MCP servers through a central gateway, and apply authentication and access control to MCP traffic. See [MCP proxy](mcp-proxy/index.md).
+- Collect logs, traces, and analytics for the traffic the gateway handles. See [Gateway logs](gateway-logs.md).
 - Run the gateway on its own, or register it with AI Workspace to govern the gateways across your organization. See [Connect to AI Workspace](setup-and-deployment/production-deployment/control-plane-connection.md).
 
 ## Who it is for

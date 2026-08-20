@@ -113,7 +113,7 @@ Mistral AI exposes an OpenAI-compatible API, and a transformer is not required w
 
 To normalize those requests and responses anyway, apply the [`openai-to-mistral-transformer`](https://wso2.com/api-platform/policy-hub/policies/openai-to-mistral-transformer) policy. Its `model` parameter is required, and it replaces the model named in the request body.
 
-For the request, response and streaming behavior the transformer covers, including the fields it removes, see the Mistral entry in the [provider capability matrix](../../llm-proxy/multi-provider-routing.md#provider-capability-matrix).
+For the request, response and streaming behavior the transformer covers, including the fields it removes, see the Mistral entry in the [provider capability matrix](../../multi-provider-routing.md#provider-capability-matrix).
 
 ## Related pages
 

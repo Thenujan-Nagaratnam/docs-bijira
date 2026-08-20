@@ -1,18 +1,26 @@
 ---
-title: "Create an MCP proxy"
-description: "Deploy an MCP proxy on a running API Platform AI Gateway, route MCP traffic through it from an MCP client, and view the proxy in AI Workspace."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/create-an-mcp-proxy/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/create-an-mcp-proxy.md
+title: "MCP proxy"
+description: "Route Model Context Protocol traffic through the AI Gateway with an MCP proxy, then deploy one and connect an MCP client to it."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy.md
 tags:
   - ai-gateway
   - mcp
-  - quickstart
+  - mcp-proxy
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-17
-content_type: "quickstart"
+last_updated: 2026-08-20
+content_type: "how-to"
 ---
 
-# Create an MCP proxy
+# MCP proxy
+
+An MCP Proxy routes Model Context Protocol traffic to MCP servers. MCP is a protocol that enables AI assistants to interact with external tools and data sources. With MCP Proxies, you can:
+
+- Expose MCP servers through a centralized gateway
+- Apply authentication and access control to MCP traffic
+- Manage multiple MCP servers from a single control plane
+
+This page takes you through deploying a proxy and routing your first MCP traffic through it.
 
 ## Prerequisites
 
@@ -71,7 +79,17 @@ http://localhost:8080/everything/mcp
 
 The gateway syncs the artifacts you deploy on it up to [AI Workspace](../../../ai-workspace/next/overview.md), the control plane for AI traffic across your organization. The `everything-mcp-v1.0` proxy you deployed above appears there without being re-declared, in the `default` project named in its `project-id` annotation. See [Manage Gateway-deployed AI artifacts in AI Workspace](../../../ai-workspace/next/sync-gateway-created-artifacts.md).
 
+## Policies
+
+The policies that authenticate callers, authorize individual tools, restrict and rename the tool list, and rate limit MCP calls are covered in [Govern MCP tools](../govern-mcp-tools.md).
+
 ## Next steps
 
 - Stop the sample MCP backend when you're done with it: `docker stop everything` and `docker rm everything`.
 - Govern this proxy alongside every other AI artifact you run: [AI Workspace overview](../../../ai-workspace/next/overview.md)
+
+## Related guides
+
+- [Build an AI agent that uses aggregated MCP tools from multiple APIs](../../../guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers.md) — connects an agent to three independently governed MCP servers through the gateway.
+- [Convert a REST API into an MCP tool for Claude Desktop](../../../guides/ai-and-mcp/convert-rest-api-to-mcp-server.md) — exposes a REST API as a governed MCP server and enforces OAuth2 at the gateway.
+- [Find and connect to an enterprise MCP server from the MCP Hub](../../../guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md) — discovers MCP servers in the MCP Hub and connects a client to one.

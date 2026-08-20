@@ -1,6 +1,6 @@
 ---
 title: "Create and configure an LLM provider"
-description: "Create an LLM provider on the AI Gateway: choose a template, set the upstream URL and credentials, deploy it with the management API, and test the connection."
+description: "Create an LLM provider: choose a template, set the upstream URL and credentials, deploy it with the management API, and test the connection."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/create-and-configure-an-llm-provider/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/create-and-configure-an-llm-provider.md
 tags:
@@ -160,6 +160,6 @@ The upstream URL, the authentication each vendor expects, and the paths worth ex
 
 ## Next steps
 
-- Expose this provider to applications: [Create and configure an LLM proxy](../llm-proxy/create-and-configure-an-llm-proxy.md)
-- Put one proxy in front of several providers: [Route across multiple providers](../llm-proxy/multi-provider-routing.md)
+- Expose this provider to applications: [Create and configure an LLM proxy](../llm-proxy/index.md)
+- Put one proxy in front of several providers: [Multi-provider routing](../multi-provider-routing.md)
 - See how the gateway reads token and model metadata: [Provider templates](../reference/llm-templates.md)

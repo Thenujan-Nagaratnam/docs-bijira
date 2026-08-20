@@ -72,7 +72,7 @@ The `context` value sets the URL prefix the provider answers on, so this provide
 
 Anthropic providers are exercised through an LLM proxy rather than called directly, because the proxy translates between the OpenAI request format your application sends and the Anthropic Messages format the upstream expects.
 
-To build that proxy and send it a request, see [Route across multiple providers](../../llm-proxy/multi-provider-routing.md), which deploys this provider alongside an OpenAI one and selects between them with a request header.
+To build that proxy and send it a request, see [Multi-provider routing](../../multi-provider-routing.md), which deploys this provider alongside an OpenAI one and selects between them with a request header.
 
 ## Supported models
 
@@ -90,5 +90,5 @@ When an LLM proxy routes to this provider, the proxy applies a transformer and m
 ## Related pages
 
 - [Provider templates](../../reference/llm-templates.md) — the token and model metadata the `anthropic` template extracts.
-- [Route across multiple providers](../../llm-proxy/multi-provider-routing.md) — the proxy that consumes this provider.
+- [Multi-provider routing](../../multi-provider-routing.md) — the proxy that consumes this provider.
 - [OpenAI](openai.md) — the same setup for a provider that uses `Authorization` and the OpenAI wire format.

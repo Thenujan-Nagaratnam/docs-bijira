@@ -138,4 +138,4 @@ One AI Workspace governs many gateways. Register each one separately, give each 
 
 ---
 
-[← Deploy and verify](./deploy-and-verify.md) &nbsp;|&nbsp; [Production deployment overview](./overview.md)
+[← Deploy and verify](./deploy-and-verify.md) &nbsp;|&nbsp; [Production deployment overview](./index.md)

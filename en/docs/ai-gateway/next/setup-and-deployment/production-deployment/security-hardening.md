@@ -9,6 +9,7 @@ tags:
   - security
   - encryption
   - tls
+  - secrets
 author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"
@@ -294,8 +295,8 @@ gateway:
           enabled: false
 ```
 
-The chart ships `allowed_ips: ["*"]` for both servers, which is appropriate for a local container and too wide for a cluster. Narrow it to your pod or node CIDR, and leave the admin ports off the Services as described in [Ingress configuration](./overview.md#ingress-configuration).
+The chart ships `allowed_ips: ["*"]` for both servers, which is appropriate for a local container and too wide for a cluster. Narrow it to your pod or node CIDR, and leave the admin ports off the Services as described in [Ingress configuration](./index.md#ingress-configuration).
 
 ---
 
-[← Production deployment overview](./overview.md) &nbsp;|&nbsp; [Database configuration →](./database-configuration.md)
+[← Production deployment overview](./index.md) &nbsp;|&nbsp; [Database configuration →](./database-configuration.md)

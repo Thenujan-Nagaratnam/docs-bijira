@@ -19,7 +19,7 @@ content_type: "how-to"
 
 Set requests and limits on both components in production. Without them, a traffic spike on the gateway can starve other workloads on the node.
 
-The allocations below match the ones used in the [AI Gateway performance tests](../sizing-and-performance/overview.md), so the published throughput and latency figures describe what these settings deliver.
+The allocations below match the ones used in the [AI Gateway performance tests](../sizing-and-performance/index.md), so the published throughput and latency figures describe what these settings deliver.
 
 **Gateway Controller:**
 

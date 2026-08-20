@@ -1,8 +1,8 @@
 ---
 title: "API Platform AI Gateway Performance"
-description: "Review WSO2 API Platform AI Gateway performance test methodology, deployment architecture, metrics, and benchmark results for two-CPU and four-CPU gateway runtime configurations."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/setup-and-deployment/sizing-and-performance/overview/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/setup-and-deployment/sizing-and-performance/overview.md
+description: "AI Gateway performance test methodology, deployment architecture, metrics, and benchmark results for two-CPU and four-CPU runtimes."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/setup-and-deployment/sizing-and-performance/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/setup-and-deployment/sizing-and-performance.md
 tags:
   - ai-gateway
   - performance

@@ -99,5 +99,5 @@ OpenAI publishes its model list in the [OpenAI models reference](https://platfor
 ## Related pages
 
 - [Provider templates](../../reference/llm-templates.md) — the token and model metadata the `openai` template extracts.
-- [Route across multiple providers](../../llm-proxy/multi-provider-routing.md) — put an LLM proxy in front of this provider and route to others alongside it.
+- [Multi-provider routing](../../multi-provider-routing.md) — put an LLM proxy in front of this provider and route to others alongside it.
 - [Quick start guide](../../quick-start-guide.md) — deploy this provider and a proxy that consumes it, end to end.

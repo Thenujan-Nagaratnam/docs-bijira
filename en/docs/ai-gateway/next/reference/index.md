@@ -1,8 +1,8 @@
 ---
 title: "Reference"
 description: "Reference material for the AI Gateway: the Gateway Controller management REST API, its request and response schemas, and the default listener ports."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/reference/overview/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/reference/overview.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/reference/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/reference.md
 tags:
   - ai-gateway
   - reference
@@ -22,7 +22,7 @@ Every call authenticates against the management API. For how that authentication
 
 | Page | What it covers |
 |------|----------------|
-| [Overview](management-api/overview.md) | Overview of the AI Gateway Controller REST API for managing LLM providers, LLM proxies, MCP proxies, certificates, and secrets. |
+| [Overview](management-api/index.md) | Overview of the AI Gateway Controller REST API for managing LLM providers, LLM proxies, MCP proxies, certificates, and secrets. |
 | [LLM provider template management](management-api/llm-provider-template-management.md) | REST API reference for creating, listing, updating, and deleting LLM provider templates in API Platform Gateway. |
 | [LLM provider management](management-api/llm-provider-management.md) | REST API reference for creating, listing, updating, and deleting LLM provider configurations and API keys in API Platform Gateway. |
 | [LLM proxy management](management-api/llm-proxy-management.md) | REST API reference for creating, listing, updating, and deleting LLM proxy configurations and API keys in API Platform Gateway. |

@@ -1,13 +1,15 @@
 ---
 title: "Authenticate clients"
 description: "Protect an LLM proxy or provider with the api-key-auth policy, issue consumer API keys through the management API, and manage the key lifecycle."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/access-control/authenticate-clients/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/access-control/authenticate-clients.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/authenticate-clients/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/authenticate-clients.md
 tags:
   - ai-gateway
   - security
   - authentication
   - api-keys
+  - api-key
+  - jwt
 author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"
@@ -19,9 +21,19 @@ An application that calls an LLM proxy or provider through the gateway presents 
 
 This page is for the **platform administrator** who configures the proxy and issues keys, and for the **AI developer** who writes the application that sends them.
 
-This page covers the data plane, the traffic your applications send. Authentication on the control plane, the REST API you use to manage gateway configuration, is separate and is covered in [Secure the management API](../setup-and-deployment/secure-the-management-api.md). The two are configured independently: securing one does nothing for the other.
+## Where access control applies
 
-Client authentication also differs from a provider's `accessControl` rules. Client authentication decides **who may call** the gateway. `accessControl` decides **which upstream endpoints** a provider exposes. See [Control access](overview.md) for how the surfaces relate.
+The AI Gateway controls access on three surfaces.
+
+This page covers the data plane, the traffic your applications send. Client authentication decides **who may call** the gateway.
+
+The management API is the REST API you use to manage gateway configuration. It authenticates callers with locally configured users, with JWTs validated against an identity provider, or with both. Authorization is role-based, and the gateway enforces it per route. For the configuration, see [Secure the management API](setup-and-deployment/secure-the-management-api.md). The two are configured independently: securing one does nothing for the other.
+
+An LLM provider carries its own `accessControl` rules. These decide which upstream endpoints the provider exposes through the gateway, rather than who may call it. For a provider configuration that sets them, see [Quick Start Guide](quick-start-guide.md).
+
+## Who configures this
+
+Platform administrators configure LLM providers, including the access control rules that decide which endpoints a provider exposes. They also attach the authentication policies that protect proxies and providers, and issue the API keys that applications present. AI developers send those keys from the applications they build. The management API's own authentication and role mapping live in the gateway configuration, under `controller.auth`.
 
 ## Attach the API key policy
 
@@ -41,7 +53,7 @@ Add `api-key-auth` to the proxy's `operationPolicies`, scoped to the paths and m
 
 The `params.key` value sets the header name the gateway reads the key from, and `params.in` sets where to look for it. Header matching is case-insensitive. Only operations listed under `paths` require a key, so an operation you leave out stays open.
 
-An LLM provider takes the same block under its own `spec.operationPolicies`. For a provider that protects two operations this way, see [AWS Bedrock](../llm-provider/supported-providers/aws-bedrock.md).
+An LLM provider takes the same block under its own `spec.operationPolicies`. For a provider that protects two operations this way, see [AWS Bedrock](llm-provider/supported-providers/aws-bedrock.md).
 
 The policy's full parameter reference is in the [API Key Auth policy](https://wso2.com/api-platform/policy-hub/policies/api-key-auth) in Policy Hub.
 
@@ -111,7 +123,7 @@ The management API exposes five operations for the key lifecycle. All of them re
 | Update | `PUT /llm-proxies/{id}/api-keys/{apiKeyName}` | Sets a custom value on a key instead of generating one, for injecting an externally issued key. |
 | Revoke | `DELETE /llm-proxies/{id}/api-keys/{apiKeyName}` | Revokes a key. Once revoked, it can no longer authenticate requests. |
 
-Providers expose the same five operations under `/llm-providers`. For the full request and response reference, see [LLM proxy management](../reference/management-api/llm-proxy-management.md) and [LLM provider management](../reference/management-api/llm-provider-management.md).
+Providers expose the same five operations under `/llm-providers`. For the full request and response reference, see [LLM proxy management](reference/management-api/llm-proxy-management.md) and [LLM provider management](reference/management-api/llm-provider-management.md).
 
 Regenerate a key when you rotate credentials, and revoke one as soon as you believe it's exposed. Use a separate key per application and per environment, so revoking one doesn't interrupt the others.
 
@@ -128,6 +140,7 @@ The gateway accepts any Policy Hub authentication policy in the same `operationP
 
 ## Related topics
 
-- [Secure the management API](../setup-and-deployment/secure-the-management-api.md) — authentication and role-based authorization on the control plane.
-- [Traffic and usage control](../traffic-and-usage-control/overview.md) — rate limits and cost controls you can apply to the same operations.
-- [Multi-provider routing](../llm-proxy/multi-provider-routing.md) — the worked proxy example this page draws its configuration from.
+- [Secure the management API](setup-and-deployment/secure-the-management-api.md) — authentication and role-based authorization on the control plane.
+- [Rate limiting](rate-limiting.md) — cap what an authenticated caller can consume on the same operations.
+- [Cost control and budgets](cost-control-and-budgets.md) — put a monetary ceiling on those same operations.
+- [Multi-provider routing](multi-provider-routing.md) — the worked proxy example this page draws its configuration from.

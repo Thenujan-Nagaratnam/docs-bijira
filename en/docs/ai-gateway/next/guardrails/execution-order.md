@@ -1,6 +1,6 @@
 ---
 title: "Guardrail execution order"
-description: "How guardrails execute across phases in the AI Gateway dual-hop model: the LLM Proxy chain runs before the LLM Provider chain on request, and in reverse on response."
+description: "How guardrails execute in the dual-hop model: the LLM Proxy chain runs before the LLM Provider chain on request, and in reverse on response."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/guardrails/execution-order/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/guardrails/execution-order.md
 tags:
@@ -104,5 +104,5 @@ The following diagram shows how streaming body chunks flow through the policy ch
 
 ## Related topics
 
-- [Guardrails overview](overview.md)
+- [Guardrails overview](index.md)
 - [Policy execution order](../../../api-gateway/next/policies/policy-execution-order.md) — within-chain ordering, streaming, and short-circuit rules that apply to each chain individually

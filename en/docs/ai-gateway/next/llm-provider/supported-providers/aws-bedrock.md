@@ -9,6 +9,7 @@ tags:
   - llm
   - aws-bedrock
   - authentication
+  - troubleshooting
 author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"
@@ -517,5 +518,5 @@ Check both sides of the relationship: the source identity must be allowed to cal
 ## Related pages
 
 - [Provider templates](../../reference/llm-templates.md) — the token and model metadata the `awsbedrock` template extracts.
-- [Route across multiple providers](../../llm-proxy/multi-provider-routing.md) — put an LLM proxy in front of this provider and route to others alongside it.
+- [Multi-provider routing](../../multi-provider-routing.md) — put an LLM proxy in front of this provider and route to others alongside it.
 - [OpenAI](openai.md) and [Anthropic](anthropic.md) — the same setup for providers that authenticate with a single API key header.

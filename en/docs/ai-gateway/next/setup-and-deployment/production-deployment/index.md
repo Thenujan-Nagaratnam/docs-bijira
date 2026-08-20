@@ -1,8 +1,8 @@
 ---
 title: "Production Deployment Overview"
 description: "Plan a high-availability production deployment of API Platform AI Gateway on Kubernetes with Helm, an external database, and replicated workloads."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/setup-and-deployment/production-deployment/overview/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/setup-and-deployment/production-deployment/overview.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/setup-and-deployment/production-deployment/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/setup-and-deployment/production-deployment.md
 tags:
   - ai-gateway
   - production
@@ -23,7 +23,7 @@ This section is for platform engineers and site reliability engineers who run AP
 - Replicated workloads.
 - The AI-specific tuning that large language model (LLM) and Model Context Protocol (MCP) traffic needs.
 
-For a single-host evaluation, follow the [quick start guide](../../quick-start-guide.md) instead. For the other ways to run the gateway, see [Immutable Gateway](../immutable-gateway.md) and [Kubernetes deployment modes](../kubernetes/overview.md).
+For a single-host evaluation, follow the [quick start guide](../../quick-start-guide.md) instead. For the other ways to run the gateway, see [Immutable Gateway](../immutable-gateway.md) and [Kubernetes deployment modes](../kubernetes/index.md).
 
 !!! info "Version-pinned instructions"
     Every command and configuration key on these pages is taken from the `ai-gateway/v1.2.0` release tag and Helm chart `1.2.0`. Chart fields change between releases, so follow the pages for the AI Gateway version you deploy.

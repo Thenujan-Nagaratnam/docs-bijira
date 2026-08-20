@@ -53,7 +53,7 @@ A failure mentioning encryption keys means `gateway.controller.encryptionKeys` i
       --timeout 5m
     ```
 
-Chart version `1.2.0` pairs with AI Gateway 1.2.0. Keep the chart major version aligned with the image tags you pinned in the [overview](./overview.md#pin-the-image-versions).
+Chart version `1.2.0` pairs with AI Gateway 1.2.0. Keep the chart major version aligned with the image tags you pinned in the [overview](./index.md#pin-the-image-versions).
 
 ## Verify the deployment
 
@@ -198,7 +198,7 @@ curl -N -X POST "https://ai-gateway.example.com/assistant/chat/completions" \
 Chunks should arrive progressively. If the whole response arrives at once, one layer in the path is holding it until the response completes. Check these in order:
 
 - The ingress controller or reverse proxy in front of the gateway. Response buffering there hides the stream from the client.
-- A gateway policy that needs the complete body before it can run. See [Real-time AI streaming](../../llm-proxy/streaming-responses.md).
+- A gateway policy that needs the complete body before it can run. See [Real-time AI streaming](../../streaming-responses.md).
 - The provider or the model. Not every model streams every request.
 
 If the response cuts off partway, revisit the timeouts in [Tune the gateway for AI traffic](./ai-workload-tuning.md#raise-the-timeouts-for-long-completions).

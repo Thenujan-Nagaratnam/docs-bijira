@@ -1,8 +1,8 @@
 ---
 title: "Guardrails"
 description: "AI Gateway guardrails: LLM-aware policies for content filtering, safety, and compliance, with per-policy reference in the WSO2 API Platform Policy Hub."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/guardrails/overview/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/guardrails/overview.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/guardrails/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/guardrails.md
 tags:
   - ai-gateway
   - guardrails
@@ -50,12 +50,7 @@ Guardrail policies are documented in the [Policy Hub](https://wso2.com/api-platf
 
 ## Prompt management
 
-These policies shape a prompt rather than validating it, and they are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub) alongside the guardrails.
-
-| Policy | What it does |
-|--------|--------------|
-| [Prompt Decorator](https://wso2.com/api-platform/policy-hub/policies/prompt-decorator) | Injects system instructions or context into prompts at the gateway layer |
-| [Prompt Template](https://wso2.com/api-platform/policy-hub/policies/prompt-template) | Applies configurable templates to transform prompts before they reach the model |
+Guardrails judge a prompt. A separate set of policies reshapes one — injecting standing instructions, applying templates, or compressing text before it goes upstream. See [Prompt management](../prompt-management.md).
 
 ## Custom guardrails
 

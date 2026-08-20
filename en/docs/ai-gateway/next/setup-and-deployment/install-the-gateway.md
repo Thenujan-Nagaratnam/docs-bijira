@@ -1,6 +1,6 @@
 ---
 title: "Install the gateway"
-description: "Install and start the AI Gateway on your own machine, on a virtual machine, in Docker, or on Kubernetes, with the full Docker Compose procedure for the first three."
+description: "Install and start the AI Gateway on your machine, a virtual machine, Docker, or Kubernetes, with the full Docker Compose procedure."
 canonical_url: https://wso2.com/api-platform/docs/ai-gateway/setup-and-deployment/install-the-gateway/
 md_url: https://wso2.com/api-platform/docs/ai-gateway/setup-and-deployment/install-the-gateway.md
 tags:
@@ -252,9 +252,9 @@ Select the context you're installing in, then follow the steps in that tab.
 
     Kubernetes does not use the setup script or Docker Compose. A Helm chart renders the gateway's configuration into a ConfigMap and injects the encryption key, control plane token, and database password from Kubernetes Secrets, which you create before installing the chart.
 
-    There are two deployment modes — a standalone chart, and an operator that manages the gateway through custom resources. For the comparison and the procedure for each, see [Kubernetes deployment modes](kubernetes/overview.md).
+    There are two deployment modes — a standalone chart, and an operator that manages the gateway through custom resources. For the comparison and the procedure for each, see [Kubernetes deployment modes](kubernetes/index.md).
 
-    For a replicated, high-availability installation, see [Production deployment overview](production-deployment/overview.md).
+    For a replicated, high-availability installation, see [Production deployment overview](production-deployment/index.md).
 
 ## Resolve a port conflict
 
@@ -284,6 +284,6 @@ The setup script (`setup.sh`, or `setup.ps1` on Windows) writes `api-platform.en
 ## Next steps
 
 - Connect an upstream LLM service: [Create and configure an LLM provider](../llm-provider/create-and-configure-an-llm-provider.md)
-- Expose that provider to applications: [Create and configure an LLM proxy](../llm-proxy/create-and-configure-an-llm-proxy.md)
-- Expose an MCP server through the gateway: [Create an MCP proxy](../mcp-proxy/create-an-mcp-proxy.md)
+- Expose that provider to applications: [Create and configure an LLM proxy](../llm-proxy/index.md)
+- Expose an MCP server through the gateway: [MCP proxy](../mcp-proxy/index.md)
 - Govern this gateway from the control plane: [Connect the gateway to AI Workspace](../ai-workspace/connect-the-gateway.md)
