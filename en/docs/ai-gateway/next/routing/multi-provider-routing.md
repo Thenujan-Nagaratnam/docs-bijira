@@ -1,8 +1,8 @@
 ---
 title: "Multi-provider routing"
 description: "Route OpenAI-compatible LLM proxy requests to multiple providers using header-based selection and provider-specific transformers."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/multi-provider-routing/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/multi-provider-routing.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/routing/multi-provider-routing/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/routing/multi-provider-routing.md
 tags:
   - ai-gateway
   - llm
@@ -10,7 +10,7 @@ tags:
   - troubleshooting
   - fallback
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-17
+last_updated: 2026-08-20
 content_type: "how-to"
 ---
 
@@ -989,4 +989,10 @@ For automatic traffic distribution across models and providers, see:
 - [Model Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-round-robin)
 - [Model Weighted Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin)
 
-AWS Bedrock usage can also be evaluated by the [LLM Cost policy](../../ai-workspace/next/policies/overview.md#llm-cost).
+AWS Bedrock usage can also be evaluated by the [LLM Cost policy](../../../ai-workspace/next/policies/overview.md#llm-cost).
+
+## Related topics
+
+- [Multi model routing](multi-model-routing.md) — the use-case page for distributing traffic across a pool of models, with the round robin and weighted round robin configuration.
+- [LLM header routing](routing-policies/llm-header-routing.md) — the policy reference for `llm-header-router`, including its parameters and selection behavior.
+- [Load balancing and failover](routing-policies/load-balancing-and-failover.md) — the policy reference for the two round robin policies and the suspension they apply.

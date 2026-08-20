@@ -36,10 +36,10 @@ These policies are documented in the [Policy Hub](https://wso2.com/api-platform/
 
 The Policy Hub's Transformation category covers further options that apply to any API: rewriting a request's path, query parameters, or method; overriding the `Host` header sent upstream; routing to a named upstream at runtime; converting payloads between JSON and XML; and calling an external HTTP service during the request or response phase. See the [Policy Hub overview](../../policy-hub/overview.md) for the full category.
 
-To translate an OpenAI-shaped request into another provider's API shape, which is a transformation with its own dedicated policies, see [Multi-provider routing](multi-provider-routing.md).
+To translate an OpenAI-shaped request into another provider's API shape, which is a transformation with its own dedicated policies, see [Multi-provider routing](routing/multi-provider-routing.md).
 
 ## Related topics
 
 - [Prompt management](prompt-management.md) — reshape the prompt itself rather than the envelope around it.
 - [Analytics header filter](analytics/analytics-header-filter.md) — control which headers reach an analytics backend, rather than which reach the upstream.
-- [Multi-provider routing](multi-provider-routing.md) — the provider-shape transformers and how they pair with routing.
+- [Multi-provider routing](routing/multi-provider-routing.md) — the provider-shape transformers and how they pair with routing.

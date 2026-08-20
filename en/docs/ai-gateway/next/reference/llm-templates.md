@@ -88,7 +88,7 @@ Templates support four types of extraction locations:
 
 ### OpenAI
 
-The OpenAI template extracts metadata from OpenAI API responses. To connect the gateway to OpenAI, see [OpenAI](../llm-provider/supported-providers/openai.md).
+The OpenAI template extracts metadata from OpenAI API responses. To connect the gateway to OpenAI, see [OpenAI](../gateway-artifacts/llm-provider/supported-providers/openai.md).
 
 ```yaml
 apiVersion: gateway.api-platform.wso2.com/v1
@@ -131,7 +131,7 @@ spec:
 
 ### Azure OpenAI
 
-The Azure OpenAI template is compatible with Microsoft's Azure OpenAI Service API. To connect the gateway to Azure OpenAI, see [Azure OpenAI](../llm-provider/supported-providers/azure-openai.md).
+The Azure OpenAI template is compatible with Microsoft's Azure OpenAI Service API. To connect the gateway to Azure OpenAI, see [Azure OpenAI](../gateway-artifacts/llm-provider/supported-providers/azure-openai.md).
 
 ```yaml
 apiVersion: gateway.api-platform.wso2.com/v1
@@ -174,7 +174,7 @@ spec:
 
 ### Anthropic
 
-The Anthropic template extracts metadata from Anthropic Claude API responses. To connect the gateway to Anthropic, see [Anthropic](../llm-provider/supported-providers/anthropic.md).
+The Anthropic template extracts metadata from Anthropic Claude API responses. To connect the gateway to Anthropic, see [Anthropic](../gateway-artifacts/llm-provider/supported-providers/anthropic.md).
 
 ```yaml
 apiVersion: gateway.api-platform.wso2.com/v1
@@ -205,7 +205,7 @@ spec:
 
 ### Gemini
 
-The Gemini template is designed for Google's Gemini API. To connect the gateway to Gemini, see [Gemini](../llm-provider/supported-providers/gemini.md).
+The Gemini template is designed for Google's Gemini API. To connect the gateway to Gemini, see [Gemini](../gateway-artifacts/llm-provider/supported-providers/gemini.md).
 
 ```yaml
 apiVersion: gateway.api-platform.wso2.com/v1
@@ -239,7 +239,7 @@ spec:
 
 ### MistralAI
 
-The MistralAI template supports Mistral AI's API. To connect the gateway to Mistral AI, see [MistralAI](../llm-provider/supported-providers/mistralai.md).
+The MistralAI template supports Mistral AI's API. To connect the gateway to Mistral AI, see [MistralAI](../gateway-artifacts/llm-provider/supported-providers/mistralai.md).
 
 ```yaml
 apiVersion: gateway.api-platform.wso2.com/v1
@@ -273,7 +273,7 @@ spec:
 
 ### AWS Bedrock
 
-The AWS Bedrock template is designed for the AWS Bedrock unified API. To connect the gateway to Bedrock with either bearer or AWS Signature Version 4 (SigV4) authentication, see [AWS Bedrock](../llm-provider/supported-providers/aws-bedrock.md).
+The AWS Bedrock template is designed for the AWS Bedrock unified API. To connect the gateway to Bedrock with either bearer or AWS Signature Version 4 (SigV4) authentication, see [AWS Bedrock](../gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md).
 
 ```yaml
 apiVersion: gateway.api-platform.wso2.com/v1
@@ -304,7 +304,7 @@ spec:
 
 ### Azure AI Foundry
 
-The Azure AI Foundry template supports Microsoft's Azure AI Foundry platform. To connect the gateway to Azure AI Foundry, see [Azure AI Foundry](../llm-provider/supported-providers/azure-ai-foundry.md).
+The Azure AI Foundry template supports Microsoft's Azure AI Foundry platform. To connect the gateway to Azure AI Foundry, see [Azure AI Foundry](../gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry.md).
 
 ```yaml
 apiVersion: gateway.api-platform.wso2.com/v1
@@ -417,7 +417,7 @@ curl -X GET http://localhost:9090/api/management/v1/llm-provider-templates/opena
 
 ### Creating Custom Templates
 
-Platform administrators can create custom templates for LLM providers not covered by the out-of-the-box templates. For the end-to-end procedure, from defining the template to deploying a provider that uses it, see [Custom provider](../llm-provider/supported-providers/custom-provider.md).
+Platform administrators can create custom templates for LLM providers not covered by the out-of-the-box templates. For the end-to-end procedure, from defining the template to deploying a provider that uses it, see [Custom provider](../gateway-artifacts/llm-provider/supported-providers/custom-provider.md).
 
 ```bash
 curl -X POST http://localhost:9090/api/management/v1/llm-provider-templates \

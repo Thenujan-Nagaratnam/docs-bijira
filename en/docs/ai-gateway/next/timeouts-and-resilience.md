@@ -265,7 +265,7 @@ spec:
 
 ## Related topics
 
-- [Load balancing and failover](load-balancing-and-failover.md) — what happens after a timeout: the pool suspends the failing model and traffic moves to the rest.
+- [Load balancing and failover](routing/routing-policies/load-balancing-and-failover.md) — what happens after a timeout: the pool suspends the failing model and traffic moves to the rest.
 - [Stream responses](streaming-responses.md) — why a streamed response needs a longer route timeout than a single reply.
 
 ## Example scenarios

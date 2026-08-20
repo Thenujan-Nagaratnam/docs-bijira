@@ -1,8 +1,8 @@
 ---
 title: "OpenAI"
 description: "Connect the AI Gateway to OpenAI: the upstream URL, API key authentication, the endpoints the provider exposes, and a request that tests the connection."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/openai/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/openai.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/openai/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/openai.md
 tags:
   - ai-gateway
   - llm-provider
@@ -98,6 +98,6 @@ OpenAI publishes its model list in the [OpenAI models reference](https://platfor
 
 ## Related pages
 
-- [Provider templates](../../reference/llm-templates.md) — the token and model metadata the `openai` template extracts.
-- [Multi-provider routing](../../multi-provider-routing.md) — put an LLM proxy in front of this provider and route to others alongside it.
-- [Quick start guide](../../quick-start-guide.md) — deploy this provider and a proxy that consumes it, end to end.
+- [Provider templates](../../../reference/llm-templates.md) — the token and model metadata the `openai` template extracts.
+- [Multi-provider routing](../../../routing/multi-provider-routing.md) — put an LLM proxy in front of this provider and route to others alongside it.
+- [Quick start guide](../../../quick-start-guide.md) — deploy this provider and a proxy that consumes it, end to end.

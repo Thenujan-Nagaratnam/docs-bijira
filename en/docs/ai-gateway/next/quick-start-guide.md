@@ -286,7 +286,7 @@ As a platform administrator, deploy an LLM provider for the vendor whose API key
 
 === "AWS Bedrock"
 
-    Replace *`<aws-region>`* with the AWS Region hosting your model, and *`<bedrock-api-key>`* with an AWS Bedrock API key. For SigV4 authentication and the IAM permissions Bedrock needs, see [AWS Bedrock](./llm-provider/supported-providers/aws-bedrock.md).
+    Replace *`<aws-region>`* with the AWS Region hosting your model, and *`<bedrock-api-key>`* with an AWS Bedrock API key. For SigV4 authentication and the IAM permissions Bedrock needs, see [AWS Bedrock](./gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md).
 
     === "Linux / macOS"
 
@@ -410,7 +410,7 @@ As a platform administrator, deploy an LLM provider for the vendor whose API key
 
     {% endraw %}
 
-The remaining steps on this page use the OpenAI provider, because the LLM proxy they build sends requests in the OpenAI format. To consume an Anthropic or AWS Bedrock provider through a proxy, see [Multi-provider routing](multi-provider-routing.md), which adds the transformer that converts between the two formats.
+The remaining steps on this page use the OpenAI provider, because the LLM proxy they build sends requests in the OpenAI format. To consume an Anthropic or AWS Bedrock provider through a proxy, see [Multi-provider routing](routing/multi-provider-routing.md), which adds the transformer that converts between the two formats.
 
 To test LLM provider traffic routing through the gateway, invoke the following request.
 
@@ -556,9 +556,9 @@ This stops the containers and removes the `controller-data` volume. The next sta
 
 ## Next steps
 
-- Route to more than one provider, with failover: [Multi-provider routing](multi-provider-routing.md)
+- Route to more than one provider, with failover: [Multi-provider routing](routing/multi-provider-routing.md)
 - Add guardrails to a proxy, such as [PII masking](https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex) or a [JSON schema guardrail](https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail)
-- Expose an MCP server through the gateway: [MCP proxy](mcp-proxy/index.md)
+- Expose an MCP server through the gateway: [MCP proxy](gateway-artifacts/mcp-proxy.md)
 - Govern AI traffic across all your gateways from the control plane: [AI Workspace overview](../../ai-workspace/next/overview.md)
 - Take this gateway to production on Kubernetes: [Production deployment overview](./setup-and-deployment/production-deployment/index.md)
 - Register a production gateway with the control plane: [Connect to AI Workspace](./setup-and-deployment/production-deployment/control-plane-connection.md)

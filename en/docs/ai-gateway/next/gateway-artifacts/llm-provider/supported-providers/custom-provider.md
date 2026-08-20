@@ -1,8 +1,8 @@
 ---
 title: "Custom provider"
 description: "Connect the AI Gateway to an LLM service with no shipped template: define an LlmProviderTemplate of your own, deploy it, and create a provider that uses it."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/custom-provider/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/custom-provider.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/custom-provider/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/custom-provider.md
 tags:
   - ai-gateway
   - llm-provider
@@ -17,7 +17,7 @@ content_type: "how-to"
 
 Connect the AI Gateway to an LLM service that none of the templates the gateway ships covers. You end up with a template of your own that tells the gateway how to read that service's responses, and an LLM Provider that uses it.
 
-If the service you're connecting does have a shipped template, use that provider's page instead. [Provider templates](../../reference/llm-templates.md) lists the seven the gateway ships.
+If the service you're connecting does have a shipped template, use that provider's page instead. [Provider templates](../../../reference/llm-templates.md) lists the seven the gateway ships.
 
 This page is for platform administrators, who hold the upstream credentials.
 
@@ -76,7 +76,7 @@ spec:
     identifier: <extraction-pattern>
 ```
 
-Only `metadata.name` and `spec.displayName` are required, so define the extraction values your provider reports and omit the rest. For every field, including the `resourceMappings` block that overrides extraction paths for one resource, see [Provider templates](../../reference/llm-templates.md).
+Only `metadata.name` and `spec.displayName` are required, so define the extraction values your provider reports and omit the rest. For every field, including the `resourceMappings` block that overrides extraction paths for one resource, see [Provider templates](../../../reference/llm-templates.md).
 
 ## Deploy the template
 
@@ -142,10 +142,10 @@ The `context` value sets the URL prefix the provider answers on, so this provide
 
 ## Manage the template
 
-Custom templates can be updated and deleted through the same management API. The templates the gateway ships cannot be modified or deleted. For the update and delete requests, see [Provider templates](../../reference/llm-templates.md).
+Custom templates can be updated and deleted through the same management API. The templates the gateway ships cannot be modified or deleted. For the update and delete requests, see [Provider templates](../../../reference/llm-templates.md).
 
 ## Related pages
 
 - [Create and configure an LLM provider](../create-and-configure-an-llm-provider.md) — the full deployment procedure this page's definition plugs into.
-- [Provider templates](../../reference/llm-templates.md) — the template field reference, the extraction configuration object, and the seven templates the gateway ships.
-- [LLM provider template management](../../reference/management-api/llm-provider-template-management.md) — the management API operations for templates.
+- [Provider templates](../../../reference/llm-templates.md) — the template field reference, the extraction configuration object, and the seven templates the gateway ships.
+- [LLM provider template management](../../../reference/management-api/llm-provider-template-management.md) — the management API operations for templates.

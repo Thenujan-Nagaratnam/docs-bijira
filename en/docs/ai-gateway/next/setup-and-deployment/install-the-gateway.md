@@ -283,7 +283,7 @@ The setup script (`setup.sh`, or `setup.ps1` on Windows) writes `api-platform.en
 
 ## Next steps
 
-- Connect an upstream LLM service: [Create and configure an LLM provider](../llm-provider/create-and-configure-an-llm-provider.md)
-- Expose that provider to applications: [Create and configure an LLM proxy](../llm-proxy/index.md)
-- Expose an MCP server through the gateway: [MCP proxy](../mcp-proxy/index.md)
+- Connect an upstream LLM service: [Create and configure an LLM provider](../gateway-artifacts/llm-provider/create-and-configure-an-llm-provider.md)
+- Expose that provider to applications: [Create and configure an LLM proxy](../gateway-artifacts/llm-proxy.md)
+- Expose an MCP server through the gateway: [MCP proxy](../gateway-artifacts/mcp-proxy.md)
 - Govern this gateway from the control plane: [Connect the gateway to AI Workspace](../ai-workspace/connect-the-gateway.md)

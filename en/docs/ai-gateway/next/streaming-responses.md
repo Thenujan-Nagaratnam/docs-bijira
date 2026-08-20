@@ -101,7 +101,7 @@ If a streamed response carries no `usage` block, the gateway has no token counts
 ## Related documentation
 
 - [Quick Start Guide](quick-start-guide.md) — deploy a provider and a proxy, then send your first request
-- [MCP proxy](mcp-proxy/index.md) — deploy an MCP proxy
+- [MCP proxy](gateway-artifacts/mcp-proxy.md) — deploy an MCP proxy
 - [Sentence Count Guardrail](https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail) — a guardrail that gates a stream until it can evaluate the content
 - [Timeouts and resilience](timeouts-and-resilience.md) — a streamed response holds the route open, so the route timeout matters more than it does for a single reply
-- [Log requests and responses](log-requests-and-responses.md) — what a streamed exchange looks like when the traffic content is recorded
+- [Log requests and responses](logging-and-tracing/log-requests-and-responses.md) — what a streamed exchange looks like when the traffic content is recorded

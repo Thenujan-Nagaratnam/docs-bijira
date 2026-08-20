@@ -19,7 +19,7 @@ A gateway for managing and securing AI traffic, including Large Language Model (
 ## Quick Start
 
 - [LLM Quick Start Guide](quick-start-guide.md) — Set up the gateway and route traffic to LLM providers like OpenAI
-- [MCP proxy](mcp-proxy/index.md) — Set up the gateway and route traffic to MCP servers
+- [MCP proxy](gateway-artifacts/mcp-proxy.md) — Set up the gateway and route traffic to MCP servers
 
 ## Key Concepts
 
@@ -50,7 +50,7 @@ An LLM Provider represents a connection to an AI backend service such as OpenAI,
 
 Once configured, the LLM Provider allows traffic to flow through the gateway to the AI backend.
 
-To connect the gateway to AWS Bedrock, see [Configure an AWS Bedrock LLM Provider](llm-provider/supported-providers/aws-bedrock.md). The guide covers both Bedrock bearer API keys and AWS Signature Version 4 (SigV4) authentication.
+To connect the gateway to AWS Bedrock, see [Configure an AWS Bedrock LLM Provider](gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md). The guide covers both Bedrock bearer API keys and AWS Signature Version 4 (SigV4) authentication.
 
 ### LLM Proxy
 

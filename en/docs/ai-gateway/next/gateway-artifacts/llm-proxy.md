@@ -1,8 +1,8 @@
 ---
 title: "LLM proxy"
 description: "Expose an LLM provider through an LLM proxy and deploy one: its own URL context, per-application policies, and the provider rules it inherits."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-proxy.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-proxy/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-proxy.md
 tags:
   - ai-gateway
   - llm-proxy
@@ -17,7 +17,7 @@ content_type: "how-to"
 An LLM Proxy allows developers to create custom API endpoints that consume an LLM Provider, while inheriting administrator-enforced access control, budgeting and organization-wide policies defined at the provider level. Each proxy gets its own URL context (e.g., `/assistant`) and can have its own policies applied. This enables:
 
 - Multiple AI applications to share a single LLM Provider
-- A single OpenAI-compatible endpoint to route requests to multiple LLM providers. See [Multi-provider routing](../multi-provider-routing.md).
+- A single OpenAI-compatible endpoint to route requests to multiple LLM providers. See [Multi-provider routing](../routing/multi-provider-routing.md).
 - Per-application policies such as prompt management and guardrails
 - Separation between platform administration and application development
 
@@ -30,7 +30,7 @@ AI developers own LLM proxies. A developer creates the proxy, names the LLM prov
 ## Prerequisites
 
 - A running AI Gateway, with `ADMIN_USERNAME` and `ADMIN_PASSWORD` exported in the shell you run these commands from. See [Install the gateway](../setup-and-deployment/install-the-gateway.md).
-- A deployed LLM provider on that gateway. A proxy names the provider it consumes in `provider.id`, and the gateway rejects a proxy that names one it can't find. See [Create and configure an LLM provider](../llm-provider/create-and-configure-an-llm-provider.md).
+- A deployed LLM provider on that gateway. A proxy names the provider it consumes in `provider.id`, and the gateway rejects a proxy that names one it can't find. See [Create and configure an LLM provider](llm-provider/create-and-configure-an-llm-provider.md).
 
 ## Configure the proxy
 
@@ -124,12 +124,12 @@ The `-k` flag tells `curl` to skip Transport Layer Security (TLS) certificate ve
 
 ## Policies
 
-The routing policies that select a provider for a proxy, and the failover behavior that comes with them, are covered in [Load balancing and failover](../load-balancing-and-failover.md).
+The routing policies that select a provider for a proxy, and the failover behavior that comes with them, are covered in [Load balancing and failover](../routing/routing-policies/load-balancing-and-failover.md).
 
 ## Next steps
 
 - Protect the proxy, which is the client-facing endpoint: [Authenticate clients](../authenticate-clients.md)
-- Send requests on one proxy to more than one provider: [Multi-provider routing](../multi-provider-routing.md)
+- Send requests on one proxy to more than one provider: [Multi-provider routing](../routing/multi-provider-routing.md)
 - Return responses chunk by chunk: [Stream responses](../streaming-responses.md)
 
 ## Related guides

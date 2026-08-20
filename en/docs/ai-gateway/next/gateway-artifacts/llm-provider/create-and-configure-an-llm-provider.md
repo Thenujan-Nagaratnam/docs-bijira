@@ -1,8 +1,8 @@
 ---
 title: "Create and configure an LLM provider"
 description: "Create an LLM provider: choose a template, set the upstream URL and credentials, deploy it with the management API, and test the connection."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/create-and-configure-an-llm-provider/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/create-and-configure-an-llm-provider.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/create-and-configure-an-llm-provider/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/create-and-configure-an-llm-provider.md
 tags:
   - ai-gateway
   - llm-provider
@@ -20,14 +20,14 @@ This page is for platform administrators, who hold the upstream credentials.
 
 ## Prerequisites
 
-- A running AI Gateway, with `ADMIN_USERNAME` and `ADMIN_PASSWORD` exported in the shell you run these commands from. See [Install the gateway](../setup-and-deployment/install-the-gateway.md).
+- A running AI Gateway, with `ADMIN_USERNAME` and `ADMIN_PASSWORD` exported in the shell you run these commands from. See [Install the gateway](../../setup-and-deployment/install-the-gateway.md).
 - An API key or other credential for the upstream LLM service you're connecting.
 
 ## Choose a template
 
 Every provider names a template in its `template` field. The template tells the gateway how to read that vendor's API: which paths carry chat traffic, and where to find the model name and token counts in a request and response. The gateway loads its templates at startup, so you select one by ID rather than defining it.
 
-For the template IDs the gateway ships with, and the metadata each one extracts, see [Provider templates](../reference/llm-templates.md). The example below uses the `openai` template.
+For the template IDs the gateway ships with, and the metadata each one extracts, see [Provider templates](../../reference/llm-templates.md). The example below uses the `openai` template.
 
 ## Configure the provider
 
@@ -160,6 +160,6 @@ The upstream URL, the authentication each vendor expects, and the paths worth ex
 
 ## Next steps
 
-- Expose this provider to applications: [Create and configure an LLM proxy](../llm-proxy/index.md)
-- Put one proxy in front of several providers: [Multi-provider routing](../multi-provider-routing.md)
-- See how the gateway reads token and model metadata: [Provider templates](../reference/llm-templates.md)
+- Expose this provider to applications: [Create and configure an LLM proxy](../llm-proxy.md)
+- Put one proxy in front of several providers: [Multi-provider routing](../../routing/multi-provider-routing.md)
+- See how the gateway reads token and model metadata: [Provider templates](../../reference/llm-templates.md)

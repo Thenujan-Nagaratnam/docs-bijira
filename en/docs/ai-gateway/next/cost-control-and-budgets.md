@@ -34,10 +34,10 @@ These policies are documented in the [Policy Hub](https://wso2.com/api-platform/
 | [LLM Cost](https://wso2.com/api-platform/policy-hub/policies/llm-cost) | Calculates the monetary cost of each LLM call and stores it for downstream policies |
 | [LLM Cost-Based Rate Limit](https://wso2.com/api-platform/policy-hub/policies/llm-cost-based-ratelimit) | Enforces monetary budget quotas on LLM usage |
 
-To cap by token count or request count instead, see [Rate limiting](rate-limiting.md).
+To cap by token count or request count instead, see [Token based rate limiting](token-based-rate-limiting.md).
 
 ## Related topics
 
 - [Set up a governed multi-model LLM proxy](../../guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md) — distributes traffic across models behind one proxy, with per-team token budgets, PII masking, and semantic caching.
 - [Semantic caching](semantic-caching.md) — cut spend by not making the upstream call at all.
-- [Rate limiting](rate-limiting.md) — cap consumption by tokens or requests rather than by spend.
+- [Token based rate limiting](token-based-rate-limiting.md) — cap consumption by tokens or requests rather than by spend.

@@ -1,8 +1,8 @@
 ---
 title: "Azure AI Foundry"
 description: "Connect the AI Gateway to Azure AI Foundry: the values your Foundry resource supplies, and what the azureai-foundry template extracts from responses."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/azure-ai-foundry/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/azure-ai-foundry.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry.md
 tags:
   - ai-gateway
   - llm-provider
@@ -119,5 +119,5 @@ The `context` value sets the URL prefix the provider answers on, so this provide
 ## Related pages
 
 - [Create and configure an LLM provider](../create-and-configure-an-llm-provider.md) — the full deployment procedure this page's definition plugs into.
-- [Provider templates](../../reference/llm-templates.md) — every template the gateway ships, and the metadata each one extracts.
+- [Provider templates](../../../reference/llm-templates.md) — every template the gateway ships, and the metadata each one extracts.
 - [Microsoft Foundry documentation](https://learn.microsoft.com/en-us/azure/foundry/) — Microsoft's documentation for the platform, including the models it exposes.

@@ -1,8 +1,8 @@
 ---
 title: "Gemini"
 description: "Connect the AI Gateway to the Gemini API: the values Google supplies, what the gemini template extracts, and OpenAI-format compatibility."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/gemini/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/gemini.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/gemini/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/gemini.md
 tags:
   - ai-gateway
   - llm-provider
@@ -111,12 +111,12 @@ Gemini uses its own request and response format. When an LLM proxy routes OpenAI
 
 The transformer takes two parameters. `model` is required. `apiVersion` is optional and defaults to `v1beta`. This parameter configures the transformer only, and does not supply any part of the endpoint URL.
 
-For the request, response and streaming behavior the transformer covers, see the Gemini entry in the [provider capability matrix](../../multi-provider-routing.md#provider-capability-matrix).
+For the request, response and streaming behavior the transformer covers, see the Gemini entry in the [provider capability matrix](../../../routing/multi-provider-routing.md#provider-capability-matrix).
 
 Google documents [OpenAI compatibility](https://ai.google.dev/gemini-api/docs/openai) for the Gemini API as well.
 
 ## Related pages
 
 - [Create and configure an LLM provider](../create-and-configure-an-llm-provider.md) — the full deployment procedure this page's definition plugs into.
-- [Provider templates](../../reference/llm-templates.md) — every template the gateway ships, and the metadata each one extracts.
+- [Provider templates](../../../reference/llm-templates.md) — every template the gateway ships, and the metadata each one extracts.
 - [Gemini API documentation](https://ai.google.dev/gemini-api/docs) — Google's documentation for the API, including the models it exposes.

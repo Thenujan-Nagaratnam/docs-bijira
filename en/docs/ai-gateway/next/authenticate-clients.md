@@ -53,7 +53,7 @@ Add `api-key-auth` to the proxy's `operationPolicies`, scoped to the paths and m
 
 The `params.key` value sets the header name the gateway reads the key from, and `params.in` sets where to look for it. Header matching is case-insensitive. Only operations listed under `paths` require a key, so an operation you leave out stays open.
 
-An LLM provider takes the same block under its own `spec.operationPolicies`. For a provider that protects two operations this way, see [AWS Bedrock](llm-provider/supported-providers/aws-bedrock.md).
+An LLM provider takes the same block under its own `spec.operationPolicies`. For a provider that protects two operations this way, see [AWS Bedrock](gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md).
 
 The policy's full parameter reference is in the [API Key Auth policy](https://wso2.com/api-platform/policy-hub/policies/api-key-auth) in Policy Hub.
 
@@ -141,6 +141,6 @@ The gateway accepts any Policy Hub authentication policy in the same `operationP
 ## Related topics
 
 - [Secure the management API](setup-and-deployment/secure-the-management-api.md) — authentication and role-based authorization on the control plane.
-- [Rate limiting](rate-limiting.md) — cap what an authenticated caller can consume on the same operations.
+- [Token based rate limiting](token-based-rate-limiting.md) — cap what an authenticated caller can consume on the same operations.
 - [Cost control and budgets](cost-control-and-budgets.md) — put a monetary ceiling on those same operations.
-- [Multi-provider routing](multi-provider-routing.md) — the worked proxy example this page draws its configuration from.
+- [Multi-provider routing](routing/multi-provider-routing.md) — the worked proxy example this page draws its configuration from.

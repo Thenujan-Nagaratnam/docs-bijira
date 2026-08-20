@@ -1,8 +1,8 @@
 ---
 title: "MCP proxy"
 description: "Route Model Context Protocol traffic through the AI Gateway with an MCP proxy, then deploy one and connect an MCP client to it."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-proxy.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/mcp-proxy/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/mcp-proxy.md
 tags:
   - ai-gateway
   - mcp
@@ -81,7 +81,7 @@ The gateway syncs the artifacts you deploy on it up to [AI Workspace](../../../a
 
 ## Policies
 
-The policies that authenticate callers, authorize individual tools, restrict and rename the tool list, and rate limit MCP calls are covered in [Govern MCP tools](../govern-mcp-tools.md).
+The policies that authenticate callers, authorize individual tools, restrict and rename the tool list, and rate limit MCP calls are covered in [MCP governance](../mcp-governance.md).
 
 ## Next steps
 

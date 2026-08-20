@@ -16,7 +16,7 @@ content_type: "concept"
 
 # Analytics
 
-Analytics tells you how your APIs are used over time. Logging and tracing tell you what the gateway did with a single request; analytics aggregates traffic so you can see usage, cost, and trends across many of them. For the other two, see [Gateway logs](../gateway-logs.md) and [Gateway tracing](../tracing.md).
+Analytics tells you how your APIs are used over time. Logging and tracing tell you what the gateway did with a single request; analytics aggregates traffic so you can see usage, cost, and trends across many of them. For the other two, see [Gateway logs](../logging-and-tracing/gateway-logs.md) and [Gateway tracing](../logging-and-tracing/tracing.md).
 
 The gateway publishes request and response data to an external analytics backend. You choose the backend, and you control which headers travel with the data.
 

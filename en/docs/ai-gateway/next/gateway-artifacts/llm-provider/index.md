@@ -1,8 +1,8 @@
 ---
 title: "LLM provider"
 description: "Connect the AI Gateway to an LLM backend: what an LLM Provider holds, who configures it, and a guide for every provider template it ships."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider.md
 tags:
   - ai-gateway
   - llm-provider
@@ -31,7 +31,7 @@ Platform administrators own LLM providers. An administrator holds the upstream c
 
 ## In this section
 
-Every template the gateway ships has a provider page under Supported Providers. Three of them — OpenAI, Anthropic and AWS Bedrock — carry a fixed upstream URL, the authentication the provider expects, and a definition you can deploy as it stands. For the other four, the endpoint and the credential belong to your own account or resource, so those pages name what to obtain and link the provider that defines it. A further page covers a service with no shipped template at all. [Provider templates](../reference/llm-templates.md) is the reference for what each template extracts.
+Every template the gateway ships has a provider page under Supported Providers. Three of them — OpenAI, Anthropic and AWS Bedrock — carry a fixed upstream URL, the authentication the provider expects, and a definition you can deploy as it stands. For the other four, the endpoint and the credential belong to your own account or resource, so those pages name what to obtain and link the provider that defines it. A further page covers a service with no shipped template at all. [Provider templates](../../reference/llm-templates.md) is the reference for what each template extracts.
 
 This section contains the following pages:
 
@@ -49,4 +49,4 @@ This section contains the following pages:
 
 ## Related guides
 
-- [Set up a governed multi-model LLM proxy](../../../guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md) — adds Azure OpenAI as an LLM provider, then distributes requests across models behind a single proxy.
+- [Set up a governed multi-model LLM proxy](../../../../guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md) — adds Azure OpenAI as an LLM provider, then distributes requests across models behind a single proxy.

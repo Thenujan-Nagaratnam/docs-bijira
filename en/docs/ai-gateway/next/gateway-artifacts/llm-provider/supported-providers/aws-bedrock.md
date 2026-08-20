@@ -1,8 +1,8 @@
 ---
 title: "AWS Bedrock"
 description: "Connect API Platform AI Gateway to AWS Bedrock using a bearer API key or AWS Signature Version 4 authentication, then invoke a model through the gateway."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/aws-bedrock/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/aws-bedrock.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/aws-bedrock/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md
 tags:
   - ai-gateway
   - llm-provider
@@ -517,6 +517,6 @@ Check both sides of the relationship: the source identity must be allowed to cal
 
 ## Related pages
 
-- [Provider templates](../../reference/llm-templates.md) — the token and model metadata the `awsbedrock` template extracts.
-- [Multi-provider routing](../../multi-provider-routing.md) — put an LLM proxy in front of this provider and route to others alongside it.
+- [Provider templates](../../../reference/llm-templates.md) — the token and model metadata the `awsbedrock` template extracts.
+- [Multi-provider routing](../../../routing/multi-provider-routing.md) — put an LLM proxy in front of this provider and route to others alongside it.
 - [OpenAI](openai.md) and [Anthropic](anthropic.md) — the same setup for providers that authenticate with a single API key header.

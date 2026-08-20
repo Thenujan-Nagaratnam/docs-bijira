@@ -154,7 +154,7 @@ gateway:
 ```
 
 !!! warning "Prompts and completions are sensitive"
-    Debug-level logging can record request and response bodies, which on an AI Gateway means user prompts and model completions. Before you enable debug-level logging in production, confirm that your log retention and access controls suit that content. If you forward traffic data to an external analytics service, control what leaves the gateway with the [analytics header filter](../../analytics/analytics-header-filter.md). For where the logs go and how to read them, see [Gateway logs](../../gateway-logs.md).
+    Debug-level logging can record request and response bodies, which on an AI Gateway means user prompts and model completions. Before you enable debug-level logging in production, confirm that your log retention and access controls suit that content. If you forward traffic data to an external analytics service, control what leaves the gateway with the [analytics header filter](../../analytics/analytics-header-filter.md). For where the logs go and how to read them, see [Gateway logs](../../logging-and-tracing/gateway-logs.md).
 
 ---
 

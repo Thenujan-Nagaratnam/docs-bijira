@@ -1,19 +1,19 @@
 ---
-title: "Govern MCP tools"
+title: "MCP governance"
 description: "Control what an AI agent can reach through an MCP proxy: authenticate callers, authorize per tool, restrict and rename the tool list, and rate limit calls."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/govern-mcp-tools/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/govern-mcp-tools.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-governance/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/mcp-governance.md
 tags:
   - ai-gateway
   - mcp
   - access-control
   - authorization
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-19
+last_updated: 2026-08-20
 content_type: "concept"
 ---
 
-# Govern MCP tools
+# MCP governance
 
 An MCP server hands an agent a list of tools and lets it call them. Exposed as it comes, every caller sees every tool, tool names leak whatever the backend happens to call them, and one agent's traffic is indistinguishable from another's. Governing an MCP proxy decides who connects, which tools they see, what those tools are called, and how often they can be invoked.
 
@@ -38,7 +38,7 @@ These policies are documented in the [Policy Hub](https://wso2.com/api-platform/
 
 ## Related topics
 
-- [MCP proxy](mcp-proxy/index.md) — what an MCP proxy routes, and how to deploy the proxy these policies attach to.
-- [Rate limiting](rate-limiting.md) — how MCP rate limiting compares with the request and token limits on LLM traffic.
+- [MCP proxy](gateway-artifacts/mcp-proxy.md) — what an MCP proxy routes, and how to deploy the proxy these policies attach to.
+- [Token based rate limiting](token-based-rate-limiting.md) — how MCP rate limiting compares with the request and token limits on LLM traffic.
 - [Build an AI agent that uses aggregated MCP tools from multiple APIs](../../guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers.md) — connects an agent to three independently governed MCP servers through the gateway.
 - [Convert a REST API into an MCP tool for Claude Desktop](../../guides/ai-and-mcp/convert-rest-api-to-mcp-server.md) — exposes a REST API as a governed MCP server and enforces OAuth2 at the gateway.

@@ -1,8 +1,8 @@
 ---
 title: "MistralAI"
 description: "Connect the AI Gateway to the Mistral AI API: the values Mistral AI supplies, what the mistralai template extracts, and OpenAI-format compatibility."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/mistralai/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/llm-provider/supported-providers/mistralai.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/mistralai/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/gateway-artifacts/llm-provider/supported-providers/mistralai.md
 tags:
   - ai-gateway
   - llm-provider
@@ -113,10 +113,10 @@ Mistral AI exposes an OpenAI-compatible API, and a transformer is not required w
 
 To normalize those requests and responses anyway, apply the [`openai-to-mistral-transformer`](https://wso2.com/api-platform/policy-hub/policies/openai-to-mistral-transformer) policy. Its `model` parameter is required, and it replaces the model named in the request body.
 
-For the request, response and streaming behavior the transformer covers, including the fields it removes, see the Mistral entry in the [provider capability matrix](../../multi-provider-routing.md#provider-capability-matrix).
+For the request, response and streaming behavior the transformer covers, including the fields it removes, see the Mistral entry in the [provider capability matrix](../../../routing/multi-provider-routing.md#provider-capability-matrix).
 
 ## Related pages
 
 - [Create and configure an LLM provider](../create-and-configure-an-llm-provider.md) — the full deployment procedure this page's definition plugs into.
-- [Provider templates](../../reference/llm-templates.md) — every template the gateway ships, and the metadata each one extracts.
+- [Provider templates](../../../reference/llm-templates.md) — every template the gateway ships, and the metadata each one extracts.
 - [Mistral AI documentation](https://docs.mistral.ai/) — Mistral AI's documentation hub, including the models it exposes.
