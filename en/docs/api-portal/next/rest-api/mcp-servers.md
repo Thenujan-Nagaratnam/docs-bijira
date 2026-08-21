@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/mcp-servers \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/mcp-servers \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json' \
   -F 'artifact=@artifact.zip' \
@@ -33,7 +33,7 @@ curl -X POST https://localhost:9543/api/v0.9/mcp-servers \
 
 ```
 
-Creates API Portal MCP server metadata. Accepts the same metadata input formats as `POST /api/v0.9/apis` (artifact ZIP, `api.yaml` / `mcp.yaml`, or `metadata` JSON), but the created record is always typed `MCP`. An MCP server's contract is its `definition` (tools schema) — the tools, resources, and prompts it exposes — not an OpenAPI-style API contract; a `definition` is required. Via the JSON `metadata` field, `type` must be explicitly `MCP`; an omitted type or any other value is rejected with a 400 (use `POST /api/v0.9/apis`).
+Creates API Portal MCP server metadata. Accepts the same metadata input formats as `POST /api-portal/api/v0.9/apis` (artifact ZIP, `api.yaml` / `mcp.yaml`, or `metadata` JSON), but the created record is always typed `MCP`. An MCP server's contract is its `definition` (tools schema) — the tools, resources, and prompts it exposes — not an OpenAPI-style API contract; a `definition` is required. Via the JSON `metadata` field, `type` must be explicitly `MCP`; an omitted type or any other value is rejected with a 400 (use `POST /api-portal/api/v0.9/apis`).
 
 ### Authentication
 
@@ -166,13 +166,13 @@ Required scopes (the token must carry at least one of): `dp:mcp_server:create`, 
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/mcp-servers \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/mcp-servers \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
 ```
 
-Lists MCP server metadata for an organization. Mirrors `GET /api/v0.9/apis` but only returns MCP-typed records.
+Lists MCP server metadata for an organization. Mirrors `GET /api-portal/api/v0.9/apis` but only returns MCP-typed records.
 
 ### Authentication
 
@@ -391,7 +391,7 @@ Status Code **200**
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId} \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -504,7 +504,7 @@ Required scopes (the token must carry at least one of): `dp:mcp_server:read`, `d
 
 ```shell
 
-curl -X PUT https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId} \
+curl -X PUT https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json' \
   -F 'artifact=@artifact.zip' \
@@ -639,7 +639,7 @@ Required scopes (the token must carry at least one of): `dp:mcp_server:update`, 
 
 ```shell
 
-curl -X DELETE https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId} \
+curl -X DELETE https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: text/plain'
 

@@ -881,8 +881,6 @@ nav:
         - Concepts: api-portal/next/concepts.md
         # Stand the portal up, in the order an operator does it.
         - Getting Started: api-portal/next/getting-started.md
-        - Tutorials:
-            - Secured API End to End: api-portal/next/tutorials/secured-api-end-to-end.md
         - Setting Up:
             - Configuration & Interpolation: api-portal/next/setting-up/configuration.md
             - Ports: api-portal/next/setting-up/ports.md
@@ -938,6 +936,8 @@ nav:
             - Resources & Scaling: api-portal/next/deployment/resources-and-scaling.md
             - Deploy & Verify: api-portal/next/deployment/deploy-and-verify.md
             - Control Plane Connection: api-portal/next/deployment/control-plane-connection.md
+        - Tutorials:
+            - Secured API End to End: api-portal/next/tutorials/secured-api-end-to-end.md
         - References:
             - Management API:
                 - Overview: api-portal/next/rest-api/overview.md
@@ -970,8 +970,6 @@ nav:
         - Concepts: api-portal/1.0.0/concepts.md
         # Stand the portal up, in the order an operator does it.
         - Getting Started: api-portal/1.0.0/getting-started.md
-        - Tutorials:
-            - Secured API End to End: api-portal/1.0.0/tutorials/secured-api-end-to-end.md
         - Setting Up:
             - Configuration & Interpolation: api-portal/1.0.0/setting-up/configuration.md
             - Ports: api-portal/1.0.0/setting-up/ports.md
@@ -1027,6 +1025,8 @@ nav:
             - Resources & Scaling: api-portal/1.0.0/deployment/resources-and-scaling.md
             - Deploy & Verify: api-portal/1.0.0/deployment/deploy-and-verify.md
             - Control Plane Connection: api-portal/1.0.0/deployment/control-plane-connection.md
+        - Tutorials:
+            - Secured API End to End: api-portal/1.0.0/tutorials/secured-api-end-to-end.md
         - References:
             - Management API:
                 - Overview: api-portal/1.0.0/rest-api/overview.md

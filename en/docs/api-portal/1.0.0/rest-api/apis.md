@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/apis \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/apis \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json' \
   -F 'definition=@definition.yaml' \
@@ -33,7 +33,7 @@ curl -X POST https://localhost:9543/api/v0.9/apis \
 
 ```
 
-Creates API metadata from either a full API artifact ZIP, an API metadata YAML file (`api.yaml` / `metadata.yaml` / `mcp.yaml`), or a `metadata` JSON string. An API definition file is required unless supplied by the artifact ZIP. The YAML `spec` block accepts: `displayName`, `version`, `description`, `type`, `status`, `agentVisibility`, `tags`, `labels`, `referenceId`, `endpoints` (sandboxUrl, productionUrl), `businessInformation` (owners), and `subscriptionPlans`. The service also stores labels, subscription plan mappings, image metadata, and schema definitions for GraphQL APIs when provided. Via the JSON `metadata` field, `type` is required — an omitted type is rejected with `400` (via YAML, an omitted `spec.type` defaults to `REST`). MCP servers must be created via `POST /api/v0.9/mcp-servers` instead — a request whose resolved `type` is `MCP` is rejected with `400`.
+Creates API metadata from either a full API artifact ZIP, an API metadata YAML file (`api.yaml` / `metadata.yaml` / `mcp.yaml`), or a `metadata` JSON string. An API definition file is required unless supplied by the artifact ZIP. The YAML `spec` block accepts: `displayName`, `version`, `description`, `type`, `status`, `agentVisibility`, `tags`, `labels`, `referenceId`, `endpoints` (sandboxUrl, productionUrl), `businessInformation` (owners), and `subscriptionPlans`. The service also stores labels, subscription plan mappings, image metadata, and schema definitions for GraphQL APIs when provided. Via the JSON `metadata` field, `type` is required — an omitted type is rejected with `400` (via YAML, an omitted `spec.type` defaults to `REST`). MCP servers must be created via `POST /api-portal/api/v0.9/mcp-servers` instead — a request whose resolved `type` is `MCP` is rejected with `400`.
 `subscriptionPlans` links existing org-level plans to this API by name — it does not create plans. In YAML it is a string array (`["Gold", "Silver"]`). In the JSON `metadata` field it is an object array where only `id` is used (`[{"id":"Gold"}]`); extra fields such as `planId`, `displayName`, or `requestCount` are ignored.
 
 ### Authentication
@@ -187,13 +187,13 @@ instead, the handle always comes from `metadata.name`.
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/apis \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/apis \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
 ```
 
-Lists API metadata for an organization. The service supports exact filters by API name, version, and tags, free-text search with `query`, and view filtering. Unknown query parameters are rejected. MCP-typed records are never returned here — use `GET /api/v0.9/mcp-servers`.
+Lists API metadata for an organization. The service supports exact filters by API name, version, and tags, free-text search with `query`, and view filtering. Unknown query parameters are rejected. MCP-typed records are never returned here — use `GET /api-portal/api/v0.9/mcp-servers`.
 
 ### Authentication
 
@@ -412,7 +412,7 @@ Status Code **200**
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/apis/{apiId} \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/apis/{apiId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -529,7 +529,7 @@ Required scopes (the token must carry at least one of): `dp:api:read`, `dp:api:m
 
 ```shell
 
-curl -X PUT https://localhost:9543/api/v0.9/apis/{apiId} \
+curl -X PUT https://localhost:9543/api-portal/api/v0.9/apis/{apiId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json' \
   -F 'definition=@definition.yaml' \
@@ -688,7 +688,7 @@ instead, the handle always comes from `metadata.name`.
 
 ```shell
 
-curl -X DELETE https://localhost:9543/api/v0.9/apis/{apiId} \
+curl -X DELETE https://localhost:9543/api-portal/api/v0.9/apis/{apiId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: text/plain'
 

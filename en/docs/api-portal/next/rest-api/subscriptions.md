@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/subscriptions \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/subscriptions \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -154,7 +154,7 @@ Required scopes (the token must carry at least one of): `dp:subscription:create`
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/subscriptions \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/subscriptions \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -273,7 +273,7 @@ Status Code **200**
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/subscriptions/{subId} \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/subscriptions/{subId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -352,7 +352,7 @@ Required scopes (the token must carry at least one of): `dp:subscription:read`, 
 
 ```shell
 
-curl -X PUT https://localhost:9543/api/v0.9/subscriptions/{subId} \
+curl -X PUT https://localhost:9543/api-portal/api/v0.9/subscriptions/{subId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -467,7 +467,7 @@ Required scopes (the token must carry at least one of): `dp:subscription:update`
 
 ```shell
 
-curl -X DELETE https://localhost:9543/api/v0.9/subscriptions/{subId} \
+curl -X DELETE https://localhost:9543/api-portal/api/v0.9/subscriptions/{subId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -538,7 +538,7 @@ Required scopes (the token must carry at least one of): `dp:subscription:delete`
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/subscriptions/{subId}/change-plan \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/subscriptions/{subId}/change-plan \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -654,7 +654,7 @@ Required scopes (the token must carry at least one of): `dp:subscription:update`
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/subscriptions/{subId}/regenerate-token \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/subscriptions/{subId}/regenerate-token \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 

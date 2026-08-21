@@ -17,13 +17,18 @@ content_type: "reference"
 Fine-grained API Portal REST API for managing organizations,
 API metadata and content, applications, subscriptions, application appKeyMappings, and API flows.
 
-All resources, including organization lifecycle endpoints
-(`/api/v0.9/organizations`, `/api/v0.9/organizations/{orgId}`), are served under `/api/v0.9`.
-Operations declare the least-privilege OAuth2 scopes required for each resource action.
+All resources, the organization endpoints (`/api-portal/api/v0.9/organizations/{orgId}`)
+included, are served under `/api-portal/api/v0.9` — the portal mounts its whole surface,
+pages and REST API alike, beneath the `/api-portal` prefix.
+
+Every operation other than the few marked public takes a Bearer JWT access token in the
+`Authorization` header and declares the least-privilege `dp:*` scopes that authorize it.
+Where that token comes from, and how a caller comes to hold those scopes, is described
+under [Authentication](authentication.md).
 
 Base URLs:
-* <a href="https://localhost:9543/api/v0.9">https://localhost:9543/api/v0.9</a>
-* <a href="http://localhost:9543/api/v0.9">http://localhost:9543/api/v0.9</a>
+* <a href="https://localhost:9543/api-portal/api/v0.9">https://localhost:9543/api-portal/api/v0.9</a>
+* <a href="http://localhost:9543/api-portal/api/v0.9">http://localhost:9543/api-portal/api/v0.9</a>
 
 ## Table of Contents
 
@@ -31,11 +36,8 @@ Base URLs:
 
 ### [Organizations](organizations.md)
 
-- [Create an organization (not supported)](organizations.md#create-an-organization-not-supported)
-- [List organizations (not supported)](organizations.md#list-organizations-not-supported)
 - [Update an organization](organizations.md#update-an-organization)
 - [Get an organization](organizations.md#get-an-organization)
-- [Delete an organization (not supported)](organizations.md#delete-an-organization-not-supported)
 
 ### [Organization Content](organization-content.md)
 
