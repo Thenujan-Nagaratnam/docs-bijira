@@ -36,13 +36,14 @@
 </script>
 <!-- CookiePro Cookies Consent Notice end for wso2.com -->
 
-{% for path in config.extra_javascript %}
-<script src="{{ path | url }}"></script>
-{% endfor %}
+<!-- config.extra_javascript is loaded once at the end of <body> by the theme's
+     own base.html scripts block, after the theme bundle. Do not load it here as
+     well: a second copy in <head> blocks parsing and runs every handler twice,
+     and it runs before the bundle defines document$. -->
 
 <script>
   function trackEvent(eventName, properties) {
-    if (moesif) {
+    if (typeof moesif !== "undefined" && moesif) {
       moesif.track(eventName, {
         product: "api",
         asset_type: "docs",
@@ -53,7 +54,20 @@
     }
   }
   
-  document.addEventListener("DOMContentLoaded", function () {
+  function trackPageView() {
     trackEvent("Page-Viewed", { page_title: document.title });
+  }
+
+  // With instant loading (navigation.instant) DOMContentLoaded fires once for
+  // the whole session, so report page views from document$ instead: it emits
+  // for the current page and again after every instant navigation. The theme
+  // bundle defines it at the end of <body>, after this script runs, so resolve
+  // it once the document is ready.
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof window.document$ !== "undefined") {
+      window.document$.subscribe(trackPageView);
+    } else {
+      trackPageView();
+    }
   });
 </script>

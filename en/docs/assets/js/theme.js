@@ -16,6 +16,36 @@
  * under the License.
  */
 
+/*
+ * Page lifecycle helpers
+ * -------------------------------------------------------------------------
+ * With instant loading (theme.features: navigation.instant) the browser loads
+ * one document per session: every later navigation swaps
+ * [data-md-component=container] in place, so DOMContentLoaded fires only for
+ * the first page. Material exposes `document$`, which emits for the current
+ * page and again after every swap.
+ *
+ * Use onEachPage for anything that touches the content or the navigation
+ * sidebar, both of which are replaced. Use onFirstPage for the header and the
+ * search dialog, which stay in place.
+ */
+function onEachPage(callback) {
+  if (typeof window.document$ !== 'undefined') {
+    window.document$.subscribe(callback);
+  } else {
+    document.addEventListener('DOMContentLoaded', callback);
+  }
+}
+
+function onFirstPage(callback) {
+  var done = false;
+  onEachPage(function () {
+    if (done) return;
+    done = true;
+    callback();
+  });
+}
+
 // Initialize version dropdown
 function initVersionDropdown() {
   const dropdown = document.querySelector('.md-header__version-select-dropdown');
@@ -45,17 +75,12 @@ function initVersionDropdown() {
   }
 }
 
-// Run after DOM is ready - single initialization only
-if (typeof window.versionDropdownInitialized === 'undefined') window.versionDropdownInitialized = false;
-document.addEventListener('DOMContentLoaded', function() {
-  if (!window.versionDropdownInitialized) {
-    initVersionDropdown();
-    window.versionDropdownInitialized = true;
-  }
-});
+// The dropdown lives in the header, which survives instant navigation.
+onFirstPage(initVersionDropdown);
 
-// Wrap tabbed content and nav items in DOMContentLoaded
-document.addEventListener('DOMContentLoaded', function() {
+// Content tab styling and navigation sidebar state: both are re-rendered on
+// every navigation, so this runs per page.
+onEachPage(function() {
   // Add a class to content tabs that has multiple child elements rather than a code block
   document.querySelectorAll('.tabbed-content').forEach(tabbedContent => {
     const tabbedBlocks = Array.from(tabbedContent.querySelectorAll('.tabbed-block'));
@@ -107,16 +132,18 @@ document.addEventListener('DOMContentLoaded', function() {
  * Handle opening external links in a new tab
  * and initialize JSON tree formatter
  */
-document.addEventListener('DOMContentLoaded', function() {
-  // Open external links in new tab
+onEachPage(function() {
+  // Open external links in new tab. Header and footer links survive instant
+  // navigation and are seen again on every page, so use classList.add rather
+  // than appending to className, which would stack duplicate class names.
   var links = document.links;
   for (var i = 0, linksLength = links.length; i < linksLength; i++) {
     if (links[i].hostname != window.location.hostname) {
       links[i].target = "_blank";
       links[i].setAttribute("rel", "noopener noreferrer");
-      links[i].className += " externalLink";
+      links[i].classList.add("externalLink");
     } else {
-      links[i].className += " localLink";
+      links[i].classList.add("localLink");
     }
   }
   
@@ -141,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Set last visited valid page in session storage
-window.addEventListener("DOMContentLoaded", function () {
+onEachPage(function () {
   // Check if the server indicated this page is valid
   const isPageValid = document.documentElement.getAttribute("data-page-valid") === "true";
   
@@ -153,13 +180,18 @@ window.addEventListener("DOMContentLoaded", function () {
 /* 
  * Reading versions
  */
-if (typeof window.versionsLoaded === 'undefined') window.versionsLoaded = false;
-window.addEventListener('DOMContentLoaded', function() {
-  if (window.versionsLoaded) return;
-  window.versionsLoaded = true;
-  
+onEachPage(function() {
   var pageHeader = document.getElementById('page-header');
   if (!pageHeader) return;
+
+  // Only fetch versions.json when this page has somewhere to put the result:
+  // the header dropdown, or the tables on the versions page. The dropdown
+  // survives instant navigation, so populate it once; the tables are page
+  // content and are re-rendered on every navigation.
+  var dropdownEl = document.getElementById('version-select-dropdown');
+  var versionsPageEl = document.getElementById('current-version-stable');
+  if (!dropdownEl && !versionsPageEl) return;
+  if (!versionsPageEl && dropdownEl.getAttribute('data-versions-rendered')) return;
   var docSetLang = pageHeader.getAttribute('data-lang') == null ? 'en' : pageHeader.getAttribute('data-lang');
 
   if (window.location.pathname.split('/')[1] !== docSetLang) {
@@ -200,7 +232,8 @@ window.addEventListener('DOMContentLoaded', function() {
       /* 
        * Appending versions to the version selector dropdown 
        */
-      if (dropdown){
+      if (dropdown && !dropdown.getAttribute('data-versions-rendered')){
+          dropdown.setAttribute('data-versions-rendered', 'true');
           data.list.sort().forEach(function(key, index){
               var versionData = data.all[key];
               
@@ -310,11 +343,9 @@ if (preRelLink) {
  *   3. On change, keep the user on the equivalent page under the new version,
  *      falling back to that version's overview when it does not exist.
  */
-if (typeof window.versionedNavInitialized === 'undefined') window.versionedNavInitialized = false;
-document.addEventListener('DOMContentLoaded', function () {
-  if (window.versionedNavInitialized) return;
-  window.versionedNavInitialized = true;
-
+// The navigation sidebar is re-rendered on every navigation, so resolve the
+// active version and rebind the selectors per page.
+onEachPage(function () {
   // Version-scoped root nav sections (extra.version_scoped_navs): rendered
   // hidden (see nav-item.html / _version-select.css), revealed while the
   // current URL contains the matching version as a path segment — e.g.
@@ -471,13 +502,10 @@ document.addEventListener('DOMContentLoaded', function () {
  *      as Cloud / Guides). Active version is resolved exactly like the nav
  *      selector: URL segment > localStorage > configured default.
  */
-if (typeof window.searchBreadcrumbsInitialized === 'undefined') window.searchBreadcrumbsInitialized = false;
-document.addEventListener('DOMContentLoaded', function () {
-  if (window.searchBreadcrumbsInitialized) return;
-  window.searchBreadcrumbsInitialized = true;
-
-  var output = document.querySelector('[data-md-component="search-result"]');
-  if (!output) return;
+(function () {
+  // The search dialog belongs to the header, which instant navigation keeps in
+  // place, so the observer is installed once per session.
+  var output = null;
 
   // Material exposes the site root as an absolute URL in `window.__md_scope`
   // (set on every page, e.g. https://host/bijira/docs/). Use it to build the
@@ -570,7 +598,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function decorate() {
-    if (!breadcrumbs) return;
+    if (!breadcrumbs || !output) return;
     var items = output.querySelectorAll('.md-search-result__item');
     var visible = 0;
     items.forEach(function (item) {
@@ -625,7 +653,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Results are rendered asynchronously and re-rendered on each keystroke, so
   // observe the output container and (re)decorate whenever it changes.
-  var observer = new MutationObserver(function () { ensureLoadedThenDecorate(); });
-  observer.observe(output, { childList: true, subtree: true });
-});
+  onFirstPage(function () {
+    output = document.querySelector('[data-md-component="search-result"]');
+    if (!output) return;
+    var observer = new MutationObserver(function () { ensureLoadedThenDecorate(); });
+    observer.observe(output, { childList: true, subtree: true });
+  });
+
+  // The active version is derived from the URL and from the navigation sidebar,
+  // both of which change on navigation, so drop the resolved values and let the
+  // next search re-read them.
+  onEachPage(function () {
+    activeVersions = null;
+    scopedVersions = null;
+    // Results rendered for a search made on the previous page carry that page's
+    // version scoping, and Material only re-renders them when the query
+    // changes, so decorate what is already on screen again.
+    if (output && output.querySelector('.md-search-result__item')) {
+      ensureLoadedThenDecorate();
+    }
+  });
+})();
 

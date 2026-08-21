@@ -44,6 +44,10 @@ theme:
     text: Montserrat
   favicon: assets/images/favicon.png
   features:
+    # Fetch pages with XHR and swap the content in place instead of reloading
+    # the whole window. Per-page JavaScript must run from document$, not
+    # DOMContentLoaded (see docs/assets/js/theme.js).
+    - navigation.instant
     - navigation.path
     - navigation.top
     - content.code.copy
