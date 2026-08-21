@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/api-keys \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/api-keys \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -155,7 +155,7 @@ Status Code **200**
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/apis/{apiId}/api-keys/generate \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/apis/{apiId}/api-keys/generate \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -284,7 +284,7 @@ Required scopes (the token must carry at least one of): `dp:api_key:create`, `dp
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/apis/{apiId}/api-keys \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/apis/{apiId}/api-keys \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -417,7 +417,7 @@ Status Code **200**
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/apis/{apiId}/api-keys/regenerate \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/apis/{apiId}/api-keys/regenerate \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -530,7 +530,7 @@ Required scopes (the token must carry at least one of): `dp:api_key:update`, `dp
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/apis/{apiId}/api-keys/revoke \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/apis/{apiId}/api-keys/revoke \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -627,7 +627,7 @@ Required scopes (the token must carry at least one of): `dp:api_key:revoke`, `dp
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/apis/{apiId}/api-keys/associate \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/apis/{apiId}/api-keys/associate \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -762,7 +762,7 @@ Required scopes (the token must carry at least one of): `dp:api_key:update`, `dp
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/apis/{apiId}/api-keys/dissociate \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/apis/{apiId}/api-keys/dissociate \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -848,7 +848,7 @@ Required scopes (the token must carry at least one of): `dp:api_key:update`, `dp
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/applications/{applicationId}/api-keys \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/applications/{applicationId}/api-keys \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 

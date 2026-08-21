@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/webhook-events \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/webhook-events \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -176,7 +176,7 @@ Status Code **200**
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/webhook-events/{eventId} \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/webhook-events/{eventId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 

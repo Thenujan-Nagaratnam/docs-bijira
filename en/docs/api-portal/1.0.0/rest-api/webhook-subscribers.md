@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/webhook-subscribers \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/webhook-subscribers \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -159,7 +159,7 @@ Required scopes (the token must carry at least one of): `dp:webhook_subscriber:c
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/webhook-subscribers \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/webhook-subscribers \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -269,7 +269,7 @@ Status Code **200**
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/webhook-subscribers/{subscriberId} \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/webhook-subscribers/{subscriberId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -354,7 +354,7 @@ Required scopes (the token must carry at least one of): `dp:webhook_subscriber:r
 
 ```shell
 
-curl -X PUT https://localhost:9543/api/v0.9/webhook-subscribers/{subscriberId} \
+curl -X PUT https://localhost:9543/api-portal/api/v0.9/webhook-subscribers/{subscriberId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -495,7 +495,7 @@ Required scopes (the token must carry at least one of): `dp:webhook_subscriber:u
 
 ```shell
 
-curl -X DELETE https://localhost:9543/api/v0.9/webhook-subscribers/{subscriberId} \
+curl -X DELETE https://localhost:9543/api-portal/api/v0.9/webhook-subscribers/{subscriberId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -558,7 +558,7 @@ Required scopes (the token must carry at least one of): `dp:webhook_subscriber:d
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/webhook-subscribers/{subscriberId}/deliveries \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/webhook-subscribers/{subscriberId}/deliveries \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 

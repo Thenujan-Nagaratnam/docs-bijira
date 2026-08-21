@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/views \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/views \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -135,7 +135,7 @@ Required scopes (the token must carry at least one of): `dp:view:create`, `dp:vi
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/views \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/views \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -242,7 +242,7 @@ Status Code **200**
 
 ```shell
 
-curl -X PUT https://localhost:9543/api/v0.9/views/{viewId} \
+curl -X PUT https://localhost:9543/api-portal/api/v0.9/views/{viewId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -368,7 +368,7 @@ Required scopes (the token must carry at least one of): `dp:view:update`, `dp:vi
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/views/{viewId} \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/views/{viewId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -469,7 +469,7 @@ Required scopes (the token must carry at least one of): `dp:view:read`, `dp:view
 
 ```shell
 
-curl -X DELETE https://localhost:9543/api/v0.9/views/{viewId} \
+curl -X DELETE https://localhost:9543/api-portal/api/v0.9/views/{viewId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 

@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/apis/{apiId}/assets \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/apis/{apiId}/assets \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json' \
   -F 'content=@content.zip' \
@@ -145,7 +145,7 @@ At least one of `web/` or `docs/` must exist at the ZIP root.
 
 ```shell
 
-curl -X PUT https://localhost:9543/api/v0.9/apis/{apiId}/assets \
+curl -X PUT https://localhost:9543/api-portal/api/v0.9/apis/{apiId}/assets \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json' \
   -F 'content=@content.zip' \
@@ -156,7 +156,7 @@ curl -X PUT https://localhost:9543/api/v0.9/apis/{apiId}/assets \
 
 Replaces or adds static content files for an existing API.
 
-The upload format is the same as `POST /api/v0.9/apis/{apiId}/assets`.
+The upload format is the same as `POST /api-portal/api/v0.9/apis/{apiId}/assets`.
 Existing files with the same stored `type` and `fileName` are updated; new files are created.
 Image metadata is updated only when image metadata can be resolved from the upload or request body.
 
@@ -263,7 +263,7 @@ At least one of `web/` or `docs/` must exist at the ZIP root.
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/apis/{apiId}/assets?type=document&fileName=getting-started.md \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/apis/{apiId}/assets?type=document&fileName=getting-started.md \
   -u {username}:{password} \
   -H 'Accept: text/markdown'
 
@@ -366,7 +366,7 @@ session: an anonymous request for a non-image type is rejected.
 
 ```shell
 
-curl -X DELETE https://localhost:9543/api/v0.9/apis/{apiId}/assets?type=document \
+curl -X DELETE https://localhost:9543/api-portal/api/v0.9/apis/{apiId}/assets?type=document \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 

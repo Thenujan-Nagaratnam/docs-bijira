@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/labels \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/labels \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -138,7 +138,7 @@ Required scopes (the token must carry at least one of): `dp:label:create`, `dp:l
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/labels \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/labels \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -248,7 +248,7 @@ Status Code **200**
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/labels/{labelId} \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/labels/{labelId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -320,7 +320,7 @@ Required scopes (the token must carry at least one of): `dp:label:read`, `dp:lab
 
 ```shell
 
-curl -X PUT https://localhost:9543/api/v0.9/labels/{labelId} \
+curl -X PUT https://localhost:9543/api-portal/api/v0.9/labels/{labelId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -440,7 +440,7 @@ Required scopes (the token must carry at least one of): `dp:label:update`, `dp:l
 
 ```shell
 
-curl -X DELETE https://localhost:9543/api/v0.9/labels/{labelId} \
+curl -X DELETE https://localhost:9543/api-portal/api/v0.9/labels/{labelId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 

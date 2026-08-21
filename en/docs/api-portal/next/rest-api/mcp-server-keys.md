@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys/generate \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId}/api-keys/generate \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -32,7 +32,7 @@ curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys/
 
 ```
 
-Generates an API key for an MCP server. Mirrors `POST /api/v0.9/apis/{apiId}/api-keys/generate`.
+Generates an API key for an MCP server. Mirrors `POST /api-portal/api/v0.9/apis/{apiId}/api-keys/generate`.
 
 > Payload
 
@@ -153,13 +153,13 @@ Required scopes (the token must carry at least one of): `dp:mcp_server_key:creat
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId}/api-keys \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
 ```
 
-Lists API keys for the given MCP server. Mirrors `GET /api/v0.9/apis/{apiId}/api-keys`.
+Lists API keys for the given MCP server. Mirrors `GET /api-portal/api/v0.9/apis/{apiId}/api-keys`.
 
 ### Authentication
 
@@ -286,7 +286,7 @@ Status Code **200**
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys/regenerate \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId}/api-keys/regenerate \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -294,7 +294,7 @@ curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys/
 
 ```
 
-Regenerates the secret for an existing MCP server API key identified by `keyId` in the request body. Mirrors `POST /api/v0.9/apis/{apiId}/api-keys/regenerate`.
+Regenerates the secret for an existing MCP server API key identified by `keyId` in the request body. Mirrors `POST /api-portal/api/v0.9/apis/{apiId}/api-keys/regenerate`.
 
 > Payload
 
@@ -399,7 +399,7 @@ Required scopes (the token must carry at least one of): `dp:mcp_server_key:updat
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys/revoke \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId}/api-keys/revoke \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -407,7 +407,7 @@ curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys/
 
 ```
 
-Revokes an existing MCP server API key identified by `keyId` in the request body. Mirrors `POST /api/v0.9/apis/{apiId}/api-keys/revoke`.
+Revokes an existing MCP server API key identified by `keyId` in the request body. Mirrors `POST /api-portal/api/v0.9/apis/{apiId}/api-keys/revoke`.
 
 > Payload
 
@@ -496,7 +496,7 @@ Required scopes (the token must carry at least one of): `dp:mcp_server_key:revok
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys/associate \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId}/api-keys/associate \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -504,7 +504,7 @@ curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys/
 
 ```
 
-Associates (or re-associates) an existing MCP server API key with an application, for analytics attribution only. Mirrors `POST /api/v0.9/apis/{apiId}/api-keys/associate`.
+Associates (or re-associates) an existing MCP server API key with an application, for analytics attribution only. Mirrors `POST /api-portal/api/v0.9/apis/{apiId}/api-keys/associate`.
 
 > Payload
 
@@ -631,7 +631,7 @@ Required scopes (the token must carry at least one of): `dp:mcp_server_key:updat
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys/dissociate \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId}/api-keys/dissociate \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -639,7 +639,7 @@ curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/api-keys/
 
 ```
 
-Removes the application association from an MCP server API key identified by `keyId` in the request body, if any. Mirrors `POST /api/v0.9/apis/{apiId}/api-keys/dissociate`.
+Removes the application association from an MCP server API key identified by `keyId` in the request body, if any. Mirrors `POST /api-portal/api/v0.9/apis/{apiId}/api-keys/dissociate`.
 
 > Payload
 

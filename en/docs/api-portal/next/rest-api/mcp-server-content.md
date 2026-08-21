@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/assets \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId}/assets \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json' \
   -F 'content=@content.zip' \
@@ -33,7 +33,7 @@ curl -X POST https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/assets \
 
 ```
 
-Uploads the static content package for an MCP server. Mirrors `POST /api/v0.9/apis/{apiId}/assets`.
+Uploads the static content package for an MCP server. Mirrors `POST /api-portal/api/v0.9/apis/{apiId}/assets`.
 
 ### Authentication
 
@@ -138,7 +138,7 @@ At least one of `web/` or `docs/` must exist at the ZIP root.
 
 ```shell
 
-curl -X PUT https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/assets \
+curl -X PUT https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId}/assets \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json' \
   -F 'content=@content.zip' \
@@ -147,7 +147,7 @@ curl -X PUT https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/assets \
 
 ```
 
-Replaces or adds static content files for an existing MCP server. Mirrors `PUT /api/v0.9/apis/{apiId}/assets`.
+Replaces or adds static content files for an existing MCP server. Mirrors `PUT /api-portal/api/v0.9/apis/{apiId}/assets`.
 
 ### Authentication
 
@@ -252,13 +252,13 @@ At least one of `web/` or `docs/` must exist at the ZIP root.
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/assets?type=document&fileName=getting-started.md \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId}/assets?type=document&fileName=getting-started.md \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: text/markdown'
 
 ```
 
-Retrieves a single stored MCP server content file. Mirrors `GET /api/v0.9/apis/{apiId}/assets`.
+Retrieves a single stored MCP server content file. Mirrors `GET /api-portal/api/v0.9/apis/{apiId}/assets`.
 
 ### Authentication
 
@@ -354,13 +354,13 @@ Required scopes (the token must carry at least one of): `dp:mcp_server_content:r
 
 ```shell
 
-curl -X DELETE https://localhost:9543/api/v0.9/mcp-servers/{mcpServerId}/assets?type=document \
+curl -X DELETE https://localhost:9543/api-portal/api/v0.9/mcp-servers/{mcpServerId}/assets?type=document \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
 ```
 
-Deletes stored MCP server content. Mirrors `DELETE /api/v0.9/apis/{apiId}/assets`.
+Deletes stored MCP server content. Mirrors `DELETE /api-portal/api/v0.9/apis/{apiId}/assets`.
 
 ### Authentication
 

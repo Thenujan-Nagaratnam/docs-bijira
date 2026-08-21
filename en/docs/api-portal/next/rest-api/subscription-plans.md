@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/subscription-plans \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/subscription-plans \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -190,7 +190,7 @@ Status Code **200**
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/subscription-plans \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/subscription-plans \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -335,7 +335,7 @@ Required scopes (the token must carry at least one of): `dp:subscription_plan:cr
 
 ```shell
 
-curl -X PUT https://localhost:9543/api/v0.9/subscription-plans \
+curl -X PUT https://localhost:9543/api-portal/api/v0.9/subscription-plans \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -521,7 +521,7 @@ Required scopes (the token must carry at least one of): `dp:subscription_plan:up
 
 ```shell
 
-curl -X GET https://localhost:9543/api/v0.9/subscription-plans/{planId} \
+curl -X GET https://localhost:9543/api-portal/api/v0.9/subscription-plans/{planId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
@@ -633,7 +633,7 @@ Required scopes (the token must carry at least one of): `dp:subscription_plan:re
 
 ```shell
 
-curl -X DELETE https://localhost:9543/api/v0.9/subscription-plans/{planId} \
+curl -X DELETE https://localhost:9543/api-portal/api/v0.9/subscription-plans/{planId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 

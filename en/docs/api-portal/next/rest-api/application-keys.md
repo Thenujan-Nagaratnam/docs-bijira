@@ -24,7 +24,7 @@ content_type: "reference"
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/applications/{applicationId}/generate-keys \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/applications/{applicationId}/generate-keys \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -148,7 +148,7 @@ Required scopes (the token must carry at least one of): `dp:application_key:crea
 
 ```shell
 
-curl -X POST https://localhost:9543/api/v0.9/applications/{applicationId}/oauth-keys/{keyMappingId}/generate-token \
+curl -X POST https://localhost:9543/api-portal/api/v0.9/applications/{applicationId}/oauth-keys/{keyMappingId}/generate-token \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
@@ -264,7 +264,7 @@ Required scopes (the token must carry at least one of): `dp:application_key:crea
 
 ```shell
 
-curl -X DELETE https://localhost:9543/api/v0.9/applications/{applicationId}/oauth-keys/{keyMappingId} \
+curl -X DELETE https://localhost:9543/api-portal/api/v0.9/applications/{applicationId}/oauth-keys/{keyMappingId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 
