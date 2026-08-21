@@ -248,9 +248,9 @@ Tune it under `gateway.gatewayRuntime.trafficLogVolume`:
 Batches lines and `POST`s them to an endpoint you name. Nothing is written to disk and no co-located
 collector is required.
 
-The body is newline-delimited JSON (`application/x-ndjson`), which Splunk HEC's `/raw` endpoint,
-Elasticsearch and OpenSearch `_bulk`, Loki, Fluent Bit's `http` input, and the OpenTelemetry Collector
-all accept directly.
+The body is newline-delimited JSON (`application/x-ndjson`): one traffic-log line per line. The sink adds no envelope, no per-record metadata, and no receiver-specific framing.
+
+Receivers that take that payload as-is include Splunk HEC's `/services/collector/raw` endpoint and the HTTP input of a log collector such as Fluent Bit or Vector can consume the sink straight.
 
 ```toml
 [traffic_logging]
@@ -349,11 +349,11 @@ selected type is a **startup error**, not a silently unauthenticated `POST` carr
 
 === "Bearer"
 
-    For Grafana Loki, Datadog, a generic OTLP/HTTP collector, and most SaaS receivers.
+    For a receiver that reads a bearer token,
 
     ```toml
     [traffic_logging.http]
-    endpoint = "https://loki.example.com/loki/api/v1/raw"
+    endpoint = "https://logs.example.com/ingest"
 
     [traffic_logging.http.auth]
     type = "bearer"
@@ -364,11 +364,11 @@ selected type is a **startup error**, not a silently unauthenticated `POST` carr
 
 === "Basic"
 
-    For Elasticsearch/OpenSearch `_bulk` with a native user, or any receiver behind basic auth.
+    For a collector whose HTTP input takes basic auth,
 
     ```toml
     [traffic_logging.http]
-    endpoint = "https://opensearch.example.com:9200/_bulk"
+    endpoint = "https://vector.observability.svc:8080/gateway-traffic"
 
     [traffic_logging.http.auth]
     type = "basic"
@@ -410,7 +410,7 @@ selected type is a **startup error**, not a silently unauthenticated `POST` carr
 
     ```toml
     [traffic_logging.http]
-    endpoint = "https://otel-collector.observability.svc:4318/v1/logs"
+    endpoint = "https://fluent-bit.observability.svc:9880/gateway-traffic"
 
     [traffic_logging.http.auth]
     type = "none"
