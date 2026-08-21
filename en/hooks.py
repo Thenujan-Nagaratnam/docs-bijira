@@ -108,7 +108,63 @@ def on_post_build(config, **kwargs):
         f.write(new_content)
 
 
+# Matches an HTML comment, except a bang comment (<!--! ... -->, used for
+# third-party license notices) and a conditional comment (<!--[if ... ).
+# Comments inside a code sample reach the browser escaped (&lt;!--), so they are
+# not affected; a literal comment inside a raw <pre> block would be.
+_HTML_COMMENT_RE = re.compile(r"<!--(?![!\[])(?:(?!<!--).)*?-->", re.DOTALL)
+
+
+def _strip_html_comments(output: str) -> str:
+    """Drop template comments from the rendered page.
+
+    Material's templates document themselves with HTML comments, and
+    partials/nav-item.html is rendered once per navigation item - several
+    hundred times per page - so those comments account for roughly 60% of the
+    bytes the browser has to download and parse for every page.
+    """
+    return _HTML_COMMENT_RE.sub("", output)
+
+
+# Elements whose content is whitespace-sensitive. The theme renders code, kbd
+# and pre as white-space: pre-wrap, a textarea shows its content verbatim, and
+# collapsing a newline inside a script or a stylesheet would pull the next line
+# into a line comment.
+_PROTECTED_RE = re.compile(
+    r"<(pre|textarea|script|style|code|kbd)\b.*?</\1\s*>", re.DOTALL | re.IGNORECASE
+)
+_WHITESPACE_RUN_RE = re.compile(r"[ \t\r\n]{2,}")
+
+
+def _collapse_whitespace(output: str) -> str:
+    """Collapse every run of whitespace outside a protected element to one space.
+
+    Template indentation is about half of what a page weighs once its comments
+    are gone. Browsers render consecutive whitespace as a single space anyway,
+    so collapsing the runs - rather than removing them - leaves the rendered
+    text and the inline layout unchanged.
+    """
+    parts = []
+    end = 0
+    for match in _PROTECTED_RE.finditer(output):
+        parts.append(_WHITESPACE_RUN_RE.sub(" ", output[end : match.start()]))
+        parts.append(match.group(0))
+        end = match.end()
+    parts.append(_WHITESPACE_RUN_RE.sub(" ", output[end:]))
+    return "".join(parts)
+
+
+def on_post_template(output, template_name, config, **kwargs):
+    """Strip template comments from theme templates such as 404.html, which are
+    rendered outside the page pipeline and so never reach on_post_page."""
+    if template_name.endswith(".html"):
+        return _collapse_whitespace(_strip_html_comments(output))
+    return output
+
+
 def on_post_page(output, page, config, **kwargs):
+    output = _collapse_whitespace(_strip_html_comments(output))
+
     # Add cache-busting version to the theme.css <link> tag so CDN/browser
     # cache is invalidated whenever theme.css or any of its partials change.
     if _theme_css_version:
