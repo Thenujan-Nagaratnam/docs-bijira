@@ -623,6 +623,7 @@ nav:
         - Authenticate Clients: ai-gateway/next/authenticate-clients.md
         - Guardrails:
             - ai-gateway/next/guardrails/index.md
+            - Guardrails Catalogue: ai-gateway/next/guardrails/guardrails-catalogue.md
             - Guardrail execution order: ai-gateway/next/guardrails/execution-order.md
         - Token Based Rate Limiting: ai-gateway/next/token-based-rate-limiting.md
         - Cost Control and Budgets: ai-gateway/next/cost-control-and-budgets.md

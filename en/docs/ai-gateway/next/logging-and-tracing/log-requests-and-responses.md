@@ -34,7 +34,7 @@ You add the policy to the `operationPolicies` block of an `LlmProxy`, to cover o
 
 ## Handle logged content carefully
 
-Prompts and completions carry whatever your users typed, so a log of them is as sensitive as the conversation itself. Capture bodies only while you need them, and mask identifying data before it is recorded by attaching a masking policy ahead of the logging policy — see [Guardrails](../guardrails/index.md).
+Prompts and completions carry whatever your users typed, so a log of them is as sensitive as the conversation itself. Capture bodies only while you need them, and mask identifying data before it is recorded by attaching a masking policy ahead of the logging policy — see the [PII Masking policy](../guardrails/guardrails-catalogue.md).
 
 ## Policies for this use case
 

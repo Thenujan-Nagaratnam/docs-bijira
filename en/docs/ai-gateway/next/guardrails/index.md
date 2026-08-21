@@ -8,7 +8,7 @@ tags:
   - guardrails
   - llm-proxy
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-17
+last_updated: 2026-08-20
 content_type: "concept"
 ---
 
@@ -29,35 +29,17 @@ Guardrails use the same underlying policy engine as [API Gateway policies](../..
 - **Length and count limits**: Enforce word count, sentence count, and byte length constraints on prompts and responses.
 - **External validation**: Delegate content validation to managed services such as AWS Bedrock Guardrails or Azure Content Safety.
 
-## Available guardrails
+## In this section
+
+This section contains the following pages:
+
+| Page | What it covers |
+|------|----------------|
+| [Guardrails catalogue](guardrails-catalogue.md) | Every guardrail policy the AI Gateway ships, what each one checks, and how to extend the gateway with a guardrail of your own. |
+| [Guardrail execution order](execution-order.md) | How guardrails execute in the dual-hop model: the LLM Proxy chain runs before the LLM Provider chain on request, and in reverse on response. |
 
 Guardrail policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../policy-hub/overview.md).
-
-| Guardrail | What it checks |
-|-----------|----------------|
-| [Regex Guardrail](https://wso2.com/api-platform/policy-hub/policies/regex-guardrail) | Validates content against a regular expression |
-| [JSON Schema Guardrail](https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail) | Enforces a JSON Schema on request or response payloads |
-| [Word Count Guardrail](https://wso2.com/api-platform/policy-hub/policies/word-count-guardrail) | Enforces word-count limits on payloads |
-| [Sentence Count Guardrail](https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail) | Enforces sentence-count limits on payloads |
-| [Content Length Guardrail](https://wso2.com/api-platform/policy-hub/policies/content-length-guardrail) | Enforces byte-length limits on payloads |
-| [URL Guardrail](https://wso2.com/api-platform/policy-hub/policies/url-guardrail) | Validates URLs found in request or response bodies |
-| [PII Masking](https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex) | Masks or redacts PII from request/response bodies using configurable regex patterns |
-| [Semantic Prompt Guard](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) | Blocks or allows prompts based on semantic similarity to configured allow/deny phrases |
-| [Azure Content Safety](https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation) | Screens content against Azure Content Safety API |
-| [AWS Bedrock Guardrail](https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail) | Validates content against AWS Bedrock Guardrails |
-| [Granite Guardian Prompt Injection](https://wso2.com/api-platform/policy-hub/policies/granite-guardian-prompt-injection) | Detects prompt injection and jailbreak attempts in LLM API requests using IBM Granite Guardian 3.3 8B |
-| [NeMo Guard Content Safety](https://wso2.com/api-platform/policy-hub/policies/nvidia-nemoguard-content-safety) | Validates request and/or response content using NVIDIA NeMo Guard (llama-3.1-nemoguard-8b-content-safety) |
 
 ## Prompt management
 
 Guardrails judge a prompt. A separate set of policies reshapes one — injecting standing instructions, applying templates, or compressing text before it goes upstream. See [Prompt management](../prompt-management.md).
-
-## Custom guardrails
-
-You can extend the AI Gateway with custom guardrail policies by building a custom gateway image using the `ap` CLI. See [Customizing the Gateway by Adding and Removing Policies](../../../tools/cli/customizing-gateway-policies.md).
-
-## How guardrails execute
-
-When multiple guardrails are attached to an LLM Proxy, they run as an ordered chain across request and response phases. The AI Gateway's architecture — with a separate LLM Proxy chain and LLM Provider chain — means every request passes through two chains in sequence.
-
-For a full explanation of phase execution, multi-guardrail ordering, and the dual-hop execution model specific to AI Gateway, see [Guardrail execution order](execution-order.md).
