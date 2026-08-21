@@ -49,7 +49,7 @@ Envoy access log ──ALS──► collector ──► traffic-log serializer �
                                                                  └──► http     bounded queue ──► batched POST to a receiver
 ```
 
-Because emission happens on Envoy's access-log path, it fires for every request Envoy terminates 
+Because emission happens on Envoy's access-log path, it fires for every request Envoy terminates —
 including requests denied by an auth policy before they reach any downstream logic.
 
 Two properties hold for every sink:
@@ -98,7 +98,7 @@ from it.
 | `response_body` | boolean | `false` | Capture the full response body into the collected event. |
 | `request_headers` | boolean | `false` | Capture all request headers into the collected event. |
 | `response_headers` | boolean | `false` | Capture all response headers into the collected event. |
-| `ignore_path_prefixes` | array of strings | `[]` | Path prefixes for which no analytics event and no traffic-log line is produced at all as if capture were disabled for that one request. See [Ignoring paths](#ignoring-paths). |
+| `ignore_path_prefixes` | array of strings | `[]` | Path prefixes for which no analytics event and no traffic-log line is produced at all — as if capture were disabled for that one request. See [Ignoring paths](#ignoring-paths). |
 
 !!! note
     Bodies can be large. Capture is off by default for both request and response bodies. Enable only
@@ -307,10 +307,11 @@ clamped so a hostile or misconfigured value cannot stall the sender indefinitely
 
 #### Retry versus draining (`retry_abort_queue_ratio`)
 
-Nothing is getting drained in the queue while a batch is retrying. Against a receiver
-that accepts connections but never answers, the default retry budget holds the sender for a considarable time
-and may belonger if the receiver returns `429` with a large `Retry-After`. At even a modest event rate that is long enough to
-fill the whole queue, so retrying to save one batch of ~100 events can cost thousands of newer ones.
+While a batch is retrying, nothing else in the queue is being drained. Against a receiver that accepts
+connections but never answers, the default retry budget holds the sender for a considerable time, and
+longer still if the receiver returns `429` with a large `Retry-After`. At even a modest event rate that
+is long enough to fill the whole queue, so retrying to save one batch of ~100 events can cost thousands
+of newer ones.
 
 `retry_abort_queue_ratio` bounds that trade-off: before each further wait, the sender checks the queue
 depth, and at or above the threshold it abandons the batch and gets back to draining. The abandoned
@@ -319,10 +320,10 @@ so you can tell *"the receiver is slow"* from *"the receiver is broken"*.
 
 The value is used exactly as written and is never remapped to a default:
 
-| Value | Behaviour |
+| Value | Behavior |
 |---|---|
 | `0` | Always abandon retries. One delivery attempt per batch, whatever the queue looks like (the same effect as `max_retries = 0`). |
-| `0.1` | Abort once the queue is 10% full. Favours draining over saving any individual batch. |
+| `0.1` | Abort once the queue is 10% full. Favors draining over saving any individual batch. |
 | `0.5` | **Default.** Retry freely while the queue is shallow; stop once it starts filling. |
 | `1` | Never abort early. A receiver that accepts but never answers holds the sender for the full retry budget. |
 
@@ -628,7 +629,7 @@ produces one line in the file **and** one line in the batch sent to the receiver
 ## Monitoring the sinks
 
 The policy-engine exposes per-sink Prometheus metrics on its metrics port (`[policy_engine.metrics]`,
-port `9003` by default). Every series is labelled `sink` — `stdout`, `file`, or `http`.
+port `9003` by default). Every series is labeled `sink` — `stdout`, `file`, or `http`.
 
 | Metric | Type | Labels | Description |
 |---|---|---|---|
@@ -739,7 +740,7 @@ environment variables for `{{ env }}` tokens) — the chart renders the *referen
 | No lines at all, but requests are succeeding | `traffic_logging.enabled` is `false`, or the path matches `collector.ignore_path_prefixes`. | Check both. |
 | Lines appear but headers/bodies are missing | The matching `[collector]` capture flag is off, or `exclude_fields` drops them. | Enable the `[collector]` flag; the `traffic_logging` toggle alone is a no-op. |
 | `dropped_total{reason="queue_full"}` climbing | The receiver cannot keep up with the event rate. | Raise `queue_capacity`, raise `batch_max_events`, or scale the receiver. |
-| `dropped_total{reason="backpressure"}` climbing | The receiver accepts but responds slowly, and retries were abandoned to keep draining. | Fix receiver latency; or raise `retry_abort_queue_ratio` to favour delivery over drain (at the cost of newer events). |
+| `dropped_total{reason="backpressure"}` climbing | The receiver accepts but responds slowly, and retries were abandoned to keep draining. | Fix receiver latency; or raise `retry_abort_queue_ratio` to favor delivery over drain (at the cost of newer events). |
 | `dropped_total{reason="send_failed"}` climbing | Retries exhausted — the receiver is failing or unreachable. | Check `write_errors_total{sink="http"}` for the status code, then the endpoint, auth material, and TLS trust. |
 | Lines lost after a restart, `file` sink | Buffering only applies to `http`; `file` and `stdout` write straight to their descriptor. | Nothing to tune — check `dropped_total` instead. |
 
