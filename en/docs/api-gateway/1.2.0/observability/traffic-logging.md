@@ -15,6 +15,11 @@ content_type: "how-to"
 {% raw %}
 # Traffic Logging
 
+!!! info "Note"
+    The `file` and `http` sinks are available from **update level 1.2.0.2** onwards(released on 23rd August 2026). On an earlier
+    1.2.0 update level, `stdout` is the only sink, and `traffic_logging.outputs`,
+    `[traffic_logging.file]`, and `[traffic_logging.http]` do not apply.
+
 ## Overview
 
 Traffic Logging writes a single structured JSON line for every request handled by the gateway — who
@@ -146,6 +151,9 @@ are sensible for most deployments.
 
 ## The `file` sink
 
+!!! info "Requires update level 1.2.0.2"
+    This sink is available from **update level 1.2.0.2** onwards.
+
 Appends each line to a rotating file. Use it to keep payloads off the container log and therefore out
 of `kubectl logs` and out of any DaemonSet shipping container logs onward.
 
@@ -244,6 +252,9 @@ Tune it under `gateway.gatewayRuntime.trafficLogVolume`:
     onward. To ship them anyway, mount the same volume into a sidecar collector.
 
 ## The `http` sink
+
+!!! info "Requires update level 1.2.0.2"
+    This sink is available from **update level 1.2.0.2** onwards.
 
 Batches lines and `POST`s them to an endpoint you name. Nothing is written to disk and no co-located
 collector is required.
