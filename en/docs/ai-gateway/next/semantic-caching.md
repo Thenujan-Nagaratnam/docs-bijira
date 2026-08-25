@@ -11,7 +11,7 @@ tags:
   - redis
   - embeddings
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-19
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
@@ -21,7 +21,7 @@ People ask the same question in different words. A conventional cache misses eve
 
 A cache hit skips the upstream call entirely. That removes the latency of the model round trip and the tokens it would have charged for.
 
-## Where the gateway enforces it
+## Where the cache sits in the request path
 
 The `Semantic Cache` policy converts the prompt into a vector, searches a vector store for a previously answered prompt above a similarity threshold, and returns that stored response when it finds one. A miss goes upstream as normal, and the response is stored for next time.
 
@@ -29,7 +29,7 @@ Attach it on an `LlmProxy` to cache one application's traffic, or on an `LlmProv
 
 Set that threshold deliberately. Too loose and the gateway answers one question with another question's answer.
 
-## Policies for this use case
+## Caching policies
 
 This policy is documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 

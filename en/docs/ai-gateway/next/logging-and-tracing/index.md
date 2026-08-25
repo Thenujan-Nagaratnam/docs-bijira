@@ -10,7 +10,7 @@ tags:
   - observability
   - opentelemetry
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-20
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
@@ -28,7 +28,7 @@ The pages in this section answer one question each:
 
 Gateway logs are the runtime's own output, so they tell you how the gateway is behaving. Request and response logging captures the traffic content, so it tells you what a caller sent and what a model returned. Tracing follows one request across every hop it makes, so it tells you where time went.
 
-## Logging is not analytics
+## How logging and tracing differ from analytics
 
 These three records serve investigation: you reach for them when you have a specific request or a specific incident in mind. [Analytics](../analytics/index.md) serves the aggregate question instead — token consumption, cost, and traffic patterns over a period, across callers. Configure both. Neither substitutes for the other.
 

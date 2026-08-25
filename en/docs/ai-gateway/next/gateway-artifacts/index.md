@@ -10,7 +10,7 @@ tags:
   - mcp-proxy
   - artifacts
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-20
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
@@ -20,7 +20,7 @@ You deploy three kinds of resource on the AI Gateway, and a request passes throu
 
 An `LlmProvider` holds the connection to one AI backend service. An `LlmProxy` exposes that connection at a URL of your own and names the provider it consumes in `provider.id`; the gateway rejects a proxy whose `provider.id` doesn't match a deployed provider. An `Mcp` proxy routes Model Context Protocol traffic to an MCP server directly, so it names no provider at all.
 
-## What each artifact holds
+## How LLM providers and LLM proxies differ
 
 The split matters because the two LLM artifacts hold different things, and are usually deployed by different people:
 
@@ -32,7 +32,7 @@ The split matters because the two LLM artifacts hold different things, and are u
 
 Deploy a provider once for each backend service you connect. Deploy a proxy for each application that needs its own URL, its own policies, or both. Several proxies consuming one provider is the ordinary case rather than the exception.
 
-## What a proxy inherits
+## Policy inheritance from provider to proxy
 
 A request through an `LlmProxy` runs the proxy's policy chain first, then the provider's. Some settings are therefore available on both artifacts, and some belong to only one:
 

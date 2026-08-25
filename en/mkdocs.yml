@@ -650,7 +650,7 @@ nav:
             - Moesif Analytics: ai-gateway/next/analytics/moesif-analytics.md
             - Analytics Header Filter: ai-gateway/next/analytics/analytics-header-filter.md
         - AI Workspace:
-            - What AI Workspace Adds: ai-gateway/next/ai-workspace/what-ai-workspace-adds.md
+            - Extend Your Gateway with AI Workspace: ai-gateway/next/ai-workspace/extend-your-gateway-with-ai-workspace.md
             - Connect the Gateway to AI Workspace: ai-gateway/next/ai-workspace/connect-the-gateway.md
         - How It Works: ai-gateway/next/how-it-works.md
         - Setup and Deployment:
@@ -1633,6 +1633,9 @@ plugins:
         ai-gateway/next/govern-mcp-tools.md: ai-gateway/next/mcp-governance.md
         # AI Gateway revamp phase 11: Rate Limiting renamed to Token Based Rate Limiting
         ai-gateway/next/rate-limiting.md: ai-gateway/next/token-based-rate-limiting.md
+        # AI Gateway revamp phase 12: What AI Workspace Adds retitled to
+        # Extend Your Gateway with AI Workspace
+        ai-gateway/next/ai-workspace/what-ai-workspace-adds.md: ai-gateway/next/ai-workspace/extend-your-gateway-with-ai-workspace.md
         # AI Gateway: Stream Responses promoted to the section root. The redirect that
         # covered ai-gateway/next/streaming-responses.md is deleted, not repaired: that
         # path is now the real page, so the historical URL resolves natively (F11).

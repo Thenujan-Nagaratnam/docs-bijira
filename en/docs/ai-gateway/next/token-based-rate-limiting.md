@@ -11,7 +11,7 @@ tags:
   - quota
   - throttling
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-20
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
@@ -21,13 +21,13 @@ A single application can exhaust a shared model quota in minutes, and the reques
 
 Token based rate limiting counts the tokens the model processed rather than the calls the client made. It tracks LLM consumption closely enough to protect a shared quota, and it caps the client that consumes the most instead of the client that calls the most.
 
-## Where the gateway enforces it
+## Where token limits apply
 
 You attach a token based rate limit policy in the `operationPolicies` block of an `LlmProxy`, to cap one application, or of an `LlmProvider`, to cap every proxy that consumes it.
 
 Token based limits read usage from the model's response, so they take effect in the response phase. The request that crosses the threshold still reaches the model, and the gateway rejects the next one.
 
-## Policies for this use case
+## Rate limiting policies
 
 This policy is documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 

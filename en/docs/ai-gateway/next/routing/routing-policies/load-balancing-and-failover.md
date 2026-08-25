@@ -10,7 +10,7 @@ tags:
   - fallback
   - routing
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-20
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
@@ -31,7 +31,7 @@ To let the caller, or an earlier policy, name the provider explicitly through a 
 
 Attach these policies on an `LlmProxy`, which is where a pool of providers is assembled. They run in the request phase, selecting the upstream before the call goes out.
 
-## Policies for this use case
+## Load balancing policies
 
 These policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../../policy-hub/overview.md).
 

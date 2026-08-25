@@ -9,14 +9,14 @@ tags:
   - control-plane
   - deployment
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-13
+last_updated: 2026-08-26
 content_type: "how-to"
 ---
 
 # Connect the gateway to AI Workspace
 
 !!! note "Requires AI Workspace"
-    A gateway can register only with a running AI Workspace deployment. For what registering gains you, see [What AI Workspace adds](what-ai-workspace-adds.md).
+    A gateway can register only with a running AI Workspace deployment. For what registering gains you, see [Extend your gateway with AI Workspace](extend-your-gateway-with-ai-workspace.md).
 
 Connecting a gateway takes two steps, in this order. First you add the gateway in AI Workspace, which issues a registration token for it. Then you give that token and the address of AI Workspace to the gateway runtime, which registers itself and stays connected.
 

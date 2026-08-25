@@ -10,7 +10,7 @@ tags:
   - quickstart
   - docker
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-13
+last_updated: 2026-08-26
 content_type: "quickstart"
 ---
 
@@ -532,7 +532,7 @@ Both directions work, and you can use them together:
 
 The gateway keeps serving traffic either way. If AI Workspace is unreachable, the gateway carries on and the sync catches up once the connection is restored.
 
-To weigh up the two products before you connect them, see [What AI Workspace adds](./ai-workspace/what-ai-workspace-adds.md). For the connection path that suits your runtime, see [Connect the gateway to AI Workspace](./ai-workspace/connect-the-gateway.md).
+To weigh up the two products before you connect them, see [Extend your gateway with AI Workspace](./ai-workspace/extend-your-gateway-with-ai-workspace.md). For the connection path that suits your runtime, see [Connect the gateway to AI Workspace](./ai-workspace/connect-the-gateway.md).
 
 ## Stopping the gateway
 

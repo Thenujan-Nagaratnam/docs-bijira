@@ -10,7 +10,7 @@ tags:
   - traffic-logging
   - audit
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-20
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
@@ -20,7 +20,7 @@ When a model returns something unexpected, the question is usually what was actu
 
 This is a different concern from [Gateway logs](gateway-logs.md), which are what the gateway process writes about itself. Those tell you that the gateway handled a request; these tell you what was in it.
 
-## Two ways to record it
+## Log request and response content in two ways
 
 The gateway offers a gateway-wide route and a per-operation route. They are independent, so you can use either or both.
 
@@ -36,7 +36,7 @@ You add the policy to the `operationPolicies` block of an `LlmProxy`, to cover o
 
 Prompts and completions carry whatever your users typed, so a log of them is as sensitive as the conversation itself. Capture bodies only while you need them, and mask identifying data before it is recorded by attaching a masking policy ahead of the logging policy — see the [PII Masking policy](../guardrails/guardrails-catalogue.md).
 
-## Policies for this use case
+## Traffic logging policies
 
 This policy is documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../policy-hub/overview.md).
 

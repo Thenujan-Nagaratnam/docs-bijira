@@ -11,7 +11,7 @@ tags:
   - cost-tracking
   - quota
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-19
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
@@ -19,13 +19,13 @@ content_type: "concept"
 
 A token count is not a bill. Models differ in price, prompt tokens and completion tokens are charged differently, and a team that stays inside its token quota can still spend more than you planned. Budgeting at the gateway puts the ceiling in currency, where the finance question actually lives.
 
-## Where the gateway enforces it
+## How the two cost policies work together
 
 Two policies work as a pair. `LLM Cost` prices each call and stores the figure; `LLM Cost-Based Rate Limit` reads that figure and rejects traffic once the quota is spent. Attach both, in that order.
 
 Attach them on an `LlmProvider` for a budget that covers every proxy consuming it, or on an `LlmProxy` for one application's budget. A call's cost is known only after the model reports its token usage, so enforcement happens in the response phase: the call that exhausts the budget completes, and the next one is rejected.
 
-## Policies for this use case
+## Cost and budget policies
 
 These policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 

@@ -8,7 +8,7 @@ tags:
   - transformation
   - headers
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-20
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
@@ -18,13 +18,13 @@ Sometimes the call a client sends is not quite the call the upstream should rece
 
 These policies apply to any API the gateway fronts, not only to LLM and MCP traffic.
 
-## Where the gateway enforces it
+## Where transformation policies run
 
 You attach them in the `operationPolicies` block of an `LlmProxy`, an `LlmProvider`, or an `Mcp` resource. Each policy declares the phase it runs in: a header set on the request reaches the upstream, while one set on the response reaches the client.
 
 Position in the chain decides what a policy sees. A header removed before a logging policy runs never appears in the log; removed after, it does. For how the gateway sequences a chain, see [Guardrail execution order](guardrails/execution-order.md).
 
-## Policies for this use case
+## Transformation policies
 
 These policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 

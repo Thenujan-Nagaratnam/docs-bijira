@@ -10,17 +10,21 @@ tags:
   - failover
   - llm
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-20
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
 # Routing
 
-Routing decides which upstream serves a request after the gateway has accepted it. One LLM proxy exposes a single OpenAI-compatible endpoint, and a routing policy chooses the provider, the model, or both, without the calling application changing its endpoint or its request format.
+Routing decides which upstream serves a request after the gateway has accepted it. One LLM proxy exposes a single OpenAI-compatible endpoint, and a routing policy chooses the provider, the model, or both. The calling application changes neither its endpoint nor its request format.
 
-That choice is worth making for three reasons: a single model is a single quota, a single provider is a single point of failure, and models differ enough in cost and capability that sending every request to one of them is rarely the right default.
+Routing matters for three reasons:
 
-## Which page answers which question
+- A single model is a single quota.
+- A single provider is a single point of failure.
+- Models differ enough in cost and capability that sending every request to one of them is rarely the right default.
+
+## In this section
 
 The pages in this section cover the two routing dimensions and the policy-level reference for each mechanism:
 
@@ -31,7 +35,7 @@ The pages in this section cover the two routing dimensions and the policy-level 
 | [Load balancing and failover](routing-policies/load-balancing-and-failover.md) | The policy reference for the round robin and weighted round robin policies |
 | [LLM header routing](routing-policies/llm-header-routing.md) | The policy reference for selecting a provider from a request header |
 
-## Providers and models are not separate choices
+## Combine provider and model routing
 
 The two dimensions are related rather than exclusive. Each entry in a `model-round-robin` or `model-weighted-round-robin` pool accepts an optional `provider`, and a model that omits it uses the primary provider. One pool can therefore mix models from several providers, which makes multi model routing a way to route across providers as well.
 

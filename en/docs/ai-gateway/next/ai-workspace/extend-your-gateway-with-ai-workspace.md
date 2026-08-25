@@ -1,26 +1,26 @@
 ---
-title: "What AI Workspace adds"
+title: "Extend your gateway with AI Workspace"
 description: "What connecting AI Gateway to AI Workspace adds: one console, central deployment, artifact sync, shared policies, and traffic insights."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/ai-workspace/what-ai-workspace-adds/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/ai-workspace/what-ai-workspace-adds.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/ai-workspace/extend-your-gateway-with-ai-workspace/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/ai-workspace/extend-your-gateway-with-ai-workspace.md
 tags:
   - ai-gateway
   - ai-workspace
   - control-plane
   - governance
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-13
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
-# What AI Workspace adds
+# Extend your gateway with AI Workspace
 
 !!! note "Requires AI Workspace"
     Everything on this page needs a running AI Workspace deployment. The gateway serves traffic without one.
 
 The gateway serves traffic on its own. Connecting it to [AI Workspace](../../../ai-workspace/next/overview.md), the control plane for AI traffic across your organization, adds central management across every gateway you run.
 
-## What connecting adds
+## What connecting the gateway adds
 
 - **One console across gateways.** AI Workspace manages [LLM providers](../../../ai-workspace/next/llm-providers/overview.md), App LLM proxies, MCP proxies, and the credentials behind them for every gateway you connect.
 - **Central configuration.** Configure an artifact in the console, then [deploy it to one gateway or several](../../../ai-workspace/next/llm-proxies/configure-proxy.md).

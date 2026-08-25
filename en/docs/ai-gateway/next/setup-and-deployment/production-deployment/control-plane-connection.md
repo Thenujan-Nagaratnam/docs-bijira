@@ -9,7 +9,7 @@ tags:
   - ai-workspace
   - control-plane
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-17
+last_updated: 2026-08-26
 content_type: "how-to"
 ---
 
@@ -27,7 +27,7 @@ The connection works in both directions, and you can use both at once:
 
 If AI Workspace becomes unreachable, the gateway carries on serving traffic and the sync catches up once the connection is restored.
 
-This page covers a Helm installation. For what connecting adds and which connection path suits which runtime, see [What AI Workspace adds](../../ai-workspace/what-ai-workspace-adds.md) and [Connect the gateway to AI Workspace](../../ai-workspace/connect-the-gateway.md).
+This page covers a Helm installation. For what connecting adds and which connection path suits which runtime, see [Extend your gateway with AI Workspace](../../ai-workspace/extend-your-gateway-with-ai-workspace.md) and [Connect the gateway to AI Workspace](../../ai-workspace/connect-the-gateway.md).
 
 ## Before you begin
 

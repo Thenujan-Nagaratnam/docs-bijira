@@ -10,7 +10,7 @@ tags:
   - system-prompt
   - templates
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-08-19
+last_updated: 2026-08-26
 content_type: "concept"
 ---
 
@@ -20,13 +20,13 @@ Every application that calls a model sends its own prompt, and some things shoul
 
 These policies change a prompt. [Guardrails](guardrails/index.md) judge one — they validate it, block it, or mask what it contains. A prompt that is rewritten here is still subject to the guardrails attached alongside.
 
-## Where the gateway enforces it
+## Where prompt policies run
 
 All three run in the request phase, before the prompt reaches the provider. Attach them on an `LlmProxy` to shape one application's prompts, or on an `LlmProvider` to shape every proxy that consumes it, which is how a standing instruction becomes organization-wide.
 
 Order matters when you combine them. A template that builds the prompt and a decorator that prepends an instruction produce different results depending on which runs first — see [Guardrail execution order](guardrails/execution-order.md) for how the gateway sequences a chain.
 
-## Policies for this use case
+## Prompt policies
 
 These policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 
