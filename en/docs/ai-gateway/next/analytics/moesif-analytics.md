@@ -7,8 +7,10 @@ tags:
   - ai-gateway
   - analytics
   - observability
+  - spend
+  - cost-tracking
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-06-16
+last_updated: 2026-08-11
 content_type: "how-to"
 ---
 

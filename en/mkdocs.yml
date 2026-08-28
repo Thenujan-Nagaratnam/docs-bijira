@@ -49,6 +49,7 @@ theme:
     # DOMContentLoaded (see docs/assets/js/theme.js).
     - navigation.instant
     - navigation.path
+    - navigation.indexes
     - navigation.top
     - content.code.copy
     - content.action.edit
@@ -619,77 +620,107 @@ nav:
     - "next":
         - Overview: ai-gateway/next/overview.md
         - Quick Start Guide: ai-gateway/next/quick-start-guide.md
-        - Setup:
-            - Configuration & Interpolation: ai-gateway/next/setup/configuration.md
-            - Setting Up the Database: ai-gateway/next/setup/database-setup.md
-        - LLM Proxy:
-            - LLM Provider Templates: ai-gateway/next/llm-proxy/llm-templates.md
-            - Multi-Provider Routing: ai-gateway/next/llm-proxy/multi-provider-routing.md
-            - Guardrails:
-                - Overview: ai-gateway/next/llm-proxy/guardrails/overview.md
-                - Guardrail execution order: ai-gateway/next/llm-proxy/guardrails/execution-order.md
-                - AWS Bedrock Guardrail: ai-gateway/next/llm-proxy/guardrails/aws-bedrock-guardrail.md
-                - Azure Content Safety: ai-gateway/next/llm-proxy/guardrails/azure-content-safety.md
-                - Content Length Guardrail: ai-gateway/next/llm-proxy/guardrails/content-length.md
-                - JSON Schema Guardrail: ai-gateway/next/llm-proxy/guardrails/json-schema.md
-                - PII Masking Regex Guardrail: ai-gateway/next/llm-proxy/guardrails/pii-masking-regex.md
-                - Regex Guardrail: ai-gateway/next/llm-proxy/guardrails/regex.md
-                - Semantic Prompt Guardrail: ai-gateway/next/llm-proxy/guardrails/semantic-prompt-guard.md
-                - Sentence Count Guardrail: ai-gateway/next/llm-proxy/guardrails/sentence-count.md
-                - URL Guardrail: ai-gateway/next/llm-proxy/guardrails/url.md
-                - Word Count Guardrail: ai-gateway/next/llm-proxy/guardrails/word-count.md
-            - Load Balancing:
-                - Model Round Robin: ai-gateway/next/llm-proxy/load-balancing/model-round-robin.md
-                - Model Weighted Round Robin: ai-gateway/next/llm-proxy/load-balancing/model-weighted-round-robin.md
-            - Prompt Management:
-                - Prompt Decorator: ai-gateway/next/llm-proxy/prompt-management/prompt-decorator.md
-                - Prompt Template: ai-gateway/next/llm-proxy/prompt-management/prompt-template.md
-            - Semantic Caching: ai-gateway/next/llm-proxy/semantic-caching.md
-        - MCP Proxy:
-            - Quick Start Guide: ai-gateway/next/mcp-proxy/quick-start-guide.md
-            - Policies:
-                - MCP Access Control List: ai-gateway/next/mcp-proxy/policies/mcp-acl-list.md
-                - MCP Authentication: ai-gateway/next/mcp-proxy/policies/mcp-authentication.md
-                - MCP Authorization: ai-gateway/next/mcp-proxy/policies/mcp-authorization.md
-                - MCP Rewrite: ai-gateway/next/mcp-proxy/policies/mcp-rewrite.md
-        - Real-Time AI Streaming: ai-gateway/next/streaming-responses.md
-        - Deployment:
-          - Deployment Modes:
-            - Immutable Gateway: ai-gateway/next/deployment/deployment-modes/immutable-gateway.md
-            - Kubernetes:
-              - Overview: ai-gateway/next/deployment/deployment-modes/kubernetes/overview.md
-              - Standalone Mode: ai-gateway/next/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
-              - Kubernetes Operator Mode: ai-gateway/next/deployment/deployment-modes/kubernetes/gateway-operator.md
-          - Production Deployment:
-            - Overview: ai-gateway/next/deployment/production-deployment/overview.md
-            - Security Hardening: ai-gateway/next/deployment/production-deployment/security-hardening.md
-            - Database Configuration: ai-gateway/next/deployment/production-deployment/database-configuration.md
-            - Resources & Scaling: ai-gateway/next/deployment/production-deployment/resources-and-scaling.md
-            - Tune for AI Traffic: ai-gateway/next/deployment/production-deployment/ai-workload-tuning.md
-            - Deploy & Verify: ai-gateway/next/deployment/production-deployment/deploy-and-verify.md
-            - Connect to AI Workspace: ai-gateway/next/deployment/production-deployment/control-plane-connection.md
-        - Resiliency:
-            - Timeouts: ai-gateway/next/resiliency/timeouts.md
-        - Observability:
-            - Logging: ai-gateway/next/observability/logging.md
-            - Tracing: ai-gateway/next/observability/tracing.md
+        - Authenticate Clients: ai-gateway/next/authenticate-clients.md
+        - Guardrails:
+            - ai-gateway/next/guardrails/index.md
+            - Guardrails Catalogue: ai-gateway/next/guardrails/guardrails-catalogue.md
+            - Guardrail execution order: ai-gateway/next/guardrails/execution-order.md
+        - Token Based Rate Limiting: ai-gateway/next/token-based-rate-limiting.md
+        - Cost Control and Budgets: ai-gateway/next/cost-control-and-budgets.md
+        - Semantic Caching: ai-gateway/next/semantic-caching.md
+        - Routing:
+            - ai-gateway/next/routing/index.md
+            - Multi-Provider Routing: ai-gateway/next/routing/multi-provider-routing.md
+            - Multi Model Routing: ai-gateway/next/routing/multi-model-routing.md
+            - Routing Policies:
+                - Load Balancing and Failover: ai-gateway/next/routing/routing-policies/load-balancing-and-failover.md
+                - LLM Header Routing: ai-gateway/next/routing/routing-policies/llm-header-routing.md
+        - Prompt Management: ai-gateway/next/prompt-management.md
+        - MCP Governance: ai-gateway/next/mcp-governance.md
+        - Transform Requests and Responses: ai-gateway/next/transform-requests-and-responses.md
+        - Timeouts and Resilience: ai-gateway/next/timeouts-and-resilience.md
+        - Stream Responses: ai-gateway/next/streaming-responses.md
+        - Logging and Tracing:
+            - ai-gateway/next/logging-and-tracing/index.md
+            - Gateway Logs: ai-gateway/next/logging-and-tracing/gateway-logs.md
+            - Log Requests and Responses: ai-gateway/next/logging-and-tracing/log-requests-and-responses.md
+            - Tracing: ai-gateway/next/logging-and-tracing/tracing.md
         - Analytics:
+            - ai-gateway/next/analytics/index.md
             - Moesif Analytics: ai-gateway/next/analytics/moesif-analytics.md
             - Analytics Header Filter: ai-gateway/next/analytics/analytics-header-filter.md
-        - Performance:
-            - Overview: ai-gateway/next/performance/overview.md
-            - AI Gateway runtime with two CPUs: ai-gateway/next/performance/ai-gateway-runtime-with-two-cpus.md
-            - AI Gateway runtime with four CPUs: ai-gateway/next/performance/ai-gateway-runtime-with-four-cpus.md
-        - Management API:
-            - Overview: ai-gateway/next/gateway-controller-management-api/overview.md
-            - Secure the Management API: ai-gateway/next/gateway-controller-management-api/authentication.md
-            - LLM Provider Template Management: ai-gateway/next/gateway-controller-management-api/llm-provider-template-management.md
-            - LLM Provider Management: ai-gateway/next/gateway-controller-management-api/llm-provider-management.md
-            - LLM Proxy Management: ai-gateway/next/gateway-controller-management-api/llm-proxy-management.md
-            - MCP Proxy Management: ai-gateway/next/gateway-controller-management-api/mcp-proxy-management.md
-            - Certificate Management: ai-gateway/next/gateway-controller-management-api/certificate-management.md
-            - Secrets Management: ai-gateway/next/gateway-controller-management-api/secrets-management.md
-            - Schemas: ai-gateway/next/gateway-controller-management-api/schemas.md
+        - AI Workspace:
+            - Extend Your Gateway with AI Workspace: ai-gateway/next/ai-workspace/extend-your-gateway-with-ai-workspace.md
+            - Connect the Gateway to AI Workspace: ai-gateway/next/ai-workspace/connect-the-gateway.md
+        - How It Works: ai-gateway/next/how-it-works.md
+        - Setup and Deployment:
+            - ai-gateway/next/setup-and-deployment/index.md
+            - Install the Gateway: ai-gateway/next/setup-and-deployment/install-the-gateway.md
+            - Kubernetes:
+                - ai-gateway/next/setup-and-deployment/kubernetes/index.md
+                - Standalone Mode: ai-gateway/next/setup-and-deployment/kubernetes/kubernetes-standalone.md
+                - Kubernetes Operator Mode: ai-gateway/next/setup-and-deployment/kubernetes/gateway-operator.md
+            - Immutable Gateway: ai-gateway/next/setup-and-deployment/immutable-gateway.md
+            - Configuration and Interpolation: ai-gateway/next/setup-and-deployment/configuration.md
+            - Database: ai-gateway/next/setup-and-deployment/database-setup.md
+            - Secure the Management API: ai-gateway/next/setup-and-deployment/secure-the-management-api.md
+            - Production Deployment:
+                - ai-gateway/next/setup-and-deployment/production-deployment/index.md
+                - Security Hardening: ai-gateway/next/setup-and-deployment/production-deployment/security-hardening.md
+                - Database Configuration: ai-gateway/next/setup-and-deployment/production-deployment/database-configuration.md
+                - Resources and Scaling: ai-gateway/next/setup-and-deployment/production-deployment/resources-and-scaling.md
+                - Tune for AI Traffic: ai-gateway/next/setup-and-deployment/production-deployment/ai-workload-tuning.md
+                - Deploy and Verify: ai-gateway/next/setup-and-deployment/production-deployment/deploy-and-verify.md
+                - Connect to AI Workspace: ai-gateway/next/setup-and-deployment/production-deployment/control-plane-connection.md
+            - Sizing and Performance:
+                - ai-gateway/next/setup-and-deployment/sizing-and-performance/index.md
+                - AI Gateway runtime with two CPUs: ai-gateway/next/setup-and-deployment/sizing-and-performance/ai-gateway-runtime-with-two-cpus.md
+                - AI Gateway runtime with four CPUs: ai-gateway/next/setup-and-deployment/sizing-and-performance/ai-gateway-runtime-with-four-cpus.md
+        - Gateway Artifacts:
+            - ai-gateway/next/gateway-artifacts/index.md
+            - LLM Provider:
+                - ai-gateway/next/gateway-artifacts/llm-provider/index.md
+                - Create and Configure an LLM Provider: ai-gateway/next/gateway-artifacts/llm-provider/create-and-configure-an-llm-provider.md
+                - Supported Providers:
+                    - OpenAI: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/openai.md
+                    - Azure OpenAI: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/azure-openai.md
+                    - Anthropic: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/anthropic.md
+                    - Gemini: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/gemini.md
+                    - MistralAI: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/mistralai.md
+                    - AWS Bedrock: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md
+                    - Azure AI Foundry: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry.md
+                    - Custom Provider: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/custom-provider.md
+            - LLM Proxy: ai-gateway/next/gateway-artifacts/llm-proxy.md
+            - MCP Proxy: ai-gateway/next/gateway-artifacts/mcp-proxy.md
+        - CLI and Extensibility:
+            - CLI Quick Start: tools/cli/quick-start-guide.md
+            - CLI Reference: tools/cli/reference.md
+            - Customizing Gateway Policies: tools/cli/customizing-gateway-policies.md
+        - Guides:
+            - Set up a Governed Multi-Model LLM Proxy with Cost Controls and Failover: guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md
+            - Enforce Token-Based Rate Limiting on an LLM Proxy: guides/ai-and-mcp/enforce-token-based-rate-limiting-on-an-llm-proxy.md
+            - Enforce a Consistent AI Persona with the Prompt Decorator Policy: guides/ai-and-mcp/using-prompt-decorator-policy.md
+            - Build an AI App with Claude Code that Calls Governed Backend APIs: guides/ai-and-mcp/build-ai-app-with-claude-code.md
+            - Build an AI Agent That Uses Aggregated MCP Tools from Multiple APIs: guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers.md
+            - Convert a REST API into an MCP Tool and Use It in Claude Desktop: guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
+            - Find and Connect to an Enterprise MCP Server from the MCP Hub: guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md
+            - Configure AI Coding Assistants:
+                - Configure Claude Code with AI Gateway: guides/ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway.md
+                - Configure Google Gemini CLI with AI Gateway: guides/ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway.md
+                - Configure OpenAI Codex CLI with AI Gateway: guides/ai-and-mcp/ai-coding-assistants/codex-configuration-with-ai-gateway.md
+        - Reference:
+            - ai-gateway/next/reference/index.md
+            - Provider Templates: ai-gateway/next/reference/llm-templates.md
+            - Management REST API:
+                - ai-gateway/next/reference/management-api/index.md
+                - LLM Provider Template Management: ai-gateway/next/reference/management-api/llm-provider-template-management.md
+                - LLM Provider Management: ai-gateway/next/reference/management-api/llm-provider-management.md
+                - LLM Proxy Management: ai-gateway/next/reference/management-api/llm-proxy-management.md
+                - MCP Proxy Management: ai-gateway/next/reference/management-api/mcp-proxy-management.md
+                - Certificate Management: ai-gateway/next/reference/management-api/certificate-management.md
+                - Secrets Management: ai-gateway/next/reference/management-api/secrets-management.md
+                - Schemas: ai-gateway/next/reference/management-api/schemas.md
+            - Default Ports: ai-gateway/next/reference/default-ports.md
         - About this release: ai-gateway/next/about-this-release.md
     - "1.2.0":
         - Overview: ai-gateway/1.2.0/overview.md
@@ -1241,7 +1272,6 @@ nav:
         - Set up a Governed Multi-Model LLM Proxy with Cost Controls and Failover: guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md
         - Enforce Token-Based Rate Limiting on an LLM Proxy: guides/ai-and-mcp/enforce-token-based-rate-limiting-on-an-llm-proxy.md
         - Enforce a Consistent AI Persona with the Prompt Decorator Policy: guides/ai-and-mcp/using-prompt-decorator-policy.md
-        - Configure an AWS Bedrock LLM Provider: ai-gateway/next/llm-proxy/configure-aws-bedrock-provider.md
         - AI Coding Assistants:
             - Configure Claude Code with AI Gateway: guides/ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway.md
             - Configure Google Gemini CLI with AI Gateway: guides/ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway.md
@@ -1345,10 +1375,10 @@ plugins:
         ai-gateway/1.2.0/deployment-modes/kubernetes/gateway-operator.md: ai-gateway/1.2.0/deployment/deployment-modes/kubernetes/gateway-operator.md
         ai-gateway/1.2.0/deployment-modes/kubernetes/kubernetes-standalone.md: ai-gateway/1.2.0/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
         ai-gateway/1.2.0/deployment-modes/kubernetes/overview.md: ai-gateway/1.2.0/deployment/deployment-modes/kubernetes/overview.md
-        ai-gateway/next/deployment-modes/immutable-gateway.md: ai-gateway/next/deployment/deployment-modes/immutable-gateway.md
-        ai-gateway/next/deployment-modes/kubernetes/gateway-operator.md: ai-gateway/next/deployment/deployment-modes/kubernetes/gateway-operator.md
-        ai-gateway/next/deployment-modes/kubernetes/kubernetes-standalone.md: ai-gateway/next/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
-        ai-gateway/next/deployment-modes/kubernetes/overview.md: ai-gateway/next/deployment/deployment-modes/kubernetes/overview.md
+        ai-gateway/next/deployment-modes/immutable-gateway.md: ai-gateway/next/setup-and-deployment/immutable-gateway.md
+        ai-gateway/next/deployment-modes/kubernetes/gateway-operator.md: ai-gateway/next/setup-and-deployment/kubernetes/gateway-operator.md
+        ai-gateway/next/deployment-modes/kubernetes/kubernetes-standalone.md: ai-gateway/next/setup-and-deployment/kubernetes/kubernetes-standalone.md
+        ai-gateway/next/deployment-modes/kubernetes/overview.md: ai-gateway/next/setup-and-deployment/kubernetes/index.md
         # AI/API Gateway versioning restructuring (per-product Cloud/Self-Hosted variants)
         ai-gateway/ai-gateway-rest-api/authentication.md: ai-gateway/1.1.0/ai-gateway-rest-api/authentication.md
         ai-gateway/analytics/analytics-header-filter.md: ai-gateway/1.1.0/analytics/analytics-header-filter.md
@@ -1434,6 +1464,187 @@ plugins:
         api-gateway/setup/upstream-timeouts.md: api-gateway/1.1.0/setup/upstream-timeouts.md
         # AI Gateway revamp phase 0: the two quick starts merged into one canonical page
         ai-gateway/next/llm-proxy/quick-start-guide.md: ai-gateway/next/quick-start-guide.md
+        # AI Gateway revamp phase 1: job-oriented nav
+        ai-gateway/next/setup/configuration.md: ai-gateway/next/setup-and-deployment/configuration.md
+        ai-gateway/next/setup/database-setup.md: ai-gateway/next/setup-and-deployment/database-setup.md
+        ai-gateway/next/deployment/deployment-modes/immutable-gateway.md: ai-gateway/next/setup-and-deployment/immutable-gateway.md
+        ai-gateway/next/deployment/deployment-modes/kubernetes/overview.md: ai-gateway/next/setup-and-deployment/kubernetes/index.md
+        ai-gateway/next/deployment/deployment-modes/kubernetes/kubernetes-standalone.md: ai-gateway/next/setup-and-deployment/kubernetes/kubernetes-standalone.md
+        ai-gateway/next/deployment/deployment-modes/kubernetes/gateway-operator.md: ai-gateway/next/setup-and-deployment/kubernetes/gateway-operator.md
+        ai-gateway/next/deployment/production-deployment/overview.md: ai-gateway/next/setup-and-deployment/production-deployment/index.md
+        ai-gateway/next/deployment/production-deployment/security-hardening.md: ai-gateway/next/setup-and-deployment/production-deployment/security-hardening.md
+        ai-gateway/next/deployment/production-deployment/database-configuration.md: ai-gateway/next/setup-and-deployment/production-deployment/database-configuration.md
+        ai-gateway/next/deployment/production-deployment/resources-and-scaling.md: ai-gateway/next/setup-and-deployment/production-deployment/resources-and-scaling.md
+        ai-gateway/next/deployment/production-deployment/ai-workload-tuning.md: ai-gateway/next/setup-and-deployment/production-deployment/ai-workload-tuning.md
+        ai-gateway/next/deployment/production-deployment/deploy-and-verify.md: ai-gateway/next/setup-and-deployment/production-deployment/deploy-and-verify.md
+        ai-gateway/next/deployment/production-deployment/control-plane-connection.md: ai-gateway/next/setup-and-deployment/production-deployment/control-plane-connection.md
+        ai-gateway/next/performance/overview.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/index.md
+        ai-gateway/next/performance/ai-gateway-runtime-with-two-cpus.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/ai-gateway-runtime-with-two-cpus.md
+        ai-gateway/next/performance/ai-gateway-runtime-with-four-cpus.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/ai-gateway-runtime-with-four-cpus.md
+        ai-gateway/next/llm-proxy/llm-templates.md: ai-gateway/next/reference/llm-templates.md
+        ai-gateway/next/llm-proxy/configure-aws-bedrock-provider.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md
+        ai-gateway/next/connect-llm-providers/configure-aws-bedrock-provider.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md
+        ai-gateway/next/mcp-proxy/quick-start-guide.md: ai-gateway/next/gateway-artifacts/mcp-proxy.md
+        # AI Gateway revamp phase 2: per-policy reference moved to Policy Hub
+        ai-gateway/next/mcp-proxy/mcp-authentication.md: https://wso2.com/api-platform/policy-hub/policies/mcp-auth
+        ai-gateway/next/mcp-proxy/mcp-authorization.md: https://wso2.com/api-platform/policy-hub/policies/mcp-authz
+        ai-gateway/next/mcp-proxy/mcp-acl-list.md: https://wso2.com/api-platform/policy-hub/policies/mcp-acl-list
+        ai-gateway/next/mcp-proxy/mcp-rewrite.md: https://wso2.com/api-platform/policy-hub/policies/mcp-rewrite
+        # Phase 1 paths, repointed past the deleted pages to the same Policy Hub targets
+        ai-gateway/next/mcp-proxy/policies/mcp-rewrite.md: https://wso2.com/api-platform/policy-hub/policies/mcp-rewrite
+        ai-gateway/next/mcp-proxy/policies/mcp-authentication.md: https://wso2.com/api-platform/policy-hub/policies/mcp-auth
+        ai-gateway/next/mcp-proxy/policies/mcp-authorization.md: https://wso2.com/api-platform/policy-hub/policies/mcp-authz
+        ai-gateway/next/mcp-proxy/policies/mcp-acl-list.md: https://wso2.com/api-platform/policy-hub/policies/mcp-acl-list
+        ai-gateway/next/gateway-controller-management-api/authentication.md: ai-gateway/next/setup-and-deployment/secure-the-management-api.md
+        ai-gateway/next/llm-proxy/guardrails/overview.md: ai-gateway/next/guardrails/index.md
+        ai-gateway/next/llm-proxy/guardrails/execution-order.md: ai-gateway/next/guardrails/execution-order.md
+        # AI Gateway revamp phase 2: per-policy reference moved to Policy Hub
+        ai-gateway/next/control-content/regex.md: https://wso2.com/api-platform/policy-hub/policies/regex-guardrail
+        ai-gateway/next/control-content/json-schema.md: https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail
+        ai-gateway/next/control-content/word-count.md: https://wso2.com/api-platform/policy-hub/policies/word-count-guardrail
+        ai-gateway/next/control-content/sentence-count.md: https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail
+        ai-gateway/next/control-content/content-length.md: https://wso2.com/api-platform/policy-hub/policies/content-length-guardrail
+        ai-gateway/next/control-content/url.md: https://wso2.com/api-platform/policy-hub/policies/url-guardrail
+        ai-gateway/next/control-content/pii-masking-regex.md: https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex
+        ai-gateway/next/control-content/semantic-prompt-guard.md: https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard
+        ai-gateway/next/control-content/azure-content-safety.md: https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation
+        ai-gateway/next/control-content/aws-bedrock-guardrail.md: https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail
+        ai-gateway/next/control-content/prompt-decorator.md: https://wso2.com/api-platform/policy-hub/policies/prompt-decorator
+        ai-gateway/next/control-content/prompt-template.md: https://wso2.com/api-platform/policy-hub/policies/prompt-template
+        # Phase 1 paths, repointed past the deleted pages to the same Policy Hub targets
+        ai-gateway/next/llm-proxy/guardrails/regex.md: https://wso2.com/api-platform/policy-hub/policies/regex-guardrail
+        ai-gateway/next/llm-proxy/guardrails/json-schema.md: https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail
+        ai-gateway/next/llm-proxy/guardrails/word-count.md: https://wso2.com/api-platform/policy-hub/policies/word-count-guardrail
+        ai-gateway/next/llm-proxy/guardrails/sentence-count.md: https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail
+        ai-gateway/next/llm-proxy/guardrails/content-length.md: https://wso2.com/api-platform/policy-hub/policies/content-length-guardrail
+        ai-gateway/next/llm-proxy/guardrails/url.md: https://wso2.com/api-platform/policy-hub/policies/url-guardrail
+        ai-gateway/next/llm-proxy/guardrails/pii-masking-regex.md: https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex
+        ai-gateway/next/llm-proxy/guardrails/semantic-prompt-guard.md: https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard
+        ai-gateway/next/llm-proxy/guardrails/azure-content-safety.md: https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation
+        ai-gateway/next/llm-proxy/guardrails/aws-bedrock-guardrail.md: https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail
+        ai-gateway/next/llm-proxy/prompt-management/prompt-decorator.md: https://wso2.com/api-platform/policy-hub/policies/prompt-decorator
+        ai-gateway/next/llm-proxy/prompt-management/prompt-template.md: https://wso2.com/api-platform/policy-hub/policies/prompt-template
+        # AI Gateway revamp phase 2: per-policy reference moved to Policy Hub
+        ai-gateway/next/control-cost-and-traffic/model-round-robin.md: https://wso2.com/api-platform/policy-hub/policies/model-round-robin
+        ai-gateway/next/control-cost-and-traffic/model-weighted-round-robin.md: https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin
+        ai-gateway/next/control-cost-and-traffic/semantic-caching.md: https://wso2.com/api-platform/policy-hub/policies/semantic-cache
+        # Phase 1 paths, repointed past the deleted pages to the same Policy Hub targets
+        ai-gateway/next/llm-proxy/load-balancing/model-round-robin.md: https://wso2.com/api-platform/policy-hub/policies/model-round-robin
+        ai-gateway/next/llm-proxy/load-balancing/model-weighted-round-robin.md: https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin
+        ai-gateway/next/llm-proxy/semantic-caching.md: https://wso2.com/api-platform/policy-hub/policies/semantic-cache
+        ai-gateway/next/resiliency/timeouts.md: ai-gateway/next/timeouts-and-resilience.md
+        ai-gateway/next/observability/logging.md: ai-gateway/next/logging-and-tracing/gateway-logs.md
+        ai-gateway/next/observability/tracing.md: ai-gateway/next/logging-and-tracing/tracing.md
+        ai-gateway/next/llm-provider/llm-templates.md: ai-gateway/next/reference/llm-templates.md
+        ai-gateway/next/gateway-controller-management-api/overview.md: ai-gateway/next/reference/management-api/index.md
+        ai-gateway/next/gateway-controller-management-api/llm-provider-template-management.md: ai-gateway/next/reference/management-api/llm-provider-template-management.md
+        ai-gateway/next/gateway-controller-management-api/llm-provider-management.md: ai-gateway/next/reference/management-api/llm-provider-management.md
+        ai-gateway/next/gateway-controller-management-api/llm-proxy-management.md: ai-gateway/next/reference/management-api/llm-proxy-management.md
+        ai-gateway/next/gateway-controller-management-api/mcp-proxy-management.md: ai-gateway/next/reference/management-api/mcp-proxy-management.md
+        ai-gateway/next/gateway-controller-management-api/certificate-management.md: ai-gateway/next/reference/management-api/certificate-management.md
+        ai-gateway/next/gateway-controller-management-api/secrets-management.md: ai-gateway/next/reference/management-api/secrets-management.md
+        ai-gateway/next/gateway-controller-management-api/schemas.md: ai-gateway/next/reference/management-api/schemas.md
+        # AI Gateway revamp phase 7: Run the Gateway renamed to Setup and Deployment
+        ai-gateway/next/run-the-gateway/configuration.md: ai-gateway/next/setup-and-deployment/configuration.md
+        ai-gateway/next/run-the-gateway/database-setup.md: ai-gateway/next/setup-and-deployment/database-setup.md
+        ai-gateway/next/run-the-gateway/immutable-gateway.md: ai-gateway/next/setup-and-deployment/immutable-gateway.md
+        ai-gateway/next/run-the-gateway/kubernetes/gateway-operator.md: ai-gateway/next/setup-and-deployment/kubernetes/gateway-operator.md
+        ai-gateway/next/run-the-gateway/kubernetes/kubernetes-standalone.md: ai-gateway/next/setup-and-deployment/kubernetes/kubernetes-standalone.md
+        ai-gateway/next/run-the-gateway/kubernetes/overview.md: ai-gateway/next/setup-and-deployment/kubernetes/index.md
+        ai-gateway/next/run-the-gateway/production-deployment/ai-workload-tuning.md: ai-gateway/next/setup-and-deployment/production-deployment/ai-workload-tuning.md
+        ai-gateway/next/run-the-gateway/production-deployment/control-plane-connection.md: ai-gateway/next/setup-and-deployment/production-deployment/control-plane-connection.md
+        ai-gateway/next/run-the-gateway/production-deployment/database-configuration.md: ai-gateway/next/setup-and-deployment/production-deployment/database-configuration.md
+        ai-gateway/next/run-the-gateway/production-deployment/deploy-and-verify.md: ai-gateway/next/setup-and-deployment/production-deployment/deploy-and-verify.md
+        ai-gateway/next/run-the-gateway/production-deployment/overview.md: ai-gateway/next/setup-and-deployment/production-deployment/index.md
+        ai-gateway/next/run-the-gateway/production-deployment/resources-and-scaling.md: ai-gateway/next/setup-and-deployment/production-deployment/resources-and-scaling.md
+        ai-gateway/next/run-the-gateway/production-deployment/security-hardening.md: ai-gateway/next/setup-and-deployment/production-deployment/security-hardening.md
+        ai-gateway/next/run-the-gateway/sizing-and-performance/ai-gateway-runtime-with-four-cpus.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/ai-gateway-runtime-with-four-cpus.md
+        ai-gateway/next/run-the-gateway/sizing-and-performance/ai-gateway-runtime-with-two-cpus.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/ai-gateway-runtime-with-two-cpus.md
+        ai-gateway/next/run-the-gateway/sizing-and-performance/overview.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/index.md
+        # AI Gateway revamp phase 7: Connect LLM Providers renamed to LLM Provider
+        ai-gateway/next/connect-llm-providers/llm-templates.md: ai-gateway/next/reference/llm-templates.md
+        ai-gateway/next/connect-llm-providers/overview.md: ai-gateway/next/gateway-artifacts/llm-provider/index.md
+        ai-gateway/next/connect-llm-providers/supported-providers/anthropic.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/anthropic.md
+        ai-gateway/next/connect-llm-providers/supported-providers/aws-bedrock.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md
+        ai-gateway/next/connect-llm-providers/supported-providers/openai.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/openai.md
+        # AI Gateway revamp phase 7: Expose LLMs to Applications renamed to LLM Proxy
+        ai-gateway/next/expose-llms/multi-provider-routing.md: ai-gateway/next/routing/multi-provider-routing.md
+        ai-gateway/next/expose-llms/overview.md: ai-gateway/next/gateway-artifacts/llm-proxy.md
+        ai-gateway/next/expose-llms/streaming-responses.md: ai-gateway/next/streaming-responses.md
+        # AI Gateway revamp phase 7: Control Access renamed to Access Control
+        ai-gateway/next/control-access/authenticate-clients.md: ai-gateway/next/authenticate-clients.md
+        ai-gateway/next/control-access/overview.md: ai-gateway/next/authenticate-clients.md
+        # Secure the management API moved on to Setup and Deployment; both historical paths resolve
+        ai-gateway/next/control-access/secure-the-management-api.md: ai-gateway/next/setup-and-deployment/secure-the-management-api.md
+        ai-gateway/next/access-control/secure-the-management-api.md: ai-gateway/next/setup-and-deployment/secure-the-management-api.md
+        # AI Gateway revamp phase 7: Control Content (Guardrails) renamed to Guardrails
+        ai-gateway/next/control-content/overview.md: ai-gateway/next/guardrails/index.md
+        ai-gateway/next/control-content/execution-order.md: ai-gateway/next/guardrails/execution-order.md
+        # AI Gateway revamp phase 7: Control Cost and Traffic renamed to Traffic and Usage Control
+        ai-gateway/next/control-cost-and-traffic/overview.md: ai-gateway/next/token-based-rate-limiting.md
+        ai-gateway/next/control-cost-and-traffic/timeouts.md: ai-gateway/next/timeouts-and-resilience.md
+        # AI Gateway: section overviews renamed to index.md so the section label
+        # in the nav is a link to the page (theme feature navigation.indexes)
+        ai-gateway/next/setup-and-deployment/overview.md: ai-gateway/next/setup-and-deployment/index.md
+        ai-gateway/next/setup-and-deployment/kubernetes/overview.md: ai-gateway/next/setup-and-deployment/kubernetes/index.md
+        ai-gateway/next/setup-and-deployment/production-deployment/overview.md: ai-gateway/next/setup-and-deployment/production-deployment/index.md
+        ai-gateway/next/setup-and-deployment/sizing-and-performance/overview.md: ai-gateway/next/setup-and-deployment/sizing-and-performance/index.md
+        ai-gateway/next/guardrails/overview.md: ai-gateway/next/guardrails/index.md
+        ai-gateway/next/llm-provider/overview.md: ai-gateway/next/gateway-artifacts/llm-provider/index.md
+        ai-gateway/next/llm-proxy/overview.md: ai-gateway/next/gateway-artifacts/llm-proxy.md
+        ai-gateway/next/mcp-proxy/overview.md: ai-gateway/next/gateway-artifacts/mcp-proxy.md
+        ai-gateway/next/reference/overview.md: ai-gateway/next/reference/index.md
+        ai-gateway/next/reference/management-api/overview.md: ai-gateway/next/reference/management-api/index.md
+        # AI Gateway: Monitor Traffic dissolved; logging and tracing promoted to the
+        # section root and the analytics pages grouped under analytics/
+        ai-gateway/next/monitor-traffic/overview.md: ai-gateway/next/logging-and-tracing/gateway-logs.md
+        ai-gateway/next/monitor-traffic/logging.md: ai-gateway/next/logging-and-tracing/gateway-logs.md
+        ai-gateway/next/monitor-traffic/tracing.md: ai-gateway/next/logging-and-tracing/tracing.md
+        ai-gateway/next/monitor-traffic/moesif-analytics.md: ai-gateway/next/analytics/moesif-analytics.md
+        ai-gateway/next/monitor-traffic/analytics-header-filter.md: ai-gateway/next/analytics/analytics-header-filter.md
+        # AI Gateway: Access Control dissolved; Authenticate Clients promoted to the section root
+        ai-gateway/next/access-control/overview.md: ai-gateway/next/authenticate-clients.md
+        ai-gateway/next/access-control/authenticate-clients.md: ai-gateway/next/authenticate-clients.md
+        # AI Gateway: Traffic and Usage Control dissolved; timeouts promoted to the section
+        # root. The overview's policy rows are redistributed across the use-case pages.
+        ai-gateway/next/traffic-and-usage-control/overview.md: ai-gateway/next/token-based-rate-limiting.md
+        ai-gateway/next/traffic-and-usage-control/timeouts.md: ai-gateway/next/timeouts-and-resilience.md
+        # AI Gateway revamp phase 11: the three artifact directories grouped under Gateway Artifacts
+        ai-gateway/next/llm-provider/create-and-configure-an-llm-provider.md: ai-gateway/next/gateway-artifacts/llm-provider/create-and-configure-an-llm-provider.md
+        ai-gateway/next/llm-provider/index.md: ai-gateway/next/gateway-artifacts/llm-provider/index.md
+        ai-gateway/next/llm-provider/supported-providers/anthropic.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/anthropic.md
+        ai-gateway/next/llm-provider/supported-providers/aws-bedrock.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md
+        ai-gateway/next/llm-provider/supported-providers/azure-ai-foundry.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry.md
+        ai-gateway/next/llm-provider/supported-providers/azure-openai.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/azure-openai.md
+        ai-gateway/next/llm-provider/supported-providers/custom-provider.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/custom-provider.md
+        ai-gateway/next/llm-provider/supported-providers/gemini.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/gemini.md
+        ai-gateway/next/llm-provider/supported-providers/mistralai.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/mistralai.md
+        ai-gateway/next/llm-provider/supported-providers/openai.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/openai.md
+        ai-gateway/next/llm-proxy/index.md: ai-gateway/next/gateway-artifacts/llm-proxy.md
+        ai-gateway/next/mcp-proxy/index.md: ai-gateway/next/gateway-artifacts/mcp-proxy.md
+        # AI Gateway revamp phase 11: logging and tracing grouped into a section
+        ai-gateway/next/gateway-logs.md: ai-gateway/next/logging-and-tracing/gateway-logs.md
+        ai-gateway/next/log-requests-and-responses.md: ai-gateway/next/logging-and-tracing/log-requests-and-responses.md
+        ai-gateway/next/tracing.md: ai-gateway/next/logging-and-tracing/tracing.md
+        # AI Gateway revamp phase 11: Routing section built from the two routing pages
+        ai-gateway/next/multi-provider-routing.md: ai-gateway/next/routing/multi-provider-routing.md
+        ai-gateway/next/load-balancing-and-failover.md: ai-gateway/next/routing/routing-policies/load-balancing-and-failover.md
+        # AI Gateway revamp phase 11: Govern MCP Tools renamed to MCP Governance
+        ai-gateway/next/govern-mcp-tools.md: ai-gateway/next/mcp-governance.md
+        # AI Gateway revamp phase 11: Rate Limiting renamed to Token Based Rate Limiting
+        ai-gateway/next/rate-limiting.md: ai-gateway/next/token-based-rate-limiting.md
+        # AI Gateway revamp phase 12: What AI Workspace Adds retitled to
+        # Extend Your Gateway with AI Workspace
+        ai-gateway/next/ai-workspace/what-ai-workspace-adds.md: ai-gateway/next/ai-workspace/extend-your-gateway-with-ai-workspace.md
+        # AI Gateway: Stream Responses promoted to the section root. The redirect that
+        # covered ai-gateway/next/streaming-responses.md is deleted, not repaired: that
+        # path is now the real page, so the historical URL resolves natively (F11).
+        ai-gateway/next/llm-proxy/streaming-responses.md: ai-gateway/next/streaming-responses.md
+        # AI Gateway: multi-provider routing promoted to the section root as its own use case;
+        # the LLM proxy creation page merged into the LLM proxy overview, which is now one page
+        ai-gateway/next/llm-proxy/multi-provider-routing.md: ai-gateway/next/routing/multi-provider-routing.md
+        ai-gateway/next/llm-proxy/create-and-configure-an-llm-proxy.md: ai-gateway/next/gateway-artifacts/llm-proxy.md
+        ai-gateway/next/mcp-proxy/create-an-mcp-proxy.md: ai-gateway/next/gateway-artifacts/mcp-proxy.md
         # AI Workspace self-hosted docs moved from next/ai-workspace to the
         # versioned ai-workspace/<version> layout; 1.0.0 is the latest release.
         next/ai-workspace/index.md: ai-workspace/1.0.0/overview.md
