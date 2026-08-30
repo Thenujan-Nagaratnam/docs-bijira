@@ -8,7 +8,7 @@ tags:
   - policies
   - gateway
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-06-23
+last_updated: 2026-08-30
 content_type: "overview"
 ---
 
@@ -30,13 +30,14 @@ For more information, see [API Platform Policies overview](../api-gateway/1.1.0/
 
 ### Security
 
-Authenticate and authorize traffic before it reaches your backend.
+Authenticate incoming requests and secure outbound calls to your backend, using mechanisms such as API keys and OAuth2.
 
 | Policy | What it does |
 | -- | -- |
 | API Key Auth | Protects APIs with pre-shared API keys |
 | Basic Auth | Enforces HTTP Basic Authentication |
 | JWT Auth | Validates JWT access tokens against one or more JWKS providers |
+| OAuth2 Generator | Generates and injects an upstream OAuth2 or bearer credential into a request header before forwarding to the backend |
 | CORS | Handles preflight requests and injects CORS response headers |
 | Subscription Validation | Confirms the caller holds an active subscription for the target API |
 | Rate Limit — Basic | Caps requests per time window |
