@@ -110,22 +110,20 @@ The examples below show an LLM provider's `upstream.auth`, which an MCP proxy al
 
 === "other"
 
-    `other` covers an auth scheme the built-in policies don't implement — a scheme that signs each request instead of attaching one static or generated credential, for example. AWS Bedrock's AWS Signature Version 4 (SigV4) signing is one:
+    `other` covers an auth scheme none of the built-in types implement — name the policy yourself:
 
     ```yaml
     upstream:
-      url: https://bedrock-runtime.us-east-1.amazonaws.com
+      url: https://api.example.com
       auth:
         type: other
-        policyName: aws-authentication
-        policyVersion: v0
+        policyName: <policy-name>
+        policyVersion: v1
         policyParams:
-          service: bedrock
-          region: us-east-1
-          authenticationType: default-credential-chain
+          # this policy's own parameters
     ```
 
-    `policyParams` takes whichever policy `policyName` names for its parameters — see the [AWS Authentication](https://wso2.com/api-platform/policy-hub/policies/aws-authentication) policy for its full reference, and [AWS Bedrock](gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md) for a complete SigV4 setup.
+    `policyParams` takes whichever policy `policyName` names for its parameters. See [Other supported policies](#other-supported-policies) for worked examples.
 
 === "none"
 
@@ -135,6 +133,31 @@ The examples below show an LLM provider's `upstream.auth`, which an MCP proxy al
       auth:
         type: none
     ```
+
+## Other supported policies
+
+Other than `api-key` and `oauth2`, every backend auth policy attaches through `type: other`, named by `policyName`:
+
+| Policy | What it does | `policyParams` |
+|--------|---------------|------------------|
+| [AWS Authentication](https://wso2.com/api-platform/policy-hub/policies/aws-authentication) | Signs each request with AWS Signature Version 4 (SigV4), for services such as AWS Bedrock. | `service`, `region`, `authenticationType`, and credentials specific to that mode. |
+
+For example, AWS Bedrock's SigV4 signing:
+
+```yaml
+upstream:
+  url: https://bedrock-runtime.us-east-1.amazonaws.com
+  auth:
+    type: other
+    policyName: aws-authentication
+    policyVersion: v0
+    policyParams:
+      service: bedrock
+      region: us-east-1
+      authenticationType: default-credential-chain
+```
+
+See [AWS Bedrock](gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md) for a complete SigV4 setup.
 
 ## Where upstream authentication applies
 
