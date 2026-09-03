@@ -26,7 +26,7 @@ A policy attaches to an API, covering all operations, or to a specific operation
 
 For more information, see [API Platform Policies overview](../api-gateway/next/policies/overview.md).
 
-## Policy Categories
+## Policy categories
 
 ### Security
 
