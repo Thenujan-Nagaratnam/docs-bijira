@@ -21,7 +21,7 @@ An LLM provider or MCP server behind the gateway usually requires its own creden
 
 [Authenticate clients](authenticate-clients.md) covers the other direction: who may call the gateway. The two are independent — securing one does nothing for the other.
 
-This page is for the **platform administrator** who holds the upstream credential.
+This page is for the platform administrator who holds the upstream credential.
 
 ## How upstream authentication attaches a policy
 
