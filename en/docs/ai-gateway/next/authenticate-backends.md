@@ -110,18 +110,22 @@ The examples below show an LLM provider's `upstream.auth`, which an MCP proxy al
 
 === "other"
 
+    `other` covers an auth scheme the built-in policies don't implement — a scheme that signs each request instead of attaching one static or generated credential, for example. AWS Bedrock's AWS Signature Version 4 (SigV4) signing is one:
+
     ```yaml
     upstream:
-      url: https://api.example.com
+      url: https://bedrock-runtime.us-east-1.amazonaws.com
       auth:
         type: other
-        policyName: my-custom-signing-policy
-        policyVersion: v1
+        policyName: aws-authentication
+        policyVersion: v0
         policyParams:
-          signingKey: '{{ secret "signing-key" }}'
+          service: bedrock
+          region: us-east-1
+          authenticationType: default-credential-chain
     ```
 
-    `policyParams` takes whichever policy `policyName` names for its parameters.
+    `policyParams` takes whichever policy `policyName` names for its parameters — see the [AWS Authentication](https://wso2.com/api-platform/policy-hub/policies/aws-authentication) policy for its full reference, and [AWS Bedrock](gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md) for a complete SigV4 setup.
 
 === "none"
 
@@ -141,8 +145,6 @@ Three resource kinds support it, each under its own field:
 | LLM provider | `spec.upstream.auth` |
 | LLM proxy, calling a protected provider over the internal loopback route | `spec.provider.auth`, and `spec.additionalProviders[].auth` for each additional provider |
 | MCP proxy | `spec.upstream.auth` |
-
-A REST API has no `upstream.auth` field. To authenticate its upstream call, attach `oauth2-generator` (or another policy) directly under the operation's `operationPolicies`, the same way you'd attach any other policy.
 
 ## Related topics
 
