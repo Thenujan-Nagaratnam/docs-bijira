@@ -418,22 +418,6 @@
     font-weight: 700;
 }
 
-/* Hide the heading permalink so long section names don't wrap to a second line */
-/* .md-typeset .guides-cards .card > h3 .headerlink {
-    display: none;
-} */
-
-/* Links inside a card (More resources) look like links, not plain text */
-.md-typeset .guides-cards .card > p > a {
-    margin: 0;
-    color: var(--md-primary-fg-color);
-    font-weight: 700;
-}
-
-.md-typeset .guides-cards .card > p > a:hover {
-    color: var(--md-accent-fg-color);
-}
-
 /* Section cards: soft gradient and an icon badge next to the name */
 .guides-cards .card {
     border-radius: var(--md-border-radius-2x);
@@ -495,9 +479,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
-    /* Scrolling turned off: show all guides. Uncomment to scroll after about three guides.
     max-height: 20.5rem;
-    overflow-y: auto; */
+    overflow-y: auto;
     margin: 0;
     padding: 0 0.4rem 0 0;
     list-style: none;
