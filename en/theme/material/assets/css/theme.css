@@ -388,6 +388,162 @@
     color: var(--md-primary-fg-color);
 }
 
+/* Guides landing page (docs/guides/overview.md): section cards */
+
+/* Two cards per row, one per row on small screens */
+.guides-cards {
+    display: grid;
+    /* Two cards per row: repeat(2, minmax(0, 1fr)) */
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem 1rem; /* space between rows, space between columns */
+    max-width: 1400px;
+    margin: 1.5rem 0 2.5rem;
+}
+
+@media screen and (max-width: 60em) {
+    .guides-cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.guides-cards .card {
+    margin: 0;
+    max-width: none;
+    text-align: left;
+}
+
+.md-typeset .guides-cards .card > h3 {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+/* Hide the heading permalink so long section names don't wrap to a second line */
+/* .md-typeset .guides-cards .card > h3 .headerlink {
+    display: none;
+} */
+
+/* Links inside a card (More resources) look like links, not plain text */
+.md-typeset .guides-cards .card > p > a {
+    margin: 0;
+    color: var(--md-primary-fg-color);
+    font-weight: 700;
+}
+
+.md-typeset .guides-cards .card > p > a:hover {
+    color: var(--md-accent-fg-color);
+}
+
+/* Section cards: soft gradient and an icon badge next to the name */
+.guides-cards .card {
+    border-radius: var(--md-border-radius-2x);
+    background: linear-gradient(180deg, rgba(255, 115, 0, 0.06), transparent 12rem);
+}
+
+.md-typeset .guides-cards .card > h3 > svg {
+    flex: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0.5rem;
+    margin: 0 0.7rem 0 0 !important;
+    border-radius: var(--md-border-radius);
+    background-color: rgba(255, 115, 0, 0.12);
+    vertical-align: middle !important;
+}
+
+.md-typeset .guides-cards .card > ul {
+    padding-top: 0.3rem;
+}
+
+.md-typeset .guides-cards .card > ul > li {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.md-typeset .guides-cards .card > ul > li:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--md-box-shadow-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .md-typeset .guides-cards .card > ul > li {
+        transition: none;
+    }
+
+    .md-typeset .guides-cards .card > ul > li:hover {
+        transform: none;
+    }
+}
+
+/* Highlight the section card a table of contents link jumped to */
+.guides-cards .card:has(> h3:target) {
+    border-color: var(--md-primary-fg-color);
+}
+
+/* Make each guide card clickable as a whole */
+.md-typeset .guides-cards .card > ul > li {
+    position: relative;
+}
+
+.md-typeset .guides-cards .card > ul > li > p:first-child a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+/* Guides in each card: one small card per guide, about three visible, the rest scroll */
+.md-typeset .guides-cards .card > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    /* Scrolling turned off: show all guides. Uncomment to scroll after about three guides.
+    max-height: 20.5rem;
+    overflow-y: auto; */
+    margin: 0;
+    padding: 0 0.4rem 0 0;
+    list-style: none;
+}
+
+.md-typeset .guides-cards .card > ul > li {
+    margin: 0;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: var(--md-border-radius);
+}
+
+.md-typeset .guides-cards .card > ul > li:hover {
+    border-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .guides-cards .card > ul > li > p {
+    margin: 0;
+}
+
+.md-typeset .guides-cards .card > ul > li > p:first-child a {
+    color: var(--md-default-fg-color);
+    font-weight: 700;
+}
+
+.md-typeset .guides-cards .card > ul > li > p:first-child a:hover {
+    color: var(--md-primary-fg-color);
+}
+
+/* Small orange arrow before each guide title */
+.md-typeset .guides-cards .card > ul > li > p:first-child a::before {
+    content: "\2192";
+    margin-right: 0.45rem;
+    color: var(--md-primary-fg-color);
+}
+
+/* Short guide description, cut to two lines */
+.md-typeset .guides-cards .card > ul > li > p + p {
+    margin-top: 0.25rem;
+    color: var(--md-default-fg-color--light);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .image-text-wrapped-container {
   display: flex;
   align-items: center;
