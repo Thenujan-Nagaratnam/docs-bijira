@@ -388,16 +388,13 @@
     color: var(--md-primary-fg-color);
 }
 
-/* Guides landing page (docs/guides/overview.md): section cards */
-
-/* Two cards per row, one per row on small screens */
+/* START OF - Guides overview page */
 .guides-cards {
     display: grid;
-    /* Two cards per row: repeat(2, minmax(0, 1fr)) */
-    grid-template-columns: minmax(0, 1fr);
-    gap: 3rem 1rem; /* space between rows, space between columns */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1rem;
     max-width: 1400px;
-    margin: 1.5rem 0 2.5rem;
+    margin: 1.5rem 0 0;
 }
 
 @media screen and (max-width: 60em) {
@@ -407,21 +404,37 @@
 }
 
 .guides-cards .card {
-    margin: 0;
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    margin: 0 0 3rem;
     max-width: none;
     text-align: left;
+    border-radius: var(--md-border-radius-2x);
+    background: linear-gradient(180deg, rgba(255, 115, 0, 0.06), transparent 12rem);
+}
+
+.guides-cards .card:has(> h3:target) {
+    border-color: var(--md-primary-fg-color);
 }
 
 .md-typeset .guides-cards .card > h3 {
     display: flex;
     align-items: center;
+    margin: 0;
     font-weight: 700;
 }
 
-/* Section cards: soft gradient and an icon badge next to the name */
-.guides-cards .card {
-    border-radius: var(--md-border-radius-2x);
-    background: linear-gradient(180deg, rgba(255, 115, 0, 0.06), transparent 12rem);
+.md-typeset .guides-cards .card > hr {
+    margin: 1rem 0 0.75rem;
+}
+
+.md-typeset .guides-cards .card > p {
+    margin: 0 0 1rem;
+}
+
+.md-typeset .guides-cards .card > p:last-child {
+    margin-bottom: 0;
 }
 
 .md-typeset .guides-cards .card > h3 > svg {
@@ -436,65 +449,28 @@
 }
 
 .md-typeset .guides-cards .card > ul {
-    padding-top: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .md-typeset .guides-cards .card > ul > li {
+    position: relative;
+    margin: 0;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: var(--md-border-radius);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .md-typeset .guides-cards .card > ul > li:hover {
     transform: translateY(-2px);
+    border-color: var(--md-primary-fg-color);
     box-shadow: var(--md-box-shadow-2);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .md-typeset .guides-cards .card > ul > li {
-        transition: none;
-    }
-
-    .md-typeset .guides-cards .card > ul > li:hover {
-        transform: none;
-    }
-}
-
-/* Highlight the section card a table of contents link jumped to */
-.guides-cards .card:has(> h3:target) {
-    border-color: var(--md-primary-fg-color);
-}
-
-/* Make each guide card clickable as a whole */
-.md-typeset .guides-cards .card > ul > li {
-    position: relative;
-}
-
-.md-typeset .guides-cards .card > ul > li > p:first-child a::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-}
-
-/* Guides in each card: one small card per guide, about three visible, the rest scroll */
-.md-typeset .guides-cards .card > ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    max-height: 20.5rem;
-    overflow-y: auto;
-    margin: 0;
-    padding: 0 0.4rem 0 0;
-    list-style: none;
-}
-
-.md-typeset .guides-cards .card > ul > li {
-    margin: 0;
-    padding: 0.7rem 0.9rem;
-    border: 1px solid var(--md-default-fg-color--lightest);
-    border-radius: var(--md-border-radius);
-}
-
-.md-typeset .guides-cards .card > ul > li:hover {
-    border-color: var(--md-primary-fg-color);
 }
 
 .md-typeset .guides-cards .card > ul > li > p {
@@ -510,14 +486,18 @@
     color: var(--md-primary-fg-color);
 }
 
-/* Small orange arrow before each guide title */
 .md-typeset .guides-cards .card > ul > li > p:first-child a::before {
     content: "\2192";
     margin-right: 0.45rem;
     color: var(--md-primary-fg-color);
 }
 
-/* Short guide description, cut to two lines */
+.md-typeset .guides-cards .card > ul > li > p:first-child a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
 .md-typeset .guides-cards .card > ul > li > p + p {
     margin-top: 0.25rem;
     color: var(--md-default-fg-color--light);
@@ -526,6 +506,27 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+.md-typeset .guides-cards .card > p > a {
+    margin: 0;
+    color: var(--md-primary-fg-color);
+    font-weight: 700;
+}
+
+.md-typeset .guides-cards .card > p > a:hover {
+    color: var(--md-accent-fg-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .md-typeset .guides-cards .card > ul > li {
+        transition: none;
+    }
+
+    .md-typeset .guides-cards .card > ul > li:hover {
+        transform: none;
+    }
+}
+/* END OF - Guides overview page */
 
 .image-text-wrapped-container {
   display: flex;
