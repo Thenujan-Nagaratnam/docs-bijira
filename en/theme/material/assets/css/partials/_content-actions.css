@@ -15,17 +15,43 @@
  * specific language governing permissions and limitations
  * under the License.
  *
- * Styling for the "Edit page" / "Copy page" buttons rendered above every page
- * (see partials/actions.html). Behavior in docs/assets/js/theme.js.
  */
+
+.md-content__topbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 16px;
+  margin-bottom: 0.8rem;
+}
+
+.md-typeset .md-content__topbar .md-path {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-bottom: 0;
+}
 
 .md-content__actions {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+  flex: 0 0 auto;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 0.8rem;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .md-content__topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .md-content__actions {
+    margin-left: 0;
+    justify-content: flex-start;
+  }
 }
 
 .md-content__actions .md-button--content-action {
@@ -141,7 +167,7 @@
   gap: 6px;
   padding: 6px 8px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--md-default-fg-color);
   white-space: nowrap;
 }
@@ -153,14 +179,9 @@
 }
 
 .md-content__copy-menu-item svg {
-  height: 16px;
-  width: 16px;
+  height: 14px;
+  width: 14px;
   fill: currentColor;
   flex-shrink: 0;
 }
 
-@media screen and (max-width: 30em) {
-  .md-content__actions {
-    justify-content: flex-start;
-  }
-}
