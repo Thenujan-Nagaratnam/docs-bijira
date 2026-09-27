@@ -19,9 +19,13 @@
 {% if "material/tags" in config.plugins %}
   {% include "partials/tags.html" %}
 {% endif %}
-{% include "partials/actions.html" %}
-{% if "navigation.path" in features %}
-  {% include "partials/breadcrumbs.html" %}
+{% if page.edit_url or (page.parent and "navigation.path" in features) %}
+  <div class="md-content__topbar">
+    {% if "navigation.path" in features %}
+      {% include "partials/breadcrumbs.html" %}
+    {% endif %}
+    {% include "partials/actions.html" %}
+  </div>
 {% endif %}
 {% if "\x3ch1" not in page.content %}
   <h1>{{ page.title | d(config.site_name, true)}}</h1>
