@@ -47,8 +47,10 @@
 }
 
 .md-nav__version-dropdown {
+  /* Width tracks the selected version (set by theme.js); the cap keeps a long
+     version string from crowding out the section title. */
   flex: 0 0 auto;
-  max-width: 5.2rem;
+  max-width: 50%;
   padding: 0.1rem 0.3rem;
   font-family: var(--md-text-font);
   font-size: 0.6rem;
