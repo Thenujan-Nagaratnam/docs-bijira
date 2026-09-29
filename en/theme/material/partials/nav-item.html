@@ -132,10 +132,12 @@
     {% set v_slug = versioned_cfg.slug %}
     {% set v_default = versioned_cfg.default %}
     {% set v_versions = versioned_cfg.versions %}
+    {% set v_preview = versioned_cfg.preview_versions or [] %}
 
     <!-- Split into "Latest Version" (the configured default) and "Previous
          Versions" (everything else, in configured order) for the dropdown
-         below. -->
+         below. Optional `preview_versions` get their own "Preview Versions"
+         group. -->
     {% set v_latest = v_default if v_default in v_versions else v_versions[0] %}
     {% set v_previous = v_versions | reject("equalto", v_latest) | list %}
 
@@ -143,7 +145,7 @@
          A namespace is required so the assignment survives the for-loop scope. -->
     {% set ns = namespace(active=v_default) %}
     {% if page and page.url %}
-      {% for v in v_versions %}
+      {% for v in v_versions + v_preview %}
         {% if (v_slug ~ "/" ~ v ~ "/") in (page.url ~ "/") %}
           {% set ns.active = v %}
         {% endif %}
@@ -197,6 +199,13 @@
           <optgroup label="Latest Version">
             <option value="{{ v_latest }}" {{ "selected" if v_latest == active_version }}>{{ v_latest }}</option>
           </optgroup>
+          {% if v_preview %}
+            <optgroup label="Preview Versions">
+              {% for v in v_preview %}
+                <option value="{{ v }}" {{ "selected" if v == active_version }}>{{ v }}</option>
+              {% endfor %}
+            </optgroup>
+          {% endif %}
           {% if v_previous %}
             <optgroup label="Previous Versions">
               {% for v in v_previous %}
