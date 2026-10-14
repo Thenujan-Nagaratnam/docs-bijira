@@ -544,10 +544,27 @@ def _move_shared_files_under_prefix(config):
             with gzip.open(sitemap_path + ".gz", "wb") as f:
                 f.write(xml.encode("utf-8"))
 
+    # A prefix of its own (extra.assets_prefix that no page lives under, i.e.
+    # platform-common) means this build is the one behind the proxy's root
+    # catch-all. Builds that don't serve their files under a prefix yet still
+    # load /js/ and /sitemap.xml from that root, so keep the root copies and
+    # add the prefixed ones next to them.
+    keep_root = not any(url.startswith(prefix + "/") for url in _nav_page_urls)
     for entry in _SHARED_ROOT_ENTRIES:
         src = os.path.join(site_dir, entry)
-        if os.path.exists(src):
-            _merge_move(src, os.path.join(site_dir, prefix, entry))
+        if not os.path.exists(src):
+            continue
+        dst = os.path.join(site_dir, prefix, entry)
+        if keep_root:
+            if os.path.exists(dst):
+                logger.warning("assets prefix: %s already exists, not copied", dst)
+            elif os.path.isdir(src):
+                shutil.copytree(src, dst)
+            else:
+                os.makedirs(os.path.dirname(dst), exist_ok=True)
+                shutil.copy2(src, dst)
+        else:
+            _merge_move(src, dst)
 
     for root, _dirs, files in os.walk(site_dir):
         for name in files:
