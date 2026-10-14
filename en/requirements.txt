@@ -1,6 +1,6 @@
 mkdocs==1.4.2
 # The real hook logic - published from the docs-shared branch, pinned to a tag.
-docs-shared-hooks @ git+https://github.com/senthuran16/docs-api-platform.git@shared-v5
+docs-shared-hooks @ git+https://github.com/Thenujan-Nagaratnam/docs-bijira.git@shared-v6-rc2
 # pkg_resources still required by markdown==3.2.1; removed from setuptools>=80
 setuptools<80
 Pygments==2.14.0
