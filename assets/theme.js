@@ -1110,6 +1110,17 @@ onEachPage(function () {
   var basePath = scope.pathname;
   if (basePath.charAt(basePath.length - 1) !== '/') basePath += '/';
 
+  // The breadcrumb map is one of this build's shared files, which the build
+  // hook may have moved under the build's own prefix (e.g. api-gateway/1.2.0/)
+  // together with Material's base. Fetch it from that base; the keys stay
+  // relative to the site root (scope).
+  var assetBase = scope;
+  try {
+    var configEl = document.getElementById('__config');
+    var configBase = configEl && JSON.parse(configEl.textContent).base;
+    if (configBase) assetBase = new URL(configBase.replace(/\/?$/, '/'), location);
+  } catch (e) { /* keep the site root */ }
+
   var breadcrumbs = null;
   var pending = false;
 
@@ -1238,7 +1249,7 @@ onEachPage(function () {
     }
     if (pending) return;
     pending = true;
-    var url = new URL('assets/search-breadcrumbs.json', scope).href;
+    var url = new URL('assets/search-breadcrumbs.json', assetBase).href;
     fetch(url)
       .then(function (r) { return r.ok ? r.json() : {}; })
       .then(function (data) { breadcrumbs = data; decorate(); })
