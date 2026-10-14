@@ -3,7 +3,10 @@ import os
 import json
 import yaml
 import hashlib
+import gzip
 import logging
+import posixpath
+import shutil
 from urllib.parse import urlparse
 
 logger = logging.getLogger('mkdocs.plugins.' + __name__)
@@ -36,6 +39,11 @@ _breadcrumbs: dict[str, list[str]] = {}
 # product's expandable nav section client-side without hosting its pages.
 # See theme.js's cross-product nav block and root-index.json.
 _product_manifest: dict[str, dict] = {}
+
+# URLs of the pages in this build's navigation (its real content, as opposed
+# to e.g. redirect stubs the redirects plugin writes for other versions).
+# Populated in on_nav; used to work out the build's own URL prefix.
+_nav_page_urls: set[str] = set()
 
 
 def load_redirects(project_root: str) -> dict[str, str]:
@@ -116,6 +124,8 @@ def on_nav(nav, config, files):
     results that share the same title across versions / doc sets.
     """
     _breadcrumbs.clear()
+    _nav_page_urls.clear()
+    _nav_page_urls.update(page.url for page in nav.pages if page.url)
     for page in nav.pages:
         crumbs = []
         item = page.parent
@@ -338,9 +348,14 @@ def on_post_build(config, **kwargs):
 
     theme_css_path = os.path.join(site_dir, "assets", "css", "theme.css")
 
-    if not os.path.exists(theme_css_path):
-        return
+    if os.path.exists(theme_css_path):
+        _bust_theme_css_imports(theme_css_path)
 
+    # Last, once everything that writes into assets/ has run.
+    _move_shared_files_under_prefix(config)
+
+
+def _bust_theme_css_imports(theme_css_path):
     with open(theme_css_path, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -357,6 +372,180 @@ def on_post_build(config, **kwargs):
 
     with open(theme_css_path, "w", encoding="utf-8") as f:
         f.write(new_content)
+
+
+# ---------------------------------------------------------------------------
+# Serve this build's shared files under its own URL prefix
+# ---------------------------------------------------------------------------
+# MkDocs (and Material) put a site's shared files at the site root: assets/
+# (theme CSS/JS, fonts, images), search/, js/ and sitemap.xml. Every product+version
+# is its own build behind one URL space, so those root paths are identical for
+# every build and carry nothing that says which build they belong to. The
+# reverse proxy can only send them to ONE backend, so every product ends up
+# loading another build's (stale) images, styles and search index.
+#
+# Pages, on the other hand, live under a prefix that names their build
+# (api-gateway/1.2.0/...), and the proxy already routes that prefix to the
+# right deployment. So after the build, move the shared files under that same
+# prefix and point every page at the new location. A build that is not one
+# product+version (e.g. platform-common, which serves several sections at the
+# root) keeps its files at the root.
+
+# js/ is where the open-in-new-tab plugin writes its script.
+_SHARED_ROOT_ENTRIES = ("assets", "search", "js", "sitemap.xml", "sitemap.xml.gz")
+_URL_ATTR_RE = re.compile(r'(\b(?:href|src|content|poster|data-src)=")([^"]*)(")')
+_CONFIG_RE = re.compile(r'(<script id="__config" type="application/json">)(.*?)(</script>)', re.DOTALL)
+
+
+def _asset_prefix(config, site_dir):
+    """The URL prefix this build's shared files should live under, or None.
+
+    extra.assets_prefix overrides it ("" keeps the files at the root).
+    Otherwise: the one "<slug>/<version>" of a versioned section that this
+    build's navigation has pages under, or the one unversioned section's
+    slug. Directories alone don't tell: the redirects plugin also writes stub
+    pages under other versions' paths.
+    """
+    extra = config.get("extra") or {}
+    if "assets_prefix" in extra:
+        return (extra.get("assets_prefix") or "").strip("/") or None
+    versioned, unversioned = [], []
+    def has_pages(prefix):
+        return any(url.startswith(prefix + "/") for url in _nav_page_urls)
+
+    for cfg in (extra.get("versioned_sections") or {}).values():
+        slug = cfg.get("slug")
+        for version in cfg.get("versions") or []:
+            if slug and has_pages(f"{slug}/{version}"):
+                versioned.append(f"{slug}/{version}")
+    for cfg in (extra.get("unversioned_sections") or {}).values():
+        slug = cfg.get("slug")
+        if slug and has_pages(slug):
+            unversioned.append(slug)
+    if len(versioned) == 1 and not unversioned:
+        return versioned[0]
+    if not versioned and len(unversioned) == 1:
+        return unversioned[0]
+    return None
+
+
+def _is_shared(path):
+    return any(path == e or path.startswith(e + "/") for e in _SHARED_ROOT_ENTRIES)
+
+
+def _relative(target, start):
+    rel = posixpath.relpath(target or ".", start or ".")
+    return "." if rel == "" else rel
+
+
+def _rewrite_url(value, page_dir, prefix):
+    """Point a page-relative URL that resolves into a shared root entry at
+    that entry's new home under the prefix. Anything else is returned as is."""
+    if not value or value.startswith(("#", "/", "{", "data:", "mailto:", "javascript:")) or "://" in value:
+        return value
+    m = re.match(r"([^?#]*)(.*)", value, re.DOTALL)
+    path, tail = m.group(1), m.group(2)
+    resolved = posixpath.normpath(posixpath.join(page_dir, path))
+    if resolved.startswith("../") or not _is_shared(resolved):
+        return value
+    new = _relative(posixpath.join(prefix, resolved), page_dir)
+    if path.endswith("/") and not new.endswith("/"):
+        new += "/"
+    return new + tail
+
+
+def _rewrite_page(html, page_dir, prefix):
+    html = _URL_ATTR_RE.sub(lambda m: m.group(1) + _rewrite_url(m.group(2), page_dir, prefix) + m.group(3), html)
+
+    def config_block(m):
+        try:
+            cfg = json.loads(m.group(2))
+        except ValueError:
+            return m.group(0)
+        base = cfg.get("base")
+        # Only a base that is the site root moves; Material reads search,
+        # its search worker and sitemap.xml relative to it.
+        if base is not None and posixpath.normpath(posixpath.join(page_dir, base)) == ".":
+            cfg["base"] = _relative(prefix, page_dir)
+            if cfg.get("search"):
+                cfg["search"] = _rewrite_url(cfg["search"], page_dir, prefix)
+            return m.group(1) + json.dumps(cfg, ensure_ascii=False) + m.group(3)
+        return m.group(0)
+
+    return _CONFIG_RE.sub(config_block, html)
+
+
+def _merge_move(src, dst):
+    """Move src into dst without overwriting anything already there."""
+    if not os.path.exists(dst):
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        shutil.move(src, dst)
+        return
+    if os.path.isdir(src) and os.path.isdir(dst):
+        for name in os.listdir(src):
+            _merge_move(os.path.join(src, name), os.path.join(dst, name))
+        if not os.listdir(src):
+            os.rmdir(src)
+        return
+    logger.warning("assets prefix: %s already exists, left %s in place", dst, src)
+
+
+def _move_shared_files_under_prefix(config):
+    site_dir = config["site_dir"]
+    prefix = _asset_prefix(config, site_dir)
+    if not prefix:
+        return
+    logger.info("Serving assets/, search/, js/ and sitemap.xml under %s/", prefix)
+
+    # Search results link to their pages relative to Material's base, which
+    # moves to the prefix below; make each location relative to it as well.
+    index_path = os.path.join(site_dir, "search", "search_index.json")
+    if os.path.exists(index_path):
+        with open(index_path, encoding="utf-8") as f:
+            index = json.load(f)
+        for doc in index.get("docs", []):
+            loc, sep, frag = doc.get("location", "").partition("#")
+            new = _relative(loc.rstrip("/"), prefix)
+            if loc.endswith("/") or loc == "":
+                new = new.rstrip("/") + "/"
+            doc["location"] = ("" if new == "./" else new) + sep + frag
+        with open(index_path, "w", encoding="utf-8") as f:
+            json.dump(index, f, ensure_ascii=False)
+
+    # Material's instant navigation only takes over links that are in the
+    # sitemap it loads from its base. Keep just this build's own pages, so a
+    # click never swaps in a page another deployment serves on the live site.
+    sitemap_path = os.path.join(site_dir, "sitemap.xml")
+    site_url = (config.get("site_url") or "").rstrip("/") + "/"
+    if os.path.exists(sitemap_path) and site_url != "/":
+        with open(sitemap_path, encoding="utf-8") as f:
+            xml = f.read()
+        own = site_url + prefix + "/"
+        xml = re.sub(r"\s*<url>\s*<loc>(?!" + re.escape(own) + r").*?</url>", "", xml, flags=re.DOTALL)
+        with open(sitemap_path, "w", encoding="utf-8") as f:
+            f.write(xml)
+        if os.path.exists(sitemap_path + ".gz"):
+            with gzip.open(sitemap_path + ".gz", "wb") as f:
+                f.write(xml.encode("utf-8"))
+
+    for entry in _SHARED_ROOT_ENTRIES:
+        src = os.path.join(site_dir, entry)
+        if os.path.exists(src):
+            _merge_move(src, os.path.join(site_dir, prefix, entry))
+
+    for root, _dirs, files in os.walk(site_dir):
+        for name in files:
+            if not name.endswith(".html"):
+                continue
+            path = os.path.join(root, name)
+            page_dir = posixpath.relpath(root.replace(os.sep, "/"), site_dir.replace(os.sep, "/"))
+            page_dir = "" if page_dir == "." else page_dir
+            with open(path, encoding="utf-8") as f:
+                html = f.read()
+            new = _rewrite_page(html, page_dir, prefix)
+            if new != html:
+                with open(path, "w", encoding="utf-8") as f:
+                    f.write(new)
 
 
 # Matches an HTML comment, except a bang comment (<!--! ... -->, used for
