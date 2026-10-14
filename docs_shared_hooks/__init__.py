@@ -466,7 +466,11 @@ def _rewrite_page(html, page_dir, prefix):
         # Only a base that is the site root moves; Material reads search,
         # its search worker and sitemap.xml relative to it.
         if base is not None and posixpath.normpath(posixpath.join(page_dir, base)) == ".":
-            cfg["base"] = _relative(prefix, page_dir)
+            # Material resolves search/, sitemap.xml and the worker against
+            # base with new URL(), so it has to read as a directory:
+            # "../../platform-common" would resolve to the site root.
+            new_base = _relative(prefix, page_dir)
+            cfg["base"] = new_base if new_base.split("/")[-1] in (".", "..") else new_base + "/"
             if cfg.get("search"):
                 cfg["search"] = _rewrite_url(cfg["search"], page_dir, prefix)
             return m.group(1) + json.dumps(cfg, ensure_ascii=False) + m.group(3)
@@ -520,8 +524,20 @@ def _move_shared_files_under_prefix(config):
     if os.path.exists(sitemap_path) and site_url != "/":
         with open(sitemap_path, encoding="utf-8") as f:
             xml = f.read()
-        own = site_url + prefix + "/"
-        xml = re.sub(r"\s*<url>\s*<loc>(?!" + re.escape(own) + r").*?</url>", "", xml, flags=re.DOTALL)
+        # Pages under the prefix when the prefix is the build's page path;
+        # otherwise (extra.assets_prefix set to a path of its own, e.g. for
+        # platform-common) the pages in this build's navigation.
+        under_prefix = any(url.startswith(prefix + "/") for url in _nav_page_urls)
+
+        def keep(match):
+            loc = match.group(1)
+            path = loc[len(site_url):] if loc.startswith(site_url) else None
+            if path is None:
+                return ""
+            own = path.startswith(prefix + "/") if under_prefix else path in _nav_page_urls
+            return match.group(0) if own else ""
+
+        xml = re.sub(r"\s*<url>\s*<loc>(.*?)</loc>.*?</url>", keep, xml, flags=re.DOTALL)
         with open(sitemap_path, "w", encoding="utf-8") as f:
             f.write(xml)
         if os.path.exists(sitemap_path + ".gz"):
