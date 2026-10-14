@@ -65,6 +65,8 @@ index is rewritten to match, and `sitemap.xml` keeps only the build's own pages.
   the build's navigation has pages under, or its one `extra.unversioned_sections`
   slug. Set `extra.assets_prefix` in `mkdocs.yml` to override it (`""` keeps the
   files at the root).
-- A build that serves several sections at the root (platform-common) keeps its
-  files at the root. Once every product+version build is on a hooks tag with this
-  change, the root `/assets/` and `/search/` should be routed to platform-common.
+- A build that serves several sections at the root (platform-common) has no
+  prefix of its own, so it sets one: `extra.assets_prefix: platform-common`. Its
+  files are then served from `/platform-common/...`, which the proxy's catch-all
+  already sends to platform-common. Nothing then depends on the root `/assets/`
+  and `/search/` paths.
