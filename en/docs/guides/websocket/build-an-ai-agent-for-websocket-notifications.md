@@ -108,7 +108,7 @@ Before you create the MCP proxy, you need a running server that speaks the Model
 
 **Expected result:** AI Workspace connects to your tool server and creates the MCP proxy with three tools: `log_watch`, `send_alert`, and `escalate`, discovered directly from it.
 
-![MCP proxy detail page showing three discovered tools: log_watch, send_alert, and escalate](../assets/img/guides/websocket/notification-agent/create-mcp-proxy.png){.cInlineImage-full}
+![MCP proxy detail page showing three discovered tools: log_watch, send_alert, and escalate](../../assets/img/guides/websocket/notification-agent/create-mcp-proxy.png){.cInlineImage-full}
 
 ## Step 3: Deploy the MCP proxy
 
@@ -121,7 +121,7 @@ An MCP proxy isn't callable until you deploy it to an AI gateway.
 
 **Expected result:** The MCP proxy's deployment status shows **Active**. Select your gateway from the **Gateways** dropdown on the proxy's overview page to see its invoke URL, in the form `https://<gateway-host>/<proxy-context>/mcp`. Collect this URL. We'll call this `MCP_URL`.
 
-![MCP proxy overview page showing the Deploy to Gateway and Publish to MCP Hub buttons, the selected gateway, and its invoke URL](../assets/img/guides/websocket/notification-agent/deploy-mcp-proxy.png){.cInlineImage-full}
+![MCP proxy overview page showing the Deploy to Gateway and Publish to MCP Hub buttons, the selected gateway, and its invoke URL](../../assets/img/guides/websocket/notification-agent/deploy-mcp-proxy.png){.cInlineImage-full}
 
 !!! note
     For production use, attach the **MCP Authentication** policy from the proxy's **Policies** tab. See [Apply policies to an MCP proxy](../../ai-workspace/1.0.0/mcp-proxies/apply-policies.md). This guide doesn't configure it, to keep `agent.py` simple.
@@ -151,7 +151,7 @@ This creates the governed endpoint your agent uses to call Gemini.
 
 **Expected result:** You have an API key and an invoke URL for the LLM provider.
 
-![API Key Generated Successfully dialog showing the X-API-Key header name, the generated key, and a sample curl request against the provider's invoke URL](../assets/img/guides/websocket/notification-agent/create-llm-provider.png){.cInlineImage-full}
+![API Key Generated Successfully dialog showing the X-API-Key header name, the generated key, and a sample curl request against the provider's invoke URL](../../assets/img/guides/websocket/notification-agent/create-llm-provider.png){.cInlineImage-full}
 
 ## Step 5: Publish the WebSocket API and subscribe to it
 
@@ -177,7 +177,7 @@ The LLM provider authenticates with the API key from step 4. The WebSocket API u
 
 **Expected result:** You have the WebSocket API's invoke URL and an access token for it.
 
-![Manage Keys page for the application showing the OAuth2 Keys card with a generated consumer key and secret](../assets/img/guides/websocket/notification-agent/generate-access-token.png){.cInlineImage-full}
+![Manage Keys page for the application showing the OAuth2 Keys card with a generated consumer key and secret](../../assets/img/guides/websocket/notification-agent/generate-access-token.png){.cInlineImage-full}
 
 ## Step 6: Get and run agent.py
 

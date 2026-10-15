@@ -63,7 +63,7 @@ Navigate to your organization's Developer Portal. In the search bar, type `Order
 
 **Expected result:** The search returns the Orders API. Click **Orders API** to open it.
 
-![Search Orders API](../assets/img/guides/devportal/s1/search-api.png){.cInlineImage-full}
+![Search Orders API](../../assets/img/guides/devportal/s1/search-api.png){.cInlineImage-full}
 
 ## Step 2: Review the API overview and available endpoints
 
@@ -73,7 +73,7 @@ On the Orders API page, read the **Overview** section. Then scroll down to the *
 
 **Expected result:** The **Resources** tab lists the `POST /orders` and `GET /orders/{id}` operations.
 
-![API Overiew](../assets/img/guides/devportal/s1/api-overview.png){.cInlineImage-full}
+![API Overiew](../../assets/img/guides/devportal/s1/api-overview.png){.cInlineImage-full}
 
 ## Step 3: Create an API key for the Orders API
 
@@ -86,7 +86,7 @@ Navigate to the **API Keys** tab and click **Generate API Key**.
 !!! note
     The API Key policy must be applied by the publisher to the Orders API for the **API Key** button to be enabled.
 
-![API Key generation](../assets/img/guides/devportal/s1/create-api-key.png){.cInlineImage-full}
+![API Key generation](../../assets/img/guides/devportal/s1/create-api-key.png){.cInlineImage-full}
 
 ## Step 4: Run a test request using the API key
 
@@ -96,7 +96,7 @@ On the Orders API page, navigate to the **Documentation** tab and open the **End
 
 **Expected result:** You receive a response containing order data. Confirm the response fields match what your checkout service needs.
 
-![API try out](../assets/img/guides/devportal/s1/try-out.png){.cInlineImage-full}
+![API try out](../../assets/img/guides/devportal/s1/try-out.png){.cInlineImage-full}
 
 ## Step 5: Create a subscription to the Orders API
 
@@ -104,18 +104,18 @@ Now that you've confirmed the API meets your needs, subscribe to it on the Bronz
 
 On the Orders API's **Overview** page, click **Subscribe**.
 
-![Subscribe](../assets/img/guides/devportal/s1/subscribe.png){.cInlineImage-full}
+![Subscribe](../../assets/img/guides/devportal/s1/subscribe.png){.cInlineImage-full}
 
 In the subscription plans section, select the **Bronze** card and click **Subscribe**.
 
-![Subscription plans](../assets/img/guides/devportal/s1/subscription-plans.png){.cInlineImage-full}
+![Subscription plans](../../assets/img/guides/devportal/s1/subscription-plans.png){.cInlineImage-full}
 
 **Expected result:** Copy the subscription token and save it securely. You will need it in the following steps.
 
 !!! note
     The **Subscribe** button appears only when the API publisher has applied a subscription policy and enabled at least one subscription plan for the API.
 
-![Subscription token](../assets/img/guides/devportal/s1/subscription-token.png){.cInlineImage-full}
+![Subscription token](../../assets/img/guides/devportal/s1/subscription-token.png){.cInlineImage-full}
 
 ## Step 6: Run an authenticated request with rate limiting applied to the Orders API
 

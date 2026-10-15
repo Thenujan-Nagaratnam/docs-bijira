@@ -125,7 +125,7 @@ When you complete this step, WSO2 API Platform automatically deploys the MCP ser
 
 **Expected result:** The MCP server is created with tools auto-generated from the Reading List API spec — one tool per operation, such as listing books, adding a book, and deleting a book. You can see them in **Develop > Policies**.
 
-![MCP Server created from Reading List API contract with auto-generated tools visible in Develop > Policies](../assets/img/guides/ai-and-mcp/s1/create-mcp-server.png){.cInlineImage-full}
+![MCP Server created from Reading List API contract with auto-generated tools visible in Develop > Policies](../../assets/img/guides/ai-and-mcp/s1/create-mcp-server.png){.cInlineImage-full}
 
 !!! note
     If you have an existing REST API, select **Start from Existing Proxy** instead. Enter a name and description and select an API proxy already deployed in WSO2 API Platform. See the MCP Servers for existing API Proxies for that path.
@@ -148,7 +148,7 @@ Click **Save**. Then click **Deploy** from the navigation menu and select **Depl
 
 **Expected result:** Each tool shows your updated description, and the MCP server status returns to **Deployed**.
 
-![MCP Server Routing page showing updated tool descriptions for List books, Add a book, and Delete a book](../assets/img/guides/ai-and-mcp/s1/configure-tool-descriptions.png){.cInlineImage-full}
+![MCP Server Routing page showing updated tool descriptions for List books, Add a book, and Delete a book](../../assets/img/guides/ai-and-mcp/s1/configure-tool-descriptions.png){.cInlineImage-full}
 
 !!! tip
     Write descriptions as if you're telling a colleague what the tool does. Claude uses these descriptions to decide which tool to call, so natural language outperforms technical API names.
@@ -163,7 +163,7 @@ In the side menu, scroll to **Deploy** and select **Security Settings**. Toggle 
 
 **Expected result:** The toggle shows as enabled.
 
-![Security Settings panel showing OAuth2 toggle enabled for the MCP Server](../assets/img/guides/ai-and-mcp/s1/enable-oauth2-authentication.png){.cInlineImage-full}
+![Security Settings panel showing OAuth2 toggle enabled for the MCP Server](../../assets/img/guides/ai-and-mcp/s1/enable-oauth2-authentication.png){.cInlineImage-full}
 
 !!! warning
     Don't disable OAuth2 in production. Without it, any client that knows your MCP server URL can call your backend directly.
@@ -180,7 +180,7 @@ Deploying promotes your MCP server from the development environment to the produ
 
 **Expected result:** The **Production** card shows **Deployment Status** as **Active**.
 
-![Deploy page showing Production card with Deployment Status as Active after MCP Server promotion](../assets/img/guides/ai-and-mcp/s1/deploy-mcp-server.png){.cInlineImage-full}
+![Deploy page showing Production card with Deployment Status as Active after MCP Server promotion](../../assets/img/guides/ai-and-mcp/s1/deploy-mcp-server.png){.cInlineImage-full}
 
 ---
 
@@ -194,7 +194,7 @@ Publishing makes your MCP server discoverable to consumers in the Developer Port
 
 **Expected result:** The lifecycle state changes to **Published**.
 
-![Publish MCP Server dialog confirming display name and production endpoint URL before publishing](../assets/img/guides/ai-and-mcp/s1/publish-mcp-server.png){.cInlineImage-full}
+![Publish MCP Server dialog confirming display name and production endpoint URL before publishing](../../assets/img/guides/ai-and-mcp/s1/publish-mcp-server.png){.cInlineImage-full}
 
 !!! note
     The Production Endpoint URL in the dialog is unique to your organization.
@@ -213,7 +213,7 @@ An application in WSO2 API Platform represents a client — in this case, Claude
 
 **Expected result:** Claude Desktop App appears in the application's Subscriptions list with an active subscription to the Reading List MCP server.
 
-![Animation showing Claude Desktop App subscribing to the Reading List MCP Server in Developer Portal](../assets/img/guides/ai-and-mcp/s1/subscription-in-devportal.gif){.cInlineImage-full}
+![Animation showing Claude Desktop App subscribing to the Reading List MCP Server in Developer Portal](../../assets/img/guides/ai-and-mcp/s1/subscription-in-devportal.gif){.cInlineImage-full}
 
 ---
 
@@ -229,7 +229,7 @@ Generate the OAuth2 bearer token that Claude Desktop will use to authenticate ev
 
 **Expected result:** You have a bearer token to paste into the config file in the next step.
 
-![Animation showing OAuth2 access token generation on the Manage Keys page in Developer Portal](../assets/img/guides/ai-and-mcp/s1/generate-an-access-tokan.gif){.cInlineImage-full}
+![Animation showing OAuth2 access token generation on the Manage Keys page in Developer Portal](../../assets/img/guides/ai-and-mcp/s1/generate-an-access-tokan.gif){.cInlineImage-full}
 
 !!! warning
     Bearer tokens expire after 3600 seconds (one hour) by default. WSO2 API Platform doesn't automatically refresh them. When your token expires, Claude Desktop will silently stop invoking tools. Generate a new token in the Developer Portal, update the `Authorization` value in `claude_desktop_config.json`, and restart Claude Desktop. To extend the token lifetime, click **Modify** on the Manage Keys page and increase the **Application Access Token Expiry Time** before generating.
@@ -267,7 +267,7 @@ Replace `<YOUR-GATEWAY-URL>` with the MCP server URL from the Developer Portal a
 
 **Expected result:** The file is saved with the `reading-list` entry inside `mcpServers`.
 
-![Animation showing claude_desktop_config.json updated with MCP server URL and bearer token via mcp-remote](../assets/img/guides/ai-and-mcp/s1/claude-desktop-config-update.gif){.cInlineImage-full}
+![Animation showing claude_desktop_config.json updated with MCP server URL and bearer token via mcp-remote](../../assets/img/guides/ai-and-mcp/s1/claude-desktop-config-update.gif){.cInlineImage-full}
 
 !!! warning
     Don't commit `claude_desktop_config.json` to version control. It contains your bearer token in plain text. Add it to `.gitignore` if your home directory is under source control.
@@ -286,7 +286,7 @@ Claude Desktop loads `claude_desktop_config.json` only on startup. Restart it fu
 
 1. In Claude Desktop, start a new conversation and type: `"What books are on my reading list?"` Confirm Claude invokes the correct tool and returns a real response from the backend. You'll see a tool-use indicator in the chat showing which tool was called. If Claude doesn't invoke the tool automatically, try: `"Use the reading list tool to show me all books."`
 
-    ![Animation showing Claude Desktop invoking the reading list MCP tool and returning book results](../assets/img/guides/ai-and-mcp/s1/claude-response.gif){.cInlineImage-full}
+    ![Animation showing Claude Desktop invoking the reading list MCP tool and returning book results](../../assets/img/guides/ai-and-mcp/s1/claude-response.gif){.cInlineImage-full}
 
 2. Confirm that unauthenticated requests are rejected. In your terminal, call the MCP server endpoint without an `Authorization` header and confirm you receive `HTTP 401 Unauthorized`.
 

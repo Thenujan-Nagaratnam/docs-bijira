@@ -143,7 +143,7 @@ Follow the same sequence here. Skipping it still produces tool calls, but the pa
 
 **Expected result:** The **Overview** dashboard opens with summary tiles above a set of charts.
 
-![Insights Overview dashboard showing summary tiles for total requests, total errors, and MCP traffic](../assets/img/guides/ai-and-mcp/s5/insights-overview.png){.cInlineImage-full}
+![Insights Overview dashboard showing summary tiles for total requests, total errors, and MCP traffic](../../assets/img/guides/ai-and-mcp/s5/insights-overview.png){.cInlineImage-full}
 
 ## Step 3: Check overall health on the Overview dashboard
 
@@ -154,7 +154,7 @@ The Overview dashboard answers one question: is anything wrong right now? Start 
 3. Check **Average Latency over Time**. A single tall spike is usually one slow call and can be ignored. A line that rises and stays high means something changed, such as a tool's backend slowing down.
 4. Use **Traffic Breakdown**, **Top APIs Across Platform**, and **Top Applications** to see which proxies and which consumers are generating the load.
 
-![Top APIs Across Platform naming each proxy beside a Traffic Breakdown donut](../assets/img/guides/ai-and-mcp/s5/insights-traffic-panels.png){.cInlineImage-full}
+![Top APIs Across Platform naming each proxy beside a Traffic Breakdown donut](../../assets/img/guides/ai-and-mcp/s5/insights-traffic-panels.png){.cInlineImage-full}
 
 The Overview dashboard also charts traffic intensity by day and hour, client platforms and user agents, new consumer registrations, and request origin on a geographic map. See [Insights overview](../../cloud/monitoring-and-insights/insights.md) for the full list.
 
@@ -169,7 +169,7 @@ Four summary tiles sit at the top:
 - **Error Rate**: what share of those calls failed.
 - **Unique Sessions**: how many agent runs, rather than how many calls.
 
-![Summary tiles on the MCP Analytics dashboard showing tool calls, unique consumers, error rate, and unique sessions](../assets/img/guides/ai-and-mcp/s5/insights-mcp-analytics.png){.cInlineImage-full}
+![Summary tiles on the MCP Analytics dashboard showing tool calls, unique consumers, error rate, and unique sessions](../../assets/img/guides/ai-and-mcp/s5/insights-mcp-analytics.png){.cInlineImage-full}
 
 Then work through the charts:
 
@@ -183,7 +183,7 @@ Then work through the charts:
 | **Server Distribution** and **Client Distribution** | Which MCP servers carry the load, and which agent runtimes are calling them. |
 | **Unique Consumers over Time** | Whether MCP adoption is spreading across teams. |
 
-![Error Rate Trend, Error Type Breakdown, and Tool Call Execution Errors on the MCP Analytics dashboard](../assets/img/guides/ai-and-mcp/s5/insights-mcp-errors.png){.cInlineImage-full}
+![Error Rate Trend, Error Type Breakdown, and Tool Call Execution Errors on the MCP Analytics dashboard](../../assets/img/guides/ai-and-mcp/s5/insights-mcp-errors.png){.cInlineImage-full}
 
 ## Verify
 

@@ -120,7 +120,7 @@ AI Workspace provides a sample MCP server. Follow these steps to create an MCP P
 2. Click **Create MCP Proxy** .
 3. Click **Try with Sample URL**.
 4. Click **Next**.
-    ![Using the sample Everything MCP Server to create an MCP Proxy](../assets/img/guides/ai-and-mcp/mcp-catalog/creating-everything-mcp.png)
+    ![Using the sample Everything MCP Server to create an MCP Proxy](../../assets/img/guides/ai-and-mcp/mcp-catalog/creating-everything-mcp.png)
 5. Verify the Proxy details. AI Workspace automatically fills in the details for the sample MCP server.
 6. Click **Create**.
 
@@ -133,12 +133,12 @@ AI Workspace provides a sample MCP server. Follow these steps to create an MCP P
 
 **Expected result:** The deployment status changes to **Active**.
 
-![Successfully deploying an MCP Proxy to AI Gateway](../assets/img/guides/ai-and-mcp/mcp-catalog/deployment-status.png)
+![Successfully deploying an MCP Proxy to AI Gateway](../../assets/img/guides/ai-and-mcp/mcp-catalog/deployment-status.png)
 
 ## Step 5: Add the Everything MCP Server Proxy to API Portal and MCP Hub
 After deploying a Proxy, it becomes reachable through the gateway-specific MCP Proxy URL. For example:
 
-![MCP Proxy overview page](../assets/img/guides/ai-and-mcp/mcp-catalog/publishing-to-mcp-hub.png)
+![MCP Proxy overview page](../../assets/img/guides/ai-and-mcp/mcp-catalog/publishing-to-mcp-hub.png)
 
 By publishing it to the MCP Hub, you make the Proxy discoverable by human consumers and agents through a central, governed catalog.
 
@@ -151,7 +151,7 @@ To publish it to the MCP Hub, follow these steps:
 
 After successful publication, you can go to the MCP Hub from the Proxy overview screen to view the Proxy.
 
-![Published Everything MCP Server Proxy in MCP Hub](../assets/img/guides/ai-and-mcp/mcp-catalog/everything-mcp-in-dev-portal.png)
+![Published Everything MCP Server Proxy in MCP Hub](../../assets/img/guides/ai-and-mcp/mcp-catalog/everything-mcp-in-dev-portal.png)
 
 **Expected result:** The proxy is registered in your organization's MCP registry and becomes discoverable and viewable in API Portal and MCP Hub.
 
@@ -182,7 +182,7 @@ Repeat step 5 to publish the DeepWiki MCP Server Proxy to the MCP Hub.
 
 Open the [API Portal and MCP Hub](https://devportal.bijira.dev) and sign in. Confirm that both MCP servers appear in the **MCP Servers** catalog.
 
-![Published MCP Proxies in MCP Hub](../assets/img/guides/ai-and-mcp/mcp-catalog/published-mcps-in-dev-portal.png)
+![Published MCP Proxies in MCP Hub](../../assets/img/guides/ai-and-mcp/mcp-catalog/published-mcps-in-dev-portal.png)
 
 AI agents can discover and understand your organization's API Portal and Hub through an `llms.txt` file. API Portal and MCP Hub automatically generates an `llms.txt` for your organization with information about the available APIs and MCP servers. You can add further information to it.
 
@@ -195,7 +195,7 @@ To verify that the `llms.txt` file contains the two MCP servers you have publish
 
 You can also open the `llms.txt` preview in another tab to see the current `llms.txt`. To add more information, configure the portal name and description. The preview changes as you add these information. Then click **Publish** to publish the updated `llms.txt`.
 
-![The `llms.txt` file of API Portal and MCP Hub for an organization](../assets/img/guides/ai-and-mcp/mcp-catalog/llm-instructions-dev-portal.png)
+![The `llms.txt` file of API Portal and MCP Hub for an organization](../../assets/img/guides/ai-and-mcp/mcp-catalog/llm-instructions-dev-portal.png)
 
 ## Troubleshooting
 

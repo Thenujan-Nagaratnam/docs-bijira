@@ -128,7 +128,7 @@ The AI gateway is the runtime that hosts your proxy and enforces the MCP Access 
 1. Click **AI Gateways** > **+ Add AI Gateway**, and enter a name. Leave **URL** at its default, `https://localhost:8443`, and select an associated environment.
 2. Click **Add Gateway**. On the gateway detail page, open **Get Started**, select the **Docker** or **Quick Start** instructions, and follow the displayed commands to download the gateway and configure its registration credentials. The commands provide the registration token and other required values; do not commit them to source control.
 
-    ![AI gateway Get Started panel with the Docker tab selected, showing the download command for Step 1 and the registration note for Step 2](../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/ai-gateway-docker-setup-commands.png){.cInlineImage-full}
+    ![AI gateway Get Started panel with the Docker tab selected, showing the download command for Step 1 and the registration note for Step 2](../../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/ai-gateway-docker-setup-commands.png){.cInlineImage-full}
 
 3. Start the gateway using the command shown in the setup instructions:
 
@@ -149,7 +149,7 @@ The AI gateway is the runtime that hosts your proxy and enforces the MCP Access 
 1. Click **MCP Proxies** > **+ Create MCP Proxy**.
 2. Click **Try with Sample URL** to point the proxy at a public reference MCP server hosted by WSO2, so you don't need to stand up your own server to follow along. It exercises the full MCP protocol (tools, resources, and prompts) with a small pizza-ordering scenario. AI Workspace fetches its capabilities immediately.
 
-    ![Create MCP Proxy from Endpoint page with the sample URL filled in and the discovered server showing 4 tools, 10 resources, and 3 prompts](../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/mcp-proxy-sample-url-fetch-success.png){.cInlineImage-full}
+    ![Create MCP Proxy from Endpoint page with the sample URL filled in and the discovered server showing 4 tools, 10 resources, and 3 prompts](../../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/mcp-proxy-sample-url-fetch-success.png){.cInlineImage-full}
 
     !!! note "Pointing at your own MCP server instead"
         Enter its URL in the **MCP Proxy Endpoint URL** field instead of clicking **Try with Sample URL**. If that server runs locally in Docker on the same machine as AI Workspace, remember that `localhost` inside a container refers to the container, not your host. Use `host.docker.internal` to reach the host instead (on Linux, this needs an explicit mapping such as `extra_hosts: ["host.docker.internal:host-gateway"]` in Docker Compose, available on Docker Engine 20.10 and later). If AI Workspace can't reach your server at all, for example because it only runs on your local network, you can still continue and add its capabilities manually from the proxy's **Overview** tab afterward. The gateway, which calls the upstream server at request time, may succeed even when AI Workspace's own fetch step can't.
@@ -163,7 +163,7 @@ The AI gateway is the runtime that hosts your proxy and enforces the MCP Access 
     | **Context** | Leave the auto-generated value. |
     | **Target** | Leave it set to the endpoint URL from the previous step. |
 
-    ![Create MCP Proxy from Endpoint form with Name, Version, Context, and Target fields filled in](../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/create-mcp-proxy-form-filled.png){.cInlineImage-full}
+    ![Create MCP Proxy from Endpoint form with Name, Version, Context, and Target fields filled in](../../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/create-mcp-proxy-form-filled.png){.cInlineImage-full}
 
 **Expected result:** The proxy is created and its detail page opens, showing **Overview** and **Policies** tabs. The **Overview** tab lists the same discovered capabilities shown in the previous step.
 
@@ -171,7 +171,7 @@ The AI gateway is the runtime that hosts your proxy and enforces the MCP Access 
 
 1. On the proxy's **Policies** tab, click **Add Policies**, then select **MCP Access Control** from the list.
 
-    ![Add Policies list showing MCP Access Control alongside MCP Authentication, MCP Authorization, and other available policies](../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/add-policies-list.png){.cInlineImage-full}
+    ![Add Policies list showing MCP Access Control alongside MCP Authentication, MCP Authorization, and other available policies](../../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/add-policies-list.png){.cInlineImage-full}
 
 2. Expand **tools** and configure it:
 
@@ -182,7 +182,7 @@ The AI gateway is the runtime that hosts your proxy and enforces the MCP Access 
 
     This guide leaves **resources** and **prompts** collapsed to match a proxy that's meant to expose tools only. AI Workspace still submits an explicit `mode: deny` with no exceptions for a collapsed capability type, so this denies all of that type rather than leaving it unrestricted. The sample server does expose 10 resources and 3 prompts, and this configuration denies all of them; if your own proxy needs to expose resources or prompts too, expand that section and set its `mode` explicitly (`allow` with no exceptions to leave it fully open, or `deny` with the reviewed names as exceptions).
 
-    ![MCP Access Control policy panel with the tools section expanded, mode set to deny, and echo added as an exception tag](../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/mcp-access-control-echo-exception.png){.cInlineImage-full}
+    ![MCP Access Control policy panel with the tools section expanded, mode set to deny, and echo added as an exception tag](../../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/mcp-access-control-echo-exception.png){.cInlineImage-full}
 
 3. Click **Add**, then click the page-level **Save** button.
 
@@ -200,13 +200,13 @@ Every tool is denied except the ones you listed as exceptions. Anything you didn
 !!! note
     The gateway must be **Active** before you can deploy the proxy. If the gateway shows **Not Active**, the **Deploy** action is disabled until the gateway runtime connects to AI Workspace.
 
-![Deploy to Gateway page showing the gateway with an Active deployment status and deployment history](../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/deploy-to-gateway-active-apipexamples.png){.cInlineImage-full}
+![Deploy to Gateway page showing the gateway with an Active deployment status and deployment history](../../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/deploy-to-gateway-active-apipexamples.png){.cInlineImage-full}
 
 ### Step 6: Get the MCP Proxy URL
 
 On the proxy's **Overview** tab, select your gateway from the **Gateways** dropdown to reveal the invoke URL, then copy it.
 
-![Overview tab showing the MCP Proxy URL panel with a Gateways dropdown, Copy URL button, and the Capabilities panel below it](../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/proxy-overview-url-and-capabilities.png){.cInlineImage-full}
+![Overview tab showing the MCP Proxy URL panel with a Gateways dropdown, Copy URL button, and the Capabilities panel below it](../../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/proxy-overview-url-and-capabilities.png){.cInlineImage-full}
 
 The URL follows the pattern `https://<gateway-host>/<proxy-context>/mcp`. Per the tip in Step 2, use the gateway's plain HTTP port instead only if the gateway runs on `localhost` and isn't reachable over a network. For a gateway reachable from another host, keep using HTTPS and configure `curl` to trust its certificate rather than skipping verification.
 

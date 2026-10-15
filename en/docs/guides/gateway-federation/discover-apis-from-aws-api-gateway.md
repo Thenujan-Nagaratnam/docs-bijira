@@ -174,11 +174,11 @@ Now that you have AWS credentials, register AWS API Gateway as a Third party gat
 
 7. Click **Add**.
 
-    ![Add Third Party Gateway form with gateway name, region, stage, access key, and secret key fields](../assets/img/guides/gateway-federation/add-third-party-gateway.png){.cInlineImage-full}
+    ![Add Third Party Gateway form with gateway name, region, stage, access key, and secret key fields](../../assets/img/guides/gateway-federation/add-third-party-gateway.png){.cInlineImage-full}
 
 **Expected result:** The external gateway `productionawsapigateway` appears in the Third Party Gateway list. API Platform can now query this gateway during discovery.
 
-![Third Party Gateway listing showing productionawsapigateway entry](../assets/img/guides/gateway-federation/third-party-gateway-listing.png){.cInlineImage-full}
+![Third Party Gateway listing showing productionawsapigateway entry](../../assets/img/guides/gateway-federation/third-party-gateway-listing.png){.cInlineImage-full}
 
 ---
 
@@ -192,7 +192,7 @@ With the third party gateway registered, you can discover the REST APIs it hosts
 2. On the project overview page, click **Create**.
 3. Click **Discover APIs**.
 
-    ![Create New page showing Discover APIs option](../assets/img/guides/gateway-federation/discover-apis.png){.cInlineImage-full}
+    ![Create New page showing Discover APIs option](../../assets/img/guides/gateway-federation/discover-apis.png){.cInlineImage-full}
 
 **Expected result:** The **Select Gateways for API Discovery** page opens and shows the list of registered third party gateways.
 
@@ -204,7 +204,7 @@ With the third party gateway registered, you can discover the REST APIs it hosts
 
 2. Click **Discover APIs from Gateways**.
 
-    ![Select Gateways page with productionawsapigateway checked and Discover APIs from Gateways button](../assets/img/guides/gateway-federation/discover-apis-from-gateways.png){.cInlineImage-full}
+    ![Select Gateways page with productionawsapigateway checked and Discover APIs from Gateways button](../../assets/img/guides/gateway-federation/discover-apis-from-gateways.png){.cInlineImage-full}
 
 **Expected result:** API Platform queries the selected gateways and displays a table of discovered REST APIs.
 
@@ -214,13 +214,13 @@ The discovery results table lists every API found on the selected gateways, alon
 
 1. Review the list of discovered APIs.
 2. For each API you want to add to your project, click **Create** next to the API name. API Platform creates a reference to that API in the project.
-   ![Discovered APIs table listing APIs found on the selected gateways with a Create button for each](../assets/img/guides/gateway-federation/create-api.png){.cInlineImage-full}
+   ![Discovered APIs table listing APIs found on the selected gateways with a Create button for each](../../assets/img/guides/gateway-federation/create-api.png){.cInlineImage-full}
 3. Repeat for all APIs you want to add.
 4. When done, navigate to the project **Overview** page to confirm the APIs appear there.
 
 **Expected result:** Each API you clicked **Create** for is now listed in the project overview.
 
-![Project overview showing the discovered API listed](../assets/img/guides/gateway-federation/created-api-list.png){.cInlineImage-full}
+![Project overview showing the discovered API listed](../../assets/img/guides/gateway-federation/created-api-list.png){.cInlineImage-full}
 
 ---
 
@@ -238,7 +238,7 @@ Each API added from a connected third party gateway has its own overview page in
 
 **Expected result:** The compliance dashboard opens and shows the policy compliance status for the API.
 
-![Compliance dashboard showing policy compliance status for the discovered API](../assets/img/guides/gateway-federation/compliance-dashboard.png){.cInlineImage-full}
+![Compliance dashboard showing policy compliance status for the discovered API](../../assets/img/guides/gateway-federation/compliance-dashboard.png){.cInlineImage-full}
 
 ---
 
@@ -252,7 +252,7 @@ Publishing the API makes it discoverable in the Developer Portal so developers c
 
 **Expected result:** The lifecycle state changes to **Published**. The API is now visible in the Developer Portal. Developers who invoke it send requests directly to the AWS API Gateway.
 
-![Developer Portal showing the published API in the catalog](../assets/img/guides/gateway-federation/publish-to-devportal.png){.cInlineImage-full}
+![Developer Portal showing the published API in the catalog](../../assets/img/guides/gateway-federation/publish-to-devportal.png){.cInlineImage-full}
 
 ---
 

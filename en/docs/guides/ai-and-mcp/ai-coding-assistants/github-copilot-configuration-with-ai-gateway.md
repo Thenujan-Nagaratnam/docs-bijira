@@ -54,7 +54,7 @@ When a developer selects a model configured with BYOK, GitHub Copilot sends the 
 
 The following diagram shows how a GitHub Copilot request travels through the WSO2 AI Gateway.
 
-[![GitHub Copilot CLI and VS Code sending requests through the App LLM Proxy and OpenAI LLM provider on the WSO2 AI Gateway to OpenAI](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/request-flow.svg)](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/request-flow.svg)
+[![GitHub Copilot CLI and VS Code sending requests through the App LLM Proxy and OpenAI LLM provider on the WSO2 AI Gateway to OpenAI](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/request-flow.svg)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/request-flow.svg)
 
 1. **GitHub Copilot to the App LLM Proxy.** GitHub Copilot CLI or GitHub Copilot in VS Code sends the request to the App LLM Proxy, with the WSO2 API Platform API key in the `X-API-Key` header.
 2. **Policy enforcement.** The App LLM Proxy checks the API key, applies the policies attached to the proxy, such as guardrails, rate limits, and prompt decorators, and publishes analytics.
@@ -106,7 +106,7 @@ For more information, see [Set up an AI Gateway in AI Workspace](../../../cloud/
 
 Once the gateway status shows as **Active**, continue to Step 2. The following screenshot shows an active AI Gateway.
 
-[![AI Workspace gateway page showing the gateway as Active and connected successfully](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/ai-gateway-active.png)](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/ai-gateway-active.png)
+[![AI Workspace gateway page showing the gateway as Active and connected successfully](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/ai-gateway-active.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/ai-gateway-active.png)
 
 ---
 
@@ -136,7 +136,7 @@ Once the gateway status shows as **Active**, continue to Step 2. The following s
 
 The OpenAI LLM provider is now deployed to the selected AI Gateway, as shown in the following screenshot.
 
-[![Deploy to Gateway page showing the OpenAI LLM provider deployed to the AI Gateway with Active deployment status](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/openai-provider-deployed.png)](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/openai-provider-deployed.png)
+[![Deploy to Gateway page showing the OpenAI LLM provider deployed to the AI Gateway with Active deployment status](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/openai-provider-deployed.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/openai-provider-deployed.png)
 
 ---
 
@@ -350,7 +350,7 @@ WSO2 AI Gateway provides integrated analytics, powered by Moesif.
 
 To view the analytics, click **Insights** in the left navigation panel of AI Workspace.
 
-[![AI Workspace Insights page showing unique users, total requests, errors, and LLM traffic for GitHub Copilot requests](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/insights-overview.png)](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/insights-overview.png)
+[![AI Workspace Insights page showing unique users, total requests, errors, and LLM traffic for GitHub Copilot requests](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/insights-overview.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/insights-overview.png)
 
 For more information, see [Integrate with Moesif](https://wso2.com/api-platform/docs/monitoring-and-insights/integrate-bijira-with-moesif/).
 
@@ -370,7 +370,7 @@ For example, you can configure a **PII Masking Regex Guardrail** in the request 
 
 The following screenshot shows Copilot Chat in VS Code responding to a prompt that contains an email address and a phone number, with the PII Masking Regex Guardrail configured to redact PII.
 
-[![Copilot Chat in VS Code showing the email address and phone number replaced with asterisks after the PII masking guardrail redacts them](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/guardrail-pii-redacted.png)](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/guardrail-pii-redacted.png)
+[![Copilot Chat in VS Code showing the email address and phone number replaced with asterisks after the PII masking guardrail redacts them](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/guardrail-pii-redacted.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/guardrail-pii-redacted.png)
 
 For more information, see [PII masking regex guardrail](https://wso2.com/api-platform/docs/ai-gateway/llm/guardrails/pii-masking-regex/).
 
@@ -386,7 +386,7 @@ This helps control token consumption and avoid unexpected costs.
 
 The following screenshot shows GitHub Copilot CLI receiving a rate limit response after the configured limit is reached.
 
-[![GitHub Copilot CLI showing a 429 rate limit exceeded message after the rate limit is reached](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/rate-limit-exceeded.png)](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/rate-limit-exceeded.png)
+[![GitHub Copilot CLI showing a 429 rate limit exceeded message after the rate limit is reached](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/rate-limit-exceeded.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/rate-limit-exceeded.png)
 
 For more information, see [Policies overview](https://wso2.com/api-platform/docs/ai-workspace/policies/overview/).
 
@@ -400,6 +400,6 @@ For example, you can configure a Prompt Decorator in the request flow to append 
 
 The following screenshot shows Copilot Chat in VS Code responding to the same prompt twice. The first response is without a Prompt Decorator. The second response is with a Prompt Decorator configured to append the following decoration: "Answer in one short sentence."
 
-[![Copilot Chat in VS Code showing a long bulleted response without the Prompt Decorator and a one-sentence response after the Prompt Decorator is applied](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/prompt-decorator-before-after.png)](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/prompt-decorator-before-after.png)
+[![Copilot Chat in VS Code showing a long bulleted response without the Prompt Decorator and a one-sentence response after the Prompt Decorator is applied](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/prompt-decorator-before-after.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/github-copilot/prompt-decorator-before-after.png)
 
 For more information, see [Prompt decorator](https://wso2.com/api-platform/docs/ai-gateway/llm/prompt-management/prompt-decorator/).

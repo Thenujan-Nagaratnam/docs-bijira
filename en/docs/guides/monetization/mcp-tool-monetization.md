@@ -113,7 +113,7 @@ curl http://localhost:9094/health
 
 **Expected result:** The health endpoint returns a success response, confirming the gateway is up.
 
-![Health endpoint returns success response](../assets/img/monetization/mcp-monetization/health-success.png){.cInlineImage-full}
+![Health endpoint returns success response](../../assets/img/monetization/mcp-monetization/health-success.png){.cInlineImage-full}
 
 
 !!! tip
@@ -255,7 +255,7 @@ In Moesif, define a billing meter that counts MCP tool calls. This is where you 
 
 **Expected result:** The meter aggregates incoming MCP tool-call events into a billable quantity per consumer.
 
-![Billed MCP tool calls](../assets/img/monetization/mcp-monetization/billing-meter.png){.cInlineImage-full}
+![Billed MCP tool calls](../../assets/img/monetization/mcp-monetization/billing-meter.png){.cInlineImage-full}
 
 
 

@@ -79,7 +79,7 @@ Navigate to the MCP Hub and use the search field to find the required MCP server
 
 **Expected result:** The matching MCP servers appear in the results, along with their available tools, such as **Customer Accounts**.
 
-![Serach results](../assets/img/guides/ai-and-mcp/s3/search-mcp.png){.cInlineImage-full}
+![Serach results](../../assets/img/guides/ai-and-mcp/s3/search-mcp.png){.cInlineImage-full}
 
 
 ---
@@ -98,7 +98,7 @@ Click **Customer Accounts MCP** to open it. Then review the **Tools** section an
 | `list_open_deals` | List all open deals for a customer account |
 | `get_deal_value` | Return the current value of a deal by deal ID |
 
-![Tools section](../assets/img/guides/ai-and-mcp/s3/tools-section.png){.cInlineImage-full}
+![Tools section](../../assets/img/guides/ai-and-mcp/s3/tools-section.png){.cInlineImage-full}
 
 The schemas confirm what Claude needs to provide to invoke each tool.
 
@@ -110,7 +110,7 @@ Navigate to the **Applications** tab in the left-side menu. Click **Create**, an
 
 **Expected result:** The application is created and listed under the **Applications** tab.
 
-![Create application](../assets/img/guides/ai-and-mcp/s3/create-app.png){.cInlineImage-full}
+![Create application](../../assets/img/guides/ai-and-mcp/s3/create-app.png){.cInlineImage-full}
 
 ---
 
@@ -118,11 +118,11 @@ Navigate to the **Applications** tab in the left-side menu. Click **Create**, an
 
 1. Click the newly created application to open it. Go to **Manage Keys**.
 
-   ![Manage keys](../assets/img/guides/ai-and-mcp/s3/manage-keys.png){.cInlineImage-full}
+   ![Manage keys](../../assets/img/guides/ai-and-mcp/s3/manage-keys.png){.cInlineImage-full}
 
 2. Click **Generate Key** to generate the consumer key and consumer secret.
 
-   ![Generate key](../assets/img/guides/ai-and-mcp/s3/generate-key.png){.cInlineImage-full}
+   ![Generate key](../../assets/img/guides/ai-and-mcp/s3/generate-key.png){.cInlineImage-full}
 
 **Expected result:** The consumer key and consumer secret are generated and displayed in the UI.
 
@@ -134,7 +134,7 @@ Click **Generate** to obtain an access token. Copy the access token and save it 
 
 **Expected result:** The access token is generated and displayed.
 
-![Access token](../assets/img/guides/ai-and-mcp/s3/access-token.png){.cInlineImage-full}
+![Access token](../../assets/img/guides/ai-and-mcp/s3/access-token.png){.cInlineImage-full}
 
 ---
 
@@ -144,7 +144,7 @@ Click **Generate** to obtain an access token. Copy the access token and save it 
 
 2. Open Claude Desktop, then go to **Settings → Developer** and click **Edit Config**. Open the configuration file in VS Code or any text editor.
    
-   ![Claude developer settings](../assets/img/guides/ai-and-mcp/s3/claude-developer-settings.png){.cInlineImage-full}
+   ![Claude developer settings](../../assets/img/guides/ai-and-mcp/s3/claude-developer-settings.png){.cInlineImage-full}
 
 3. Add the following MCP server configuration, including the MCP Server URL and the access token obtained in Step 5, then save the file.
 
@@ -168,13 +168,13 @@ Click **Generate** to obtain an access token. Copy the access token and save it 
 
 5. After restarting, click the **+** icon in the chat box, go to **Connectors**, and verify that the `customer-accounts` MCP server is enabled.
    
-   ![Claude connectors](../assets/img/guides/ai-and-mcp/s3/claude-connectors.png){.cInlineImage-full}
+   ![Claude connectors](../../assets/img/guides/ai-and-mcp/s3/claude-connectors.png){.cInlineImage-full}
 
 You can now ask Claude to use the tools exposed by this MCP server to answer your questions.
 
 **Expected result:** Claude provides answers to customer detail questions.
 
-![Claude using tools](../assets/img/guides/ai-and-mcp/s3/claude-using-tools.gif){.cInlineImage-full}
+![Claude using tools](../../assets/img/guides/ai-and-mcp/s3/claude-using-tools.gif){.cInlineImage-full}
 
 ---
 

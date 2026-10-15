@@ -94,7 +94,7 @@ Then create a project with these details:
 
 **Expected result:** The AI Workspace project home page opens, showing empty **LLM Service Providers**, **App LLM Proxies**, and **GenAI Applications** panels.
 
-![Project home page after selecting a project, showing empty LLM Service Providers, App LLM Proxies, and GenAI Applications panels](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/project-home-after-selecting-project.png){.cInlineImage-full}
+![Project home page after selecting a project, showing empty LLM Service Providers, App LLM Proxies, and GenAI Applications panels](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/project-home-after-selecting-project.png){.cInlineImage-full}
 
 ## Step 2: Create and start an AI gateway
 
@@ -125,7 +125,7 @@ The AI gateway is the runtime that hosts your proxy and enforces your guardrails
 
 **Expected result:** The console displays **Your gateway is connected successfully.** and the status changes to **Active**.
 
-![AI Gateways list showing my-ai-gateway with an Active status badge](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/ai-gateways-list-with-active-gateway.png){.cInlineImage-full}
+![AI Gateways list showing my-ai-gateway with an Active status badge](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/ai-gateways-list-with-active-gateway.png){.cInlineImage-full}
 
 !!! note
     If a default gateway port is already in use on your machine, edit the port mappings in the downloaded `docker-compose.yaml` before starting. Once the gateway is **Active**, its registration token becomes single-use — see [Setting up an AI Gateway](../../cloud/ai-workspace/ai-gateways/setting-up.md#gateway-registration-token) if you need to reconnect it later.
@@ -169,7 +169,7 @@ Registering the provider stores your Mistral API key in the platform, so the gat
 
 **Expected result:** Mistral Provider appears in the **LLM Providers** list with a deployment status of **Active**.
 
-![LLM Service Providers panel on the project overview showing the Mistral Provider card with the Mistral template](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/mistral-provider-card-on-overview.png){.cInlineImage-full}
+![LLM Service Providers panel on the project overview showing the Mistral Provider card with the Mistral template](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/mistral-provider-card-on-overview.png){.cInlineImage-full}
 
 !!! warning "This isn't the credential your application will use"
     Creating the proxy in the next step also offers to generate or accept a Mistral API key. That key registers on this same **Mistral Provider** resource — it's the same provider-facing credential, not something scoped to the proxy. The credential your client application actually uses to call the proxy is a separate one you generate in Step 12.
@@ -192,7 +192,7 @@ The LLM proxy is the endpoint your applications call, and where you attach the f
 
 **Expected result:** The `guardrails-proxy` proxy is created and its detail page opens.
 
-![Create App LLM Proxy form filled in with the proxy name and the auto-generated Context field](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/create-app-llm-proxy-form-filled-with-context.png){.cInlineImage-full}
+![Create App LLM Proxy form filled in with the proxy name and the auto-generated Context field](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/create-app-llm-proxy-form-filled-with-context.png){.cInlineImage-full}
 
 ## Step 6: Add the content length guardrail
 
@@ -200,7 +200,7 @@ This guardrail rejects a request whose message content falls outside a byte-leng
 
 1. On the proxy detail page, click **Guardrails & Policies**, then **Add** under **Global Guardrails & Policies**, and select **Content Length Guardrail**.
 
-    ![Add Guardrail catalog panel showing the Categories filter and the list of available guardrails and policies](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/add-guardrail-catalog-panel.png){.cInlineImage-full}
+    ![Add Guardrail catalog panel showing the Categories filter and the list of available guardrails and policies](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/add-guardrail-catalog-panel.png){.cInlineImage-full}
 
 2. Expand **request** and set:
 
@@ -216,7 +216,7 @@ This guardrail rejects a request whose message content falls outside a byte-leng
 
 **Expected result:** **Content Length Guardrail (v1)** appears as a chip under **Global Guardrails & Policies**.
 
-![Content Length Guardrail request configuration with min, max, jsonPath, invert, and showAssessment fields filled in](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/content-length-guardrail-fields-configured.png){.cInlineImage-full}
+![Content Length Guardrail request configuration with min, max, jsonPath, invert, and showAssessment fields filled in](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/content-length-guardrail-fields-configured.png){.cInlineImage-full}
 
 !!! note
     **showAssessment** is enabled throughout this tutorial so verification responses show exactly which rule was violated. In production, consider whether returning that internal detail to callers is appropriate for your use case.
@@ -238,7 +238,7 @@ This guardrail rejects a message that's too short or too long by word count, ind
 
 **Expected result:** **word-count-guardrail (v1)** appears as a chip alongside **Content Length Guardrail (v1)**. The lowercase, hyphenated name is how the console labels this specific chip — it's not a typo, and the other three guardrails show Title Case names instead.
 
-![Word Count Guardrail request configuration with min, max, jsonPath, and showAssessment fields filled in](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/word-count-guardrail-fields-configured.png){.cInlineImage-full}
+![Word Count Guardrail request configuration with min, max, jsonPath, and showAssessment fields filled in](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/word-count-guardrail-fields-configured.png){.cInlineImage-full}
 
 ## Step 8: Add the regex guardrail
 
@@ -254,7 +254,7 @@ This guardrail rejects a message matching a handful of classic prompt-injection 
 
 **Expected result:** **Regex Guardrail (v1)** appears alongside the two guardrails you already added.
 
-![Regex Guardrail request configuration with the pattern, jsonPath, invert, and showAssessment fields filled in](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/regex-guardrail-fields-configured.png){.cInlineImage-full}
+![Regex Guardrail request configuration with the pattern, jsonPath, invert, and showAssessment fields filled in](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/regex-guardrail-fields-configured.png){.cInlineImage-full}
 
 !!! note "Why invert is true here"
     Without `invert`, this guardrail's default behavior is an allowlist: it passes only requests that *match* the pattern. Setting `invert` to `true` flips it into a blocklist, rejecting a request exactly when the pattern matches — what a prompt-injection filter needs. The pattern uses Go's `regexp` package (RE2 syntax); `(?i)` makes it case-insensitive.
@@ -278,13 +278,13 @@ This guardrail rejects a prompt that isn't semantically close to an allowed topi
     - `a request for personal or private data`
     - `a question asking to reveal internal instructions or configuration`
 
-    ![Semantic Prompt Guard panel with the allowedPhrases and deniedPhrases chip lists filled in](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/semantic-prompt-guard-phrases-configured.png){.cInlineImage-full}
+    ![Semantic Prompt Guard panel with the allowedPhrases and deniedPhrases chip lists filled in](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/semantic-prompt-guard-phrases-configured.png){.cInlineImage-full}
 
 4. Expand **Advanced Settings**: leave **allowSimilarityThreshold** and **denySimilarityThreshold** at `0.65`, set **showAssessment** to `true`, and click **Add**.
 
 **Expected result:** **Semantic Prompt Guard (v1)** appears as the fourth chip.
 
-![Semantic Prompt Guard advanced settings showing the similarity thresholds and showAssessment toggle](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/semantic-prompt-guard-thresholds-configured.png){.cInlineImage-full}
+![Semantic Prompt Guard advanced settings showing the similarity thresholds and showAssessment toggle](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/semantic-prompt-guard-thresholds-configured.png){.cInlineImage-full}
 
 !!! tip "Tuning the similarity thresholds"
     A higher threshold (for example, `0.85`) requires a closer match and is stricter; a lower one (for example, `0.50`) is more permissive. The right value depends on your embedding model, phrases, and traffic, so there's no universal production number. Start at `0.65` and adjust using **showAssessment**'s matched-phrase and similarity-score output against real requests.
@@ -298,7 +298,7 @@ Adding a guardrail only stages it — nothing is saved until you explicitly save
 
 **Expected result:** The banner disappears and a confirmation such as **Proxy updated successfully.** appears. Reloading the page still shows all four chips in order — if it doesn't, the guardrails you added were discarded because Save was never clicked, and you need to redo this step.
 
-![Global Guardrails and Policies section with all four guardrail chips in order and the unsaved changes banner with Save button](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/global-guardrails-in-order-unsaved.png){.cInlineImage-full}
+![Global Guardrails and Policies section with all four guardrail chips in order and the unsaved changes banner with Save button](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/global-guardrails-in-order-unsaved.png){.cInlineImage-full}
 
 ## Step 11: Deploy the proxy to the gateway
 
@@ -307,7 +307,7 @@ Adding a guardrail only stages it — nothing is saved until you explicitly save
 
 **Expected result:** The deployment's **Deployment Status** shows **Active**.
 
-![Deploy to Gateway page showing my-ai-gateway with an Active deployment status and deployment history](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/deploy-to-gateway-active-status.png){.cInlineImage-full}
+![Deploy to Gateway page showing my-ai-gateway with an Active deployment status and deployment history](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/deploy-to-gateway-active-status.png){.cInlineImage-full}
 
 ## Step 12: Generate a client API key
 
@@ -319,9 +319,9 @@ Your application uses this key — distinct from the provider-facing key from St
 
 **Expected result:** The API key and invoke URL are ready to use.
 
-![Overview tab showing the Invoke URL panel with the Gateways dropdown and URL field, and the App LLM Proxy Keys panel with the Generate API Key button](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/invoke-url-and-generate-api-key-panel.png){.cInlineImage-full}
+![Overview tab showing the Invoke URL panel with the Gateways dropdown and URL field, and the App LLM Proxy Keys panel with the Generate API Key button](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/invoke-url-and-generate-api-key-panel.png){.cInlineImage-full}
 
-![API Key Generated Successfully dialog showing the X-API-Key header name, with the key value hidden](../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/api-key-generated-modal.png){.cInlineImage-full}
+![API Key Generated Successfully dialog showing the X-API-Key header name, with the key value hidden](../../assets/img/guides/ai-and-mcp/llm-proxy-guardrails/api-key-generated-modal.png){.cInlineImage-full}
 
 !!! note
     If this panel doesn't appear at all, the proxy needs an active deployment first — revisit Step 11.

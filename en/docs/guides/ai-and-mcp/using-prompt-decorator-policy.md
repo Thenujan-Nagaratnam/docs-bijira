@@ -79,7 +79,7 @@ Once you're on the organization home page, create a project:
 
 **Expected result:** The project home page opens.
 
-![Project home page showing the Overview cards to create your first LLM provider, LLM proxy, MCP proxy, and GenAI application](../assets/img/guides/ai-and-mcp/prompt-decorator-policy/project-home-page.png){.cInlineImage-full}
+![Project home page showing the Overview cards to create your first LLM provider, LLM proxy, MCP proxy, and GenAI application](../../assets/img/guides/ai-and-mcp/prompt-decorator-policy/project-home-page.png){.cInlineImage-full}
 
 ## Step 2: Create and start an AI gateway
 
@@ -107,7 +107,7 @@ Open the **Get Started** guide on the gateway detail page and follow the instruc
 
 **Expected result:** The console displays **Your gateway is connected successfully.** and the gateway status changes to **Active**.
 
-![AI gateway detail page showing the gateway status as Active after successful connection](../assets/img/guides/ai-and-mcp/prompt-decorator-policy/gateway-connected.png){.cInlineImage-full}
+![AI gateway detail page showing the gateway status as Active after successful connection](../../assets/img/guides/ai-and-mcp/prompt-decorator-policy/gateway-connected.png){.cInlineImage-full}
 
 ## Step 3: Add Anthropic as an LLM provider
 
@@ -126,7 +126,7 @@ Registering the provider stores your Anthropic API key in the platform. Your app
 
 **Expected result:** Anthropic appears in the **LLM Providers** list with a deployment status of **Active**.
 
-![Creating an LLM provider and deploying it to the gateway until the deployment status shows Active](../assets/clips/ai-n-mcp/llm-provider-creation.gif){.cInlineImage-full}
+![Creating an LLM provider and deploying it to the gateway until the deployment status shows Active](../../assets/clips/ai-n-mcp/llm-provider-creation.gif){.cInlineImage-full}
 
 ## Step 4: Create the LLM proxy
 
@@ -148,7 +148,7 @@ The LLM proxy is the endpoint your applications call. It abstracts the provider 
 
 **Expected result:** The `persona-proxy` proxy is created and the proxy detail page opens.
 
-![Creating the persona-proxy App LLM proxy with its provider configuration until the proxy detail page opens](../assets/clips/ai-n-mcp/llm-proxy-creation.gif){.cInlineImage-full}
+![Creating the persona-proxy App LLM proxy with its provider configuration until the proxy detail page opens](../../assets/clips/ai-n-mcp/llm-proxy-creation.gif){.cInlineImage-full}
 
 ## Step 5: Add a prompt decorator policy
 
@@ -169,7 +169,7 @@ This policy prepends a persona system message to the `messages` array of every r
 
 **Expected result:** **Prompt Decorator** appears in the **Guardrails & Policies** tab as active. Every request to the proxy now carries the persona system message before it reaches OpenAI.
 
-![Adding and configuring the Prompt Decorator policy on the Guardrails & Policies tab until it appears as active](../assets/img/guides/ai-and-mcp/prompt-decorator-policy/add-prompt-decorator.gif){.cInlineImage-full}
+![Adding and configuring the Prompt Decorator policy on the Guardrails & Policies tab until it appears as active](../../assets/img/guides/ai-and-mcp/prompt-decorator-policy/add-prompt-decorator.gif){.cInlineImage-full}
 
 !!! note "How the fields work together"
     - **promptDecoratorConfig** holds the content to inject as a JSON object. Because `jsonPath` targets the `messages` array, the `decoration` value must be an array of message objects, each with a `role` and a `content`. This is called *chat decoration*.
@@ -188,7 +188,7 @@ Deploying pushes your proxy configuration, including the prompt decorator policy
 
 **Expected result:** The gateway card shows **Deployment Status** as **Active**.
 
-![AI proxy detail page showing the gateway deployment status as Active](../assets/img/guides/ai-and-mcp/prompt-decorator-policy/proxy-deployed.png){.cInlineImage-full}
+![AI proxy detail page showing the gateway deployment status as Active](../../assets/img/guides/ai-and-mcp/prompt-decorator-policy/proxy-deployed.png){.cInlineImage-full}
 
 ## Step 7: Generate an API key
 

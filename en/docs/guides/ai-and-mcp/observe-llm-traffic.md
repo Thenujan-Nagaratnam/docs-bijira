@@ -95,7 +95,7 @@ Send a few requests, including one that fails, so both the traffic panels and th
 
 **Expected result:** The **Overview** dashboard opens with summary tiles above a set of charts.
 
-![Insights Overview dashboard showing summary tiles for total requests, total errors, and LLM traffic](../assets/img/guides/ai-and-mcp/s5/insights-overview.png){.cInlineImage-full}
+![Insights Overview dashboard showing summary tiles for total requests, total errors, and LLM traffic](../../assets/img/guides/ai-and-mcp/s5/insights-overview.png){.cInlineImage-full}
 
 ## Step 3: Check overall health on the Overview dashboard
 
@@ -106,7 +106,7 @@ The Overview dashboard answers one question: is anything wrong right now? Start 
 3. Check **Average Latency over Time**. A single tall spike is usually one slow request and can be ignored. A line that rises and stays high means something changed, such as the model slowing down or the gateway coming under load.
 4. Use **Traffic Breakdown**, **Top APIs Across Platform**, and **Top Applications** to see which proxies and which consumers are generating the load.
 
-![Top APIs Across Platform naming each proxy beside a Traffic Breakdown donut](../assets/img/guides/ai-and-mcp/s5/insights-traffic-panels.png){.cInlineImage-full}
+![Top APIs Across Platform naming each proxy beside a Traffic Breakdown donut](../../assets/img/guides/ai-and-mcp/s5/insights-traffic-panels.png){.cInlineImage-full}
 
 The Overview dashboard also charts traffic intensity by day and hour, client platforms and user agents, new consumer registrations, and request origin on a geographic map. See [Insights overview](../../cloud/monitoring-and-insights/insights.md) for the full list.
 
@@ -119,7 +119,7 @@ Five summary tiles sit at the top. **Unique Consumers**, **Total Requests** and 
 - **Token Usage**: total tokens consumed across the window.
 - **Estimated Cost**: what that consumption is worth at provider pricing.
 
-![Summary tiles on the LLM APIs Analytics dashboard showing unique consumers, total requests, average error rate, token usage, and estimated cost](../assets/img/guides/ai-and-mcp/s5/insights-llm-analytics.png){.cInlineImage-full}
+![Summary tiles on the LLM APIs Analytics dashboard showing unique consumers, total requests, average error rate, token usage, and estimated cost](../../assets/img/guides/ai-and-mcp/s5/insights-llm-analytics.png){.cInlineImage-full}
 
 Then work down the panels:
 

@@ -230,7 +230,7 @@ curl -X POST http://localhost:5000/mcp \
 3. Enter your MCP server URL, ending in `/mcp`. AI Workspace connects to it and
    lists the tools it finds. Wait for `place_an_order` to appear before continuing.
 
-    ![Create MCP Proxy from Endpoint screen with the MCP server URL entered and place_an_order listed under Tools with its description](../assets/img/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool/create-mcp-proxy.png)
+    ![Create MCP Proxy from Endpoint screen with the MCP server URL entered and place_an_order listed under Tools with its description](../../assets/img/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool/create-mcp-proxy.png)
 
     If your MCP server requires credentials, enter them under **Advanced
     Configurations** before this step. AI Workspace uses them to fetch the tools.
@@ -246,7 +246,7 @@ curl -X POST http://localhost:5000/mcp \
     | **Context** | The base path for the proxy endpoint |
     | **Target** | Filled in from the URL you entered |
 
-    ![Proxy details form showing Name, Version, Description, Context, and the Target URL](../assets/img/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool/mcp-proxy-details.png)
+    ![Proxy details form showing Name, Version, Description, Context, and the Target URL](../../assets/img/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool/mcp-proxy-details.png)
 
 6. Click **Create**.
 
@@ -256,7 +256,7 @@ The proxy's **Overview** tab lists the capabilities it exposes. One tool,
 `place_an_order`, with the description you wrote in the workflow. Click
 **View Schema** to see the inputs it takes.
 
-![MCP proxy overview showing Place an Order with one tool, place_an_order, its description, and a View Schema button](../assets/img/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool/mcp-proxy-created.png)
+![MCP proxy overview showing Place an Order with one tool, place_an_order, its description, and a View Schema button](../../assets/img/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool/mcp-proxy-created.png)
 
 Nothing here is typed into a form. The tool, its description and its schema all
 come from the Arazzo specification.
@@ -269,7 +269,7 @@ A proxy isn't reachable until you deploy it.
 2. Find the gateway you want, and click **Deploy**.
 3. Expand the gateway card to confirm the **Deployment Status** is Active.
 
-![Deploy to Gateway page showing local-test-gateway with Deployment Status Active and an entry in the API Deployment History](../assets/img/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool/deploy-to-gateway.png)
+![Deploy to Gateway page showing local-test-gateway with Deployment Status Active and an entry in the API Deployment History](../../assets/img/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool/deploy-to-gateway.png)
 
 The proxy endpoint follows this format:
 

@@ -295,7 +295,7 @@ Because the authentication policy identifies the developer behind every request,
 
 The following example shows Moesif being used to view analytics.
 
-[![Moesif Overview dashboard showing unique users, total requests, errors, and LLM traffic metrics with time-series chart](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/analytics-example.png)](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/analytics-example.png)
+[![Moesif Overview dashboard showing unique users, total requests, errors, and LLM traffic metrics with time-series chart](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/analytics-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/analytics-example.png)
 
 For more information, see [Analytics overview](../../../analytics/overview.md).
 
@@ -311,7 +311,7 @@ By applying guardrails, you can enforce security and compliance policies such as
 
 For example, a **PII Masking Regex Guardrail** can be configured in the request flow to prevent Personally Identifiable Information (PII) from reaching Anthropic API. If a user submits a prompt containing PII, the guardrail evaluates the request against defined patterns and redacts them before they reach Anthropic API.
 
-[![Claude Code terminal showing phone number redacted as asterisks after PII masking guardrail intercepts prompt](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-guardrail-redacted-example.png)](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-guardrail-redacted-example.png)
+[![Claude Code terminal showing phone number redacted as asterisks after PII masking guardrail intercepts prompt](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-guardrail-redacted-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-guardrail-redacted-example.png)
 
 For more information, see [PII Masking Regex guardrail](https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex).
 
@@ -323,7 +323,7 @@ For example, you can create an AI subscription policy with a limited request cou
 
 A Claude subscription charges a flat fee rather than a per-token rate, so use these limits to protect shared capacity across your organization rather than to control spend.
 
-[![Claude Code terminal showing prompt retrying with message "Retrying in 2s attempt 6/10" after rate limit reached](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-rate-limit-example.png)](../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-rate-limit-example.png)
+[![Claude Code terminal showing prompt retrying with message "Retrying in 2s attempt 6/10" after rate limit reached](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-rate-limit-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-rate-limit-example.png)
 
 For more information, see [Policies overview](../../../ai-workspace/1.0.0/policies/overview.md).
 

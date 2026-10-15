@@ -76,7 +76,7 @@ Once you're on the organization home page, create a project:
 
 **Expected result:** The project home page opens.
 
-![Project home page after creating the organization and project](../assets/img/monetization/api-monetization/project-overview.png){.cInlineImage-full}
+![Project home page after creating the organization and project](../../assets/img/monetization/api-monetization/project-overview.png){.cInlineImage-full}
 
 ---
 
@@ -96,7 +96,7 @@ Create an API proxy from the Reading List OpenAPI spec. This is the endpoint the
 
 **Expected result:** The API proxy is created with operations auto-generated from the Reading List API spec.
 
-![API proxy created from the Reading List OpenAPI contract with operations auto-generated](../assets/clips/monetization/api-monetization/api_creation.gif){.cInlineImage-full}
+![API proxy created from the Reading List OpenAPI contract with operations auto-generated](../../assets/clips/monetization/api-monetization/api_creation.gif){.cInlineImage-full}
 
 Then deploy the proxy to make it reachable:
 
@@ -106,7 +106,7 @@ Then deploy the proxy to make it reachable:
 
 **Expected result:** The **Production** card shows **Deployment Status** as **Active**.
 
-![Deploy page showing Production card with Deployment Status as Active after API proxy promotion](../assets/clips/monetization/api-monetization/api_promote_to_prod.gif){.cInlineImage-full}
+![Deploy page showing Production card with Deployment Status as Active after API proxy promotion](../../assets/clips/monetization/api-monetization/api_promote_to_prod.gif){.cInlineImage-full}
 
 ---
 
@@ -123,7 +123,7 @@ Connect your Stripe account at the organization level. The platform uses these c
 
 **Expected result:** Your Stripe account is connected and ready to process payments for API subscriptions.
 
-![Add Stripe Credentials panel showing Secret Key and Publishable Key fields](../assets/clips/monetization/api-monetization/add_stripe_creds.gif){.cInlineImage-full}
+![Add Stripe Credentials panel showing Secret Key and Publishable Key fields](../../assets/clips/monetization/api-monetization/add_stripe_creds.gif){.cInlineImage-full}
 
 !!! note
     You can use a Standard secret key or a Restricted secret key. For Restricted keys, see [Getting Started with API Monetization](../../cloud/api-monetization/getting-started.md) for the minimum permissions required.
@@ -153,7 +153,7 @@ Create a Pay-as-you-go subscription plan that charges consumers per API request.
 
 **Expected result:** The Pay-as-you-go plan appears in the Subscription Plans list.
 
-![Subscription Plans list showing the Pay-as-you-go plan after creation](../assets/img/monetization/api-monetization/subscription_plans.png){.cInlineImage-full}
+![Subscription Plans list showing the Pay-as-you-go plan after creation](../../assets/img/monetization/api-monetization/subscription_plans.png){.cInlineImage-full}
 
 !!! note
     In usage-based models, a unit equals one API request. With the Unit model, the total charge is request count × unit price. For tiered pricing, use Volume or Graduated instead.
@@ -170,7 +170,7 @@ Enable the Pay-as-you-go plan on the Reading List API so consumers can discover 
 
 **Expected result:** The Pay-as-you-go plan is active on the API and appears in the Developer Portal subscription dialog.
 
-![Monetize page showing the Pay-as-you-go plan toggle enabled on the Reading List API](../assets/clips/monetization/api-monetization/enable_plan.gif){.cInlineImage-full}
+![Monetize page showing the Pay-as-you-go plan toggle enabled on the Reading List API](../../assets/clips/monetization/api-monetization/enable_plan.gif){.cInlineImage-full}
 
 !!! tip
     You can enable multiple plans on the same API to offer tiered pricing — for example, a flat-rate tier alongside this pay-as-you-go tier — without managing separate APIs.
@@ -187,7 +187,7 @@ Publish the API so consumers can discover it, review available plans, and subscr
 
 **Expected result:** The lifecycle state changes to **Published** and the API appears in the Developer Portal.
 
-![Publish API dialog showing the Reading List API details before confirming publication](../assets/clips/monetization/api-monetization/publish_api.gif){.cInlineImage-full}
+![Publish API dialog showing the Reading List API details before confirming publication](../../assets/clips/monetization/api-monetization/publish_api.gif){.cInlineImage-full}
 
 ---
 
@@ -204,7 +204,7 @@ As an API consumer, subscribe to the Pay-as-you-go plan through the Developer Po
 
 **Expected result:** The application is subscribed to the Reading List API under the Pay-as-you-go plan. The Stripe checkout confirmation is shown.
 
-![Stripe checkout confirmation after subscribing Reading List App to the Pay-as-you-go plan](../assets/clips/monetization/api-monetization/subscribe_api.gif){.cInlineImage-full}
+![Stripe checkout confirmation after subscribing Reading List App to the Pay-as-you-go plan](../../assets/clips/monetization/api-monetization/subscribe_api.gif){.cInlineImage-full}
 
 !!! note
     Payments are processed by Stripe, and WSO2 API Platform doesn't store your payment details. If your Stripe account is in test mode, use the test card `4242 4242 4242 4242` with any future expiry date and any CVC to complete checkout.
@@ -223,7 +223,7 @@ Generate OAuth2 credentials for your application so you can make authenticated A
 
 **Expected result:** You have an access token ready to use in API calls.
 
-![Manage Keys page showing Consumer Key, Consumer Secret, and generated access token for Reading List App](../assets/clips/monetization/api-monetization/generate_application_key.gif){.cInlineImage-full}
+![Manage Keys page showing Consumer Key, Consumer Secret, and generated access token for Reading List App](../../assets/clips/monetization/api-monetization/generate_application_key.gif){.cInlineImage-full}
 
 !!! note
     Bearer tokens expire after 3600 seconds by default. To extend the lifetime, click **Modify** on the Manage Keys page and increase the **Application Access Token Expiry Time** before generating.
@@ -257,7 +257,7 @@ After making API calls, check your usage, upcoming charges, and invoices from th
 
 **Expected result:** Your Reading List API calls appear in the usage breakdown with the Pay-as-you-go plan, and the estimated cost reflects your request count × $0.02.
 
-![Billing page showing Usage Summary with API call count and estimated cost for the Pay-as-you-go plan](../assets/clips/monetization/api-monetization/billing_view.gif){.cInlineImage-full}
+![Billing page showing Usage Summary with API call count and estimated cost for the Pay-as-you-go plan](../../assets/clips/monetization/api-monetization/billing_view.gif){.cInlineImage-full}
 
 !!! note
     Allow a few minutes for usage to appear in the Billing page after the first request.

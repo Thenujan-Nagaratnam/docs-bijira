@@ -98,7 +98,7 @@ In this guide, you import an AsyncAPI contract that describes the notification c
 
 **Expected result:** WSO2 API Platform creates the API proxy, with a channel generated from the AsyncAPI contract and its target pointing to your notification backend. Wait for the setup to complete before continuing.
 
-![WebSocket API proxy overview page showing the channel generated from the imported AsyncAPI contract](../assets/img/guides/websocket/notification-system/create-websocket-api-proxy.png){.cInlineImage-full}
+![WebSocket API proxy overview page showing the channel generated from the imported AsyncAPI contract](../../assets/img/guides/websocket/notification-system/create-websocket-api-proxy.png){.cInlineImage-full}
 
 ## Step 4: Configure and deploy the API proxy
 
@@ -109,7 +109,7 @@ Creating the API proxy from a contract deploys it to the Development environment
 
 **Expected result:** The deployment status shows as **Active**.
 
-![Deploy page showing the WebSocket API proxy's deployment status as Active](../assets/img/guides/websocket/notification-system/deploy-status-active.png){.cInlineImage-full}
+![Deploy page showing the WebSocket API proxy's deployment status as Active](../../assets/img/guides/websocket/notification-system/deploy-status-active.png){.cInlineImage-full}
 
 ## Step 5: Test broadcast delivery with the WebSocket Console
 
@@ -118,7 +118,7 @@ The WebSocket Console lets you connect to your deployed proxy without writing an
 1. In the left navigation menu, click **Test**, then click **Console**.
 2. Expand the `/` channel, and click **Connect**.
 
-    ![WebSocket Console pane with the channel expanded and connected to the Development environment](../assets/img/guides/websocket/notification-system/websocket-console-connected.png){.cInlineImage-full}
+    ![WebSocket Console pane with the channel expanded and connected to the Development environment](../../assets/img/guides/websocket/notification-system/websocket-console-connected.png){.cInlineImage-full}
 
 4. Open a second browser tab to the same **Console** page, and repeat steps 2 and 3 to connect a second client.
 5. Wait a few seconds. A stock price notification appears in the **Output** section of both tabs at the same time.

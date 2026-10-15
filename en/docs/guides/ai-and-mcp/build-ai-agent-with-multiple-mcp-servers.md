@@ -58,7 +58,7 @@ Before you start, here are the WSO2 terms this guide uses.
 
 ## Architecture
 
-![Architecture diagram](../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/architecture.png){.cInlineImage-full}
+![Architecture diagram](../../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/architecture.png){.cInlineImage-full}
 
 Each MCP server is a separate governed endpoint with its own OAuth2 policy, rate limit, and audit log. The agent connects to all three in parallel at startup, collects every tool schema, and builds the `session_map` before asking Claude anything.
 
@@ -166,7 +166,7 @@ Bijira generates an MCP server from an existing API proxy in a few clicks. Tool 
 7. Go to **Manage → Lifecycle → Publish → Confirm**.
 8. Do the same for the other 2 API proxies as well.
 
-![Create MCP server from existing proxy](../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/start-from-existing-api-proxy.png){.cInlineImage-full}
+![Create MCP server from existing proxy](../../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/start-from-existing-api-proxy.png){.cInlineImage-full}
 
 
 **Expected result:** Your project shows three published MCP servers: `crm-mcp-server`, `orders-mcp-server`, and `kb-mcp-server`.
@@ -182,7 +182,7 @@ This creates the governed endpoint your agent uses to call Claude. Every reasoni
 3. Select **Anthropic Claude** from the provider list.
 4. Enter the name `claude-agent-gateway` and version `1.0`, then click **Create**.
 
-![Create AI API from Anthropic](../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/select-anthropic-from-the-list.png){.cInlineImage-full}
+![Create AI API from Anthropic](../../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/select-anthropic-from-the-list.png){.cInlineImage-full}
 
 **Configure the Anthropic backend key:**
 
@@ -201,7 +201,7 @@ This creates the governed endpoint your agent uses to call Claude. Every reasoni
     | **Max Completion Token Count** | `80000` |
     | **Time Unit** | `Hour` |
 
-![Configure token based rate limiting policy](../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/configure-token-based-rate-limiting.png){.cInlineImage-full}
+![Configure token based rate limiting policy](../../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/configure-token-based-rate-limiting.png){.cInlineImage-full}
 
 9. Click **Add**.
 
@@ -239,7 +239,7 @@ This creates the governed endpoint your agent uses to call Claude. Every reasoni
 
 12. Click **Add**.
 
-![Configure PII masking regex policy](../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/configure-pii-masking-regex.png){.cInlineImage-full}
+![Configure PII masking regex policy](../../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/configure-pii-masking-regex.png){.cInlineImage-full}
 
 !!! note
     PII Masking uses a fine-tuned Guardrails AI model to detect and redact names, email addresses, phone numbers, SSNs, and street addresses. Customer data fetched from the CRM is scrubbed before being forwarded to Anthropic.
@@ -278,7 +278,7 @@ The agent uses a single OAuth2 application — `internal-agent` — to authentic
 
 **Expected result:** All seven subscriptions appear in the Subscriptions tab.
 
-![Subscriptions tab showing all 7 subscriptions](../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/application-subscriptions.png){.cInlineImage-full}
+![Subscriptions tab showing all 7 subscriptions](../../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/application-subscriptions.png){.cInlineImage-full}
 
 **Generate credentials:**
 
@@ -408,7 +408,7 @@ python agent.py
 
 **Expected result:** The agent connects to all three MCP servers, discovers their tools, then enters the reasoning loop with Claude. The final answer is printed to the terminal.
 
-![Terminal output for the agent.py](../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/terminal-output-for-agent-py.png){.cInlineImage-full}
+![Terminal output for the agent.py](../../assets/img/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/terminal-output-for-agent-py.png){.cInlineImage-full}
 
 ---
 

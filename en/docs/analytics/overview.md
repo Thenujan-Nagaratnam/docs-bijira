@@ -84,11 +84,11 @@ These are the different analytics dashboards that are available:
 
 The following image shows some of the dashboards in the **Overview** screen:
 
-![Overview screen in Moesif Basic, showing assorted analytics in existing APIs, LLM Proxies, and MCP servers](assets/img/analytics/analytics-overview.png)
+![Overview screen in Moesif Basic, showing assorted analytics in existing APIs, LLM Proxies, and MCP servers](../../assets/img/analytics/analytics-overview.png)
 
 #### API Analytics
 
-![API analytics overview screen in Moesif Basic, showing the following assorted analytics in existing APIs](assets/img/analytics/api-analytics-overview.png)
+![API analytics overview screen in Moesif Basic, showing the following assorted analytics in existing APIs](../../assets/img/analytics/api-analytics-overview.png)
 
 * Total requests   
 * Average latency  
@@ -104,7 +104,7 @@ The following image shows some of the dashboards in the **Overview** screen:
 
 #### LLM Analytics
 
-![LLM analytics overview screen in Moesif Basic, showing the following assorted analytics in existing LLMs](assets/img/analytics/llm-analytics-overview.png)
+![LLM analytics overview screen in Moesif Basic, showing the following assorted analytics in existing LLMs](../../assets/img/analytics/llm-analytics-overview.png)
 
 * Unique consumers  
 * Total requests  
@@ -122,7 +122,7 @@ The following image shows some of the dashboards in the **Overview** screen:
 
 ####  MCP Analytics
 
-![MCP analytics overview screen in Moesif Basic, showing the following assorted analytics in existing MCP servers](assets/img/analytics/mcp-analytics-overview.png)
+![MCP analytics overview screen in Moesif Basic, showing the following assorted analytics in existing MCP servers](../../assets/img/analytics/mcp-analytics-overview.png)
 
 * Tool calls  
 * Unique consumers  
