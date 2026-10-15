@@ -193,9 +193,6 @@ extra_javascript:
   - assets/lib/highlightjs/highlight.min.js
   - https://8c140a8d-7209-401b-84ab-2aebe8deaa80.e1-us-east-azure.choreoapps.dev/theme.js
 extra:
-  # platform-common serves several sections at the root, so give its shared
-  # files (assets/, search/, js/, sitemap.xml) a prefix of their own: the root
-  # /assets/ path is routed to another deployment. See docs-shared's README.
   assets_prefix: platform-common
   show_repo_in_nav: false
   page_title_suffix: "API Platform Docs"
