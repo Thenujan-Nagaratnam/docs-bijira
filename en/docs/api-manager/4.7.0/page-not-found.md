@@ -13,7 +13,7 @@ template: templates/no-navbars.html
 ---
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{base_path}}/assets/css/page-not-found.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/page-not-found.css">
 </head>
 <div class="center-all">
     <div class="md-page-not-found-container">
