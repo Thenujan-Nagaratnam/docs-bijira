@@ -17,7 +17,7 @@ content_type: "concept"
 
 Given below are the common security guidelines for deploying a WSO2 product in a **production environment.**
 
-Also, see the [production deployment guidelines]({{base_path}}/install-and-setup/deploying-wso2-api-manager/production-deployment-guidelines/#production-deployment
+Also, see the [production deployment guidelines](production-deployment-guidelines.md#production-deployment
 -guidelines) and any other product-specific guidelines that might come in the respective product's documentation.
 
 -   [WSO2 product-level security](#wso2-product-level-security)
@@ -62,7 +62,7 @@ latest product version to receive all the security issues resolved until the par
 </ul>
 <p>See the recommendations for <a href="https://docs.wso2.com/display/ADMIN44x/Using+Asymmetric+Encryption#UsingAsymmetricEncryption-recommendations">Using keystores in WSO2 
 products</a> for more information.<br />
-See <a href="{{base_path}}/administer/product-security/configuring-keystores/keystore-basics/creating-new-keystores
+See <a href="../../../administer/product-security/configuring-keystores/keystore-basics/creating-new-keystores/
 ">Creating New Keystores</a> for information on how to create and configure your own keys and keystores.</p></td>
 </tr>
 <tr class="odd">
@@ -351,7 +351,7 @@ documentation.</p></div></td>
 <tr class="odd">
 <td><p>Make regular backups</p></td>
 <td><p>Make sure to backup important files and archive them continuously. See <a 
-href="{{base_path}}/install-and-setup/deploying-wso2-api-manager/production-deployment-guidelines/#backup-and
+href="../production-deployment-guidelines/#backup-and
 -recovery-recommendations">Backup and Recovery Recommendations</a> for more information.</p></td>
 </tr>
 </tbody>

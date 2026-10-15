@@ -266,7 +266,7 @@ uses OpenJDK. Therefore, you don't require a separate JDK. However, if you have 
 When a WSO2 product starts, it starts all components, features and related artifacts bundled with it. Multi-profile 
 support allows you to run the product on a selected profile so that only the features specific to that profile along 
 with common features start up with the server. For more on product-profiles please refer 
-[Product Profiles]({{base_path}}/install-and-setup/deploying-wso2-api-manager/distributed-deployment/product-profiles
+[Product Profiles](distributed-deployment/product-profiles.md
 /#product-profiles).
 
 ### Stopping the Server
