@@ -720,7 +720,7 @@ To set up and configure the Micro Integrator runtime, see the topics given below
             <a href="../../observe/micro-integrator/setting-up-cloud-native-observability-in-kubernetes/">Setting up Cloud-Native Observability on Kubernetes</a>
         </li>
         <li>
-            <a href="{{base_path}}/install-and-setup/setup/mi-setup/observability/setting-up-classic-observability-deployment">Setting up Classic Observability Deployment</a>
+            <a href="../../mi-analytics/setting-up-mi-analytics/">Setting up Classic Observability Deployment</a>
         </li>
         <li>
             <a>Configuring Logs</a>

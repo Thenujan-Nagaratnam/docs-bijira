@@ -106,7 +106,7 @@ The elements in the above configuration are described below:
 
 
 !!! warning
-    The following elements are available only as a **WUM** update and is effective from 14th September 2018 (2018-09-14).  For more information, see [Updating WSO2 API Manager]({{base_path}}/administer/product-administration/updating-wso2-api-manager).
+    The following elements are available only as a **WUM** update and is effective from 14th September 2018 (2018-09-14).  For more information, see [Updating WSO2 API Manager](../../administer/updating-wso2-api-manager.md).
     This WUM update is only applicable to Carbon 4.4.11 and will be shipped out-out-the-box with Carbon versions newer than Carbon 4.4.35. For more information on Carbon compatibility, see [Release Matrix](https://wso2.com/products/carbon/release-matrix/).
 
 
@@ -120,7 +120,7 @@ The elements in the above configuration are described below:
 When a database connection is returned to the pool, by default  the product rolls back the pending transactions if `defaultAutoCommit =true`. However, if required, you can disable the latter mentioned default behavior by disabling the `ConnectionRollbackOnReturnInterceptor`, which is a JDBC-Pool JDBC interceptor, and setting the connection pool behavior on return via the datasource configurations by using the following options.
 
 !!! warning
-    Disabling the `ConnectionRollbackOnReturnInterceptor` is only possible with the **WUM** update and is effective from 14th September 2018 (2018-09-14). For more information on updating WSO2 API Manager, see [Updating WSO2 API Manager]({{base_path}}/administer/product-administration/updating-wso2-api-manager). This WUM update is only applicable to Carbon 4.4.11.
+    Disabling the `ConnectionRollbackOnReturnInterceptor` is only possible with the **WUM** update and is effective from 14th September 2018 (2018-09-14). For more information on updating WSO2 API Manager, see [Updating WSO2 API Manager](../../administer/updating-wso2-api-manager.md). This WUM update is only applicable to Carbon 4.4.11.
 
 
 -   **Configure the connection pool to commit pending transactions on connection return**

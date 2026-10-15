@@ -32,7 +32,7 @@ You can monitor the following statistics and more through the MI Analytics Porta
 
 ## Before you begin
 
--   Set up the [MI Analytics deployment]({{base_path}}/install-and-setup/setup/mi-setup/observability/setting-up-classic-observability-deployment).
+-   Set up the [MI Analytics deployment](setting-up-mi-analytics.md).
 
 -   Note the following server directory in your deployment.
 
