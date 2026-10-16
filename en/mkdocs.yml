@@ -33,7 +33,6 @@ copyright: ©2025 WSO2 LLC.
 # Configuration
 watch:
   - theme/
-  - docs/assets/
 
 theme:
   name: material
