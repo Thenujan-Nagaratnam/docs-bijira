@@ -86,7 +86,7 @@ Learn more on the concepts that you need to know when creating an API:
  - [Endpoints](../endpoints/endpoint-types.md)
  -   [API Security](../../../api-security/runtime/api-authentication/secure-apis-using-oauth2-tokens.md)
  -   Rate Limiting:
-     -   [Rate Limiting for REST APIs]({{base_path}}/api-design-manage/design/rate-limiting/introducing-throttling-use-cases/)
+     -   [Rate Limiting for REST APIs](https://apim.docs.wso2.com/en/4.7.0/api-design-manage/design/rate-limiting/introducing-throttling-use-cases/)
      -   [Rate Limiting for Streaming APIs](../rate-limiting/set-streaming-api-limits)
  -   [Life Cycle Management](../lifecycle-management/api-lifecycle.md)
  -   [API Monetization](../../../monitoring/api-monetization/monetizing-an-api.md)

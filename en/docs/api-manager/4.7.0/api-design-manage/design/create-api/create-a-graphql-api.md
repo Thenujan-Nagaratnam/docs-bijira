@@ -79,7 +79,7 @@ Learn more on the concepts that you need to know when creating a GraphQL API:
 
 -   [Endpoints](../endpoints/endpoint-types.md)
 -   [API Security](../../../api-security/runtime/api-authentication/secure-apis-using-oauth2-tokens.md)
--   [Rate Limiting]({{base_path}}/api-design-manage/design/rate-limiting/graphql-api/overview-query-limits-for-graphql/)
+-   [Rate Limiting](https://apim.docs.wso2.com/en/4.7.0/api-design-manage/design/rate-limiting/graphql-api/overview-query-limits-for-graphql/)
 -   [Life Cycle Management](../lifecycle-management/api-lifecycle.md)
 -   [API Monetization](../../../monitoring/api-monetization/monetizing-an-api.md)
 -   [API Visibility](../advanced-topics/control-api-visibility-and-subscription-availability-in-developer-portal.md)

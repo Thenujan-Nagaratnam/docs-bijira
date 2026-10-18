@@ -116,4 +116,4 @@ The following are Advanced Endpoint Configurations that you can configure for bo
     </tbody>
 </table>
 
-For more information on endpoints and how to add, edit, or delete them, see [Endpoint Properties]({{base_path}}/reference/synapse-properties/endpoint-properties).
+For more information on endpoints and how to add, edit, or delete them, see [Endpoint Properties](https://apim.docs.wso2.com/en/4.7.0/reference/synapse-properties/endpoint-properties).

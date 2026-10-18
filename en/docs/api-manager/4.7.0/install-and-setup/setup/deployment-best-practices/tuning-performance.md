@@ -114,7 +114,7 @@ The following diagram shows the communication/network paths that occur when an A
 
 -   **Client call Classic Gateway + Classic Gateway call Backend**
 
-    For backend communication, the API Manager uses PassThrough transport. This is configured in the `<API-M_HOME>/repository/conf/deployment.toml` file. For more information, see [Configuring PassThrough properties]({{base_path}}/install-and-setup/setup/mi-setup/transport_configurations/configuring-transports/#configuring-the-httphttps-transport). Add the following section to the `deployment.toml` file to configure the Socket timeout value.
+    For backend communication, the API Manager uses PassThrough transport. This is configured in the `<API-M_HOME>/repository/conf/deployment.toml` file. For more information, see [Configuring PassThrough properties](https://apim.docs.wso2.com/en/4.7.0/install-and-setup/setup/mi-setup/transport_configurations/configuring-transports/#configuring-the-httphttps-transport). Add the following section to the `deployment.toml` file to configure the Socket timeout value.
             ``` java
                 [passthru_http]
                 http.socket.timeout=180000

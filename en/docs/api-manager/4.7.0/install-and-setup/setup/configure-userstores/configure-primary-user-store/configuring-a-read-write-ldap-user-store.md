@@ -73,7 +73,7 @@ Need to import the certificate of userstore to the client-truststore.jks of the 
 <a href="../../../security/configuring-keystores/keystore-basics/creating-new-keystores.md">Creating New Keystores</a><br />
 <br />
 If LDAP connection pooling is used, see enable connection pooling for LDAPS connections.<br />
-<a href="{{base_path}}/deploy/performance/performance-tuning-recommendations#performance-tuning-ldaps-pooling">performance tuning ldaps pooling)</a></p></td>
+<a href="https://apim.docs.wso2.com/en/4.7.0/deploy/performance/performance-tuning-recommendations#performance-tuning-ldaps-pooling">performance tuning ldaps pooling)</a></p></td>
 </tr>
 <tr class="odd">
 <td>ConnectionName</td>

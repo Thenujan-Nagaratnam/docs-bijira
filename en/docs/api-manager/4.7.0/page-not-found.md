@@ -13,7 +13,7 @@ template: templates/no-navbars.html
 ---
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{base_path}}/assets/css/page-not-found.css">
+    <link rel="stylesheet" type="text/css" href="https://apim.docs.wso2.com/en/4.7.0/assets/css/page-not-found.css">
 </head>
 <div class="center-all">
     <div class="md-page-not-found-container">
@@ -24,7 +24,7 @@ template: templates/no-navbars.html
             Alternatively, you can reach out to the APIM support team.</p>
         </div>
         <div class="md-page-not-found-img-container">
-            <img src="{{base_path}}/assets/images/page-not-found.svg" alt="Javascript" />
+            <img src="https://apim.docs.wso2.com/en/4.7.0/assets/images/page-not-found.svg" alt="Javascript" />
         </div>
     </div>
 </div>
