@@ -35,4 +35,4 @@ The `defaultTheme.js` file has all the parameters defining the look and feel of 
 
 2. Refresh the Developer Portal to view the changes.
 
-    ![../../../../../assets/img/learn/change-default-view.png](../../../../../assets/img/learn/change-default-view.png)
+    ![https://apim.docs.wso2.com/en/4.7.0/assets/img/learn/change-default-view.png](../../../../../assets/img/learn/change-default-view.png)
