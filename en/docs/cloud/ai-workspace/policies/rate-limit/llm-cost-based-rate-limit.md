@@ -1,13 +1,13 @@
 ---
 title: "LLM cost-based rate limit"
 description: "Enforce monetary spending budgets on LLM traffic using the cost calculated by the LLM Cost policy."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/llm-cost-based-rate-limit/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/llm-cost-based-rate-limit.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/rate-limit/llm-cost-based-rate-limit/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/rate-limit/llm-cost-based-rate-limit.md
 tags:
   - cloud
   - ai-workspace
   - rate-limit
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -68,4 +68,4 @@ The following configuration enforces two simultaneous spending limits. Both must
 
 - [LLM Cost](llm-cost.md) — Required: calculates the cost stored in metadata
 - [Token-Based Rate Limit](token-based-rate-limit.md) — Enforce token consumption limits instead of monetary budgets
-- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version
+- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version

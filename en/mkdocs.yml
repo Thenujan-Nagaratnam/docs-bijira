@@ -17,18 +17,18 @@
 # Project information
 site_name: "API Platform Documentation"
 site_description: API Platform Documentation
-site_author: WSO2
-site_url: https://wso2.com/bijira/docs
+site_author: XBRANDX
+site_url: https://xwebdomainx/bijira/docs
 
 
 # Repository
-repo_name: wso2/docs-bijira
-repo_url: https://github.com/wso2/docs-bijira
-edit_uri: https://github.com/wso2/docs-bijira/edit/main/en/docs/
+repo_name: xgithuborgx/xdocsrepox
+repo_url: https://github.com/xgithuborgx/xdocsrepox
+edit_uri: https://github.com/xgithuborgx/xdocsrepox/edit/main/en/docs/
 dev_addr: localhost:8000
 
 # Copyright
-copyright: ©2025 WSO2 LLC.
+copyright: ©2025 XLEGALNAMEX
 
 # Configuration
 watch:
@@ -1708,52 +1708,52 @@ plugins:
         ai-gateway/next/connect-llm-providers/configure-aws-bedrock-provider.md: ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md
         ai-gateway/next/mcp-proxy/quick-start-guide.md: ai-gateway/next/gateway-artifacts/mcp-proxy.md
         # AI Gateway revamp phase 2: per-policy reference moved to Policy Hub
-        ai-gateway/next/mcp-proxy/mcp-authentication.md: https://wso2.com/api-platform/policy-hub/policies/mcp-auth
-        ai-gateway/next/mcp-proxy/mcp-authorization.md: https://wso2.com/api-platform/policy-hub/policies/mcp-authz
-        ai-gateway/next/mcp-proxy/mcp-acl-list.md: https://wso2.com/api-platform/policy-hub/policies/mcp-acl-list
-        ai-gateway/next/mcp-proxy/mcp-rewrite.md: https://wso2.com/api-platform/policy-hub/policies/mcp-rewrite
+        ai-gateway/next/mcp-proxy/mcp-authentication.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-auth
+        ai-gateway/next/mcp-proxy/mcp-authorization.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-authz
+        ai-gateway/next/mcp-proxy/mcp-acl-list.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-acl-list
+        ai-gateway/next/mcp-proxy/mcp-rewrite.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-rewrite
         # Phase 1 paths, repointed past the deleted pages to the same Policy Hub targets
-        ai-gateway/next/mcp-proxy/policies/mcp-rewrite.md: https://wso2.com/api-platform/policy-hub/policies/mcp-rewrite
-        ai-gateway/next/mcp-proxy/policies/mcp-authentication.md: https://wso2.com/api-platform/policy-hub/policies/mcp-auth
-        ai-gateway/next/mcp-proxy/policies/mcp-authorization.md: https://wso2.com/api-platform/policy-hub/policies/mcp-authz
-        ai-gateway/next/mcp-proxy/policies/mcp-acl-list.md: https://wso2.com/api-platform/policy-hub/policies/mcp-acl-list
+        ai-gateway/next/mcp-proxy/policies/mcp-rewrite.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-rewrite
+        ai-gateway/next/mcp-proxy/policies/mcp-authentication.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-auth
+        ai-gateway/next/mcp-proxy/policies/mcp-authorization.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-authz
+        ai-gateway/next/mcp-proxy/policies/mcp-acl-list.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-acl-list
         ai-gateway/next/gateway-controller-management-api/authentication.md: ai-gateway/next/setup-and-deployment/secure-the-management-api.md
         ai-gateway/next/llm-proxy/guardrails/overview.md: ai-gateway/next/guardrails/index.md
         ai-gateway/next/llm-proxy/guardrails/execution-order.md: ai-gateway/next/guardrails/execution-order.md
         # AI Gateway revamp phase 2: per-policy reference moved to Policy Hub
-        ai-gateway/next/control-content/regex.md: https://wso2.com/api-platform/policy-hub/policies/regex-guardrail
-        ai-gateway/next/control-content/json-schema.md: https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail
-        ai-gateway/next/control-content/word-count.md: https://wso2.com/api-platform/policy-hub/policies/word-count-guardrail
-        ai-gateway/next/control-content/sentence-count.md: https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail
-        ai-gateway/next/control-content/content-length.md: https://wso2.com/api-platform/policy-hub/policies/content-length-guardrail
-        ai-gateway/next/control-content/url.md: https://wso2.com/api-platform/policy-hub/policies/url-guardrail
-        ai-gateway/next/control-content/pii-masking-regex.md: https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex
-        ai-gateway/next/control-content/semantic-prompt-guard.md: https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard
-        ai-gateway/next/control-content/azure-content-safety.md: https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation
-        ai-gateway/next/control-content/aws-bedrock-guardrail.md: https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail
-        ai-gateway/next/control-content/prompt-decorator.md: https://wso2.com/api-platform/policy-hub/policies/prompt-decorator
-        ai-gateway/next/control-content/prompt-template.md: https://wso2.com/api-platform/policy-hub/policies/prompt-template
+        ai-gateway/next/control-content/regex.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/regex-guardrail
+        ai-gateway/next/control-content/json-schema.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/json-schema-guardrail
+        ai-gateway/next/control-content/word-count.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/word-count-guardrail
+        ai-gateway/next/control-content/sentence-count.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/sentence-count-guardrail
+        ai-gateway/next/control-content/content-length.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/content-length-guardrail
+        ai-gateway/next/control-content/url.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/url-guardrail
+        ai-gateway/next/control-content/pii-masking-regex.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/pii-masking-regex
+        ai-gateway/next/control-content/semantic-prompt-guard.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard
+        ai-gateway/next/control-content/azure-content-safety.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/azure-content-safety-content-moderation
+        ai-gateway/next/control-content/aws-bedrock-guardrail.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-bedrock-guardrail
+        ai-gateway/next/control-content/prompt-decorator.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-decorator
+        ai-gateway/next/control-content/prompt-template.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-template
         # Phase 1 paths, repointed past the deleted pages to the same Policy Hub targets
-        ai-gateway/next/llm-proxy/guardrails/regex.md: https://wso2.com/api-platform/policy-hub/policies/regex-guardrail
-        ai-gateway/next/llm-proxy/guardrails/json-schema.md: https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail
-        ai-gateway/next/llm-proxy/guardrails/word-count.md: https://wso2.com/api-platform/policy-hub/policies/word-count-guardrail
-        ai-gateway/next/llm-proxy/guardrails/sentence-count.md: https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail
-        ai-gateway/next/llm-proxy/guardrails/content-length.md: https://wso2.com/api-platform/policy-hub/policies/content-length-guardrail
-        ai-gateway/next/llm-proxy/guardrails/url.md: https://wso2.com/api-platform/policy-hub/policies/url-guardrail
-        ai-gateway/next/llm-proxy/guardrails/pii-masking-regex.md: https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex
-        ai-gateway/next/llm-proxy/guardrails/semantic-prompt-guard.md: https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard
-        ai-gateway/next/llm-proxy/guardrails/azure-content-safety.md: https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation
-        ai-gateway/next/llm-proxy/guardrails/aws-bedrock-guardrail.md: https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail
-        ai-gateway/next/llm-proxy/prompt-management/prompt-decorator.md: https://wso2.com/api-platform/policy-hub/policies/prompt-decorator
-        ai-gateway/next/llm-proxy/prompt-management/prompt-template.md: https://wso2.com/api-platform/policy-hub/policies/prompt-template
+        ai-gateway/next/llm-proxy/guardrails/regex.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/regex-guardrail
+        ai-gateway/next/llm-proxy/guardrails/json-schema.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/json-schema-guardrail
+        ai-gateway/next/llm-proxy/guardrails/word-count.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/word-count-guardrail
+        ai-gateway/next/llm-proxy/guardrails/sentence-count.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/sentence-count-guardrail
+        ai-gateway/next/llm-proxy/guardrails/content-length.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/content-length-guardrail
+        ai-gateway/next/llm-proxy/guardrails/url.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/url-guardrail
+        ai-gateway/next/llm-proxy/guardrails/pii-masking-regex.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/pii-masking-regex
+        ai-gateway/next/llm-proxy/guardrails/semantic-prompt-guard.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard
+        ai-gateway/next/llm-proxy/guardrails/azure-content-safety.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/azure-content-safety-content-moderation
+        ai-gateway/next/llm-proxy/guardrails/aws-bedrock-guardrail.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-bedrock-guardrail
+        ai-gateway/next/llm-proxy/prompt-management/prompt-decorator.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-decorator
+        ai-gateway/next/llm-proxy/prompt-management/prompt-template.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-template
         # AI Gateway revamp phase 2: per-policy reference moved to Policy Hub
-        ai-gateway/next/control-cost-and-traffic/model-round-robin.md: https://wso2.com/api-platform/policy-hub/policies/model-round-robin
-        ai-gateway/next/control-cost-and-traffic/model-weighted-round-robin.md: https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin
-        ai-gateway/next/control-cost-and-traffic/semantic-caching.md: https://wso2.com/api-platform/policy-hub/policies/semantic-cache
+        ai-gateway/next/control-cost-and-traffic/model-round-robin.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/model-round-robin
+        ai-gateway/next/control-cost-and-traffic/model-weighted-round-robin.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/model-weighted-round-robin
+        ai-gateway/next/control-cost-and-traffic/semantic-caching.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-cache
         # Phase 1 paths, repointed past the deleted pages to the same Policy Hub targets
-        ai-gateway/next/llm-proxy/load-balancing/model-round-robin.md: https://wso2.com/api-platform/policy-hub/policies/model-round-robin
-        ai-gateway/next/llm-proxy/load-balancing/model-weighted-round-robin.md: https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin
-        ai-gateway/next/llm-proxy/semantic-caching.md: https://wso2.com/api-platform/policy-hub/policies/semantic-cache
+        ai-gateway/next/llm-proxy/load-balancing/model-round-robin.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/model-round-robin
+        ai-gateway/next/llm-proxy/load-balancing/model-weighted-round-robin.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/model-weighted-round-robin
+        ai-gateway/next/llm-proxy/semantic-caching.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-cache
         ai-gateway/next/resiliency/timeouts.md: ai-gateway/next/timeouts-and-resilience.md
         ai-gateway/next/observability/logging.md: ai-gateway/next/logging-and-tracing/gateway-logs.md
         ai-gateway/next/observability/tracing.md: ai-gateway/next/logging-and-tracing/tracing.md
@@ -2036,7 +2036,7 @@ plugins:
         # API Gateway observability split (single pages -> section overview)
         api-gateway/observability/tracing.md: api-gateway/1.1.0/observability/tracing/overview.md
         api-gateway/observability/metrics.md: api-gateway/1.1.0/observability/metrics/overview.md
-        # Bijira Concepts
+        # XCLOUDCODENAMEX Concepts
         bijira-concepts/data-planes.md: cloud/bijira-concepts/data-planes.md
         bijira-concepts/deployment-tracks.md: cloud/bijira-concepts/deployment-tracks.md
         bijira-concepts/organization.md: cloud/bijira-concepts/organization.md
@@ -2173,30 +2173,30 @@ plugins:
         ai-gateway/1.2.0/gateway-controller-management-api/schemas.md: ai-gateway/1.2.0/reference/management-api/schemas.md
         ai-gateway/1.2.0/gateway-controller-management-api/secrets-management.md: ai-gateway/1.2.0/reference/management-api/secrets-management.md
         ai-gateway/1.2.0/llm-proxy/configure-aws-bedrock-provider.md: ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md
-        ai-gateway/1.2.0/llm-proxy/guardrails/aws-bedrock-guardrail.md: https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail
-        ai-gateway/1.2.0/llm-proxy/guardrails/azure-content-safety.md: https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation
-        ai-gateway/1.2.0/llm-proxy/guardrails/content-length.md: https://wso2.com/api-platform/policy-hub/policies/content-length-guardrail
+        ai-gateway/1.2.0/llm-proxy/guardrails/aws-bedrock-guardrail.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-bedrock-guardrail
+        ai-gateway/1.2.0/llm-proxy/guardrails/azure-content-safety.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/azure-content-safety-content-moderation
+        ai-gateway/1.2.0/llm-proxy/guardrails/content-length.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/content-length-guardrail
         ai-gateway/1.2.0/llm-proxy/guardrails/execution-order.md: ai-gateway/1.2.0/guardrails/execution-order.md
-        ai-gateway/1.2.0/llm-proxy/guardrails/json-schema.md: https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail
+        ai-gateway/1.2.0/llm-proxy/guardrails/json-schema.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/json-schema-guardrail
         ai-gateway/1.2.0/llm-proxy/guardrails/overview.md: ai-gateway/1.2.0/guardrails/index.md
-        ai-gateway/1.2.0/llm-proxy/guardrails/pii-masking-regex.md: https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex
-        ai-gateway/1.2.0/llm-proxy/guardrails/regex.md: https://wso2.com/api-platform/policy-hub/policies/regex-guardrail
-        ai-gateway/1.2.0/llm-proxy/guardrails/semantic-prompt-guard.md: https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard
-        ai-gateway/1.2.0/llm-proxy/guardrails/sentence-count.md: https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail
-        ai-gateway/1.2.0/llm-proxy/guardrails/url.md: https://wso2.com/api-platform/policy-hub/policies/url-guardrail
-        ai-gateway/1.2.0/llm-proxy/guardrails/word-count.md: https://wso2.com/api-platform/policy-hub/policies/word-count-guardrail
+        ai-gateway/1.2.0/llm-proxy/guardrails/pii-masking-regex.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/pii-masking-regex
+        ai-gateway/1.2.0/llm-proxy/guardrails/regex.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/regex-guardrail
+        ai-gateway/1.2.0/llm-proxy/guardrails/semantic-prompt-guard.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard
+        ai-gateway/1.2.0/llm-proxy/guardrails/sentence-count.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/sentence-count-guardrail
+        ai-gateway/1.2.0/llm-proxy/guardrails/url.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/url-guardrail
+        ai-gateway/1.2.0/llm-proxy/guardrails/word-count.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/word-count-guardrail
         ai-gateway/1.2.0/llm-proxy/llm-templates.md: ai-gateway/1.2.0/reference/llm-templates.md
-        ai-gateway/1.2.0/llm-proxy/load-balancing/model-round-robin.md: https://wso2.com/api-platform/policy-hub/policies/model-round-robin
-        ai-gateway/1.2.0/llm-proxy/load-balancing/model-weighted-round-robin.md: https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin
+        ai-gateway/1.2.0/llm-proxy/load-balancing/model-round-robin.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/model-round-robin
+        ai-gateway/1.2.0/llm-proxy/load-balancing/model-weighted-round-robin.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/model-weighted-round-robin
         ai-gateway/1.2.0/llm-proxy/multi-provider-routing.md: ai-gateway/1.2.0/routing/multi-provider-routing.md
-        ai-gateway/1.2.0/llm-proxy/prompt-management/prompt-decorator.md: https://wso2.com/api-platform/policy-hub/policies/prompt-decorator
-        ai-gateway/1.2.0/llm-proxy/prompt-management/prompt-template.md: https://wso2.com/api-platform/policy-hub/policies/prompt-template
+        ai-gateway/1.2.0/llm-proxy/prompt-management/prompt-decorator.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-decorator
+        ai-gateway/1.2.0/llm-proxy/prompt-management/prompt-template.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-template
         ai-gateway/1.2.0/llm-proxy/quick-start-guide.md: ai-gateway/1.2.0/quick-start-guide.md
-        ai-gateway/1.2.0/llm-proxy/semantic-caching.md: https://wso2.com/api-platform/policy-hub/policies/semantic-cache
-        ai-gateway/1.2.0/mcp-proxy/policies/mcp-acl-list.md: https://wso2.com/api-platform/policy-hub/policies/mcp-acl-list
-        ai-gateway/1.2.0/mcp-proxy/policies/mcp-authentication.md: https://wso2.com/api-platform/policy-hub/policies/mcp-auth
-        ai-gateway/1.2.0/mcp-proxy/policies/mcp-authorization.md: https://wso2.com/api-platform/policy-hub/policies/mcp-authz
-        ai-gateway/1.2.0/mcp-proxy/policies/mcp-rewrite.md: https://wso2.com/api-platform/policy-hub/policies/mcp-rewrite
+        ai-gateway/1.2.0/llm-proxy/semantic-caching.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-cache
+        ai-gateway/1.2.0/mcp-proxy/policies/mcp-acl-list.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-acl-list
+        ai-gateway/1.2.0/mcp-proxy/policies/mcp-authentication.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-auth
+        ai-gateway/1.2.0/mcp-proxy/policies/mcp-authorization.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-authz
+        ai-gateway/1.2.0/mcp-proxy/policies/mcp-rewrite.md: https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-rewrite
         ai-gateway/1.2.0/mcp-proxy/quick-start-guide.md: ai-gateway/1.2.0/gateway-artifacts/mcp-proxy.md
         ai-gateway/1.2.0/observability/logging.md: ai-gateway/1.2.0/logging-and-tracing/gateway-logs.md
         ai-gateway/1.2.0/observability/tracing.md: ai-gateway/1.2.0/logging-and-tracing/tracing.md
@@ -2221,7 +2221,7 @@ extra:
   page_title_suffix: "API Platform Docs"
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/wso2
+      link: https://github.com/xgithuborgx
   # Sections whose subtopic list is versioned. Each top-level nav section listed
   # here is rendered with a version selector; its direct children must be the
   # version groups (titled with the version string). See nav-item.html / theme.js.

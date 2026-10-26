@@ -1,13 +1,13 @@
 ---
 title: "Subscribe to an API"
 description: "Subscribe an application to a published API in the Developer Portal to generate credentials and invoke the API."
-canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/manage-subscriptions/subscribe-to-an-api/
-md_url: https://wso2.com/api-platform/docs/cloud/devportal/manage-subscriptions/subscribe-to-an-api.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/manage-subscriptions/subscribe-to-an-api/
+md_url: https://xdocshostx/xdocspathx/cloud/devportal/manage-subscriptions/subscribe-to-an-api.md
 tags:
   - cloud
   - devportal
   - subscriptions
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -18,7 +18,7 @@ The subscription process ensures secure authentication of API requests using app
 
 To subscribe to an API via an application, follow these steps:
 
-1. Go to the [API Platform Developer Portal](https://devportal.bijira.dev) and sign in to your organization.
+1. Go to the [API Platform Developer Portal](https://devportal.xclouddomainx) and sign in to your organization.
 
 2. To navigate to applications, in the Developer Portal sidebar, click **Applications**.
 

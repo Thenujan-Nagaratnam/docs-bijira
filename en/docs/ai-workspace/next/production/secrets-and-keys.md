@@ -1,14 +1,14 @@
 ---
 title: "Provision secrets and keys"
 description: "Generate, store, and reference the encryption key, database password, and OIDC client secret that a production AI Workspace deployment requires."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/production/secrets-and-keys/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/production/secrets-and-keys.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/production/secrets-and-keys/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/production/secrets-and-keys.md
 tags:
   - ai-workspace
   - production
   - security
   - secrets
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-06
 content_type: "how-to"
 ---

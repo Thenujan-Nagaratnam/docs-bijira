@@ -1,14 +1,14 @@
 ---
 title: "Resources & Scaling"
 description: "Size and scale a replicated API Portal & MCP Hub deployment on Kubernetes or virtual machines: instance count, resources, spreading across failure domains, and health checks."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/deployment/resources-and-scaling/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/deployment/resources-and-scaling.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/deployment/resources-and-scaling/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/deployment/resources-and-scaling.md
 tags:
   - cloud
   - api-portal
   - deployment
   - kubernetes
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-06
 content_type: "how-to"
 ---

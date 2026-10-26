@@ -1,14 +1,14 @@
 ---
 title: "AI Guardrails Overview"
-description: "Overview of basic, advanced, and third-party AI guardrails available in WSO2 API Platform to secure and govern AI API proxies."
-canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/
-md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails.md
+description: "Overview of basic, advanced, and third-party AI guardrails available in XAPIPLATFORMX to secure and govern AI API proxies."
+canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/
+md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails.md
 tags:
   - cloud
   - api-proxy
   - ai-gateway
   - guardrails
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "overview"
 ---

@@ -1,14 +1,14 @@
 ---
 title: "Gateway Runtime with Two CPUs - Performance Results"
 description: "View API Platform Gateway performance benchmark results with a two-CPU gateway runtime, including throughput, average response time, percentile response times, and varying payload sizes."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/performance/gateway-runtime-with-two-cpus/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/performance/gateway-runtime-with-two-cpus.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/performance/gateway-runtime-with-two-cpus/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/performance/gateway-runtime-with-two-cpus.md
 tags:
   - api-gateway
   - performance
   - benchmarks
   - gateway-runtime
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-01
 content_type: "reference"
 ---
@@ -73,4 +73,4 @@ The graph below shows how throughput changes with concurrent users for payload s
 - Throughput varies with payload size; smaller payloads support higher request rates.
 - For each payload size, throughput decreases as concurrent users increase.
 
-Test scenario results in CSV format are available [here](https://raw.githubusercontent.com/wso2/api-platform/refs/heads/main/gateway/perf/api-gateway-1.1.0-perf-test-results/two-core-results-summary.csv).
+Test scenario results in CSV format are available [here](https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/heads/main/gateway/perf/api-gateway-1.1.0-perf-test-results/two-core-results-summary.csv).

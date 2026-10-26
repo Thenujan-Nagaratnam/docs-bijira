@@ -1,13 +1,13 @@
 ---
 title: "API Portal & MCP Hub overview"
 description: "The API Portal & MCP Hub is a portal where API publishers expose APIs and MCP servers, and developers discover, subscribe, and consume them."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/overview/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/overview.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/overview/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/overview.md
 tags:
   - cloud
   - api-portal
   - overview
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-24
 content_type: "overview"
 ---

@@ -1,8 +1,8 @@
 ---
 title: "Authenticate clients"
 description: "Protect an LLM proxy or provider with the api-key-auth policy, issue consumer API keys through the management API, and manage the key lifecycle."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/authenticate-clients/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/authenticate-clients.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/authenticate-clients/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/authenticate-clients.md
 tags:
   - ai-gateway
   - security
@@ -10,7 +10,7 @@ tags:
   - api-keys
   - api-key
   - jwt
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
@@ -55,7 +55,7 @@ The `params.key` value sets the header name the gateway reads the key from, and 
 
 An LLM provider takes the same block under its own `spec.operationPolicies`. For a provider that protects two operations this way, see [AWS Bedrock](gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md).
 
-The policy's full parameter reference is in the [API Key Auth policy](https://wso2.com/api-platform/policy-hub/policies/api-key-auth) in Policy Hub.
+The policy's full parameter reference is in the [API Key Auth policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/api-key-auth) in Policy Hub.
 
 !!! note "`operationPolicies` compared with `policies`"
     Some configurations attach policies under `spec.policies`. That field is deprecated and the gateway treats it identically to `operationPolicies`. Use `operationPolicies` in new configuration.
@@ -129,14 +129,14 @@ Regenerate a key when you rotate credentials, and revoke one as soon as you beli
 
 ## Other authentication methods
 
-The gateway accepts any Policy Hub authentication policy in the same `operationPolicies` block. Each policy's parameters and behavior are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub).
+The gateway accepts any Policy Hub authentication policy in the same `operationPolicies` block. Each policy's parameters and behavior are documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx).
 
 | Policy | What it does |
 |--------|--------------|
-| [JWT Auth](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) | Validates JWT access tokens against one or more JWKS providers |
-| [Basic Auth](https://wso2.com/api-platform/policy-hub/policies/basic-auth) | Enforces HTTP Basic Authentication |
-| [Opaque Token Auth](https://wso2.com/api-platform/policy-hub/policies/opaque-token-auth) | Validates opaque OAuth 2.0 access tokens via RFC 7662 token introspection |
-| [Subscription Validation](https://wso2.com/api-platform/policy-hub/policies/subscription-validation) | Confirms the caller holds an active subscription for the target API |
+| [JWT Auth](https://xpolicyhubhostx/xpolicyhubpathx/policies/jwt-auth) | Validates JWT access tokens against one or more JWKS providers |
+| [Basic Auth](https://xpolicyhubhostx/xpolicyhubpathx/policies/basic-auth) | Enforces HTTP Basic Authentication |
+| [Opaque Token Auth](https://xpolicyhubhostx/xpolicyhubpathx/policies/opaque-token-auth) | Validates opaque OAuth 2.0 access tokens via RFC 7662 token introspection |
+| [Subscription Validation](https://xpolicyhubhostx/xpolicyhubpathx/policies/subscription-validation) | Confirms the caller holds an active subscription for the target API |
 
 ## Related topics
 

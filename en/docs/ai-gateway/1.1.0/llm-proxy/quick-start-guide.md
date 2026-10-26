@@ -1,13 +1,13 @@
 ---
 title: "LLM Proxy Quick Start Guide"
 description: "Run API Platform AI Gateway with Docker Compose, configure an LLM provider, and route your first LLM request through a managed proxy."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/quick-start-guide/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/quick-start-guide.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/quick-start-guide/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/quick-start-guide.md
 tags:
   - ai-gateway
   - llm
   - quickstart
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-05
 content_type: "quickstart"
 ---
@@ -52,14 +52,14 @@ docker compose version
 <!-- Replace ${version} with the actual release version of the API Platform Gateway. -->
 ```bash
 # Download distribution.
-wget https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip
+wget https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.1.0/xartifactprefixx-ai-gateway-1.1.0.zip
 
 # Unzip the downloaded distribution.
-unzip wso2apip-ai-gateway-1.1.0.zip
+unzip xartifactprefixx-ai-gateway-1.1.0.zip
 
 
 # Start the complete stack
-cd wso2apip-ai-gateway-1.1.0/
+cd xartifactprefixx-ai-gateway-1.1.0/
 docker compose up -d
 
 # Verify gateway controller admin endpoint is running
@@ -95,7 +95,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: LlmProvider
 metadata:
   name: openai-provider

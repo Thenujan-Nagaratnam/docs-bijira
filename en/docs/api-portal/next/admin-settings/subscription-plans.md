@@ -1,13 +1,13 @@
 ---
 title: "Configure subscription plans in the API Portal & MCP Hub"
 description: "Define the rate and quota tiers that applications can subscribe to, and attach them to your published APIs."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/subscription-plans/
-md_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/subscription-plans.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/subscription-plans/
+md_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/subscription-plans.md
 tags:
   - cloud
   - api-portal
   - subscription-plans
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-23
 content_type: "how-to"
 ---

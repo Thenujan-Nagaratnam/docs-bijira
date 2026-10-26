@@ -1,15 +1,15 @@
 ---
 title: "Agent configuration reference"
 description: "Every field in the Agent artifact spec: context, upstream, transports, operations, Agent Card blocks, defaults, and the rules enforced at deploy time."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/reference/agent-configuration/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/reference/agent-configuration.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/reference/agent-configuration/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/reference/agent-configuration.md
 tags:
   - ai-gateway
   - a2a
   - agents
   - reference
   - configuration
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-22
 content_type: "reference"
 ---
@@ -24,7 +24,7 @@ An `Agent` document carries four top-level fields:
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `apiVersion` | string | Yes | Must be `gateway.api-platform.wso2.com/v1`. |
+| `apiVersion` | string | Yes | Must be `gateway.api-platform.xcrddomainx/v1`. |
 | `kind` | string | Yes | Must be `Agent`. |
 | `metadata` | object | Yes | Resource metadata, including `name` and optional `annotations`. |
 | `spec` | object | Yes | The agent configuration described below. |
@@ -184,12 +184,12 @@ The controller rejects a deployment rather than serving a configuration that wou
 ## Complete example
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: Agent
 metadata:
   name: trip-planner-v1.0
   annotations:
-    "gateway.api-platform.wso2.com/project-id": "default"
+    "gateway.api-platform.xcrddomainx/project-id": "default"
 spec:
   displayName: Trip Planner
   version: v1.0

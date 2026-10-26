@@ -1,14 +1,14 @@
 ---
 title: "Harden the deployment"
 description: "Close the gaps a quickstart leaves open: delegate login to an identity provider, keep authorization enforced, bound connections, and restrict what each container can do and reach."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/production/harden/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/production/harden.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/production/harden/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/production/harden.md
 tags:
   - ai-workspace
   - production
   - security
   - hardening
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-06
 content_type: "how-to"
 ---
@@ -327,33 +327,33 @@ The Platform API accepts connections from exactly two sources: the AI Workspace 
     ```yaml
     services:
       platform-api:
-        image: ghcr.io/wso2/api-platform/platform-api:<version>
+        image: ghcr.io/xgithuborgx/api-platform/platform-api:<version>
       ai-workspace:
-        image: ghcr.io/wso2/api-platform/ai-workspace:<version>
+        image: ghcr.io/xgithuborgx/api-platform/ai-workspace:<version>
     ```
 
 === "Kubernetes"
     ```yaml
     platform-api:
       image:
-        repository: ghcr.io/wso2/api-platform/platform-api
+        repository: ghcr.io/xgithuborgx/api-platform/platform-api
         tag: "<version>"
         pullPolicy: IfNotPresent
 
     ai-workspace-ui:
       image:
-        repository: ghcr.io/wso2/api-platform/ai-workspace
+        repository: ghcr.io/xgithuborgx/api-platform/ai-workspace
         tag: "<version>"
         pullPolicy: IfNotPresent
     ```
 
-    With a WSO2 subscription, set the pull secret once. The chart attaches it to every pod and rewrites the default image repositories to the subscription registry:
+    With a XBRANDX subscription, set the pull secret once. The chart attaches it to every pod and rewrites the default image repositories to the subscription registry:
 
     ```yaml
     global:
-      wso2:
+      xhelmkeyx:
         subscription:
-          imagePullSecret: wso2-subscription-creds
+          imagePullSecret: xsampleslugx-subscription-creds
     ```
 
 ## Step 7: Bound the session

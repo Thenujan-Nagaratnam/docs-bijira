@@ -1,14 +1,14 @@
 ---
 title: "Azure Content Safety guardrail"
 description: "Moderate LLM content with Azure Content Safety, detecting hate speech, sexual content, self-harm, and violence with configurable severity thresholds."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/azure-content-safety/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/azure-content-safety.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/llm/guardrails/azure-content-safety/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/llm/guardrails/azure-content-safety.md
 tags:
   - cloud
   - ai-gateway
   - guardrails
   - azure
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -123,7 +123,7 @@ curl -X POST http://localhost:9090/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: LlmProvider
 metadata:
   name: azure-safety-provider

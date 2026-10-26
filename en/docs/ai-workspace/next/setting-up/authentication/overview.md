@@ -1,13 +1,13 @@
 ---
 title: "Authentication in AI Workspace"
 description: "Understand the two ways users sign in to AI Workspace: file-based authentication for local use and an identity provider for production."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/setting-up/authentication/overview/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/setting-up/authentication/overview.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/setting-up/authentication/overview/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/setting-up/authentication/overview.md
 tags:
   - cloud
   - ai-workspace
   - authentication
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-23
 content_type: "concept"
 ---

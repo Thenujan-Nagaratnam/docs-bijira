@@ -1,14 +1,14 @@
 ---
 title: "OpenAI"
 description: "Connect the AI Gateway to OpenAI: the upstream URL, API key authentication, the endpoints the provider exposes, and a request that tests the connection."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/openai/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/openai.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/openai/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/openai.md
 tags:
   - ai-gateway
   - llm-provider
   - openai
   - llm
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
@@ -41,7 +41,7 @@ curl -X POST http://localhost:9090/api/management/v1/llm-providers \
   -H "Content-Type: application/yaml" \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: openai-provider

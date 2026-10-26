@@ -1,13 +1,13 @@
 ---
 title: "Set up an AI Gateway in AI Workspace"
 description: "Register an AI Gateway in AI Workspace, connect the runtime with a registration token, and manage existing gateways."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/ai-gateways/setting-up/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/ai-gateways/setting-up.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/ai-gateways/setting-up/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/ai-gateways/setting-up.md
 tags:
   - cloud
   - ai-workspace
   - ai-gateways
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-23
 content_type: "how-to"
 ---
@@ -101,8 +101,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip && \
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip && \
+    unzip xartifactprefixx-ai-gateway-1.2.0.zip
     ```
 
     **Step 2: Set up the gateway**
@@ -110,13 +110,13 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run the one-time setup script. It provisions the AES-256 at-rest encryption key, the router HTTPS listener certificate, the gateway-controller admin credentials, and `api-platform.env` — all required before the first start (the gateway has no demo mode and fails closed if a required key, certificate, or credential is missing). The admin password is printed once — copy it:
 
     ```bash
-    cd wso2apip-ai-gateway-1.2.0 && ./scripts/setup.sh
+    cd xartifactprefixx-ai-gateway-1.2.0 && ./scripts/setup.sh
     ```
 
     On Windows, use the PowerShell setup script instead — it takes the same flags and provisions the same files:
 
     ```powershell
-    cd wso2apip-ai-gateway-1.2.0
+    cd xartifactprefixx-ai-gateway-1.2.0
     powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
     ```
 
@@ -164,8 +164,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip && \
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip && \
+    unzip xartifactprefixx-ai-gateway-1.2.0.zip
     ```
 
     **Step 2: Set up the gateway**
@@ -173,13 +173,13 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run the one-time setup script. It provisions the AES-256 at-rest encryption key, the router HTTPS listener certificate, the gateway-controller admin credentials, and `api-platform.env` — all required before the first start (the gateway has no demo mode and fails closed if a required key, certificate, or credential is missing). The admin password is printed once — copy it:
 
     ```bash
-    cd wso2apip-ai-gateway-1.2.0 && ./scripts/setup.sh
+    cd xartifactprefixx-ai-gateway-1.2.0 && ./scripts/setup.sh
     ```
 
     On Windows, use the PowerShell setup script instead — it takes the same flags and provisions the same files:
 
     ```powershell
-    cd wso2apip-ai-gateway-1.2.0
+    cd xartifactprefixx-ai-gateway-1.2.0
     powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
     ```
 
@@ -215,8 +215,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0-rc2/wso2apip-ai-gateway-1.2.0-rc2.zip && \
-    unzip wso2apip-ai-gateway-1.2.0-rc2.zip
+    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0-rc2/xartifactprefixx-ai-gateway-1.2.0-rc2.zip && \
+    unzip xartifactprefixx-ai-gateway-1.2.0-rc2.zip
     ```
 
     **Step 2: Set up the gateway**
@@ -224,13 +224,13 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run the one-time setup script. It provisions the AES-256 at-rest encryption key, the router HTTPS listener certificate, the gateway-controller admin credentials, and `api-platform.env` — all required before the first start (the gateway has no demo mode and fails closed if a required key, certificate, or credential is missing). The admin password is printed once — copy it:
 
     ```bash
-    cd wso2apip-ai-gateway-1.2.0 && ./scripts/setup.sh
+    cd xartifactprefixx-ai-gateway-1.2.0 && ./scripts/setup.sh
     ```
 
     On Windows, use the PowerShell setup script instead — it takes the same flags and provisions the same files:
 
     ```powershell
-    cd wso2apip-ai-gateway-1.2.0
+    cd xartifactprefixx-ai-gateway-1.2.0
     powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
     ```
 
@@ -281,7 +281,7 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command to install the gateway chart with the encryption key and control plane configurations:
 
     ```bash
-    helm install gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version 1.2.0 \
+    helm install gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway --version 1.2.0 \
     --set gateway.controller.encryptionKeys.enabled=true \
     --set gateway.controller.encryptionKeys.secretName=gateway-encryption-keys \
     --set gateway.controller.controlPlane.host="<control-plane-host>" \

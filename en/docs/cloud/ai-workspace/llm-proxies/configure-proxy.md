@@ -1,13 +1,13 @@
 ---
 title: "Configure an App LLM proxy"
 description: "Create an App LLM proxy, optionally attach guardrails, and deploy it to a gateway."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-proxies/configure-proxy/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-proxies/configure-proxy.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/llm-proxies/configure-proxy/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/llm-proxies/configure-proxy.md
 tags:
   - cloud
   - ai-workspace
   - llm-proxies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -64,7 +64,7 @@ You can attach policies and guardrails to your proxy that apply to all requests:
     Each guardrail includes advanced configuration options that allow you to fine-tune its behavior. After selecting a guardrail, you can configure these settings before attaching it to the proxy.
 
 !!! info
-    Learn more about available guardrails in the [Guardrails Overview](../policies/guardrails/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
+    Learn more about available guardrails in the [Guardrails Overview](../policies/guardrails/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/).
 
 ---
 

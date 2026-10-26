@@ -1,13 +1,13 @@
 ---
 title: "Review workflow approval requests"
 description: "View and respond to pending workflow approval requests assigned to you as an authorized reviewer."
-canonical_url: https://wso2.com/api-platform/docs/cloud/workflows/review-workflows-requests/
-md_url: https://wso2.com/api-platform/docs/cloud/workflows/review-workflows-requests.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/workflows/review-workflows-requests/
+md_url: https://xdocshostx/xdocspathx/cloud/workflows/review-workflows-requests.md
 tags:
   - cloud
   - workflows
   - approvals
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -30,7 +30,7 @@ Approval requests are submitted on behalf of the team. Once approved, any author
 
 To view workflow approval requests assigned to you, follow these steps:
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click the **Admin** drop-down and then click **Approvals**. This opens the **Approvals** page where you can see all approval requests assigned to you. The **Pending** tab lists requests that are yet to be reviewed. The **Past** tab displays requests already reviewed by you or other approvers, as well as requests canceled by the requester.
 ![Approvals page showing pending workflow requests list with Review button for each request](../../assets/img/workflows/pending-requests.png)

@@ -33,4 +33,4 @@ The Rate Limit - Basic policy enforces a simple request count limit on an LLM Pr
 ## Related
 
 - [Policies Overview](../overview.md)
-- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version
+- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version

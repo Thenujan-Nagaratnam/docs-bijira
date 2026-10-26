@@ -1,15 +1,15 @@
 ---
 title: "Multi-provider routing"
 description: "Route OpenAI-compatible LLM proxy requests to multiple providers using header-based selection and provider-specific transformers."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/routing/multi-provider-routing/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/routing/multi-provider-routing.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/routing/multi-provider-routing/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/routing/multi-provider-routing.md
 tags:
   - ai-gateway
   - llm
   - routing
   - troubleshooting
   - fallback
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-20
 content_type: "how-to"
 ---
@@ -87,7 +87,7 @@ operationPolicies:
 
 The policy rewrites the model at the location defined by the provider template. It can rewrite a model in the request payload, a header, a query parameter, or a path parameter.
 
-See [Model Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-round-robin) for its complete configuration.
+See [Model Round Robin](https://xpolicyhubhostx/xpolicyhubpathx/policies/model-round-robin) for its complete configuration.
 
 ### Model weighted round robin
 
@@ -112,7 +112,7 @@ operationPolicies:
 
 This example produces the repeating sequence `gpt-4o`, `gpt-4o`, `claude-sonnet-4-5-20250929` while both targets are available. It provides proportional deterministic distribution, not random or performance-based load balancing.
 
-See [Model Weighted Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin) for its complete configuration.
+See [Model Weighted Round Robin](https://xpolicyhubhostx/xpolicyhubpathx/policies/model-weighted-round-robin) for its complete configuration.
 
 ## Configure Providers
 
@@ -196,7 +196,7 @@ curl -X POST http://localhost:9090/api/management/v1/llm-providers \
   -u admin:admin \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: openai-provider
@@ -237,7 +237,7 @@ curl -X POST http://localhost:9090/api/management/v1/llm-providers \
   -u admin:admin \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: anthropic-provider
@@ -309,7 +309,7 @@ curl -X POST http://localhost:9090/api/management/v1/llm-proxies \
   -u admin:admin \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<EOF
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProxy
 metadata:
   name: openai-multi
@@ -600,7 +600,7 @@ Use `llm-header-router` as the policy name in the configuration.
 Expand a provider to see its complete transformation behavior. `Converted` means that the transformer explicitly maps a field to the provider-native format. `Pass-through` means that it retains the OpenAI field, subject to support by the selected model and API version.
 
 ??? info "Anthropic"
-    **Transformer:** [`openai-to-anthropic-transformer`](https://wso2.com/api-platform/policy-hub/policies/openai-to-anthropic-transformer) in the Policy Hub.
+    **Transformer:** [`openai-to-anthropic-transformer`](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-anthropic-transformer) in the Policy Hub.
 
     **Scope:** The Anthropic transformer targets OpenAI Chat Completions request and response shapes. It does not translate the OpenAI Responses API, embeddings, image generation, audio, assistants, batches, or fine-tuning APIs.
 
@@ -667,7 +667,7 @@ Expand a provider to see its complete transformation behavior. `Converted` means
     Image support in the transformer does not guarantee image support in every Anthropic model. The gateway does not negotiate model capabilities before routing.
 
 ??? info "Azure OpenAI"
-    **Transformer:** [`openai-to-azure-openai-transformer`](https://wso2.com/api-platform/policy-hub/policies/openai-to-azure-openai-transformer) in the Policy Hub.
+    **Transformer:** [`openai-to-azure-openai-transformer`](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-azure-openai-transformer) in the Policy Hub.
 
     **Scope:** The Azure OpenAI transformer targets the OpenAI Chat Completions request and response shape exposed by Azure OpenAI. It does not add support for the OpenAI Responses API, embeddings, image generation, audio, assistants, batches, or fine-tuning APIs through this route.
 
@@ -707,7 +707,7 @@ Expand a provider to see its complete transformation behavior. `Converted` means
     `tools`, `tool_choice`, tool-call history, tool results, and image content are passed through unchanged. Their acceptance depends on the selected deployment, model, and API version. No fallback behavior is added for an unsupported or malformed `tool_choice`.
 
 ??? info "AWS Bedrock"
-    **Transformer:** [`openai-to-bedrock-transformer`](https://wso2.com/api-platform/policy-hub/policies/openai-to-bedrock-transformer) in the Policy Hub.
+    **Transformer:** [`openai-to-bedrock-transformer`](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-bedrock-transformer) in the Policy Hub.
 
     **Scope:** The AWS Bedrock transformer targets OpenAI Chat Completions requests and responses and the Bedrock Converse APIs. It does not translate the OpenAI Responses API, embeddings, image generation, audio, assistants, batches, or fine-tuning APIs.
 
@@ -771,7 +771,7 @@ Expand a provider to see its complete transformation behavior. `Converted` means
     Bedrock accepts base64 image data URIs through this transformer. It does not fetch remote image URLs, and the selected Bedrock model must support the supplied image format and tool features.
 
 ??? info "Gemini"
-    **Transformer:** [`openai-to-gemini-transformer`](https://wso2.com/api-platform/policy-hub/policies/openai-to-gemini-transformer) in the Policy Hub.
+    **Transformer:** [`openai-to-gemini-transformer`](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-gemini-transformer) in the Policy Hub.
 
     **Scope:** The Gemini transformer targets OpenAI Chat Completions requests and responses and Gemini `generateContent`. It does not translate the OpenAI Responses API, embeddings, image generation, audio, assistants, batches, or fine-tuning APIs.
 
@@ -839,7 +839,7 @@ Expand a provider to see its complete transformation behavior. `Converted` means
     Gemini image and tool support still depends on the selected model. The gateway does not check those model capabilities before routing.
 
 ??? info "Mistral"
-    **Transformer:** [`openai-to-mistral-transformer`](https://wso2.com/api-platform/policy-hub/policies/openai-to-mistral-transformer) in the Policy Hub.
+    **Transformer:** [`openai-to-mistral-transformer`](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-mistral-transformer) in the Policy Hub.
 
     **Scope:** The Mistral transformer targets OpenAI Chat Completions request and response shapes supported by Mistral's OpenAI-compatible API. It does not add support for the OpenAI Responses API, embeddings, image generation, audio, assistants, batches, or fine-tuning APIs through this route.
 
@@ -982,12 +982,12 @@ The AI Gateway distribution includes the router and transformer policies support
 
 ## Complete Example
 
-For a larger configuration containing OpenAI, Anthropic, Azure OpenAI, Mistral, Gemini, and AWS Bedrock, see [`gateway/examples/openai-multi-provider-proxy.yaml`](https://github.com/wso2/api-platform/blob/main/gateway/examples/openai-multi-provider-proxy.yaml).
+For a larger configuration containing OpenAI, Anthropic, Azure OpenAI, Mistral, Gemini, and AWS Bedrock, see [`gateway/examples/openai-multi-provider-proxy.yaml`](https://github.com/xgithuborgx/api-platform/blob/main/gateway/examples/openai-multi-provider-proxy.yaml).
 
 For automatic traffic distribution across models and providers, see:
 
-- [Model Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-round-robin)
-- [Model Weighted Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin)
+- [Model Round Robin](https://xpolicyhubhostx/xpolicyhubpathx/policies/model-round-robin)
+- [Model Weighted Round Robin](https://xpolicyhubhostx/xpolicyhubpathx/policies/model-weighted-round-robin)
 
 AWS Bedrock usage can also be evaluated by the [LLM Cost policy](../../../ai-workspace/1.0.0/policies/overview.md#llm-cost).
 

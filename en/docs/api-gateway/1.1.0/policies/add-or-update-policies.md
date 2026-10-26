@@ -1,14 +1,14 @@
 ---
 title: "Add or Update Policies in a Gateway"
 description: "Add a Policy Hub or local policy to an API Platform Gateway, or update a policy to a different version, by editing build.yaml and rebuilding the image."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/policies/add-or-update-policies/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/policies/add-or-update-policies.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/policies/add-or-update-policies/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/policies/add-or-update-policies.md
 tags:
   - api-gateway
   - policies
   - cli
   - policy-hub
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-15
 content_type: "how-to"
 ---
@@ -24,7 +24,7 @@ For the concepts behind policies and the list of available policies, see the [AP
 
 ## Prerequisites
 
-- The API Platform CLI (`ap`), version 0.9.1 or later. Download the binary for your platform from the [`ap` CLI v0.9.1 release page](https://github.com/wso2/api-platform/releases/tag/ap%2Fv0.9.1), then add it to your `PATH`. For step-by-step installation instructions, see [Building the Gateway with Custom Policies](custom-policies/building-gateway-with-custom-policies.md). Confirm the version:
+- The API Platform CLI (`ap`), version 0.9.1 or later. Download the binary for your platform from the [`ap` CLI v0.9.1 release page](https://github.com/xgithuborgx/api-platform/releases/tag/ap%2Fv0.9.1), then add it to your `PATH`. For step-by-step installation instructions, see [Building the Gateway with Custom Policies](custom-policies/building-gateway-with-custom-policies.md). Confirm the version:
 
     ```bash
     ap version
@@ -41,7 +41,7 @@ The `build.yaml` file lists every policy compiled into the gateway image. Each e
 
 | Field | Policy type | Value |
 |---|---|---|
-| `gomodule` | Managed policy from the Policy Hub | Go module reference in the form `github.com/wso2/gateway-controllers/policies/<name>@<version>` |
+| `gomodule` | Managed policy from the Policy Hub | Go module reference in the form `github.com/xgithuborgx/gateway-controllers/policies/<name>@<version>` |
 | `filePath` | Local policy | Path to the policy directory, relative to `build.yaml` |
 
 A `build.yaml` with one Policy Hub policy and one local policy looks like this:
@@ -52,7 +52,7 @@ gateway:
   version: 1.1.0
 policies:
   - name: set-headers
-    gomodule: github.com/wso2/gateway-controllers/policies/set-headers@v1
+    gomodule: github.com/xgithuborgx/gateway-controllers/policies/set-headers@v1
   - name: my-policy
     filePath: ./policies/my-policy
 ```
@@ -65,9 +65,9 @@ For a managed policy, the version qualifier in its `gomodule` reference controls
 
 | Qualifier | Selects | Example |
 |---|---|---|
-| `@v1` | The most recent release in the `v1` major line | `github.com/wso2/gateway-controllers/policies/set-headers@v1` |
-| `@v1.1` | The most recent patch release in the `v1.1` minor line | `github.com/wso2/gateway-controllers/policies/set-headers@v1.1` |
-| `@v1.1.0` | Exactly version `v1.1.0` | `github.com/wso2/gateway-controllers/policies/set-headers@v1.1.0` |
+| `@v1` | The most recent release in the `v1` major line | `github.com/xgithuborgx/gateway-controllers/policies/set-headers@v1` |
+| `@v1.1` | The most recent patch release in the `v1.1` minor line | `github.com/xgithuborgx/gateway-controllers/policies/set-headers@v1.1` |
+| `@v1.1.0` | Exactly version `v1.1.0` | `github.com/xgithuborgx/gateway-controllers/policies/set-headers@v1.1.0` |
 
 !!! note
     A partial qualifier always resolves to the highest matching release. `@v1` selects the highest available `v1` release, `@v1.1` selects the highest available patch release in the `v1.1` line, and `@v1.1.0` pins exactly that version.
@@ -87,7 +87,7 @@ Each build resolves every reference to a concrete version and records it in `bui
     ```yaml
     policies:
       - name: cors
-        gomodule: github.com/wso2/gateway-controllers/policies/cors@v1
+        gomodule: github.com/xgithuborgx/gateway-controllers/policies/cors@v1
     ```
 
     The `@v1` qualifier selects the most recent `v1` release. To pin a specific version, see [Policy versions](#policy-versions).
@@ -118,7 +118,7 @@ To update a managed policy, change its version qualifier and rebuild. For exampl
 ```yaml
 policies:
   - name: set-headers
-    gomodule: github.com/wso2/gateway-controllers/policies/set-headers@v1.1.0
+    gomodule: github.com/xgithuborgx/gateway-controllers/policies/set-headers@v1.1.0
 ```
 
 For the major, minor, and exact qualifier forms, see [Policy versions](#policy-versions). When you reference a major or minor line, each rebuild picks up the most recent matching release; to hold a policy at a fixed version, reference the exact version. After the build, check the `build-manifest.yaml` file next to `build.yaml` to confirm the version included.
@@ -161,9 +161,9 @@ For the full list of build options and base-image configuration, see [Building t
     ```yaml
     services:
       gateway-controller:
-        image: ghcr.io/wso2/api-platform/gateway-controller:1.1.0
+        image: ghcr.io/xgithuborgx/api-platform/gateway-controller:1.1.0
       gateway-runtime:
-        image: ghcr.io/wso2/api-platform/gateway-runtime:1.1.0
+        image: ghcr.io/xgithuborgx/api-platform/gateway-runtime:1.1.0
     ```
 
     to the built images:
@@ -171,9 +171,9 @@ For the full list of build options and base-image configuration, see [Building t
     ```yaml
     services:
       gateway-controller:
-        image: ghcr.io/wso2/api-platform/my-gateway-gateway-controller:1.1.0
+        image: ghcr.io/xgithuborgx/api-platform/my-gateway-gateway-controller:1.1.0
       gateway-runtime:
-        image: ghcr.io/wso2/api-platform/my-gateway-gateway-runtime:1.1.0
+        image: ghcr.io/xgithuborgx/api-platform/my-gateway-gateway-runtime:1.1.0
     ```
 
     On later updates that keep the same name and version, the image names do not change, so you can leave `docker-compose.yaml` as it is. For the full steps, see [Building the Gateway with Custom Policies](custom-policies/building-gateway-with-custom-policies.md).

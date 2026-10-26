@@ -1,13 +1,13 @@
 ---
 title: "URL Guardrail for AI APIs"
-description: "Configure a URL guardrail on AI API proxies in WSO2 API Platform to validate embedded URLs via DNS lookup or connection checks."
-canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail/
-md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail.md
+description: "Configure a URL guardrail on AI API proxies in XAPIPLATFORMX to validate embedded URLs via DNS lookup or connection checks."
+canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail/
+md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/url-guardrail.md
 tags:
   - cloud
   - ai-gateway
   - guardrails
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---

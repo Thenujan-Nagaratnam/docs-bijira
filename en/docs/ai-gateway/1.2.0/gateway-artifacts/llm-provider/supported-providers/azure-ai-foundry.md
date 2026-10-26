@@ -1,14 +1,14 @@
 ---
 title: "Azure AI Foundry"
 description: "Connect the AI Gateway to Azure AI Foundry: the values your Foundry resource supplies, and what the azureai-foundry template extracts from responses."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry.md
 tags:
   - ai-gateway
   - llm-provider
   - azure-ai-foundry
   - llm
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-18
 content_type: "how-to"
 ---
@@ -40,14 +40,14 @@ The template ID is `azureai-foundry`, with no hyphen between `azure` and `ai`. A
 The template extracts the following:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProviderTemplate
 metadata:
   name: azureai-foundry
 spec:
   displayName: Azure AI Foundry
-  groupId: wso2-azureai-foundry
-  managedBy: wso2
+  groupId: xtemplategroupprefixx-azureai-foundry
+  managedBy: xtemplateownerx
   version: v1.0
   promptTokens:
     location: payload
@@ -85,7 +85,7 @@ The gateway reads the token counts and the model name from the response payload,
 Deploy the provider through the management API, following the procedure in [Create and configure an LLM provider](../create-and-configure-an-llm-provider.md). An Azure AI Foundry provider takes this shape:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: azureai-foundry-provider

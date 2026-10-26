@@ -1,14 +1,14 @@
 ---
 title: "MCP rewrite"
 description: "Expose user-facing names for MCP tools, resources, and prompts while mapping them to different backend capability names."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-rewrite/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-rewrite.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/mcp/policies/mcp-rewrite/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/mcp/policies/mcp-rewrite.md
 tags:
   - cloud
   - ai-gateway
   - mcp
   - policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -86,7 +86,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 
 ```yaml
 - name: mcp-rewrite
-  gomodule: github.com/wso2/gateway-controllers/policies/mcp-rewrite@v0
+  gomodule: github.com/xgithuborgx/gateway-controllers/policies/mcp-rewrite@v0
 ```
 
 ## Reference Scenarios
@@ -96,7 +96,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 Expose tools with different names than the backend:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -128,7 +128,7 @@ spec:
 Expose resources with user-friendly URIs mapped to backend resources:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -160,7 +160,7 @@ spec:
 Rewrite prompts and tools with metadata:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0

@@ -1,13 +1,13 @@
 ---
 title: "Secure API Access with Azure AD"
-description: "Configure WSO2 API Platform to authenticate API requests through Microsoft Azure AD as an external key manager with scoped access."
-canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad/
-md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad.md
+description: "Configure XAPIPLATFORMX to authenticate API requests through Microsoft Azure AD as an external key manager with scoped access."
+canonical_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad/
+md_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-azure-ad.md
 tags:
   - cloud
   - authentication
   - azure-ad
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -141,7 +141,7 @@ For more information, refer to the Azure documentation: [Add a Client Secret](ht
 ## Step 5: Create an application in API Platform Devportal
 Follow the steps below to consume the API Platform API through external key manager for authentication:
 
-1. Sign in to the [API Platform Developer Portal](https://devportal.bijira.dev/).
+1. Sign in to the [API Platform Developer Portal](https://devportal.xclouddomainx/).
 2. Click **Applications** tab and then click **+Create**.
 3. Enter a name for the application.
 4. Click **Create** and **Subscribe** to the API you assigned scopes.

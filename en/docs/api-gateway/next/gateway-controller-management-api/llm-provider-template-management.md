@@ -1,13 +1,13 @@
 ---
 title: "Management API: LLM Provider Template Management"
 description: "REST API reference for creating, listing, updating, and deleting LLM provider templates in API Platform Gateway."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/next/gateway-controller-management-api/llm-provider-template-management/
-md_url: https://wso2.com/api-platform/docs/api-gateway/next/gateway-controller-management-api/llm-provider-template-management.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/next/gateway-controller-management-api/llm-provider-template-management/
+md_url: https://xdocshostx/xdocspathx/api-gateway/next/gateway-controller-management-api/llm-provider-template-management.md
 tags:
   - api-gateway
   - management-api
   - llm
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -40,7 +40,7 @@ Add a new LLM provider template to the Gateway. A template defines token trackin
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"
@@ -110,7 +110,7 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"
@@ -202,7 +202,7 @@ Required roles: `admin`
   "count": 3,
   "templates": [
     {
-      "apiVersion": "gateway.api-platform.wso2.com/v1",
+      "apiVersion": "gateway.api-platform.xcrddomainx/v1",
       "kind": "LlmProviderTemplate",
       "metadata": {
         "name": "openai-template"
@@ -277,7 +277,7 @@ Status Code **200**
 |spec|[LLMProviderTemplateData](schemas.md#schemallmprovidertemplatedata)|true|none|none|
 |displayName|string|true|none|Human-readable LLM Template name|
 |groupId|string|false|none|Stable family-grouping identifier shared by every version of this<br>template. Multiple versions with the same groupId but different<br>handles are surfaced as versions of one template. Defaults to<br>metadata.name when omitted.|
-|managedBy|string|false|none|Origin of the template. Built-in templates use 'wso2'; custom<br>templates default to 'customer' and may be set to any value.|
+|managedBy|string|false|none|Origin of the template. Built-in templates use 'xtemplateownerx'; custom<br>templates default to 'customer' and may be set to any value.|
 |version|string|false|none|Template content version (e.g. v1.0). Multiple versions of the same<br>groupId can coexist; defaults to v1.0 when omitted.|
 |promptTokens|[ExtractionIdentifier](schemas.md#schemaextractionidentifier)|false|none|none|
 |location|string|true|none|Where to find the token information|
@@ -313,7 +313,7 @@ Status Code **200**
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.wso2.com/v1|
+|apiVersion|gateway.api-platform.xcrddomainx/v1|
 |kind|LlmProviderTemplate|
 |location|payload|
 |location|header|
@@ -361,7 +361,7 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"
@@ -433,7 +433,7 @@ Update an existing LLM provider template in the Gateway.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"
@@ -490,7 +490,7 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"

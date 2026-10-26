@@ -1,14 +1,14 @@
 ---
 title: "Custom provider"
 description: "Connect the AI Gateway to an LLM service with no shipped template: define an LlmProviderTemplate of your own, deploy it, and create a provider that uses it."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/custom-provider/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/custom-provider.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/custom-provider/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/custom-provider.md
 tags:
   - ai-gateway
   - llm-provider
   - custom-provider
   - llm
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-18
 content_type: "how-to"
 ---
@@ -46,7 +46,7 @@ A template tells the gateway where to find usage metadata in your provider's tra
 An `LlmProviderTemplate` takes this structure:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProviderTemplate
 metadata:
   name: <template-id>
@@ -87,7 +87,7 @@ curl -X POST http://localhost:9090/api/management/v1/llm-provider-templates \
   -H "Content-Type: application/yaml" \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProviderTemplate
 metadata:
   name: custom-provider
@@ -109,7 +109,7 @@ The value of `metadata.name` becomes the template ID. This example deploys a tem
 Deploy the provider through the management API, following the procedure in [Create and configure an LLM provider](../create-and-configure-an-llm-provider.md). A provider built on a custom template takes this shape:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: custom-provider-instance

@@ -1,14 +1,14 @@
 ---
 title: "Publish MCP servers to a governed catalog using AI Workspace and API Portal and MCP Hub"
 description: "Register an AI Gateway, create MCP proxies for existing MCP servers, and publish them to API Portal and MCP Hub for governed discovery."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/publish-mcp-servers-to-a-governed-catalog/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/publish-mcp-servers-to-a-governed-catalog.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/publish-mcp-servers-to-a-governed-catalog/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/publish-mcp-servers-to-a-governed-catalog.md
 tags:
   - guides
   - ai-and-mcp
   - mcp
   - ai-workspace
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-09
 content_type: "tutorial"
 ---
@@ -30,7 +30,7 @@ This guide shows you how to publish existing MCP servers into a governed, discov
 
 ## Prerequisites
 
-- A WSO2 API Platform account with access to AI Workspace and API Portal and MCP Hub
+- A XAPIPLATFORMX account with access to AI Workspace and API Portal and MCP Hub
 - Docker with the Compose plugin, `curl`, and `unzip`, to run the gateway runtime
 
 ## Architecture
@@ -68,7 +68,7 @@ Both MCP proxies route through the same gateway, but they're two separate catalo
 
 An AI Gateway entry in AI Workspace represents one gateway runtime. Registering it here gets you a token; you still start the runtime yourself with Docker.
 
-1. Go to [AI Workspace](https://ai-workspace.bijira.dev) and sign in. If this is your first time signing in, create an Organization and a Project.
+1. Go to [AI Workspace](https://ai-workspace.xclouddomainx) and sign in. If this is your first time signing in, create an Organization and a Project.
 2. Click **AI Gateways** in the left navigation menu.
 3. Click **Add AI Gateway**.
 4. Fill in the gateway details:
@@ -91,15 +91,15 @@ Select the **Quick Start** tab in the gateway's **Get Started** pane, then run t
 1. Download and unzip the gateway distribution:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v<version_number>/wso2apip-ai-gateway-<version_number>.zip && \
-    unzip wso2apip-ai-gateway-<version_number>.zip
+    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v<version_number>/xartifactprefixx-ai-gateway-<version_number>.zip && \
+    unzip xartifactprefixx-ai-gateway-<version_number>.zip
     ```
 
 2. Create the environment file with your registration token from step 1:
 
     ```bash
-    cat > wso2apip-ai-gateway-<version_number>/configs/keys.env << 'ENVFILE'
-    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
+    cat > xartifactprefixx-ai-gateway-<version_number>/configs/keys.env << 'ENVFILE'
+    GATEWAY_CONTROLPLANE_HOST=connect.xclouddomainx
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -107,7 +107,7 @@ Select the **Quick Start** tab in the gateway's **Get Started** pane, then run t
 3. Start the runtime:
 
     ```bash
-    cd wso2apip-ai-gateway-<version_number> && \
+    cd xartifactprefixx-ai-gateway-<version_number> && \
     docker compose --env-file configs/keys.env up
     ```
 
@@ -180,7 +180,7 @@ Repeat step 5 to publish the DeepWiki MCP Server Proxy to the MCP Hub.
 
 ## Verify
 
-Open the [API Portal and MCP Hub](https://devportal.bijira.dev) and sign in. Confirm that both MCP servers appear in the **MCP Servers** catalog.
+Open the [API Portal and MCP Hub](https://devportal.xclouddomainx) and sign in. Confirm that both MCP servers appear in the **MCP Servers** catalog.
 
 ![Published MCP Proxies in MCP Hub](../../assets/img/guides/ai-and-mcp/mcp-catalog/published-mcps-in-dev-portal.png)
 
@@ -216,4 +216,4 @@ You can also open the `llms.txt` preview in another tab to see the current `llms
 
 The companion sample runs this same governance pattern end to end using using Docker Compose. The sample uses self-hosted, standalone components. You will learn how to publish two MCP servers through the Management API. You will then verify them through the MCP Registry API and API Portal and MCP Hub UI. You don't need a Cloud account to run the sample.
 
-[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/mcp-registry-catalog).
+[View the sample on GitHub](https://github.com/xgithuborgx/api-platform/tree/main/samples/mcp-registry-catalog).

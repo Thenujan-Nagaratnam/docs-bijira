@@ -1,13 +1,13 @@
 ---
 title: "Quick Start Guide - MCP Server"
-description: "Create an MCP Server from an API contract, test it in the MCP Playground, and publish it for AI agents to discover and consume with WSO2 API Platform."
-canonical_url: https://wso2.com/api-platform/docs/cloud/introduction/quick-start-guide-mcp/
-md_url: https://wso2.com/api-platform/docs/cloud/introduction/quick-start-guide-mcp.md
+description: "Create an MCP Server from an API contract, test it in the MCP Playground, and publish it for AI agents to discover and consume with XAPIPLATFORMX."
+canonical_url: https://xdocshostx/xdocspathx/cloud/introduction/quick-start-guide-mcp/
+md_url: https://xdocshostx/xdocspathx/cloud/introduction/quick-start-guide-mcp.md
 tags:
   - cloud
   - mcp
   - quickstart
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-30
 content_type: "quickstart"
 ---
@@ -35,7 +35,7 @@ In this tutorial, you will use API Platform to create an MCP Server from an HTTP
 ## Prerequisites
 
 1. If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your Google, GitHub, or Microsoft account.
+    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your Google, GitHub, or Microsoft account.
     2. Enter a unique organization name.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -44,7 +44,7 @@ In this tutorial, you will use API Platform to create an MCP Server from an HTTP
 
 ## Step 1: Create a Project
 
-1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
+1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in. This opens the organization home page.
 2. On the organization home page, click **+ Create Project**.
 3. Enter the following details:
 
@@ -64,11 +64,11 @@ In this tutorial, you will use API Platform to create an MCP Server from an HTTP
 1. On the project home page, select **MCP Server** and click **Import API Contract** under **Expose APIs as MCP Servers**.
 2. Click **URL for API Contract**, enter the following URL, and then click **Next**:
    ```http
-   https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml
+   https://raw.githubusercontent.com/xgithuborgx/xcloudslugx-samples/refs/heads/main/reading-list-api/openapi.yaml
    ```
 3. The **Create MCP Server from Contract** page will be opened. Click **Create** to complete the MCP Server creation process.
 
-    ![Create MCP Server from Contract form with name Reading List API, identifier, version, base path, description, HTTP type, WSO2 Managed Gateway selected, and target URL fields](../../assets/img/introduction/mcp-create-server.png)
+    ![Create MCP Server from Contract form with name Reading List API, identifier, version, base path, description, HTTP type, XBRANDX Managed Gateway selected, and target URL fields](../../assets/img/introduction/mcp-create-server.png)
 
 ## Step 3: Test the MCP Server
 

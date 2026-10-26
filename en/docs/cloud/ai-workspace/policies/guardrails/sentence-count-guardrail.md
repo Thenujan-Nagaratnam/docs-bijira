@@ -1,13 +1,13 @@
 ---
 title: "Sentence count guardrail in AI Workspace"
 description: "Enforce minimum and maximum sentence count limits on LLM prompts or responses, configured in AI Workspace."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/sentence-count-guardrail/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/sentence-count-guardrail.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/guardrails/sentence-count-guardrail/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/guardrails/sentence-count-guardrail.md
 tags:
   - cloud
   - ai-workspace
   - guardrails
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -75,4 +75,4 @@ The following configuration blocks requests where the user message contains more
 
 - [Guardrails Overview](overview.md)
 - [Word Count Guardrail](word-count-guardrail.md)
-- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version
+- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version

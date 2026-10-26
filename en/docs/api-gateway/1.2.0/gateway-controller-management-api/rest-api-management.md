@@ -1,13 +1,13 @@
 ---
 title: "Management API: REST API Management"
 description: "REST API reference for creating, listing, updating, and deleting REST API configurations, API keys, and subscriptions via the Gateway Controller."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/gateway-controller-management-api/rest-api-management/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/gateway-controller-management-api/rest-api-management.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/gateway-controller-management-api/rest-api-management/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/gateway-controller-management-api/rest-api-management.md
 tags:
   - api-gateway
   - management-api
   - rest-api
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -40,7 +40,7 @@ Add a new RestAPI to the Gateway.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "RestApi",
   "metadata": {
     "name": "reading-list-api-v1.0"
@@ -51,7 +51,7 @@ Add a new RestAPI to the Gateway.
     "context": "/reading-list/$version",
     "upstream": {
       "main": {
-        "url": "https://apis.bijira.dev/samples/reading-list-api-service/v1.0"
+        "url": "https://apis.xclouddomainx/samples/reading-list-api-service/v1.0"
       }
     },
     "policies": [
@@ -62,7 +62,7 @@ Add a new RestAPI to the Gateway.
           "request": {
             "headers": [
               {
-                "name": "x-wso2-apip-gateway-version",
+                "name": "x-xheaderprefixx-apip-gateway-version",
                 "value": "v1.0.0"
               }
             ]
@@ -125,7 +125,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "RestApi",
   "metadata": {
     "name": "reading-list-api-v1.0"
@@ -136,7 +136,7 @@ Required roles: `admin`, `developer`
     "context": "/reading-list/$version",
     "upstream": {
       "main": {
-        "url": "https://apis.bijira.dev/samples/reading-list-api-service/v1.0"
+        "url": "https://apis.xclouddomainx/samples/reading-list-api-service/v1.0"
       }
     },
     "policies": [
@@ -147,7 +147,7 @@ Required roles: `admin`, `developer`
           "request": {
             "headers": [
               {
-                "name": "x-wso2-apip-gateway-version",
+                "name": "x-xheaderprefixx-apip-gateway-version",
                 "value": "v1.0.0"
               }
             ]
@@ -258,7 +258,7 @@ Required roles: `admin`, `developer`
   "count": 5,
   "apis": [
     {
-      "apiVersion": "gateway.api-platform.wso2.com/v1",
+      "apiVersion": "gateway.api-platform.xcrddomainx/v1",
       "kind": "RestApi",
       "metadata": {
         "name": "reading-list-api-v1.0"
@@ -269,7 +269,7 @@ Required roles: `admin`, `developer`
         "context": "/reading-list/$version",
         "upstream": {
           "main": {
-            "url": "https://apis.bijira.dev/samples/reading-list-api-service/v1.0"
+            "url": "https://apis.xclouddomainx/samples/reading-list-api-service/v1.0"
           }
         },
         "policies": [
@@ -280,7 +280,7 @@ Required roles: `admin`, `developer`
               "request": {
                 "headers": [
                   {
-                    "name": "x-wso2-apip-gateway-version",
+                    "name": "x-xheaderprefixx-apip-gateway-version",
                     "value": "v1.0.0"
                   }
                 ]
@@ -440,7 +440,7 @@ Status Code **200**
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.wso2.com/v1|
+|apiVersion|gateway.api-platform.xcrddomainx/v1|
 |kind|RestApi|
 |hostRewrite|auto|
 |hostRewrite|manual|
@@ -510,7 +510,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "RestApi",
   "metadata": {
     "name": "reading-list-api-v1.0"
@@ -521,7 +521,7 @@ Required roles: `admin`, `developer`
     "context": "/reading-list/$version",
     "upstream": {
       "main": {
-        "url": "https://apis.bijira.dev/samples/reading-list-api-service/v1.0"
+        "url": "https://apis.xclouddomainx/samples/reading-list-api-service/v1.0"
       }
     },
     "policies": [
@@ -532,7 +532,7 @@ Required roles: `admin`, `developer`
           "request": {
             "headers": [
               {
-                "name": "x-wso2-apip-gateway-version",
+                "name": "x-xheaderprefixx-apip-gateway-version",
                 "value": "v1.0.0"
               }
             ]
@@ -613,7 +613,7 @@ Update an existing RestAPI in the Gateway.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "RestApi",
   "metadata": {
     "name": "reading-list-api-v1.0"
@@ -624,7 +624,7 @@ Update an existing RestAPI in the Gateway.
     "context": "/reading-list/$version",
     "upstream": {
       "main": {
-        "url": "https://apis.bijira.dev/samples/reading-list-api-service/v1.0"
+        "url": "https://apis.xclouddomainx/samples/reading-list-api-service/v1.0"
       }
     },
     "policies": [
@@ -635,7 +635,7 @@ Update an existing RestAPI in the Gateway.
           "request": {
             "headers": [
               {
-                "name": "x-wso2-apip-gateway-version",
+                "name": "x-xheaderprefixx-apip-gateway-version",
                 "value": "v1.0.0"
               }
             ]
@@ -703,7 +703,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "RestApi",
   "metadata": {
     "name": "reading-list-api-v1.0"
@@ -714,7 +714,7 @@ Required roles: `admin`, `developer`
     "context": "/reading-list/$version",
     "upstream": {
       "main": {
-        "url": "https://apis.bijira.dev/samples/reading-list-api-service/v1.0"
+        "url": "https://apis.xclouddomainx/samples/reading-list-api-service/v1.0"
       }
     },
     "policies": [
@@ -725,7 +725,7 @@ Required roles: `admin`, `developer`
           "request": {
             "headers": [
               {
-                "name": "x-wso2-apip-gateway-version",
+                "name": "x-xheaderprefixx-apip-gateway-version",
                 "value": "v1.0.0"
               }
             ]

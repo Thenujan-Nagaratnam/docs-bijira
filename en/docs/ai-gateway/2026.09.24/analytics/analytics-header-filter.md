@@ -1,13 +1,13 @@
 ---
 title: "Analytics Header Filter"
 description: "Control which request and response headers are sent to analytics backends using allow or deny mode in API Platform AI Gateway."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/analytics/analytics-header-filter/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/analytics/analytics-header-filter.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/analytics/analytics-header-filter/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/analytics/analytics-header-filter.md
 tags:
   - ai-gateway
   - analytics
   - policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-14
 content_type: "reference"
 ---
@@ -63,7 +63,7 @@ Each filter parameter (`requestHeadersToFilter` and `responseHeadersToFilter`) i
 * The policy must be explicitly applied to the API policy chain
 * If analytics is disabled at the system level, this policy has no effect
 
-For the full set of analytics system parameters, including the publishers to enable and whether payloads are collected, see the [Analytics Header Filter policy](https://wso2.com/api-platform/policy-hub/policies/analytics-header-filter) in Policy Hub.
+For the full set of analytics system parameters, including the publishers to enable and whether payloads are collected, see the [Analytics Header Filter policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/analytics-header-filter) in Policy Hub.
 
 
 ## API Definition Example
@@ -75,7 +75,7 @@ curl -X POST http://localhost:9090/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic <base64-credentials>" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: openai-provider

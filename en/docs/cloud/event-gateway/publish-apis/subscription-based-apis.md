@@ -1,13 +1,13 @@
 ---
 title: "Publish subscription-based APIs on the Event Gateway"
 description: "Assign subscription plans, attach the Subscription Validation policy, and publish a subscription-based API on the Event Gateway."
-canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/publish-apis/subscription-based-apis/
-md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/publish-apis/subscription-based-apis.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/event-gateway/publish-apis/subscription-based-apis/
+md_url: https://xdocshostx/xdocspathx/cloud/event-gateway/publish-apis/subscription-based-apis.md
 tags:
   - cloud
   - event-gateway
   - subscriptions
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -25,7 +25,7 @@ This model fits APIs where you need tiered access, usage limits, or clear commer
 
 ## Assign subscription plans to the API
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. Select the project and the API proxy.
 3. Go to **Manage** → **Monetize**.
 4. Enable the **Subscription Plan Status** toggle for each plan you want to offer for this API by toggling **Enabled** field.

@@ -1,22 +1,22 @@
 ---
 title: "Configure Claude Code with AI Gateway Using a Claude Subscription"
 description: "Route Claude Team or Enterprise subscription traffic through the AI Gateway, adding enterprise identity, usage policies, and per-user cost visibility."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/ai-coding-assistants/claude-code-subscription-configuration-with-ai-gateway/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/ai-coding-assistants/claude-code-subscription-configuration-with-ai-gateway.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/ai-coding-assistants/claude-code-subscription-configuration-with-ai-gateway/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/ai-coding-assistants/claude-code-subscription-configuration-with-ai-gateway.md
 tags:
   - guides
   - ai-and-mcp
   - ai-coding-assistants
   - claude-code
   - identity
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-20
 content_type: "how-to"
 ---
 
 # Configuring Claude Code with AI Gateway using a Claude subscription
 
-This guide explains how to route Claude Code requests through WSO2 API Platform when your organization pays for Claude through a Claude Team or Claude Enterprise subscription rather than through Anthropic API keys.
+This guide explains how to route Claude Code requests through XAPIPLATFORMX when your organization pays for Claude through a Claude Team or Claude Enterprise subscription rather than through Anthropic API keys.
 
 In this setup, Claude Code keeps its standard subscription login. The AI Gateway adds an independent layer of enterprise authentication on a custom header, and then applies governance policies before the request reaches Anthropic. Every request therefore carries two credentials:
 
@@ -27,7 +27,7 @@ An LLM Provider defines the upstream large language model (LLM) service, which i
 
 ## Choose the setup that matches your billing model
 
-WSO2 API Platform supports two deployment patterns for Claude Code. Pick the one that matches how your organization pays for Claude.
+XAPIPLATFORMX supports two deployment patterns for Claude Code. Pick the one that matches how your organization pays for Claude.
 
 The following table compares the two patterns:
 
@@ -52,26 +52,26 @@ A single Claude Code request travels through five stages:
 
 The two credentials stay independent. Anthropic validates only the Claude token, and the identity provider never sees it.
 
-By default, the [JWT Auth](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) policy forwards the validated enterprise token upstream. It copies the token to the `x-forwarded-authorization` header and removes the original custom header. Anthropic then receives both tokens, and ignores the one it doesn't recognize. If you'd rather the enterprise token stop at the gateway, you can set the policy's `forwardToken` parameter to `false`.
+By default, the [JWT Auth](https://xpolicyhubhostx/xpolicyhubpathx/policies/jwt-auth) policy forwards the validated enterprise token upstream. It copies the token to the `x-forwarded-authorization` header and removes the original custom header. Anthropic then receives both tokens, and ignores the one it doesn't recognize. If you'd rather the enterprise token stop at the gateway, you can set the policy's `forwardToken` parameter to `false`.
 
 ## Prerequisites
 
 Before you begin, make sure you have:
 
 - A Claude Team or Claude Enterprise subscription that your developers can sign in to
-- A WSO2 API Platform admin account
-- An organization created in WSO2 API Platform
+- A XAPIPLATFORMX admin account
+- An organization created in XAPIPLATFORMX
 - An OAuth 2.0 identity provider that publishes a JSON Web Key Set (JWKS) endpoint, such as Asgardeo, Microsoft Entra ID, Okta, Keycloak, or Auth0. You need this only for JWT authentication.
 - [Claude Code](https://code.claude.com/docs/en/overview) installed
 
-## Step 1: Start an AI Gateway on WSO2 AI Workspace
+## Step 1: Start an AI Gateway on XAIWORKSPACEX
 
 !!! note
     If you have created and activated an AI Gateway instance, skip over to step 2.
 
 If an AI Gateway is not already created, follow these steps:
 
-1. **Log in to the WSO2 AI Workspace** as an admin.
+1. **Log in to the XAIWORKSPACEX** as an admin.
 
 2. Make sure you are at the organization level. Then select the organization from the header tab at the top of the page.
 
@@ -101,7 +101,7 @@ The following example uses Asgardeo. Substitute the issuer and JWKS URLs publish
 
 ```toml
 [[policy_configurations.jwtauth_v1.keymanagers]]
-name = "WSO2IDP"
+name = "XSAMPLEBRANDXIDP"
 issuer = "https://api.asgardeo.io/t/<your-organization>/oauth2/token"
 
 [policy_configurations.jwtauth_v1.keymanagers.jwks.remote]
@@ -109,7 +109,7 @@ uri = "https://api.asgardeo.io/t/<your-organization>/oauth2/jwks"
 skipTlsVerify = false
 ```
 
-Restart the gateway after you change `config.toml`. For the complete set of policy parameters, including the header name, the accepted signing algorithms, and the JWKS cache and retry behavior, see the [JWT Auth policy documentation](https://wso2.com/api-platform/policy-hub/policies/jwt-auth).
+Restart the gateway after you change `config.toml`. For the complete set of policy parameters, including the header name, the accepted signing algorithms, and the JWKS cache and retry behavior, see the [JWT Auth policy documentation](https://xpolicyhubhostx/xpolicyhubpathx/policies/jwt-auth).
 
 ### Register an application in your identity provider
 
@@ -162,7 +162,7 @@ Two settings differ from the defaults. Change both before you deploy the provide
 
     This guide uses the **JWT Auth** policy. Under its advanced settings, provide:
 
-    - **Issuer**: the key manager name you declared in `config.toml` in step 2, for example `WSO2IDP`
+    - **Issuer**: the key manager name you declared in `config.toml` in step 2, for example `XSAMPLEBRANDXIDP`
     - **Header name**: the custom header that carries the enterprise token, for example `AuthorizationGW`
     - **User ID claim**: optional. The claim that identifies the developer, used to attribute usage and cost.
 
@@ -247,7 +247,7 @@ Direct mode covers the command-line interface only. An IDE extension launches Cl
 
 ### Configure TLS certificate trust
 
-When using a local WSO2 API Platform AI Gateway over HTTPS, Claude Code must be able to trust the certificate presented by the gateway.
+When using a local XPLATFORMAIGATEWAYX over HTTPS, Claude Code must be able to trust the certificate presented by the gateway.
 
 !!! note
     If the AI Gateway uses a valid CA-signed certificate, no additional certificate configuration is required.
@@ -281,15 +281,15 @@ After setting the required environment variables, run Claude Code:
 claude
 ```
 
-Claude Code sends requests through WSO2 API Platform instead of directly calling Anthropic, and the request draws on the organization's Claude subscription.
+Claude Code sends requests through XAPIPLATFORMX instead of directly calling Anthropic, and the request draws on the organization's Claude subscription.
 
 ## Use case examples
 
 ### View API analytics and insights
 
-By routing Claude Code requests through the WSO2 API Platform AI Gateway, you automatically gain access to built-in analytics and reporting capabilities.
+By routing Claude Code requests through the XPLATFORMAIGATEWAYX, you automatically gain access to built-in analytics and reporting capabilities.
 
-WSO2 provides integrated analytics, powered by Moesif, and also supports integration with external tools such as the ELK stack (**Elasticsearch**, **Logstash**, **Kibana**) and Choreo Analytics.
+XBRANDX provides integrated analytics, powered by Moesif, and also supports integration with external tools such as the ELK stack (**Elasticsearch**, **Logstash**, **Kibana**) and Choreo Analytics.
 
 Because the authentication policy identifies the developer behind every request, these reports break usage down per user rather than per shared credential. That shows how a single subscription is consumed across teams.
 
@@ -299,9 +299,9 @@ The following example shows Moesif being used to view analytics.
 
 For more information, see [Analytics overview](../../../analytics/overview.md).
 
-### Implement WSO2 AI Gateway guardrails for enhanced control
+### Implement XAIGATEWAYX guardrails for enhanced control
 
-WSO2 API Platform AI Gateway guardrails enable granular control over the data exchanged between Claude Code and the Anthropic API.
+XPLATFORMAIGATEWAYX guardrails enable granular control over the data exchanged between Claude Code and the Anthropic API.
 
 By applying guardrails, you can enforce security and compliance policies such as:
 
@@ -313,11 +313,11 @@ For example, a **PII Masking Regex Guardrail** can be configured in the request 
 
 [![Claude Code terminal showing phone number redacted as asterisks after PII masking guardrail intercepts prompt](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-guardrail-redacted-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-guardrail-redacted-example.png)
 
-For more information, see [PII Masking Regex guardrail](https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex).
+For more information, see [PII Masking Regex guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/pii-masking-regex).
 
 ### Rate limiting at AI Gateway
 
-WSO2 API Platform AI Gateway supports request-based and token-based rate limiting for AI APIs. This allows you to control Claude Code usage when requests are routed through the gateway.
+XPLATFORMAIGATEWAYX supports request-based and token-based rate limiting for AI APIs. This allows you to control Claude Code usage when requests are routed through the gateway.
 
 For example, you can create an AI subscription policy with a limited request count or total token count, and apply it when subscribing to the Anthropic AI API. Once Claude Code invokes the API through that subscription, the gateway enforces the selected quota automatically. If the configured limit is exceeded, subsequent requests are throttled until the quota resets.
 
@@ -329,7 +329,7 @@ For more information, see [Policies overview](../../../ai-workspace/1.0.0/polici
 
 ### Prompt Decorator
 
-WSO2 API Platform AI Gateway supports Prompt Decorators, which allow you to modify or enrich prompts before they are sent to the backend AI provider. This is useful for enforcing consistent instructions, adding system-level context, or guiding model behavior without requiring changes in the client application.
+XPLATFORMAIGATEWAYX supports Prompt Decorators, which allow you to modify or enrich prompts before they are sent to the backend AI provider. This is useful for enforcing consistent instructions, adding system-level context, or guiding model behavior without requiring changes in the client application.
 
 Under a flat subscription, usage that isn't related to work costs the organization capacity rather than money, and it puts an organizational account behind requests the organization never intended to make. A Prompt Decorator applied in the request flow prepends an organizational usage restriction to the system prompt of every request, which keeps the restriction outside any single developer's control.
 
@@ -359,7 +359,7 @@ The following policy configuration states the restriction. Adjust the wording of
 
 The `jsonPath` value targets the text of the last system block in the Anthropic Messages API request body, and `append: false` places the restriction ahead of the text already there.
 
-For more information, see [Prompt Decorator](https://wso2.com/api-platform/policy-hub/policies/prompt-decorator).
+For more information, see [Prompt Decorator](https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-decorator).
 
 ### Estimate LLM cost
 
@@ -381,6 +381,6 @@ The following table lists two problems specific to this setup:
 ## Related topics
 
 - [Configure Claude Code with AI Gateway](./claude-code-configuration-with-ai-gateway.md)—the API key billing setup
-- [JWT Auth policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth)—the authentication policy used in this guide
+- [JWT Auth policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/jwt-auth)—the authentication policy used in this guide
 - [Configure Google Gemini CLI with AI Gateway](./gemini-cli-configuration-with-ai-gateway.md)
 - [Configure OpenAI Codex CLI with AI Gateway](./codex-configuration-with-ai-gateway.md)

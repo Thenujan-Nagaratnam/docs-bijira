@@ -1,13 +1,13 @@
 ---
 title: "Secure API Access with API Platform STS"
-description: "Authenticate API invocations using WSO2 API Platform's built-in Secure Token Service (STS) for client credential-based access."
-canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts/
-md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts.md
+description: "Authenticate API invocations using XAPIPLATFORMX's built-in Secure Token Service (STS) for client credential-based access."
+canonical_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts/
+md_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-bijira-sts.md
 tags:
   - cloud
   - authentication
   - sts
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -72,7 +72,7 @@ You can provide fine-grained access control to your API resources with scopes. F
 
 Follow the steps below to consume the API Platform API using API Platform STS.
 
-1. Sign in to your organization in the API Platform Developer Portal at [https://devportal.bijira.dev](https://devportal.bijira.dev).
+1. Sign in to your organization in the API Platform Developer Portal at [https://devportal.xclouddomainx](https://devportal.xclouddomainx).
 2. Click **Applications**, and then click **+Create**.
 3. Enter a name for the application. 
 4. Click **Create**.

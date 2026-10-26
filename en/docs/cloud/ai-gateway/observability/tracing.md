@@ -1,14 +1,14 @@
 ---
 title: "Gateway tracing"
 description: "Configure distributed tracing for AI Gateway components using OpenTelemetry and the demonstration Jaeger stack, or export to your own OTLP backend."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/observability/tracing/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/observability/tracing.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/observability/tracing/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/observability/tracing.md
 tags:
   - cloud
   - ai-gateway
   - observability
   - tracing
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---

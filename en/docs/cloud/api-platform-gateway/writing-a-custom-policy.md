@@ -1,15 +1,15 @@
 ---
 title: "Write a custom policy for the Self-Hosted Gateway"
 description: "Build a custom policy for the API Platform Self-Hosted Gateway using the Go-based policy SDK, including streaming support."
-canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/writing-a-custom-policy/
-md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/writing-a-custom-policy.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/writing-a-custom-policy/
+md_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/writing-a-custom-policy.md
 tags:
   - cloud
   - api-gateway
   - self-hosted
   - custom-policy
   - sdk
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -18,7 +18,7 @@ content_type: "how-to"
 
 This guide shows how to build a custom policy using the gateway SDK.
 
-For full API details, see the [API Platform Gateway's Custom Policy SDK Documentation](https://pkg.go.dev/github.com/wso2/api-platform/sdk/core/policy/v1alpha2).
+For full API details, see the [API Platform Gateway's Custom Policy SDK Documentation](https://pkg.go.dev/github.com/xgithuborgx/api-platform/sdk/core/policy/v1alpha2).
 
 ## What is a Policy?
 
@@ -78,7 +78,7 @@ package mypolicy
 import (
     "context"
 
-    policy "github.com/wso2/api-platform/sdk/core/policy/v1alpha2"
+    policy "github.com/xgithuborgx/api-platform/sdk/core/policy/v1alpha2"
 )
 
 type MyPolicy struct {

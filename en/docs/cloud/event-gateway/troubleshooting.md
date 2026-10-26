@@ -1,13 +1,13 @@
 ---
 title: "Troubleshoot the Event Gateway"
 description: "Diagnose and resolve common Event Gateway issues, including connection failures, registration errors, TLS problems, and performance issues."
-canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/troubleshooting/
-md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/troubleshooting.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/event-gateway/troubleshooting/
+md_url: https://xdocshostx/xdocspathx/cloud/event-gateway/troubleshooting.md
 tags:
   - cloud
   - event-gateway
   - troubleshooting
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "troubleshooting"
 ---
@@ -31,22 +31,22 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Test connectivity to API Platform endpoints
-   curl -v https://gateway.bijira.dev/health
-   curl -v https://config.bijira.dev/health
+   curl -v https://gateway.xclouddomainx/health
+   curl -v https://config.xclouddomainx/health
    ```
 
 2. **Check firewall rules:**
 
    Ensure outbound HTTPS (443) is allowed to:
-   - `gateway.bijira.dev`
-   - `config.bijira.dev`
-   - `telemetry.bijira.dev`
+   - `gateway.xclouddomainx`
+   - `config.xclouddomainx`
+   - `telemetry.xclouddomainx`
 
 3. **Verify DNS resolution:**
 
    ```bash
-   nslookup gateway.bijira.dev
-   dig gateway.bijira.dev
+   nslookup gateway.xclouddomainx
+   dig gateway.xclouddomainx
    ```
 
 4. **Check proxy settings:**
@@ -73,7 +73,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Monitor connectivity over time
-   ping -c 100 gateway.bijira.dev
+   ping -c 100 gateway.xclouddomainx
    ```
 
 2. **Review keep-alive settings:**
@@ -114,12 +114,12 @@ This guide covers common issues you may encounter when deploying and operating t
 
    **Kubernetes:**
    ```bash
-   kubectl get secret bijira-event-gateway-token -n bijira-event-gateway -o jsonpath='{.data.token}' | base64 -d
+   kubectl get secret xcloudslugx-event-gateway-token -n xcloudslugx-event-gateway -o jsonpath='{.data.token}' | base64 -d
    ```
 
    **Docker:**
    ```bash
-   docker inspect bijira-event-gateway | grep GATEWAY_REGISTRATION_TOKEN
+   docker inspect xcloudslugx-event-gateway | grep GATEWAY_REGISTRATION_TOKEN
    ```
 
    **VM:**
@@ -156,18 +156,18 @@ This guide covers common issues you may encounter when deploying and operating t
 
    **Kubernetes:**
    ```bash
-   kubectl logs -n bijira-event-gateway -l app=bijira-event-gateway --previous
-   kubectl describe pod -n bijira-event-gateway -l app=bijira-event-gateway
+   kubectl logs -n xcloudslugx-event-gateway -l app=xcloudslugx-event-gateway --previous
+   kubectl describe pod -n xcloudslugx-event-gateway -l app=xcloudslugx-event-gateway
    ```
 
    **Docker:**
    ```bash
-   docker logs bijira-event-gateway
+   docker logs xcloudslugx-event-gateway
    ```
 
    **VM:**
    ```bash
-   journalctl -u bijira-event-gateway -n 100 --no-pager
+   journalctl -u xcloudslugx-event-gateway -n 100 --no-pager
    ```
 
 2. **Verify resource availability:**
@@ -186,7 +186,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Validate configuration
-   bijira-event-gateway --config /etc/bijira/gateway.yaml --validate
+   xcloudslugx-event-gateway --config /etc/xcloudslugx/gateway.yaml --validate
    ```
 
 ### Port Already in Use
@@ -261,13 +261,13 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Kubernetes
-   kubectl rollout restart deployment/bijira-event-gateway -n bijira-event-gateway
+   kubectl rollout restart deployment/xcloudslugx-event-gateway -n xcloudslugx-event-gateway
 
    # Docker
-   docker restart bijira-event-gateway
+   docker restart xcloudslugx-event-gateway
 
    # VM
-   sudo systemctl reload bijira-event-gateway
+   sudo systemctl reload xcloudslugx-event-gateway
    ```
 
 ## Policy Issues
@@ -295,7 +295,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Filter for policy-related logs
-   grep -i "policy" /var/log/bijira/event-gateway.log
+   grep -i "policy" /var/log/xcloudslugx/event-gateway.log
    ```
 
 ### Policy Conflicts
@@ -330,20 +330,20 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Kubernetes
-   kubectl top pods -n bijira-event-gateway
+   kubectl top pods -n xcloudslugx-event-gateway
 
    # Docker
-   docker stats bijira-event-gateway
+   docker stats xcloudslugx-event-gateway
 
    # VM
-   top -p $(pgrep bijira-event-gateway)
+   top -p $(pgrep xcloudslugx-event-gateway)
    ```
 
 2. **Scale horizontally:**
 
    ```bash
    # Kubernetes
-   kubectl scale deployment/bijira-event-gateway --replicas=5 -n bijira-event-gateway
+   kubectl scale deployment/xcloudslugx-event-gateway --replicas=5 -n xcloudslugx-event-gateway
    ```
 
 3. **Review logging level:**
@@ -372,7 +372,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
    Monitor memory over time:
    ```bash
-   watch -n 5 "kubectl top pod -n bijira-event-gateway"
+   watch -n 5 "kubectl top pod -n xcloudslugx-event-gateway"
    ```
 
 2. **Adjust resource limits:**
@@ -466,17 +466,17 @@ When opening a support request, collect:
 
 1. **Gateway version:**
    ```bash
-   bijira-event-gateway --version
+   xcloudslugx-event-gateway --version
    ```
 
 2. **Configuration (redact sensitive values):**
    ```bash
-   cat /etc/bijira/gateway.yaml
+   cat /etc/xcloudslugx/gateway.yaml
    ```
 
 3. **Recent logs:**
    ```bash
-   journalctl -u bijira-event-gateway --since "1 hour ago"
+   journalctl -u xcloudslugx-event-gateway --since "1 hour ago"
    ```
 
 4. **Health check output:**

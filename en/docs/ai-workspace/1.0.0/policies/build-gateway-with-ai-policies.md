@@ -1,13 +1,13 @@
 ---
 title: "Build the AI Gateway with custom AI policies"
 description: "Install the AP CLI, configure build.yaml, and build a custom AI Gateway image that includes your custom AI policies."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/policies/build-gateway-with-ai-policies/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/policies/build-gateway-with-ai-policies.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/policies/build-gateway-with-ai-policies/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/policies/build-gateway-with-ai-policies.md
 tags:
   - cloud
   - ai-workspace
   - custom-policy
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-24
 content_type: "how-to"
 ---
@@ -18,7 +18,7 @@ After [writing a custom AI policy](writing-an-ai-policy.md), build it into the A
 
 ## Install the ap CLI
 
-The `ap` CLI builds a custom gateway image that carries your own policies. It's the same `ap` CLI that [AI Workspace CI/CD](../ci-cd/overview.md) uses for commands such as `ap gateway apply` and `ap ai-workspace build`. If you already have it installed for that workflow, skip ahead to [Configure the build file](#configure-the-build-file). Otherwise, download the binary for your platform from the [AP CLI releases page](https://github.com/wso2/api-platform/releases/tag/ap%2Fv0.7.0) and follow the steps below to install it.
+The `ap` CLI builds a custom gateway image that carries your own policies. It's the same `ap` CLI that [AI Workspace CI/CD](../ci-cd/overview.md) uses for commands such as `ap gateway apply` and `ap ai-workspace build`. If you already have it installed for that workflow, skip ahead to [Configure the build file](#configure-the-build-file). Otherwise, download the binary for your platform from the [AP CLI releases page](https://github.com/xgithuborgx/api-platform/releases/tag/ap%2Fv0.7.0) and follow the steps below to install it.
 
 === "macOS / Linux"
 
@@ -97,7 +97,7 @@ The `ap` CLI builds a custom gateway image that carries your own policies. It's 
 The `build.yaml` file is included in the AI Gateway package you downloaded when [setting up the AI Gateway](../ai-gateways/setting-up.md). It declares the gateway version and the list of policies to include. Edit this file to add your custom AI policies before building the gateway image.
 
 !!! tip "Sample custom policies"
-    WSO2 provides sample custom policies, including AI-specific examples, in the [api-platform sample policies repository](https://github.com/wso2/api-platform/tree/main/gateway/sample-policies).
+    XBRANDX provides sample custom policies, including AI-specific examples, in the [api-platform sample policies repository](https://github.com/xgithuborgx/api-platform/tree/main/gateway/sample-policies).
 
 ### Structure
 
@@ -116,7 +116,7 @@ Each policy entry uses one of two source types:
 
 | Field | Description |
 |---|---|
-| `gomodule` | The Go module reference for a Policy Hub managed policy, for example `github.com/wso2/gateway-controllers/policies/pii-masking@v1` |
+| `gomodule` | The Go module reference for a Policy Hub managed policy, for example `github.com/xgithuborgx/gateway-controllers/policies/pii-masking@v1` |
 | `filePath` | The path from `build.yaml` to a local custom AI policy directory |
 
 ### Add a custom AI policy
@@ -159,8 +159,8 @@ Once the build completes, the output lists the two image names produced. For exa
 
 ```text
 ✓ Built gateway images with 1 policies:
-  • ghcr.io/wso2/api-platform/wso2apip-ai-gateway-1.2.0-beta-gateway-runtime:1.2.0-beta
-  • ghcr.io/wso2/api-platform/wso2apip-ai-gateway-1.2.0-beta-gateway-controller:1.2.0-beta
+  • ghcr.io/xgithuborgx/api-platform/xartifactprefixx-ai-gateway-1.2.0-beta-gateway-runtime:1.2.0-beta
+  • ghcr.io/xgithuborgx/api-platform/xartifactprefixx-ai-gateway-1.2.0-beta-gateway-controller:1.2.0-beta
 ```
 
 A `build-manifest.yaml` file is also written alongside `build.yaml`, recording the resolved versions of all policies included in the build.
@@ -174,10 +174,10 @@ Locate the `gateway-controller` and `gateway-runtime` services and replace their
 ```yaml
 services:
   gateway-controller:
-    image: ghcr.io/wso2/api-platform/wso2apip-ai-gateway-1.2.0-beta-gateway-controller:1.2.0-beta  # (1)
+    image: ghcr.io/xgithuborgx/api-platform/xartifactprefixx-ai-gateway-1.2.0-beta-gateway-controller:1.2.0-beta  # (1)
 
   gateway-runtime:
-    image: ghcr.io/wso2/api-platform/wso2apip-ai-gateway-1.2.0-beta-gateway-runtime:1.2.0-beta     # (2)
+    image: ghcr.io/xgithuborgx/api-platform/xartifactprefixx-ai-gateway-1.2.0-beta-gateway-runtime:1.2.0-beta     # (2)
 ```
 
 1. Replace with the `gateway-controller` image name from your build output.

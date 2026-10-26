@@ -1,13 +1,13 @@
 ---
 title: "MCP Authorization"
 description: "Define fine-grained access control rules for MCP tools, resources, and prompts based on JWT claims and scopes."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/mcp-proxy/policies/mcp-authorization/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/mcp-proxy/policies/mcp-authorization.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/mcp-proxy/policies/mcp-authorization/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/mcp-proxy/policies/mcp-authorization.md
 tags:
   - ai-gateway
   - mcp
   - security
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-16
 content_type: "reference"
 ---
@@ -55,7 +55,7 @@ These parameters are configured per MCP Proxy by the API developer:
 Restrict access to specific tools based on scopes:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -100,7 +100,7 @@ spec:
 Control resource access based on user claims:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -142,7 +142,7 @@ spec:
 Restrict prompt access based on user roles:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -184,7 +184,7 @@ spec:
 Combine different resource types with varying access requirements:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -268,4 +268,4 @@ When authorization fails, the policy returns:
 ## Related Policies
 
 - [MCP Authentication Policy](./mcp-authentication.md) - Validates JWT tokens and is a prerequisite for MCP Authorization
-- [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) - Base JWT token validation mechanism
+- [JWT Authentication Policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/jwt-auth) - Base JWT token validation mechanism

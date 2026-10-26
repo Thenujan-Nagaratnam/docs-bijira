@@ -9,7 +9,7 @@ Every Markdown file under `en/docs/` needs frontmatter. AI systems and search re
 - `canonical_url` — the document's canonical URL.
 - `md_url` — link to the Markdown version of the document.
 - `tags` — a list, so LLMs and agents can relate pages and concepts.
-- `author` — "WSO2 API Platform Documentation Team". For more than one, use `authors` with a list.
+- `author` — "XDOCSTEAMX". For more than one, use `authors` with a list.
 - `last_updated` — `YYYY-MM-DD`.
 - `content_type` — one of `how-to`, `tutorial`, `reference`, `concept`, `explanation`, `troubleshooting`, `faq`, `release-notes`, `changelog`, `quickstart`.
 

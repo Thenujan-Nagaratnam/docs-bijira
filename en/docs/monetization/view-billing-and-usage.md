@@ -1,14 +1,14 @@
 ---
 title: "View billing and usage"
 description: "Monitor API usage, review invoices, and manage paid subscriptions from the Billing and Usage view in the Developer Portal."
-canonical_url: https://wso2.com/api-platform/docs/monetization/view-billing-and-usage/
-md_url: https://wso2.com/api-platform/docs/monetization/view-billing-and-usage.md
+canonical_url: https://xdocshostx/xdocspathx/monetization/view-billing-and-usage/
+md_url: https://xdocshostx/xdocspathx/monetization/view-billing-and-usage.md
 tags:
   - cloud
   - monetization
   - devportal
   - billing
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -21,7 +21,7 @@ The Developer Portal provides a consolidated **Billing & Usage** view where API 
 
 ## Access the Billing Page
 
-1. Go to the [API Platform Developer Portal](https://devportal.bijira.dev/) and sign in to your organization.
+1. Go to the [API Platform Developer Portal](https://devportal.xclouddomainx/) and sign in to your organization.
 2. Click your profile icon in the top right corner.
 3. Click **Billing** from the profile menu.
 

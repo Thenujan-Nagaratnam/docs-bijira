@@ -1,13 +1,13 @@
 ---
 title: "Get started with Event Gateway"
 description: "Create an Event Gateway in the API Platform Console, deploy a WebSub API proxy, and test it end to end."
-canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/getting-started/
-md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/getting-started.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/event-gateway/getting-started/
+md_url: https://xdocshostx/xdocspathx/cloud/event-gateway/getting-started.md
 tags:
   - cloud
   - event-gateway
   - quickstart
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "quickstart"
 ---
@@ -35,7 +35,7 @@ Before you begin, ensure you have:
 
 ## Create an Event Gateway in API Platform Console
 
-1. Sign in to [API Platform Console](https://console.bijira.dev).
+1. Sign in to [API Platform Console](https://console.xclouddomainx).
 2. Go to **Organization Level** in API Platform.
 3. From the left navigation, select **Admin** → **Gateways**.
 
@@ -63,8 +63,8 @@ Before you begin, ensure you have:
 Run this command in your terminal to download the gateway:
 
 ```bash
-curl -sLO https://github.com/wso2/api-platform/releases/download/event-gateway/v0.8.0/wso2apip-event-gateway-0.8.0.zip && \
-unzip wso2apip-event-gateway-0.8.0.zip
+curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/event-gateway/v0.8.0/xartifactprefixx-event-gateway-0.8.0.zip && \
+unzip xartifactprefixx-event-gateway-0.8.0.zip
 ```
 
 ### Step 2: Configure the Gateway
@@ -72,20 +72,20 @@ unzip wso2apip-event-gateway-0.8.0.zip
 Run this command to create the gateway configuration with your environment variables:
 
 ```bash
-cat > wso2apip-event-gateway-0.8.0/configs/keys.env << 'ENVFILE'
-GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
+cat > xartifactprefixx-event-gateway-0.8.0/configs/keys.env << 'ENVFILE'
+GATEWAY_CONTROLPLANE_HOST=connect.xclouddomainx
 GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
 ENVFILE
 ```
 
-Once you copy the above command from the screen, the `<your-gateway-token>` placeholder will be populated and the `wso2apip-event-gateway-0.8.0/configs/keys.env` file will be created with these environment variables.
+Once you copy the above command from the screen, the `<your-gateway-token>` placeholder will be populated and the `xartifactprefixx-event-gateway-0.8.0/configs/keys.env` file will be created with these environment variables.
 
 ### Step 3: Start the Gateway
 
 Navigate to the gateway directory and start it using Docker Compose:
 
 ```bash
-cd wso2apip-event-gateway-0.8.0
+cd xartifactprefixx-event-gateway-0.8.0
 docker compose --env-file configs/keys.env up
 ```
 
@@ -156,7 +156,7 @@ For production environments or specific infrastructure requirements, see the det
 If the gateway doesn't connect:
 
 1. **Verify the token**: Ensure the gateway token is correctly set in `keys.env`
-2. **Check network connectivity**: The gateway needs outbound HTTPS access to `*.bijira.dev`
+2. **Check network connectivity**: The gateway needs outbound HTTPS access to `*.xclouddomainx`
 3. **View logs**: Run `docker compose logs -f` to see gateway logs
 4. **Check firewall**: Ensure port 8443 is accessible
 

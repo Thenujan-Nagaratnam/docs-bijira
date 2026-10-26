@@ -1,13 +1,13 @@
 ---
 title: "Test APIs with cURL"
-description: "Generate a ready-to-use cURL command for an API proxy method in WSO2 API Platform to test it from any cURL client."
-canonical_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/curl/
-md_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/curl.md
+description: "Generate a ready-to-use cURL command for an API proxy method in XAPIPLATFORMX to test it from any cURL client."
+canonical_url: https://xdocshostx/xdocspathx/cloud/test-api-proxy/curl/
+md_url: https://xdocshostx/xdocspathx/cloud/test-api-proxy/curl.md
 tags:
   - cloud
   - testing
   - curl
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -18,7 +18,7 @@ Testing APIs is an essential step in the API development process. API Platform s
 
 You can follow the steps below to generate a cURL command and test your API method:
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. Select the project and API which you want to test.
 3. Click **Test** in the left navigation menu and then click **cURL**. This opens the **cURL** pane.
 4. In the **cURL** pane, select the environment from the drop-down list.

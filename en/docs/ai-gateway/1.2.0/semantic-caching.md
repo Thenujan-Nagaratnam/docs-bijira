@@ -1,8 +1,8 @@
 ---
 title: "Semantic caching"
 description: "Serve a cached LLM response when a semantically equivalent prompt has already been answered, cutting both latency and upstream token spend."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/semantic-caching/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/semantic-caching.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/semantic-caching/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/semantic-caching.md
 tags:
   - ai-gateway
   - caching
@@ -10,7 +10,7 @@ tags:
   - cache
   - redis
   - embeddings
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-26
 content_type: "concept"
 ---
@@ -31,11 +31,11 @@ Set that threshold deliberately. Too loose and the gateway answers one question 
 
 ## Caching policies
 
-This policy is documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
+This policy is documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 
 | Policy | What it does |
 |--------|--------------|
-| [Semantic Cache](https://wso2.com/api-platform/policy-hub/policies/semantic-cache) | Caches LLM responses using vector similarity, returning cached results for semantically equivalent prompts |
+| [Semantic Cache](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-cache) | Caches LLM responses using vector similarity, returning cached results for semantically equivalent prompts |
 
 ## Related topics
 

@@ -1,13 +1,13 @@
 ---
 title: "Platform API: Secrets"
 description: "REST API reference for creating, rotating, and deleting organization-scoped secrets."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/secrets/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/secrets.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/secrets/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/secrets.md
 tags:
   - ai-workspace
   - platform-api
   - security
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -30,9 +30,9 @@ curl -X POST https://localhost:9243/api/v0.9/secrets \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: multipart/form-data' \
   -H 'Accept: application/json' \
-  -F 'id=wso2-openai-key' \
-  -F 'displayName=WSO2 OpenAI API Key' \
-  -F 'description=Primary API key for WSO2 OpenAI integration' \
+  -F 'id=xsampleslugx-openai-key' \
+  -F 'displayName=XSAMPLEBRANDX OpenAI API Key' \
+  -F 'description=Primary API key for XSAMPLEBRANDX OpenAI integration' \
   -F 'value=sk-xxx' \
   -F 'type=GENERIC'
 
@@ -61,8 +61,8 @@ Required scopes (the token must carry at least one of): `ap:secret:create`, `ap:
 
 ```json
 {
-  "id": "wso2-openai-key",
-  "displayName": "WSO2 OpenAI API Key",
+  "id": "xsampleslugx-openai-key",
+  "displayName": "XSAMPLEBRANDX OpenAI API Key",
   "createdBy": "john.doe",
   "updatedBy": "john.doe",
   "createdAt": "2019-08-24T14:15:22Z",
@@ -201,8 +201,8 @@ Required scopes (the token must carry at least one of): `ap:secret:read`, `ap:se
   "count": 0,
   "list": [
     {
-      "id": "wso2-openai-key",
-      "displayName": "WSO2 OpenAI API Key",
+      "id": "xsampleslugx-openai-key",
+      "displayName": "XSAMPLEBRANDX OpenAI API Key",
       "description": "string",
       "type": "GENERIC",
       "provider": "IN_BUILT",
@@ -318,8 +318,8 @@ Required scopes (the token must carry at least one of): `ap:secret:read`, `ap:se
 
 ```json
 {
-  "id": "wso2-openai-key",
-  "displayName": "WSO2 OpenAI API Key",
+  "id": "xsampleslugx-openai-key",
+  "displayName": "XSAMPLEBRANDX OpenAI API Key",
   "description": "string",
   "type": "GENERIC",
   "provider": "IN_BUILT",
@@ -397,7 +397,7 @@ curl -X PUT https://localhost:9243/api/v0.9/secrets/{secretId} \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Content-Type: multipart/form-data' \
   -H 'Accept: application/json' \
-  -F 'id=wso2-openai-key' \
+  -F 'id=xsampleslugx-openai-key' \
   -F 'displayName=string' \
   -F 'description=string' \
   -F 'value=string'
@@ -430,8 +430,8 @@ Required scopes (the token must carry at least one of): `ap:secret:update`, `ap:
 
 ```json
 {
-  "id": "wso2-openai-key",
-  "displayName": "WSO2 OpenAI API Key",
+  "id": "xsampleslugx-openai-key",
+  "displayName": "XSAMPLEBRANDX OpenAI API Key",
   "createdBy": "john.doe",
   "updatedBy": "john.doe",
   "createdAt": "2019-08-24T14:15:22Z",
@@ -596,8 +596,8 @@ Required scopes (the token must carry at least one of): `ap:secret:delete`, `ap:
     "references": [
       {
         "type": "llm_provider",
-        "handle": "wso2-openai-provider",
-        "name": "WSO2 OpenAI Provider"
+        "handle": "xsampleslugx-openai-provider",
+        "name": "XSAMPLEBRANDX OpenAI Provider"
       }
     ]
   }

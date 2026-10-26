@@ -1,12 +1,12 @@
 ---
 title: "Platform API: Applications"
 description: "REST API reference for managing GenAI applications, their API key mappings, and associations."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/applications/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/applications.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/applications/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/applications.md
 tags:
   - ai-workspace
   - platform-api
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-07
 content_type: "reference"
 ---

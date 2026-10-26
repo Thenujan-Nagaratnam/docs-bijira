@@ -1,14 +1,14 @@
 ---
 title: "Connect an identity provider to the API Portal"
 description: "Configure the API Portal & MCP Hub to delegate login to any OIDC identity provider: client registration, claim mappings, role or scope authorization, and the config.toml tables involved."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/setting-up/authentication/connect-an-identity-provider/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/setting-up/authentication/connect-an-identity-provider.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/setting-up/authentication/connect-an-identity-provider/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/setting-up/authentication/connect-an-identity-provider.md
 tags:
   - cloud
   - api-portal
   - authentication
   - oidc
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-04
 content_type: "how-to"
 ---
@@ -154,7 +154,7 @@ subscriber = "ap_subscriber"
 Four things to get right:
 
 - **`callback_url`** must match the URL registered in step 1 exactly, character for character.
-- **`issuer`** is the IdP's issuer identifier—the exact string it puts in the token's `iss` claim—and is compared verbatim. It's a distinct value from `token_url`, though some providers do use their token endpoint URL as the issuer: Asgardeo and WSO2 Identity Server both issue `iss` as `.../oauth2/token`. Decode a token from your IdP and copy `iss` out of it rather than assuming either form.
+- **`issuer`** is the IdP's issuer identifier—the exact string it puts in the token's `iss` claim—and is compared verbatim. It's a distinct value from `token_url`, though some providers do use their token endpoint URL as the issuer: Asgardeo and XIDENTITYSERVERX both issue `iss` as `.../oauth2/token`. Decode a token from your IdP and copy `iss` out of it rather than assuming either form.
 - **`audience`** must match the token's `aud` claim. Set it to your client ID rather than leaving it empty, so a token minted for a different application is rejected.
 - **`scope`** must request whatever the IdP needs to emit the organization and roles claims. Keep `openid`, and add the scope your IdP attaches role information to.
 

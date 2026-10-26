@@ -1,14 +1,14 @@
 ---
 title: "Production Deployment Overview"
 description: "Plan a production deployment of API Platform AI Gateway 1.0.0 on Kubernetes with Helm: hardened security, replicated runtimes, and a single controller."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/deployment/production-deployment/overview/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/deployment/production-deployment/overview.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/deployment/production-deployment/overview/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/deployment/production-deployment/overview.md
 tags:
   - ai-gateway
   - production
   - deployment
   - kubernetes
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-09
 content_type: "concept"
 ---
@@ -87,7 +87,7 @@ helm version
 Download the `values.yaml` that ships with the 1.0.0 gateway chart and use it as the starting point. Every field referenced in this section lives in this file.
 
 ```bash
-curl -o values.yaml https://raw.githubusercontent.com/wso2/api-platform/refs/tags/ai-gateway/v1.0.0/kubernetes/helm/gateway-helm-chart/values.yaml
+curl -o values.yaml https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/tags/ai-gateway/v1.0.0/kubernetes/helm/gateway-helm-chart/values.yaml
 ```
 
 ### Pin the image versions
@@ -107,8 +107,8 @@ gateway:
 !!! note
     Use the same tag for both components. Mixed versions between the controller and the runtime aren't supported.
 
-!!! note "WSO2 subscription users"
-    With a WSO2 subscription, use image tags that carry the U2 update version as a fourth digit, such as `1.0.0.1`, instead of the base `1.0.0` release. The fourth digit carries patch-level updates delivered through the WSO2 private registry. Create a `docker-registry` Secret for `registry.wso2.com` in the install namespace and reference it through `imagePullSecrets` on each component.
+!!! note "XBRANDX subscription users"
+    With a XBRANDX subscription, use image tags that carry the U2 update version as a fourth digit, such as `1.0.0.1`, instead of the base `1.0.0` release. The fourth digit carries patch-level updates delivered through the XBRANDX private registry. Create a `docker-registry` Secret for `xregistryhostx` in the install namespace and reference it through `imagePullSecrets` on each component.
 
 !!! warning "Leave development mode off"
     The chart exposes `gateway.developmentMode`, which relaxes security checks including the mandatory at-rest encryption key. Keep it at its default of `false` in every deployment that carries real traffic or real credentials.

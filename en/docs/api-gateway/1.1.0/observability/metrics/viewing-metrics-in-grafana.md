@@ -1,14 +1,14 @@
 ---
 title: "View Metrics in Grafana"
 description: "Access pre-built Grafana dashboards to view and explore API Platform Gateway component metrics."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/observability/metrics/viewing-metrics-in-grafana/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/observability/metrics/viewing-metrics-in-grafana.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/observability/metrics/viewing-metrics-in-grafana/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/observability/metrics/viewing-metrics-in-grafana.md
 tags:
   - api-gateway
   - observability
   - metrics
   - grafana
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-17
 content_type: "how-to"
 ---

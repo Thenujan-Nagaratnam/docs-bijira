@@ -1,8 +1,8 @@
 ---
 title: "Get started with AI Workspace"
 description: "Connect an AI Gateway to AI Workspace, configure an LLM provider and an MCP proxy, and call both through the AI Gateway."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/quickstart/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/quickstart.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/quickstart/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/quickstart.md
 tags:
   - cloud
   - ai-workspace
@@ -11,14 +11,14 @@ tags:
   - mcp
   - quickstart
   - docker
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-09
 content_type: "quickstart"
 ---
 
 # Get started with AI Workspace
 
-AI Workspace, hosted by WSO2, provides a central control plane for your AI infrastructure. It lets you manage:
+AI Workspace, hosted by XBRANDX, provides a central control plane for your AI infrastructure. It lets you manage:
 
 - AI Gateways that route and govern AI traffic.
 - Large language model (LLM) providers that your applications use.
@@ -39,7 +39,7 @@ This guide walks you through:
 
 By the end, you'll have an AI Gateway, connected through AI Workspace to both an LLM provider and an MCP server. You'll send a real chat completion request and a real tool call through the resulting endpoints.
 
-It's written for platform engineers, developers, and anyone evaluating AI Workspace for AI governance. No prior WSO2 API Platform experience is required. For optional background on the concepts this guide uses, see:
+It's written for platform engineers, developers, and anyone evaluating AI Workspace for AI governance. No prior XAPIPLATFORMX experience is required. For optional background on the concepts this guide uses, see:
 
 - [AI Workspace and how it relates to the AI Gateway](overview.md)
 - [LLM providers](llm-providers/overview.md)
@@ -47,13 +47,13 @@ It's written for platform engineers, developers, and anyone evaluating AI Worksp
 
 The gateway you run fans out to both back ends:
 
-![AI Gateway routes requests to an LLM provider and an MCP server, configured by AI Workspace, which WSO2 hosts](../../assets/img/ai-gateway/ai-workspace/quickstart/architecture-overview.svg)
+![AI Gateway routes requests to an LLM provider and an MCP server, configured by AI Workspace, which XBRANDX hosts](../../assets/img/ai-gateway/ai-workspace/quickstart/architecture-overview.svg)
 
 ## Before you start
 
 Complete the following prerequisites:
 
-- A WSO2 API Platform account: sign up at [API Platform Console](https://console.bijira.dev/) with Google, GitHub, Microsoft, or email. The free trial covers this guide.
+- A XAPIPLATFORMX account: sign up at [API Platform Console](https://console.xclouddomainx/) with Google, GitHub, Microsoft, or email. The free trial covers this guide.
 - Install [Docker](https://docs.docker.com/get-docker/) with the Compose plugin, on the machine where the gateway will run, or another Compose-compatible container runtime such as Podman.
 - Port `8443` free on that machine, for the gateway's HTTPS listener.
 - Install `curl` and `unzip`.
@@ -67,7 +67,7 @@ Everything in the platform lives under an *organization*, which you create once,
 
 ### Step 1: Create your organization
 
-1. Go to the [API Platform Console](https://console.bijira.dev/) and sign in. If you already have an organization, open it from the **Organization** menu and skip to [Part 2](#part-2-connect-an-ai-gateway).
+1. Go to the [API Platform Console](https://console.xclouddomainx/) and sign in. If you already have an organization, open it from the **Organization** menu and skip to [Part 2](#part-2-connect-an-ai-gateway).
 2. On first sign-in, enter a name for your organization, accept the Privacy Policy and Terms of Use, and click **Create**.
 
     ![Console screen for creating your first organization, with a name field and an agree checkbox](../../assets/img/ai-gateway/ai-workspace/quickstart/create-organization.png)
@@ -114,15 +114,15 @@ Run these on the machine where the gateway will run. Copy each command from the 
 1. **Download the gateway:**
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip && \
-    unzip wso2apip-ai-gateway-1.1.0.zip
+    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.1.0/xartifactprefixx-ai-gateway-1.1.0.zip && \
+    unzip xartifactprefixx-ai-gateway-1.1.0.zip
     ```
 
-2. **Configure the gateway.** Create `wso2apip-ai-gateway-1.1.0/configs/keys.env`. Copying from the **Quick Start** tab fills in the registration token and the analytics key:
+2. **Configure the gateway.** Create `xartifactprefixx-ai-gateway-1.1.0/configs/keys.env`. Copying from the **Quick Start** tab fills in the registration token and the analytics key:
 
     ```bash
     MOESIF_KEY=<filled in for you>
-    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
+    GATEWAY_CONTROLPLANE_HOST=connect.xclouddomainx
     GATEWAY_REGISTRATION_TOKEN=<filled in for you>
     ```
 
@@ -131,7 +131,7 @@ Run these on the machine where the gateway will run. Copy each command from the 
 3. **Start the gateway.** It runs in the foreground, so use a second terminal for the rest of this guide:
 
     ```bash
-    cd wso2apip-ai-gateway-1.1.0
+    cd xartifactprefixx-ai-gateway-1.1.0
     docker compose --env-file configs/keys.env up
     ```
 
@@ -275,10 +275,10 @@ AI Workspace includes a hosted sample MCP server, so you don't need to run one y
 
 3. Click **Next**.
 4. Fill in the proxy details:
-    - **Name**: a unique name, for example `bijira-mcp-everything`.
+    - **Name**: a unique name, for example `xcloudslugx-mcp-everything`.
     - **Version**: pre-filled, for example `v1.0`.
     - **Description**: optional.
-    - **Context**: pre-filled from the name, prefixed with your project's name, for example `/default/bijira-mcp-everything` for a proxy created in the **Default** project from Part 1.
+    - **Context**: pre-filled from the name, prefixed with your project's name, for example `/default/xcloudslugx-mcp-everything` for a proxy created in the **Default** project from Part 1.
     - **Target**: pre-filled with the server URL from step 2.
 5. Click **Create**.
 
@@ -297,7 +297,7 @@ The deployment status changes to **Active** within a few seconds, without needin
 
 This part sends a real tool call through your deployed MCP proxy and confirms the response.
 
-Go back to the proxy's **Overview** tab. Under **MCP Proxy URL**, select your gateway from the **Gateways** dropdown and copy the URL shown. It ends in `/mcp`, for example, `https://localhost:8443/default/bijira-mcp-everything/mcp`.
+Go back to the proxy's **Overview** tab. Under **MCP Proxy URL**, select your gateway from the **Gateways** dropdown and copy the URL shown. It ends in `/mcp`, for example, `https://localhost:8443/default/xcloudslugx-mcp-everything/mcp`.
 
 ![MCP proxy Overview tab with the gateway-specific MCP Proxy URL and the capabilities list](../../assets/img/ai-gateway/ai-workspace/quickstart/mcp-proxy-url.png)
 
@@ -369,7 +369,7 @@ If something doesn't work as expected, check here before anything else:
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
-| Gateway stays **Inactive** | Can't reach `connect.bijira.dev`, or the token in `keys.env` is incorrect. | Check the `docker compose` logs. Click **Reconfigure** on the gateway's page for a new token, update `keys.env`, and restart. See [Set up an AI Gateway](ai-gateways/setting-up.md). |
+| Gateway stays **Inactive** | Can't reach `connect.xclouddomainx`, or the token in `keys.env` is incorrect. | Check the `docker compose` logs. Click **Reconfigure** on the gateway's page for a new token, update `keys.env`, and restart. See [Set up an AI Gateway](ai-gateways/setting-up.md). |
 | First LLM request returns `504 upstream request timeout` | The gateway hasn't received the latest configuration yet. | Wait about a minute and retry. |
 | LLM request returns `401` | The `X-API-Key` header is missing or incorrect. | Use the key from [Part 3](#part-3-configure-an-llm-provider), exactly as generated. |
 | MCP `initialize` request fails or times out | The gateway isn't running, or the URL is wrong. | Confirm `docker compose` is still running, and that you copied the full **MCP Proxy URL**. |

@@ -1,13 +1,13 @@
 ---
 title: "Content Length Guardrail"
 description: "Enforce minimum and maximum byte length limits on LLM request and response payloads using the Content Length guardrail."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/guardrails/content-length/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/guardrails/content-length.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/guardrails/content-length/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/guardrails/content-length.md
 tags:
   - ai-gateway
   - guardrails
   - policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-16
 content_type: "reference"
 ---
@@ -72,7 +72,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: LlmProvider
 metadata:
   name: content-length-provider

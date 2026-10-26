@@ -1,14 +1,14 @@
 ---
 title: "End to end: a secured API from gateway to portal"
 description: "Stand up the control plane, portal, and gateway, publish an API that requires both a subscription token and an API key, and invoke it with credentials issued in the API Portal."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/next/tutorials/secured-api-end-to-end/
-md_url: https://wso2.com/api-platform/docs/api-portal/next/tutorials/secured-api-end-to-end.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/next/tutorials/secured-api-end-to-end/
+md_url: https://xdocshostx/xdocspathx/api-portal/next/tutorials/secured-api-end-to-end.md
 tags:
   - cloud
   - api-portal
   - tutorials
   - authentication
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-05
 content_type: "tutorial"
 ---
@@ -40,9 +40,9 @@ API Portal  ──signed webhook──▶  Platform API  ──control plane─�
 The API Portal distribution ships the Platform API alongside it, so one compose file gives you both.
 
 ```bash
-curl -sLO https://github.com/wso2/api-platform/releases/download/api-portal%2Fv1.0.0/wso2apip-api-portal-1.0.0.zip
-unzip wso2apip-api-portal-1.0.0.zip
-cd wso2apip-api-portal-1.0.0
+curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/api-portal%2Fv1.0.0/xartifactprefixx-api-portal-1.0.0.zip
+unzip xartifactprefixx-api-portal-1.0.0.zip
+cd xartifactprefixx-api-portal-1.0.0
 ./scripts/setup.sh
 docker compose up -d
 ```
@@ -91,9 +91,9 @@ Download the gateway distribution and run its setup:
 
 ```bash
 cd ..
-curl -sLO https://github.com/wso2/api-platform/releases/download/gateway%2Fv1.2.0-rc/wso2apip-api-gateway-1.2.0-rc.zip
-unzip wso2apip-api-gateway-1.2.0-rc.zip
-cd wso2apip-api-gateway-1.2.0-rc
+curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/gateway%2Fv1.2.0-rc/xartifactprefixx-api-gateway-1.2.0-rc.zip
+unzip xartifactprefixx-api-gateway-1.2.0-rc.zip
+cd xartifactprefixx-api-gateway-1.2.0-rc
 ./scripts/setup.sh
 ```
 
@@ -150,7 +150,7 @@ The Platform API's webhook receiver ships disabled, and the shipped `configs/con
 {% raw %}
 
 ```bash
-cd ../wso2apip-api-portal-1.0.0
+cd ../xartifactprefixx-api-portal-1.0.0
 
 cat >> configs/config.toml <<'EOF'
 
@@ -208,7 +208,7 @@ export API_ID=$(curl -sk -X POST https://localhost:9243/api/v0.9/rest-apis \
   -d "{\"displayName\":\"Reading List API\",\"context\":\"/reading-list/\$version\",\"version\":\"v1\",
        \"projectId\":\"$PROJECT_ID\",\"lifeCycleStatus\":\"PUBLISHED\",
        \"subscriptionPlans\":[\"$PLAN\"],
-       \"upstream\":{\"main\":{\"url\":\"https://apis.bijira.dev/samples/reading-list-api-service/v1.0\"}},
+       \"upstream\":{\"main\":{\"url\":\"https://apis.xclouddomainx/samples/reading-list-api-service/v1.0\"}},
        \"policies\":[
          {\"name\":\"api-key-auth\",\"version\":\"v1\",
           \"params\":{\"key\":\"API-Key\",\"in\":\"header\"}},
@@ -260,7 +260,7 @@ Then publish the API to the portal with `referenceId` set to the Platform API ha
 
 ```bash
 cat > api.yaml <<EOF
-apiVersion: api-portal.api-platform.wso2.com/v1
+apiVersion: api-portal.api-platform.xcrddomainx/v1
 kind: RestApi
 
 metadata:

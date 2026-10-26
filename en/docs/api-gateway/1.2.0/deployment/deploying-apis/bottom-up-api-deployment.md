@@ -1,13 +1,13 @@
 ---
 title: "Bottom-Up API Deployment Guide"
-description: "Deploy REST APIs directly to API Platform Gateway and automatically sync them to on-prem WSO2 API Manager using bottom-up deployment."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/deployment/deploying-apis/bottom-up-api-deployment/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/deployment/deploying-apis/bottom-up-api-deployment.md
+description: "Deploy REST APIs directly to API Platform Gateway and automatically sync them to on-prem XAPIMANAGERX using bottom-up deployment."
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/deployment/deploying-apis/bottom-up-api-deployment/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/deployment/deploying-apis/bottom-up-api-deployment.md
 tags:
   - api-gateway
   - deployment
   - api-management
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-07
 content_type: "how-to"
 ---
@@ -16,11 +16,11 @@ content_type: "how-to"
 
 ## Overview
 
-When you deploy a REST API via the gateway controller's REST API endpoint, the gateway **automatically tracks it for bottom-up sync** to on-prem WSO2 APIM 4.7.x (if configured for on-prem control plane mode).
+When you deploy a REST API via the gateway controller's REST API endpoint, the gateway **automatically tracks it for bottom-up sync** to on-prem XAPIMSHORTX 4.7.x (if configured for on-prem control plane mode).
 
 ### Understanding API Deployment Approaches
 
-The WSO2 API Platform gateway supports two fundamentally different deployment approaches, distinguished by the **direction of API flow**:
+The XAPIPLATFORMX gateway supports two fundamentally different deployment approaches, distinguished by the **direction of API flow**:
 
 #### **Top-Down Deployment (Control Plane → Gateway)**
 
@@ -36,7 +36,7 @@ In top-down deployment, the **platform-API (central control plane) pushes APIs t
 
 Currently this support is only available for the on prem APIM control plane type.
 
-In bottom-up deployment, **REST APIs deployed directly to the gateway are automatically synced back to on-prem WSO2 APIM.** (If configured with on prem control plane type. Cloud control plane is not having this support at the moment.).
+In bottom-up deployment, **REST APIs deployed directly to the gateway are automatically synced back to on-prem XAPIMSHORTX.** (If configured with on prem control plane type. Cloud control plane is not having this support at the moment.).
 
 **How it works:**
 - Gateway is the initial deployment point
@@ -76,7 +76,7 @@ In bottom-up deployment, **REST APIs deployed directly to the gateway are automa
 
 ### Bottom-Up API Sync Requirements
 
-- On-prem WSO2 APIM instance
+- On-prem XAPIMSHORTX instance
 - Control plane configuration with on-prem mode enabled
 - Network connectivity between gateway controller and APIM
 - APIM OAuth2 credentials (client ID/secret or username/password)
@@ -162,7 +162,7 @@ controlPlaneClient.IsOnPrem()          // On-prem mode detected (via .well-known
 
 ## REST API Deployment
 
-Bottom-up APIs are REST APIs deployed via the gateway controller that are **automatically synced** to on-prem WSO2 APIM.
+Bottom-up APIs are REST APIs deployed via the gateway controller that are **automatically synced** to on-prem XAPIMSHORTX.
 
 ### Key Features
 
@@ -226,7 +226,7 @@ Bottom-up APIs are REST APIs deployed via the gateway controller that are **auto
 All REST APIs deployed via the gateway will be synced to on-prem APIM automatically. Here's a complete example:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: RestApi
 metadata:
   name: PetStoreAPI
@@ -300,7 +300,7 @@ spec:
 Save the API definition as `petstore-api.yaml`:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: RestApi
 metadata:
   name: PetStoreAPI
@@ -404,7 +404,7 @@ When you update an API, it's automatically re-synced to on-prem APIM (if connect
 Update your API definition to add a rate limit policy and save as `petstore-api-updated.yaml`:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: RestApi
 metadata:
   name: PetStoreAPI

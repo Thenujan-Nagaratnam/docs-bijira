@@ -1,13 +1,13 @@
 ---
 title: "Manage an LLM provider template"
 description: "Use an LLM provider template to create a provider, and edit, enable/disable, or delete template versions in AI Workspace."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/llm-provider-templates/manage-template/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/llm-provider-templates/manage-template.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/llm-provider-templates/manage-template/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/llm-provider-templates/manage-template.md
 tags:
   - cloud
   - ai-workspace
   - llm-provider-templates
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-10
 content_type: "how-to"
 ---

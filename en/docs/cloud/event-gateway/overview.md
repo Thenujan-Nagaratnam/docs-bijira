@@ -1,13 +1,13 @@
 ---
 title: "Event Gateway overview"
 description: "Learn how the Event Gateway performs protocol mediation between web-friendly protocols and message brokers such as Kafka, MQTT, and Solace."
-canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/overview/
-md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/overview.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/event-gateway/overview/
+md_url: https://xdocshostx/xdocspathx/cloud/event-gateway/overview.md
 tags:
   - cloud
   - event-gateway
   - overview
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "overview"
 ---

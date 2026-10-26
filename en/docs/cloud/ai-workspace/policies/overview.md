@@ -1,13 +1,13 @@
 ---
 title: "AI Workspace policies overview"
 description: "Apply built-in guardrail, rate-limiting, and traffic-management policies to LLM providers and App LLM proxies in AI Workspace."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/overview/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/overview.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/overview/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/overview.md
 tags:
   - cloud
   - ai-workspace
   - policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "overview"
 ---
@@ -61,9 +61,9 @@ When both provider-level and proxy-level policies are active, they are both enfo
 
 ## Policy Hub
 
-All guardrail policies in the AI Workspace are powered by the [Policy Hub](https://wso2.com/api-platform/policy-hub/). The Policy Hub is a central registry of all available policies and their latest versions.
+All guardrail policies in the AI Workspace are powered by the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/). The Policy Hub is a central registry of all available policies and their latest versions.
 
-Visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/) to explore all available guardrails, their documentation, and configuration schemas.
+Visit the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) to explore all available guardrails, their documentation, and configuration schemas.
 
 ## Next Steps
 

@@ -1,13 +1,13 @@
 ---
 title: "Theme the Developer Portal with AI"
 description: "Generate a Developer Portal theme automatically from your organization's website using AI-powered branding."
-canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/theming-devportal-with-ai/
-md_url: https://wso2.com/api-platform/docs/cloud/devportal/theming-devportal-with-ai.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/theming-devportal-with-ai/
+md_url: https://xdocshostx/xdocspathx/cloud/devportal/theming-devportal-with-ai.md
 tags:
   - cloud
   - devportal
   - theming
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -19,7 +19,7 @@ AI-powered branding simplifies the process of customizing your organization's De
 ## Prerequisites
 
 - If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `TestingOrg`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.

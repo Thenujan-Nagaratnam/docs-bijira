@@ -1,13 +1,13 @@
 ---
 title: "Authenticate to the API Portal REST API"
 description: "Bearer token authentication and the dp:* OAuth2 scopes for the API Portal REST API."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/next/rest-api/authentication/
-md_url: https://wso2.com/api-platform/docs/api-portal/next/rest-api/authentication.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/next/rest-api/authentication/
+md_url: https://xdocshostx/xdocspathx/api-portal/next/rest-api/authentication.md
 tags:
   - cloud
   - api-portal
   - rest-api
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-24
 content_type: "reference"
 ---

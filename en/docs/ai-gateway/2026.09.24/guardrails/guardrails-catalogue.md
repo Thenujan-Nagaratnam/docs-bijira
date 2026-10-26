@@ -1,14 +1,14 @@
 ---
 title: "Guardrails catalogue"
 description: "Every guardrail policy the AI Gateway ships, what each one checks, and how to extend the gateway with a guardrail of your own."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/guardrails/guardrails-catalogue/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/guardrails/guardrails-catalogue.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/guardrails/guardrails-catalogue/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/guardrails/guardrails-catalogue.md
 tags:
   - ai-gateway
   - guardrails
   - llm-proxy
   - policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-20
 content_type: "reference"
 ---
@@ -19,22 +19,22 @@ The gateway ships the guardrails below. Each one validates, filters, or transfor
 
 ## Available guardrails
 
-Guardrail policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../policy-hub/overview.md).
+Guardrail policies are documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../policy-hub/overview.md).
 
 | Guardrail | What it checks |
 |-----------|----------------|
-| [Regex Guardrail](https://wso2.com/api-platform/policy-hub/policies/regex-guardrail) | Validates content against a regular expression |
-| [JSON Schema Guardrail](https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail) | Enforces a JSON Schema on request or response payloads |
-| [Word Count Guardrail](https://wso2.com/api-platform/policy-hub/policies/word-count-guardrail) | Enforces word-count limits on payloads |
-| [Sentence Count Guardrail](https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail) | Enforces sentence-count limits on payloads |
-| [Content Length Guardrail](https://wso2.com/api-platform/policy-hub/policies/content-length-guardrail) | Enforces byte-length limits on payloads |
-| [URL Guardrail](https://wso2.com/api-platform/policy-hub/policies/url-guardrail) | Validates URLs found in request or response bodies |
-| [PII Masking](https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex) | Masks or redacts PII from request/response bodies using configurable regex patterns |
-| [Semantic Prompt Guard](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) | Blocks or allows prompts based on semantic similarity to configured allow/deny phrases |
-| [Azure Content Safety](https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation) | Screens content against Azure Content Safety API |
-| [AWS Bedrock Guardrail](https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail) | Validates content against AWS Bedrock Guardrails |
-| [Granite Guardian Prompt Injection](https://wso2.com/api-platform/policy-hub/policies/granite-guardian-prompt-injection) | Detects prompt injection and jailbreak attempts in LLM API requests using IBM Granite Guardian 3.3 8B |
-| [NeMo Guard Content Safety](https://wso2.com/api-platform/policy-hub/policies/nvidia-nemoguard-content-safety) | Validates request and/or response content using NVIDIA NeMo Guard (llama-3.1-nemoguard-8b-content-safety) |
+| [Regex Guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/regex-guardrail) | Validates content against a regular expression |
+| [JSON Schema Guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/json-schema-guardrail) | Enforces a JSON Schema on request or response payloads |
+| [Word Count Guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/word-count-guardrail) | Enforces word-count limits on payloads |
+| [Sentence Count Guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/sentence-count-guardrail) | Enforces sentence-count limits on payloads |
+| [Content Length Guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/content-length-guardrail) | Enforces byte-length limits on payloads |
+| [URL Guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/url-guardrail) | Validates URLs found in request or response bodies |
+| [PII Masking](https://xpolicyhubhostx/xpolicyhubpathx/policies/pii-masking-regex) | Masks or redacts PII from request/response bodies using configurable regex patterns |
+| [Semantic Prompt Guard](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard) | Blocks or allows prompts based on semantic similarity to configured allow/deny phrases |
+| [Azure Content Safety](https://xpolicyhubhostx/xpolicyhubpathx/policies/azure-content-safety-content-moderation) | Screens content against Azure Content Safety API |
+| [AWS Bedrock Guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-bedrock-guardrail) | Validates content against AWS Bedrock Guardrails |
+| [Granite Guardian Prompt Injection](https://xpolicyhubhostx/xpolicyhubpathx/policies/granite-guardian-prompt-injection) | Detects prompt injection and jailbreak attempts in LLM API requests using IBM Granite Guardian 3.3 8B |
+| [NeMo Guard Content Safety](https://xpolicyhubhostx/xpolicyhubpathx/policies/nvidia-nemoguard-content-safety) | Validates request and/or response content using NVIDIA NeMo Guard (llama-3.1-nemoguard-8b-content-safety) |
 
 ## Add or update guardrails
 

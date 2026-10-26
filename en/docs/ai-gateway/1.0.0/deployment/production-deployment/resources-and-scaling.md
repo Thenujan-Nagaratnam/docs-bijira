@@ -1,14 +1,14 @@
 ---
 title: "Resources and Scaling"
 description: "Size CPU and memory for the AI Gateway controller and runtime, set replica counts, and spread runtime replicas across nodes and zones with pod anti-affinity."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/deployment/production-deployment/resources-and-scaling/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/deployment/production-deployment/resources-and-scaling.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/deployment/production-deployment/resources-and-scaling/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/deployment/production-deployment/resources-and-scaling.md
 tags:
   - ai-gateway
   - production
   - kubernetes
   - scaling
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-09
 content_type: "how-to"
 ---

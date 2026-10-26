@@ -1,13 +1,13 @@
 ---
 title: "Management API: LLM Proxy Management"
 description: "REST API reference for creating, listing, updating, and deleting LLM proxy configurations and API keys in API Platform Gateway."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/gateway-controller-management-api/llm-proxy-management/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/gateway-controller-management-api/llm-proxy-management.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/gateway-controller-management-api/llm-proxy-management/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/gateway-controller-management-api/llm-proxy-management.md
 tags:
   - api-gateway
   - management-api
   - llm
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-17
 content_type: "reference"
 ---
@@ -40,7 +40,7 @@ Add a new LLM proxy to the Gateway. A proxy defines how to interact with an LLM 
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
   "kind": "LlmProxy",
   "metadata": {
     "name": "openai-proxy"
@@ -50,7 +50,7 @@ Add a new LLM proxy to the Gateway. A proxy defines how to interact with an LLM 
     "version": "v1.0",
     "context": "/openai-proxy",
     "provider": {
-      "id": "wso2-openai-provider"
+      "id": "xsampleslugx-openai-provider"
     },
     "policies": []
   }
@@ -78,7 +78,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
   "kind": "LlmProxy",
   "metadata": {
     "name": "openai-proxy"
@@ -88,7 +88,7 @@ Required roles: `admin`, `developer`
     "version": "v1.0",
     "context": "/openai-proxy",
     "provider": {
-      "id": "wso2-openai-provider"
+      "id": "xsampleslugx-openai-provider"
     },
     "policies": []
   },
@@ -165,7 +165,7 @@ Required roles: `admin`, `developer`
   "count": 2,
   "proxies": [
     {
-      "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+      "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
       "kind": "LlmProxy",
       "metadata": {
         "name": "openai-proxy"
@@ -175,7 +175,7 @@ Required roles: `admin`, `developer`
         "version": "v1.0",
         "context": "/openai-proxy",
         "provider": {
-          "id": "wso2-openai-provider"
+          "id": "xsampleslugx-openai-provider"
         },
         "policies": []
       },
@@ -257,7 +257,7 @@ Status Code **200**
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.wso2.com/v1alpha1|
+|apiVersion|gateway.api-platform.xcrddomainx/v1alpha1|
 |kind|LlmProxy|
 |type|api-key|
 |deploymentState|deployed|
@@ -304,7 +304,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
   "kind": "LlmProxy",
   "metadata": {
     "name": "openai-proxy"
@@ -314,7 +314,7 @@ Required roles: `admin`, `developer`
     "version": "v1.0",
     "context": "/openai-proxy",
     "provider": {
-      "id": "wso2-openai-provider"
+      "id": "xsampleslugx-openai-provider"
     },
     "policies": []
   },
@@ -360,7 +360,7 @@ Update an existing LLM proxy in the Gateway.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
   "kind": "LlmProxy",
   "metadata": {
     "name": "openai-proxy"
@@ -370,7 +370,7 @@ Update an existing LLM proxy in the Gateway.
     "version": "v1.0",
     "context": "/openai-proxy",
     "provider": {
-      "id": "wso2-openai-provider"
+      "id": "xsampleslugx-openai-provider"
     },
     "policies": []
   }
@@ -399,7 +399,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
   "kind": "LlmProxy",
   "metadata": {
     "name": "openai-proxy"
@@ -409,7 +409,7 @@ Required roles: `admin`, `developer`
     "version": "v1.0",
     "context": "/openai-proxy",
     "provider": {
-      "id": "wso2-openai-provider"
+      "id": "xsampleslugx-openai-provider"
     },
     "policies": []
   },

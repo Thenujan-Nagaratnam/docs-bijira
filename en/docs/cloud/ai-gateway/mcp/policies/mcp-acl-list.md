@@ -1,14 +1,14 @@
 ---
 title: "MCP access control list"
 description: "Control access to MCP tools, resources, and prompts using an allow/deny mode with exceptions."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-acl-list/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-acl-list.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/mcp/policies/mcp-acl-list/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/mcp/policies/mcp-acl-list.md
 tags:
   - cloud
   - ai-gateway
   - mcp
   - policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -87,7 +87,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 
 ```yaml
 - name: mcp-acl-list
-  gomodule: github.com/wso2/gateway-controllers/policies/mcp-acl-list@v0
+  gomodule: github.com/xgithuborgx/gateway-controllers/policies/mcp-acl-list@v0
 ```
 
 ## Reference Scenarios
@@ -97,7 +97,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 Deny access to certain tools while allowing all others:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -125,7 +125,7 @@ spec:
 Allow access to only whitelisted resources:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -153,7 +153,7 @@ spec:
 Apply different access control rules to different capability types:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0

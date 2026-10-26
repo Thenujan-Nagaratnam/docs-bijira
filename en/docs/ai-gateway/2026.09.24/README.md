@@ -1,13 +1,13 @@
 ---
 title: "API Platform AI Gateway"
 description: "Overview of API Platform AI Gateway for managing LLM and MCP traffic, covering key concepts, architecture, and quick start links."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next.md
 tags:
   - ai-gateway
   - llm
   - mcp
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-11
 content_type: "overview"
 ---

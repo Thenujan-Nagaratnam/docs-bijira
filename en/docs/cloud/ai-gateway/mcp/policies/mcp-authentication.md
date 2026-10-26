@@ -1,14 +1,14 @@
 ---
 title: "MCP authentication"
 description: "Secure MCP server traffic by validating JWT access tokens and serving protected resource metadata."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-authentication/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-authentication.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/mcp/policies/mcp-authentication/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/mcp/policies/mcp-authentication.md
 tags:
   - cloud
   - ai-gateway
   - mcp
   - policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -21,7 +21,7 @@ The MCP Authentication policy is designed to secure traffic to Model Context Pro
 
 ## Features
 
-- **Access Token Validation**: Validates JWT access tokens using configured key managers. Please refer to the [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) for more information on how the key validation works.
+- **Access Token Validation**: Validates JWT access tokens using configured key managers. Please refer to the [JWT Authentication Policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/jwt-auth) for more information on how the key validation works.
 - **Resource-Specific Security**: Configure authentication independently for tools, resources, prompts, and JSON-RPC methods.
 - **Exception Lists**: Exclude specific resources from authentication using exception lists.
 - **Protected Resource Metadata**: Intercepts `GET /.well-known/oauth-protected-resource` requests to return resource metadata, including authorization servers and supported scopes.
@@ -138,7 +138,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 
 ```yaml
 - name: mcp-auth
-  gomodule: github.com/wso2/gateway-controllers/policies/mcp-auth@v0
+  gomodule: github.com/xgithuborgx/gateway-controllers/policies/mcp-auth@v0
 ```
 
 ## Reference Scenarios
@@ -148,7 +148,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 Apply MCP authentication to an API using a specific key manager:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
     name: mcp-server-api-v1.0
@@ -174,7 +174,7 @@ spec:
 Disable authentication for specific tools while keeping it enabled for others:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
     name: mcp-server-api-v1.0
@@ -211,7 +211,7 @@ spec:
 Advertise required scopes in the protected resource metadata (scopes are not enforced by this policy):
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
     name: mcp-server-api-v1.0
@@ -240,7 +240,7 @@ spec:
 Map JWT claims to downstream headers for use by backend services:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
     name: mcp-server-api-v1.0
@@ -270,7 +270,7 @@ spec:
 Completely disable authentication for MCP resources while keeping it for tools:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
     name: mcp-server-api-v1.0

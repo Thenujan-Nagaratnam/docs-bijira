@@ -1,12 +1,12 @@
 ---
 title: "Platform API: Gateways"
 description: "REST API reference for registering, listing, updating, and deleting AI gateways."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/gateways/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/gateways.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/gateways/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/gateways.md
 tags:
   - ai-workspace
   - platform-api
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -771,9 +771,9 @@ Required scopes (the token must carry at least one of): `ap:gateway:manifest:rea
 {
   "policies": [
     {
-      "name": "set-wso2-headers",
+      "name": "set-xsampleslugx-headers",
       "version": "v0.8.0",
-      "description": "Sets WSO2-specific headers in the request and response.",
+      "description": "Sets XSAMPLEBRANDX-specific headers in the request and response.",
       "isCustomPolicy": true,
       "policyDefinition": {}
     }

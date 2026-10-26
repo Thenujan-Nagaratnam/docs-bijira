@@ -1,13 +1,13 @@
 ---
 title: "Customize Developer Portal theming at the API level"
 description: "Override Developer Portal CSS and customize the API landing page content for a specific API."
-canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/theming-devportal-api-level/
-md_url: https://wso2.com/api-platform/docs/cloud/devportal/theming-devportal-api-level.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/theming-devportal-api-level/
+md_url: https://xdocshostx/xdocspathx/cloud/devportal/theming-devportal-api-level.md
 tags:
   - cloud
   - devportal
   - theming
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -24,7 +24,7 @@ Customization takes place at two levels:
 ## Prerequisites
 
 - If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `TestingOrg`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.

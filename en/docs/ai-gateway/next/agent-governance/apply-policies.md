@@ -1,14 +1,14 @@
 ---
 title: "Apply policies to an agent"
 description: "The three policy scopes an Agent carries — public Agent Card, every operation, and one operation — and the order the gateway runs them in."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/agent-governance/apply-policies/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/agent-governance/apply-policies.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/agent-governance/apply-policies/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/agent-governance/apply-policies.md
 tags:
   - ai-gateway
   - a2a
   - agents
   - policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-22
 content_type: "how-to"
 ---
@@ -122,14 +122,14 @@ Card serving is unauthenticated discovery, so this scope suits cross-origin rule
 
 ## Which policies you can attach
 
-An agent accepts the same policies as any other gateway artifact. Each policy's parameters are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub).
+An agent accepts the same policies as any other gateway artifact. Each policy's parameters are documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx).
 
 | Policy | What it does |
 |---|---|
-| [JWT Auth](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) | Validates JWT access tokens, optionally requiring scopes |
-| [API Key Auth](https://wso2.com/api-platform/policy-hub/policies/api-key-auth) | Validates an API key sent in a header or query parameter |
-| [Basic Auth](https://wso2.com/api-platform/policy-hub/policies/basic-auth) | Enforces HTTP Basic Authentication |
-| [Opaque Token Auth](https://wso2.com/api-platform/policy-hub/policies/opaque-token-auth) | Validates opaque OAuth 2.0 tokens through token introspection |
+| [JWT Auth](https://xpolicyhubhostx/xpolicyhubpathx/policies/jwt-auth) | Validates JWT access tokens, optionally requiring scopes |
+| [API Key Auth](https://xpolicyhubhostx/xpolicyhubpathx/policies/api-key-auth) | Validates an API key sent in a header or query parameter |
+| [Basic Auth](https://xpolicyhubhostx/xpolicyhubpathx/policies/basic-auth) | Enforces HTTP Basic Authentication |
+| [Opaque Token Auth](https://xpolicyhubhostx/xpolicyhubpathx/policies/opaque-token-auth) | Validates opaque OAuth 2.0 tokens through token introspection |
 
 ## Related topics
 

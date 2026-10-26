@@ -6,7 +6,7 @@ API Platform provides a method to send user information to a backend service thr
 
 ## How it works
 
-The backend JWT contains claims transferred between the parties, such as the user and the backend. A claim can be metadata of the request or data about the user. A set of claims is called a dialect, for example, `http://wso2.org/claims`.
+The backend JWT contains claims transferred between the parties, such as the user and the backend. A claim can be metadata of the request or data about the user. A set of claims is called a dialect, for example, `http://xclaimdomainx/claims`.
 
 For each API request, a digitally signed JWT is carried to the backend service in the following format to ensure that the authenticity of the claims list is verified:
 
@@ -26,28 +26,28 @@ The following is a sample claim set added to the end-user token for an access to
 ``` java
 {
   "sub": "11f53c32-f8ac-4810-bb79-615b2184baf5",
-  "http://wso2.org/claims/apiname": "JWT Test - Endpoint 9090 803",
-  "http://wso2.org/claims/applicationtier": "Unlimited",
-  "http://wso2.org/claims/version": "1.0.0",
-  "http://wso2.org/claims/keytype": "PRODUCTION",
-  "iss": "wso2.org/products/am",
-  "http://wso2.org/claims/applicationname": "jwtTest2",
-  "http://wso2.org/claims/enduserTenantId": "0",
-  "http://wso2.org/claims/applicationUUId": "45101ccb-865f-4f48-b7ac-18e43b07edd3",
+  "http://xclaimdomainx/claims/apiname": "JWT Test - Endpoint 9090 803",
+  "http://xclaimdomainx/claims/applicationtier": "Unlimited",
+  "http://xclaimdomainx/claims/version": "1.0.0",
+  "http://xclaimdomainx/claims/keytype": "PRODUCTION",
+  "iss": "xclaimdomainx/products/am",
+  "http://xclaimdomainx/claims/applicationname": "jwtTest2",
+  "http://xclaimdomainx/claims/enduserTenantId": "0",
+  "http://xclaimdomainx/claims/applicationUUId": "45101ccb-865f-4f48-b7ac-18e43b07edd3",
   "client_id": "IMJB5ZiR1dHQYBdiMIRAGis1WToa",
-  "http://wso2.org/claims/subscriber": "5f4a7105-a889-4f92-9612-eef5bafe4eec",
+  "http://xclaimdomainx/claims/subscriber": "5f4a7105-a889-4f92-9612-eef5bafe4eec",
   "azp": "IMJB5ZiR1dHQYBdiMIRAGis1WToa",
   "org_id": "b554e001-761c-4d3a-a7a6-a61d73d34221",
-  "http://wso2.org/claims/tier": "Unlimited",
+  "http://xclaimdomainx/claims/tier": "Unlimited",
   "scope": "email openid profile",
   "exp": 1690537362,
-  "http://wso2.org/claims/applicationid": "45101ccb-865f-4f48-b7ac-18e43b07edd3",
-  "http://wso2.org/claims/usertype": "Application_User",
+  "http://xclaimdomainx/claims/applicationid": "45101ccb-865f-4f48-b7ac-18e43b07edd3",
+  "http://xclaimdomainx/claims/usertype": "Application_User",
   "org_name": "test",
   "iat": 1690533762,
   "email": "testmail@gmail.com",
   "jti": "69558555-d386-4a81-9ca0-0a23f809cd3c",
-  "http://wso2.org/claims/apicontext": "/b554e001-761c-4d3a-a7a6-a61d73d34221/swog/jwt-test/endpoint-9090-803/1.0.0"
+  "http://xclaimdomainx/claims/apicontext": "/b554e001-761c-4d3a-a7a6-a61d73d34221/swog/jwt-test/endpoint-9090-803/1.0.0"
 }
 ```
 
@@ -59,21 +59,21 @@ The following table describes the information contained in the sample JWT claims
 | `jti`                                   | The unique token identifier.                                                                               |   Mandatory              |
 | `exp`                                   | The token expiry time.                                                                                     |   Mandatory              |
 | `iss`                                   | The issuer of the token.                                                                                   |   Mandatory              |
-| `http://wso2.org/claims/apiname`        | The name of the API in API Platform.                                                                             |   Optional               |
-| `http://wso2.org/claims/version`        | The API version.                                                                                           |   Optional               |
-| `http://wso2.org/claims/keytype`        | The environment in API Platform that the API is in (`Development` or `production`).                              |   Optional |
-| `http://wso2.org/claims/apicontext`     | The API context in API Platform.                                                                                 |   Optional               |
-| `http://wso2.org/claims/subscriber`     | The subscriber to the API, usually the app developer.                                                      |   Optional |
-| `http://wso2.org/claims/applicationname`| The application through which the API invocation is done.                                                  |   Optional |
-| `http://wso2.org/claims/applicationid`  | The ID of the application through which the API invocation is done.                                        |   Optional |
-| `http://wso2.org/claims/applicationUUId`| The UUID of the application.                                                                               |   Optional               | 
+| `http://xclaimdomainx/claims/apiname`        | The name of the API in API Platform.                                                                             |   Optional               |
+| `http://xclaimdomainx/claims/version`        | The API version.                                                                                           |   Optional               |
+| `http://xclaimdomainx/claims/keytype`        | The environment in API Platform that the API is in (`Development` or `production`).                              |   Optional |
+| `http://xclaimdomainx/claims/apicontext`     | The API context in API Platform.                                                                                 |   Optional               |
+| `http://xclaimdomainx/claims/subscriber`     | The subscriber to the API, usually the app developer.                                                      |   Optional |
+| `http://xclaimdomainx/claims/applicationname`| The application through which the API invocation is done.                                                  |   Optional |
+| `http://xclaimdomainx/claims/applicationid`  | The ID of the application through which the API invocation is done.                                        |   Optional |
+| `http://xclaimdomainx/claims/applicationUUId`| The UUID of the application.                                                                               |   Optional               | 
 | `client_id`                             | The client identifier. This is copied from the original token.                                             |   Optional |
 | `azp`                                   | The authorized party (the party to which the ID token was issued). This is copied from the original token. |   Optional |
 | `org_id`                                | The organization ID. This is copied from the original token.                                               |   Optional |
 | `org_name`                              | The organization name. This is copied from the original token.                                             |   Optional |
-| `http://wso2.org/claims/tier`           | The tier/price band for the subscription.                                                                  |   Optional       |
+| `http://xclaimdomainx/claims/tier`           | The tier/price band for the subscription.                                                                  |   Optional       |
 | `scope`                                 | The scope of the token. This is copied from the original token.                                            |   Optional |              
-| `http://wso2.org/claims/usertype`       | The type of application user whose action invoked the API.                                                 |   Optional |
+| `http://xclaimdomainx/claims/usertype`       | The type of application user whose action invoked the API.                                                 |   Optional |
 | `email`                                 | The email address of the user. This is copied from the original token.                                     |   Optional |
 
 
@@ -83,16 +83,16 @@ The following table describes the information contained in the sample JWT claims
 
     ``` java
     { 
-      "http://wso2.org/claims/apiname": "DefaultAPI", 
-      "http://wso2.org/claims/version": "1.0.0", 
-      "http://wso2.org/claims/keytype": "PRODUCTION", 
-      "iss": "wso2.org/products/am", 
-      "http://wso2.org/claims/enduserTenantId": "0", 
+      "http://xclaimdomainx/claims/apiname": "DefaultAPI", 
+      "http://xclaimdomainx/claims/version": "1.0.0", 
+      "http://xclaimdomainx/claims/keytype": "PRODUCTION", 
+      "iss": "xclaimdomainx/products/am", 
+      "http://xclaimdomainx/claims/enduserTenantId": "0", 
       "exp": 1673245727, 
-      "http://wso2.org/claims/usertype": "Application_User", 
+      "http://xclaimdomainx/claims/usertype": "Application_User", 
       "iat": 1673242127, 
       "jti": "6e3f4392-8bd9-4900-9d08-eaab7429c510", 
-      "http://wso2.org/claims/apicontext": "/9e71ab5e-6df5-4727-92d2-80ecf1a6218d/qbky/default/1.0.0" 
+      "http://xclaimdomainx/claims/apicontext": "/9e71ab5e-6df5-4727-92d2-80ecf1a6218d/qbky/default/1.0.0" 
     }
 
     ```
@@ -108,8 +108,8 @@ JWKS allows the issuer to rotate keys dynamically rather than hard-coding the pu
 
  API Platform provides an endpoint to specify the public keys for backend JWT validation. Here are the endpoint URLs for the US East and EU regions:
 
-- [https://gateway.e1-us-east-azure.bijiraapis.dev/.wellknown/jwks](https://gateway.e1-us-east-azure.bijiraapis.dev/.wellknown/jwks)
-- [https://gateway.e1-eu-north-azure.bijiraapis.dev/.wellknown/jwks](https://gateway.e1-eu-north-azure.bijiraapis.dev/.wellknown/jwks)
+- [https://gateway.e1-us-east-azure.xcloudapisdomainx/.wellknown/jwks](https://gateway.e1-us-east-azure.xcloudapisdomainx/.wellknown/jwks)
+- [https://gateway.e1-eu-north-azure.xcloudapisdomainx/.wellknown/jwks](https://gateway.e1-eu-north-azure.xcloudapisdomainx/.wellknown/jwks)
 
 !!! note
     For private data planes (PDPs), use the following JWKS endpoint URL template:
@@ -153,7 +153,7 @@ The following table describes the information contained in the JWKS response:
 
 To enable passing end-user attributes to the backend through API calls via API Platform, follow the steps given below:
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. In the **Proxy Listing**page, click on the API Proxy for which you want to pass end-user attributes to the backend.
 3. In the left navigation menu, click **Develop** and then click **Policies**.
 4. Select the API Proxy Level policies, then click **Attach Mediation Policy**.

@@ -1,13 +1,13 @@
 ---
 title: "MCP Servers Overview"
-description: "Learn how WSO2 API Platform turns existing APIs into MCP servers with a centralized control plane, tool generation, and OAuth2 security."
-canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/get-started-with-mcp/
-md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/get-started-with-mcp.md
+description: "Learn how XAPIPLATFORMX turns existing APIs into MCP servers with a centralized control plane, tool generation, and OAuth2 security."
+canonical_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/get-started-with-mcp/
+md_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/get-started-with-mcp.md
 tags:
   - cloud
   - mcp
   - overview
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "overview"
 ---
@@ -26,7 +26,7 @@ For more information, refer to the official [specification](https://modelcontext
 
 API Platform now includes support for MCP servers. It provides a complete solution for transforming existing APIs into intelligent, AI-ready tools. With a centralized control plane, API Platform simplifies the entire lifecycle of MCP server management—from creation to discovery—delivering a seamless experience for both API developers and AI agent builders. Additionally, API Platform allows you to customize the developer portal to deliver a tailored, MCP-only experience for your consumers.
 
-![Bijira architecture diagram showing Developer and MCP Client or AI Agents interacting with Bijira Console containing Manage Tools, Manage Lifecycle, Add Policies, and MCP Hub Theming, Bijira Developer Portal with Discover MCP Server and Manage Application, and Bijira Gateway routing to MCP Servers and API Proxies which connect to a backend Service](../../assets/img/introduction/mcp/mcp-architecture.png)
+![XCLOUDCODENAMEX architecture diagram showing Developer and MCP Client or AI Agents interacting with XCLOUDCODENAMEX Console containing Manage Tools, Manage Lifecycle, Add Policies, and MCP Hub Theming, XCLOUDCODENAMEX Developer Portal with Discover MCP Server and Manage Application, and XCLOUDCODENAMEX Gateway routing to MCP Servers and API Proxies which connect to a backend Service](../../assets/img/introduction/mcp/mcp-architecture.png)
 
 In summary, API Platform provides the following capabilities related to MCP.
 

@@ -1,14 +1,14 @@
 ---
 title: "Secrets management"
 description: "Store and manage encrypted secrets in AI Workspace and reference them securely in artifact configurations without exposing plaintext credentials."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/secrets-management/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/secrets-management.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/secrets-management/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/secrets-management.md
 tags:
   - cloud
   - ai-workspace
   - secrets
   - security
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-07
 content_type: "how-to"
 ---
@@ -42,7 +42,7 @@ Use secrets to keep raw API keys, tokens, and passwords out of your artifact con
 
 When you create or update an **LLM Provider** or **MCP Proxy** through the AI Workspace UI and fill in an upstream API key or auth value, the UI automatically:
 
-1. Creates a secret via `POST /api/v0.9/secrets` using a deterministic handle derived from the resource ID (for example, `wso2-openai-provider-api-key`).
+1. Creates a secret via `POST /api/v0.9/secrets` using a deterministic handle derived from the resource ID (for example, `xsampleslugx-openai-provider-api-key`).
 2. Substitutes the credential with the {% raw %}`{{ secret "handle" }}`{% endraw %} placeholder before saving the resource.
 
 The raw credential is sent to the secrets API only once and is never stored in the artifact configuration. Re-saving a resource that already contains a placeholder skips the secret creation step.
@@ -93,15 +93,15 @@ Content-Type: multipart/form-data; boundary=----FormBoundary
 ------FormBoundary
 Content-Disposition: form-data; name="id"
 
-wso2-openai-key
+xsampleslugx-openai-key
 ------FormBoundary
 Content-Disposition: form-data; name="displayName"
 
-WSO2 OpenAI API Key
+XSAMPLEBRANDX OpenAI API Key
 ------FormBoundary
 Content-Disposition: form-data; name="description"
 
-API key for WSO2 OpenAI integration
+API key for XSAMPLEBRANDX OpenAI integration
 ------FormBoundary
 Content-Disposition: form-data; name="type"
 
@@ -117,8 +117,8 @@ sk-xxx
 
 ```json
 {
-  "id": "wso2-openai-key",
-  "displayName": "WSO2 OpenAI API Key",
+  "id": "xsampleslugx-openai-key",
+  "displayName": "XSAMPLEBRANDX OpenAI API Key",
   "createdBy": "john.doe",
   "updatedBy": "john.doe",
   "createdAt": "2026-01-12T10:00:00Z",
@@ -158,9 +158,9 @@ Returns metadata for all secrets in the organization. Plaintext values are never
   "count": 1,
   "list": [
     {
-      "id": "wso2-openai-key",
-      "displayName": "WSO2 OpenAI API Key",
-      "description": "API key for WSO2 OpenAI integration",
+      "id": "xsampleslugx-openai-key",
+      "displayName": "XSAMPLEBRANDX OpenAI API Key",
+      "description": "API key for XSAMPLEBRANDX OpenAI integration",
       "type": "GENERIC",
       "provider": "IN_BUILT",
       "status": "ACTIVE",
@@ -190,9 +190,9 @@ Returns metadata for a single secret. The plaintext value isn't included.
 
 ```json
 {
-  "id": "wso2-openai-key",
-  "displayName": "WSO2 OpenAI API Key",
-  "description": "API key for WSO2 OpenAI integration",
+  "id": "xsampleslugx-openai-key",
+  "displayName": "XSAMPLEBRANDX OpenAI API Key",
+  "description": "API key for XSAMPLEBRANDX OpenAI integration",
   "type": "GENERIC",
   "provider": "IN_BUILT",
   "status": "ACTIVE",
@@ -230,7 +230,7 @@ Re-encrypts and stores a new value. Because `id` is immutable, all {% raw %}`{{ 
 **Example request**
 
 ```http
-PUT /api/v0.9/secrets/wso2-openai-key
+PUT /api/v0.9/secrets/xsampleslugx-openai-key
 Authorization: Bearer <JWT>
 Content-Type: multipart/form-data; boundary=----FormBoundary
 
@@ -241,7 +241,7 @@ sk-new-value
 ------FormBoundary
 Content-Disposition: form-data; name="displayName"
 
-WSO2 OpenAI API Key (rotated)
+XSAMPLEBRANDX OpenAI API Key (rotated)
 ------FormBoundary
 Content-Disposition: form-data; name="description"
 
@@ -253,8 +253,8 @@ Rotated on 2026-06-26 — old key decommissioned
 
 ```json
 {
-  "id": "wso2-openai-key",
-  "displayName": "WSO2 OpenAI API Key (rotated)",
+  "id": "xsampleslugx-openai-key",
+  "displayName": "XSAMPLEBRANDX OpenAI API Key (rotated)",
   "createdBy": "john.doe",
   "updatedBy": "john.doe",
   "createdAt": "2026-01-12T10:00:00Z",
@@ -331,7 +331,7 @@ spec:
     auth:
       type: api-key
       header: Authorization
-      value: 'Bearer {{ secret "wso2-openai-key" }}'
+      value: 'Bearer {{ secret "xsampleslugx-openai-key" }}'
 ```
 {% endraw %}
 

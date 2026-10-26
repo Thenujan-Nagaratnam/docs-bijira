@@ -1,14 +1,14 @@
 ---
 title: "Create API Proxy for AWS Bedrock"
-description: "Create and deploy an API proxy for the AWS Bedrock provider in WSO2 API Platform, configure backend authentication, and publish it."
-canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/awsbedrock/
-md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/awsbedrock.md
+description: "Create and deploy an API proxy for the AWS Bedrock provider in XAPIPLATFORMX, configure backend authentication, and publish it."
+canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/awsbedrock/
+md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/awsbedrock.md
 tags:
   - cloud
   - api-proxy
   - ai-gateway
   - aws-bedrock
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -21,7 +21,7 @@ Follow the steps below to create an AI API:
 
 ## 1. Access the API Platform Console
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/) and select your project.  
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/) and select your project.  
 
 ---
 

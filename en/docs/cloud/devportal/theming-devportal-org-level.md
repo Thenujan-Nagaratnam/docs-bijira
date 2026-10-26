@@ -1,13 +1,13 @@
 ---
 title: "Customize Developer Portal theming at the organization level"
 description: "Manually customize Developer Portal colors, typography, HTML, CSS, and logo at the organization level."
-canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/theming-devportal-org-level/
-md_url: https://wso2.com/api-platform/docs/cloud/devportal/theming-devportal-org-level.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/theming-devportal-org-level/
+md_url: https://xdocshostx/xdocspathx/cloud/devportal/theming-devportal-org-level.md
 tags:
   - cloud
   - devportal
   - theming
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -24,7 +24,7 @@ Customization takes place at two levels:
 ## Prerequisites
 
 - If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `TestingOrg`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -97,7 +97,7 @@ Go through the following steps to customize the theme of the Devportal in the or
                     <div class="col-xl-3 col-lg-6 col-12 d-flex justify-content-end align-items-end">
                         <div class="hero-image-container">
                             <div id="heroImage" class="me-0">
-                                <img class="hero-banner-image d-none" src="https://raw.githubusercontent.com/wso2/docs-bijira/refs/heads/main/en/devportal-theming/hero.svg">
+                                <img class="hero-banner-image d-none" src="https://raw.githubusercontent.com/xgithuborgx/xdocsrepox/refs/heads/main/en/devportal-theming/hero.svg">
                             </div>
                         </div>
                     </div>

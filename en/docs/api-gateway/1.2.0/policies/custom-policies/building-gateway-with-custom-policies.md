@@ -1,14 +1,14 @@
 ---
 title: "Build a Gateway Image with Custom Policies"
 description: "Use API Platform CLI to bundle custom policies into an API Platform Gateway Docker image for deployment."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/policies/custom-policies/building-gateway-with-custom-policies/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/policies/custom-policies/building-gateway-with-custom-policies.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/policies/custom-policies/building-gateway-with-custom-policies/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/policies/custom-policies/building-gateway-with-custom-policies.md
 tags:
   - api-gateway
   - policies
   - custom-policies
   - cli
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-07
 content_type: "how-to"
 ---
@@ -17,7 +17,7 @@ content_type: "how-to"
 
 ## Install the AP CLI Tool
 
-The `ap` CLI tool is used to build a custom gateway image with your own policies. Download the binary for your platform from the [`ap` CLI v0.9.1 release page](https://github.com/wso2/api-platform/releases/tag/ap%2Fv0.9.1) and follow the steps below to install it.
+The `ap` CLI tool is used to build a custom gateway image with your own policies. Download the binary for your platform from the [`ap` CLI v0.9.1 release page](https://github.com/xgithuborgx/api-platform/releases/tag/ap%2Fv0.9.1) and follow the steps below to install it.
 
 === "macOS / Linux"
 
@@ -100,7 +100,7 @@ The `ap` CLI tool is used to build a custom gateway image with your own policies
 The `build.yaml` file is already included in the unzipped gateway package. It declares the gateway version and the list of policies to include. Edit this file to add your custom policies before building the gateway image.
 
 !!! tip "Sample Custom Policies"
-    WSO2 provides a set of sample custom policies to help you get started. You can find them in the [api-platform sample policies repository](https://github.com/wso2/api-platform/tree/main/gateway/sample-policies).
+    XBRANDX provides a set of sample custom policies to help you get started. You can find them in the [api-platform sample policies repository](https://github.com/xgithuborgx/api-platform/tree/main/gateway/sample-policies).
 
 ### Structure
 
@@ -119,7 +119,7 @@ Each policy entry uses one of two source types:
 
 | Field | Description |
 |---|---|
-| `gomodule` | Go module reference for policy hub managed policies (e.g., `github.com/wso2/gateway-controllers/policies/cors@v1`) |
+| `gomodule` | Go module reference for policy hub managed policies (e.g., `github.com/xgithuborgx/gateway-controllers/policies/cors@v1`) |
 | `filePath` | Relative path from `build.yaml` to a local custom policy directory |
 
 ### Adding a Custom Policy
@@ -149,53 +149,53 @@ policies:
 
 ### Overriding the Base Images
 
-`ap gateway image build` resolves three images during a build: the **builder** image that performs the build, and the **controller** and **runtime** base images that the produced images extend. By default, all three are pulled from the public WSO2 GitHub Container Registry (GHCR) at the version declared in `gateway.version`.
+`ap gateway image build` resolves three images during a build: the **builder** image that performs the build, and the **controller** and **runtime** base images that the produced images extend. By default, all three are pulled from the public XBRANDX GitHub Container Registry (GHCR) at the version declared in `gateway.version`.
 
-You can override any of them independently by adding an `images` block under `gateway`. This is optional for standard builds that use the public images, but **required for WSO2 subscription users**, who must point these images at the WSO2 private registry (see below). It is also useful for air-gapped environments and internal registry mirrors.
+You can override any of them independently by adding an `images` block under `gateway`. This is optional for standard builds that use the public images, but **required for XBRANDX subscription users**, who must point these images at the XBRANDX private registry (see below). It is also useful for air-gapped environments and internal registry mirrors.
 
 | Key | Used as | Default (when not set) |
 |---|---|---|
-| `builder` | image run to perform the build | `ghcr.io/wso2/api-platform/gateway-builder:<version>` |
-| `controller` | base image extended by the built controller | `ghcr.io/wso2/api-platform/gateway-controller:<version>` |
-| `runtime` | base image extended by the built runtime | `ghcr.io/wso2/api-platform/gateway-runtime:<version>` |
+| `builder` | image run to perform the build | `ghcr.io/xgithuborgx/api-platform/gateway-builder:<version>` |
+| `controller` | base image extended by the built controller | `ghcr.io/xgithuborgx/api-platform/gateway-controller:<version>` |
+| `runtime` | base image extended by the built runtime | `ghcr.io/xgithuborgx/api-platform/gateway-runtime:<version>` |
 
 ```yaml
 version: v1
 gateway:
   version: 1.0.0
   images:   # optional — if omitted, the public GHCR images above are used
-    builder: ghcr.io/wso2/api-platform/gateway-builder:1.0.0
-    controller: ghcr.io/wso2/api-platform/gateway-controller:1.0.0
-    runtime: ghcr.io/wso2/api-platform/gateway-runtime:1.0.0
+    builder: ghcr.io/xgithuborgx/api-platform/gateway-builder:1.0.0
+    controller: ghcr.io/xgithuborgx/api-platform/gateway-controller:1.0.0
+    runtime: ghcr.io/xgithuborgx/api-platform/gateway-runtime:1.0.0
 policies:
   - name: set-headers
-    gomodule: github.com/wso2/gateway-controllers/policies/set-headers@v1
+    gomodule: github.com/xgithuborgx/gateway-controllers/policies/set-headers@v1
 ```
 
 Each key is resolved independently, so you can override only the ones you need; any key left out falls back to its default public GHCR image. The resolved images are printed at the start of the build under **Resolved images**, so you can confirm which ones were used.
 
-!!! note "WSO2 Subscription Users"
-    If you have a WSO2 subscription, use image tags that include the **U2 update version (4th digit)**, for example `1.1.0.0`, instead of the base release `1.1.0`. The 4th digit represents **patch-level (U2) updates**, which include the latest fixes and security updates delivered through the WSO2 private registry (`registry.wso2.com`).
+!!! note "XBRANDX Subscription Users"
+    If you have a XBRANDX subscription, use image tags that include the **U2 update version (4th digit)**, for example `1.1.0.0`, instead of the base release `1.1.0`. The 4th digit represents **patch-level (U2) updates**, which include the latest fixes and security updates delivered through the XBRANDX private registry (`xregistryhostx`).
 
-    Because these images are not published to the public GHCR registry, set **all three** keys explicitly to the `registry.wso2.com/wso2-api-platform/` path:
+    Because these images are not published to the public GHCR registry, set **all three** keys explicitly to the `xregistryhostx/xregistryprojectx/` path:
 
     ```yaml
     version: v1
     gateway:
       version: "1.1.0.0"
       images:
-        builder: registry.wso2.com/wso2-api-platform/gateway-builder:1.1.0.0
-        controller: registry.wso2.com/wso2-api-platform/gateway-controller:1.1.0.0
-        runtime: registry.wso2.com/wso2-api-platform/gateway-runtime:1.1.0.0
+        builder: xregistryhostx/xregistryprojectx/gateway-builder:1.1.0.0
+        controller: xregistryhostx/xregistryprojectx/gateway-controller:1.1.0.0
+        runtime: xregistryhostx/xregistryprojectx/gateway-runtime:1.1.0.0
     policies:
       - name: set-headers
-        gomodule: github.com/wso2/gateway-controllers/policies/set-headers@v1
+        gomodule: github.com/xgithuborgx/gateway-controllers/policies/set-headers@v1
     ```
 
     The `ap` CLI uses your local Docker installation to pull and build images, so authenticate to the private registry first:
 
     ```bash
-    docker login registry.wso2.com   # use your WSO2 email and access token
+    docker login xregistryhostx   # use your XSAMPLEBRANDX email and access token
     ```
 
 ## Build the Gateway Image
@@ -212,8 +212,8 @@ Once the build completes, the output lists the two image names produced. For exa
 
 ```text
 ✓ Built gateway images with 1 policies:
-  • ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-runtime:1.0.0
-  • ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-controller:1.0.0
+  • ghcr.io/xgithuborgx/api-platform/gateway-v1.0.0-gateway-runtime:1.0.0
+  • ghcr.io/xgithuborgx/api-platform/gateway-v1.0.0-gateway-controller:1.0.0
 ```
 
 A `build-manifest.yaml` file is also written alongside `build.yaml`, recording the resolved versions of all policies included in the build.
@@ -227,10 +227,10 @@ Locate the `gateway-controller` and `gateway-runtime` services and replace their
 ```yaml
 services:
   gateway-controller:
-    image: ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-controller:1.0.0  # (1)
+    image: ghcr.io/xgithuborgx/api-platform/gateway-v1.0.0-gateway-controller:1.0.0  # (1)
 
   gateway-runtime:
-    image: ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-runtime:1.0.0     # (2)
+    image: ghcr.io/xgithuborgx/api-platform/gateway-v1.0.0-gateway-runtime:1.0.0     # (2)
 ```
 
 1. Replace with the `gateway-controller` image name from your build output.
@@ -257,7 +257,7 @@ curl -X POST http://localhost:9090/api/management/v1/rest-apis \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: RestApi
 metadata:
   name: reading-list-api-v1.0
@@ -267,14 +267,14 @@ spec:
   context: /reading-list/$version
   upstream:
     main:
-      url: https://apis.bijira.dev/samples/reading-list-api-service/v1.0
+      url: https://apis.xclouddomainx/samples/reading-list-api-service/v1.0
   policies:
     - name: set-headers
       version: v1
       params:
         request:
           headers:
-            - name: x-wso2-apip-gateway-version
+            - name: x-xheaderprefixx-apip-gateway-version
               value: v1.0.0
         response:
           headers:

@@ -1,15 +1,15 @@
 ---
 title: "Configure Resources and Scaling"
 description: "Set CPU and memory resource limits, pod anti-affinity rules, Horizontal Pod Autoscaler, and Pod Disruption Budget for API Platform Gateway."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/deployment/production-deployment/resources-and-scaling/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/deployment/production-deployment/resources-and-scaling.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/deployment/production-deployment/resources-and-scaling/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/deployment/production-deployment/resources-and-scaling.md
 tags:
   - api-gateway
   - deployment
   - kubernetes
   - production
   - scaling
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-17
 content_type: "how-to"
 ---

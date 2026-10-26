@@ -1,13 +1,13 @@
 ---
 title: "MCP proxy"
 description: "Route Model Context Protocol traffic through the AI Gateway with an MCP proxy, then deploy one and connect an MCP client to it."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/mcp-proxy/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/mcp-proxy.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/mcp-proxy/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/mcp-proxy.md
 tags:
   - ai-gateway
   - mcp
   - mcp-proxy
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-20
 content_type: "how-to"
 ---
@@ -51,12 +51,12 @@ curl -X POST http://localhost:9090/api/management/v1/mcp-proxies \
   -H "Content-Type: application/yaml" \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: Mcp
 metadata:
   name: everything-mcp-v1.0
   annotations:
-    "gateway.api-platform.wso2.com/project-id": "default"
+    "gateway.api-platform.xcrddomainx/project-id": "default"
 spec:
   displayName: Everything
   version: v1.0

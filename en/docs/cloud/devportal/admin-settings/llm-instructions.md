@@ -1,13 +1,13 @@
 ---
 title: "Configure LLM instructions for the Developer Portal"
 description: "Give AI agents portal-level context, conventions, and recommended workflows by publishing LLM instructions to llms.txt."
-canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/admin-settings/llm-instructions/
-md_url: https://wso2.com/api-platform/docs/cloud/devportal/admin-settings/llm-instructions.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/admin-settings/llm-instructions/
+md_url: https://xdocshostx/xdocspathx/cloud/devportal/admin-settings/llm-instructions.md
 tags:
   - cloud
   - devportal
   - ai-discovery
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---

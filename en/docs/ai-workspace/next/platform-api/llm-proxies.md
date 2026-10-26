@@ -1,12 +1,12 @@
 ---
 title: "Platform API: LLM proxies"
 description: "REST API reference for creating, listing, updating, and deleting LLM proxies."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/llm-proxies/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/llm-proxies.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/llm-proxies/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/llm-proxies.md
 tags:
   - ai-workspace
   - platform-api
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -39,15 +39,15 @@ Deploy a new LLM proxy configuration.
 
 ```json
 {
-  "id": "wso2-con-assistant",
-  "displayName": "WSO2 Con Assistant",
+  "id": "xsampleslugx-con-assistant",
+  "displayName": "XSAMPLEBRANDX Con Assistant",
   "description": "Customer support assistant",
   "version": "v1.0",
   "projectId": "default-project",
   "context": "/openai",
   "vhost": "api.openai.com",
   "provider": {
-    "id": "wso2-openai-provider",
+    "id": "xsampleslugx-openai-provider",
     "auth": {
       "type": "api-key",
       "header": "X-API-Key",
@@ -149,8 +149,8 @@ Required scopes (the token must carry at least one of): `ap:llm_proxy:create`, `
 
 ```json
 {
-  "id": "wso2-con-assistant",
-  "displayName": "WSO2 Con Assistant",
+  "id": "xsampleslugx-con-assistant",
+  "displayName": "XSAMPLEBRANDX Con Assistant",
   "description": "Customer support assistant",
   "createdBy": "john.doe",
   "readOnly": false,
@@ -160,7 +160,7 @@ Required scopes (the token must carry at least one of): `ap:llm_proxy:create`, `
   "context": "/openai",
   "vhost": "api.openai.com",
   "provider": {
-    "id": "wso2-openai-provider",
+    "id": "xsampleslugx-openai-provider",
     "auth": {
       "type": "api-key",
       "header": "X-API-Key"
@@ -375,14 +375,14 @@ Required scopes (the token must carry at least one of): `ap:llm_proxy:read`, `ap
   "count": 2,
   "list": [
     {
-      "id": "wso2-con-assistant",
-      "displayName": "WSO2 Con Assistant",
+      "id": "xsampleslugx-con-assistant",
+      "displayName": "XSAMPLEBRANDX Con Assistant",
       "description": "Customer support assistant",
       "createdBy": "john.doe",
-      "context": "/wso2-con-assistant",
+      "context": "/xsampleslugx-con-assistant",
       "version": "v1.0",
       "projectId": "default-project",
-      "provider": "wso2-openai-provider",
+      "provider": "xsampleslugx-openai-provider",
       "status": "deployed",
       "createdAt": "2025-11-25T10:30:00Z",
       "updatedAt": "2025-11-25T10:30:00Z",
@@ -465,8 +465,8 @@ Required scopes (the token must carry at least one of): `ap:llm_proxy:read`, `ap
 
 ```json
 {
-  "id": "wso2-con-assistant",
-  "displayName": "WSO2 Con Assistant",
+  "id": "xsampleslugx-con-assistant",
+  "displayName": "XSAMPLEBRANDX Con Assistant",
   "description": "Customer support assistant",
   "createdBy": "john.doe",
   "readOnly": false,
@@ -476,7 +476,7 @@ Required scopes (the token must carry at least one of): `ap:llm_proxy:read`, `ap
   "context": "/openai",
   "vhost": "api.openai.com",
   "provider": {
-    "id": "wso2-openai-provider",
+    "id": "xsampleslugx-openai-provider",
     "auth": {
       "type": "api-key",
       "header": "X-API-Key"
@@ -622,15 +622,15 @@ Update the configuration of an existing LLM proxy.
 
 ```json
 {
-  "id": "wso2-con-assistant",
-  "displayName": "WSO2 Con Assistant",
+  "id": "xsampleslugx-con-assistant",
+  "displayName": "XSAMPLEBRANDX Con Assistant",
   "description": "Customer support assistant",
   "version": "v1.0",
   "projectId": "default-project",
   "context": "/openai",
   "vhost": "api.openai.com",
   "provider": {
-    "id": "wso2-openai-provider",
+    "id": "xsampleslugx-openai-provider",
     "auth": {
       "type": "api-key",
       "header": "X-API-Key",
@@ -733,8 +733,8 @@ Required scopes (the token must carry at least one of): `ap:llm_proxy:update`, `
 
 ```json
 {
-  "id": "wso2-con-assistant",
-  "displayName": "WSO2 Con Assistant",
+  "id": "xsampleslugx-con-assistant",
+  "displayName": "XSAMPLEBRANDX Con Assistant",
   "description": "Customer support assistant",
   "createdBy": "john.doe",
   "readOnly": false,
@@ -744,7 +744,7 @@ Required scopes (the token must carry at least one of): `ap:llm_proxy:update`, `
   "context": "/openai",
   "vhost": "api.openai.com",
   "provider": {
-    "id": "wso2-openai-provider",
+    "id": "xsampleslugx-openai-provider",
     "auth": {
       "type": "api-key",
       "header": "X-API-Key"

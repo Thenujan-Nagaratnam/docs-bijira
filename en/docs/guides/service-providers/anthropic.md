@@ -1,8 +1,8 @@
 ---
 title: "Anthropic guides"
-description: "Use WSO2 API Platform to govern Claude model traffic, route Claude Code through AI Gateway, and connect Claude to governed APIs and MCP servers."
-canonical_url: https://wso2.com/api-platform/docs/guides/service-providers/anthropic/
-md_url: https://wso2.com/api-platform/docs/guides/service-providers/anthropic.md
+description: "Use XAPIPLATFORMX to govern Claude model traffic, route Claude Code through AI Gateway, and connect Claude to governed APIs and MCP servers."
+canonical_url: https://xdocshostx/xdocspathx/guides/service-providers/anthropic/
+md_url: https://xdocshostx/xdocspathx/guides/service-providers/anthropic.md
 tags:
   - guides
   - anthropic
@@ -10,18 +10,18 @@ tags:
   - claude-code
   - claude-desktop
   - service-provider-guides
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-10-21
 content_type: "reference"
 ---
 
 # Govern Claude models, Claude Code, and Claude Desktop
 
-WSO2 API Platform works alongside the Anthropic products you already use. Govern traffic to Claude models, route Claude Code through AI Gateway, and give Claude Desktop and Claude Code controlled access to APIs and MCP servers.
+XAPIPLATFORMX works alongside the Anthropic products you already use. Govern traffic to Claude models, route Claude Code through AI Gateway, and give Claude Desktop and Claude Code controlled access to APIs and MCP servers.
 
 ## End-to-end guides and tutorials
 
-Step-by-step guides for Claude Code and Claude Desktop. Guides are part of this documentation. Tutorials are published on the WSO2 API Platform Learn Hub and written for the product version they name.
+Step-by-step guides for Claude Code and Claude Desktop. Guides are part of this documentation. Tutorials are published on the XAPIPLATFORMX Learn Hub and written for the product version they name.
 
 <div class="vendor-guide-list" markdown="1">
 
@@ -55,7 +55,7 @@ Step-by-step guides for Claude Code and Claude Desktop. Guides are part of this 
 
     Guide · Claude Desktop and Claude Code · Cloud
 
-- [Control Claude Code costs across a large engineering team](https://wso2.com/api-platform/learn/control-claude-code-ai-cost-with-ai-gateway/)
+- [Control Claude Code costs across a large engineering team](https://xwebdomainx/api-platform/learn/control-claude-code-ai-cost-with-ai-gateway/)
 
     Add token limits, cost caps, semantic caching, prompt compression, and per-developer spend visibility to a shared Claude Code setup.
 
@@ -68,7 +68,7 @@ Step-by-step guides for Claude Code and Claude Desktop. Guides are part of this 
 
 ## AI Gateway with Claude models
 
-Route, secure, and govern traffic to Claude models through WSO2 AI Gateway, including traffic from Claude Code.
+Route, secure, and govern traffic to Claude models through XAIGATEWAYX, including traffic from Claude Code.
 
 <div class="vendor-cap" markdown="1">
 
@@ -153,13 +153,13 @@ Put an MCP proxy in front of an MCP server, and control which tools Claude can c
 
 ## Architecture and responsibility model
 
-WSO2 API Platform and Anthropic split the work like this:
+XAPIPLATFORMX and Anthropic split the work like this:
 
-| Scenario | WSO2 role | Anthropic role | Runtime traffic |
+| Scenario | XBRANDX role | Anthropic role | Runtime traffic |
 | --- | --- | --- | --- |
-| Claude Code through AI Gateway | Authenticates developers and applies guardrails, rate limits, and analytics | Hosts the Claude models and bills the API key or subscription | Goes through WSO2 AI Gateway to Anthropic |
-| Applications calling Claude models | Proxies and governs LLM requests | Hosts the Claude models | Goes through WSO2 AI Gateway to Anthropic |
-| Claude Desktop and Claude Code with governed tools | Proxies and governs your APIs and MCP servers | Provides the Claude client and model | Tool calls go through WSO2, and model requests go directly to Anthropic |
+| Claude Code through AI Gateway | Authenticates developers and applies guardrails, rate limits, and analytics | Hosts the Claude models and bills the API key or subscription | Goes through XAIGATEWAYX to Anthropic |
+| Applications calling Claude models | Proxies and governs LLM requests | Hosts the Claude models | Goes through XAIGATEWAYX to Anthropic |
+| Claude Desktop and Claude Code with governed tools | Proxies and governs your APIs and MCP servers | Provides the Claude client and model | Tool calls go through XBRANDX, and model requests go directly to Anthropic |
 
 ## Learn more
 

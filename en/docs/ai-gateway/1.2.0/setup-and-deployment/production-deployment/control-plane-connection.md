@@ -1,14 +1,14 @@
 ---
 title: "Connect to AI Workspace"
 description: "Register a production AI Gateway with AI Workspace: the registration token as a Kubernetes Secret, the control plane address, TLS trust, and sync behavior."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/production-deployment/control-plane-connection/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/production-deployment/control-plane-connection.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/production-deployment/control-plane-connection/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/production-deployment/control-plane-connection.md
 tags:
   - ai-gateway
   - production
   - ai-workspace
   - control-plane
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-26
 content_type: "how-to"
 ---
@@ -110,7 +110,7 @@ The remaining fields control sync behavior. `deployment_sync_enabled: true` push
 Apply the change:
 
 ```bash
-helm upgrade ai-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
+helm upgrade ai-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
   --version 1.2.0 \
   --namespace ai-gateway \
   --values ./values.yaml \

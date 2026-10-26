@@ -1,15 +1,15 @@
 ---
 title: "Configure OpenTelemetry analytics"
 description: "Export API Platform Gateway analytics events as OpenTelemetry Protocol (OTLP) log records to an OpenTelemetry Collector or any OTLP-compatible backend."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/next/analytics/opentelemetry-analytics/
-md_url: https://wso2.com/api-platform/docs/api-gateway/next/analytics/opentelemetry-analytics.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/next/analytics/opentelemetry-analytics/
+md_url: https://xdocshostx/xdocspathx/api-gateway/next/analytics/opentelemetry-analytics.md
 tags:
   - api-gateway
   - analytics
   - opentelemetry
   - otlp
   - observability
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-16
 content_type: "how-to"
 ---
@@ -67,8 +67,8 @@ Two properties hold, the same as for Traffic Logging:
   mismatched key pair is a **startup error**. Once running, a delivery failure drops records and
   increments a counter. It never blocks traffic.
 
-The publisher emits every record under the InstrumentationScope **`wso2.analytics`**, with
-`event.name = wso2.api.transaction`. A collector can therefore route API analytics away from
+The publisher emits every record under the InstrumentationScope **`xtelemetryprefixx.analytics`**, with
+`event.name = xtelemetryprefixx.api.transaction`. A collector can therefore route API analytics away from
 application logs with a single scope match.
 
 ## Quick start
@@ -290,21 +290,21 @@ no handshake to configure.
 
 ## What gets exported
 
-Each record follows stable OpenTelemetry semantic conventions where they exist, and the `wso2.*`
+Each record follows stable OpenTelemetry semantic conventions where they exist, and the `xtelemetryprefixx.*`
 namespace where OpenTelemetry defines nothing, chiefly API-product concepts and cost.
 
 | Area | Attributes | When present |
 |---|---|---|
 | Transaction | `event.name`, `http.request.method`, `http.route`, `url.path`, `http.response.status_code`, `http.request.body.size`, `http.response.body.size` | Every record |
 | Client | `client.address`, `user_agent.original` | Every record |
-| API | `wso2.api.id`, `wso2.api.name`, `wso2.api.version`, `wso2.api.context`, `wso2.api.type`, `wso2.api.subtype`, `wso2.project.id` | Every record |
-| Upstream | `server.address`, `server.port`, `wso2.upstream.destination`, `wso2.upstream.response.status_code`, `wso2.upstream.response.detail` | Every record |
-| Latency | `wso2.latency.backend_ms`, `wso2.latency.response_ms`, `wso2.latency.request_mediation_ms`, `wso2.latency.response_mediation_ms` | Every record |
-| Correlation | `wso2.correlation.id`, `wso2.response.content_type` | Every record |
-| Errors | `error.type`, `wso2.error.code`, `wso2.error.message` | Failed requests only |
-| Consumer | `user.id`, `user.name`, `wso2.application.id`, `wso2.application.name`, `wso2.application.owner`, `wso2.application.key_type`, `wso2.subscription.id`, `wso2.subscription.customer.id`, `wso2.subscription.plan`, `wso2.subscription.status` | Secured APIs, where the analytics system policy populates consumer identity |
+| API | `xtelemetryprefixx.api.id`, `xtelemetryprefixx.api.name`, `xtelemetryprefixx.api.version`, `xtelemetryprefixx.api.context`, `xtelemetryprefixx.api.type`, `xtelemetryprefixx.api.subtype`, `xtelemetryprefixx.project.id` | Every record |
+| Upstream | `server.address`, `server.port`, `xtelemetryprefixx.upstream.destination`, `xtelemetryprefixx.upstream.response.status_code`, `xtelemetryprefixx.upstream.response.detail` | Every record |
+| Latency | `xtelemetryprefixx.latency.backend_ms`, `xtelemetryprefixx.latency.response_ms`, `xtelemetryprefixx.latency.request_mediation_ms`, `xtelemetryprefixx.latency.response_mediation_ms` | Every record |
+| Correlation | `xtelemetryprefixx.correlation.id`, `xtelemetryprefixx.response.content_type` | Every record |
+| Errors | `error.type`, `xtelemetryprefixx.error.code`, `xtelemetryprefixx.error.message` | Failed requests only |
+| Consumer | `user.id`, `user.name`, `xtelemetryprefixx.application.id`, `xtelemetryprefixx.application.name`, `xtelemetryprefixx.application.owner`, `xtelemetryprefixx.application.key_type`, `xtelemetryprefixx.subscription.id`, `xtelemetryprefixx.subscription.customer.id`, `xtelemetryprefixx.subscription.plan`, `xtelemetryprefixx.subscription.status` | Secured APIs, where the analytics system policy populates consumer identity |
 | Captured headers | `http.request.header.<name>`, `http.response.header.<name>` | When `[collector]` header capture is enabled, one attribute per header |
-| Payloads | `wso2.request.body`, `wso2.response.body` | When `[collector]` body capture is enabled |
+| Payloads | `xtelemetryprefixx.request.body`, `xtelemetryprefixx.response.body` | When `[collector]` body capture is enabled |
 
 !!! note
     `url.path` is the literal client-requested path and `http.route` is the route template. The publisher
@@ -318,7 +318,7 @@ namespace where OpenTelemetry defines nothing, chiefly API-product concepts and 
 
 ### AI traffic
 
-The publisher maps AI traffic onto the OpenTelemetry GenAI semantic conventions. The `wso2.*`
+The publisher maps AI traffic onto the OpenTelemetry GenAI semantic conventions. The `xtelemetryprefixx.*`
 namespace carries fields those conventions do not define.
 
 | OTLP attribute | Description |
@@ -326,20 +326,20 @@ namespace carries fields those conventions do not define.
 | `gen_ai.request.model` | Large language model (LLM) the client asked for. |
 | `gen_ai.response.model` | Model that answered. It can differ from the requested one. |
 | `gen_ai.provider.name` | Provider, normalized to the GenAI enum: `openai`, `anthropic`, `aws.bedrock`, `azure.ai.openai`, `azure.ai.inference`, `gcp.gemini`, or `mistral_ai`. Omitted for a provider template outside that set. |
-| `wso2.gen_ai.provider.template_name` | Raw provider template name, so a custom template stays identifiable. |
-| `wso2.gen_ai.provider.api_version` | Provider API version used for the call. |
-| `wso2.gen_ai.cost.total` | Computed cost of the call. |
+| `xtelemetryprefixx.gen_ai.provider.template_name` | Raw provider template name, so a custom template stays identifiable. |
+| `xtelemetryprefixx.gen_ai.provider.api_version` | Provider API version used for the call. |
+| `xtelemetryprefixx.gen_ai.cost.total` | Computed cost of the call. |
 | `gen_ai.usage.input_tokens` | Prompt tokens consumed. |
 | `gen_ai.usage.output_tokens` | Completion tokens produced. `0` for operations with no completion, such as embeddings. |
-| `wso2.gen_ai.usage.total_tokens` | Total tokens for the call. |
+| `xtelemetryprefixx.gen_ai.usage.total_tokens` | Total tokens for the call. |
 
 Also emitted: `gen_ai.operation.name` (`chat`, `embeddings`, and similar, derived from the route) and
-`wso2.gen_ai.egress`.
+`xtelemetryprefixx.gen_ai.egress`.
 
 ### MCP traffic
 
 The publisher maps Model Context Protocol (MCP) traffic onto the OpenTelemetry MCP semantic
-conventions. The `wso2.*` namespace carries fields those conventions do not define.
+conventions. The `xtelemetryprefixx.*` namespace carries fields those conventions do not define.
 
 | OTLP attribute | Description |
 |---|---|
@@ -349,11 +349,11 @@ conventions. The `wso2.*` namespace carries fields those conventions do not defi
 | `jsonrpc.request.id` | JSON-RPC request identifier. |
 | `rpc.response.status_code` | JSON-RPC error code when the call failed, for example `-32602`. |
 | `error.type` | Set to `mcp_error` when the response reports an error. |
-| `wso2.mcp.server.name` | Name the server reports. |
-| `wso2.mcp.server.version` | Version the server reports. |
-| `wso2.mcp.client.name` | Name the calling client reports. |
-| `wso2.mcp.client.version` | Version the calling client reports. |
-| `wso2.mcp.client.requested_protocol_version` | Protocol version the client asked for, before negotiation. |
+| `xtelemetryprefixx.mcp.server.name` | Name the server reports. |
+| `xtelemetryprefixx.mcp.server.version` | Version the server reports. |
+| `xtelemetryprefixx.mcp.client.name` | Name the calling client reports. |
+| `xtelemetryprefixx.mcp.client.version` | Version the calling client reports. |
+| `xtelemetryprefixx.mcp.client.requested_protocol_version` | Protocol version the client asked for, before negotiation. |
 
 The publisher names the invoked capability by kind rather than by one generic field. A tool call sets
 `gen_ai.tool.name`, a prompt sets `gen_ai.prompt.name`, and a resource read sets `mcp.resource.uri`.

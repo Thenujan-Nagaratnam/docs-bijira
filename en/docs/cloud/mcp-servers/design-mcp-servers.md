@@ -1,12 +1,12 @@
 ---
 title: "Design and Publish MCP Servers"
-description: "Create an MCP Server from an HTTP backend or existing API proxy in WSO2 API Platform, customize tools, test, and publish it."
-canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/design-mcp-servers/
-md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/design-mcp-servers.md
+description: "Create an MCP Server from an HTTP backend or existing API proxy in XAPIPLATFORMX, customize tools, test, and publish it."
+canonical_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/design-mcp-servers/
+md_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/design-mcp-servers.md
 tags:
   - cloud
   - mcp
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -19,7 +19,7 @@ content_type: "how-to"
 
 If you're signing in to the API Platform Console for the first time, create an organization.
 
-1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your Google, GitHub, or Microsoft account.
+1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your Google, GitHub, or Microsoft account.
 2. Enter a unique organization name.
 3. Read and accept the privacy policy and terms of use.
 4. Click **Create**.
@@ -28,7 +28,7 @@ This creates the organization and opens the organization home page.
 
 ### Create a Project
 
-1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
+1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in. This opens the organization home page.
 2. On the organization home page, click **+ Create Project**.
 3. Enter the following details:
 

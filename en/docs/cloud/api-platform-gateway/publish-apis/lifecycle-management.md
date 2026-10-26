@@ -1,14 +1,14 @@
 ---
 title: "Manage API lifecycle on the Self-Hosted Gateway"
 description: "Move an API proxy through its lifecycle states on the Self-Hosted Gateway: created, pre-released, published, deprecated, and retired."
-canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/publish-apis/lifecycle-management/
-md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/publish-apis/lifecycle-management.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/publish-apis/lifecycle-management/
+md_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/publish-apis/lifecycle-management.md
 tags:
   - cloud
   - api-gateway
   - self-hosted
   - lifecycle
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -38,7 +38,7 @@ To change the lifecycle state of an API via the API Platform Console, follow the
 !!! tip
      You must have publishing privileges to manage the lifecycle states of a component.
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. Select the project and the API that you want to change lifecycle.
 3. In the left navigation menu, click **Manage**, and then click **Lifecycle**.
 4. In the **Lifecycle Management** pane, you will see the lifecycle state transition diagram indicating the current lifecycle state of the component. Just above the lifecycle state transition diagram, The possible lifecycle states you can apply to the component are displayed just above the lifecycle state transition diagram. Click on a required lifecycle state to apply it to the component. For example, if a component is in the **Created** state, you can click either **Pre-release** or **Publish**.

@@ -1,13 +1,13 @@
 ---
 title: "Browse the MCP Hub"
 description: "Explore MCP servers registered in your organization's MCP Hub and view their tools, resources, and prompts."
-canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/browse-mcp-hub/
-md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/browse-mcp-hub.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/browse-mcp-hub/
+md_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/browse-mcp-hub.md
 tags:
   - cloud
   - ai-workspace
   - mcp-registry
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -22,7 +22,7 @@ The MCP Hub is the visual catalog for your organization's MCP registry. Use it t
 
 ## Step 1: Open the MCP Hub
 
-1. Navigate to the [MCP Hub](https://devportal.bijira.dev).
+1. Navigate to the [MCP Hub](https://devportal.xclouddomainx).
 2. In the left navigation, select **MCP Servers**.
 
 ![MCP Hub Developer Portal page with a banner promoting MCP-powered tools and an Everything MCP server card showing version 1.0 and MCP tag](../../assets/img/ai-gateway/ai-workspace/mcp-proxies/mcphub.png)

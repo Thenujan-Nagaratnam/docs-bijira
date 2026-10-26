@@ -1,13 +1,13 @@
 ---
 title: "MCP servers in the API Portal & MCP Hub"
 description: "What an MCP server is in the API Portal & MCP Hub, the two routes servers take into the catalog, and how they differ from APIs."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/next/mcp-servers/overview/
-md_url: https://wso2.com/api-platform/docs/api-portal/next/mcp-servers/overview.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/next/mcp-servers/overview/
+md_url: https://xdocshostx/xdocspathx/api-portal/next/mcp-servers/overview.md
 tags:
   - cloud
   - api-portal
   - mcp
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-31
 content_type: "concept"
 ---

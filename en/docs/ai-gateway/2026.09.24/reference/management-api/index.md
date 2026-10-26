@@ -1,19 +1,19 @@
 ---
 title: "AI Gateway Controller Management API"
 description: "Overview of the AI Gateway Controller REST API for managing LLM providers, LLM proxies, MCP proxies, certificates, and secrets."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/reference/management-api/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/reference/management-api.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/reference/management-api/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/reference/management-api.md
 tags:
   - ai-gateway
   - management-api
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-11
 content_type: "overview"
 ---
 
 # Gateway Controller Management API v1.0.0
 
-REST API for managing API configurations in the WSO2 API Platform Gateway.
+REST API for managing API configurations in the XPLATFORMGATEWAYX.
 
 Base URLs:
 * <a href="http://localhost:9090/api/management/v1">http://localhost:9090/api/management/v1</a>

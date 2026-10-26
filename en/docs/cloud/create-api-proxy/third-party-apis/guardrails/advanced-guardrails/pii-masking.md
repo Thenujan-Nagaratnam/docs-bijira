@@ -1,14 +1,14 @@
 ---
 title: "Advanced PII Masking for AI APIs"
-description: "Configure PII masking on AI API proxies in WSO2 API Platform using a Guardrails AI fine-tuned model to detect and mask sensitive data."
-canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/advanced-guardrails/pii-masking/
-md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/advanced-guardrails/pii-masking.md
+description: "Configure PII masking on AI API proxies in XAPIPLATFORMX using a Guardrails AI fine-tuned model to detect and mask sensitive data."
+canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/advanced-guardrails/pii-masking/
+md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/advanced-guardrails/pii-masking.md
 tags:
   - cloud
   - ai-gateway
   - guardrails
   - pii
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---

@@ -1,13 +1,13 @@
 ---
 title: "Submit workflow approval requests"
 description: "Request approval to promote an API proxy or configure a custom URL when a workflow approval is required."
-canonical_url: https://wso2.com/api-platform/docs/cloud/workflows/submit-workflow-requests/
-md_url: https://wso2.com/api-platform/docs/cloud/workflows/submit-workflow-requests.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/workflows/submit-workflow-requests/
+md_url: https://xdocshostx/xdocspathx/cloud/workflows/submit-workflow-requests.md
 tags:
   - cloud
   - workflows
   - approvals
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -32,7 +32,7 @@ The approach to request approval can vary depending on the workflow. Click the r
 
     To request approval to promote an api proxy from the development environment to production, follow these steps:
 
-    1. Sign in to the [API Platform Console](https://console.Bijira.dev/).
+    1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
     2. In the **api proxy Listing** pane, click on the api proxy you want to deploy. This takes you to the **Overview** page of the api proxy.
     3. In the left navigation menu, click **Deploy**.
     4. Go to the **Development** card and click **Request to Promote**.
@@ -65,7 +65,7 @@ The approach to request approval can vary depending on the workflow. Click the r
 
     To request approval to configure a custom URL for an api proxy, follow these steps:
 
-    1. Sign in to the [API Platform Console](https://console.Bijira.dev/).
+    1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
     2. In the **api proxy Listing** pane, click on the api proxy you want to configure. This takes you to the **Overview** page of the api proxy.
     3. In the left navigation, click the **Admin** drop-down and then click **Settings**.
     4. Click the **URL Settings** tab. This displays the active deployments of the component across different environments and indicates whether a custom URL is configured.

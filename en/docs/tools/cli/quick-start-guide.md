@@ -1,13 +1,13 @@
 ---
 title: "API Platform CLI quick start guide"
 description: "Install the ap CLI binary, set gateway credentials, and run your first commands from the API Platform Controller."
-canonical_url: https://wso2.com/api-platform/docs/tools/cli/quick-start-guide/
-md_url: https://wso2.com/api-platform/docs/tools/cli/quick-start-guide.md
+canonical_url: https://xdocshostx/xdocspathx/tools/cli/quick-start-guide/
+md_url: https://xdocshostx/xdocspathx/tools/cli/quick-start-guide.md
 tags:
   - tools
   - cli
   - quickstart
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "quickstart"
 ---
@@ -27,7 +27,7 @@ This short guide explains how to use a prebuilt `ap` binary so you can run the C
 
     Place `ap.exe` in a folder that's included in your `%PATH%` (for example `%USERPROFILE%\bin`) or add its folder to your PATH.
 
-- Gateway credentials: export `WSO2AP_GW_USERNAME` and `WSO2AP_GW_PASSWORD` before running controller commands.
+- Gateway credentials: export `XENVPREFIXXAP_GW_USERNAME` and `XENVPREFIXXAP_GW_PASSWORD` before running controller commands.
 
 - Policy Hub: if your environment overrides the default policy source, set the appropriate Policy Hub environment variable (for example `POLICY_HUB_URL`) to point to your policy hub.
 

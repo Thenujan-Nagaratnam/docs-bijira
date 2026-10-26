@@ -1,14 +1,14 @@
 ---
 title: "MistralAI"
 description: "Connect the AI Gateway to the Mistral AI API: the values Mistral AI supplies, what the mistralai template extracts, and OpenAI-format compatibility."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/mistralai/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/mistralai.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/mistralai/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/mistralai.md
 tags:
   - ai-gateway
   - llm-provider
   - mistralai
   - llm
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-18
 content_type: "how-to"
 ---
@@ -40,14 +40,14 @@ The template ID is `mistralai`, one word. A provider that names `mistral` instea
 The template extracts the following:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProviderTemplate
 metadata:
   name: mistralai
 spec:
   displayName: MistralAI
-  groupId: wso2-mistralai
-  managedBy: wso2
+  groupId: xtemplategroupprefixx-mistralai
+  managedBy: xtemplateownerx
   version: v1.0
   promptTokens:
     location: payload
@@ -76,7 +76,7 @@ The gateway reads the token counts and the model name from the request and respo
 Deploy the provider through the management API, following the procedure in [Create and configure an LLM provider](../create-and-configure-an-llm-provider.md). A Mistral AI provider takes this shape:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: mistralai-provider
@@ -111,7 +111,7 @@ The `context` value sets the URL prefix the provider answers on, so this provide
 
 Mistral AI exposes an OpenAI-compatible API, and a transformer is not required when the selected provider already speaks the OpenAI format. An LLM proxy can route OpenAI-format requests to this provider directly.
 
-To normalize those requests and responses anyway, apply the [`openai-to-mistral-transformer`](https://wso2.com/api-platform/policy-hub/policies/openai-to-mistral-transformer) policy. Its `model` parameter is required, and it replaces the model named in the request body.
+To normalize those requests and responses anyway, apply the [`openai-to-mistral-transformer`](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-mistral-transformer) policy. Its `model` parameter is required, and it replaces the model named in the request body.
 
 For the request, response and streaming behavior the transformer covers, including the fields it removes, see the Mistral entry in the [provider capability matrix](../../../routing/multi-provider-routing.md#provider-capability-matrix).
 

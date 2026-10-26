@@ -1,13 +1,13 @@
 ---
 title: "Publish MCP proxies to the MCP Hub"
 description: "Publish a deployed MCP proxy from AI Workspace to make it discoverable through the MCP Hub and MCP Registry API."
-canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/publish-mcp-proxies/
-md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/publish-mcp-proxies.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/publish-mcp-proxies/
+md_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/publish-mcp-proxies.md
 tags:
   - cloud
   - ai-workspace
   - mcp-registry
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---

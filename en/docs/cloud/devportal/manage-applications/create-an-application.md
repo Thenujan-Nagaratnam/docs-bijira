@@ -1,13 +1,13 @@
 ---
 title: "Create an application"
 description: "Create an application in the Developer Portal to subscribe to APIs and generate access credentials."
-canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/manage-applications/create-an-application/
-md_url: https://wso2.com/api-platform/docs/cloud/devportal/manage-applications/create-an-application.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/manage-applications/create-an-application/
+md_url: https://xdocshostx/xdocspathx/cloud/devportal/manage-applications/create-an-application.md
 tags:
   - cloud
   - devportal
   - applications
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -19,7 +19,7 @@ An application is a logical representation of a physical application such as a m
 ## Prerequisites
 
 - If you're signing in to the Developer portal for the first time, go to API Platform and create an organization:
-    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `TestingOrg`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -31,7 +31,7 @@ This creates the organization and opens the **Project Home** page of the default
 1. Replace `<organization name>` in the following URL with your actual organization name to access your Developer Portal.
 
     ```url
-    https://devportal.bijira.dev/<organization name>/views/default
+    https://devportal.xclouddomainx/<organization name>/views/default
     ```
 
 2. Sign in to Developer Portal using your preferred method.

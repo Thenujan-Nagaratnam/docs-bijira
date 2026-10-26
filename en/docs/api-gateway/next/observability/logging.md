@@ -1,13 +1,13 @@
 ---
 title: "Configure Centralized Logging"
 description: "Set up centralized log collection for API Platform Gateway using Fluent Bit, OpenSearch, and OpenSearch Dashboards."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/next/observability/logging/
-md_url: https://wso2.com/api-platform/docs/api-gateway/next/observability/logging.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/next/observability/logging/
+md_url: https://xdocshostx/xdocspathx/api-gateway/next/observability/logging.md
 tags:
   - api-gateway
   - observability
   - logging
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-17
 content_type: "how-to"
 ---

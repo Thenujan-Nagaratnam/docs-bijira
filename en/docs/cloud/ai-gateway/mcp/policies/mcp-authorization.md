@@ -1,14 +1,14 @@
 ---
 title: "MCP authorization"
 description: "Define fine-grained authorization rules for MCP tools, resources, prompts, and methods based on JWT claims and scopes."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-authorization/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/policies/mcp-authorization.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/mcp/policies/mcp-authorization/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/mcp/policies/mcp-authorization.md
 tags:
   - cloud
   - ai-gateway
   - mcp
   - policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -66,7 +66,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 
 ```yaml
 - name: mcp-authz
-  gomodule: github.com/wso2/gateway-controllers/policies/mcp-authz@v0
+  gomodule: github.com/xgithuborgx/gateway-controllers/policies/mcp-authz@v0
 ```
 
 ## Reference Scenarios
@@ -76,7 +76,7 @@ Inside the `gateway/build.yaml`, ensure the policy module is added under `polici
 Restrict access to specific tools based on scopes:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -131,7 +131,7 @@ spec:
 Control resource access based on user claims:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -183,7 +183,7 @@ spec:
 Restrict prompt access based on user roles:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -221,7 +221,7 @@ spec:
 Apply authorization at the JSON-RPC method level:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -262,7 +262,7 @@ spec:
 Combine different resource types with varying access requirements:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -345,4 +345,4 @@ When authorization fails, the policy returns:
 ## Related Policies
 
 - [MCP Authentication Policy](./mcp-authentication.md) - Validates JWT tokens and is a prerequisite for MCP Authorization
-- [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) - Base JWT token validation mechanism
+- [JWT Authentication Policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/jwt-auth) - Base JWT token validation mechanism

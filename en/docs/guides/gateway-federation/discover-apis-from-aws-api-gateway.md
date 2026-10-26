@@ -1,14 +1,14 @@
 ---
 title: "Discover APIs from AWS API Gateway"
-description: "Register AWS API Gateway with WSO2 API Platform, discover the REST APIs deployed on it, and bring them under centralized governance through a single Control Plane."
-canonical_url: https://wso2.com/api-platform/docs/guides/gateway-federation/discover-apis-from-aws-api-gateway/
-md_url: https://wso2.com/api-platform/docs/guides/gateway-federation/discover-apis-from-aws-api-gateway.md
+description: "Register AWS API Gateway with XAPIPLATFORMX, discover the REST APIs deployed on it, and bring them under centralized governance through a single Control Plane."
+canonical_url: https://xdocshostx/xdocspathx/guides/gateway-federation/discover-apis-from-aws-api-gateway/
+md_url: https://xdocshostx/xdocspathx/guides/gateway-federation/discover-apis-from-aws-api-gateway.md
 tags:
   - guides
   - gateway-federation
   - aws
   - api-gateway
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-24
 content_type: "tutorial"
 ---
@@ -17,7 +17,7 @@ content_type: "tutorial"
 
 ## Overview
 
-This guide shows you how to discover APIs from AWS API Gateway and bring them under centralized governance. Connecting a third party gateway to WSO2 API Platform lets API Platform discover its APIs, apply policies, and surface them in the Developer Portal, all without rerouting any traffic. By the end, you'll have AWS API Gateway connected as a third party gateway, with its APIs discovered and visible in your project.
+This guide shows you how to discover APIs from AWS API Gateway and bring them under centralized governance. Connecting a third party gateway to XAPIPLATFORMX lets API Platform discover its APIs, apply policies, and surface them in the Developer Portal, all without rerouting any traffic. By the end, you'll have AWS API Gateway connected as a third party gateway, with its APIs discovered and visible in your project.
 
 ---
 
@@ -25,7 +25,7 @@ This guide shows you how to discover APIs from AWS API Gateway and bring them un
 
 - An active AWS account with access to AWS API Gateway.
 - Permissions in AWS to create IAM users and generate access keys.
-- Admin access to your WSO2 API Platform organization.
+- Admin access to your XAPIPLATFORMX organization.
 
 ---
 
@@ -42,7 +42,7 @@ This guide shows you how to discover APIs from AWS API Gateway and bring them un
           |
           v
 +---------------------+                                  +------------------------------------------+
-|  AWS API Gateway    |  connects to AWS API Gateway     |  WSO2 API Platform                       |
+|  AWS API Gateway    |  connects to AWS API Gateway     |  XAPIPLATFORMX                       |
 |                     |  using IAM credentials           |                                          |
 |  REST APIs          |<---------------------------------|  3. Add Third Party Gateway              |
 |  Stage: prod        |                                  |     name · region · stage · credentials  |
@@ -66,7 +66,7 @@ This guide shows you how to discover APIs from AWS API Gateway and bring them un
           +-----------------------------------[Developer]--------------------+
 ```
 
-WSO2 API Platform discovers REST APIs from AWS API Gateway using the IAM credentials you configure. No traffic is rerouted. API calls from developers continue to go directly to AWS API Gateway. API Platform holds a reference to each discovered API and makes it visible in the API Platform console.
+XAPIPLATFORMX discovers REST APIs from AWS API Gateway using the IAM credentials you configure. No traffic is rerouted. API calls from developers continue to go directly to AWS API Gateway. API Platform holds a reference to each discovered API and makes it visible in the API Platform console.
 
 ---
 
@@ -280,7 +280,7 @@ Publishing the API makes it discoverable in the Developer Portal so developers c
 ## What you learned
 
 - Created and deployed a REST API in AWS API Gateway and generated scoped IAM credentials for API Platform to use.
-- Registered AWS API Gateway as an external gateway in WSO2 API Platform using IAM credentials.
+- Registered AWS API Gateway as an external gateway in XAPIPLATFORMX using IAM credentials.
 - Ran API discovery to pull REST API metadata from the registered gateway into API Platform.
 - Brought REST APIs under governance in API Platform and checked policy compliance using the Compliance dashboard.
 - Published the API to the Developer Portal so developers can discover and subscribe to it, while all invocations continue to go directly to AWS API Gateway.

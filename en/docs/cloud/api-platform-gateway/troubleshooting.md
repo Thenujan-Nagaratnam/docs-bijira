@@ -17,22 +17,22 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Test connectivity to API Platform endpoints
-   curl -v https://gateway.bijira.dev/health
-   curl -v https://config.bijira.dev/health
+   curl -v https://gateway.xclouddomainx/health
+   curl -v https://config.xclouddomainx/health
    ```
 
 2. **Check firewall rules:**
 
    Ensure outbound HTTPS (443) is allowed to:
-   - `gateway.bijira.dev`
-   - `config.bijira.dev`
-   - `telemetry.bijira.dev`
+   - `gateway.xclouddomainx`
+   - `config.xclouddomainx`
+   - `telemetry.xclouddomainx`
 
 3. **Verify DNS resolution:**
 
    ```bash
-   nslookup gateway.bijira.dev
-   dig gateway.bijira.dev
+   nslookup gateway.xclouddomainx
+   dig gateway.xclouddomainx
    ```
 
 4. **Check proxy settings:**
@@ -59,7 +59,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Monitor connectivity over time
-   ping -c 100 gateway.bijira.dev
+   ping -c 100 gateway.xclouddomainx
    ```
 
 2. **Review keep-alive settings:**
@@ -100,17 +100,17 @@ This guide covers common issues you may encounter when deploying and operating t
 
    **Kubernetes:**
    ```bash
-   kubectl get secret bijira-gateway-token -n bijira-gateway -o jsonpath='{.data.token}' | base64 -d
+   kubectl get secret xcloudslugx-gateway-token -n xcloudslugx-gateway -o jsonpath='{.data.token}' | base64 -d
    ```
 
    **Docker:**
    ```bash
-   docker inspect bijira-gateway | grep BIJIRA_GATEWAY_TOKEN
+   docker inspect xcloudslugx-gateway | grep XCLOUDENVX_GATEWAY_TOKEN
    ```
 
    **VM:**
    ```bash
-   cat /etc/bijira/env | grep BIJIRA_GATEWAY_TOKEN
+   cat /etc/xcloudslugx/env | grep XCLOUDENVX_GATEWAY_TOKEN
    ```
 
 ### Token Revoked
@@ -142,18 +142,18 @@ This guide covers common issues you may encounter when deploying and operating t
 
    **Kubernetes:**
    ```bash
-   kubectl logs -n bijira-gateway -l app=bijira-gateway --previous
-   kubectl describe pod -n bijira-gateway -l app=bijira-gateway
+   kubectl logs -n xcloudslugx-gateway -l app=xcloudslugx-gateway --previous
+   kubectl describe pod -n xcloudslugx-gateway -l app=xcloudslugx-gateway
    ```
 
    **Docker:**
    ```bash
-   docker logs bijira-gateway
+   docker logs xcloudslugx-gateway
    ```
 
    **VM:**
    ```bash
-   journalctl -u bijira-gateway -n 100 --no-pager
+   journalctl -u xcloudslugx-gateway -n 100 --no-pager
    ```
 
 2. **Verify resource availability:**
@@ -172,7 +172,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Validate configuration
-   bijira-gateway --config /etc/bijira/gateway.yaml --validate
+   xcloudslugx-gateway --config /etc/xcloudslugx/gateway.yaml --validate
    ```
 
 ### Port Already in Use
@@ -247,13 +247,13 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Kubernetes
-   kubectl rollout restart deployment/bijira-gateway -n bijira-gateway
+   kubectl rollout restart deployment/xcloudslugx-gateway -n xcloudslugx-gateway
    
    # Docker
-   docker restart bijira-gateway
+   docker restart xcloudslugx-gateway
    
    # VM
-   sudo systemctl reload bijira-gateway
+   sudo systemctl reload xcloudslugx-gateway
    ```
 
 ## Policy Issues
@@ -281,7 +281,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Filter for policy-related logs
-   grep -i "policy" /var/log/bijira/gateway.log
+   grep -i "policy" /var/log/xcloudslugx/gateway.log
    ```
 
 ### Policy Conflicts
@@ -316,20 +316,20 @@ This guide covers common issues you may encounter when deploying and operating t
 
    ```bash
    # Kubernetes
-   kubectl top pods -n bijira-gateway
+   kubectl top pods -n xcloudslugx-gateway
    
    # Docker
-   docker stats bijira-gateway
+   docker stats xcloudslugx-gateway
    
    # VM
-   top -p $(pgrep bijira-gateway)
+   top -p $(pgrep xcloudslugx-gateway)
    ```
 
 2. **Scale horizontally:**
 
    ```bash
    # Kubernetes
-   kubectl scale deployment/bijira-gateway --replicas=5 -n bijira-gateway
+   kubectl scale deployment/xcloudslugx-gateway --replicas=5 -n xcloudslugx-gateway
    ```
 
 3. **Review logging level:**
@@ -358,7 +358,7 @@ This guide covers common issues you may encounter when deploying and operating t
 
    Monitor memory over time:
    ```bash
-   watch -n 5 "kubectl top pod -n bijira-gateway"
+   watch -n 5 "kubectl top pod -n xcloudslugx-gateway"
    ```
 
 2. **Adjust resource limits:**
@@ -452,17 +452,17 @@ When opening a support request, collect:
 
 1. **Gateway version:**
    ```bash
-   bijira-gateway --version
+   xcloudslugx-gateway --version
    ```
 
 2. **Configuration (redact sensitive values):**
    ```bash
-   cat /etc/bijira/gateway.yaml
+   cat /etc/xcloudslugx/gateway.yaml
    ```
 
 3. **Recent logs:**
    ```bash
-   journalctl -u bijira-gateway --since "1 hour ago"
+   journalctl -u xcloudslugx-gateway --since "1 hour ago"
    ```
 
 4. **Health check output:**

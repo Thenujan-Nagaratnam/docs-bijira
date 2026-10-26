@@ -1,13 +1,13 @@
 ---
 title: "AI Workspace overview"
 description: "Centrally manage AI Gateway runtimes, LLM providers, App LLM proxies, MCP proxies, and AI policies from the AI Workspace control plane."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/overview/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/overview.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/overview/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/overview.md
 tags:
   - cloud
   - ai-workspace
   - overview
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "overview"
 ---

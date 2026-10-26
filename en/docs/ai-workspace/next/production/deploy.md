@@ -1,14 +1,14 @@
 ---
 title: "Deploy AI Workspace to production"
 description: "A step-by-step production deployment of AI Workspace, from collecting hostnames and credentials through to a verified sign-in, scaled replicas, and a connected AI gateway."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/production/deploy/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/production/deploy.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/production/deploy/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/production/deploy.md
 tags:
   - ai-workspace
   - production
   - deployment
   - how-to
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-06
 content_type: "how-to"
 ---
@@ -278,14 +278,14 @@ Three values in this step are worth getting right the first time, because each f
     ```yaml
     services:
       platform-api:
-        image: ghcr.io/wso2/api-platform/platform-api:<version>
+        image: ghcr.io/xgithuborgx/api-platform/platform-api:<version>
         volumes:
           - ./resources/keys:/etc/platform-api/keys:ro
           - ./secrets/postgres_password:/secrets/platform-api/postgres_password:ro
           - ./resources/tls/ca.pem:/etc/platform-api/tls/ca.pem:ro
 
       ai-workspace:
-        image: ghcr.io/wso2/api-platform/ai-workspace:<version>
+        image: ghcr.io/xgithuborgx/api-platform/ai-workspace:<version>
         volumes:
           - ./secrets/oidc_client_secret:/secrets/ai-workspace/oidc_client_secret:ro
     ```

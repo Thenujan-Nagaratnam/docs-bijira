@@ -1,13 +1,13 @@
 ---
 title: "View API documentation in the Developer Portal"
 description: "View endpoint, schema, security, and base URL details for a published API's documentation in the Developer Portal."
-canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/discover-apis/api-documentations/
-md_url: https://wso2.com/api-platform/docs/cloud/devportal/discover-apis/api-documentations.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/discover-apis/api-documentations/
+md_url: https://xdocshostx/xdocspathx/cloud/devportal/discover-apis/api-documentations.md
 tags:
   - cloud
   - devportal
   - discover-apis
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---

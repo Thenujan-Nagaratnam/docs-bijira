@@ -1,14 +1,14 @@
 ---
 title: "Agent governance"
 description: "What AI agents and the A2A protocol are, how an A2A exchange works, and what the AI Gateway adds when it fronts an agent with an Agent artifact."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/agent-governance/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/agent-governance.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/agent-governance/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/agent-governance.md
 tags:
   - ai-gateway
   - a2a
   - agents
   - agent-card
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-23
 content_type: "concept"
 ---
@@ -73,7 +73,7 @@ An agent that serves A2A directly gives you no place to put access control, and 
 You deploy an agent as a resource of `kind: Agent`, alongside the `LlmProvider`, `LlmProxy`, and `Mcp` artifacts described in [Gateway artifacts](../gateway-artifacts/index.md). One `Agent` fronts one upstream agent:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: Agent
 metadata:
   name: trip-planner-v1.0

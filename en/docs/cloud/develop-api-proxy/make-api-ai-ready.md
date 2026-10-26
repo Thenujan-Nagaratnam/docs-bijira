@@ -1,13 +1,13 @@
 ---
 title: "Make an API AI-Ready"
 description: "Write clear descriptions, structure OpenAPI specs, add documents, and control agent visibility so AI agents can discover and use your API."
-canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/make-api-ai-ready/
-md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/make-api-ai-ready.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/make-api-ai-ready/
+md_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/make-api-ai-ready.md
 tags:
   - cloud
   - api-proxy
   - ai-discoverability
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -64,7 +64,7 @@ All published APIs are agent visible by default. If an API should not be surface
 
 **To hide an API from agents:**
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. Select the project and the API.
 3. Navigate to **Manage** and then **Lifecycle**.
 4. Click **Publish** to open the publish dialog.

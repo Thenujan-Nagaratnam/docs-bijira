@@ -1,13 +1,13 @@
 ---
 title: "AI Workspace overview"
 description: "Centrally manage AI gateways, LLM providers, proxies, policies, and secrets from a single control plane."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/overview/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/overview.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/overview/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/overview.md
 tags:
   - cloud
   - ai-workspace
   - overview
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-01
 content_type: "overview"
 ---

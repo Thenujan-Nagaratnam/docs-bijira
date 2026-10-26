@@ -1,12 +1,12 @@
 ---
 title: "Platform API: Schemas"
 description: "JSON schema definitions for Platform API request and response objects."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/schemas/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/schemas.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/schemas/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/schemas.md
 tags:
   - ai-workspace
   - platform-api
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -78,7 +78,7 @@ content_type: "reference"
   "expiresAt": "2019-08-24T14:15:22Z",
   "issuer": "api-platform-devportal",
   "allowedTargets": "string",
-  "artifactId": "wso2-openai-provider",
+  "artifactId": "xsampleslugx-openai-provider",
   "artifactType": "RestApi"
 }
 
@@ -129,7 +129,7 @@ and
       "expiresAt": "2019-08-24T14:15:22Z",
       "issuer": "api-platform-devportal",
       "allowedTargets": "string",
-      "artifactId": "wso2-openai-provider",
+      "artifactId": "xsampleslugx-openai-provider",
       "artifactType": "RestApi"
     }
   ],
@@ -1418,9 +1418,9 @@ A custom policy stored in the platform's custom policy registry.
 
 ```json
 {
-  "name": "set-wso2-headers",
+  "name": "set-xsampleslugx-headers",
   "version": "v0.8.0",
-  "description": "Sets WSO2-specific headers in the request and response.",
+  "description": "Sets XSAMPLEBRANDX-specific headers in the request and response.",
   "isCustomPolicy": true,
   "policyDefinition": {}
 }
@@ -1450,9 +1450,9 @@ A policy installed on a gateway controller.
 {
   "policies": [
     {
-      "name": "set-wso2-headers",
+      "name": "set-xsampleslugx-headers",
       "version": "v0.8.0",
-      "description": "Sets WSO2-specific headers in the request and response.",
+      "description": "Sets XSAMPLEBRANDX-specific headers in the request and response.",
       "isCustomPolicy": true,
       "policyDefinition": {}
     }
@@ -3055,7 +3055,7 @@ Authentication configuration for upstream endpoints
   "id": "openai",
   "groupId": "openai",
   "displayName": "OpenAI",
-  "managedBy": "wso2",
+  "managedBy": "xtemplateownerx",
   "description": "Default OpenAI template",
   "createdBy": "john.doe",
   "updatedBy": "john.doe",
@@ -3142,7 +3142,7 @@ Authentication configuration for upstream endpoints
 |id|string|false|none|Unique handle for the template|
 |groupId|string|false|read-only|Stable identifier shared by every version of a template family.|
 |displayName|string|true|none|Human-readable LLM Template name|
-|managedBy|string|false|none|Identifies who manages the template. Built-in templates use 'wso2';<br>custom templates default to 'organization' and may be set to any value.|
+|managedBy|string|false|none|Identifies who manages the template. Built-in templates use 'xtemplateownerx';<br>custom templates default to 'organization' and may be set to any value.|
 |description|string|false|none|Description of the LLM provider template|
 |createdBy|string|false|read-only|User identifier of the user who created this resource|
 |updatedBy|string|false|read-only|User identifier of the user who last updated this resource|
@@ -3275,7 +3275,7 @@ Authentication configuration for upstream endpoints
   "id": "openai",
   "groupId": "openai",
   "displayName": "OpenAI",
-  "managedBy": "wso2",
+  "managedBy": "xtemplateownerx",
   "description": "Default OpenAI template",
   "createdBy": "john.doe",
   "version": "v1.0",
@@ -3296,7 +3296,7 @@ Authentication configuration for upstream endpoints
 |id|string|false|none|Unique handle for this specific template version.|
 |groupId|string|false|read-only|Stable identifier shared by every version of a template family<br>(defaults to the first version's handle). Read-only.|
 |displayName|string|true|none|Human-readable name for the LLM provider template|
-|managedBy|string|false|none|Who manages the template ('wso2' for built-in, otherwise custom-defined).|
+|managedBy|string|false|none|Who manages the template ('xtemplateownerx' for built-in, otherwise custom-defined).|
 |description|string|false|none|none|
 |createdBy|string|false|read-only|User identifier of the user who created this resource|
 |version|string|false|none|Content version, matching the v<major>.<minor> pattern (e.g. v1.0, v2.0).|
@@ -3322,7 +3322,7 @@ Authentication configuration for upstream endpoints
       "id": "openai",
       "groupId": "openai",
       "displayName": "OpenAI",
-      "managedBy": "wso2",
+      "managedBy": "xtemplateownerx",
       "description": "Default OpenAI template",
       "createdBy": "john.doe",
       "version": "v1.0",
@@ -4051,8 +4051,8 @@ Limit definition with independent request/token/cost dimensions. If all dimensio
 
 ```json
 {
-  "id": "wso2-openai-provider",
-  "displayName": "WSO2 OpenAI Provider",
+  "id": "xsampleslugx-openai-provider",
+  "displayName": "XSAMPLEBRANDX OpenAI Provider",
   "description": "Primary OpenAI provider",
   "createdBy": "john.doe",
   "readOnly": false,
@@ -4323,8 +4323,8 @@ Limit definition with independent request/token/cost dimensions. If all dimensio
 
 ```json
 {
-  "id": "wso2-openai-provider",
-  "displayName": "WSO2 OpenAI Provider",
+  "id": "xsampleslugx-openai-provider",
+  "displayName": "XSAMPLEBRANDX OpenAI Provider",
   "description": "Primary OpenAI provider",
   "createdBy": "john.doe",
   "readOnly": false,
@@ -4426,8 +4426,8 @@ Limit definition with independent request/token/cost dimensions. If all dimensio
   "count": 2,
   "list": [
     {
-      "id": "wso2-openai-provider",
-      "displayName": "WSO2 OpenAI Provider",
+      "id": "xsampleslugx-openai-provider",
+      "displayName": "XSAMPLEBRANDX OpenAI Provider",
       "description": "Primary OpenAI provider",
       "createdBy": "john.doe",
       "readOnly": false,
@@ -4464,8 +4464,8 @@ Limit definition with independent request/token/cost dimensions. If all dimensio
 
 ```json
 {
-  "id": "wso2-con-assistant",
-  "displayName": "WSO2 Con Assistant",
+  "id": "xsampleslugx-con-assistant",
+  "displayName": "XSAMPLEBRANDX Con Assistant",
   "description": "Customer support assistant",
   "createdBy": "john.doe",
   "readOnly": false,
@@ -4475,7 +4475,7 @@ Limit definition with independent request/token/cost dimensions. If all dimensio
   "context": "/openai",
   "vhost": "api.openai.com",
   "provider": {
-    "id": "wso2-openai-provider",
+    "id": "xsampleslugx-openai-provider",
     "auth": {
       "type": "api-key",
       "header": "X-API-Key",
@@ -4593,14 +4593,14 @@ Limit definition with independent request/token/cost dimensions. If all dimensio
 
 ```json
 {
-  "id": "wso2-con-assistant",
-  "displayName": "WSO2 Con Assistant",
+  "id": "xsampleslugx-con-assistant",
+  "displayName": "XSAMPLEBRANDX Con Assistant",
   "description": "Customer support assistant",
   "createdBy": "john.doe",
-  "context": "/wso2-con-assistant",
+  "context": "/xsampleslugx-con-assistant",
   "version": "v1.0",
   "projectId": "default-project",
-  "provider": "wso2-openai-provider",
+  "provider": "xsampleslugx-openai-provider",
   "status": "deployed",
   "createdAt": "2025-11-25T10:30:00Z",
   "updatedAt": "2025-11-25T10:30:00Z",
@@ -4646,14 +4646,14 @@ Limit definition with independent request/token/cost dimensions. If all dimensio
   "count": 2,
   "list": [
     {
-      "id": "wso2-con-assistant",
-      "displayName": "WSO2 Con Assistant",
+      "id": "xsampleslugx-con-assistant",
+      "displayName": "XSAMPLEBRANDX Con Assistant",
       "description": "Customer support assistant",
       "createdBy": "john.doe",
-      "context": "/wso2-con-assistant",
+      "context": "/xsampleslugx-con-assistant",
       "version": "v1.0",
       "projectId": "default-project",
-      "provider": "wso2-openai-provider",
+      "provider": "xsampleslugx-openai-provider",
       "status": "deployed",
       "createdAt": "2025-11-25T10:30:00Z",
       "updatedAt": "2025-11-25T10:30:00Z",
@@ -4686,7 +4686,7 @@ Limit definition with independent request/token/cost dimensions. If all dimensio
 
 ```json
 {
-  "id": "wso2-openai-provider",
+  "id": "xsampleslugx-openai-provider",
   "auth": {
     "type": "api-key",
     "header": "X-API-Key",
@@ -5185,9 +5185,9 @@ not
 
 ```json
 {
-  "id": "wso2-openai-key",
-  "displayName": "WSO2 OpenAI API Key",
-  "description": "Primary API key for WSO2 OpenAI integration",
+  "id": "xsampleslugx-openai-key",
+  "displayName": "XSAMPLEBRANDX OpenAI API Key",
+  "description": "Primary API key for XSAMPLEBRANDX OpenAI integration",
   "value": "sk-xxx",
   "type": "GENERIC"
 }
@@ -5220,7 +5220,7 @@ not
 
 ```json
 {
-  "id": "wso2-openai-key",
+  "id": "xsampleslugx-openai-key",
   "displayName": "string",
   "description": "string",
   "value": "string"
@@ -5246,8 +5246,8 @@ not
 
 ```json
 {
-  "id": "wso2-openai-key",
-  "displayName": "WSO2 OpenAI API Key",
+  "id": "xsampleslugx-openai-key",
+  "displayName": "XSAMPLEBRANDX OpenAI API Key",
   "createdBy": "john.doe",
   "updatedBy": "john.doe",
   "createdAt": "2019-08-24T14:15:22Z",
@@ -5278,8 +5278,8 @@ Returned on create (201) and rotate (200). The plaintext value is never included
 
 ```json
 {
-  "id": "wso2-openai-key",
-  "displayName": "WSO2 OpenAI API Key",
+  "id": "xsampleslugx-openai-key",
+  "displayName": "XSAMPLEBRANDX OpenAI API Key",
   "description": "string",
   "type": "GENERIC",
   "provider": "IN_BUILT",
@@ -5331,8 +5331,8 @@ Secret metadata — never includes the plaintext value.
   "count": 0,
   "list": [
     {
-      "id": "wso2-openai-key",
-      "displayName": "WSO2 OpenAI API Key",
+      "id": "xsampleslugx-openai-key",
+      "displayName": "XSAMPLEBRANDX OpenAI API Key",
       "description": "string",
       "type": "GENERIC",
       "provider": "IN_BUILT",

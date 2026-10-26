@@ -1,13 +1,13 @@
 ---
 title: "Search APIs in the Developer Portal"
 description: "Search published APIs in the Developer Portal by name, type, version, or description."
-canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/discover-apis/api-search/
-md_url: https://wso2.com/api-platform/docs/cloud/devportal/discover-apis/api-search.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/discover-apis/api-search/
+md_url: https://xdocshostx/xdocspathx/cloud/devportal/discover-apis/api-search.md
 tags:
   - cloud
   - devportal
   - discover-apis
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---

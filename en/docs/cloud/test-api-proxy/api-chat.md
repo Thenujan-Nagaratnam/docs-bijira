@@ -1,13 +1,13 @@
 ---
 title: "Test APIs with API Chat"
-description: "Test REST API proxies in WSO2 API Platform using natural-language queries via API Chat, without writing JSON payloads or scripts."
-canonical_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/api-chat/
-md_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/api-chat.md
+description: "Test REST API proxies in XAPIPLATFORMX using natural-language queries via API Chat, without writing JSON payloads or scripts."
+canonical_url: https://xdocshostx/xdocspathx/cloud/test-api-proxy/api-chat/
+md_url: https://xdocshostx/xdocspathx/cloud/test-api-proxy/api-chat.md
 tags:
   - cloud
   - testing
   - api-chat
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -21,7 +21,7 @@ Testing APIs is an essential step in the API development process. API Platform s
 
 Follow the steps below to test an API with API Chat:
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. Select the project and API which you want to test.
 3. On the left navigation, click **Test** and then click **API Chat**. This opens the **API Chat** pane.
 4. You can enter your query in natural language and execute it. For example, if you have a resource like `POST /books` and `GET /books`, you can input the following query and execute it to obtain results.

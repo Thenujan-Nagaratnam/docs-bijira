@@ -1,13 +1,13 @@
 ---
 title: "Secure Gateway-to-Backend Communication with OAuth2"
-description: "Configure the Outbound OAuth2 policy so the WSO2 API Platform Gateway obtains and forwards access tokens to your backend."
-canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2/
-md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2.md
+description: "Configure the Outbound OAuth2 policy so the XPLATFORMGATEWAYX obtains and forwards access tokens to your backend."
+canonical_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2/
+md_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/authentication-and-authorization/secure-communication-between-bijira-gateway-and-backend-with-oauth2.md
 tags:
   - cloud
   - authentication
   - oauth2
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -33,7 +33,7 @@ When you need the API Platform Gateway to call your backend over OAuth2, use the
 
 To configure the OAuth2 policy, follow the steps given below:
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. In the **Proxies** pane, click on the API proxy for which you want to configure OAuth2. For instructions on how to create an API proxy component, see [Develop an API Proxy: Step 1](../../create-api-proxy/my-apis/http/import-api-contract.md).
 3. In the left navigation menu, click **Develop** and then click **Policies**.
 4. Choose the resource you want to secure, then click **Attach Mediation Policy**.

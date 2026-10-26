@@ -1,13 +1,13 @@
 ---
 title: "Model round robin in AI Workspace"
 description: "Distribute LLM requests across multiple models in round-robin order, with automatic suspension of failing models, configured in AI Workspace."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/model-round-robin/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/model-round-robin.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/other-policies/model-round-robin/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/other-policies/model-round-robin.md
 tags:
   - cloud
   - ai-workspace
   - load-balancing
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -43,4 +43,4 @@ The Model Round Robin policy distributes requests across multiple AI models usin
 ## Related
 
 - [Policies Overview](../overview.md)
-- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version
+- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version

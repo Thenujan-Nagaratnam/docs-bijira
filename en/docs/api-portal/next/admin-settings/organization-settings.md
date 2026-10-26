@@ -1,13 +1,13 @@
 ---
 title: "Configure organization settings in the API Portal & MCP Hub"
 description: "Edit the current organization's display name, business owner contact, and identity provider reference from the API Portal Settings page."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/organization-settings/
-md_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/organization-settings.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/organization-settings/
+md_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/organization-settings.md
 tags:
   - cloud
   - api-portal
   - organization
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-23
 content_type: "how-to"
 ---

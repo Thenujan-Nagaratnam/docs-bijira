@@ -1,14 +1,14 @@
 ---
 title: "Configure VPNs on the API Platform cloud data plane"
 description: "Use a Tailscale-powered forward proxy to securely connect API Platform cloud data plane projects to your private networks."
-canonical_url: https://wso2.com/api-platform/docs/cloud/administer/configure-vpns/configure-vpns/
-md_url: https://wso2.com/api-platform/docs/cloud/administer/configure-vpns/configure-vpns.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/administer/configure-vpns/configure-vpns/
+md_url: https://xdocshostx/xdocspathx/cloud/administer/configure-vpns/configure-vpns.md
 tags:
   - cloud
   - administer
   - vpn
   - tailscale
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -65,7 +65,7 @@ This section walks you through the steps to create, configure, deploy, and use t
 
 ### Step 1: Create the Tailscale proxy component
 
-1.  Sign in to the [API Platform Console](https://console.bijira.dev/).
+1.  Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2.  In the API Platform Console top navigation menu, select the **Organization**, and then the **Project**.
 3.  On the project home page, click **Admin** menu, and select the **Settings** sub menu.
 4.  Click on the VPN Configuration tab and then click the Create button

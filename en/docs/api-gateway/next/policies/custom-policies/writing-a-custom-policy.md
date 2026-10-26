@@ -1,13 +1,13 @@
 ---
 title: "Write a Custom Gateway Policy"
 description: "Write a custom policy for API Platform Gateway using the Go SDK: implement request and response hooks in the policy chain."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/next/policies/custom-policies/writing-a-custom-policy/
-md_url: https://wso2.com/api-platform/docs/api-gateway/next/policies/custom-policies/writing-a-custom-policy.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/next/policies/custom-policies/writing-a-custom-policy/
+md_url: https://xdocshostx/xdocspathx/api-gateway/next/policies/custom-policies/writing-a-custom-policy.md
 tags:
   - api-gateway
   - policies
   - custom-policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-17
 content_type: "how-to"
 ---
@@ -16,7 +16,7 @@ content_type: "how-to"
 
 This guide shows how to write a custom policy in API Platform Gateway.
 
-For full API details, see the [API Platform Gateway's Custom Policy SDK Documentation](https://pkg.go.dev/github.com/wso2/api-platform/sdk/core/policy/v1alpha2).
+For full API details, see the [API Platform Gateway's Custom Policy SDK Documentation](https://pkg.go.dev/github.com/xgithuborgx/api-platform/sdk/core/policy/v1alpha2).
 
 ## How It Works
 
@@ -71,7 +71,7 @@ package mypolicy
 import (
     "context"
 
-    policy "github.com/wso2/api-platform/sdk/core/policy/v1alpha2"
+    policy "github.com/xgithuborgx/api-platform/sdk/core/policy/v1alpha2"
 )
 
 type MyPolicy struct {

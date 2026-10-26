@@ -1,14 +1,14 @@
 ---
 title: "Quick start for API Portal and MCP Hub"
 description: "Install the API Portal and MCP Hub with Docker, then add an API and an MCP server through the admin UI and through GitOps."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/quickstart-guide/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/quickstart-guide.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/quickstart-guide/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/quickstart-guide.md
 tags:
   - cloud
   - api-portal
   - mcp
   - quickstart
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-27
 content_type: "quickstart"
 ---
@@ -45,8 +45,8 @@ Before going through this quickstart, complete the following prerequisites:
 Run this command in your terminal to download and unzip the standalone API Portal distribution:
 
 ```bash
-curl -sLO https://github.com/wso2/api-platform/releases/download/api-portal%2Fv1.0.0/wso2apip-api-portal-1.0.0.zip && \
-unzip wso2apip-api-portal-1.0.0.zip
+curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/api-portal%2Fv1.0.0/xartifactprefixx-api-portal-1.0.0.zip && \
+unzip xartifactprefixx-api-portal-1.0.0.zip
 ```
 
 ### Step 2: Run the setup script
@@ -54,7 +54,7 @@ unzip wso2apip-api-portal-1.0.0.zip
 Navigate to the API Portal directory:
 
 ```bash
-cd wso2apip-api-portal-1.0.0
+cd xartifactprefixx-api-portal-1.0.0
 ```
 
 Run this command to set up the API Portal:
@@ -113,8 +113,8 @@ Enter the API details as follows and leave every other field at its default:
 | **API type** | REST |
 | **Agent visibility** | Visible |
 | **Description** | Sample reading list API for tracking books and their reading status. Open access: no API key or subscription required. |
-| **Production URL** | `https://apis.bijira.dev/samples/reading-list-api-service/v1.0` |
-| **Sandbox URL** | `https://apis.bijira.dev/samples/reading-list-api-service/v1.0` |
+| **Production URL** | `https://apis.xclouddomainx/samples/reading-list-api-service/v1.0` |
+| **Sandbox URL** | `https://apis.xclouddomainx/samples/reading-list-api-service/v1.0` |
 | **Labels** | default |
 | **Tags** | reading-list, books |
 | **Status** | Published |
@@ -139,7 +139,7 @@ info:
 
     Open access: no API key or subscription token is required.
 servers:
-  - url: https://apis.bijira.dev/samples/reading-list-api-service/v1.0
+  - url: https://apis.xclouddomainx/samples/reading-list-api-service/v1.0
 
 components:
   schemas:
@@ -333,7 +333,7 @@ TOKEN=$(curl -sk -X POST "https://localhost:9243/api/portal/v0.9/auth/login" \
 Use the following manifest for the product catalog API:
 
 ```yaml
-apiVersion: api-portal.api-platform.wso2.com/v1
+apiVersion: api-portal.api-platform.xcrddomainx/v1
 kind: RestApi
 
 metadata:
@@ -768,7 +768,7 @@ Look for an entry in the `servers` array for the server you just added:
         "remotes": [
           {
             "type": "streamable-http",
-            "url": "https://db720294-98fd-40f4-85a1-cc6a3b65bc9a-prod.e1-us-east-azure.bijiraapis.dev/godzilla/mcp-everything-server/v1.0/mcp"
+            "url": "https://db720294-98fd-40f4-85a1-cc6a3b65bc9a-prod.e1-us-east-azure.xcloudapisdomainx/godzilla/mcp-everything-server/v1.0/mcp"
           }
         ]
       },
@@ -801,7 +801,7 @@ Reuse the bearer token that you obtained [when adding an API through the Managem
 Create `mcp.yaml` with a new `metadata.name` and `spec.version`:
 
 ```yaml
-apiVersion: api-portal.api-platform.wso2.com/v1
+apiVersion: api-portal.api-platform.xcrddomainx/v1
 kind: MCP
 
 metadata:
@@ -881,7 +881,7 @@ The `servers` array now includes both versions:
         "remotes": [
           {
             "type": "streamable-http",
-            "url": "https://db720294-98fd-40f4-85a1-cc6a3b65bc9a-prod.e1-us-east-azure.bijiraapis.dev/godzilla/mcp-everything-server/v1.0/mcp"
+            "url": "https://db720294-98fd-40f4-85a1-cc6a3b65bc9a-prod.e1-us-east-azure.xcloudapisdomainx/godzilla/mcp-everything-server/v1.0/mcp"
           }
         ]
       },
@@ -901,7 +901,7 @@ The `servers` array now includes both versions:
         "remotes": [
           {
             "type": "streamable-http",
-            "url": "https://db720294-98fd-40f4-85a1-cc6a3b65bc9a-prod.e1-us-east-azure.bijiraapis.dev/godzilla/mcp-everything-server/v1.0/mcp"
+            "url": "https://db720294-98fd-40f4-85a1-cc6a3b65bc9a-prod.e1-us-east-azure.xcloudapisdomainx/godzilla/mcp-everything-server/v1.0/mcp"
           }
         ]
       },

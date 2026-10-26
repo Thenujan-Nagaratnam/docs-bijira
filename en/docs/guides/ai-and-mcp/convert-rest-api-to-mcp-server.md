@@ -1,14 +1,14 @@
 ---
 title: "Convert a REST API into an MCP tool for Claude Desktop"
 description: "Expose a REST API as a governed MCP server, enforce OAuth2 at the gateway, and connect Claude Desktop to it using mcp-remote."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/convert-rest-api-to-mcp-server/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/convert-rest-api-to-mcp-server/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
 tags:
   - guides
   - ai-and-mcp
   - mcp
   - claude-desktop
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "tutorial"
 ---
@@ -17,24 +17,24 @@ content_type: "tutorial"
 
 ## Overview
 
-This guide shows you how to expose an existing REST API as a governed MCP server that AI clients can query in natural language. Without this, every AI client that needs your API requires custom integration code with no authentication or rate limiting. By the end, you'll have a deployed MCP server reachable from Claude Desktop, with OAuth2 enforced by WSO2 API Platform at every tool call.
+This guide shows you how to expose an existing REST API as a governed MCP server that AI clients can query in natural language. Without this, every AI client that needs your API requires custom integration code with no authentication or rate limiting. By the end, you'll have a deployed MCP server reachable from Claude Desktop, with OAuth2 enforced by XAPIPLATFORMX at every tool call.
 
 !!! note
-    Claude Desktop only supports local stdio servers natively. This guide uses mcp-remote, a community-maintained local bridge, to connect Claude Desktop to the remote WSO2 MCP Gateway. If Claude Desktop adds native remote server support in the future, Step 9 will become simpler.
+    Claude Desktop only supports local stdio servers natively. This guide uses mcp-remote, a community-maintained local bridge, to connect Claude Desktop to the remote XBRANDX MCP Gateway. If Claude Desktop adds native remote server support in the future, Step 9 will become simpler.
 
 ---
 
 ## Key Concepts
 
-Before you start, here are the WSO2 API Platform terms this guide uses:
+Before you start, here are the XAPIPLATFORMX terms this guide uses:
 
-**WSO2 API Platform** is the platform you'll use to create and manage your MCP server. The API Platform Console at [console.bijira.dev](https://console.bijira.dev) is the web interface where you do this work.
+**XAPIPLATFORMX** is the platform you'll use to create and manage your MCP server. The API Platform Console at [console.xclouddomainx](https://console.xclouddomainx) is the web interface where you do this work.
 
-**MCP server** is the logical API resource you create in WSO2 API Platform. It wraps your REST API and exposes it as a set of tools that AI clients can call.
+**MCP server** is the logical API resource you create in XAPIPLATFORMX. It wraps your REST API and exposes it as a set of tools that AI clients can call.
 
-**WSO2 MCP Gateway** is the infrastructure component that hosts and governs your MCP server — enforcing authentication, rate limits, and audit logging on every tool call.
+**XBRANDX MCP Gateway** is the infrastructure component that hosts and governs your MCP server — enforcing authentication, rate limits, and audit logging on every tool call.
 
-**Application** is a client identity in the WSO2 API Platform. You create an application to represent Claude Desktop, subscribe it to your MCP server, and generate the OAuth2 credentials it uses to authenticate.
+**Application** is a client identity in the XAPIPLATFORMX. You create an application to represent Claude Desktop, subscribe it to your MCP server, and generate the OAuth2 credentials it uses to authenticate.
 
 **Subscription** links an application to a specific MCP server, giving that application permission to call the server's tools.
 
@@ -46,7 +46,7 @@ Before you start, here are the WSO2 API Platform terms this guide uses:
 
 ## Prerequisites
 
-- A WSO2 API Platform account. Sign up for free.
+- A XAPIPLATFORMX account. Sign up for free.
 - Claude Desktop installed. Download from [claude.ai/download](https://claude.ai/download).
 - Node.js 18 or later installed. mcp-remote, the local bridge between Claude Desktop and your remote MCP server, requires it. Download from [nodejs.org/download](https://nodejs.org/download).
 - curl or Postman for testing.
@@ -70,7 +70,7 @@ Claude Desktop
     v
 
 +---------------------------+
-|     WSO2 MCP Gateway      |
+|     XSAMPLEBRANDX MCP Gateway      |
 |  auth · rate limit · audit|
 +---------------------------+
 
@@ -80,13 +80,13 @@ Claude Desktop
 Reading List API backend
 ```
 
-Claude Desktop only supports local stdio servers. mcp-remote runs locally and bridges this gap: it receives stdio calls from Claude Desktop and forwards them to the WSO2 MCP Gateway over HTTPS with your OAuth2 bearer token attached. The gateway validates the token, applies rate limits, and logs every tool invocation before forwarding the request to your backend.
+Claude Desktop only supports local stdio servers. mcp-remote runs locally and bridges this gap: it receives stdio calls from Claude Desktop and forwards them to the XBRANDX MCP Gateway over HTTPS with your OAuth2 bearer token attached. The gateway validates the token, applies rate limits, and logs every tool invocation before forwarding the request to your backend.
 
 ---
 
 ## Step 1: Create an Organization and Project
 
-Go to the [API Platform Console](https://console.bijira.dev) and sign in with your Google, GitHub, or Microsoft account.
+Go to the [API Platform Console](https://console.xclouddomainx) and sign in with your Google, GitHub, or Microsoft account.
 
 If this is your first time signing in, you'll be prompted to create an organization. Enter `sampleorganization` as the name, accept the privacy policy and terms of use, and click **Create**.
 
@@ -109,16 +109,16 @@ Once you're on the organization home page, create a project:
 
 ## Step 2: Create the MCP Server
 
-In this guide, you'll use the Reading List API — a sample REST API that manages a list of books — to create your MCP server. WSO2 API Platform reads the API's OpenAPI spec and generates one tool per operation. No custom server code is required.
+In this guide, you'll use the Reading List API — a sample REST API that manages a list of books — to create your MCP server. XAPIPLATFORMX reads the API's OpenAPI spec and generates one tool per operation. No custom server code is required.
 
-When you complete this step, WSO2 API Platform automatically deploys the MCP server to a development environment so you can test it before promoting it to production.
+When you complete this step, XAPIPLATFORMX automatically deploys the MCP server to a development environment so you can test it before promoting it to production.
 
 1. On the project home page, select **MCP Server**.
 2. Under **Expose APIs as MCP Servers**, click **Import API Contract**.
 3. Click **URL for API Contract**, paste the following URL, and click **Next**:
 
     ```
-    https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml
+    https://raw.githubusercontent.com/xgithuborgx/xcloudslugx-samples/refs/heads/main/reading-list-api/openapi.yaml
     ```
 
 4. On the **Create MCP Server from Contract** page, click **Create**.
@@ -128,7 +128,7 @@ When you complete this step, WSO2 API Platform automatically deploys the MCP ser
 ![MCP Server created from Reading List API contract with auto-generated tools visible in Develop > Policies](../../assets/img/guides/ai-and-mcp/s1/create-mcp-server.png){.cInlineImage-full}
 
 !!! note
-    If you have an existing REST API, select **Start from Existing Proxy** instead. Enter a name and description and select an API proxy already deployed in WSO2 API Platform. See the MCP Servers for existing API Proxies for that path.
+    If you have an existing REST API, select **Start from Existing Proxy** instead. Enter a name and description and select an API proxy already deployed in XAPIPLATFORMX. See the MCP Servers for existing API Proxies for that path.
 
 ---
 
@@ -157,7 +157,7 @@ Click **Save**. Then click **Deploy** from the navigation menu and select **Depl
 
 ## Step 4: Enable OAuth2 Authentication
 
-Enabling OAuth2 tells the WSO2 MCP Gateway to reject any tool call that doesn't include a valid bearer token. Unauthenticated requests never reach your backend.
+Enabling OAuth2 tells the XBRANDX MCP Gateway to reject any tool call that doesn't include a valid bearer token. Unauthenticated requests never reach your backend.
 
 In the side menu, scroll to **Deploy** and select **Security Settings**. Toggle **OAuth2** on and click **Apply**.
 
@@ -203,7 +203,7 @@ Publishing makes your MCP server discoverable to consumers in the Developer Port
 
 ## Step 7: Add a Subscription in the Developer Portal
 
-An application in WSO2 API Platform represents a client — in this case, Claude Desktop. You'll create one and subscribe it to the Reading List MCP server so it can make authenticated tool calls.
+An application in XAPIPLATFORMX represents a client — in this case, Claude Desktop. You'll create one and subscribe it to the Reading List MCP server so it can make authenticated tool calls.
 
 1. In the Lifecycle pane, click **Go to Developer Portal**.
 2. In the Developer Portal left navigation menu, click **Applications**, then click **Create**.
@@ -232,13 +232,13 @@ Generate the OAuth2 bearer token that Claude Desktop will use to authenticate ev
 ![Animation showing OAuth2 access token generation on the Manage Keys page in Developer Portal](../../assets/img/guides/ai-and-mcp/s1/generate-an-access-tokan.gif){.cInlineImage-full}
 
 !!! warning
-    Bearer tokens expire after 3600 seconds (one hour) by default. WSO2 API Platform doesn't automatically refresh them. When your token expires, Claude Desktop will silently stop invoking tools. Generate a new token in the Developer Portal, update the `Authorization` value in `claude_desktop_config.json`, and restart Claude Desktop. To extend the token lifetime, click **Modify** on the Manage Keys page and increase the **Application Access Token Expiry Time** before generating.
+    Bearer tokens expire after 3600 seconds (one hour) by default. XAPIPLATFORMX doesn't automatically refresh them. When your token expires, Claude Desktop will silently stop invoking tools. Generate a new token in the Developer Portal, update the `Authorization` value in `claude_desktop_config.json`, and restart Claude Desktop. To extend the token lifetime, click **Modify** on the Manage Keys page and increase the **Application Access Token Expiry Time** before generating.
 
 ---
 
 ## Step 9: Paste the MCP Server Configuration into Claude Desktop
 
-Claude Desktop only supports local stdio servers via its config file, so you can't point it directly at the WSO2 MCP Gateway URL. mcp-remote solves this — it runs locally as a subprocess, receives calls from Claude Desktop over stdio, and forwards them to the gateway over HTTPS with your bearer token attached.
+Claude Desktop only supports local stdio servers via its config file, so you can't point it directly at the XBRANDX MCP Gateway URL. mcp-remote solves this — it runs locally as a subprocess, receives calls from Claude Desktop over stdio, and forwards them to the gateway over HTTPS with your bearer token attached.
 
 Open `claude_desktop_config.json` via **Settings > Developer > Edit Config** in Claude Desktop, or navigate to it directly:
 
@@ -309,7 +309,7 @@ Claude Desktop loads `claude_desktop_config.json` only on startup. Restart it fu
 
     **Expected response:** `HTTP 200` with a list of your Reading List tools.
 
-4. In WSO2 API Platform, navigate to **Insights > API Insights**. Confirm your Claude Desktop request appears in the traffic view with a `200` response code.
+4. In XAPIPLATFORMX, navigate to **Insights > API Insights**. Confirm your Claude Desktop request appears in the traffic view with a `200` response code.
 
 !!! note
     Allow a few minutes for traffic to appear in API Insights after the first request.
@@ -325,7 +325,7 @@ Claude Desktop loads `claude_desktop_config.json` only on startup. Restart it fu
 | mcp-remote starts, but tools don't respond | Confirm `<YOUR-GATEWAY-URL>` is correct and the token is valid. Run `npx mcp-remote@latest https://<YOUR-GATEWAY-URL> --header "Authorization: Bearer <YOUR-TOKEN>"` directly in your terminal and check the error output. |
 | Claude searches memory or connected tools instead of invoking an MCP tool | Confirm your MCP server appears under **+ > Connectors > Manage Connectors**. If it does, rephrase the query explicitly, for example: `"Use the reading list tool to show me all books."` |
 | `HTTP 401 Unauthorized` on every tool call | Your bearer token has expired. Generate a new token in the Developer Portal, update `claude_desktop_config.json`, and restart Claude Desktop. |
-| `HTTP 404` on tool calls | Confirm the MCP server status is **Deployed** in WSO2 API Platform, and the gateway URL in your config matches the URL shown in the Developer Portal. |
+| `HTTP 404` on tool calls | Confirm the MCP server status is **Deployed** in XAPIPLATFORMX, and the gateway URL in your config matches the URL shown in the Developer Portal. |
 | The OAuth browser window opens and fails | This happens when adding the server via **Settings > Connectors** instead of the config file. The Connectors flow requires a full OAuth authorization server; use the mcp-remote config file approach in Step 9 instead. |
 
 ---
@@ -351,4 +351,4 @@ Claude Desktop loads `claude_desktop_config.json` only on startup. Restart it fu
 
 The companion sample runs this setup locally using a self-hosted gateway, so you can try the full guide without a cloud account.
 
-[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/ai-gw-mcp-claude-desktop)
+[View the sample on GitHub](https://github.com/xgithuborgx/api-platform/tree/main/samples/ai-gw-mcp-claude-desktop)

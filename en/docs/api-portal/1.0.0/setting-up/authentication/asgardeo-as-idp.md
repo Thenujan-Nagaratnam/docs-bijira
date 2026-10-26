@@ -1,21 +1,21 @@
 ---
 title: "Set up Asgardeo as your identity provider"
-description: "Configure WSO2 Asgardeo as the OIDC identity provider for a production API Portal deployment, from application registration to config.toml."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/setting-up/authentication/asgardeo-as-idp/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/setting-up/authentication/asgardeo-as-idp.md
+description: "Configure XBRANDX Asgardeo as the OIDC identity provider for a production API Portal deployment, from application registration to config.toml."
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/setting-up/authentication/asgardeo-as-idp/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/setting-up/authentication/asgardeo-as-idp.md
 tags:
   - cloud
   - api-portal
   - tutorials
   - authentication
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-04
 content_type: "tutorial"
 ---
 
 # Set up Asgardeo as your identity provider
 
-This tutorial walks you through configuring WSO2 Asgardeo as the identity provider for a production API Portal deployment. It's one worked example of the general procedure in [Connect an identity provider to the API Portal](connect-an-identity-provider.md)—read that first if you're integrating a different provider. For how identity provider authentication compares with local authentication, see [Authentication in the API Portal & MCP Hub](overview.md).
+This tutorial walks you through configuring XBRANDX Asgardeo as the identity provider for a production API Portal deployment. It's one worked example of the general procedure in [Connect an identity provider to the API Portal](connect-an-identity-provider.md)—read that first if you're integrating a different provider. For how identity provider authentication compares with local authentication, see [Authentication in the API Portal & MCP Hub](overview.md).
 
 The API Portal & MCP Hub uses Asgardeo's sub-organization model: each API Portal organization maps to one Asgardeo sub-organization. A single Asgardeo application, shared across every portal organization, handles login, and each session is scoped to one sub-organization:
 
@@ -195,7 +195,7 @@ Keep the claim names consistent between the Asgardeo token attributes and the `[
 4. Download the script and run it:
 
     ```bash
-    curl -sLO https://raw.githubusercontent.com/wso2/api-platform/main/portals/api-portal/production/scripts/register_asgardeo_scopes.sh
+    curl -sLO https://raw.githubusercontent.com/xgithuborgx/api-platform/main/portals/api-portal/production/scripts/register_asgardeo_scopes.sh
     chmod +x register_asgardeo_scopes.sh
 
     ASGARDEO_TENANT=<your-tenant> \

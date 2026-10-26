@@ -1,13 +1,13 @@
 ---
 title: "Export Metrics to Alternative Backends"
 description: "Export API Platform Gateway metrics to alternative backends including AWS CloudWatch, Datadog, and other Prometheus-compatible systems."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/next/observability/metrics/alternative-backends/
-md_url: https://wso2.com/api-platform/docs/api-gateway/next/observability/metrics/alternative-backends.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/next/observability/metrics/alternative-backends/
+md_url: https://xdocshostx/xdocspathx/api-gateway/next/observability/metrics/alternative-backends.md
 tags:
   - api-gateway
   - observability
   - metrics
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-17
 content_type: "how-to"
 ---

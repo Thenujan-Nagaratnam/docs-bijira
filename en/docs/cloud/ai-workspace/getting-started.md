@@ -1,13 +1,13 @@
 ---
 title: "Get started with AI Workspace"
 description: "Create an AI Gateway, configure an LLM provider, and deploy it through the AI Workspace control plane."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/getting-started/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/getting-started.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/getting-started/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/getting-started.md
 tags:
   - cloud
   - ai-workspace
   - quickstart
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "quickstart"
 ---

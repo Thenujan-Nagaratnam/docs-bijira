@@ -1,13 +1,13 @@
 ---
 title: "Semantic cache policy in AI Workspace"
 description: "Cache LLM responses using vector embeddings and cosine similarity to serve semantically similar future requests without calling the upstream LLM."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/semantic-cache/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/semantic-cache.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/other-policies/semantic-cache/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/other-policies/semantic-cache.md
 tags:
   - cloud
   - ai-workspace
   - semantic-cache
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -107,4 +107,4 @@ Start at `0.85` and adjust based on observed cache hit rates and response releva
 
 ## Related
 
-- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version
+- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version

@@ -1,13 +1,13 @@
 ---
 title: "API Platform AI Gateway Overview"
 description: "Manage and secure AI traffic with API Platform AI Gateway: LLM providers, LLM proxies, MCP proxies, and guardrails for LLM APIs and MCP servers."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/overview/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/overview.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/overview/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/overview.md
 tags:
   - ai-gateway
   - llm
   - mcp
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-08
 content_type: "concept"
 ---
@@ -109,7 +109,7 @@ When an upstream service streams its response, the gateway relays it to the clie
 
 AI Guardrails allow you to enforce safety, content, and compliance policies on AI traffic flowing through the AI Gateway. They can be applied at the LLM Provider level (organization-wide), at the LLM Proxy level (per-application), or on MCP Proxies.
 
-The complete and up-to-date guardrail catalogue — with configuration references and examples — is maintained in the gateway-controllers repository: [https://github.com/wso2/gateway-controllers/blob/main/docs/README.md](https://github.com/wso2/gateway-controllers/blob/main/docs/README.md)
+The complete and up-to-date guardrail catalogue — with configuration references and examples — is maintained in the gateway-controllers repository: [https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/README.md](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/README.md)
 
 A guardrail is a gateway policy. To add a guardrail to the gateway, or update one to a different version, build a custom gateway image with the `ap` CLI and see [Add or Update Policies in a Gateway](../../api-gateway/1.1.0/policies/add-or-update-policies.md). To write your own guardrail policy, see [Writing a Custom Policy](../../api-gateway/1.1.0/policies/custom-policies/writing-a-custom-policy.md).
 
@@ -124,6 +124,6 @@ The following table lists the AI Gateway documentation sections and what each on
 | [Real-time AI streaming](./streaming-responses.md) | Streamed responses across providers and proxies, and how policies and analytics behave |
 | [Observability](./observability/logging.md) | Logging and tracing configuration |
 | [Analytics](./analytics/moesif-analytics.md) | Analytics integrations (Moesif) |
-| [Policies and Guardrails](https://github.com/wso2/gateway-controllers/blob/main/docs/README.md) | Gateway policies and guardrails for AI traffic control |
+| [Policies and Guardrails](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/README.md) | Gateway policies and guardrails for AI traffic control |
 | [REST APIs](./ai-gateway-rest-api/authentication.md) | REST API authentication and usage |
 | [Production deployment](./deployment/production-deployment/overview.md) | High-availability Kubernetes deployment with Helm, PostgreSQL, replicated workloads, and AI workload tuning |

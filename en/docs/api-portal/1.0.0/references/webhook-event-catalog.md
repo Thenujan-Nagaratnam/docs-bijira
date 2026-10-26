@@ -1,14 +1,14 @@
 ---
 title: "Webhook event catalog"
 description: "Every webhook event the API Portal & MCP Hub publishes, with its payload fields, the delivery envelope, headers, signature verification, and field encryption."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/references/webhook-event-catalog/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/references/webhook-event-catalog.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/references/webhook-event-catalog/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/references/webhook-event-catalog.md
 tags:
   - cloud
   - api-portal
   - webhooks
   - reference
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-18
 content_type: "reference"
 ---

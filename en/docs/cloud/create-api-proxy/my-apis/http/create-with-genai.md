@@ -1,13 +1,13 @@
 ---
 title: "Create REST API Proxy with GenAI"
-description: "Create a REST API proxy using GenAI prompts in WSO2 API Platform, then configure, deploy, test, and publish it to the Developer Portal."
-canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/create-with-genai/
-md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/create-with-genai.md
+description: "Create a REST API proxy using GenAI prompts in XAPIPLATFORMX, then configure, deploy, test, and publish it to the Developer Portal."
+canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/http/create-with-genai/
+md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/http/create-with-genai.md
 tags:
   - cloud
   - api-proxy
   - genai
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -19,7 +19,7 @@ An API proxy acts as an intermediary between an existing API and API Platform, i
 ## Prerequisites
 
 - If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -30,7 +30,7 @@ An API proxy acts as an intermediary between an existing API and API Platform, i
 
 In this guide, you will create an API proxy with AI.
 
-1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
 3. Select **Create with GenAI**.
 4. Click **Create an E-Learning Platform API**.

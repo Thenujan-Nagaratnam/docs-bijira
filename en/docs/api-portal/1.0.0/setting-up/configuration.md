@@ -1,14 +1,14 @@
 ---
 title: "API Portal configuration and environment interpolation"
 description: "How the API Portal & MCP Hub loads its config.toml, injects environment values and mounted files through interpolation tokens, and keeps sensitive values out of the config file."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/setting-up/configuration/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/setting-up/configuration.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/setting-up/configuration/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/setting-up/configuration.md
 tags:
   - cloud
   - api-portal
   - configuration
   - interpolation
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-06
 content_type: "reference"
 ---
@@ -70,7 +70,7 @@ A templated value is coerced to its natural type after substitution, so `"true"`
 
 Because the variable names live in `config.toml`, the config file is the authoritative list for your deployment — not this page. To see which settings your stack injects from the environment, search the mounted `config.toml` for {% raw %}`{{ env`{% endraw %} and read the name out of each token.
 
-For every configurable option and the tokens the shipped files carry, refer to the config templates: [API Portal](https://github.com/wso2/api-platform/blob/main/portals/api-portal/configs/config-template.toml) and [Platform API](https://github.com/wso2/api-platform/blob/main/platform-api/config/config-template.toml).
+For every configurable option and the tokens the shipped files carry, refer to the config templates: [API Portal](https://github.com/xgithuborgx/api-platform/blob/main/portals/api-portal/configs/config-template.toml) and [Platform API](https://github.com/xgithuborgx/api-platform/blob/main/platform-api/config/config-template.toml).
 
 ## Sensitive values in `config.toml`
 

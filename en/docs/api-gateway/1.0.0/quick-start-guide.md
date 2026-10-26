@@ -1,13 +1,13 @@
 ---
 title: "API Platform Gateway Quick Start Guide"
 description: "Run API Platform Gateway in standalone mode with Docker Compose, deploy your first REST API, and invoke it through the gateway in minutes."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/quick-start-guide/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/quick-start-guide.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/quick-start-guide/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/quick-start-guide.md
 tags:
   - api-gateway
   - quickstart
   - docker
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-11
 content_type: "quickstart"
 ---
@@ -44,8 +44,8 @@ docker compose version
 Run this command in your terminal to download and unzip the API Platform Gateway distribution:
 
 ```bash
-wget https://github.com/wso2/api-platform/releases/download/gateway/v1.0.0/wso2apip-api-gateway-1.0.0.zip
-unzip wso2apip-api-gateway-1.0.0.zip
+wget https://github.com/xgithuborgx/api-platform/releases/download/gateway/v1.0.0/xartifactprefixx-api-gateway-1.0.0.zip
+unzip xartifactprefixx-api-gateway-1.0.0.zip
 ```
 
 ### Step 2: Start the Gateway
@@ -53,7 +53,7 @@ unzip wso2apip-api-gateway-1.0.0.zip
 Navigate to the extracted directory and start the complete gateway stack using Docker Compose:
 
 ```bash
-cd wso2apip-api-gateway-1.0.0/
+cd xartifactprefixx-api-gateway-1.0.0/
 docker compose up -d
 ```
 
@@ -102,7 +102,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/rest-apis \
   -u admin:admin \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: RestApi
 metadata:
   name: reading-list-api-v1.0
@@ -112,14 +112,14 @@ spec:
   context: /reading-list/$version
   upstream:
     main:
-      url: https://apis.bijira.dev/samples/reading-list-api-service/v1.0
+      url: https://apis.xclouddomainx/samples/reading-list-api-service/v1.0
   policies:
     - name: set-headers
       version: v1
       params:
         request:
           headers:
-            - name: x-wso2-apip-gateway-version
+            - name: x-xheaderprefixx-apip-gateway-version
               value: v1.0.0
         response:
           headers:

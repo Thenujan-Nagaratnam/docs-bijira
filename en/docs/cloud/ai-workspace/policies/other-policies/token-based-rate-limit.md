@@ -88,4 +88,4 @@ Configure limits for any combination of the three token categories. At least one
 
 - [Manage LLM Provider](../../llm-providers/manage-provider.md#rate-limiting) — Rate Limiting tab reference
 - [Rate Limit - Basic](basic-rate-limit.md) — Simple request count-based rate limiting
-- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version
+- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version

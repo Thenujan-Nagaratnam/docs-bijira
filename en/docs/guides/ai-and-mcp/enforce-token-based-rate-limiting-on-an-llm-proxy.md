@@ -13,7 +13,7 @@ This guide shows you how to put a token quota on an LLM proxy so no single appli
 
 ## Prerequisites
 
-- A WSO2 API Platform account. [Sign up for free](https://console.bijira.dev).
+- A XAPIPLATFORMX account. [Sign up for free](https://console.xclouddomainx).
 - An OpenAI API key
 - `curl` for testing
 
@@ -24,7 +24,7 @@ Your application
     |  HTTPS + API key
     v
 +---------------------------------------+
-|  WSO2 AI Gateway                      |
+|  XAIGATEWAYX                      |
 |  [ LLM Proxy ]                        |
 |  auth · rate limiting · audit logging |
 +---------------------------------------+
@@ -37,7 +37,7 @@ The LLM proxy is deployed on the AI Gateway, which sits between your application
 
 ## Step 1: Create an organization and project
 
-Go to the [WSO2 AI Workspace](https://ai-workspace.bijira.dev/) and sign in with your Google, GitHub, or Microsoft account.
+Go to the [XAIWORKSPACEX](https://ai-workspace.xclouddomainx/) and sign in with your Google, GitHub, or Microsoft account.
 
 If this is your first time signing in, you'll be prompted to create an organization. Enter a name, accept the privacy policy and terms of use, and click **Create**.
 
@@ -251,4 +251,4 @@ Use the API key and invoke URL from Step 7 for all requests below.
 
 The companion sample runs this setup end to end using Docker, with a mock OpenAI backend and a pre-configured token-based rate limit policy. No real API credentials required.
 
-[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/ai-gw-llm-proxy)
+[View the sample on GitHub](https://github.com/xgithuborgx/api-platform/tree/main/samples/ai-gw-llm-proxy)

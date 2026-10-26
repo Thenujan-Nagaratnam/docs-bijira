@@ -1,13 +1,13 @@
 ---
 title: "Management API: LLM Provider Template Management"
 description: "REST API reference for creating, listing, updating, and deleting LLM provider templates in API Platform Gateway."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/gateway-controller-management-api/llm-provider-template-management/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/gateway-controller-management-api/llm-provider-template-management.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/gateway-controller-management-api/llm-provider-template-management/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/gateway-controller-management-api/llm-provider-template-management.md
 tags:
   - api-gateway
   - management-api
   - llm
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-17
 content_type: "reference"
 ---
@@ -40,7 +40,7 @@ Add a new LLM provider template to the Gateway. A template defines token trackin
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"
@@ -96,7 +96,7 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"
@@ -188,7 +188,7 @@ Required roles: `admin`
   "count": 3,
   "templates": [
     {
-      "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+      "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
       "kind": "LlmProviderTemplate",
       "metadata": {
         "name": "openai-template"
@@ -296,7 +296,7 @@ Status Code **200**
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.wso2.com/v1alpha1|
+|apiVersion|gateway.api-platform.xcrddomainx/v1alpha1|
 |kind|LlmProviderTemplate|
 |location|payload|
 |location|header|
@@ -344,7 +344,7 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"
@@ -416,7 +416,7 @@ Update an existing LLM provider template in the Gateway.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"
@@ -473,7 +473,7 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"

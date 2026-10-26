@@ -1,14 +1,14 @@
 ---
 title: "Operate the deployment"
 description: "Run AI Workspace day to day: structured logs, health signals and alerts, tested backups, and an upgrade path with a rollback behind it."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/production/operate/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/production/operate.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/production/operate/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/production/operate.md
 tags:
   - ai-workspace
   - production
   - operations
   - observability
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-06
 content_type: "how-to"
 ---

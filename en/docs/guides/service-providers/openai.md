@@ -1,21 +1,21 @@
 ---
 title: "OpenAI guides"
-description: "Use WSO2 API Platform to route OpenAI Codex CLI through AI Gateway and govern traffic to OpenAI models with routing, token limits, and caching."
-canonical_url: https://wso2.com/api-platform/docs/guides/service-providers/openai/
-md_url: https://wso2.com/api-platform/docs/guides/service-providers/openai.md
+description: "Use XAPIPLATFORMX to route OpenAI Codex CLI through AI Gateway and govern traffic to OpenAI models with routing, token limits, and caching."
+canonical_url: https://xdocshostx/xdocspathx/guides/service-providers/openai/
+md_url: https://xdocshostx/xdocspathx/guides/service-providers/openai.md
 tags:
   - guides
   - openai
   - codex
   - service-provider-guides
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-10-21
 content_type: "reference"
 ---
 
 # Govern OpenAI models and Codex CLI
 
-WSO2 API Platform works alongside the OpenAI products you already use. Govern OpenAI model traffic, route Codex CLI through AI Gateway, and use OpenAI embeddings for semantic caching and guardrails.
+XAPIPLATFORMX works alongside the OpenAI products you already use. Govern OpenAI model traffic, route Codex CLI through AI Gateway, and use OpenAI embeddings for semantic caching and guardrails.
 
 ## End-to-end guides
 
@@ -33,7 +33,7 @@ A step-by-step guide for Codex CLI.
 
 ## AI Gateway with OpenAI models
 
-Route, secure, and govern traffic to OpenAI models through WSO2 AI Gateway, including traffic from Codex CLI.
+Route, secure, and govern traffic to OpenAI models through XAIGATEWAYX, including traffic from Codex CLI.
 
 <div class="vendor-cap" markdown="1">
 
@@ -72,7 +72,7 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
 - [Semantic cache policy](../../cloud/ai-workspace/policies/other-policies/semantic-cache.md) <span class="vendor-meta">AI Workspace</span>
-- [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
+- [Semantic prompt guard policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
@@ -80,8 +80,8 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 
 - [Semantic caching](../../ai-gateway/2026.09.24/semantic-caching.md) <span class="vendor-meta">AI Gateway</span>
 - [Embedding providers for semantic caching](../../ai-gateway/2026.09.24/setup-and-deployment/production-deployment/ai-workload-tuning.md#provision-infrastructure-for-semantic-caching) <span class="vendor-meta">AI Gateway</span>
-- [Semantic Cache policy](https://wso2.com/api-platform/policy-hub/policies/semantic-cache) <span class="vendor-meta">Policy Hub</span>
-- [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
+- [Semantic Cache policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-cache) <span class="vendor-meta">Policy Hub</span>
+- [Semantic prompt guard policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
@@ -107,12 +107,12 @@ Routing, token limits, cost control, and the gateway's other policies work the s
 
 ## Architecture and responsibility model
 
-WSO2 API Platform and OpenAI split the work like this:
+XAPIPLATFORMX and OpenAI split the work like this:
 
-| Scenario | WSO2 role | OpenAI role | Runtime traffic |
+| Scenario | XBRANDX role | OpenAI role | Runtime traffic |
 | --- | --- | --- | --- |
-| Codex CLI through AI Gateway | Authenticates developers and applies guardrails, rate limits, and analytics | Hosts the models and bills the API key | Goes through WSO2 AI Gateway to OpenAI |
-| Applications calling OpenAI models | Proxies and governs LLM requests | Hosts the models | Goes through WSO2 AI Gateway to OpenAI |
+| Codex CLI through AI Gateway | Authenticates developers and applies guardrails, rate limits, and analytics | Hosts the models and bills the API key | Goes through XAIGATEWAYX to OpenAI |
+| Applications calling OpenAI models | Proxies and governs LLM requests | Hosts the models | Goes through XAIGATEWAYX to OpenAI |
 | Semantic caching and guardrails | Runs the cache or guardrail policy | Returns embeddings for each prompt | The gateway calls the OpenAI embeddings API alongside each request |
 
 ## Learn more

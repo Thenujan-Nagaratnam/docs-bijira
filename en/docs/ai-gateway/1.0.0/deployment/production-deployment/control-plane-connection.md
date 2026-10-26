@@ -1,13 +1,13 @@
 ---
 title: "Connect to a Control Plane"
-description: "Connect an AI Gateway 1.0.0 deployment to a WSO2 APIM or API Platform Cloud control plane, and what to know about AI Workspace version requirements."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/deployment/production-deployment/control-plane-connection/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/deployment/production-deployment/control-plane-connection.md
+description: "Connect an AI Gateway 1.0.0 deployment to a XAPIMSHORTX or API Platform Cloud control plane, and what to know about AI Workspace version requirements."
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/deployment/production-deployment/control-plane-connection/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/deployment/production-deployment/control-plane-connection.md
 tags:
   - ai-gateway
   - production
   - control-plane
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-09
 content_type: "how-to"
 ---
@@ -17,7 +17,7 @@ content_type: "how-to"
 !!! note
     This step is optional. The gateway routes large language model (LLM) and Model Context Protocol (MCP) traffic without a control plane.
 
-A control plane connection gives the gateway a central place to receive artifacts from and report state to. AI Gateway 1.0.0 connects over a persistent WebSocket connection. It supports a [WSO2 API Manager (APIM) control plane](https://apim.docs.wso2.com/en/latest/api-gateway/platform-gateway/getting-started/) and an [API Platform Cloud control plane](https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started/).
+A control plane connection gives the gateway a central place to receive artifacts from and report state to. AI Gateway 1.0.0 connects over a persistent WebSocket connection. It supports a [XAPIMANAGERX (APIM) control plane](https://apim.docs.wso2.com/en/latest/api-gateway/platform-gateway/getting-started/) and an [API Platform Cloud control plane](https://xdocshostx/xdocspathx/cloud/api-platform-gateway/getting-started/).
 
 !!! important "AI Workspace needs AI Gateway 1.2.0"
     [AI Workspace](../../../../ai-workspace/1.0.0/overview.md) is the control plane for governing LLM providers, App LLM proxies, MCP proxies, and AI policies across an organization. It works with gateway version 1.2 and above. A 1.0.0 gateway cannot register with it. To govern this gateway from AI Workspace, upgrade to [AI Gateway 1.2.0](../../../1.2.0/setup-and-deployment/production-deployment/control-plane-connection.md) first.
@@ -89,14 +89,14 @@ gateway:
         deployment_push_enabled: true
 ```
 
-Confirm your control plane supports this direction before enabling it. It's supported against an on-premises WSO2 APIM instance, not against the cloud control plane.
+Confirm your control plane supports this direction before enabling it. It's supported against an on-premises XAPIMSHORTX instance, not against the cloud control plane.
 
 ## Step 4: Verify the connection
 
 Apply the change and check the controller logs for the control plane connection:
 
 ```bash
-helm upgrade ai-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
+helm upgrade ai-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
   --version 1.0.1 \
   --namespace ai-gateway \
   --values ./values.yaml \

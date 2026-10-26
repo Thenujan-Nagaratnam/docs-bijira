@@ -1,14 +1,14 @@
 ---
 title: "Semantic Caching for AI APIs"
-description: "Configure semantic caching on AI API proxies in WSO2 API Platform to reuse responses to similar requests and reduce latency and cost."
-canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/semantic-cache/
-md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/semantic-cache.md
+description: "Configure semantic caching on AI API proxies in XAPIPLATFORMX to reuse responses to similar requests and reduce latency and cost."
+canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/semantic-cache/
+md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/semantic-cache.md
 tags:
   - cloud
   - api-proxy
   - ai-gateway
   - semantic-cache
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---

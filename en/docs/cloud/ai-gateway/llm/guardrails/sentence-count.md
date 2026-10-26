@@ -1,13 +1,13 @@
 ---
 title: "Sentence count guardrail"
 description: "Validate the sentence count of LLM request or response content against configurable minimum and maximum thresholds."
-canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/sentence-count/
-md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/sentence-count.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/llm/guardrails/sentence-count/
+md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/llm/guardrails/sentence-count.md
 tags:
   - cloud
   - ai-gateway
   - guardrails
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -83,7 +83,7 @@ curl -X POST http://localhost:9090/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic <BASE64_CREDENTIAL>" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: LlmProvider
 metadata:
   name: sentence-count-provider

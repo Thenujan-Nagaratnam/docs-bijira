@@ -1,13 +1,13 @@
 ---
 title: "Set up Asgardeo as your identity provider"
 description: "Configure Asgardeo as the identity provider for a production AI Workspace deployment, from application registration to Platform API configuration."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/setting-up/authentication/asgardeo-setup/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/setting-up/authentication/asgardeo-setup.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/setting-up/authentication/asgardeo-setup/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/setting-up/authentication/asgardeo-setup.md
 tags:
   - cloud
   - ai-workspace
   - authentication
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-23
 content_type: "how-to"
 ---
@@ -20,7 +20,7 @@ This guide walks you through configuring Asgardeo as the identity provider for a
 
 - An Asgardeo account at [console.asgardeo.io](https://console.asgardeo.io)
 - AI Workspace and Platform API accessible at known hostnames
-- The [`register_asgardeo_scopes.sh`](https://github.com/wso2/api-platform/blob/main/portals/ai-workspace/production/scripts/register_asgardeo_scopes.sh) helper script, downloaded from the WSO2 API Platform GitHub repository
+- The [`register_asgardeo_scopes.sh`](https://github.com/xgithuborgx/api-platform/blob/main/portals/ai-workspace/production/scripts/register_asgardeo_scopes.sh) helper script, downloaded from the XAPIPLATFORMX GitHub repository
 
 ## Step 1: Set up your organization
 
@@ -60,7 +60,7 @@ AI Workspace and the Platform API communicate using `ap:*` scopes. Register thes
 4. Download the scope registration script and run it:
 
 ```bash
-curl -sLO https://raw.githubusercontent.com/wso2/api-platform/main/portals/ai-workspace/production/scripts/register_asgardeo_scopes.sh
+curl -sLO https://raw.githubusercontent.com/xgithuborgx/api-platform/main/portals/ai-workspace/production/scripts/register_asgardeo_scopes.sh
 chmod +x register_asgardeo_scopes.sh
 
 ASGARDEO_TENANT=<your-tenant> \

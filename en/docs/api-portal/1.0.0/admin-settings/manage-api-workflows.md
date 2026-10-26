@@ -1,13 +1,13 @@
 ---
 title: "Manage API workflows in the API Portal & MCP Hub"
 description: "Author an API workflow as an Arazzo spec or Markdown, generate its agent prompt, and publish it to a view."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/admin-settings/manage-api-workflows/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/admin-settings/manage-api-workflows.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/admin-settings/manage-api-workflows/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/admin-settings/manage-api-workflows.md
 tags:
   - cloud
   - api-portal
   - api-workflows
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-31
 content_type: "how-to"
 ---

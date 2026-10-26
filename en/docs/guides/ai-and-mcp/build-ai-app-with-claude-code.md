@@ -1,13 +1,13 @@
 ---
 title: "Build an AI app with Claude Code that calls governed APIs"
 description: "Put a governed API perimeter in front of Claude Code so every backend API call is authenticated, rate-limited, and attributed to a dedicated application identity."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/build-ai-app-with-claude-code/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/build-ai-app-with-claude-code.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/build-ai-app-with-claude-code/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/build-ai-app-with-claude-code.md
 tags:
   - guides
   - ai-and-mcp
   - claude-code
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "tutorial"
 ---
@@ -16,19 +16,19 @@ content_type: "tutorial"
 
 ## Overview
 
-This guide shows you how to put a governed API perimeter in front of Claude Code so every API call the agent makes is authenticated, rate-limited, and visible in analytics. By the end, you'll have a Claude Code project that calls the WSO2 Reading List API through WSO2 API Platform, with each request attributed to a dedicated Claude Code Dev application identity.
+This guide shows you how to put a governed API perimeter in front of Claude Code so every API call the agent makes is authenticated, rate-limited, and visible in analytics. By the end, you'll have a Claude Code project that calls the XBRANDX Reading List API through XAPIPLATFORMX, with each request attributed to a dedicated Claude Code Dev application identity.
 
 ---
 
 ## Key Concepts
 
-Before you start, here are the WSO2 API Platform terms this guide uses:
+Before you start, here are the XAPIPLATFORMX terms this guide uses:
 
-**WSO2 API Platform** manages backend APIs. The API Platform Console is the web interface where you create and manage API proxies, applications, and subscriptions.
+**XAPIPLATFORMX** manages backend APIs. The API Platform Console is the web interface where you create and manage API proxies, applications, and subscriptions.
 
-**API proxy** is a managed endpoint WSO2 API Platform creates in front of your backend API. It enforces authentication, rate limits, and audit logging before forwarding requests to the backend.
+**API proxy** is a managed endpoint XAPIPLATFORMX creates in front of your backend API. It enforces authentication, rate limits, and audit logging before forwarding requests to the backend.
 
-**Application** is a client identity in WSO2 API Platform. You create a Claude Code Dev application to represent your Claude Code session. Revoking its credentials immediately stops Claude Code's access to your APIs.
+**Application** is a client identity in XAPIPLATFORMX. You create a Claude Code Dev application to represent your Claude Code session. Revoking its credentials immediately stops Claude Code's access to your APIs.
 
 **Subscription** links an application to a specific API, granting permission to call that API within a defined rate limit.
 
@@ -44,7 +44,7 @@ Before you start, here are the WSO2 API Platform terms this guide uses:
 
 ## Prerequisites
 
-- A WSO2 API Platform account. Sign up for free.
+- A XAPIPLATFORMX account. Sign up for free.
 - Claude Code installed (requires a Pro subscription or Anthropic API credits; not available on the free plan). Confirm installation with `claude --version`.
 - Python 3.8 or later. Confirm with `python3 --version`.
 - curl for testing.
@@ -68,7 +68,7 @@ Claude Code (agent)
     v
 
 +---------------------------+
-|     WSO2 API Gateway      |
+|     XAPIGATEWAYX      |
 |  auth · rate limit · audit|
 +---------------------------+
 
@@ -78,13 +78,13 @@ Claude Code (agent)
 Reading List API backend
 ```
 
-Claude Code generates Python code that calls `api_client.py` for every API request. The helper fetches and caches an OAuth2 bearer token using the Claude Code Dev application credentials, attaches it to every request, and refreshes it automatically before expiration. The WSO2 API Gateway validates the token, enforces rate limits, and logs every call with the Claude Code Dev application identity before forwarding the request to your backend.
+Claude Code generates Python code that calls `api_client.py` for every API request. The helper fetches and caches an OAuth2 bearer token using the Claude Code Dev application credentials, attaches it to every request, and refreshes it automatically before expiration. The XAPIGATEWAYX validates the token, enforces rate limits, and logs every call with the Claude Code Dev application identity before forwarding the request to your backend.
 
 ---
 
 ## Step 1: Create an Organization and Project
 
-Go to the [API Platform Console](https://console.bijira.dev) and sign in with your Google, GitHub, or Microsoft account.
+Go to the [API Platform Console](https://console.xclouddomainx) and sign in with your Google, GitHub, or Microsoft account.
 
 If this is your first time signing in, you'll be prompted to create an organization:
 
@@ -111,13 +111,13 @@ Once you're on the organization home page, create a project:
 
 ## Step 2: Create and Publish the Reading List API Proxy
 
-The WSO2 Reading List API is a sample REST API that manages a list of books. You'll expose it as a managed API proxy so WSO2 API Platform can enforce authentication and rate limits on every request.
+The XBRANDX Reading List API is a sample REST API that manages a list of books. You'll expose it as a managed API proxy so XAPIPLATFORMX can enforce authentication and rate limits on every request.
 
 1. On the project home page, click **Import API Contract** under **My APIs (Ingress)**.
 2. Click **URL for API Contract**, paste the following URL, and click **Next**:
 
     ```
-    https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml
+    https://raw.githubusercontent.com/xgithuborgx/xcloudslugx-samples/refs/heads/main/reading-list-api/openapi.yaml
     ```
 
 3. On the **Create API Proxy from Contract** page, click **Create**.
@@ -147,7 +147,7 @@ Promote it to production and publish it:
 
 ## Step 3: Add a Subscription in the Developer Portal
 
-An application gives Claude Code a dedicated identity in WSO2 API Platform. Keeping it separate from your other applications means you can revoke Claude Code's access instantly without affecting anything else.
+An application gives Claude Code a dedicated identity in XAPIPLATFORMX. Keeping it separate from your other applications means you can revoke Claude Code's access instantly without affecting anything else.
 
 1. From the Lifecycle screen, click **Go to Developer Portal**.
 2. In the Developer Portal left navigation menu, click **Applications**, then click **Create**.
@@ -225,7 +225,7 @@ In the left navigation menu, click **APIs**, open the Reading List API, and copy
 
 ## Step 6: Write api_client.py
 
-`api_client.py` fetches OAuth2 bearer tokens from the WSO2 API Gateway and attaches them to every request. It caches the token and refreshes it automatically before it expires, so Claude Code never has to manage tokens manually.
+`api_client.py` fetches OAuth2 bearer tokens from the XAPIGATEWAYX and attaches them to every request. It caches the token and refreshes it automatically before it expires, so Claude Code never has to manage tokens manually.
 
 Create `api_client.py` in the project root:
 
@@ -286,7 +286,7 @@ Create `CLAUDE.md` in the project root:
 
 ## API access rules
 
-This project calls the WSO2 Reading List API through a governed gateway.
+This project calls the XSAMPLEBRANDX Reading List API through a governed gateway.
 
 Follow these rules on every API call:
 
@@ -332,7 +332,7 @@ after one second. Don't loop without delays.
 ![Animation showing CLAUDE.md briefing file created with API access rules and usage instructions](../../assets/img/guides/ai-and-mcp/s2/claude-project-completion.gif){.cInlineImage-full}
 
 !!! note
-    `CLAUDE.md` is not required for Claude Code to run, but without it Claude Code doesn't know to use `api_client.py`. It may call the API directly and bypass the WSO2 gateway entirely.
+    `CLAUDE.md` is not required for Claude Code to run, but without it Claude Code doesn't know to use `api_client.py`. It may call the API directly and bypass the XBRANDX gateway entirely.
 
 Your project structure at this point:
 
@@ -396,7 +396,7 @@ Claude Code asks for your approval before executing any code. Review what it pla
 
 ## Verify
 
-1. Confirm Claude Code calls the API through the WSO2 gateway. In your terminal, run a direct authenticated request and confirm you receive `HTTP 200`:
+1. Confirm Claude Code calls the API through the XBRANDX gateway. In your terminal, run a direct authenticated request and confirm you receive `HTTP 200`:
 
     ```bash
     curl -v -X GET <API-BASE-URL>/books \
@@ -413,7 +413,7 @@ Claude Code asks for your approval before executing any code. Review what it pla
 
     **Expected response:** `HTTP 401 Unauthorized`.
 
-3. Confirm Claude Code traffic appears under the correct identity. In WSO2 API Platform, navigate to **Insights > API Insights**. Confirm your requests appear in the traffic view with the **Claude Code Dev** application name and `HTTP 200` response code.
+3. Confirm Claude Code traffic appears under the correct identity. In XAPIPLATFORMX, navigate to **Insights > API Insights**. Confirm your requests appear in the traffic view with the **Claude Code Dev** application name and `HTTP 200` response code.
 
 !!! note
     Allow a few minutes for traffic to appear in API Insights after the first request.
@@ -438,10 +438,10 @@ Claude Code asks for your approval before executing any code. Review what it pla
 
 ## What You Learned
 
-- Put a governed API perimeter in front of Claude Code so every request is authenticated, rate-limited, and audited by WSO2 API Platform
+- Put a governed API perimeter in front of Claude Code so every request is authenticated, rate-limited, and audited by XAPIPLATFORMX
 - Gave Claude Code a dedicated application identity that you can revoke instantly without affecting any other application
 - Ensured Claude Code never calls backend APIs directly or manages credentials manually, through a combination of `api_client.py` and `CLAUDE.md`
-- Confirmed every Claude Code API call is attributable to the Claude Code Dev application identity in WSO2 API Platform analytics
+- Confirmed every Claude Code API call is attributable to the Claude Code Dev application identity in XAPIPLATFORMX analytics
 
 ---
 
@@ -456,4 +456,4 @@ Claude Code asks for your approval before executing any code. Review what it pla
 
 The companion sample runs this setup locally using a self-hosted gateway, so you can configure Claude Code against a governed API without a cloud account.
 
-[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/ai-app-claude-code)
+[View the sample on GitHub](https://github.com/xgithuborgx/api-platform/tree/main/samples/ai-app-claude-code)

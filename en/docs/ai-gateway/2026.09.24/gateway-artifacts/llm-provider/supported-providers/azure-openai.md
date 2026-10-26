@@ -1,14 +1,14 @@
 ---
 title: "Azure OpenAI"
 description: "Connect the AI Gateway to Azure OpenAI: the values your Azure resource supplies, what the azure-openai template extracts, and OpenAI-format compatibility."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/azure-openai/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/azure-openai.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/azure-openai/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/azure-openai.md
 tags:
   - ai-gateway
   - llm-provider
   - azure-openai
   - llm
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-18
 content_type: "how-to"
 ---
@@ -38,14 +38,14 @@ The gateway ships an `azure-openai` template that tells it where to find token c
 The template extracts the following:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProviderTemplate
 metadata:
   name: azure-openai
 spec:
   displayName: Azure OpenAI
-  groupId: wso2-azure-openai
-  managedBy: wso2
+  groupId: xtemplategroupprefixx-azure-openai
+  managedBy: xtemplateownerx
   version: v1.0
   promptTokens:
     location: payload
@@ -83,7 +83,7 @@ The gateway reads the token counts and the model name from the response payload,
 Deploy the provider through the management API, following the procedure in [Create and configure an LLM provider](../create-and-configure-an-llm-provider.md). An Azure OpenAI provider takes this shape:
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: azure-openai-provider
@@ -116,7 +116,7 @@ The `context` value sets the URL prefix the provider answers on, so this provide
 
 ## OpenAI-format compatibility
 
-Azure OpenAI accepts the OpenAI wire format, but on a path built from your deployment and API version. When an LLM proxy routes OpenAI-format requests to this provider, apply the [`openai-to-azure-openai-transformer`](https://wso2.com/api-platform/policy-hub/policies/openai-to-azure-openai-transformer) policy, which rewrites the request path to match.
+Azure OpenAI accepts the OpenAI wire format, but on a path built from your deployment and API version. When an LLM proxy routes OpenAI-format requests to this provider, apply the [`openai-to-azure-openai-transformer`](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-azure-openai-transformer) policy, which rewrites the request path to match.
 
 The transformer takes three parameters. `apiVersion` is required. `model` is optional and falls back to the model in the request body. `pathSuffix` is optional and defaults to `/chat/completions`.
 

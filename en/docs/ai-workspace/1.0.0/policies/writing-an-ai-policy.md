@@ -1,14 +1,14 @@
 ---
 title: "Write an AI policy for the AI Gateway"
 description: "Build a custom AI policy using the gateway SDK, including support for buffered and streaming (SSE) LLM request and response bodies."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/policies/writing-an-ai-policy/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/policies/writing-an-ai-policy.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/policies/writing-an-ai-policy/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/policies/writing-an-ai-policy.md
 tags:
   - cloud
   - ai-workspace
   - custom-policy
   - sdk
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-24
 content_type: "how-to"
 ---
@@ -17,7 +17,7 @@ content_type: "how-to"
 
 An AI policy inspects, controls, and modifies the traffic going to and from a large language model (LLM) provider such as OpenAI or Anthropic.
 
-AI policies use the same `Policy` interface as standard gateway policies. For full API details, see the [policy SDK reference](https://pkg.go.dev/github.com/wso2/api-platform/sdk/core/policy/v1alpha2).
+AI policies use the same `Policy` interface as standard gateway policies. For full API details, see the [policy SDK reference](https://pkg.go.dev/github.com/xgithuborgx/api-platform/sdk/core/policy/v1alpha2).
 
 The key difference is how you handle LLM request and response bodies, especially:
 
@@ -100,7 +100,7 @@ import (
     "context"
     "fmt"
 
-    policy "github.com/wso2/api-platform/sdk/core/policy/v1alpha2"
+    policy "github.com/xgithuborgx/api-platform/sdk/core/policy/v1alpha2"
 )
 
 type MyAIPolicy struct {

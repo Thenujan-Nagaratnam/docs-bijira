@@ -1,14 +1,14 @@
 ---
 title: "Arazzo MCP Generator CLI quick start guide"
 description: "Convert an Arazzo specification into a Dockerized MCP server using the arazzo-mcp-gen CLI, from validation to running the generated server."
-canonical_url: https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/quick-start-guide/
-md_url: https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/quick-start-guide.md
+canonical_url: https://xdocshostx/xdocspathx/tools/arazzo-mcp-gen-cli/quick-start-guide/
+md_url: https://xdocshostx/xdocspathx/tools/arazzo-mcp-gen-cli/quick-start-guide.md
 tags:
   - tools
   - cli
   - arazzo
   - mcp
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-02
 content_type: "quickstart"
 ---
@@ -43,7 +43,7 @@ the CLI will:
 
 ## Installation
 
-Download the archive for your platform from the [releases page](https://github.com/wso2/arazzo-mcp-generator/releases), or use the install commands below.
+Download the archive for your platform from the [releases page](https://github.com/xgithuborgx/arazzo-mcp-generator/releases), or use the install commands below.
 
 The commands below install version `0.1.0`. Substitute another version number in the URL to install a different release.
 
@@ -52,7 +52,7 @@ The commands below install version `0.1.0`. Substitute another version number in
     Download the archive:
 
     ```bash
-    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-darwin-arm64.zip
+    curl -LO https://github.com/xgithuborgx/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-darwin-arm64.zip
     ```
 
     Extract it:
@@ -72,7 +72,7 @@ The commands below install version `0.1.0`. Substitute another version number in
     Download the archive:
 
     ```bash
-    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-darwin-amd64.zip
+    curl -LO https://github.com/xgithuborgx/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-darwin-amd64.zip
     ```
 
     Extract it:
@@ -92,7 +92,7 @@ The commands below install version `0.1.0`. Substitute another version number in
     Download the archive:
 
     ```bash
-    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-linux-amd64.zip
+    curl -LO https://github.com/xgithuborgx/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-linux-amd64.zip
     ```
 
     Extract it:
@@ -112,7 +112,7 @@ The commands below install version `0.1.0`. Substitute another version number in
     Download the archive:
 
     ```bash
-    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-linux-arm64.zip
+    curl -LO https://github.com/xgithuborgx/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-linux-arm64.zip
     ```
 
     Extract it:
@@ -132,7 +132,7 @@ The commands below install version `0.1.0`. Substitute another version number in
     Download the archive:
 
     ```powershell
-    Invoke-WebRequest -Uri https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-windows-amd64.zip -OutFile arazzo-mcp-gen-0.1.0-windows-amd64.zip
+    Invoke-WebRequest -Uri https://github.com/xgithuborgx/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-windows-amd64.zip -OutFile arazzo-mcp-gen-0.1.0-windows-amd64.zip
     ```
 
     Extract it:
@@ -165,7 +165,7 @@ arazzo-mcp-gen --version
 Each release includes `checksums.txt`, which lists a fingerprint for every published archive. Comparing your copy against that list confirms the download arrived intact. Run this from the folder holding the archive:
 
 ```bash
-curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/checksums.txt
+curl -LO https://github.com/xgithuborgx/arazzo-mcp-generator/releases/download/0.1.0/checksums.txt
 shasum -a 256 -c checksums.txt --ignore-missing
 ```
 
@@ -180,7 +180,7 @@ In this scenario, you have an OpenAPI spec for a pet store API and want to expos
 The tool needs your Arazzo file, which lists the workflow steps, and the OpenAPI file describing the API those steps call.
 
 1. Create a folder named `pet-project`, then change into it with `cd pet-project`. The commands in the following steps all run from inside this folder.
-2. Save your Arazzo file (for example, `petstore_workflow.yaml`) inside it. If you don't have one, open the [sample Arazzo file](https://github.com/wso2/arazzo-mcp-generator#sample-arazzo-file), copy the YAML block, and save it under that name.
+2. Save your Arazzo file (for example, `petstore_workflow.yaml`) inside it. If you don't have one, open the [sample Arazzo file](https://github.com/xgithuborgx/arazzo-mcp-generator#sample-arazzo-file), copy the YAML block, and save it under that name.
 3. If your Arazzo spec references OpenAPI files by name, put those files in this folder too. The sample references the Petstore API by URL, so it needs no local copy.
 
 ```text

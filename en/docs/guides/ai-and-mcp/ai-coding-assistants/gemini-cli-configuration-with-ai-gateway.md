@@ -1,23 +1,23 @@
 ---
 title: "Configure Gemini CLI with AI Gateway"
 description: "Route Google Gemini CLI requests through the AI Gateway using a Gemini LLM provider and App LLM Proxy to apply guardrails, rate limiting, and analytics."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway.md
 tags:
   - guides
   - ai-and-mcp
   - ai-coding-assistants
   - gemini-cli
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-01
 content_type: "how-to"
 ---
 
 # Configuring Google Gemini CLI with AI Gateway
 
-This guide explains how to configure Google Gemini CLI to send requests through WSO2 API Platform using an AI Gateway, a Gemini LLM provider, and an App LLM Proxy.
+This guide explains how to configure Google Gemini CLI to send requests through XAPIPLATFORMX using an AI Gateway, a Gemini LLM provider, and an App LLM Proxy.
 
-By routing requests through WSO2 API Platform instead of invoking Google Gemini directly, you can apply security, traffic control, and governance policies such as guardrails, rate limiting, analytics, and monitoring. The Gateway acts as an intermediary, forwarding requests from Google Gemini CLI to Google Gemini while enforcing these controls.
+By routing requests through XAPIPLATFORMX instead of invoking Google Gemini directly, you can apply security, traffic control, and governance policies such as guardrails, rate limiting, analytics, and monitoring. The Gateway acts as an intermediary, forwarding requests from Google Gemini CLI to Google Gemini while enforcing these controls.
 
 ---
 
@@ -26,19 +26,19 @@ By routing requests through WSO2 API Platform instead of invoking Google Gemini 
 Before you begin, make sure you have:
 
 - A Google Gemini API key
-- A WSO2 API Platform admin account
+- A XAPIPLATFORMX admin account
 - Google Gemini CLI installed
 
 ---
 
-## Step 1: Start an AI Gateway on WSO2 API Platform
+## Step 1: Start an AI Gateway on XAPIPLATFORMX
 
 !!! note
     If an AI Gateway is already created and active, continue to Step 2.
 
 If an AI Gateway is not already created, follow these steps:
 
-1. Log in to the WSO2 API Platform Console as an admin.
+1. Log in to the XAPIPLATFORMX Console as an admin.
 
 2. Make sure you are at the **Organization** level.
     - Select the organization from the header tab at the top of the page.
@@ -64,7 +64,7 @@ Once the AI Gateway is active, you can continue to create the Gemini LLM provide
 
 ## Step 2: Create and Deploy a Gemini LLM Provider in AI Workspace Console
 
-1. Log in to the WSO2 API Platform Console as an admin.
+1. Log in to the XAPIPLATFORMX Console as an admin.
 
 2. Click **AI Workspace** at the top of the page.
 
@@ -98,7 +98,7 @@ The Gemini LLM provider is now deployed to the selected AI Gateway.
 
 ## Step 3: Create and Deploy an App LLM Proxy
 
-The App LLM Proxy is the endpoint that Google Gemini CLI will invoke through WSO2 API Platform.
+The App LLM Proxy is the endpoint that Google Gemini CLI will invoke through XAPIPLATFORMX.
 
 1. Click **Back to Service Provider** to return to the Gemini provider overview page.
 
@@ -160,7 +160,7 @@ The App LLM Proxy is now deployed to the selected AI Gateway.
 
 ### Generate an API Key for Gemini CLI
 
-Google Gemini CLI needs an API key from WSO2 API Platform to invoke the deployed App LLM Proxy.
+Google Gemini CLI needs an API key from XAPIPLATFORMX to invoke the deployed App LLM Proxy.
 
 1. Click **Back to App LLM Proxy** to return to the App LLM Proxy overview page.
 
@@ -190,7 +190,7 @@ Export the Invoke URL copied from the App LLM Proxy overview page:
 export GOOGLE_GEMINI_BASE_URL="<INVOKE URL>"
 ```
 
-Export the API key generated from WSO2 API Platform:
+Export the API key generated from XAPIPLATFORMX:
 
 ```bash
 export GEMINI_API_KEY="<API PLATFORM API KEY>"
@@ -199,14 +199,14 @@ export GEMINI_API_KEY="<API PLATFORM API KEY>"
 Replace:
 
 - `<INVOKE URL>` with the Invoke URL copied from the App LLM Proxy overview page
-- `<API PLATFORM API KEY>` with the API key generated from WSO2 API Platform
+- `<API PLATFORM API KEY>` with the API key generated from XAPIPLATFORMX
 
 !!! note
     These environment variables must be set in the same terminal session where Gemini CLI is executed. Alternatively, they can be configured as permanent environment variables.
 
 ### Configure SSL Certificate Trust
 
-When using a local WSO2 API Platform AI Gateway over HTTPS, Gemini CLI must be able to trust the certificate presented by the Gateway.
+When using a local XPLATFORMAIGATEWAYX over HTTPS, Gemini CLI must be able to trust the certificate presented by the Gateway.
 
 !!! note
     If the AI Gateway uses a valid CA-signed certificate, no additional certificate configuration is required.
@@ -231,7 +231,7 @@ After setting the required environment variables, run Gemini CLI:
 gemini
 ```
 
-Google Gemini CLI will now send requests through WSO2 API Platform instead of directly calling the Gemini API.
+Google Gemini CLI will now send requests through XAPIPLATFORMX instead of directly calling the Gemini API.
 
 ---
 
@@ -239,21 +239,21 @@ Google Gemini CLI will now send requests through WSO2 API Platform instead of di
 
 ### View API Analytics and Insights
 
-By routing Gemini CLI requests through the WSO2 API Manager AI Gateway, you automatically gain access to built-in analytics and reporting capabilities.
+By routing Gemini CLI requests through the XAPIMANAGERX AI Gateway, you automatically gain access to built-in analytics and reporting capabilities.
 
-WSO2 provides integrated analytics, powered by Moesif, and also supports integration with external tools such as the ELK stack (**Elasticsearch**, **Logstash**, **Kibana**) and Choreo Analytics.
+XBRANDX provides integrated analytics, powered by Moesif, and also supports integration with external tools such as the ELK stack (**Elasticsearch**, **Logstash**, **Kibana**) and Choreo Analytics.
 
 The following example shows Moesif being used to view analytics.  
 
 [![Moesif Overview dashboard showing unique users, total requests, errors, and LLM traffic metrics with time-series chart](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/analytics-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/analytics-example.png)
 
-For more information on Analytics, refer to the official [WSO2 API Platform Documentation](https://wso2.com/api-platform/docs/monitoring-and-insights/integrate-bijira-with-moesif/)
+For more information on Analytics, refer to the official [XAPIPLATFORMX Documentation](https://xdocshostx/xdocspathx/monitoring-and-insights/integrate-bijira-with-moesif/)
 
 ---
 
-### Implement WSO2 AI Gateway Guardrails for Enhanced Control
+### Implement XAIGATEWAYX Guardrails for Enhanced Control
 
-WSO2 API Manager AI Gateway guardrails enable granular control over the data exchanged between Gemini CLI and the Google Gemini API.
+XAPIMANAGERX AI Gateway guardrails enable granular control over the data exchanged between Gemini CLI and the Google Gemini API.
 
 By applying guardrails, you can enforce security and compliance policies.
 
@@ -261,13 +261,13 @@ For example, a **PII Masking Regex Guardrail** can be configured in the request 
 
 [![Gemini CLI terminal showing support ticket summary with credentials and phone numbers masked by PII guardrail](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-guardrail-redacted-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-guardrail-redacted-example.png)
 
-For more information on AI Guardrails, refer to the official [WSO2 API Platform Documentation](https://wso2.com/api-platform/docs/ai-gateway/llm/guardrails/pii-masking-regex/)
+For more information on AI Guardrails, refer to the official [XAPIPLATFORMX Documentation](https://xdocshostx/xdocspathx/ai-gateway/llm/guardrails/pii-masking-regex/)
 
 ---
 
 ### Rate limiting at AI Gateway
 
-WSO2 API Manager AI Gateway supports request-based and token-based rate limiting for AI APIs. This allows you to control Gemini CLI usage when requests are routed through the Gateway.
+XAPIMANAGERX AI Gateway supports request-based and token-based rate limiting for AI APIs. This allows you to control Gemini CLI usage when requests are routed through the Gateway.
 
 For example, you can create an AI subscription policy with a limited request count or total token count, and apply it when subscribing to the Gemini API. Once Gemini CLI invokes the API through that subscription, the Gateway enforces the selected quota automatically. If the configured limit is exceeded, subsequent requests are throttled until the quota resets.
 
@@ -275,19 +275,19 @@ This helps control token consumption and avoid unexpected costs.
 
 The following screenshot illustrates Gemini CLI operating under a minute-level token limit, where requests are delayed until the quota is refreshed.
 
-[![Gemini CLI terminal showing a response about WSO2 API Manager documentation repository contents](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-rate-limit-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-rate-limit-example.png)
+[![Gemini CLI terminal showing a response about XAPIMANAGERX documentation repository contents](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-rate-limit-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-rate-limit-example.png)
 
-For more information on Rate Limiting and other policies, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-workspace/policies/overview/)
+For more information on Rate Limiting and other policies, refer to the official [XAPIPLATFORMX documentation](https://xdocshostx/xdocspathx/ai-workspace/policies/overview/)
 
 ---
 
 ### Multi-Model Routing
 
-WSO2 API Manager AI Gateway supports multi-model routing, allowing you to dynamically route requests to different AI models based on defined conditions or strategies.
+XAPIMANAGERX AI Gateway supports multi-model routing, allowing you to dynamically route requests to different AI models based on defined conditions or strategies.
 
 This is useful when working with Gemini CLI in scenarios such as fallback handling, load balancing, or cost optimization. Instead of sending all requests to a single model, the Gateway can intelligently distribute or reroute requests across multiple endpoints.
 
-For example, the following screenshot illustrates Gemini CLI being proxied through WSO2 API Manager AI Gateway, where the user explicitly requests the `gemini-3.1-pro-preview` model. Since this model has exceeded its usage limits, the request fails.
+For example, the following screenshot illustrates Gemini CLI being proxied through XAPIMANAGERX AI Gateway, where the user explicitly requests the `gemini-3.1-pro-preview` model. Since this model has exceeded its usage limits, the request fails.
 
 [![Gemini CLI terminal showing "Usage limit reached for all Pro models" error after requesting gemini-3.1-pro-preview](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-multi-model-routing-example-1.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-multi-model-routing-example-1.png)
 
@@ -297,13 +297,13 @@ As a result, the request is successfully processed without requiring any changes
 
 [![Gemini CLI terminal showing successful response with interaction summary and gemini-2.5-flash model usage statistics](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-multi-model-routing-example-2.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-multi-model-routing-example-2.png)
 
-For more information on Multi-Model Routing, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-gateway/llm/load-balancing/model-round-robin/)
+For more information on Multi-Model Routing, refer to the official [XAPIPLATFORMX documentation](https://xdocshostx/xdocspathx/ai-gateway/llm/load-balancing/model-round-robin/)
 
 ---
 
 ### Prompt Decorator
 
-WSO2 API Manager AI Gateway supports Prompt Decorators, which allow you to modify or enrich prompts before they are sent to the backend AI provider. This is useful for enforcing consistent instructions, adding system-level context, or guiding model behavior without requiring changes in the client application.
+XAPIMANAGERX AI Gateway supports Prompt Decorators, which allow you to modify or enrich prompts before they are sent to the backend AI provider. This is useful for enforcing consistent instructions, adding system-level context, or guiding model behavior without requiring changes in the client application.
 
 As a simple example, you can configure a Prompt Decorator in the request flow to prepend a system instruction to all incoming prompts:
 
@@ -313,11 +313,11 @@ You are operating behind an enterprise AI gateway. Follow these rules:
 2. Never output secrets, tokens, or credentials.
 3. When editing code, explain the change briefly.
 4. When unsure, state the assumption explicitly.
-5. At the end of every response, add the text: 'Routed through WSO2 AI Gateway'.
+5. At the end of every response, add the text: 'Routed through XAIGATEWAYX'.
 ```
 
 Once configured, every request sent from Gemini CLI is automatically modified by the Gateway to include this instruction before being forwarded to the AI provider.
 
-[![Gemini CLI terminal showing capabilities response ending with "Routed through WSO2 AI Gateway" footer from Prompt Decorator](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-prompt-decorator-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-prompt-decorator-example.png)
+[![Gemini CLI terminal showing capabilities response ending with "Routed through XAIGATEWAYX" footer from Prompt Decorator](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-prompt-decorator-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/gemini-cli/gemini-cli-prompt-decorator-example.png)
 
-For more information on Prompt Management, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-gateway/llm/prompt-management/prompt-decorator/)
+For more information on Prompt Management, refer to the official [XAPIPLATFORMX documentation](https://xdocshostx/xdocspathx/ai-gateway/llm/prompt-management/prompt-decorator/)

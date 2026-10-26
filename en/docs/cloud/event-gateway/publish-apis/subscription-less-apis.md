@@ -1,13 +1,13 @@
 ---
 title: "Publish subscription-less APIs on the Event Gateway"
 description: "Publish an API on the Event Gateway without subscription plans so consumers can invoke it without subscribing."
-canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/publish-apis/subscription-less-apis/
-md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/publish-apis/subscription-less-apis.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/event-gateway/publish-apis/subscription-less-apis/
+md_url: https://xdocshostx/xdocspathx/cloud/event-gateway/publish-apis/subscription-less-apis.md
 tags:
   - cloud
   - event-gateway
   - subscriptions
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -27,7 +27,7 @@ Use subscription-less publishing when you want the API to be discoverable in the
 
 Subscription-less behavior applies when no subscription plans are active for the API:
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. Open the project and select the API proxy.
 3. In the left navigation menu, click **Manage** and then **Monetize**.
 4. Ensure **Subscription Plan Status** is **disabled** (off) for all plans. For background on plans, see [Assign Subscription Plans to APIs](../../develop-api-proxy/subscription-plans.md).

@@ -1,26 +1,26 @@
 ---
 title: "Azure guides"
-description: "Use WSO2 API Platform to govern Azure OpenAI and Azure AI Foundry traffic, moderate content with Azure AI Content Safety, and secure APIs with Entra ID."
-canonical_url: https://wso2.com/api-platform/docs/guides/service-providers/azure/
-md_url: https://wso2.com/api-platform/docs/guides/service-providers/azure.md
+description: "Use XAPIPLATFORMX to govern Azure OpenAI and Azure AI Foundry traffic, moderate content with Azure AI Content Safety, and secure APIs with Entra ID."
+canonical_url: https://xdocshostx/xdocspathx/guides/service-providers/azure/
+md_url: https://xdocshostx/xdocspathx/guides/service-providers/azure.md
 tags:
   - guides
   - azure
   - azure-openai
   - entra-id
   - service-provider-guides
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-10-21
 content_type: "reference"
 ---
 
 # Govern Azure AI services and secure APIs with Entra ID
 
-WSO2 API Platform works alongside the Microsoft Azure services you already use. Govern Azure OpenAI and Azure AI Foundry traffic, moderate content with Azure AI Content Safety, secure APIs with Microsoft Entra ID, and send gateway telemetry to Azure Monitor.
+XAPIPLATFORMX works alongside the Microsoft Azure services you already use. Govern Azure OpenAI and Azure AI Foundry traffic, moderate content with Azure AI Content Safety, secure APIs with Microsoft Entra ID, and send gateway telemetry to Azure Monitor.
 
 ## AI Gateway with Azure OpenAI and Azure AI Foundry
 
-Route, secure, and govern traffic to your Azure model deployments through WSO2 AI Gateway.
+Route, secure, and govern traffic to your Azure model deployments through XAIGATEWAYX.
 
 <div class="vendor-cap" markdown="1">
 
@@ -79,7 +79,7 @@ The Azure LLM Cost policy maps each call to your deployment's pricing, so Azure 
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Azure LLM Cost policy](https://wso2.com/api-platform/policy-hub/policies/azure-llm-cost) <span class="vendor-meta">Policy Hub</span>
+- [Azure LLM Cost policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/azure-llm-cost) <span class="vendor-meta">Policy Hub</span>
 - [Cost control and budgets](../../ai-gateway/2026.09.24/cost-control-and-budgets.md) <span class="vendor-meta">AI Gateway</span>
 
 </div>
@@ -101,13 +101,13 @@ Check prompts and responses against Azure AI Content Safety categories and sever
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
 - [Azure Content Safety guardrail](../../cloud/ai-workspace/policies/guardrails/azure-content-safety.md) <span class="vendor-meta">AI Workspace</span>
-- [Azure Content Safety policy](https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation) <span class="vendor-meta">Policy Hub</span>
+- [Azure Content Safety policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/azure-content-safety-content-moderation) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Azure Content Safety policy](https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation) <span class="vendor-meta">Policy Hub</span>
+- [Azure Content Safety policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/azure-content-safety-content-moderation) <span class="vendor-meta">Policy Hub</span>
 - [Guardrails catalogue](../../ai-gateway/2026.09.24/guardrails/guardrails-catalogue.md) <span class="vendor-meta">AI Gateway</span>
 
 </div>
@@ -129,7 +129,7 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
 - [Semantic cache policy](../../cloud/ai-workspace/policies/other-policies/semantic-cache.md) <span class="vendor-meta">AI Workspace</span>
-- [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
+- [Semantic prompt guard policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
@@ -137,8 +137,8 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 
 - [Semantic caching](../../ai-gateway/2026.09.24/semantic-caching.md) <span class="vendor-meta">AI Gateway</span>
 - [Embedding providers for semantic caching](../../ai-gateway/2026.09.24/setup-and-deployment/production-deployment/ai-workload-tuning.md#provision-infrastructure-for-semantic-caching) <span class="vendor-meta">AI Gateway</span>
-- [Semantic Cache policy](https://wso2.com/api-platform/policy-hub/policies/semantic-cache) <span class="vendor-meta">Policy Hub</span>
-- [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
+- [Semantic Cache policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-cache) <span class="vendor-meta">Policy Hub</span>
+- [Semantic prompt guard policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
@@ -209,13 +209,13 @@ Point the collector at Azure Monitor.
 
 ## Architecture and responsibility model
 
-WSO2 API Platform and Azure split the work like this:
+XAPIPLATFORMX and Azure split the work like this:
 
-| Scenario | WSO2 role | Azure role | Runtime traffic |
+| Scenario | XBRANDX role | Azure role | Runtime traffic |
 | --- | --- | --- | --- |
-| Azure OpenAI and AI Foundry through AI Gateway | Proxies and governs LLM requests, and tracks cost per deployment | Hosts the model deployments | Goes through WSO2 AI Gateway to your Azure deployment |
+| Azure OpenAI and AI Foundry through AI Gateway | Proxies and governs LLM requests, and tracks cost per deployment | Hosts the model deployments | Goes through XAIGATEWAYX to your Azure deployment |
 | Azure AI Content Safety | Runs the guardrail and blocks or passes the request | Scores the content | The gateway calls Content Safety alongside each request |
-| Entra ID and Azure Monitor | Validates Entra ID tokens and emits telemetry | Issues tokens, and stores and displays telemetry | API traffic goes through the WSO2 gateway, and telemetry goes to Azure Monitor |
+| Entra ID and Azure Monitor | Validates Entra ID tokens and emits telemetry | Issues tokens, and stores and displays telemetry | API traffic goes through the XBRANDX gateway, and telemetry goes to Azure Monitor |
 
 ## Learn more
 

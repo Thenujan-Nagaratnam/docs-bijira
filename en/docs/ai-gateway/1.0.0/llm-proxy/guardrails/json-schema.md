@@ -1,13 +1,13 @@
 ---
 title: "JSON Schema Guardrail"
 description: "Validate LLM request and response body content against a JSON Schema definition to enforce structured data formats."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/llm-proxy/guardrails/json-schema/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/llm-proxy/guardrails/json-schema.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/llm-proxy/guardrails/json-schema/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/llm-proxy/guardrails/json-schema.md
 tags:
   - ai-gateway
   - guardrails
   - policies
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-16
 content_type: "reference"
 ---
@@ -81,7 +81,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: LlmProvider
 metadata:
   name: json-schema-provider

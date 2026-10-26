@@ -1,14 +1,14 @@
 ---
 title: "Expose AI Workspace"
 description: "Publish AI Workspace on a public hostname with an ingress resource or a reverse proxy, expose the control plane for gateways, and keep redirect URLs and CORS consistent."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/production/expose-the-workspace/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/production/expose-the-workspace.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/production/expose-the-workspace/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/production/expose-the-workspace.md
 tags:
   - ai-workspace
   - production
   - ingress
   - networking
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-06
 content_type: "how-to"
 ---

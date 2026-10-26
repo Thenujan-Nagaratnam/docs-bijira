@@ -1,14 +1,14 @@
 ---
 title: "Insights overview"
 description: "Monitor API, LLM, and MCP traffic, errors, and platform health using the Insights dashboards in API Platform."
-canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/insights/
-md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/insights.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/insights/
+md_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/insights.md
 tags:
   - cloud
   - monitoring
   - insights
   - analytics
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "overview"
 ---

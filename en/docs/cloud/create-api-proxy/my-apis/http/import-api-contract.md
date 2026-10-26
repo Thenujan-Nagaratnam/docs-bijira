@@ -1,13 +1,13 @@
 ---
 title: "Import REST API Contract"
-description: "Create a REST API proxy by importing an OpenAPI contract URL in WSO2 API Platform, then configure, deploy, test, and publish it."
-canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/import-api-contract/
-md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/import-api-contract.md
+description: "Create a REST API proxy by importing an OpenAPI contract URL in XAPIPLATFORMX, then configure, deploy, test, and publish it."
+canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/http/import-api-contract/
+md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/http/import-api-contract.md
 tags:
   - cloud
   - api-proxy
   - openapi
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -25,7 +25,7 @@ In this guide, you will:
 ## Prerequisites
 
 - If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -36,13 +36,13 @@ In this guide, you will:
 
 In this guide, you will specify a URL to an OpenAPI definition of a sample API to create an API proxy.
 
-1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
 3. Select **Import API Contract**.
 4. Select **URL** option and provide the following URL to import the API contract from the GitHub repository:
 
    ```text
-   https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml   
+   https://raw.githubusercontent.com/xgithuborgx/xcloudslugx-samples/refs/heads/main/reading-list-api/openapi.yaml   
    ```
 
 5. Click **Next** and edit pre-defined values as needed. You can keep the default values for this sample.

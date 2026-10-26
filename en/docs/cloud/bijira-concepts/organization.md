@@ -1,13 +1,13 @@
 ---
 title: "Organizations in API Platform"
 description: "Understand organizations in API Platform: structure, groups, roles, and how to find your Organization ID and Handle."
-canonical_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/organization/
-md_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/organization.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/bijira-concepts/organization/
+md_url: https://xdocshostx/xdocspathx/cloud/bijira-concepts/organization.md
 tags:
   - cloud
   - concepts
   - organization
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "concept"
 ---
@@ -83,7 +83,7 @@ API Platform uses two unique identifiers for organizations, the **Organization I
 
 A unique, system-generated identifier for each organization. To find your Organization ID:
 
-1. Go to the [API Platform Console](https://console.bijira.dev/) and sign in.
+1. Go to the [API Platform Console](https://console.xclouddomainx/) and sign in.
 2. Click the **Organization** list in the header and select your organization.
 3. In the left navigation, click **Settings**.
 4. In the header, click the **Organization** list to open organization-level settings.
@@ -93,7 +93,7 @@ A unique, system-generated identifier for each organization. To find your Organi
 
 A unique, human-readable string that corresponds to your organization's name. To find your Organization Handle:
 
-1. Go to the [API Platform Console](https://console.bijira.dev/) and sign in.
+1. Go to the [API Platform Console](https://console.xclouddomainx/) and sign in.
 2. Click the **Organization** list in the header and select your organization.
 3. In the left navigation, click **Settings**.
 4. Under **Organization**, click **Copy Handle**.

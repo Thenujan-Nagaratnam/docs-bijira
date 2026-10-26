@@ -1,13 +1,13 @@
 ---
 title: "Gateway Configuration and Environment Interpolation"
 description: "How the gateway loads config.toml, injects environment values through interpolation tokens, and bootstraps keys and certificates with the setup script."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/setup-and-deployment/configuration/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/setup-and-deployment/configuration.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/setup-and-deployment/configuration/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/setup-and-deployment/configuration.md
 tags:
   - api-gateway
   - configuration
   - interpolation
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-17
 content_type: "reference"
 ---
@@ -68,7 +68,7 @@ The shipped `config.toml` already carries interpolation tokens for the settings 
 | `APIP_GW_CONTROLLER_CONTROLPLANE_TOKEN` | `controller.controlplane.token` | Control plane registration token |
 | `APIP_GW_CONTROLLER_LOGGING_LEVEL` | `controller.logging.level` | `debug`, `info`, `warn`, `error` |
 
-For the complete list of tokens and every configurable option, refer to the [config template](https://github.com/wso2/api-platform/blob/main/gateway/configs/config-template.toml).
+For the complete list of tokens and every configurable option, refer to the [config template](https://github.com/xgithuborgx/api-platform/blob/main/gateway/configs/config-template.toml).
 
 !!! tip "Distinct from artifact templating"
     The interpolation tokens described here apply to the gateway's **own `config.toml`**. API **artifacts** (RestApi, LLMProvider, and other resource files) support a separate, richer set of template functions (`env`, `required`, `redact`, `default`) applied to the artifact body. See [Artifact Templating](./artifact-templating.md) for that mechanism.

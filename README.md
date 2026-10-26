@@ -1,8 +1,8 @@
 # API Platform Documentation
 
-This is the WSO2 API Platform documentation repository. This repository is open and we welcome your contributions!
+This is the XAPIPLATFORMX documentation repository. This repository is open and we welcome your contributions!
 
-To see the API Platform documentation site, go to [https://wso2.com/api-platform/docs/](https://wso2.com/api-platform/docs/)
+To see the API Platform documentation site, go to [https://xdocshostx/xdocspathx/](https://xdocshostx/xdocspathx/)
 
 ## Local Development Setup
 
@@ -35,8 +35,8 @@ This script will:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/wso2/docs-bijira.git
-   cd docs-bijira
+   git clone https://github.com/xgithuborgx/xdocsrepox.git
+   cd xdocsrepox
    ```
 
 2. **Create and activate a Python virtual environment:**
@@ -102,7 +102,7 @@ The built site will be generated in the `site/` directory.
 ### Project Structure
 
 ```
-docs-bijira/
+xdocsrepox/
 ├── en/                          # English documentation
 │   ├── docs/                    # Documentation source files
 │   ├── theme/                   # Custom theme files
@@ -242,7 +242,7 @@ placeholders and paste the prompt below. It captures every rule above so the
 agent can do the change end-to-end.
 
 ````text
-You are working in the WSO2 API Platform docs repo (MkDocs Material, root `en/`).
+You are working in the XAPIPLATFORMX docs repo (MkDocs Material, root `en/`).
 Add a left-nav VERSION SELECTOR to an existing top-level nav section, using the
 existing versioned-section mechanism. DO NOT modify the theme files that power it
 (`en/theme/material/partials/nav-item.html`, `en/docs/assets/js/theme.js`,

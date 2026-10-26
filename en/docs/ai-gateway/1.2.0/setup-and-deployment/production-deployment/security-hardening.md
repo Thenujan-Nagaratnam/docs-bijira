@@ -1,8 +1,8 @@
 ---
 title: "Security Hardening"
 description: "Harden API Platform AI Gateway before production: AES-256 at-rest encryption keys, TLS for the listener and upstreams, and management API authentication."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/production-deployment/security-hardening/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/production-deployment/security-hardening.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/production-deployment/security-hardening/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/production-deployment/security-hardening.md
 tags:
   - ai-gateway
   - production
@@ -10,7 +10,7 @@ tags:
   - encryption
   - tls
   - secrets
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-10-20
 content_type: "how-to"
 ---
@@ -233,7 +233,7 @@ Choose the strategy that matches how your organization handles access.
     Set `audience` to the value your identity provider puts in the `aud` claim of tokens it issues for the gateway controller. If you leave `audience` empty, the controller accepts tokens issued for any audience and logs a warning at startup. For details on `audience`, `roles_claim`, and `role_mapping`, see [Secure the management API](../secure-the-management-api.md).
 
     !!! note
-        The values in `role_mapping` must match claims the identity provider actually issues in its JSON Web Tokens (JWTs). For the roles the controller recognizes and the operations each one permits, see the [gateway controller management API definition](https://raw.githubusercontent.com/wso2/api-platform/refs/tags/ai-gateway/v1.2.0/gateway/gateway-controller/api/management-openapi.yaml).
+        The values in `role_mapping` must match claims the identity provider actually issues in its JSON Web Tokens (JWTs). For the roles the controller recognizes and the operations each one permits, see the [gateway controller management API definition](https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/tags/ai-gateway/v1.2.0/gateway/gateway-controller/api/management-openapi.yaml).
 
 === "Option B: basic auth with bcrypt"
 

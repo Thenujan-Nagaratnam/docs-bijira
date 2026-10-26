@@ -1,13 +1,13 @@
 ---
 title: "Minimum resource requirements"
 description: "Baseline CPU and memory requirements for API Portal setup and production planning."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/setting-up/resource-requirement/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/setting-up/resource-requirement.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/setting-up/resource-requirement/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/setting-up/resource-requirement.md
 tags:
   - api-portal
   - setup
   - resources
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-10-03
 content_type: "reference"
 ---

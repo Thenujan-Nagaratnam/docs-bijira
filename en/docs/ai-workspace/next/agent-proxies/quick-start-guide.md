@@ -1,15 +1,15 @@
 ---
 title: "A2A agent proxy quick start guide"
 description: "Create an A2A agent proxy in AI Workspace, deploy it to an AI Gateway, invoke the agent over both A2A bindings, and secure it with an API key."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/agent-proxies/quick-start-guide/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/agent-proxies/quick-start-guide.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/agent-proxies/quick-start-guide/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/agent-proxies/quick-start-guide.md
 tags:
   - ai-workspace
   - agent-proxies
   - a2a
   - agents
   - quickstart
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-10-09
 content_type: "quickstart"
 ---

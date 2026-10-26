@@ -1,13 +1,13 @@
 ---
 title: "Monetize a REST API with Stripe"
-description: "Charge for an existing REST API without writing billing code: publish an API with a Pay-as-you-go plan and let WSO2 API Platform sync per-request usage to Stripe for metering and payments."
-canonical_url: https://wso2.com/api-platform/docs/guides/monetization/api-monetization/
-md_url: https://wso2.com/api-platform/docs/guides/monetization/api-monetization.md
+description: "Charge for an existing REST API without writing billing code: publish an API with a Pay-as-you-go plan and let XAPIPLATFORMX sync per-request usage to Stripe for metering and payments."
+canonical_url: https://xdocshostx/xdocspathx/guides/monetization/api-monetization/
+md_url: https://xdocshostx/xdocspathx/guides/monetization/api-monetization.md
 tags:
   - guides
   - monetization
   - stripe
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-26
 content_type: "tutorial"
 ---
@@ -16,13 +16,13 @@ content_type: "tutorial"
 
 ## Overview
 
-This guide shows you how to charge for an existing REST API without writing any billing code. WSO2 API Platform syncs usage to Stripe, handles payment processing, enforces subscription access, and gives consumers a self-service billing portal. By the end, you'll have a published Reading List API with a Pay-as-you-go plan and per-request Stripe metering on every authenticated call.
+This guide shows you how to charge for an existing REST API without writing any billing code. XAPIPLATFORMX syncs usage to Stripe, handles payment processing, enforces subscription access, and gives consumers a self-service billing portal. By the end, you'll have a published Reading List API with a Pay-as-you-go plan and per-request Stripe metering on every authenticated call.
 
 ---
 
 ## Prerequisites
 
-- A WSO2 API Platform account. Sign up for free at [console.bijira.dev](https://console.bijira.dev).
+- A XAPIPLATFORMX account. Sign up for free at [console.xclouddomainx](https://console.xclouddomainx).
 - A Stripe account with your **Publishable Key** and **Secret Key**. These are available in the Stripe Dashboard under **Developers > API Keys**.
 - `curl` for testing.
 
@@ -37,7 +37,7 @@ API consumers (developers / apps)
     v
 
 +---------------------------+
-|     WSO2 API Gateway      |
+|     XAPIGATEWAYX      |
 |  auth · rate limit · audit|
 +---------------------------+
 
@@ -51,13 +51,13 @@ Your backend API             +---------------------------+
                              +---------------------------+
 ```
 
-API consumers subscribe to a plan in the Developer Portal, pay via Stripe checkout, and call the API with an OAuth2 bearer token. The platform reports usage records to Stripe, which handles invoicing, payment collection, and the consumer billing portal — WSO2 API Platform never touches payment details.
+API consumers subscribe to a plan in the Developer Portal, pay via Stripe checkout, and call the API with an OAuth2 bearer token. The platform reports usage records to Stripe, which handles invoicing, payment collection, and the consumer billing portal — XAPIPLATFORMX never touches payment details.
 
 ---
 
 ## Step 1: Create an organization and project
 
-Go to the [API Platform Console](https://console.bijira.dev) and sign in with your Google, GitHub, or Microsoft account.
+Go to the [API Platform Console](https://console.xclouddomainx) and sign in with your Google, GitHub, or Microsoft account.
 
 If this is your first time signing in, you'll be prompted to create an organization. Enter `sampleorganization` as the name, accept the privacy policy and terms of use, and click **Create**.
 
@@ -89,7 +89,7 @@ Create an API proxy from the Reading List OpenAPI spec. This is the endpoint the
 3. Click **URL for API Contract**, paste the following URL, and click **Next**:
 
     ```text
-    https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml
+    https://raw.githubusercontent.com/xgithuborgx/xcloudslugx-samples/refs/heads/main/reading-list-api/openapi.yaml
     ```
 
 4. On the **Create API Proxy** page, click **Create**.
@@ -195,7 +195,7 @@ Publish the API so consumers can discover it, review available plans, and subscr
 
 As an API consumer, subscribe to the Pay-as-you-go plan through the Developer Portal.
 
-1. Go to [devportal.bijira.dev](https://devportal.bijira.dev) and sign in.
+1. Go to [devportal.xclouddomainx](https://devportal.xclouddomainx) and sign in.
 2. In the sidebar, click **APIs**.
 3. Find the Reading List API and click **Subscribe**.
 4. In the **Choose Your Subscription Plan** dialog, select an application from the dropdown, or create one named `Reading List App`.
@@ -207,7 +207,7 @@ As an API consumer, subscribe to the Pay-as-you-go plan through the Developer Po
 ![Stripe checkout confirmation after subscribing Reading List App to the Pay-as-you-go plan](../../assets/clips/monetization/api-monetization/subscribe_api.gif){.cInlineImage-full}
 
 !!! note
-    Payments are processed by Stripe, and WSO2 API Platform doesn't store your payment details. If your Stripe account is in test mode, use the test card `4242 4242 4242 4242` with any future expiry date and any CVC to complete checkout.
+    Payments are processed by Stripe, and XAPIPLATFORMX doesn't store your payment details. If your Stripe account is in test mode, use the test card `4242 4242 4242 4242` with any future expiry date and any CVC to complete checkout.
 
 ---
 
@@ -300,7 +300,7 @@ After making API calls, check your usage, upcoming charges, and invoices from th
 
 ## What you learned
 
-- Connected a Stripe account to WSO2 API Platform so the platform manages all billing infrastructure without custom code.
+- Connected a Stripe account to XAPIPLATFORMX so the platform manages all billing infrastructure without custom code.
 - Created a Unit-priced Pay-as-you-go subscription plan, then enabled and published it to the Developer Portal for consumer self-service.
 - Subscribed to a paid plan via a Stripe-powered checkout, with access granted immediately after payment.
 - Invoked a monetized API using OAuth2 credentials, with each request automatically metered and reported to Stripe.

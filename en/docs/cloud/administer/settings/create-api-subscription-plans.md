@@ -1,13 +1,13 @@
 ---
 title: "Create API subscription plans"
 description: "Define rate limits, burst control, and pricing models for organization-level API subscription plans in API Platform."
-canonical_url: https://wso2.com/api-platform/docs/cloud/administer/settings/create-api-subscription-plans/
-md_url: https://wso2.com/api-platform/docs/cloud/administer/settings/create-api-subscription-plans.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/administer/settings/create-api-subscription-plans/
+md_url: https://xdocshostx/xdocspathx/cloud/administer/settings/create-api-subscription-plans.md
 tags:
   - cloud
   - administer
   - subscription-plans
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -23,7 +23,7 @@ In API Platform, users with the administrator role can create, update, and delet
 
 To create an organization-level subscription plan, follow the steps given below:
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click **Admin** and then click **Settings**. This opens the organization-level settings page.
 4. Click the **Subscription Plans** tab (here you can see the already available subscription plans).

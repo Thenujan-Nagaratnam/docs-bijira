@@ -1,13 +1,13 @@
 ---
 title: "API Portal configuration reference"
 description: "How the API Portal & MCP Hub loads config.toml, injects environment values through interpolation tokens, and the full reference of every supported configuration key."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/references/configurations/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/references/configurations.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/references/configurations/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/references/configurations.md
 tags:
   - cloud
   - api-portal
   - configuration
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-24
 content_type: "reference"
 ---

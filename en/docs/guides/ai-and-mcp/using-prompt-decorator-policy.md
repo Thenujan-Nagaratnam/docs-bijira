@@ -1,14 +1,14 @@
 ---
 title: "Enforce a consistent AI persona with the prompt decorator policy"
 description: "Prepend a persona system message to every request on an LLM proxy with the prompt decorator policy, so every client application gets the same on-brand assistant without changing any code."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/using-prompt-decorator-policy/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/using-prompt-decorator-policy.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/using-prompt-decorator-policy/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/using-prompt-decorator-policy.md
 tags:
   - guides
   - ai-and-mcp
   - llm
   - ai-workspace
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-02
 content_type: "tutorial"
 ---
@@ -30,7 +30,7 @@ The scenario throughout this guide is a customer-facing booking assistant for th
 
 ## Prerequisites
 
-- A WSO2 API Platform account. [Sign up for free](https://console.bijira.dev).
+- A XAPIPLATFORMX account. [Sign up for free](https://console.xclouddomainx).
 - An OpenAI API key
 - `curl` for testing
 
@@ -42,7 +42,7 @@ Your application
     |  { "messages": [ { "role": "user", "content": "Hi, I'd like to book a room." } ] }
     v
 +---------------------------------------------------+
-|  WSO2 AI Gateway                                  |
+|  XAIGATEWAYX                                  |
 |  [ LLM Proxy ]                                    |
 |  auth · prompt decoration · audit logging         |
 |                                                   |
@@ -60,7 +60,7 @@ The LLM proxy is deployed on the AI Gateway, which sits between your application
 
 ## Step 1: Create an organization and project
 
-Go to the [WSO2 AI Workspace](https://ai-workspace.bijira.dev/) and sign in with your Google, GitHub, or Microsoft account.
+Go to the [XAIWORKSPACEX](https://ai-workspace.xclouddomainx/) and sign in with your Google, GitHub, or Microsoft account.
 
 If this is your first time signing in, you'll be prompted to create an organization. Enter a name, accept the privacy policy and terms of use, and click **Create**.
 
@@ -273,10 +273,10 @@ Use the API key and invoke URL from Step 7 for all requests below.
 
 - [Enforce token-based rate limiting on an LLM proxy](enforce-token-based-rate-limiting-on-an-llm-proxy.md) — cap token consumption on the same proxy so no single application drains your budget
 - [Set up a governed multi-model LLM proxy with cost controls and failover](set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md) — extend this proxy with model round-robin distribution, PII masking, and semantic caching
-- [Prompt decorator policy reference](https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/prompt-management/prompt-decorator/) — full parameter reference for chat and text decoration, prepend and append behavior, and JSONPath expressions
+- [Prompt decorator policy reference](https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/prompt-management/prompt-decorator/) — full parameter reference for chat and text decoration, prepend and append behavior, and JSONPath expressions
 
 ## Try the sample
 
 The companion sample runs this setup end to end using Docker, with a mock OpenAI backend and a pre-configured prompt decorator policy that demonstrates both chat decoration (prepend a persona) and text decoration (append an instruction). No real API credentials required.
 
-[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/prompt-decorator-policy)
+[View the sample on GitHub](https://github.com/xgithuborgx/api-platform/tree/main/samples/prompt-decorator-policy)

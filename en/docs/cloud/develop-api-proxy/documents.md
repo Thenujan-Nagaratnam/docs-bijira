@@ -1,13 +1,13 @@
 ---
 title: "Add Documents to an API Proxy"
 description: "Add supporting documentation, usage guides, and version history to an API proxy before publishing it to the Developer Portal."
-canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/documents/
-md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/documents.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/documents/
+md_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/documents.md
 tags:
   - cloud
   - api-proxy
   - documentation
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -27,7 +27,7 @@ To provide such information that improves the overall visibility of the API, an 
 
 To add documentation for an API, follow the steps given below.
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 
 2. Select the project and the API that you want to add documentation.
 

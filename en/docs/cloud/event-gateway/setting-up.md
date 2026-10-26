@@ -1,13 +1,13 @@
 ---
 title: "Set up the Event Gateway for production"
 description: "Deploy the API Platform Event Gateway in production using a virtual machine, Docker, or Kubernetes."
-canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/setting-up/
-md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/setting-up.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/event-gateway/setting-up/
+md_url: https://xdocshostx/xdocspathx/cloud/event-gateway/setting-up.md
 tags:
   - cloud
   - event-gateway
   - deployment
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -45,17 +45,17 @@ This guide provides detailed instructions for deploying the API Platform Event G
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/event-gateway/v0.8.0/wso2apip-event-gateway-0.8.0.zip && \
-    unzip wso2apip-event-gateway-0.8.0.zip
+    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/event-gateway/v0.8.0/xartifactprefixx-event-gateway-0.8.0.zip && \
+    unzip xartifactprefixx-event-gateway-0.8.0.zip
     ```
     ### Step 2: Configure the Gateway
 
-    Run this command to create `wso2apip-event-gateway-0.8.0/configs/keys.env` with the required environment variables:
+    Run this command to create `xartifactprefixx-event-gateway-0.8.0/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > wso2apip-event-gateway-0.8.0/configs/keys.env << 'ENVFILE'
+    cat > xartifactprefixx-event-gateway-0.8.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
+    GATEWAY_CONTROLPLANE_HOST=connect.xclouddomainx
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -65,7 +65,7 @@ This guide provides detailed instructions for deploying the API Platform Event G
     1. Navigate to the gateway folder:
 
         ```bash
-        cd wso2apip-event-gateway-0.8.0
+        cd xartifactprefixx-event-gateway-0.8.0
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
@@ -109,18 +109,18 @@ This guide provides detailed instructions for deploying the API Platform Event G
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/event-gateway/v0.8.0/wso2apip-event-gateway-0.8.0.zip && \
-    unzip wso2apip-event-gateway-0.8.0.zip
+    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/event-gateway/v0.8.0/xartifactprefixx-event-gateway-0.8.0.zip && \
+    unzip xartifactprefixx-event-gateway-0.8.0.zip
     ```
 
     ### Step 2: Configure the Gateway
 
-    Run this command to create `wso2apip-event-gateway-0.8.0/configs/keys.env` with the required environment variables:
+    Run this command to create `xartifactprefixx-event-gateway-0.8.0/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > wso2apip-event-gateway-0.8.0/configs/keys.env << 'ENVFILE'
+    cat > xartifactprefixx-event-gateway-0.8.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
+    GATEWAY_CONTROLPLANE_HOST=connect.xclouddomainx
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -133,7 +133,7 @@ This guide provides detailed instructions for deploying the API Platform Event G
     1. Navigate to the gateway folder:
 
         ```bash
-        cd wso2apip-event-gateway-0.8.0
+        cd xartifactprefixx-event-gateway-0.8.0
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
@@ -193,8 +193,8 @@ This guide provides detailed instructions for deploying the API Platform Event G
     Run this command to install the event gateway chart with control plane configurations:
 
     ```bash
-    helm install event-gateway oci://ghcr.io/wso2/api-platform/helm-charts/event-gateway --version 1.0.0 \
-      --set gateway.controller.controlPlane.host="connect.bijira.dev" \
+    helm install event-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/event-gateway --version 1.0.0 \
+      --set gateway.controller.controlPlane.host="connect.xclouddomainx" \
       --set gateway.controller.controlPlane.port=443 \
       --set gateway.controller.controlPlane.token.value="your-gateway-token" \
       --set gateway.config.analytics.publishers.moesif.application_id="your-moesif-key" \
@@ -217,7 +217,7 @@ This guide provides detailed instructions for deploying the API Platform Event G
     To upgrade to a new version:
 
     ```bash
-    helm upgrade event-gateway oci://ghcr.io/wso2/api-platform/helm-charts/event-gateway --version <new-version> \
+    helm upgrade event-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/event-gateway --version <new-version> \
       -f values.yaml
     ```
 

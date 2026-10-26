@@ -1,13 +1,13 @@
 ---
-title: "Get Started with WSO2 API Platform"
+title: "Get Started with XAPIPLATFORMX"
 description: "Find the right quick start guide based on your goal: manage and govern APIs, run a standalone gateway, govern AI services, or monetize APIs."
-canonical_url: https://wso2.com/api-platform/docs/get-started/
-md_url: https://wso2.com/api-platform/docs/get-started.md
+canonical_url: https://xdocshostx/xdocspathx/get-started/
+md_url: https://xdocshostx/xdocspathx/get-started.md
 tags:
   - getting-started
   - api-management
   - ai-gateway
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-11
 content_type: "quickstart"
 ---
@@ -21,7 +21,7 @@ Not sure where to begin? This page helps you find the right quick start guide ba
 ### I want to manage and govern APIs
 You want the full platform experience: a web console to create, deploy, test, and govern APIs visually.
 
-**If you want WSO2 to host it:**
+**If you want XBRANDX to host it:**
 
 | Guide | What you will do |
 | :--- | :--- |

@@ -1,14 +1,14 @@
 ---
 title: "Management API: Agent Management"
 description: "REST API reference for creating, listing, updating, and deleting A2A agent configurations and their API keys in API Platform Gateway."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/reference/management-api/agent-management/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/reference/management-api/agent-management.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/reference/management-api/agent-management/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/reference/management-api/agent-management.md
 tags:
   - ai-gateway
   - management-api
   - a2a
   - agents
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-22
 content_type: "reference"
 ---
@@ -41,7 +41,7 @@ Add a new A2A Agent to the Gateway.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.wso2.com/v1",
+  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
   "kind": "Agent",
   "metadata": {
     "name": "trip-planner-v1.0"
@@ -138,7 +138,7 @@ Required roles: `admin`, `developer`
   "count": 1,
   "agents": [
     {
-      "apiVersion": "gateway.api-platform.wso2.com/v1",
+      "apiVersion": "gateway.api-platform.xcrddomainx/v1",
       "kind": "Agent",
       "metadata": { "name": "trip-planner-v1.0" },
       "spec": { "displayName": "Trip Planner", "version": "v1.0" }

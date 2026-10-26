@@ -1,19 +1,19 @@
 ---
 title: "Guides overview"
-description: "Step-by-step guides for WSO2 API Platform, grouped by goal and by service provider, such as AWS, Azure, Anthropic, OpenAI, Google, and GitHub."
-canonical_url: https://wso2.com/api-platform/docs/guides/overview/
-md_url: https://wso2.com/api-platform/docs/guides/overview.md
+description: "Step-by-step guides for XAPIPLATFORMX, grouped by goal and by service provider, such as AWS, Azure, Anthropic, OpenAI, Google, and GitHub."
+canonical_url: https://xdocshostx/xdocspathx/guides/overview/
+md_url: https://xdocshostx/xdocspathx/guides/overview.md
 tags:
   - guides
   - overview
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-10-20
 content_type: "overview"
 ---
 
 # Guides
 
-Guides are end-to-end walkthroughs built around real scenarios. Each guide takes you from an empty project to a working, governed API, AI, or MCP setup on WSO2 API Platform.
+Guides are end-to-end walkthroughs built around real scenarios. Each guide takes you from an empty project to a working, governed API, AI, or MCP setup on XAPIPLATFORMX.
 
 Each guide gives you:
 
@@ -343,7 +343,7 @@ Sell paid subscription plans for your APIs, and bill consumers for their usage t
 
 Read tutorials, engineering explanations, and learning paths that complement the task-focused product guides.
 
-[Visit the API Content Hub &rarr;](https://wso2.com/api-platform/learn/)
+[Visit the API Content Hub &rarr;](https://xwebdomainx/api-platform/learn/)
 
 </div>
 
@@ -355,7 +355,7 @@ Read tutorials, engineering explanations, and learning paths that complement the
 
 Clone runnable sample apps for these guides from GitHub.
 
-[View samples &rarr;](https://github.com/wso2/api-platform/tree/main/samples)
+[View samples &rarr;](https://github.com/xgithuborgx/api-platform/tree/main/samples)
 
 </div>
 
@@ -365,7 +365,7 @@ Clone runnable sample apps for these guides from GitHub.
 
 ---
 
-New to WSO2 API Platform? Start with a quick start guide, or ask the community for help.
+New to XAPIPLATFORMX? Start with a quick start guide, or ask the community for help.
 
 [Get started &rarr;](../get-started.md)
 

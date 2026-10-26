@@ -1,14 +1,14 @@
 ---
 title: "Connect AI gateways in production"
 description: "Register production AI gateways with the control plane: reachable addresses, registration tokens kept out of shell history, certificate trust, and registration checks."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/production/connect-gateways/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/production/connect-gateways.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/production/connect-gateways/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/production/connect-gateways.md
 tags:
   - ai-workspace
   - production
   - ai-gateway
   - networking
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-06
 content_type: "how-to"
 ---
@@ -126,7 +126,7 @@ Treat the token as a credential in transit too. A value passed on a command line
     Then install the chart, referencing both Secrets by name:
 
     ```bash
-    helm install gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
+    helm install gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
       --version <gateway-chart-version> -n <gateway-namespace> \
       --set gateway.controller.encryptionKeys.enabled=true \
       --set gateway.controller.encryptionKeys.secretName=gateway-encryption-keys \

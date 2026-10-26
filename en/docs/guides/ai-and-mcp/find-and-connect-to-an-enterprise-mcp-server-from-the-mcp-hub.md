@@ -1,15 +1,15 @@
 ---
 title: "Find and connect to an enterprise MCP server from the MCP Hub"
 description: "Discover MCP servers in the MCP Hub, review their tools, generate OAuth2 credentials, and connect Claude Desktop to an enterprise MCP server."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/find-and-connect-to-an-enterprise-mcp-server-from-the-mcp-hub.md
 tags:
   - guides
   - ai-and-mcp
   - mcp
   - mcp-hub
   - claude-desktop
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "tutorial"
 ---
@@ -18,7 +18,7 @@ content_type: "tutorial"
 
 ## Overview
 
-This guide shows you how to discover MCP servers in the [MCP Hub](https://devportal.bijira.dev), evaluate the tools they expose, generate OAuth2 credentials, and connect Claude Desktop to an enterprise MCP server using a secure MCP Server URL.
+This guide shows you how to discover MCP servers in the [MCP Hub](https://devportal.xclouddomainx), evaluate the tools they expose, generate OAuth2 credentials, and connect Claude Desktop to an enterprise MCP server using a secure MCP Server URL.
 
 In this guide, you will walk through a scenario where an AI engineer is building a sales copilot that needs access to customer, deal, and pricing data through MCP tools. However, they do not know which MCP servers are available, which tools they expose, whether those tools meet the requirements, or how to connect an AI client such as Claude Desktop to them.
 
@@ -35,7 +35,7 @@ In this guide, you will walk through a scenario where an AI engineer is building
 
 ## Prerequisites
 
-- A WSO2 API Platform account with access to the MCP Hub.
+- A XAPIPLATFORMX account with access to the MCP Hub.
 - Claude Desktop installed. Download from [claude.ai/download](https://claude.ai/download).
 
 ---
@@ -47,7 +47,7 @@ In this guide, you will walk through a scenario where an AI engineer is building
     |  browses MCP catalog (by server name)
     v
 +--------------------------------------+
-|  WSO2 MCP Hub                        |
+|  XSAMPLEBRANDX MCP Hub                        |
 |  catalog · tool schemas              |
 |  MCP Server URLs                     |
 |  OAuth2 app creation + token gen     |
@@ -58,7 +58,7 @@ In this guide, you will walk through a scenario where an AI engineer is building
     |  tool call + OAuth2
     v
 +-----------------------------+
-|  WSO2 AI Gateway            |
+|  XAIGATEWAYX            |
 |  OAuth2 · rate limiting     |
 |  audit logging              |
 +-----------------------------+

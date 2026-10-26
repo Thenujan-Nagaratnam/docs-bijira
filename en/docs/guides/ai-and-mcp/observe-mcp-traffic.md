@@ -1,8 +1,8 @@
 ---
 title: "Observe MCP traffic on the AI Gateway"
 description: "See tool call volume, agent sessions, client distribution, latency, and error causes for your MCP proxies from the Insights dashboards in the AI Workspace."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/observe-mcp-traffic/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/observe-mcp-traffic.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/observe-mcp-traffic/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/observe-mcp-traffic.md
 tags:
   - guides
   - ai-and-mcp
@@ -11,7 +11,7 @@ tags:
   - analytics
   - mcp
   - ai-workspace
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-18
 content_type: "how-to"
 ---
@@ -22,7 +22,7 @@ content_type: "how-to"
 
 When AI agents call tools through your gateway, ordinary API monitoring tells you very little. A request count doesn't say which tool the agent reached for, how many agent runs it took, or whether a failure came from the agent or from your tool.
 
-The WSO2 AI Gateway reports on the Model Context Protocol (MCP) proxies that expose your tools to agents. For each one you can observe call volume per tool, agent sessions, which client runtimes are calling, latency, and the error types behind every failure.
+The XAIGATEWAYX reports on the Model Context Protocol (MCP) proxies that expose your tools to agents. For each one you can observe call volume per tool, agent sessions, which client runtimes are calling, latency, and the error types behind every failure.
 
 This guide shows you where to find each of those figures and how to read them.
 
@@ -48,7 +48,7 @@ This guide shows you where to find each of those figures and how to read them.
 
 ## Prerequisites
 
-- A WSO2 API Platform account. [Sign up for free](https://console.bijira.dev).
+- A XAPIPLATFORMX account. [Sign up for free](https://console.xclouddomainx).
 - An AI gateway that shows **Active** in the AI Workspace. See [Setting up an AI Gateway](../../cloud/ai-workspace/ai-gateways/setting-up.md).
 - An [MCP proxy](../../cloud/ai-workspace/mcp-proxies/configure-proxy.md) fronting an MCP server, deployed to that gateway.
 - The invoke URL for the proxy, and an API key if the proxy has authentication enabled.
@@ -135,7 +135,7 @@ Follow the same sequence here. Skipping it still produces tool calls, but the pa
 
 ## Step 2: Open Insights and set the scope
 
-1. Sign in to [WSO2 API Platform](https://console.bijira.dev/), then click **AI Workspace** in the header.
+1. Sign in to [XAPIPLATFORMX](https://console.xclouddomainx/), then click **AI Workspace** in the header.
 2. Select your organization and project from the selectors at the top of the page.
 3. In the left navigation menu, click **Insights**.
 4. Set **Environment** to the environment your proxy is deployed to, such as **Development**.
@@ -197,7 +197,7 @@ Then work through the charts:
 |---|---|
 | No data on any dashboard | Start the gateway with `docker compose --env-file configs/keys.env up`, using the file generated when you registered the gateway. It holds the key the runtime publishes with. |
 | Every tile reads zero | Set **Environment** to the environment your proxy is deployed to. |
-| You want calls attributed to individual consumers | Attach the [MCP Authentication](https://wso2.com/api-platform/policy-hub/policies/mcp-auth) policy to the proxy. The gateway then records the authenticated caller on each event, and **Unique Consumers** groups by that identity. |
+| You want calls attributed to individual consumers | Attach the [MCP Authentication](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-auth) policy to the proxy. The gateway then records the authenticated caller on each event, and **Unique Consumers** groups by that identity. |
 
 ## Next steps
 
@@ -210,7 +210,7 @@ Then work through the charts:
 
 Two companion samples run the AI Gateway with a ready-made MCP server, so you don't need to build one first.
 
-- [MCP analytics with Moesif](https://github.com/wso2/api-platform/tree/main/samples/ai-gateway-moesif-mcp-analytics): generates tool traffic and reports it on the same Insights dashboards this guide covers.
-- [MCP metrics and tracing](https://github.com/wso2/api-platform/tree/main/samples/ai-gateway-mcp-observability): runs Prometheus, Grafana, and Jaeger alongside the gateway for the runtime's own metrics and per-request traces.
+- [MCP analytics with Moesif](https://github.com/xgithuborgx/api-platform/tree/main/samples/ai-gateway-moesif-mcp-analytics): generates tool traffic and reports it on the same Insights dashboards this guide covers.
+- [MCP metrics and tracing](https://github.com/xgithuborgx/api-platform/tree/main/samples/ai-gateway-mcp-observability): runs Prometheus, Grafana, and Jaeger alongside the gateway for the runtime's own metrics and per-request traces.
 
 On a standalone AI Gateway you choose how to observe it. Point the runtime at Moesif for the analytics dashboards, or at Prometheus, Grafana, and Jaeger for metrics and traces.

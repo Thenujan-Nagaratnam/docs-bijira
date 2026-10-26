@@ -1,13 +1,13 @@
 ---
 title: "Configure workflow approvals"
 description: "Set up approval processes for environment promotion and URL customization workflows in API Platform."
-canonical_url: https://wso2.com/api-platform/docs/cloud/workflows/configure-workflow-approvals/
-md_url: https://wso2.com/api-platform/docs/cloud/workflows/configure-workflow-approvals.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/workflows/configure-workflow-approvals/
+md_url: https://xdocshostx/xdocspathx/cloud/workflows/configure-workflow-approvals.md
 tags:
   - cloud
   - workflows
   - approvals
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -53,7 +53,7 @@ To set up an approval process for a workflow, follow these steps:
      - You must have administrator privileges in API Platform to configure workflow approvals.
      - Administrators can designate specific roles and assignees to receive notifications associated with each workflow.
 
-1. Sign in to the [API Platform Console](https://console.Bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click the **Admin** Drop down and then click **Settings**. This opens the organization-level settings page.
 4. Click the **Workflows** tab.

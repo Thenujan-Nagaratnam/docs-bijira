@@ -1,8 +1,8 @@
 ---
 title: "Reduce MCP tool poisoning risk with the MCP Access Control policy"
 description: "Understand MCP tool poisoning, what it can lead to, and how the MCP Access Control policy on an MCP Proxy reduces exposure to it."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/block-mcp-tool-poisoning-with-the-mcp-access-control-policy/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/block-mcp-tool-poisoning-with-the-mcp-access-control-policy.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/block-mcp-tool-poisoning-with-the-mcp-access-control-policy/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/block-mcp-tool-poisoning-with-the-mcp-access-control-policy.md
 tags:
   - guides
   - ai-and-mcp
@@ -10,7 +10,7 @@ tags:
   - ai-workspace
   - policies
   - security
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-14
 content_type: "how-to"
 ---
@@ -19,7 +19,7 @@ content_type: "how-to"
 
 ## Overview
 
-MCP tool poisoning is a prompt-injection technique. A malicious or compromised MCP server embeds malicious instructions in tool metadata, such as a tool's `description` field. An MCP client may pass that metadata to an LLM. A person reviewing a tool list in a UI can easily miss wording that a model still reads. This guide explains what tool poisoning is and why it's a real risk for any agent connected to an MCP server you don't fully control. It also explains how attaching the **MCP Access Control** policy to an **MCP Proxy** in WSO2 API Platform reduces your exposure to it.
+MCP tool poisoning is a prompt-injection technique. A malicious or compromised MCP server embeds malicious instructions in tool metadata, such as a tool's `description` field. An MCP client may pass that metadata to an LLM. A person reviewing a tool list in a UI can easily miss wording that a model still reads. This guide explains what tool poisoning is and why it's a real risk for any agent connected to an MCP server you don't fully control. It also explains how attaching the **MCP Access Control** policy to an **MCP Proxy** in XAPIPLATFORMX reduces your exposure to it.
 
 The MCP Access Control policy is one layer of defense, not a complete solution. It's described precisely in that context throughout this guide.
 
@@ -78,7 +78,7 @@ The rest of this guide walks through attaching the policy to a real MCP Proxy in
 
 ### Prerequisites
 
-- A WSO2 API Platform account. [Sign up for free](https://console.bijira.dev).
+- A XAPIPLATFORMX account. [Sign up for free](https://console.xclouddomainx).
 - AI Workspace access with an **Admin** or **Developer** role.
 - Docker and Docker Compose, to run the self-hosted AI gateway.
 - `curl`, for testing.
@@ -99,7 +99,7 @@ MCP Client
     |  With an MCP Proxy in front of it
     v
 +---------------------------------------------------+
-|  WSO2 AI Gateway                                   |
+|  XAIGATEWAYX                                   |
 |  [ MCP Proxy ]                                     |
 |  MCP Access Control (tools.mode=deny,               |
 |             tools.exceptions=[<your reviewed tools>]) |
@@ -117,7 +117,7 @@ The upstream server continues to return its own full capability list to the prox
 
 ### Step 1: Create an organization and project
 
-Go to the [WSO2 API Platform console](https://console.bijira.dev) and sign in. If this is your first time, you're prompted to create an organization first. Full walkthrough: [Quick start guide](../../cloud/introduction/quick-start-guide.md).
+Go to the [XAPIPLATFORMX console](https://console.xclouddomainx) and sign in. If this is your first time, you're prompted to create an organization first. Full walkthrough: [Quick start guide](../../cloud/introduction/quick-start-guide.md).
 
 Then create a project. Once it exists, click **AI Workspace** in the top navigation bar to enter AI Workspace. It opens in a new tab. Confirm that your project is selected via **Select Project**.
 
@@ -147,7 +147,7 @@ The AI gateway is the runtime that hosts your proxy and enforces the MCP Access 
 ### Step 3: Create the MCP Proxy
 
 1. Click **MCP Proxies** > **+ Create MCP Proxy**.
-2. Click **Try with Sample URL** to point the proxy at a public reference MCP server hosted by WSO2, so you don't need to stand up your own server to follow along. It exercises the full MCP protocol (tools, resources, and prompts) with a small pizza-ordering scenario. AI Workspace fetches its capabilities immediately.
+2. Click **Try with Sample URL** to point the proxy at a public reference MCP server hosted by XBRANDX, so you don't need to stand up your own server to follow along. It exercises the full MCP protocol (tools, resources, and prompts) with a small pizza-ordering scenario. AI Workspace fetches its capabilities immediately.
 
     ![Create MCP Proxy from Endpoint page with the sample URL filled in and the discovered server showing 4 tools, 10 resources, and 3 prompts](../../assets/img/guides/ai-and-mcp/mcp-tool-poisoning/mcp-proxy-sample-url-fetch-success.png){.cInlineImage-full}
 
@@ -311,4 +311,4 @@ The `-32000` code and message are this gateway's own choice within the JSON-RPC-
 
 ## Try the sample
 
-If you want to see an actual poisoned tool being filtered out, rather than an allowlist applied to a clean reference server, the [`mcp-tool-poisoning-demo`](https://github.com/wso2/api-platform/tree/main/samples/mcp-tool-poisoning-demo) sample sets one up locally. It runs a safe, defanged MCP server with one clean tool and one tool carrying a real (harmless, disclosed) prompt-injection payload in its description. Run `./setup.sh` to start it, then `./demo.sh pass1` to see both tools reach a client unfiltered. After you've attached the MCP Access Control policy to a proxy pointed at the sample's server instead of the public reference server used above, run `./demo.sh pass2` (or `./demo.sh all` for both passes back to back) to see the poisoned tool disappear. The sample's `README.md` has a full disclaimer covering why it's safe to run.
+If you want to see an actual poisoned tool being filtered out, rather than an allowlist applied to a clean reference server, the [`mcp-tool-poisoning-demo`](https://github.com/xgithuborgx/api-platform/tree/main/samples/mcp-tool-poisoning-demo) sample sets one up locally. It runs a safe, defanged MCP server with one clean tool and one tool carrying a real (harmless, disclosed) prompt-injection payload in its description. Run `./setup.sh` to start it, then `./demo.sh pass1` to see both tools reach a client unfiltered. After you've attached the MCP Access Control policy to a proxy pointed at the sample's server instead of the public reference server used above, run `./demo.sh pass2` (or `./demo.sh all` for both passes back to back) to see the poisoned tool disappear. The sample's `README.md` has a full disclaimer covering why it's safe to run.

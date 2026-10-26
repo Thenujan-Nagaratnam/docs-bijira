@@ -1,14 +1,14 @@
 ---
 title: "Set up a governed multi-model LLM proxy with cost controls and failover"
 description: "Distribute LLM traffic across multiple models, enforce per-team token budgets, mask PII, and cache semantically similar prompts behind a single governed proxy."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md
 tags:
   - guides
   - ai-and-mcp
   - llm
   - ai-workspace
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "tutorial"
 ---
@@ -23,7 +23,7 @@ This guide shows you how to set up a single governed LLM proxy that distributes 
 
 ## Key Concepts
 
-Before you start, here are the WSO2 API Platform terms this guide uses:
+Before you start, here are the XAPIPLATFORMX terms this guide uses:
 
 **AI Workspace** is the section of the API Platform Console where you manage AI-specific resources — LLM providers, LLM proxies, MCP proxies and policies.
 
@@ -41,13 +41,13 @@ Before you start, here are the WSO2 API Platform terms this guide uses:
 
 **Semantic cache** is a policy that returns a cached response when an incoming prompt is semantically similar enough to a previously answered one, reducing provider calls, cost and the latency.
 
-**Moesif** is an analytics platform that WSO2 API Platform integrates with to provide token consumption dashboards, cost attribution by team, and per-model spend breakdowns.
+**Moesif** is an analytics platform that XAPIPLATFORMX integrates with to provide token consumption dashboards, cost attribution by team, and per-model spend breakdowns.
 
 ---
 
 ## Prerequisites
 
-- A WSO2 API Platform account. [Sign up for free](https://console.bijira.dev)
+- A XAPIPLATFORMX account. [Sign up for free](https://console.xclouddomainx)
 - An `OpenAI API` key
 - Docker compose
 - `curl` for testing
@@ -63,7 +63,7 @@ Your applications (engineering / product / sales teams)
     |  HTTPS + API key (per team)
     v
 +---------------------------------------------+
-|           WSO2 LLM Proxy                    |
+|           XSAMPLEBRANDX LLM Proxy                    |
 |  token budget · PII mask · semantic cache   |
 +---------------------------------------------+
     |  round-robin across models
@@ -78,7 +78,7 @@ All three teams use the same proxy endpoint. The proxy enforces each team's toke
 ---
 ## Step 1: Create an organization and project
 
-Go to the [API Platform Console](https://console.bijira.dev) and sign in with your Google, GitHub, or Microsoft account.
+Go to the [API Platform Console](https://console.xclouddomainx) and sign in with your Google, GitHub, or Microsoft account.
 
 If this is your first time signing in, you'll be prompted to create an organization. Enter `sampleorganization` as the name, accept the privacy policy and terms of use, and click **Create**.
 
@@ -422,4 +422,4 @@ After your first request, navigate to **Monitor and Insights** in the **API Plat
 
 The companion sample runs this setup end to end using Docker, demonstrating model round-robin, PII masking, and semantic caching against an OpenAI-compatible endpoint.
 
-[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/llm-cost-control-and-privacy-control).
+[View the sample on GitHub](https://github.com/xgithuborgx/api-platform/tree/main/samples/llm-cost-control-and-privacy-control).

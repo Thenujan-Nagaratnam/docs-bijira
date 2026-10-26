@@ -1,14 +1,14 @@
 ---
 title: "Gateway Operator Management CRDs"
 description: "Reference for management-API-backed Kubernetes CRDs in API Platform Gateway: LlmProvider, LlmProxy, Mcp, ApiKey, SubscriptionPlan, Subscription, and Certificate."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/deployment/deployment-modes/kubernetes/gateway-operator-management-crds/
-md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/deployment/deployment-modes/kubernetes/gateway-operator-management-crds.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/deployment/deployment-modes/kubernetes/gateway-operator-management-crds/
+md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/deployment/deployment-modes/kubernetes/gateway-operator-management-crds.md
 tags:
   - api-gateway
   - kubernetes
   - deployment
   - operator
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-17
 content_type: "reference"
 ---
@@ -57,7 +57,7 @@ kubectl get secret httproute-demo-policy-credentials
 The LLM resources require a mock OpenAI-compatible backend (Prism + nginx HTTPS). The manifest deploys to `apigateway-demo` by default; override to `default` namespace with:
 
 ```sh
-curl -sL https://raw.githubusercontent.com/wso2/api-platform/refs/heads/main/kubernetes/helm/resources/apigateway-restapi-operator-demo/05b0-mock-openapi-https.yaml \
+curl -sL https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/heads/main/kubernetes/helm/resources/apigateway-restapi-operator-demo/05b0-mock-openapi-https.yaml \
   | sed 's/namespace: apigateway-demo/namespace: default/g' \
   | kubectl apply -f -
 
@@ -72,12 +72,12 @@ Apply `ApiKey` CRs up front. The LLM-parent ApiKeys (`demo-llmprovider-apikey`, 
 
 ```sh
 kubectl apply -f - <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: ApiKey
 metadata:
   name: demo-llmprovider-apikey
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   parentRef:
     kind: LlmProvider
@@ -91,12 +91,12 @@ spec:
     duration: 30
     unit: days
 ---
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: ApiKey
 metadata:
   name: demo-llmproxy-apikey
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   parentRef:
     kind: LlmProxy
@@ -118,12 +118,12 @@ kubectl get apikey
 
 ```sh
 kubectl apply -f - <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: LlmProviderTemplate
 metadata:
   name: openai-test
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   displayName: OpenAI
   promptTokens:
@@ -145,12 +145,12 @@ spec:
     location: payload
     identifier: $.model
 ---
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: LlmProvider
 metadata:
   name: demo-llm-provider-apikey
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   displayName: OpenAI Provider with APIKey
   version: v1.0
@@ -181,12 +181,12 @@ spec:
             name: httproute-demo-policy-credentials
             key: llm-upstream-authorization
 ---
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: LlmProxy
 metadata:
   name: demo-llm-proxy-apikey
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   displayName: Lifecycle LLM Proxy with APIKey
   version: v1.0
@@ -267,7 +267,7 @@ curl -sS -k \
 The MCP resources require the `mcp-server-backend` service. The manifest deploys to `apigateway-demo` by default; override to `default` namespace with:
 
 ```sh
-curl -sL https://raw.githubusercontent.com/wso2/api-platform/refs/heads/main/kubernetes/helm/resources/apigateway-restapi-operator-demo/05c0-mcp-server-backend.yaml \
+curl -sL https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/heads/main/kubernetes/helm/resources/apigateway-restapi-operator-demo/05c0-mcp-server-backend.yaml \
   | sed 's/namespace: apigateway-demo/namespace: default/g' \
   | kubectl apply -f -
 
@@ -280,12 +280,12 @@ Wait for the Deployment to be `Ready` before proceeding.
 
 ```sh
 kubectl apply -f - <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Mcp
 metadata:
   name: everything-mcp-v1.0
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   displayName: Everything
   version: v1.0
@@ -349,12 +349,12 @@ Expected result: initialize returns success JSON-RPC response; `tools/call` retu
 
 ```sh
 kubectl apply -f - <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: RestApi
 metadata:
   name: hello-normal-api-policy
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   displayName: hello-normal-api-policy
   version: v1.0
@@ -420,7 +420,7 @@ curl --request GET \
 The RestAPI resources route to the `hello-backend` service. The manifest deploys to `apigateway-demo` by default; override to `default` namespace with:
 
 ```sh
-curl -sL https://raw.githubusercontent.com/wso2/api-platform/refs/heads/main/kubernetes/helm/resources/apigateway-restapi-operator-demo/03-backend.yaml \
+curl -sL https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/heads/main/kubernetes/helm/resources/apigateway-restapi-operator-demo/03-backend.yaml \
   | sed 's/namespace: apigateway-demo/namespace: default/g' \
   | kubectl apply -f -
 
@@ -433,12 +433,12 @@ Wait for the Deployment to be `Ready` before proceeding.
 
 ```sh
 kubectl apply -f - <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: RestApi
 metadata:
   name: hello-apikey-api
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   displayName: hello-apikey-api
   version: v1.0
@@ -456,12 +456,12 @@ spec:
     - method: GET
       path: /test
 ---
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: ApiKey
 metadata:
   name: demo-restapi-apikey
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   parentRef:
     kind: RestApi
@@ -501,12 +501,12 @@ curl --request GET \
 
 ```sh
 kubectl apply -f - <<'EOF'
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: RestApi
 metadata:
   name: hello-sub-api
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   displayName: hello-sub-api
   version: v1.0
@@ -527,12 +527,12 @@ spec:
     - method: GET
       path: /new
 ---
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: SubscriptionPlan
 metadata:
   name: demo-plan
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   planName: demo-plan
   status: ACTIVE
@@ -540,12 +540,12 @@ spec:
   throttleLimitCount: 1000
   throttleLimitUnit: Min
 ---
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: Subscription
 metadata:
   name: demo-subscription
   labels:
-    gateway.api-platform.wso2.com/restapi-target: wso2-crd
+    gateway.api-platform.xcrddomainx/restapi-target: xsampleslugx-crd
 spec:
   apiId: hello-sub-api
   subscriptionPlanId: demo-plan
@@ -669,7 +669,7 @@ stringData:
 
 Reference in RestApi:
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: RestApi
 metadata:
   name: protected-api
@@ -704,7 +704,7 @@ Update the Secret anytime; the operator automatically redeploys with the new val
 
 Reference in ApiKey (using `name` and `key` directly):
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1alpha1
+apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
 kind: ApiKey
 metadata:
   name: my-api-key

@@ -1,13 +1,13 @@
 ---
 title: "Generate an SDK with AI assistance"
 description: "Generate a custom SDK and sample application code from your subscribed APIs using AI-assisted SDK generation in the Developer Portal."
-canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/sdk-generation/ai-assisted-sdk-generation/
-md_url: https://wso2.com/api-platform/docs/cloud/devportal/sdk-generation/ai-assisted-sdk-generation.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/sdk-generation/ai-assisted-sdk-generation/
+md_url: https://xdocshostx/xdocspathx/cloud/devportal/sdk-generation/ai-assisted-sdk-generation.md
 tags:
   - cloud
   - devportal
   - sdk-generation
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -45,7 +45,7 @@ Follow these steps to generate a custom SDK and sample application code.
 
 ### Step 1: Select APIs for SDK Generation
 
-1. Navigate to the [API Platform Developer Portal](https://devportal.bijira.dev) and sign in.
+1. Navigate to the [API Platform Developer Portal](https://devportal.xclouddomainx) and sign in.
 2. Click on **Applications** in the Developer Portal sidebar.
 3. Click on the application for which you want to generate the custom SDK.
 4. Choose which subscribed APIs to include in your SDK by clicking on the checkbox.

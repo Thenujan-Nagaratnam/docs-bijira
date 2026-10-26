@@ -1,13 +1,13 @@
 ---
 title: "Configure LLM instructions for the API Portal & MCP Hub"
 description: "Set the portal name and description that head the llms.txt file, and turn AI discoverability on or off for the whole portal."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/admin-settings/llm-instructions/
-md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/admin-settings/llm-instructions.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/admin-settings/llm-instructions/
+md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/admin-settings/llm-instructions.md
 tags:
   - cloud
   - api-portal
   - ai-discovery
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-31
 content_type: "how-to"
 ---

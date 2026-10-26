@@ -1,14 +1,14 @@
 ---
 title: "Configure Timeouts"
 description: "Configure gateway level and API-level timeouts to protect against slow or unreachable backends and slow clients."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/next/resiliency/timeouts/
-md_url: https://wso2.com/api-platform/docs/api-gateway/next/resiliency/timeouts.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/next/resiliency/timeouts/
+md_url: https://xdocshostx/xdocspathx/api-gateway/next/resiliency/timeouts.md
 tags:
   - api-gateway
   - configuration
   - timeouts
   - resiliency
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-30
 content_type: "how-to"
 ---
@@ -123,7 +123,7 @@ The HCM (downstream) timeouts have no per-API equivalent and remain gateway-leve
 When an API routes through a named **upstream definition**, that definition can set its own `connect` timeout, which overrides the gateway-level `connect_timeout_ms` for the cluster built from it. Because the setting lives on the upstream definition, different upstreams used by the same API can have different connect timeouts.
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: RestApi
 metadata:
   name: orders-api
@@ -172,7 +172,7 @@ For `RestApi`, the `resilience` block can be set at **two levels**:
 Precedence is **most-specific-wins, per field**: an operation's `timeout` overrides the API's `timeout`, while still inheriting the API's `idleTimeout` if the operation does not set its own. If neither level sets a field, the gateway-level default applies.
 
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: RestApi
 metadata:
   name: orders-api

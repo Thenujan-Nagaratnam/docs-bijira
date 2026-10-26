@@ -1,14 +1,14 @@
 ---
 title: "Run in high availability"
 description: "Scale AI Workspace and the Platform API beyond one instance: move to a shared database, add replicas, keep sessions working with affinity, and survive node and host failures."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/production/high-availability/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/production/high-availability.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/production/high-availability/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/production/high-availability.md
 tags:
   - ai-workspace
   - production
   - high-availability
   - scaling
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-06
 content_type: "how-to"
 ---

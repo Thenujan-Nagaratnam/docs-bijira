@@ -1,14 +1,14 @@
 ---
 title: "Connect an identity provider to AI Workspace"
 description: "Configure AI Workspace and the Platform API to delegate login to an OIDC identity provider: client registration, claim mappings, and authorization."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/setting-up/authentication/connect-an-identity-provider/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/setting-up/authentication/connect-an-identity-provider.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/setting-up/authentication/connect-an-identity-provider/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/setting-up/authentication/connect-an-identity-provider.md
 tags:
   - cloud
   - ai-workspace
   - authentication
   - oidc
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-31
 content_type: "how-to"
 ---

@@ -1,13 +1,13 @@
 ---
 title: "Attach and Manage Policies"
-description: "Attach, rearrange, and refresh mediation policies on API proxies in WSO2 API Platform, and implement custom policies as Ballerina projects."
-canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/attach-and-manage-policies/
-md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/attach-and-manage-policies.md
+description: "Attach, rearrange, and refresh mediation policies on API proxies in XAPIPLATFORMX, and implement custom policies as Ballerina projects."
+canonical_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/policy/attach-and-manage-policies/
+md_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/policy/attach-and-manage-policies.md
 tags:
   - cloud
   - api-proxy
   - policy
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -42,7 +42,7 @@ When a mediation policy is attached to a specific flow, the API invocation under
 
 To attach an API level policy to the `Request` flow of a REST API proxy, follow the steps given below:
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx).
 2. Select the project and API to which you want to attach a policy.
 3. In the left navigation menu, click **Develop**, then click **Policy**.
 4. Click the **Add API-level Policies** button in the **API Proxy Contract** component.
@@ -57,7 +57,7 @@ To attach an API level policy to the `Request` flow of a REST API proxy, follow 
 
 To attach a resource level policy to the `Request`, `Response`, or `Error` flow of a REST API proxy, follow the steps given below:
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx).
 2. Select the project and API to which you want to attach a policy.
 3. In the left navigation menu, click **Develop**, then click **Policy**.
 4. From the list of resources, click the **Attach Policy Button** for the required policy.

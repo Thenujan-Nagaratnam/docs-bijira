@@ -1,13 +1,13 @@
 ---
 title: "Invoke providers and proxies via SDKs"
 description: "Call a deployed LLM provider or App LLM proxy using the OpenAI, Anthropic, Gemini, Mistral, Azure OpenAI, or LangChain SDKs."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/using-sdks/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/using-sdks.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/using-sdks/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/using-sdks.md
 tags:
   - cloud
   - ai-workspace
   - sdks
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-24
 content_type: "how-to"
 ---
@@ -62,7 +62,7 @@ When you create a provider from a built-in template, that header defaults to the
 
     response = client.chat.completions.create(
         model="gpt-4o",
-        messages=[{"role": "user", "content": "What is WSO2?"}],
+        messages=[{"role": "user", "content": "What is XSAMPLEBRANDX?"}],
     )
 
     print(response.choices[0].message.content)
@@ -104,7 +104,7 @@ When you create a provider from a built-in template, that header defaults to the
         # default_headers={"X-API-Key": API_KEY},
     )
 
-    response = llm.invoke([HumanMessage(content="What is WSO2?")])
+    response = llm.invoke([HumanMessage(content="What is XSAMPLEBRANDX?")])
     print(response.content)
     ```
 
@@ -141,7 +141,7 @@ When you create a provider from a built-in template, that header defaults to the
     response = client.messages.create(
         model="claude-sonnet-4-5",
         max_tokens=1024,
-        messages=[{"role": "user", "content": "What is WSO2?"}],
+        messages=[{"role": "user", "content": "What is XSAMPLEBRANDX?"}],
     )
 
     print(response.content[0].text)
@@ -181,7 +181,7 @@ When you create a provider from a built-in template, that header defaults to the
         max_tokens=1024,
     )
 
-    response = llm.invoke([HumanMessage(content="What is WSO2?")])
+    response = llm.invoke([HumanMessage(content="What is XSAMPLEBRANDX?")])
     print(response.content)
     ```
 
@@ -221,7 +221,7 @@ When you create a provider from a built-in template, that header defaults to the
 
     response = client.models.generate_content(
         model="gemini-2.5-flash",
-        contents="What is WSO2?",
+        contents="What is XSAMPLEBRANDX?",
     )
 
     print(response.text)
@@ -259,7 +259,7 @@ When you create a provider from a built-in template, that header defaults to the
         # additional_headers={"X-API-Key": API_KEY},
     )
 
-    response = llm.invoke([HumanMessage(content="What is WSO2?")])
+    response = llm.invoke([HumanMessage(content="What is XSAMPLEBRANDX?")])
     print(response.content)
     ```
 
@@ -307,7 +307,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
 
     response = client.chat.complete(
         model="mistral-small-latest",
-        messages=[{"role": "user", "content": "What is WSO2?"}],
+        messages=[{"role": "user", "content": "What is XSAMPLEBRANDX?"}],
     )
 
     print(response.choices[0].message.content)
@@ -348,7 +348,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
 
     response = client.chat.completions.create(
         model="mistral-small-latest",
-        messages=[{"role": "user", "content": "What is WSO2?"}],
+        messages=[{"role": "user", "content": "What is XSAMPLEBRANDX?"}],
     )
 
     print(response.choices[0].message.content)
@@ -392,7 +392,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
         # default_headers={"X-API-Key": API_KEY},
     )
 
-    response = llm.invoke([HumanMessage(content="What is WSO2?")])
+    response = llm.invoke([HumanMessage(content="What is XSAMPLEBRANDX?")])
     print(response.content)
     ```
 
@@ -432,7 +432,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
 
     response = client.chat.completions.create(
         model="<your-deployment-name>",
-        messages=[{"role": "user", "content": "What is WSO2?"}],
+        messages=[{"role": "user", "content": "What is XSAMPLEBRANDX?"}],
     )
 
     print(response.choices[0].message.content)
@@ -475,7 +475,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
         # default_headers={"X-API-Key": API_KEY},
     )
 
-    response = llm.invoke([HumanMessage(content="What is WSO2?")])
+    response = llm.invoke([HumanMessage(content="What is XSAMPLEBRANDX?")])
     print(response.content)
     ```
 
@@ -514,7 +514,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
 
     response = client.chat.completions.create(
         model="<your-deployment-name>",
-        messages=[{"role": "user", "content": "What is WSO2?"}],
+        messages=[{"role": "user", "content": "What is XSAMPLEBRANDX?"}],
     )
 
     print(response.choices[0].message.content)
@@ -557,7 +557,7 @@ Mistral exposes both a native SDK and an OpenAI-compatible API at `/v1`.
         # default_headers={"X-API-Key": API_KEY},
     )
 
-    response = llm.invoke([HumanMessage(content="What is WSO2?")])
+    response = llm.invoke([HumanMessage(content="What is XSAMPLEBRANDX?")])
     print(response.content)
     ```
 

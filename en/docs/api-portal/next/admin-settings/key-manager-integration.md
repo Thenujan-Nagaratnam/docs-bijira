@@ -1,13 +1,13 @@
 ---
 title: "Configure key managers in the API Portal & MCP Hub"
 description: "Register the OAuth2 key managers applications can obtain access tokens from, using the API Portal Settings page."
-canonical_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/key-manager-integration/
-md_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/key-manager-integration.md
+canonical_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/key-manager-integration/
+md_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/key-manager-integration.md
 tags:
   - cloud
   - api-portal
   - key-manager
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-23
 content_type: "how-to"
 ---

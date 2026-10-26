@@ -1,13 +1,13 @@
 ---
 title: "Secure API Access with Asgardeo"
-description: "Configure WSO2 API Platform to authenticate API requests through Asgardeo as an external key manager, then test the secured API."
-canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo/
-md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md
+description: "Configure XAPIPLATFORMX to authenticate API requests through Asgardeo as an external key manager, then test the secured API."
+canonical_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo/
+md_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/authentication-and-authorization/secure-api-access-with-asgardeo.md
 tags:
   - cloud
   - authentication
   - asgardeo
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -64,7 +64,7 @@ Follow the [Asgardeo API Authorization guide](https://wso2.com/asgardeo/docs/gui
 
 Follow the steps below to consume the API Platform API and use an external key manager for authentication:
 
-1. Sign in to your organization in the API Platform Developer Portal at [https://devportal.bijira.dev](https://devportal.bijira.dev).
+1. Sign in to your organization in the API Platform Developer Portal at [https://devportal.xclouddomainx](https://devportal.xclouddomainx).
 2. Click **Applications**, and then click **+Create**.
 3. Enter a name for the application. 
 4. Click **Create**.

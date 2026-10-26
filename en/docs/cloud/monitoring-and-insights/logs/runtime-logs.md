@@ -1,13 +1,13 @@
 ---
 title: "Runtime logs"
 description: "Access and search application, gateway, and system logs for your API proxies using text and regex-based filters."
-canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/runtime-logs/
-md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/runtime-logs.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/logs/runtime-logs/
+md_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/logs/runtime-logs.md
 tags:
   - cloud
   - monitoring
   - logs
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -20,7 +20,7 @@ In API Platform, any organization member can view runtime logs via the runtime l
 
 To access runtime logs, follow the steps below:
 
-1. Sign in to [API Platform](https://console.bijira.dev/).
+1. Sign in to [API Platform](https://console.xclouddomainx/).
 2. In the left navigation menu, click **Observability** and then click **Logs**. This displays runtime logs for the past 30 days by default.
 
     To view logs based on a specific time range and other requirements, you can apply the necessary filter criteria.

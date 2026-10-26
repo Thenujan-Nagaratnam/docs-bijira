@@ -1,20 +1,20 @@
 ---
 title: "Quick Start Guide - API Proxy"
-description: "Expose a service as an API proxy with WSO2 API Platform and publish it to the Developer Portal for application developers to consume."
-canonical_url: https://wso2.com/api-platform/docs/cloud/introduction/quick-start-guide/
-md_url: https://wso2.com/api-platform/docs/cloud/introduction/quick-start-guide.md
+description: "Expose a service as an API proxy with XAPIPLATFORMX and publish it to the Developer Portal for application developers to consume."
+canonical_url: https://xdocshostx/xdocspathx/cloud/introduction/quick-start-guide/
+md_url: https://xdocshostx/xdocspathx/cloud/introduction/quick-start-guide.md
 tags:
   - cloud
   - api-proxy
   - quickstart
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-30
 content_type: "quickstart"
 ---
 
 # Quick Start Guide - API Proxy
 
-WSO2 API Platform simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
+XAPIPLATFORMX simplifies securely exposing existing services as managed APIs. It also allows you to manage all aspects of an API's lifecycle, security, throttling, and governance, so you can focus on service development.
 
 In this tutorial, you will use API Platform to expose a service as an API proxy and publish it to the API Platform Developer Portal for application developers to consume.
 
@@ -34,7 +34,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
 ## Prerequisites
 
 1. If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your Google, GitHub, or Microsoft account.
+    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your Google, GitHub, or Microsoft account.
     2. Enter a unique organization name.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -43,7 +43,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
 
 ## Step 1: Create a Project
 
-1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the organization home page.
+1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in. This opens the organization home page.
 2. On the organization home page, click **+ Create Project**.
 3. Enter the following details:
 
@@ -63,7 +63,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
 1. On the project home page, click **Import API Contract** under **My APIs (Ingress)**.
 2. Click **URL for API Contract**, enter the following URL, and then click **Next**:
    ```http
-   https://raw.githubusercontent.com/wso2/docs-bijira/refs/heads/main/en/docs/assets/files/sample-api.yaml
+   https://raw.githubusercontent.com/xgithuborgx/xdocsrepox/refs/heads/main/en/docs/assets/files/sample-api.yaml
    ```
 3. **Create API Proxy from Contract** page will be opened. Click **Create** to complete the API proxy creation process.
     ![Create API Proxy from Contract form with HTTP type, name Sample API, identifier, version, base path, description, target URL, and External and Internal access mode options](../../assets/img/introduction/create-api-proxy-from-contract.png)

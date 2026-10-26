@@ -1,13 +1,13 @@
 ---
 title: "Configure an LLM provider template"
 description: "Create a custom LLM provider template in AI Workspace, configure its connection and token mappings, version it, and deploy it to a gateway."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/llm-provider-templates/configure-template/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/next/llm-provider-templates/configure-template.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/llm-provider-templates/configure-template/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/next/llm-provider-templates/configure-template.md
 tags:
   - cloud
   - ai-workspace
   - llm-provider-templates
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-07-10
 content_type: "how-to"
 ---

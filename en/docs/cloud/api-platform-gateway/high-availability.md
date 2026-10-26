@@ -1,14 +1,14 @@
 ---
 title: "High availability deployment for the Self-Hosted Gateway"
 description: "Deploy multiple Gateway Controller and Gateway Runtime replicas with a shared PostgreSQL database for high availability."
-canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/high-availability/
-md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/high-availability.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/high-availability/
+md_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/high-availability.md
 tags:
   - cloud
   - api-gateway
   - self-hosted
   - high-availability
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-22
 content_type: "concept"
 ---

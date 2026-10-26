@@ -1,13 +1,13 @@
 ---
 title: "Install the gateway"
 description: "Install and start the AI Gateway on your machine, a virtual machine, Docker, or Kubernetes, with the full Docker Compose procedure."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/setup-and-deployment/install-the-gateway/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/setup-and-deployment/install-the-gateway.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/setup-and-deployment/install-the-gateway/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/setup-and-deployment/install-the-gateway.md
 tags:
   - ai-gateway
   - installation
   - deployment
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
@@ -34,22 +34,22 @@ Select the context you're installing in, then follow the steps in that tab.
 
     ```bash
     # Download distribution.
-    curl -fL -o wso2apip-ai-gateway-1.2.0.zip https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
+    curl -fL -o xartifactprefixx-ai-gateway-1.2.0.zip https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip
 
     # Unzip the downloaded distribution.
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    unzip xartifactprefixx-ai-gateway-1.2.0.zip
 
-    cd wso2apip-ai-gateway-1.2.0/
+    cd xartifactprefixx-ai-gateway-1.2.0/
     ```
 
     On Windows, download and unpack the distribution with PowerShell:
 
     ```powershell
-    Invoke-WebRequest -Uri https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip -OutFile wso2apip-ai-gateway-1.2.0.zip
+    Invoke-WebRequest -Uri https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip -OutFile xartifactprefixx-ai-gateway-1.2.0.zip
 
-    Expand-Archive -Path wso2apip-ai-gateway-1.2.0.zip -DestinationPath .
+    Expand-Archive -Path xartifactprefixx-ai-gateway-1.2.0.zip -DestinationPath .
 
-    Set-Location wso2apip-ai-gateway-1.2.0
+    Set-Location xartifactprefixx-ai-gateway-1.2.0
     ```
 
     **Step 2: Run the one-time setup**
@@ -106,22 +106,22 @@ Select the context you're installing in, then follow the steps in that tab.
 
     ```bash
     # Download distribution.
-    curl -fL -o wso2apip-ai-gateway-1.2.0.zip https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
+    curl -fL -o xartifactprefixx-ai-gateway-1.2.0.zip https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip
 
     # Unzip the downloaded distribution.
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    unzip xartifactprefixx-ai-gateway-1.2.0.zip
 
-    cd wso2apip-ai-gateway-1.2.0/
+    cd xartifactprefixx-ai-gateway-1.2.0/
     ```
 
     On Windows, download and unpack the distribution with PowerShell:
 
     ```powershell
-    Invoke-WebRequest -Uri https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip -OutFile wso2apip-ai-gateway-1.2.0.zip
+    Invoke-WebRequest -Uri https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip -OutFile xartifactprefixx-ai-gateway-1.2.0.zip
 
-    Expand-Archive -Path wso2apip-ai-gateway-1.2.0.zip -DestinationPath .
+    Expand-Archive -Path xartifactprefixx-ai-gateway-1.2.0.zip -DestinationPath .
 
-    Set-Location wso2apip-ai-gateway-1.2.0
+    Set-Location xartifactprefixx-ai-gateway-1.2.0
     ```
 
     **Step 2: Run the one-time setup**
@@ -181,22 +181,22 @@ Select the context you're installing in, then follow the steps in that tab.
 
     ```bash
     # Download distribution.
-    curl -fL -o wso2apip-ai-gateway-1.2.0.zip https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
+    curl -fL -o xartifactprefixx-ai-gateway-1.2.0.zip https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip
 
     # Unzip the downloaded distribution.
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    unzip xartifactprefixx-ai-gateway-1.2.0.zip
 
-    cd wso2apip-ai-gateway-1.2.0/
+    cd xartifactprefixx-ai-gateway-1.2.0/
     ```
 
     On Windows, download and unpack the distribution with PowerShell:
 
     ```powershell
-    Invoke-WebRequest -Uri https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip -OutFile wso2apip-ai-gateway-1.2.0.zip
+    Invoke-WebRequest -Uri https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip -OutFile xartifactprefixx-ai-gateway-1.2.0.zip
 
-    Expand-Archive -Path wso2apip-ai-gateway-1.2.0.zip -DestinationPath .
+    Expand-Archive -Path xartifactprefixx-ai-gateway-1.2.0.zip -DestinationPath .
 
-    Set-Location wso2apip-ai-gateway-1.2.0
+    Set-Location xartifactprefixx-ai-gateway-1.2.0
     ```
 
     **Step 2: Run the one-time setup**

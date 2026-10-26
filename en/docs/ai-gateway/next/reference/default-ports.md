@@ -1,14 +1,14 @@
 ---
 title: "Default ports"
 description: "Default ports the AI Gateway listens on: router HTTP and HTTPS traffic, the Gateway-Controller REST API, and the admin health endpoints."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/reference/default-ports/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/reference/default-ports.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/reference/default-ports/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/reference/default-ports.md
 tags:
   - ai-gateway
   - reference
   - ports
   - endpoints
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-12
 content_type: "reference"
 ---

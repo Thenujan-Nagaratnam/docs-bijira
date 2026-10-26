@@ -1,14 +1,14 @@
 ---
 title: "Extend your gateway with AI Workspace"
 description: "What connecting AI Gateway to AI Workspace adds: one console, central deployment, artifact sync, shared policies, and traffic insights."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/ai-workspace/extend-your-gateway-with-ai-workspace/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/ai-workspace/extend-your-gateway-with-ai-workspace.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/ai-workspace/extend-your-gateway-with-ai-workspace/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/ai-workspace/extend-your-gateway-with-ai-workspace.md
 tags:
   - ai-gateway
   - ai-workspace
   - control-plane
   - governance
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-26
 content_type: "concept"
 ---

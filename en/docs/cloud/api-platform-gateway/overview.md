@@ -1,17 +1,17 @@
 # API Platform Gateway Overview
 
-API Platform provides two types of API Platform gateways powered by WSO2, giving you flexibility to choose the deployment model that best fits your requirements. Both gateway types are managed through API Platform's unified control plane, ensuring consistent API management, policy enforcement, and monitoring across all your environments.
+API Platform provides two types of API Platform gateways powered by XBRANDX, giving you flexibility to choose the deployment model that best fits your requirements. Both gateway types are managed through API Platform's unified control plane, ensuring consistent API management, policy enforcement, and monitoring across all your environments.
 
 ## Gateway Types
 
 ### API Platform Cloud Gateway (SaaS)
 
-The API Platform Cloud Gateway is a fully managed, WSO2-hosted gateway that requires zero infrastructure management on your part.
+The API Platform Cloud Gateway is a fully managed, XBRANDX-hosted gateway that requires zero infrastructure management on your part.
 
 | Aspect | Description |
 |--------|-------------|
-| **Deployment** | WSO2-managed cloud infrastructure |
-| **Management** | Fully managed by WSO2 |
+| **Deployment** | XBRANDX-managed cloud infrastructure |
+| **Management** | Fully managed by XBRANDX |
 | **Availability** | High availability with automatic failover |
 | **Scaling** | Automatic scaling based on traffic |
 | **Maintenance** | Zero maintenance required |
@@ -46,8 +46,8 @@ The Self-Hosted Gateway is a containerized instance of the API Platform Gateway 
 
 | Feature | API Platform Cloud Gateway | Self-Hosted Gateway |
 |---------|---------------------|---------------------|
-| Infrastructure management | WSO2 | You |
-| Data residency control | WSO2 cloud regions | Your choice |
+| Infrastructure management | XBRANDX | You |
+| Data residency control | XBRANDX cloud regions | Your choice |
 | Backend connectivity | Public endpoints | Public and private |
 | Setup time | Instant | Requires deployment |
 | Scaling | Automatic | Manual or auto (your infra) |
@@ -71,7 +71,7 @@ Both gateway types connect to API Platform's unified control plane:
             ▼                                   ▼
 ┌───────────────────────────────┐    ┌───────────────────────────┐
 │  API Platform Cloud Gateway   │    │    Your Environment       │
-│  (WSO2-Managed)               │    │  ┌─────────────────────┐  │
+│  (XSAMPLEBRANDX-Managed)               │    │  ┌─────────────────────┐  │
 │  ┌─────────────────┐          │    │  │  Self-Hosted Gateway│  │
 │  │  Gateway Cluster│          │    │  │  ┌─────┐ ┌─────┐    │  │
 │  └─────────────────┘          │    │  │  │ GW1 │ │ GW2 │    │  │

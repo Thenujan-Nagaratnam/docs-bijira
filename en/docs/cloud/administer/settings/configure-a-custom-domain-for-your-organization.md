@@ -1,13 +1,13 @@
 ---
 title: "Configure a custom domain for your organization"
 description: "Add a custom domain for your organization and use it to configure custom URLs for your API proxies."
-canonical_url: https://wso2.com/api-platform/docs/cloud/administer/settings/configure-a-custom-domain-for-your-organization/
-md_url: https://wso2.com/api-platform/docs/cloud/administer/settings/configure-a-custom-domain-for-your-organization.md
+canonical_url: https://xdocshostx/xdocspathx/cloud/administer/settings/configure-a-custom-domain-for-your-organization/
+md_url: https://xdocshostx/xdocspathx/cloud/administer/settings/configure-a-custom-domain-for-your-organization.md
 tags:
   - cloud
   - administer
   - custom-domain
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -31,7 +31,7 @@ To add a custom domain for your organization, follow the steps given below:
 !!! info "Note"
      To add a custom domain, you must have organization administrator privileges.
 
-1.  Sign in to the [API Platform Console](https://console.bijira.dev/).
+1.  Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2.  In the API Platform Console header, click the **Organization** list.
 3.  In the left navigation menu, under **Admin**, click **Settings**. This opens the organization-level settings page.
 4.  Click the **URL Settings** tab and then click the **Active Domains** tab.
@@ -124,7 +124,7 @@ Now, you have successfully added a custom domain for your organization.
 
 You can see the added custom domain listed in the **Active Domains** tab under the URL **Settings** tab.
 
-![Active Domains tab listing newtest.saasorg.work.gd domain with API type, Development environment, and Managed by Bijira certificate status](../../../assets/img/administer/settings/active-domains.png)
+![Active Domains tab listing newtest.saasorg.work.gd domain with API type, Development environment, and Managed by XCLOUDCODENAMEX certificate status](../../../assets/img/administer/settings/active-domains.png)
 
 The custom domain you added will be available to the entity types in the specified environment. You can use the custom domain when configuring a custom URL for a component.
 
@@ -141,7 +141,7 @@ To add a custom URL for your component, follow the steps given below:
 !!! info "Note"
     Before you add a custom domain for a specific environment, ensure that the component is deployed to that environment.
 
-1. Sign in to the [API Platform Console](https://console.bijira.dev/).
+1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
 2. In the **Project Overview** pane, click on the API Proxy for which you want to customize the URL.
 3. In the left navigation menu, under **Admin** click **Settings**. This opens the component-level settings page.
 4. Click the **URL Settings** tab. This displays the active deployments of the component across different environments and indicates whether a custom URL is configured. If an active custom domain is available to configure a custom URL for a component in a specific environment, the **Edit URL Mapping** icon in the corresponding **Action** column becomes enabled.

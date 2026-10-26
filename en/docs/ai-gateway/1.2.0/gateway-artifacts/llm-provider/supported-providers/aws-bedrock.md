@@ -1,8 +1,8 @@
 ---
 title: "AWS Bedrock"
 description: "Connect API Platform AI Gateway to AWS Bedrock using a bearer API key or AWS Signature Version 4 authentication, then invoke a model through the gateway."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/aws-bedrock/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/aws-bedrock/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md
 tags:
   - ai-gateway
   - llm-provider
@@ -10,7 +10,7 @@ tags:
   - aws-bedrock
   - authentication
   - troubleshooting
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
@@ -106,7 +106,7 @@ curl --fail-with-body -X POST \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<EOF
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: Secret
 metadata:
   name: bedrock-api-key
@@ -128,7 +128,7 @@ curl --fail-with-body -X POST \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<EOF
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: bedrock-provider
@@ -175,7 +175,7 @@ Continue to [Create a gateway consumer API key](#create-a-gateway-consumer-api-k
 
 The `aws-authentication` policy signs each outbound request with SigV4. Do not configure `spec.upstream.auth` when using this option because the policy creates the AWS `Authorization` header.
 
-See the [AWS Authentication policy reference](https://wso2.com/api-platform/policy-hub/policies/aws-authentication) for the complete parameter and error-response reference.
+See the [AWS Authentication policy reference](https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-authentication) for the complete parameter and error-response reference.
 
 All SigV4 examples use:
 
@@ -205,7 +205,7 @@ curl --fail-with-body -X POST \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<EOF
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: Secret
 metadata:
   name: bedrock-access-key-id
@@ -219,7 +219,7 @@ curl --fail-with-body -X POST \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<EOF
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: Secret
 metadata:
   name: bedrock-secret-access-key
@@ -239,7 +239,7 @@ curl --fail-with-body -X POST \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<EOF
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: bedrock-provider
@@ -298,7 +298,7 @@ curl --fail-with-body -X POST \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<EOF
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: Secret
 metadata:
   name: bedrock-session-token

@@ -1,13 +1,13 @@
 ---
 title: "Customize Developer Portal as an MCP Hub"
-description: "Switch the WSO2 API Platform Developer Portal to MCP Hub mode for a streamlined, MCP-only browsing and theming experience."
-canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/devportal-mcp-hub/
-md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/devportal-mcp-hub.md
+description: "Switch the XPLATFORMDEVPORTALX to MCP Hub mode for a streamlined, MCP-only browsing and theming experience."
+canonical_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/devportal-mcp-hub/
+md_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/devportal-mcp-hub.md
 tags:
   - cloud
   - mcp
   - devportal
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-18
 content_type: "how-to"
 ---

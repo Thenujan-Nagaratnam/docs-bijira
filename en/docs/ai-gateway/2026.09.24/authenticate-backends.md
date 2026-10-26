@@ -1,8 +1,8 @@
 ---
 title: "Authenticate to backends"
 description: "Configure how the AI Gateway authenticates to an upstream LLM or MCP backend, using the api-key, oauth2, other, and none upstream authentication types."
-canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/authenticate-backends/
-md_url: https://wso2.com/api-platform/docs/ai-gateway/next/authenticate-backends.md
+canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/authenticate-backends/
+md_url: https://xdocshostx/xdocspathx/ai-gateway/next/authenticate-backends.md
 tags:
   - ai-gateway
   - security
@@ -10,7 +10,7 @@ tags:
   - oauth2
   - api-key
   - upstream
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-03
 content_type: "how-to"
 ---
@@ -29,7 +29,7 @@ An LLM provider's connection to OpenAI, for example, sets its credential in `ups
 
 {% raw %}
 ```yaml
-apiVersion: gateway.api-platform.wso2.com/v1
+apiVersion: gateway.api-platform.xcrddomainx/v1
 kind: LlmProvider
 metadata:
   name: openai-provider
@@ -70,8 +70,8 @@ The `type` field accepts four values:
 
 | Type | Built-in policy | `policyParams` |
 |------|------------------|-----------------|
-| `api-key` | [Set Headers](https://wso2.com/api-platform/policy-hub/policies/set-headers) | Optional — falls back to the deprecated `header`/`value` fields if omitted. |
-| `oauth2` | [OAuth2 Generator](https://wso2.com/api-platform/policy-hub/policies/oauth2-generator) | Required. No typed fields exist outside it. |
+| `api-key` | [Set Headers](https://xpolicyhubhostx/xpolicyhubpathx/policies/set-headers) | Optional — falls back to the deprecated `header`/`value` fields if omitted. |
+| `oauth2` | [OAuth2 Generator](https://xpolicyhubhostx/xpolicyhubpathx/policies/oauth2-generator) | Required. No typed fields exist outside it. |
 | `other` | Any policy, named by `policyName` | Required, alongside `policyName`. |
 | `none` | None | Not applicable. |
 
@@ -95,7 +95,7 @@ The examples below show an LLM provider's `upstream.auth`, which an MCP proxy al
     ```
     {% endraw %}
 
-    `policyParams` takes the [Set Headers](https://wso2.com/api-platform/policy-hub/policies/set-headers) policy's own parameters — see that page for the full reference.
+    `policyParams` takes the [Set Headers](https://xpolicyhubhostx/xpolicyhubpathx/policies/set-headers) policy's own parameters — see that page for the full reference.
 
 === "oauth2"
 
@@ -112,7 +112,7 @@ The examples below show an LLM provider's `upstream.auth`, which an MCP proxy al
     ```
     {% endraw %}
 
-    `policyParams` takes the [OAuth2 Generator](https://wso2.com/api-platform/policy-hub/policies/oauth2-generator) policy's own parameters — see that page for the full reference, including the password grant, a static bearer token, and caching options.
+    `policyParams` takes the [OAuth2 Generator](https://xpolicyhubhostx/xpolicyhubpathx/policies/oauth2-generator) policy's own parameters — see that page for the full reference, including the password grant, a static bearer token, and caching options.
 
 === "other"
 
@@ -146,7 +146,7 @@ Other than `api-key` and `oauth2`, every backend auth policy attaches through `t
 
 | Policy | What it does | `policyParams` |
 |--------|---------------|------------------|
-| [AWS Authentication](https://wso2.com/api-platform/policy-hub/policies/aws-authentication) | Signs each request with AWS Signature Version 4 (SigV4), for services such as AWS Bedrock. | `service`, `region`, `authenticationType`, and credentials specific to that mode. |
+| [AWS Authentication](https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-authentication) | Signs each request with AWS Signature Version 4 (SigV4), for services such as AWS Bedrock. | `service`, `region`, `authenticationType`, and credentials specific to that mode. |
 
 For example, AWS Bedrock's SigV4 signing:
 

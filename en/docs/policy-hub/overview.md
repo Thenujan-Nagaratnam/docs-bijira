@@ -1,24 +1,24 @@
 ---
 title: "Policy Hub overview"
-description: "Browse the curated, versioned library of gateway policies for APIs and MCP servers in the WSO2 API Platform Policy Hub."
-canonical_url: https://wso2.com/api-platform/docs/policy-hub/overview/
-md_url: https://wso2.com/api-platform/docs/policy-hub/overview.md
+description: "Browse the curated, versioned library of gateway policies for APIs and MCP servers in the XPLATFORMPOLICYHUBX."
+canonical_url: https://xdocshostx/xdocspathx/policy-hub/overview/
+md_url: https://xdocshostx/xdocspathx/policy-hub/overview.md
 tags:
   - policy-hub
   - policies
   - gateway
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-01
 content_type: "overview"
 ---
 
-# WSO2 API Platform Policy Hub
+# XPLATFORMPOLICYHUBX
 
-[The Policy Hub](https://wso2.com/api-platform/policy-hub) is the official, curated collection of [gateway policies](../api-gateway/next/policies/overview.md) for the WSO2 API Platform. It gives you a growing library of production-ready, versioned policy implementations that you can apply to any API or MCP server without writing custom code.
+[The Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx) is the official, curated collection of [gateway policies](../api-gateway/next/policies/overview.md) for the XAPIPLATFORMX. It gives you a growing library of production-ready, versioned policy implementations that you can apply to any API or MCP server without writing custom code.
 
 Policies are self-contained units of behavior that plug into the gateway's request and response pipeline. You compose them, like stacking authentication on top of rate limiting on top of a guardrail, as opposed to building each concern from scratch. If your requisites exceed what the hub provides, you can author and ship your own policies alongside hub ones.
 
-The Policy Hub is powered by an [open source repository on GitHub](https://github.com/wso2/gateway-controllers). Every policy is versioned independently, the full source and documentation live in the repo, and contributions are welcome. For more information about contributing policies, see [Policy Development Guide](https://wso2.com/api-platform/policy-hub/policy-development-guide).
+The Policy Hub is powered by an [open source repository on GitHub](https://github.com/xgithuborgx/gateway-controllers). Every policy is versioned independently, the full source and documentation live in the repo, and contributions are welcome. For more information about contributing policies, see [Policy Development Guide](https://xpolicyhubhostx/xpolicyhubpathx/policy-development-guide).
 
 ## How Policies Work
 

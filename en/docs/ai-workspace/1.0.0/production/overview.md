@@ -1,14 +1,14 @@
 ---
 title: "Production deployment overview"
 description: "Plan a production AI Workspace deployment: what you deploy, how a virtual machine install differs from Kubernetes, and the decisions to make before you install."
-canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/production/overview/
-md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/production/overview.md
+canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/production/overview/
+md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/production/overview.md
 tags:
   - ai-workspace
   - production
   - deployment
   - architecture
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-08-06
 content_type: "concept"
 ---
@@ -164,7 +164,7 @@ The API Portal is a separate product that shares this same Platform API control 
     That chart bundles a Platform API of its own. To have both portals share the control plane you already run, disable the bundled copy:
 
     ```bash
-    helm install api-portal oci://ghcr.io/wso2/api-platform/helm-charts/developer-portal \
+    helm install api-portal oci://ghcr.io/xgithuborgx/api-platform/helm-charts/developer-portal \
       --version <chart-version> -n <namespace> \
       --set platform-api.enabled=false \
       -f api-portal-values.yaml

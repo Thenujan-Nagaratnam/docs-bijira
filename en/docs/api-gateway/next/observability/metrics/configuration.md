@@ -1,13 +1,13 @@
 ---
 title: "Metrics Configuration Options"
 description: "Configure Prometheus scrape intervals and custom metrics endpoints for API Platform Gateway components."
-canonical_url: https://wso2.com/api-platform/docs/api-gateway/next/observability/metrics/configuration/
-md_url: https://wso2.com/api-platform/docs/api-gateway/next/observability/metrics/configuration.md
+canonical_url: https://xdocshostx/xdocspathx/api-gateway/next/observability/metrics/configuration/
+md_url: https://xdocshostx/xdocspathx/api-gateway/next/observability/metrics/configuration.md
 tags:
   - api-gateway
   - observability
   - metrics
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-17
 content_type: "reference"
 ---

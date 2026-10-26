@@ -1,8 +1,8 @@
 ---
 title: "Observe LLM traffic on the AI Gateway"
 description: "See request volume, latency, error rate, token usage, estimated cost, and guardrail activity for your LLM proxies from the Insights dashboards in the AI Workspace."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/observe-llm-traffic/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/observe-llm-traffic.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/observe-llm-traffic/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/observe-llm-traffic.md
 tags:
   - guides
   - ai-and-mcp
@@ -11,7 +11,7 @@ tags:
   - analytics
   - llm
   - ai-workspace
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-18
 content_type: "how-to"
 ---
@@ -22,7 +22,7 @@ content_type: "how-to"
 
 AI traffic raises questions ordinary API monitoring can't answer. A request count tells you nothing about which model spent your token budget, what a conversation cost, or which guardrail rejected a prompt.
 
-The WSO2 AI Gateway reports on the large language model (LLM) proxies that front your model providers. For each one you can observe request rate, latency, and error rate, along with token usage and estimated cost per proxy and per model, and how often your guardrails fired.
+The XAIGATEWAYX reports on the large language model (LLM) proxies that front your model providers. For each one you can observe request rate, latency, and error rate, along with token usage and estimated cost per proxy and per model, and how often your guardrails fired.
 
 This guide shows you where to find each of those figures and how to read them.
 
@@ -47,7 +47,7 @@ This guide shows you where to find each of those figures and how to read them.
 
 ## Prerequisites
 
-- A WSO2 API Platform account. [Sign up for free](https://console.bijira.dev).
+- A XAPIPLATFORMX account. [Sign up for free](https://console.xclouddomainx).
 - An AI gateway that shows **Active** in the AI Workspace. See [Setting up an AI Gateway](../../cloud/ai-workspace/ai-gateways/setting-up.md).
 - An [LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md) deployed to that gateway. Add an [App LLM proxy](../../cloud/ai-workspace/llm-proxies/configure-proxy.md) as well if you want per-application authentication or guardrails.
 - An API key and the invoke URL for the provider or proxy you want to observe.
@@ -87,7 +87,7 @@ Send a few requests, including one that fails, so both the traffic panels and th
 
 ## Step 2: Open Insights and set the scope
 
-1. Sign in to [WSO2 API Platform](https://console.bijira.dev/), then click **AI Workspace** in the header.
+1. Sign in to [XAPIPLATFORMX](https://console.xclouddomainx/), then click **AI Workspace** in the header.
 2. Select your organization and project from the selectors at the top of the page.
 3. In the left navigation menu, click **Insights**.
 4. Set **Environment** to the environment your proxies are deployed to, such as **Development**.
@@ -159,7 +159,7 @@ Then work down the panels:
 
 Two companion samples run the AI Gateway against a mock model, so no provider account or API key is required.
 
-- [LLM analytics with Moesif](https://github.com/wso2/api-platform/tree/main/samples/ai-gateway-moesif-analytics): generates mixed traffic and reports it on the same Insights dashboards this guide covers.
-- [LLM metrics and tracing](https://github.com/wso2/api-platform/tree/main/samples/ai-gateway-observability): runs Prometheus, Grafana, and Jaeger alongside the gateway for the runtime's own metrics and per-request traces.
+- [LLM analytics with Moesif](https://github.com/xgithuborgx/api-platform/tree/main/samples/ai-gateway-moesif-analytics): generates mixed traffic and reports it on the same Insights dashboards this guide covers.
+- [LLM metrics and tracing](https://github.com/xgithuborgx/api-platform/tree/main/samples/ai-gateway-observability): runs Prometheus, Grafana, and Jaeger alongside the gateway for the runtime's own metrics and per-request traces.
 
 On a standalone AI Gateway you choose how to observe it. Point the runtime at Moesif for the analytics dashboards, or at Prometheus, Grafana, and Jaeger for metrics and traces.

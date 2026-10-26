@@ -1,15 +1,15 @@
 ---
 title: "Block prompt injection and unsafe requests with LLM proxy guardrails"
 description: "Chain content length, word count, regex, and semantic prompt guardrails on an LLM proxy to reject unsafe requests before they reach your model."
-canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails/
-md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md
+canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails/
+md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md
 tags:
   - guides
   - ai-and-mcp
   - llm
   - ai-workspace
   - guardrails
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-09-13
 content_type: "tutorial"
 ---
@@ -47,7 +47,7 @@ The gateway runs the guardrails attached to a proxy in the order you add them. A
 
 ## Prerequisites
 
-- A WSO2 API Platform account. [Sign up for free](https://console.bijira.dev).
+- A XAPIPLATFORMX account. [Sign up for free](https://console.xclouddomainx).
 - Docker and Docker Compose, to run the self-hosted AI gateway.
 - A Mistral API key. You use it both to register Mistral as the LLM provider and to configure the embedding provider the semantic prompt guard depends on. Any provider AI Workspace supports (OpenAI, Azure OpenAI, and others) works the same way; this guide uses Mistral throughout.
 - `curl` for testing.
@@ -61,7 +61,7 @@ Your application
     |  { "messages": [ { "role": "user", "content": "..." } ] }
     v
 +---------------------------------------------------------+
-|  WSO2 AI Gateway                                        |
+|  XAIGATEWAYX                                        |
 |  [ LLM Proxy ]                                          |
 |  1. content-length-guardrail                             |
 |  2. word-count-guardrail                                 |
@@ -80,7 +80,7 @@ Mistral API
 
 ## Step 1: Create an organization and project
 
-Go to the [WSO2 API Platform console](https://console.bijira.dev) and sign in. If this is your first time, you're prompted to create an organization first. Full walkthrough: [Quick start guide](../../cloud/introduction/quick-start-guide.md).
+Go to the [XAPIPLATFORMX console](https://console.xclouddomainx) and sign in. If this is your first time, you're prompted to create an organization first. Full walkthrough: [Quick start guide](../../cloud/introduction/quick-start-guide.md).
 
 Then create a project with these details:
 
@@ -111,15 +111,15 @@ The AI gateway is the runtime that hosts your proxy and enforces your guardrails
 2. Click **Add Gateway**. On the **Get Started** panel, download the gateway using the Docker tab's command:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip && \
-    unzip wso2apip-ai-gateway-1.1.0.zip
+    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.1.0/xartifactprefixx-ai-gateway-1.1.0.zip && \
+    unzip xartifactprefixx-ai-gateway-1.1.0.zip
     ```
 
 3. Click **View Gateway configurations** (the icon next to **Get Started**), then **Download keys.env file**, and save it as `configs/keys.env` inside the extracted directory. It already contains your real registration token and Moesif key — no manual editing needed.
 4. Start the gateway:
 
     ```bash
-    cd wso2apip-ai-gateway-1.1.0
+    cd xartifactprefixx-ai-gateway-1.1.0
     docker compose --env-file configs/keys.env up
     ```
 
@@ -446,4 +446,4 @@ Use the API key and invoke URL from Step 12. The invoke URL already includes you
 
 The companion sample runs this same four-guardrail chain locally using Docker, with a mock LLM and embedding backend — no real Mistral, OpenAI, or Azure OpenAI account required.
 
-[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/request-path-guardrails)
+[View the sample on GitHub](https://github.com/xgithuborgx/api-platform/tree/main/samples/request-path-guardrails)

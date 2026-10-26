@@ -1,20 +1,20 @@
 ---
 title: "API Platform CLI reference"
 description: "Command reference for the ap CLI: gateway management, API and MCP operations, and custom gateway image builds."
-canonical_url: https://wso2.com/api-platform/docs/tools/cli/reference/
-md_url: https://wso2.com/api-platform/docs/tools/cli/reference.md
+canonical_url: https://xdocshostx/xdocspathx/tools/cli/reference/
+md_url: https://xdocshostx/xdocspathx/tools/cli/reference.md
 tags:
   - tools
   - cli
   - reference
-author: WSO2 API Platform Documentation Team
+author: XDOCSTEAMX
 last_updated: 2026-06-23
 content_type: "reference"
 ---
 
-# WSO2 API Platform CLI (AP)
+# XAPIPLATFORMX CLI (AP)
 
-`ap` is a command-line tool for managing and interacting with the WSO2 API Platform.
+`ap` is a command-line tool for managing and interacting with the XAPIPLATFORMX.
 
 ## Supported Short Flags
 
@@ -36,8 +36,8 @@ content_type: "reference"
 - Credentials for a gateway can come from either the gateway configuration (when you add the gateway) or from environment variables. **Environment variables take precedence** over configuration and will override credentials stored in the config when present.
 - Depending on the gateway's authentication type:
   - **none**: No authentication required
-  - **basic**: Provide credentials via config or export `WSO2AP_GW_USERNAME=<username>` and `WSO2AP_GW_PASSWORD=<password>` (env vars override config)
-  - **bearer**: Provide a token via config or export `WSO2AP_GW_TOKEN=<token>` (env var overrides config)
+  - **basic**: Provide credentials via config or export `XENVPREFIXXAP_GW_USERNAME=<username>` and `XENVPREFIXXAP_GW_PASSWORD=<password>` (env vars override config)
+  - **bearer**: Provide a token via config or export `XENVPREFIXXAP_GW_TOKEN=<token>` (env var overrides config)
 
 ---
 
@@ -66,13 +66,13 @@ ap gateway add --display-name prod --server https://api.example.com --auth beare
 
 For **basic** authentication, export these environment variables (replace the placeholders with your values):
 ```shell
-export WSO2AP_GW_USERNAME=<username>
-export WSO2AP_GW_PASSWORD=<password>
+export XENVPREFIXXAP_GW_USERNAME=<username>
+export XENVPREFIXXAP_GW_PASSWORD=<password>
 ```
 
 For **bearer** authentication, export this environment variable (replace `<token>` with your token):
 ```shell
-export WSO2AP_GW_TOKEN=<token>
+export XENVPREFIXXAP_GW_TOKEN=<token>
 ```
 
 **Note:** Environment variables override credentials stored in the gateway configuration.
