@@ -1,14 +1,14 @@
 ---
 title: "Subscribe to a paid plan"
 description: "Subscribe an application to a paid API subscription plan in the Developer Portal using Stripe checkout."
-canonical_url: https://xdocshostx/xdocspathx/monetization/subscribe-to-paid-plan/
-md_url: https://xdocshostx/xdocspathx/monetization/subscribe-to-paid-plan.md
+canonical_url: https://wso2.com/api-platform/docs/monetization/subscribe-to-paid-plan/
+md_url: https://wso2.com/api-platform/docs/monetization/subscribe-to-paid-plan.md
 tags:
   - cloud
   - monetization
   - devportal
   - subscriptions
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -30,7 +30,7 @@ Before you begin, ensure you have:
 
 ## Subscribe to an API with a Paid Plan
 
-1. Go to the [API Platform Developer Portal](https://devportal.xclouddomainx/) and sign in to your organization.
+1. Go to the [API Platform Developer Portal](https://devportal.bijira.dev/) and sign in to your organization.
 2. In the Developer Portal sidebar, click **APIs** to open the API listing page.
 3. Locate the API you want to subscribe to and click **Subscribe** on the API card.
 

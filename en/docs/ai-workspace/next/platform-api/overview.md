@@ -1,19 +1,19 @@
 ---
 title: "Platform API"
-description: "Overview of the XAPIPLATFORMX Platform API for managing AI Workspace gateways, LLM providers, proxies, applications, and secrets."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/overview/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/overview.md
+description: "Overview of the WSO2 API Platform Platform API for managing AI Workspace gateways, LLM providers, proxies, applications, and secrets."
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/overview/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/overview.md
 tags:
   - ai-workspace
   - platform-api
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-07
 content_type: "overview"
 ---
 
 # Platform API v0.9.0
 
-This document specifies a **RESTful API** for XBRANDX **API Platform** - **Platform API**.
+This document specifies a **RESTful API** for WSO2 **API Platform** - **Platform API**.
 
 ## Authentication
 
@@ -25,7 +25,7 @@ verification.
 automatically scoped to this organization.
 
 **Supported signing algorithms**: RS256, RS384, RS512 (RSA) and ES256, ES384, ES512 (ECDSA).
-Works with any standards-compliant IDP (Keycloak, Azure AD, Okta, Auth0, XISSHORTX, etc.).
+Works with any standards-compliant IDP (Keycloak, Azure AD, Okta, Auth0, WSO2 IS, etc.).
 
 ## Scope-Based Access Control
 

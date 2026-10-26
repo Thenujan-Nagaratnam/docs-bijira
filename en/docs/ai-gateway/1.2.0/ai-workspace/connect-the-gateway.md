@@ -1,14 +1,14 @@
 ---
 title: "Connect the gateway to AI Workspace"
 description: "Find the page that connects your AI Gateway to AI Workspace, whether you're trying the control plane locally or registering a production gateway."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/ai-workspace/connect-the-gateway/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/ai-workspace/connect-the-gateway.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/ai-workspace/connect-the-gateway/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/ai-workspace/connect-the-gateway.md
 tags:
   - ai-gateway
   - ai-workspace
   - control-plane
   - deployment
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-26
 content_type: "how-to"
 ---

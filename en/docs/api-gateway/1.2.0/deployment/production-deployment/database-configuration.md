@@ -1,15 +1,15 @@
 ---
 title: "Database Configuration"
 description: "Configure PostgreSQL or SQL Server as the shared database for Gateway Controller replicas in high-availability production deployments."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/deployment/production-deployment/database-configuration/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/deployment/production-deployment/database-configuration.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/deployment/production-deployment/database-configuration/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/deployment/production-deployment/database-configuration.md
 tags:
   - api-gateway
   - deployment
   - postgresql
   - sqlserver
   - devops
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-07
 content_type: "how-to"
 ---

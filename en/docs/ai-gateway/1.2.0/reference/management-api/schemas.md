@@ -1,12 +1,12 @@
 ---
 title: "Management API Schemas"
 description: "JSON schema definitions for all API Platform Gateway Controller management API request and response objects."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/reference/management-api/schemas/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/reference/management-api/schemas.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/reference/management-api/schemas/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/reference/management-api/schemas.md
 tags:
   - ai-gateway
   - management-api
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-11
 content_type: "reference"
 ---
@@ -59,7 +59,7 @@ Server-managed lifecycle information for a resource
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "RestApi",
   "metadata": {
     "name": "reading-list-api-v1.0"
@@ -70,7 +70,7 @@ Server-managed lifecycle information for a resource
     "context": "/reading-list/$version",
     "upstream": {
       "main": {
-        "url": "https://apis.xclouddomainx/samples/reading-list-api-service/v1.0"
+        "url": "https://apis.bijira.dev/samples/reading-list-api-service/v1.0"
       }
     },
     "policies": [
@@ -81,7 +81,7 @@ Server-managed lifecycle information for a resource
           "request": {
             "headers": [
               {
-                "name": "x-xheaderprefixx-apip-gateway-version",
+                "name": "x-wso2-apip-gateway-version",
                 "value": "v1.0.0"
               }
             ]
@@ -137,7 +137,7 @@ Server-managed lifecycle information for a resource
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1|
+|apiVersion|gateway.api-platform.wso2.com/v1|
 |kind|RestApi|
 
 ## RestAPI
@@ -149,7 +149,7 @@ Server-managed lifecycle information for a resource
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "RestApi",
   "metadata": {
     "name": "reading-list-api-v1.0"
@@ -160,7 +160,7 @@ Server-managed lifecycle information for a resource
     "context": "/reading-list/$version",
     "upstream": {
       "main": {
-        "url": "https://apis.xclouddomainx/samples/reading-list-api-service/v1.0"
+        "url": "https://apis.bijira.dev/samples/reading-list-api-service/v1.0"
       }
     },
     "policies": [
@@ -171,7 +171,7 @@ Server-managed lifecycle information for a resource
           "request": {
             "headers": [
               {
-                "name": "x-xheaderprefixx-apip-gateway-version",
+                "name": "x-wso2-apip-gateway-version",
                 "value": "v1.0.0"
               }
             ]
@@ -252,7 +252,7 @@ and
     "version": "v1"
   },
   "annotations": {
-    "gateway.api-platform.xcrddomainx/project-id": "019d953f-d386-7a64-aa92-1869a28292e0"
+    "gateway.api-platform.wso2.com/project-id": "019d953f-d386-7a64-aa92-1869a28292e0"
   }
 }
 
@@ -1290,7 +1290,7 @@ Details of an API key
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Mcp",
   "metadata": {
     "name": "everything-mcp-v1.0"
@@ -1324,7 +1324,7 @@ Details of an API key
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1|
+|apiVersion|gateway.api-platform.wso2.com/v1|
 |kind|Mcp|
 
 ## MCPProxyConfiguration
@@ -1336,7 +1336,7 @@ Details of an API key
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Mcp",
   "metadata": {
     "name": "everything-mcp-v1.0"
@@ -1666,7 +1666,7 @@ continued
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"
@@ -1715,7 +1715,7 @@ continued
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1|
+|apiVersion|gateway.api-platform.wso2.com/v1|
 |kind|LlmProviderTemplate|
 
 ## LLMProviderTemplate
@@ -1727,7 +1727,7 @@ continued
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "LlmProviderTemplate",
   "metadata": {
     "name": "openai-template"
@@ -1794,7 +1794,7 @@ and
 {
   "displayName": "OpenAI",
   "groupId": "openai",
-  "managedBy": "xtemplateownerx",
+  "managedBy": "wso2",
   "version": "v1.0",
   "promptTokens": {
     "location": "payload",
@@ -1861,7 +1861,7 @@ and
 |---|---|---|---|---|
 |displayName|string|true|none|Human-readable LLM Template name|
 |groupId|string|false|none|Stable family-grouping identifier shared by every version of this<br>template. Multiple versions with the same groupId but different<br>handles are surfaced as versions of one template. Defaults to<br>metadata.name when omitted.|
-|managedBy|string|false|none|Origin of the template. Built-in templates use 'xtemplateownerx'; custom<br>templates default to 'customer' and may be set to any value.|
+|managedBy|string|false|none|Origin of the template. Built-in templates use 'wso2'; custom<br>templates default to 'customer' and may be set to any value.|
 |version|string|false|none|Template content version (e.g. v1.0). Multiple versions of the same<br>groupId can coexist; defaults to v1.0 when omitted.|
 |promptTokens|[ExtractionIdentifier](#schemaextractionidentifier)|false|none|none|
 |completionTokens|[ExtractionIdentifier](#schemaextractionidentifier)|false|none|none|
@@ -2009,10 +2009,10 @@ and
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "LlmProvider",
   "metadata": {
-    "name": "xsampleslugx-openai-provider"
+    "name": "wso2-openai-provider"
   },
   "spec": {
     "displayName": "OpenAI Provider",
@@ -2068,7 +2068,7 @@ and
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1|
+|apiVersion|gateway.api-platform.wso2.com/v1|
 |kind|LlmProvider|
 
 ## LLMProviderConfiguration
@@ -2080,10 +2080,10 @@ and
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "LlmProvider",
   "metadata": {
-    "name": "xsampleslugx-openai-provider"
+    "name": "wso2-openai-provider"
   },
   "spec": {
     "displayName": "OpenAI Provider",
@@ -2122,7 +2122,7 @@ and
     }
   },
   "status": {
-    "id": "xsampleslugx-openai-provider",
+    "id": "wso2-openai-provider",
     "state": "deployed",
     "createdAt": "2026-04-24T07:21:13Z",
     "updatedAt": "2026-04-24T07:21:13Z",
@@ -2156,7 +2156,7 @@ and
 
 ```json
 {
-  "displayName": "XSAMPLEBRANDX OpenAI Provider",
+  "displayName": "WSO2 OpenAI Provider",
   "version": "v1.0",
   "context": "/openai",
   "vhost": "api.openai.com",
@@ -2363,7 +2363,7 @@ continued
 
 ```json
 {
-  "id": "xsampleslugx-openai-provider",
+  "id": "wso2-openai-provider",
   "auth": {
     "type": "api-key",
     "header": "string",
@@ -2629,7 +2629,7 @@ Request/response translator applied when this provider is the selected upstream.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "LlmProxy",
   "metadata": {
     "name": "openai-proxy"
@@ -2639,7 +2639,7 @@ Request/response translator applied when this provider is the selected upstream.
     "version": "v1.0",
     "context": "/openai-proxy",
     "provider": {
-      "id": "xsampleslugx-openai-provider"
+      "id": "wso2-openai-provider"
     },
     "policies": []
   }
@@ -2660,7 +2660,7 @@ Request/response translator applied when this provider is the selected upstream.
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1|
+|apiVersion|gateway.api-platform.wso2.com/v1|
 |kind|LlmProxy|
 
 ## LLMProxyConfiguration
@@ -2672,7 +2672,7 @@ Request/response translator applied when this provider is the selected upstream.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "LlmProxy",
   "metadata": {
     "name": "openai-proxy"
@@ -2682,7 +2682,7 @@ Request/response translator applied when this provider is the selected upstream.
     "version": "v1.0",
     "context": "/openai-proxy",
     "provider": {
-      "id": "xsampleslugx-openai-provider"
+      "id": "wso2-openai-provider"
     },
     "policies": []
   },
@@ -2726,7 +2726,7 @@ and
   "context": "/openai",
   "vhost": "api.openai.com",
   "provider": {
-    "id": "xsampleslugx-openai-provider",
+    "id": "wso2-openai-provider",
     "auth": {
       "type": "api-key",
       "header": "string",
@@ -2829,7 +2829,7 @@ and
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Secret",
   "metadata": {
     "name": "database-password"
@@ -2856,7 +2856,7 @@ and
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1|
+|apiVersion|gateway.api-platform.wso2.com/v1|
 |kind|Secret|
 
 ## SecretConfiguration
@@ -2868,7 +2868,7 @@ and
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Secret",
   "metadata": {
     "name": "database-password"
@@ -2962,7 +2962,7 @@ and
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Secret",
   "metadata": {
     "name": "database-password"
@@ -2993,7 +2993,7 @@ and
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1|
+|apiVersion|gateway.api-platform.wso2.com/v1|
 |kind|Secret|
 
 ## CertificateUploadRequest
@@ -3145,7 +3145,7 @@ and
   "count": 5,
   "secrets": [
     {
-      "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+      "apiVersion": "gateway.api-platform.wso2.com/v1",
       "kind": "Secret",
       "metadata": {
         "name": "database-password"
@@ -3208,7 +3208,7 @@ Id and optional timestamps. Not the full ResourceStatus model (no `state` or
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Secret",
   "metadata": {
     "name": "database-password"
@@ -3242,7 +3242,7 @@ POST/PUT /secrets response. `spec.value` is not returned; see SecretConfiguratio
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1|
+|apiVersion|gateway.api-platform.wso2.com/v1|
 |kind|Secret|
 
 ## SecretConfigurationResponseRetrieved
@@ -3254,7 +3254,7 @@ POST/PUT /secrets response. `spec.value` is not returned; see SecretConfiguratio
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Secret",
   "metadata": {
     "name": "database-password"
@@ -3289,5 +3289,5 @@ GET /secrets/{id} response including decrypted `spec.value`.
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1|
+|apiVersion|gateway.api-platform.wso2.com/v1|
 |kind|Secret|

@@ -1,8 +1,8 @@
 ---
 title: "Setting Up the Database"
 description: "Create the database and apply the Gateway Controller schema for PostgreSQL or SQL Server before starting the API Platform AI Gateway."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/setup-and-deployment/database-setup/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/setup-and-deployment/database-setup.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/setup-and-deployment/database-setup/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/setup-and-deployment/database-setup.md
 tags:
   - ai-gateway
   - configuration
@@ -10,7 +10,7 @@ tags:
   - sqlserver
   - devops
   - troubleshooting
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
@@ -39,7 +39,7 @@ For **PostgreSQL** and **SQL Server**, the Gateway Controller connects to the da
 The scripts ship inside the gateway distribution:
 
 ```text
-xartifactprefixx-ai-gateway-<version>/
+wso2apip-ai-gateway-<version>/
 └── resources/
     └── gateway-controller/
         └── db-scripts/
@@ -49,8 +49,8 @@ xartifactprefixx-ai-gateway-<version>/
 
 If you are deploying from container images or Helm rather than the distribution zip, download them from the repository instead:
 
-- [gateway-controller-db.postgres.sql](https://github.com/xgithuborgx/api-platform/blob/main/gateway/gateway-controller/pkg/storage/gateway-controller-db.postgres.sql)
-- [gateway-controller-db.sqlserver.sql](https://github.com/xgithuborgx/api-platform/blob/main/gateway/gateway-controller/pkg/storage/gateway-controller-db.sqlserver.sql)
+- [gateway-controller-db.postgres.sql](https://github.com/wso2/api-platform/blob/main/gateway/gateway-controller/pkg/storage/gateway-controller-db.postgres.sql)
+- [gateway-controller-db.sqlserver.sql](https://github.com/wso2/api-platform/blob/main/gateway/gateway-controller/pkg/storage/gateway-controller-db.sqlserver.sql)
 
 !!! important
     Always use the scripts that ship with the gateway version you are deploying. Applying a script from a different release can leave the schema out of step with what the controller expects.
@@ -252,7 +252,7 @@ APIP_GW_CONTROLLER_STORAGE_POSTGRES_USER=gateway
 APIP_GW_CONTROLLER_STORAGE_POSTGRES_PASSWORD=your-db-password
 ```
 
-For SQL Server, the shipped Compose files supply the whole connection string through `APIP_GW_CONTROLLER_STORAGE_DATABASE_DSN`. See [Gateway Configuration and Environment Interpolation](./configuration.md) for how interpolation works. For the full list of storage configuration options for both databases, refer to the [config template](https://github.com/xgithuborgx/api-platform/blob/main/gateway/configs/config-template.toml).
+For SQL Server, the shipped Compose files supply the whole connection string through `APIP_GW_CONTROLLER_STORAGE_DATABASE_DSN`. See [Gateway Configuration and Environment Interpolation](./configuration.md) for how interpolation works. For the full list of storage configuration options for both databases, refer to the [config template](https://github.com/wso2/api-platform/blob/main/gateway/configs/config-template.toml).
 
 Start the gateway:
 
@@ -290,7 +290,7 @@ password = '{% raw %}{{ env "APIP_GW_RATELIMIT_REDIS_PASSWORD" "" }}{% endraw %}
 
 `config.toml` is interpolated the same way everywhere in the file, so the {% raw %}`{{ env "..." "" }}`{% endraw %} token above works here too — see [Gateway Configuration and Environment Interpolation](./configuration.md) rather than writing the password literally.
 
-For the full list of Redis configuration options, refer to the [Advanced Rate Limiting documentation](https://xpolicyhubhostx/xpolicyhubpathx/policies/advanced-ratelimit).
+For the full list of Redis configuration options, refer to the [Advanced Rate Limiting documentation](https://wso2.com/api-platform/policy-hub/policies/advanced-ratelimit).
 
 ## Troubleshooting
 

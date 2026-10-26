@@ -1,14 +1,14 @@
 ---
 title: "Add and manage policies on the Self-Hosted Gateway"
 description: "Attach, configure, and deploy policies on API proxies running on the API Platform Self-Hosted Gateway."
-canonical_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/manage-policies/
-md_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/manage-policies.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/manage-policies/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/manage-policies.md
 tags:
   - cloud
   - api-gateway
   - self-hosted
   - policies
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -25,7 +25,7 @@ Policies allow you to enforce security, rate limiting, transformation, and other
 
 To add policies to an API deployed on your Self-Hosted Gateway:
 
-1. Sign in to the [API Platform Console](https://console.xclouddomainx).
+1. Sign in to the [API Platform Console](https://console.bijira.dev).
 2. Select your organization and project.
 3. Navigate to the API proxy you want to configure.
 4. Click **Develop** in the left navigation, then select **Policies**.
@@ -50,7 +50,7 @@ To add policies to an API deployed on your Self-Hosted Gateway:
 
 ## Available Policy Types
 
-Navigate to [API Platform Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) to discover available policies.
+Navigate to [API Platform Policy Hub](https://wso2.com/api-platform/policy-hub/) to discover available policies.
 
 ## What's Next?
 

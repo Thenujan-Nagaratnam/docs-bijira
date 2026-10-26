@@ -1,12 +1,12 @@
 ---
 title: "Platform API: LLM providers"
 description: "REST API reference for creating, listing, updating, and deleting LLM providers."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/llm-providers/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/llm-providers.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/llm-providers/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/llm-providers.md
 tags:
   - ai-workspace
   - platform-api
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -39,8 +39,8 @@ Deploy a new LLM provider configuration.
 
 ```json
 {
-  "id": "xsampleslugx-openai-provider",
-  "displayName": "XSAMPLEBRANDX OpenAI Provider",
+  "id": "wso2-openai-provider",
+  "displayName": "WSO2 OpenAI Provider",
   "description": "Primary OpenAI provider",
   "version": "v1.0",
   "context": "/openai",
@@ -266,8 +266,8 @@ Required scopes (the token must carry at least one of): `ap:llm_provider:create`
 
 ```json
 {
-  "id": "xsampleslugx-openai-provider",
-  "displayName": "XSAMPLEBRANDX OpenAI Provider",
+  "id": "wso2-openai-provider",
+  "displayName": "WSO2 OpenAI Provider",
   "description": "Primary OpenAI provider",
   "createdBy": "john.doe",
   "readOnly": false,
@@ -594,8 +594,8 @@ Required scopes (the token must carry at least one of): `ap:llm_provider:read`, 
   "count": 2,
   "list": [
     {
-      "id": "xsampleslugx-openai-provider",
-      "displayName": "XSAMPLEBRANDX OpenAI Provider",
+      "id": "wso2-openai-provider",
+      "displayName": "WSO2 OpenAI Provider",
       "description": "Primary OpenAI provider",
       "createdBy": "john.doe",
       "readOnly": false,
@@ -682,8 +682,8 @@ Required scopes (the token must carry at least one of): `ap:llm_provider:read`, 
 
 ```json
 {
-  "id": "xsampleslugx-openai-provider",
-  "displayName": "XSAMPLEBRANDX OpenAI Provider",
+  "id": "wso2-openai-provider",
+  "displayName": "WSO2 OpenAI Provider",
   "description": "Primary OpenAI provider",
   "createdBy": "john.doe",
   "readOnly": false,
@@ -957,8 +957,8 @@ Update the configuration of an existing LLM provider.
 
 ```json
 {
-  "id": "xsampleslugx-openai-provider",
-  "displayName": "XSAMPLEBRANDX OpenAI Provider",
+  "id": "wso2-openai-provider",
+  "displayName": "WSO2 OpenAI Provider",
   "description": "Primary OpenAI provider",
   "version": "v1.0",
   "context": "/openai",
@@ -1185,8 +1185,8 @@ Required scopes (the token must carry at least one of): `ap:llm_provider:update`
 
 ```json
 {
-  "id": "xsampleslugx-openai-provider",
-  "displayName": "XSAMPLEBRANDX OpenAI Provider",
+  "id": "wso2-openai-provider",
+  "displayName": "WSO2 OpenAI Provider",
   "description": "Primary OpenAI provider",
   "createdBy": "john.doe",
   "readOnly": false,
@@ -1611,14 +1611,14 @@ Required scopes (the token must carry at least one of): `ap:llm_proxy:deployment
   "count": 2,
   "list": [
     {
-      "id": "xsampleslugx-con-assistant",
-      "displayName": "XSAMPLEBRANDX Con Assistant",
+      "id": "wso2-con-assistant",
+      "displayName": "WSO2 Con Assistant",
       "description": "Customer support assistant",
       "createdBy": "john.doe",
-      "context": "/xsampleslugx-con-assistant",
+      "context": "/wso2-con-assistant",
       "version": "v1.0",
       "projectId": "default-project",
-      "provider": "xsampleslugx-openai-provider",
+      "provider": "wso2-openai-provider",
       "status": "deployed",
       "createdAt": "2025-11-25T10:30:00Z",
       "updatedAt": "2025-11-25T10:30:00Z",

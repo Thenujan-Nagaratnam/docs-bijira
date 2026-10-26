@@ -1,24 +1,24 @@
 ---
 title: "Mistral guides"
-description: "Use XAPIPLATFORMX to govern traffic to Mistral AI models and to use Mistral embeddings for semantic caching and semantic guardrails."
-canonical_url: https://xdocshostx/xdocspathx/guides/service-providers/mistral/
-md_url: https://xdocshostx/xdocspathx/guides/service-providers/mistral.md
+description: "Use WSO2 API Platform to govern traffic to Mistral AI models and to use Mistral embeddings for semantic caching and semantic guardrails."
+canonical_url: https://wso2.com/api-platform/docs/guides/service-providers/mistral/
+md_url: https://wso2.com/api-platform/docs/guides/service-providers/mistral.md
 tags:
   - guides
   - mistral
   - service-provider-guides
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-10-21
 content_type: "reference"
 ---
 
 # Govern Mistral AI models
 
-XAPIPLATFORMX works alongside Mistral AI. Govern traffic to Mistral models, and use Mistral embeddings for semantic caching and guardrails.
+WSO2 API Platform works alongside Mistral AI. Govern traffic to Mistral models, and use Mistral embeddings for semantic caching and guardrails.
 
 ## AI Gateway with Mistral models
 
-Route, secure, and govern traffic to Mistral AI models through XAIGATEWAYX.
+Route, secure, and govern traffic to Mistral AI models through WSO2 AI Gateway.
 
 <div class="vendor-cap" markdown="1">
 
@@ -83,7 +83,7 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
 - [Semantic cache policy](../../cloud/ai-workspace/policies/other-policies/semantic-cache.md) <span class="vendor-meta">AI Workspace</span>
-- [Semantic prompt guard policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
+- [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
@@ -91,8 +91,8 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 
 - [Semantic caching](../../ai-gateway/2026.09.24/semantic-caching.md) <span class="vendor-meta">AI Gateway</span>
 - [Embedding providers for semantic caching](../../ai-gateway/2026.09.24/setup-and-deployment/production-deployment/ai-workload-tuning.md#provision-infrastructure-for-semantic-caching) <span class="vendor-meta">AI Gateway</span>
-- [Semantic Cache policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-cache) <span class="vendor-meta">Policy Hub</span>
-- [Semantic prompt guard policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
+- [Semantic Cache policy](https://wso2.com/api-platform/policy-hub/policies/semantic-cache) <span class="vendor-meta">Policy Hub</span>
+- [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
@@ -118,11 +118,11 @@ Routing, token limits, cost control, and the gateway's other policies work the s
 
 ## Architecture and responsibility model
 
-XAPIPLATFORMX and Mistral AI split the work like this:
+WSO2 API Platform and Mistral AI split the work like this:
 
-| Scenario | XBRANDX role | Mistral role | Runtime traffic |
+| Scenario | WSO2 role | Mistral role | Runtime traffic |
 | --- | --- | --- | --- |
-| Applications calling Mistral models | Proxies and governs LLM requests | Hosts the models | Goes through XAIGATEWAYX to Mistral |
+| Applications calling Mistral models | Proxies and governs LLM requests | Hosts the models | Goes through WSO2 AI Gateway to Mistral |
 | Semantic caching and guardrails | Runs the cache or guardrail policy | Returns embeddings for each prompt | The gateway calls the Mistral embeddings API alongside each request |
 
 ## Learn more

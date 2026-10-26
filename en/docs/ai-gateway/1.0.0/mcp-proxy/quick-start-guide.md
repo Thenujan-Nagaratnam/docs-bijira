@@ -1,13 +1,13 @@
 ---
 title: "MCP Proxy Quick Start Guide"
 description: "Run API Platform AI Gateway with Docker Compose, configure an MCP proxy, and route your first MCP traffic through the gateway."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/mcp-proxy/quick-start-guide/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/mcp-proxy/quick-start-guide.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/mcp-proxy/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/mcp-proxy/quick-start-guide.md
 tags:
   - ai-gateway
   - mcp
   - quickstart
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-05
 content_type: "quickstart"
 ---
@@ -51,14 +51,14 @@ docker compose version
 
 ```bash
 # Download distribution.
-wget https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.1.0/xartifactprefixx-ai-gateway-1.1.0.zip
+wget https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip
 
 # Unzip the downloaded distribution.
-unzip xartifactprefixx-ai-gateway-1.1.0.zip
+unzip wso2apip-ai-gateway-1.1.0.zip
 
 
 # Start the complete stack
-cd xartifactprefixx-ai-gateway-1.1.0/
+cd wso2apip-ai-gateway-1.1.0/
 docker compose -p ai-gateway up -d
 
 # Verify gateway controller admin endpoint is running
@@ -100,7 +100,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/mcp-proxies \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: Mcp
 metadata:
   name: everything-mcp-v1.0

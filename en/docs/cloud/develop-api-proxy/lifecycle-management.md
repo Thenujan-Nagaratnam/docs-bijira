@@ -1,13 +1,13 @@
 ---
 title: "API Proxy Lifecycle Management"
-description: "Manage the lifecycle states of an API proxy in XAPIPLATFORMX: created, pre-released, published, deprecated, and retired."
-canonical_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/lifecycle-management/
-md_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/lifecycle-management.md
+description: "Manage the lifecycle states of an API proxy in WSO2 API Platform: created, pre-released, published, deprecated, and retired."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/lifecycle-management/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/lifecycle-management.md
 tags:
   - cloud
   - api-proxy
   - lifecycle
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -37,7 +37,7 @@ To change the lifecycle state of an API via the API Platform Console, follow the
 !!! tip
      You must have publishing privileges to manage the lifecycle states of a component.
 
-1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. Select the project and the API that you want to change lifecycle.
 3. In the left navigation menu, click **Develop**, and then click **Lifecycle**.
 4. In the **Lifecycle Management** pane, you will see the lifecycle state transition diagram indicating the current lifecycle state of the component. Just above the lifecycle state transition diagram, The possible lifecycle states you can apply to the component are displayed just above the lifecycle state transition diagram. Click on a required lifecycle state to apply it to the component. For example, if a component is in the **Created** state, you can click either **Pre-release** or **Publish**.

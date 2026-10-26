@@ -1,13 +1,13 @@
 ---
 title: "What is an MCP registry?"
 description: "Understand how the API Platform MCP registry catalogs published MCP proxies and surfaces them through the MCP Hub and MCP Registry API."
-canonical_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/mcp-registry/
-md_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/mcp-registry.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/mcp-registry/
+md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/mcp-registry.md
 tags:
   - cloud
   - ai-workspace
   - mcp-registry
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "concept"
 ---

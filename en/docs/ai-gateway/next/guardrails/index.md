@@ -1,13 +1,13 @@
 ---
 title: "Guardrails"
-description: "AI Gateway guardrails: LLM-aware policies for content filtering, safety, and compliance, with per-policy reference in the XPLATFORMPOLICYHUBX."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/guardrails/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/guardrails.md
+description: "AI Gateway guardrails: LLM-aware policies for content filtering, safety, and compliance, with per-policy reference in the WSO2 API Platform Policy Hub."
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/guardrails/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/guardrails.md
 tags:
   - ai-gateway
   - guardrails
   - llm-proxy
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-20
 content_type: "concept"
 ---
@@ -38,7 +38,7 @@ This section contains the following pages:
 | [Guardrails catalogue](guardrails-catalogue.md) | Every guardrail policy the AI Gateway ships, what each one checks, and how to extend the gateway with a guardrail of your own. |
 | [Guardrail execution order](execution-order.md) | How guardrails execute in the dual-hop model: the LLM Proxy chain runs before the LLM Provider chain on request, and in reverse on response. |
 
-Guardrail policies are documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../policy-hub/overview.md).
+Guardrail policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../policy-hub/overview.md).
 
 ## Prompt management
 

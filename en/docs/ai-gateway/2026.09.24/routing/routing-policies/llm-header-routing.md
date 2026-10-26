@@ -1,14 +1,14 @@
 ---
 title: "LLM header routing"
 description: "Select an LLM provider from a request header with the llm-header-router policy, using an ordered mapping and an optional default provider."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/routing/routing-policies/llm-header-routing/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/routing/routing-policies/llm-header-routing.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/routing/routing-policies/llm-header-routing/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/routing/routing-policies/llm-header-routing.md
 tags:
   - ai-gateway
   - routing
   - llm
   - header-routing
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-20
 content_type: "reference"
 ---
@@ -40,7 +40,7 @@ The header router publishes provider-selection metadata but does not by itself o
 
 ## Policy reference
 
-This policy is documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. See [LLM Header Router](https://xpolicyhubhostx/xpolicyhubpathx/policies/llm-header-router) for its complete configuration.
+This policy is documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. See [LLM Header Router](https://wso2.com/api-platform/policy-hub/policies/llm-header-router) for its complete configuration.
 
 ## Related topics
 

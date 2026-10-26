@@ -1,15 +1,15 @@
 ---
 title: "Guardrail execution order"
 description: "How guardrails execute across phases in the AI Gateway dual-hop model: the LLM Proxy chain runs before the LLM Provider chain on request, and in reverse on response."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/guardrails/execution-order/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/guardrails/execution-order.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/guardrails/execution-order/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/guardrails/execution-order.md
 tags:
   - ai-gateway
   - guardrails
   - llm-proxy
   - llm-provider
   - execution-order
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-11
 content_type: "concept"
 ---

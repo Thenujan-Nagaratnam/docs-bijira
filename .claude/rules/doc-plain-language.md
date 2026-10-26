@@ -3,7 +3,7 @@
 ## Words
 
 - Avoid obscure words and company- or profession-specific jargon.
-- XBRANDX-specific terms: link at first use to the root-level glossary. If none exists, add a "Glossary" section to the document and link to it.
+- WSO2-specific terms: link at first use to the root-level glossary. If none exists, add a "Glossary" section to the document and link to it.
 - Define every acronym and initialism at first use, except a standard, widely recognized
   tech acronym that's more familiar than its expansion (e.g., `API`, `HTML`, `HTTP`, `HTTPS`,
   `JSON`, `URL`, `XML`, `CLI`, `SDK`, `SQL`). Expand anything less common or domain-specific,

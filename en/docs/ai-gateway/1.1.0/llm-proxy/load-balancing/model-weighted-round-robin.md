@@ -1,13 +1,13 @@
 ---
 title: "Model Weighted Round Robin"
 description: "Distribute LLM requests across AI models by assigned weights, giving higher-capacity or lower-cost models proportionally more traffic."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/load-balancing/model-weighted-round-robin/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/load-balancing/model-weighted-round-robin.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/load-balancing/model-weighted-round-robin/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/load-balancing/model-weighted-round-robin.md
 tags:
   - ai-gateway
   - llm
   - load-balancing
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-16
 content_type: "reference"
 ---
@@ -86,7 +86,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider
 metadata:
   name: weighted-round-robin-provider

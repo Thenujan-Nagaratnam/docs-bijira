@@ -1,13 +1,13 @@
 ---
 title: "LLM proxy"
 description: "Expose an LLM provider through an LLM proxy and deploy one: its own URL context, per-application policies, and the provider rules it inherits."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-proxy/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-proxy.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-proxy/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-proxy.md
 tags:
   - ai-gateway
   - llm-proxy
   - llm
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-20
 content_type: "how-to"
 ---
@@ -43,7 +43,7 @@ The definition below deploys a proxy that consumes the `openai-provider` provide
       -H "Content-Type: application/yaml" \
       -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
       --data-binary @- <<'EOF'
-    apiVersion: gateway.api-platform.xcrddomainx/v1
+    apiVersion: gateway.api-platform.wso2.com/v1
     kind: LlmProxy
     metadata:
       name: openai-assistant
@@ -63,7 +63,7 @@ The definition below deploys a proxy that consumes the `openai-provider` provide
 
     ```powershell
     @'
-    apiVersion: gateway.api-platform.xcrddomainx/v1
+    apiVersion: gateway.api-platform.wso2.com/v1
     kind: LlmProxy
     metadata:
       name: openai-assistant

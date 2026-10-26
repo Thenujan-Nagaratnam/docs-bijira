@@ -1,13 +1,13 @@
 ---
 title: "Get started with API Monetization"
 description: "Connect your Stripe account to API Platform to enable paid subscription plans and billing for your APIs."
-canonical_url: https://xdocshostx/xdocspathx/monetization/getting-started/
-md_url: https://xdocshostx/xdocspathx/monetization/getting-started.md
+canonical_url: https://wso2.com/api-platform/docs/monetization/getting-started/
+md_url: https://wso2.com/api-platform/docs/monetization/getting-started.md
 tags:
   - cloud
   - monetization
   - stripe
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "quickstart"
 ---
@@ -64,7 +64,7 @@ Before you begin, ensure you have:
 
 ## Add Stripe Credentials
 
-1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click **Admin** and then click **Settings**. This opens the organization-level settings page.
 4. Click the **Credentials** tab.

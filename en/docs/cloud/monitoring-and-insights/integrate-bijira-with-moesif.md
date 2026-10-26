@@ -1,14 +1,14 @@
 ---
 title: "Integrate API Platform with Moesif"
 description: "Connect your API Platform organization to Moesif to generate an API key, configure the integration, and view usage insights on the Moesif dashboard."
-canonical_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/integrate-bijira-with-moesif/
-md_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/integrate-bijira-with-moesif.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/integrate-bijira-with-moesif/
+md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/integrate-bijira-with-moesif.md
 tags:
   - cloud
   - monitoring
   - moesif
   - integration
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -46,11 +46,11 @@ If you are a new user, follow the steps below to register an organization and ge
 
      This opens the **Quick Install** page. As there is no data, you cannot proceed. Let's configure Moesif to receive data from API Platform. 
 
-6. Select **XBRANDX** as the **Server Integration**.
-7. From the XBRANDX integration options, select **XBRANDX XCLOUDCODENAMEX**.
+6. Select **WSO2** as the **Server Integration**.
+7. From the WSO2 integration options, select **WSO2 Bijira**.
 8. Copy the **Application Id**. 
     
-     ![Moesif Quick Install page showing XBRANDX XCLOUDCODENAMEX integration with Application Id to copy](../../assets/img/monitoring-and-insights/first_time_key_moesif.png)
+     ![Moesif Quick Install page showing WSO2 Bijira integration with Application Id to copy](../../assets/img/monitoring-and-insights/first_time_key_moesif.png)
      
 
 ### Step 1.2: Access the API key in Moesif as an existing user
@@ -66,7 +66,7 @@ If you are an existing user with a registered organization, or you do not have a
 
 Let's configure API Platform to publish events to Moesif.
 
-1. Go to [API Platform Console](https://console.xclouddomainx/cloud-native-app-developer) and sign in.
+1. Go to [API Platform Console](https://console.bijira.dev/cloud-native-app-developer) and sign in.
 2. In the left navigation, click **Admin** and then click **Settings**. 
 3. In the header, click the **Organization** list. This will open the organization level settings page. 
 4. Click **Moesif Dashboard**.
@@ -85,9 +85,9 @@ Once you successfully add the key, you will see a delete option next to it. Curr
 You have configured API Platform to publish data to Moesif. Let's see how you can view the insights on Moesif.
 
 !!! tip
-    - If you have not created an API and deployed it on API Platform, you can follow the [Quick Start Guide](https://xdocshostx/xdocspathx/introduction/quick-start-guide/) to get started.
+    - If you have not created an API and deployed it on API Platform, you can follow the [Quick Start Guide](https://wso2.com/api-platform/docs/introduction/quick-start-guide/) to get started.
 
-1. Invoke your API by following the [Test REST Endpoints via the OpenAPI Console](https://xdocshostx/xdocspathx/test-api-proxy/openapi-console/) guide. 
+1. Invoke your API by following the [Test REST Endpoints via the OpenAPI Console](https://wso2.com/api-platform/docs/test-api-proxy/openapi-console/) guide. 
 
 2. Once you publish data, your Moesif dashboard will receive events. Once Moesif receives events, you will see a notification on Moesif confirming that it received data. 
 

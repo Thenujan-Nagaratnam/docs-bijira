@@ -1,6 +1,6 @@
 # Rule: documentation style scope
 
-This is the XAPIPLATFORMX documentation: an MkDocs site with sources under `en/docs/`.
+This is the WSO2 API Platform documentation: an MkDocs site with sources under `en/docs/`.
 Apply the `doc-*` rules in this folder whenever you write, edit, or review a Markdown file
 under `en/docs/`.
 
@@ -13,4 +13,4 @@ under `en/docs/`.
   so plainly instead of inventing a rule to justify the change.
 - For anything these rules don't cover, follow the
   [Google developer documentation style guide](https://developers.google.com/style). Never
-  present a Google convention as a XBRANDX rule.
+  present a Google convention as a WSO2 rule.

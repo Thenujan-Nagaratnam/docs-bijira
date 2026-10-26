@@ -1,14 +1,14 @@
 ---
 title: "High-Availability Production Deployment"
 description: "Deploy API Platform Gateway in a highly available, production-grade configuration on Kubernetes with Helm, PostgreSQL, and replicated workloads."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/deployment/high-availability-production-deployment/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/deployment/high-availability-production-deployment.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/deployment/high-availability-production-deployment/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/deployment/high-availability-production-deployment.md
 tags:
   - api-gateway
   - deployment
   - kubernetes
   - devops
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-11
 content_type: "how-to"
 ---
@@ -123,7 +123,7 @@ If you are using the [bottom-up deployment](./deploying-apis/bottom-up-api-deplo
 Download the default `values.yaml` for the gateway Helm chart and use it as the starting point for your production configuration. All steps in this guide reference fields within this file.
 
 ```bash
-curl -o values.yaml https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/tags/gateway/v1.1.0/kubernetes/helm/gateway-helm-chart/values.yaml
+curl -o values.yaml https://raw.githubusercontent.com/wso2/api-platform/refs/tags/gateway/v1.1.0/kubernetes/helm/gateway-helm-chart/values.yaml
 ```
 
 ### Pin the Image Versions
@@ -141,51 +141,51 @@ gateway:
 ```
 
 !!! tip
-    Check the [gateway releases](https://github.com/xgithuborgx/api-platform/releases) page for the latest available version. Always ensure that the major version of the image tag matches the major version of the Helm chart used during installation.
+    Check the [gateway releases](https://github.com/wso2/api-platform/releases) page for the latest available version. Always ensure that the major version of the image tag matches the major version of the Helm chart used during installation.
 
 !!! note
     It is strongly recommended to use the same version tag for both the controller and runtime components to ensure compatibility and avoid unexpected behavior.
 
-!!! note "XBRANDX Subscription Users"
-    If you have a XBRANDX subscription, use image tags that include the **U2 update version (4th digit)**, for example `1.1.0.1`, instead of the base release `1.1.0`.
+!!! note "WSO2 Subscription Users"
+    If you have a WSO2 subscription, use image tags that include the **U2 update version (4th digit)**, for example `1.1.0.1`, instead of the base release `1.1.0`.
 
-    The 4th digit represents **patch-level (U2) updates**, which include the latest fixes and security updates delivered through the XBRANDX private registry. See [XBRANDX Subscription Users](#xbrandanchorx-subscription-users) below for registry configuration.
+    The 4th digit represents **patch-level (U2) updates**, which include the latest fixes and security updates delivered through the WSO2 private registry. See [WSO2 Subscription Users](#wso2-subscription-users) below for registry configuration.
 
-### XBRANDX Subscription Users
+### WSO2 Subscription Users
 
-If you have a XBRANDX Subscription, images are pulled from the XBRANDX private registry (`xregistryhostx`) instead of the public GHCR registry. A single Helm field activates this mode end-to-end.
+If you have a WSO2 Subscription, images are pulled from the WSO2 private registry (`registry.wso2.com`) instead of the public GHCR registry. A single Helm field activates this mode end-to-end.
 
 **Step 1 — Create the image pull secret**
 
-Create a `docker-registry` Secret in the namespace where the chart will be installed (replace `<namespace>`, `<xsampleslugx-email>`, and `<xsampleslugx-password-or-token>` with your values):
+Create a `docker-registry` Secret in the namespace where the chart will be installed (replace `<namespace>`, `<wso2-email>`, and `<wso2-password-or-token>` with your values):
 
 ```bash
-kubectl create secret docker-registry xsampleslugx-subscription-creds \
+kubectl create secret docker-registry wso2-subscription-creds \
   --namespace <namespace> \
-  --docker-server=xregistryhostx \
-  --docker-username=<xsampleslugx-email> \
-  --docker-password=<xsampleslugx-password-or-token>
+  --docker-server=registry.wso2.com \
+  --docker-username=<wso2-email> \
+  --docker-password=<wso2-password-or-token>
 ```
 
 !!! note
     Credentials are intentionally kept out of Helm release state. The chart only stores the **name** of the Secret.
 
-**Step 2 — Set `xhelmkeyx.subscription.imagePullSecret` in `values.yaml`**
+**Step 2 — Set `wso2.subscription.imagePullSecret` in `values.yaml`**
 
 ```yaml
-xhelmkeyx:
+wso2:
   subscription:
-    imagePullSecret: xsampleslugx-subscription-creds
+    imagePullSecret: wso2-subscription-creds
 ```
 
 Setting this field causes the chart to:
 
-- Rewrite all default image repositories from `ghcr.io/xgithuborgx/api-platform/` to `xregistryhostx/xregistryprojectx/` automatically.
+- Rewrite all default image repositories from `ghcr.io/wso2/api-platform/` to `registry.wso2.com/wso2-api-platform/` automatically.
 - Inject the named Secret into the `imagePullSecrets` block of every component.
 
 Any explicit `image.repository` override (for example, pointing to an internal mirror) is passed through unchanged, so the rewrite only applies to default images.
 
-When `xhelmkeyx.subscription.imagePullSecret` is empty (the default), the chart renders identically to a non-subscription install and pulls from the public GHCR registry with no `imagePullSecrets` block.
+When `wso2.subscription.imagePullSecret` is empty (the default), the chart renders identically to a non-subscription install and pulls from the public GHCR registry with no `imagePullSecrets` block.
 
 ## Setup Steps
 

@@ -1,14 +1,14 @@
 ---
 title: "Set up the Self-Hosted Gateway"
 description: "Deploy the API Platform Self-Hosted Gateway in production using a virtual machine, Docker, or Kubernetes."
-canonical_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/setting-up/
-md_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/setting-up.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/setting-up/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/setting-up.md
 tags:
   - cloud
   - api-gateway
   - self-hosted
   - deployment
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -46,18 +46,18 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/gateway/v1.0.0/xartifactprefixx-api-gateway-1.0.0.zip && \
-    unzip xartifactprefixx-api-gateway-1.0.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v1.0.0/wso2apip-api-gateway-1.0.0.zip && \
+    unzip wso2apip-api-gateway-1.0.0.zip
     ```
 
     ### Step 2: Configure the Gateway
 
-    Run this command to create `xartifactprefixx-api-gateway-1.0.0/configs/keys.env` with the required environment variables:
+    Run this command to create `wso2apip-api-gateway-1.0.0/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > xartifactprefixx-api-gateway-1.0.0/configs/keys.env << 'ENVFILE'
+    cat > wso2apip-api-gateway-1.0.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.xclouddomainx
+    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -67,7 +67,7 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     1. Navigate to the gateway folder:
 
         ```bash
-        cd xartifactprefixx-api-gateway-1.0.0
+        cd wso2apip-api-gateway-1.0.0
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
@@ -111,18 +111,18 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/gateway/v1.0.0/xartifactprefixx-api-gateway-1.0.0.zip && \
-    unzip xartifactprefixx-api-gateway-1.0.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v1.0.0/wso2apip-api-gateway-1.0.0.zip && \
+    unzip wso2apip-api-gateway-1.0.0.zip
     ```
 
     ### Step 2: Configure the Gateway
 
-    Run this command to create `xartifactprefixx-api-gateway-1.0.0/configs/keys.env` with the required environment variables:
+    Run this command to create `wso2apip-api-gateway-1.0.0/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > xartifactprefixx-api-gateway-1.0.0/configs/keys.env << 'ENVFILE'
+    cat > wso2apip-api-gateway-1.0.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.xclouddomainx
+    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -135,7 +135,7 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     1. Navigate to the gateway folder:
 
         ```bash
-        cd xartifactprefixx-api-gateway-1.0.0
+        cd wso2apip-api-gateway-1.0.0
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
@@ -194,8 +194,8 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     Run this command to install the gateway chart with control plane configurations:
 
     ```bash
-    helm install gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway --version 1.0.0 \
-      --set gateway.controller.controlPlane.host="connect.xclouddomainx" \
+    helm install gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version 1.0.0 \
+      --set gateway.controller.controlPlane.host="connect.bijira.dev" \
       --set gateway.controller.controlPlane.port=443 \
       --set gateway.controller.controlPlane.token.value="your-gateway-token" \
       --set gateway.config.analytics.publishers.moesif.application_id="your-moesif-key" \
@@ -218,7 +218,7 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     To upgrade to a new version:
 
     ```bash
-    helm upgrade gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway --version <new-version> \
+    helm upgrade gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version <new-version> \
       -f values.yaml
     ```
 

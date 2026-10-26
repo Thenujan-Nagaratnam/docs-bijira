@@ -1,13 +1,13 @@
 ---
 title: "Artifact Templating"
 description: "Use Go text template expressions in API Platform Gateway YAML artifacts to inject environment variables and dynamic values at startup."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/setup/artifact-templating/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/setup/artifact-templating.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/setup/artifact-templating/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/setup/artifact-templating.md
 tags:
   - api-gateway
   - configuration
   - templating
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-17
 content_type: "reference"
 ---
@@ -90,7 +90,7 @@ Functions compose as pipelines:
 
 {% raw %}
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: RestApi
 metadata:
   name: orders-api-v1

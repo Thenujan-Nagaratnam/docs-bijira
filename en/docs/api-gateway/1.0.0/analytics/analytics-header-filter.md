@@ -1,13 +1,13 @@
 ---
 title: "Analytics Header Filter Policy"
 description: "Control which request and response headers are captured in analytics using allow or deny mode in API Platform Gateway."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/analytics/analytics-header-filter/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/analytics/analytics-header-filter.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/analytics/analytics-header-filter/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/analytics/analytics-header-filter.md
 tags:
   - api-gateway
   - analytics
   - observability
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-17
 content_type: "reference"
 ---
@@ -72,7 +72,7 @@ The following example demonstrates how to apply the Analytics Header Filter poli
 curl -X POST http://localhost:9090/api/management/v0.9/rest-apis \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: RestApi
 metadata:
   name: mock-api-v1.0
@@ -90,7 +90,7 @@ spec:
         requestHeadersToFilter:
           operation: deny
           headers:
-            - "x-xheaderprefixx-api-name"
+            - "x-wso2-api-name"
             - "Authorization"
         responseHeadersToFilter:
           operation: deny

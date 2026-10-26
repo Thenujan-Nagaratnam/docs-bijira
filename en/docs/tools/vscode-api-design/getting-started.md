@@ -1,13 +1,13 @@
 ---
 title: "Get started with API Designer for VS Code"
 description: "Install the API Designer VS Code extension and use AI-assisted editing to design and validate OpenAPI specifications."
-canonical_url: https://xdocshostx/xdocspathx/tools/vscode-api-design/getting-started/
-md_url: https://xdocshostx/xdocspathx/tools/vscode-api-design/getting-started.md
+canonical_url: https://wso2.com/api-platform/docs/tools/vscode-api-design/getting-started/
+md_url: https://wso2.com/api-platform/docs/tools/vscode-api-design/getting-started.md
 tags:
   - tools
   - vscode
   - api-design
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "quickstart"
 ---
@@ -30,7 +30,7 @@ API Designer is a Visual Studio Code extension for building and improving OpenAP
 
 ## Quick start
 
-1. Install API Designer from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=xvscodepublisherx.api-designer).
+1. Install API Designer from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=WSO2.api-designer).
 2. Open your OpenAPI file (`.yaml` or `.json`), or create one with GitHub Copilot using the bundled `api-design` skill.
 3. Open API Designer. You can open it in any of these ways:
 

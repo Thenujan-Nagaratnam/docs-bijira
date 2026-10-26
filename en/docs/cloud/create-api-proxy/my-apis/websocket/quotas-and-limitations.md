@@ -1,13 +1,13 @@
 ---
 title: "WebSocket API Proxy Limitations and Quotas"
-description: "Reference for WebSocket API proxy limits in XAPIPLATFORMX: maximum connections, maximum connection duration, and idle timeout."
-canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/websocket/quotas-and-limitations/
-md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/websocket/quotas-and-limitations.md
+description: "Reference for WebSocket API proxy limits in WSO2 API Platform: maximum connections, maximum connection duration, and idle timeout."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/websocket/quotas-and-limitations/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/websocket/quotas-and-limitations.md
 tags:
   - cloud
   - api-proxy
   - websocket
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "reference"
 ---

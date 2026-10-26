@@ -1,13 +1,13 @@
 ---
 title: "Sentence Count Guardrail for AI APIs"
-description: "Configure a sentence-count guardrail on AI API proxies in XAPIPLATFORMX to enforce minimum and maximum sentence limits on content."
-canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/sentence-count-guardrail/
-md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/sentence-count-guardrail.md
+description: "Configure a sentence-count guardrail on AI API proxies in WSO2 API Platform to enforce minimum and maximum sentence limits on content."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/sentence-count-guardrail/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/sentence-count-guardrail.md
 tags:
   - cloud
   - ai-gateway
   - guardrails
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---

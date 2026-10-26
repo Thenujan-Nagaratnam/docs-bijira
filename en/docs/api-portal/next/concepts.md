@@ -1,13 +1,13 @@
 ---
 title: "API Portal concepts"
 description: "The key building blocks of the API Portal & MCP Hub—organization, views, labels, APIs, MCP servers, API workflows, subscription plans, applications, subscriptions, API keys, and more—and how they relate to each other."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/concepts/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/concepts.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/concepts/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/concepts.md
 tags:
   - cloud
   - api-portal
   - concepts
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-31
 content_type: "concept"
 ---

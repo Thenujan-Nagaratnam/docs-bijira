@@ -1,13 +1,13 @@
 ---
 title: "GenAI applications"
 description: "Group API keys under a named GenAI application for application-level usage visibility, analytics, and governance."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/genai-applications/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/genai-applications.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/genai-applications/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/genai-applications.md
 tags:
   - cloud
   - ai-workspace
   - genai-applications
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "concept"
 ---

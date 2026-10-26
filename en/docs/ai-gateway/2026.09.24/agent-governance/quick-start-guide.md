@@ -1,15 +1,15 @@
 ---
 title: "A2A agent quick start guide"
 description: "Deploy an A2A agent behind the AI Gateway, fetch its Agent Card, and invoke it over both the JSON-RPC and HTTP+JSON bindings."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/agent-governance/quick-start-guide/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/agent-governance/quick-start-guide.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/agent-governance/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/agent-governance/quick-start-guide.md
 tags:
   - ai-gateway
   - a2a
   - agents
   - quickstart
   - docker
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-23
 content_type: "quickstart"
 ---
@@ -57,12 +57,12 @@ curl -X POST http://localhost:9090/api/management/v1/agents \
   -H "Content-Type: application/yaml" \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: Agent
 metadata:
   name: trip-planner-v1.0
   annotations:
-    "gateway.api-platform.xcrddomainx/project-id": "default"
+    "gateway.api-platform.wso2.com/project-id": "default"
 spec:
   displayName: Trip Planner
   version: v1.0

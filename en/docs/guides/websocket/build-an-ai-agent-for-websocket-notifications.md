@@ -1,8 +1,8 @@
 ---
 title: "Build an AI agent that reacts to WebSocket notifications"
 description: "Connect a Python AI agent to a WebSocket notification stream and an MCP proxy, using an LLM to decide which tool to call for each significant event."
-canonical_url: https://xdocshostx/xdocspathx/guides/websocket/build-an-ai-agent-for-websocket-notifications/
-md_url: https://xdocshostx/xdocspathx/guides/websocket/build-an-ai-agent-for-websocket-notifications.md
+canonical_url: https://wso2.com/api-platform/docs/guides/websocket/build-an-ai-agent-for-websocket-notifications/
+md_url: https://wso2.com/api-platform/docs/guides/websocket/build-an-ai-agent-for-websocket-notifications.md
 tags:
   - guides
   - websocket
@@ -10,7 +10,7 @@ tags:
   - mcp
   - llm
   - ai-workspace
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-18
 content_type: "tutorial"
 ---
@@ -21,14 +21,14 @@ content_type: "tutorial"
 
 This guide continues from [Build a WebSocket-based real-time notification system](build-a-websocket-notification-system.md). It connects a Python agent to that guide's Stock Notifications API, and for any tick that crosses an alert threshold, asks Gemini which of a small set of tools to call in response, then actually calls it through a governed MCP proxy. Below-threshold ticks never reach the LLM at all.
 
-By the end, you'll have a running agent that autonomously chooses between logging a watch note, raising an alert, or escalating for human follow-up. You'll use XCLOUDNAMEX for the WebSocket API, and AI Workspace for the MCP Proxy and LLM Provider.
+By the end, you'll have a running agent that autonomously chooses between logging a watch note, raising an alert, or escalating for human follow-up. You'll use WSO2 API Platform Cloud for the WebSocket API, and AI Workspace for the MCP Proxy and LLM Provider.
 
 !!! note
     This guide assumes you've already completed [Build a WebSocket-based real-time notification system](build-a-websocket-notification-system.md) and have your Stock Notifications API deployed. Publishing it and finding its `wss://` invoke URL happen in step 5.
 
 ## Learning objectives
 
-- Connect an AI agent to a WebSocket notification stream in XCLOUDNAMEX and an MCP proxy in AI Workspace.
+- Connect an AI agent to a WebSocket notification stream in WSO2 API Platform Cloud and an MCP proxy in AI Workspace.
 - Use a threshold check to decide when a notification is worth an LLM call, keeping routine ticks cheap and silent.
 - Discover an MCP proxy's tools at startup instead of hardcoding them, so adding a tool to the server doesn't require an agent code change.
 - Route every reasoning call through a governed LLM provider instead of calling the model service directly.
@@ -36,13 +36,13 @@ By the end, you'll have a running agent that autonomously chooses between loggin
 
 ## Key concepts
 
-Before you start, here are the XAPIPLATFORMX terms this guide adds to the ones from the previous guide.
+Before you start, here are the WSO2 API Platform terms this guide adds to the ones from the previous guide.
 
-*AI Workspace* is where you create and manage the MCP Proxy and LLM Provider an AI agent calls. You open it from XAPIPLATFORMX by clicking **AI Workspace** in the header.
+*AI Workspace* is where you create and manage the MCP Proxy and LLM Provider an AI agent calls. You open it from WSO2 API Platform by clicking **AI Workspace** in the header.
 
 An *AI gateway* is the runtime that executes AI Workspace's MCP Proxies and LLM Providers. You install and start it yourself (Docker, a VM, or Kubernetes), then connect it to AI Workspace with a registration token. Nothing you create in AI Workspace is callable until it's deployed to an active AI gateway.
 
-An *MCP proxy* is a governed endpoint AI Workspace creates in front of a server that speaks the Model Context Protocol. It runs on an AI gateway, the same way a WebSocket API proxy runs on XCLOUDNAMEX Gateway.
+An *MCP proxy* is a governed endpoint AI Workspace creates in front of a server that speaks the Model Context Protocol. It runs on an AI gateway, the same way a WebSocket API proxy runs on WSO2 API Platform Cloud Gateway.
 
 An *LLM provider* connects a third-party model service, such as Google Gemini, to AI Workspace, and stores its API key so your agent never holds it directly. Your agent calls the provider's own invoke URL instead of calling Gemini directly.
 
@@ -51,7 +51,7 @@ A *tool* is a single function the agent can choose to call. In this guide, `log_
 ## Prerequisites
 
 - The guide [Build a WebSocket-based real-time notification system](build-a-websocket-notification-system.md) completed, with the Stock Notifications API deployed.
-- A XCLOUDNAMEX account (the same one from the previous guide). You open AI Workspace from it.
+- A WSO2 API Platform Cloud account (the same one from the previous guide). You open AI Workspace from it.
 - An AI gateway set up in AI Workspace and showing as **Active**. See [Set up an AI Gateway](../../ai-workspace/1.0.0/ai-gateways/setting-up.md).
 - A Google AI API key from [Google AI Studio](https://aistudio.google.com/apikey), which the LLM provider uses to call the Gemini API on your behalf.
 - Node.js and npm, to install and run the tool server.
@@ -63,7 +63,7 @@ A *tool* is a single function the agent can choose to call. In this guide, `log_
 ```
                     wss://.../stock-notifications-api
 Python Agent <----------------------------------------- WebSocket API proxy
-     |                                                    (XCLOUDNAMEX)
+     |                                                    (WSO2 API Platform Cloud)
      |
      |--- https:// ---> MCP proxy -----> tools-server (your public URL)
      |                       |
@@ -78,7 +78,7 @@ The agent holds three separate connections: it listens on the WebSocket API prox
 
 Before you create the MCP proxy, you need a running server that speaks the Model Context Protocol, reachable over the public internet. This guide uses a small server exposing three tools: `log_watch`, `send_alert`, and `escalate`. Each one only prints a message and returns a status -- there's no real alerting or ticketing system behind them. The point is watching Gemini pick the right one, not what happens after.
 
-1. Get `tools-server/server.js` and `package.json` from the [companion sample](https://github.com/xgithuborgx/api-platform/tree/main/samples/websocket-notification-agent), into a project folder.
+1. Get `tools-server/server.js` and `package.json` from the [companion sample](https://github.com/wso2/api-platform/tree/main/samples/websocket-notification-agent), into a project folder.
 2. In that folder, run `npm install`.
 3. Deploy that folder to a host that gives you a public URL, the same way you deployed the notification backend in the previous guide. The host should run `node tools-server/server.js` (or `npm run start:tools-server`) as its start command.
 
@@ -87,7 +87,7 @@ Before you create the MCP proxy, you need a running server that speaks the Model
 
 ## Step 2: Create the MCP proxy
 
-1. Sign in to [XAPIPLATFORMX](https://console.xclouddomainx/), and click **AI Workspace** in the header. Choose an existing project, or create one.
+1. Sign in to [WSO2 API Platform](https://console.bijira.dev/), and click **AI Workspace** in the header. Choose an existing project, or create one.
 2. From the project home page, go to **MCP Proxies** from the left navigation bar, click **+ Create MCP Proxy**.
 3. Under **MCP Proxy Endpoint URL**, provide your tool server's URL, ending in `/mcp`:
 
@@ -155,16 +155,16 @@ This creates the governed endpoint your agent uses to call Gemini.
 
 ## Step 5: Publish the WebSocket API and subscribe to it
 
-The LLM provider authenticates with the API key from step 4. The WebSocket API uses an application, key, and access token from XCLOUDNAMEX, and it needs to be published before you can subscribe to it.
+The LLM provider authenticates with the API key from step 4. The WebSocket API uses an application, key, and access token from WSO2 API Platform Cloud, and it needs to be published before you can subscribe to it.
 
 **Publish the API, if you haven't already:**
 
-1. In XCLOUDNAMEX, open the Stock Notifications API that you built in the previous guide.
+1. In WSO2 API Platform Cloud, open the Stock Notifications API that you built in the previous guide.
 2. In the left navigation menu, click **Manage**, then **Lifecycle**, then click **Publish**, and confirm.
 
 **Subscribe and get the invoke URL:**
 
-3. Sign in to the [Developer Portal](https://devportal.xclouddomainx), a separate console from XCLOUDNAMEX.
+3. Sign in to the [Developer Portal](https://devportal.bijira.dev), a separate console from WSO2 API Platform Cloud.
 4. Click **Applications**, then **+ Create Application**. Enter the name `stock-notification-agent`, and click **Create**.
 5. Inside the application, click **Subscriptions**, then **+ Add APIs**, and subscribe to the Stock Notifications API on the **Default** plan.
 6. Click **APIs**, open the Stock Notifications API, and click **Documentation**. Copy the base URL shown there. We'll call this `STOCK_WS_URL`.
@@ -183,7 +183,7 @@ The LLM provider authenticates with the API key from step 4. The WebSocket API u
 
 For every notification that crosses the threshold, the agent asks Gemini which tool to call and then calls it through the MCP proxy.
 
-1. Get `agent.py` and `requirements.txt` from the [companion sample](https://github.com/xgithuborgx/api-platform/tree/main/samples/websocket-notification-agent) into a project folder.
+1. Get `agent.py` and `requirements.txt` from the [companion sample](https://github.com/wso2/api-platform/tree/main/samples/websocket-notification-agent) into a project folder.
 2. In that folder, run `pip install -r requirements.txt`.
 3. Run it, substituting your actual URLs and credentials:
 
@@ -222,6 +222,6 @@ Watch the terminal until a notification crosses the threshold, and confirm a `to
 
 ## Try the sample
 
-The companion sample's `agent.py` is this exact guide's pattern. Plug in the URLs and credentials from steps 3 through 5 and run it against your own deployed XCLOUDNAMEX and AI Workspace resources.
+The companion sample's `agent.py` is this exact guide's pattern. Plug in the URLs and credentials from steps 3 through 5 and run it against your own deployed WSO2 API Platform Cloud and AI Workspace resources.
 
-[View the sample on GitHub](https://github.com/xgithuborgx/api-platform/tree/main/samples/websocket-notification-agent)
+[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/websocket-notification-agent)

@@ -1,14 +1,14 @@
 ---
 title: "Get started with AI Workspace"
 description: "Run AI Workspace locally with Docker Compose, connect an AI Gateway, configure an LLM provider, and run your first prompt through it."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/getting-started/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/getting-started.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/getting-started/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/getting-started.md
 tags:
   - cloud
   - ai-workspace
   - quickstart
   - docker
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-24
 content_type: "quickstart"
 ---
@@ -28,7 +28,7 @@ This guide walks you through:
 
 By the end, you'll have a local AI Workspace deployment managing an AI Gateway connected to an LLM provider. You'll send a real chat completion request through the resulting endpoint.
 
-It's written for platform engineers, developers, and anyone evaluating a self-hosted AI governance layer. No prior XAPIPLATFORMX experience is required. For optional background on the concepts this guide uses, see:
+It's written for platform engineers, developers, and anyone evaluating a self-hosted AI governance layer. No prior WSO2 API Platform experience is required. For optional background on the concepts this guide uses, see:
 
 - [AI Workspace and how it relates to the AI Gateway](overview.md)
 - [LLM providers](llm-providers/overview.md)
@@ -51,14 +51,14 @@ This part downloads AI Workspace, runs its setup script, starts the stack with D
 Run this command in your terminal to download and unzip AI Workspace:
 
 ```bash
-curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/portals/ai-workspace/v1.0.0/xartifactprefixx-ai-workspace-1.0.0.zip && \
-unzip xartifactprefixx-ai-workspace-1.0.0.zip
+curl -sLO https://github.com/wso2/api-platform/releases/download/portals/ai-workspace/v1.0.0/wso2apip-ai-workspace-1.0.0.zip && \
+unzip wso2apip-ai-workspace-1.0.0.zip
 ```
 
 Then move into the extracted directory:
 
 ```bash
-cd xartifactprefixx-ai-workspace-1.0.0
+cd wso2apip-ai-workspace-1.0.0
 ```
 
 This directory contains the Docker Compose file, configuration templates, database schema scripts, and the setup script you run next.
@@ -196,21 +196,21 @@ Its **Configure the gateway** command includes a single-use registration token. 
 1. **Download the gateway:**
 
     ```bash
-    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip && \
-    unzip xartifactprefixx-ai-gateway-1.2.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip && \
+    unzip wso2apip-ai-gateway-1.2.0.zip
     ```
 
 2. **Set up the gateway.** This one-time script provisions the Advanced Encryption Standard (AES)-256 at-rest encryption key, the gateway's HTTPS listener certificate, the gateway-controller admin credentials, and `api-platform.env`. Like AI Workspace, the gateway fails closed if any of these is missing. The admin password is printed once. Copy it: it authenticates directly to the gateway controller, which this guide doesn't use again.
 
     ```bash
-    cd xartifactprefixx-ai-gateway-1.2.0 && ./scripts/setup.sh
+    cd wso2apip-ai-gateway-1.2.0 && ./scripts/setup.sh
     ```
 
     !!! note "Running on Windows"
         Use the PowerShell setup script instead. It takes the same flags and provisions the same files:
 
         ```powershell
-        cd xartifactprefixx-ai-gateway-1.2.0
+        cd wso2apip-ai-gateway-1.2.0
         powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
         ```
 

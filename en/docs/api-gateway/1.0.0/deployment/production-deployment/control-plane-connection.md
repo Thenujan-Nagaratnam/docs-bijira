@@ -1,13 +1,13 @@
 ---
 title: "Control Plane Connection"
-description: "Connect API Platform Gateway to a XAPIMSHORTX or API Platform Cloud control plane for top-down or bottom-up API synchronization."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/deployment/production-deployment/control-plane-connection/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/deployment/production-deployment/control-plane-connection.md
+description: "Connect API Platform Gateway to a WSO2 APIM or API Platform Cloud control plane for top-down or bottom-up API synchronization."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/deployment/production-deployment/control-plane-connection/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/deployment/production-deployment/control-plane-connection.md
 tags:
   - api-gateway
   - deployment
   - control-plane
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-11
 content_type: "how-to"
 ---
@@ -15,9 +15,9 @@ content_type: "how-to"
 # Control Plane Connection
 
 !!! note
-    This step is optional. Configure it only if the gateway needs to sync API artifacts from the [XAPIMSHORTX control plane](https://apim.docs.wso2.com/en/latest/api-gateway/platform-gateway/getting-started/) or [API Platform Cloud control plane](https://xdocshostx/xdocspathx/cloud/api-platform-gateway/getting-started/).
+    This step is optional. Configure it only if the gateway needs to sync API artifacts from the [WSO2 APIM control plane](https://apim.docs.wso2.com/en/latest/api-gateway/platform-gateway/getting-started/) or [API Platform Cloud control plane](https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started/).
 
-The XAPIPLATFORMX gateway supports two fundamentally different deployment approaches, distinguished by the direction of API flow.
+The WSO2 API Platform gateway supports two fundamentally different deployment approaches, distinguished by the direction of API flow.
 
 === "Top-Down (Control Plane → Gateway)"
 
@@ -27,8 +27,8 @@ The XAPIPLATFORMX gateway supports two fundamentally different deployment approa
 
     The registration token is generated when you register the gateway with your control plane. Refer to the setup guide for your control plane to obtain it:
 
-    - [XAPIMSHORTX control plane](https://apim.docs.wso2.com/en/latest/api-gateway/platform-gateway/getting-started/)
-    - [API Platform Cloud control plane](https://xdocshostx/xdocspathx/cloud/api-platform-gateway/getting-started/)
+    - [WSO2 APIM control plane](https://apim.docs.wso2.com/en/latest/api-gateway/platform-gateway/getting-started/)
+    - [API Platform Cloud control plane](https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started/)
 
     ```bash
     kubectl create secret generic gateway-cp-token \
@@ -54,7 +54,7 @@ The XAPIPLATFORMX gateway supports two fundamentally different deployment approa
             gateway_name: "prod-gateway" # must match the gateway name registered in the controlplane
       controller:
         controlPlane:
-          host: "apim-xapimslugx.example.com:9443"
+          host: "apim-wso2am.example.com:9443"
           token:
             secretName: "gateway-cp-token"
             key: token
@@ -62,14 +62,14 @@ The XAPIPLATFORMX gateway supports two fundamentally different deployment approa
 
 === "Bottom-Up (Gateway → On-Prem APIM)"
 
-    In this model, REST APIs deployed directly to the gateway are automatically synced back to an on-premises XAPIMSHORTX instance. A control plane WebSocket connection is also required alongside the bottom-up sync. API key events, subscription changes, and other lifecycle events are initiated from the control plane devportal and must reach the gateway over this channel.
+    In this model, REST APIs deployed directly to the gateway are automatically synced back to an on-premises WSO2 APIM instance. A control plane WebSocket connection is also required alongside the bottom-up sync. API key events, subscription changes, and other lifecycle events are initiated from the control plane devportal and must reach the gateway over this channel.
 
     !!! note
         Bottom-up sync is only supported with APIM 4.7.x. Cloud control plane does not support this flow.
 
     **Step 1: Create a secret for the registration token**
 
-    The registration token is generated when you register the gateway with your control plane. Refer to the [XAPIMSHORTX control plane setup guide](https://apim.docs.wso2.com/en/latest/api-gateway/platform-gateway/getting-started/) to obtain it.
+    The registration token is generated when you register the gateway with your control plane. Refer to the [WSO2 APIM control plane setup guide](https://apim.docs.wso2.com/en/latest/api-gateway/platform-gateway/getting-started/) to obtain it.
 
     ```bash
     kubectl create secret generic gateway-cp-token \
@@ -143,7 +143,7 @@ The XAPIPLATFORMX gateway supports two fundamentally different deployment approa
             #                         APIP_GW_CONTROLLER__CONTROLPLANE__APIM_OAUTH2__CLIENT_SECRET
       controller:
         controlPlane:
-          host: "apim-xapimslugx.example.com:9443"
+          host: "apim-wso2am.example.com:9443"
           token:
             secretName: "gateway-cp-token"         # created in Step 1
             key: token

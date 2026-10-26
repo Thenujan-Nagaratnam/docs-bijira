@@ -1,13 +1,13 @@
 ---
 title: "Transform requests and responses"
 description: "Change a request or response as it passes through the AI Gateway: add or strip headers, and answer a call at the gateway without going upstream."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/transform-requests-and-responses/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/transform-requests-and-responses.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/transform-requests-and-responses/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/transform-requests-and-responses.md
 tags:
   - ai-gateway
   - transformation
   - headers
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-26
 content_type: "concept"
 ---
@@ -26,13 +26,13 @@ Position in the chain decides what a policy sees. A header removed before a logg
 
 ## Transformation policies
 
-These policies are documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
+These policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 
 | Policy | What it does |
 |--------|--------------|
-| [Set Headers](https://xpolicyhubhostx/xpolicyhubpathx/policies/set-headers) | Adds or overwrites headers on requests or responses |
-| [Remove Headers](https://xpolicyhubhostx/xpolicyhubpathx/policies/remove-headers) | Strips specified headers from requests or responses |
-| [Respond](https://xpolicyhubhostx/xpolicyhubpathx/policies/respond) | Returns an immediate response without forwarding to the upstream backend |
+| [Set Headers](https://wso2.com/api-platform/policy-hub/policies/set-headers) | Adds or overwrites headers on requests or responses |
+| [Remove Headers](https://wso2.com/api-platform/policy-hub/policies/remove-headers) | Strips specified headers from requests or responses |
+| [Respond](https://wso2.com/api-platform/policy-hub/policies/respond) | Returns an immediate response without forwarding to the upstream backend |
 
 The Policy Hub's Transformation category covers further options that apply to any API: rewriting a request's path, query parameters, or method; overriding the `Host` header sent upstream; routing to a named upstream at runtime; converting payloads between JSON and XML; and calling an external HTTP service during the request or response phase. See the [Policy Hub overview](../../policy-hub/overview.md) for the full category.
 

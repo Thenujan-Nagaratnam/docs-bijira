@@ -1,13 +1,13 @@
 ---
 title: "AI APIs Overview"
-description: "Connect AI service providers like OpenAI, Azure OpenAI, Anthropic, Mistral, and AWS Bedrock as API proxies in XPLATFORMAIGATEWAYX."
-canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/ai-apis/
-md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/ai-apis.md
+description: "Connect AI service providers like OpenAI, Azure OpenAI, Anthropic, Mistral, and AWS Bedrock as API proxies in WSO2 API Platform AI Gateway."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/ai-apis/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/ai-apis.md
 tags:
   - cloud
   - api-proxy
   - ai-gateway
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "overview"
 ---

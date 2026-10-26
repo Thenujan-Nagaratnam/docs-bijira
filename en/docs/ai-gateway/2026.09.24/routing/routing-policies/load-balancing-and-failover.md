@@ -1,15 +1,15 @@
 ---
 title: "Load balancing and failover"
 description: "Spread AI traffic across a pool of models with the round robin and weighted round robin policies, and move off a model that starts returning errors."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/routing/routing-policies/load-balancing-and-failover/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/routing/routing-policies/load-balancing-and-failover.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/routing/routing-policies/load-balancing-and-failover/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/routing/routing-policies/load-balancing-and-failover.md
 tags:
   - ai-gateway
   - load-balancing
   - failover
   - fallback
   - routing
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-26
 content_type: "concept"
 ---
@@ -33,12 +33,12 @@ Attach these policies on an `LlmProxy`, which is where a pool of providers is as
 
 ## Load balancing policies
 
-These policies are documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../../policy-hub/overview.md).
+These policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../../policy-hub/overview.md).
 
 | Policy | What it does |
 |--------|--------------|
-| [Model Round Robin](https://xpolicyhubhostx/xpolicyhubpathx/policies/model-round-robin) | Distributes requests evenly across a pool of AI model endpoints |
-| [Model Weighted Round Robin](https://xpolicyhubhostx/xpolicyhubpathx/policies/model-weighted-round-robin) | Distributes requests across model endpoints according to configured weights |
+| [Model Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-round-robin) | Distributes requests evenly across a pool of AI model endpoints |
+| [Model Weighted Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin) | Distributes requests across model endpoints according to configured weights |
 
 ## Related topics
 

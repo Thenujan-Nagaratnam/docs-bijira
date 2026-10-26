@@ -1,14 +1,14 @@
 ---
 title: "Apply custom policies to APIs"
 description: "Sync a custom policy from your Self-Hosted Gateway to your organization and apply it to API proxies."
-canonical_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/apply-custom-policies-to-apis/
-md_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/apply-custom-policies-to-apis.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/apply-custom-policies-to-apis/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/apply-custom-policies-to-apis.md
 tags:
   - cloud
   - api-gateway
   - self-hosted
   - custom-policy
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -19,7 +19,7 @@ After [building the gateway with your custom policies](build-gateway-with-custom
 
 ## Step 1: View the Gateway Policies
 
-1. Sign in to [API Platform Console](https://console.xclouddomainx).
+1. Sign in to [API Platform Console](https://console.bijira.dev).
 2. Go to **Organization Level** in API Platform.
 3. From the left navigation, select **Admin** → **Gateways**.
 4. Select your gateway to open the gateway detail view.
@@ -50,7 +50,7 @@ In the **Sync Status** column, each custom policy shows one of the following:
 - **Latest Version Available** — the policy is already synced and up to date. No action needed.
 
 !!! note
-    Policy Hub policies (managed by XBRANDX) show **N/A** in the Sync Status column and cannot be synced manually.
+    Policy Hub policies (managed by WSO2) show **N/A** in the Sync Status column and cannot be synced manually.
 
 Once synced, the custom policy is available organization-wide and can be applied to APIs.
 

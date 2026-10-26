@@ -1,12 +1,12 @@
 ---
 title: "Management API: WebBroker API Management"
 description: "REST API reference for creating, listing, retrieving, and deleting WebBroker API configurations in API Platform Gateway."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/gateway-controller-management-api/webbroker-api-management/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/gateway-controller-management-api/webbroker-api-management.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/gateway-controller-management-api/webbroker-api-management/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/gateway-controller-management-api/webbroker-api-management.md
 tags:
   - api-gateway
   - management-api
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-17
 content_type: "reference"
 ---
@@ -37,7 +37,7 @@ Add a new WebBrokerAPI to the Gateway. WebBrokerAPI provides bidirectional strea
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "WebBrokerApi",
   "metadata": {
     "name": "stock-trading-v1.0"
@@ -115,7 +115,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "WebBrokerApi",
   "metadata": {
     "name": "stock-trading-v1.0"
@@ -240,7 +240,7 @@ Required roles: `admin`, `developer`
   "count": 3,
   "apis": [
     {
-      "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+      "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
       "kind": "WebBrokerApi",
       "metadata": {
         "name": "stock-trading-v1.0"
@@ -387,7 +387,7 @@ Status Code **200**
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1alpha1|
+|apiVersion|gateway.api-platform.wso2.com/v1alpha1|
 |kind|WebBrokerApi|
 |deploymentState|deployed|
 |deploymentState|undeployed|
@@ -437,7 +437,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "WebBrokerApi",
   "metadata": {
     "name": "stock-trading-v1.0"

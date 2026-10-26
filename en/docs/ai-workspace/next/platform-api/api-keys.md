@@ -1,13 +1,13 @@
 ---
 title: "Platform API: API keys"
 description: "REST API reference for listing the API keys visible to the current user."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/api-keys/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/api-keys.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/api-keys/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/api-keys.md
 tags:
   - ai-workspace
   - platform-api
   - security
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -86,7 +86,7 @@ If omitted, all types are returned.
       "expiresAt": "2019-08-24T14:15:22Z",
       "issuer": "api-platform-devportal",
       "allowedTargets": "string",
-      "artifactId": "xsampleslugx-openai-provider",
+      "artifactId": "wso2-openai-provider",
       "artifactType": "RestApi"
     }
   ],

@@ -1,13 +1,13 @@
 ---
 title: "Get started with Arazzo Visualizer for VS Code"
 description: "Install Arazzo Visualizer, visualize Arazzo workflows as diagrams, and run them directly inside VS Code."
-canonical_url: https://xdocshostx/xdocspathx/tools/vscode-arazzo-visualizer/getting-started/
-md_url: https://xdocshostx/xdocspathx/tools/vscode-arazzo-visualizer/getting-started.md
+canonical_url: https://wso2.com/api-platform/docs/tools/vscode-arazzo-visualizer/getting-started/
+md_url: https://wso2.com/api-platform/docs/tools/vscode-arazzo-visualizer/getting-started.md
 tags:
   - tools
   - vscode
   - arazzo
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "quickstart"
 ---

@@ -1,13 +1,13 @@
 ---
 title: "Immutable Gateway"
 description: "Run API Platform AI Gateway in immutable mode, loading LLM and MCP configurations from files at startup for GitOps workflows."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/immutable-gateway/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/immutable-gateway.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/immutable-gateway/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/immutable-gateway.md
 tags:
   - ai-gateway
   - deployment
   - gitops
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
@@ -16,10 +16,10 @@ content_type: "how-to"
 
 This guide explains how to run the API Platform Gateway in **immutable mode**, where API configurations are loaded from files at startup instead of being managed through the REST API.
 
-Immutable Gateway is the latest evolution of the XMICROGATEWAYX experience.  
-If you are coming from XMICROGATEWAYX `3.2.x`, treat this as the successor track with enhanced API Platform integration, cloud-native deployment patterns, and improved artifact management workflows.
+Immutable Gateway is the latest evolution of the WSO2 Micro Gateway experience.  
+If you are coming from WSO2 Micro Gateway `3.2.x`, treat this as the successor track with enhanced API Platform integration, cloud-native deployment patterns, and improved artifact management workflows.
 
-- Previous generation (reference): [XMICROGATEWAYX 3.2.x docs](https://mg.docs.wso2.com/en/latest/)
+- Previous generation (reference): [WSO2 Micro Gateway 3.2.x docs](https://mg.docs.wso2.com/en/latest/)
 - Current generation: Immutable Gateway V4.0.0 (this documentation set)
 
 ## Overview
@@ -87,7 +87,7 @@ Save the following as `artifacts/reading-list-v1.yaml`:
 
 {% raw %}
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: RestApi
 metadata:
   name: reading-list-api-v1
@@ -98,7 +98,7 @@ spec:
   upstream:
     main:
       # read from env, falls back to the public sample backend if not set
-      url: '{{ env "BACKEND_URL" | default "https://apis.xclouddomainx/samples/reading-list-api-service/v1.0" }}'
+      url: '{{ env "BACKEND_URL" | default "https://apis.bijira.dev/samples/reading-list-api-service/v1.0" }}'
   operations:
     - method: GET
       path: /books
@@ -137,7 +137,7 @@ artifacts/
 The recommended GitOps approach is to build a custom gateway-controller image with artifacts copied in at build time:
 
 ```dockerfile
-FROM ghcr.io/xgithuborgx/api-platform/gateway-controller:1.0.0
+FROM ghcr.io/wso2/api-platform/gateway-controller:1.0.0
 
 COPY ./artifacts /etc/api-platform-gateway/immutable_gateway/artifacts
 

@@ -1,13 +1,13 @@
 ---
 title: "Configure Upstream Timeouts"
 description: "Configure the upstream TCP connection timeout in API Platform Gateway to protect against slow or unreachable backend services."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/setup/upstream-timeouts/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/setup/upstream-timeouts.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/setup/upstream-timeouts/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/setup/upstream-timeouts.md
 tags:
   - api-gateway
   - configuration
   - networking
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-17
 content_type: "how-to"
 ---

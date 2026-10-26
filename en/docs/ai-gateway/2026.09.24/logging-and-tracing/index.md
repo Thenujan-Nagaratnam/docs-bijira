@@ -1,15 +1,15 @@
 ---
 title: "Logging and tracing"
 description: "Collect the AI Gateway's own runtime logs, record the content of the traffic it carries, and follow a single request across the hops it makes."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/logging-and-tracing/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/logging-and-tracing.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/logging-and-tracing/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/logging-and-tracing.md
 tags:
   - ai-gateway
   - logging
   - tracing
   - observability
   - opentelemetry
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-26
 content_type: "concept"
 ---

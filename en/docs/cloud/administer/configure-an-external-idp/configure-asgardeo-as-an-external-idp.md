@@ -1,14 +1,14 @@
 ---
 title: "Configure Asgardeo as an external key manager"
 description: "Connect your Asgardeo identity provider to API Platform and the Developer Portal to manage API access control with scopes."
-canonical_url: https://xdocshostx/xdocspathx/cloud/administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp/
-md_url: https://xdocshostx/xdocspathx/cloud/administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-asgardeo-as-an-external-idp.md
 tags:
   - cloud
   - administer
   - key-manager
   - asgardeo
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -33,13 +33,13 @@ Before you proceed, be sure to complete the following:
 
 Follow the steps below to add Asgardeo as an external key manager in API Platform:
 
-1. Sign in to the API Platform Console at [https://console.xclouddomainx/](https://console.xclouddomainx).
+1. Sign in to the API Platform Console at [https://console.bijira.dev/](https://console.bijira.dev).
 2. In the left navigation menu, click **Admin** and then click **Settings**.
 3. In the header, click the **Organization** list. This opens the organization-level settings page.
 4. Click the **Key Managers** tab.
 5. To add a key manager, click **+ Key Manager**.
 
-    ![Key Managers page listing XCLOUDCODENAMEX Built-in STS with Add Key Manager button highlighted](../../../assets/img/administer/settings/external-km/add_external_km.png)
+    ![Key Managers page listing Bijira Built-in STS with Add Key Manager button highlighted](../../../assets/img/administer/settings/external-km/add_external_km.png)
 
 6. Click **Asgardeo**.
 
@@ -62,7 +62,7 @@ Follow the steps below to add Asgardeo as an external key manager in API Platfor
 
 Now you have configured Asgardeo as an external key manager in API Platform.
 
-![Key Managers list showing XCLOUDCODENAMEX Built-in STS and newly added external-asgardeo-km entries](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_list.png)
+![Key Managers list showing Bijira Built-in STS and newly added external-asgardeo-km entries](../../../assets/img/administer/settings/external-km/add_external_km_asgardeo_list.png)
 
 ## Step 2: Add Asgardeo as an external key manager in API Platform Developer Portal
 

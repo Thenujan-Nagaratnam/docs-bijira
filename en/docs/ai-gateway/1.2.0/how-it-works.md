@@ -1,14 +1,14 @@
 ---
 title: "How the AI Gateway works"
 description: "How the AI Gateway handles AI traffic: LLM proxies, LLM providers, MCP proxies, where policies attach, provider templates, and streaming responses."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/how-it-works/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/how-it-works.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/how-it-works/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/how-it-works.md
 tags:
   - ai-gateway
   - llm
   - mcp
   - architecture
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-12
 content_type: "concept"
 ---

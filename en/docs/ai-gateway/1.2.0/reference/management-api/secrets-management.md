@@ -1,15 +1,15 @@
 ---
 title: "Management API: Secrets Management"
 description: "REST API reference for creating, listing, retrieving, updating, and deleting secrets in API Platform Gateway."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/reference/management-api/secrets-management/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/reference/management-api/secrets-management.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/reference/management-api/secrets-management/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/reference/management-api/secrets-management.md
 tags:
   - ai-gateway
   - management-api
   - security
   - secrets
   - vault
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-11
 content_type: "reference"
 ---
@@ -56,7 +56,7 @@ Required roles: `admin`
   "count": 5,
   "secrets": [
     {
-      "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+      "apiVersion": "gateway.api-platform.wso2.com/v1",
       "kind": "Secret",
       "metadata": {
         "name": "database-password"
@@ -107,7 +107,7 @@ The value is encrypted using the primary encryption provider before persistence.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Secret",
   "metadata": {
     "name": "database-password"
@@ -141,7 +141,7 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Secret",
   "metadata": {
     "name": "database-password"
@@ -224,7 +224,7 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Secret",
   "metadata": {
     "name": "database-password"
@@ -292,7 +292,7 @@ to newer keys during updates. Old secrets remain readable via the provider chain
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Secret",
   "metadata": {
     "name": "database-password"
@@ -327,7 +327,7 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1",
   "kind": "Secret",
   "metadata": {
     "name": "database-password"

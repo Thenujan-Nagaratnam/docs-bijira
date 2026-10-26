@@ -1,13 +1,13 @@
 ---
 title: "Configure an LLM provider"
 description: "Add an LLM provider in AI Workspace, configure authentication and guardrails, and deploy it to an AI Gateway."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/llm-providers/configure-provider/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/llm-providers/configure-provider.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/llm-providers/configure-provider/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/llm-providers/configure-provider.md
 tags:
   - cloud
   - ai-workspace
   - llm-providers
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-23
 content_type: "how-to"
 ---
@@ -124,7 +124,7 @@ Attach policies and guardrails that apply to every request this provider serves:
     Each guardrail includes advanced configuration options for fine-tuning its behavior. After selecting a guardrail, configure these settings before you attach it to the provider.
 
 !!! info
-    Learn more about available guardrails in the [Policies overview](../policies/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/).
+    Learn more about available guardrails in the [Policies overview](../policies/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
 ## Save provider
 

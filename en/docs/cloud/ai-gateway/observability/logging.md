@@ -1,14 +1,14 @@
 ---
 title: "Gateway logging"
 description: "Collect and visualize AI Gateway component logs using the demonstration Fluent Bit, OpenSearch, and OpenSearch Dashboards stack, or your own logging solution."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/observability/logging/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/observability/logging.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/observability/logging/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/observability/logging.md
 tags:
   - cloud
   - ai-gateway
   - observability
   - logging
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---

@@ -1,12 +1,12 @@
 ---
 title: "Platform API: MCP proxy deployments"
 description: "REST API reference for deploying, undeploying, and restoring MCP proxy deployments."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/mcp-proxy-deployments/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/mcp-proxy-deployments.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/mcp-proxy-deployments/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/mcp-proxy-deployments.md
 tags:
   - ai-workspace
   - platform-api
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-07
 content_type: "reference"
 ---

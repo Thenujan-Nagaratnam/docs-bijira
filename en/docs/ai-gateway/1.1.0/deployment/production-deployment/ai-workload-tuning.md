@@ -1,15 +1,15 @@
 ---
 title: "Tune the Gateway for AI Traffic"
 description: "Tune API Platform AI Gateway for LLM and MCP traffic: streaming timeouts, guardrail limits, cost pricing data, and semantic cache backing."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/deployment/production-deployment/ai-workload-tuning/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/deployment/production-deployment/ai-workload-tuning.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/deployment/production-deployment/ai-workload-tuning/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/deployment/production-deployment/ai-workload-tuning.md
 tags:
   - ai-gateway
   - production
   - llm
   - streaming
   - guardrails
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-09
 content_type: "how-to"
 ---

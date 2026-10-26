@@ -1,13 +1,13 @@
 ---
 title: "Getting Started with Self-Hosted Gateway"
 description: "Set up an API Platform Self-Hosted Gateway in your own infrastructure and connect it to the API Platform Cloud control plane."
-canonical_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/getting-started/
-md_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/getting-started.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started.md
 tags:
   - cloud
   - api-gateway
   - hybrid-deployment
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-11
 content_type: "quickstart"
 ---
@@ -35,11 +35,11 @@ Before you begin, ensure you have:
 
 ## Create a Self-Hosted Gateway in API Platform Console
 
-1. Sign in to [API Platform Console](https://console.xclouddomainx).
+1. Sign in to [API Platform Console](https://console.bijira.dev).
 2. Go to **Organization Level** in API Platform.
 3. From the left navigation, select **Admin** → **Gateways**.
 
-    ![Gateways page showing API Platform tab with one XBRANDX-Managed gateway listed and Add Self-Hosted Gateway button](../../assets/img/api-platform-gateway/gateway/gateway-list-empty.png)
+    ![Gateways page showing API Platform tab with one WSO2-Managed gateway listed and Add Self-Hosted Gateway button](../../assets/img/api-platform-gateway/gateway/gateway-list-empty.png)
 
 4. Select the **API Platform** tab.
 5. Click **+ Add Self-Hosted Gateway**.
@@ -70,8 +70,8 @@ Before you begin, ensure you have:
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/gateway/v1.0.0/xartifactprefixx-api-gateway-1.0.0.zip && \
-    unzip xartifactprefixx-api-gateway-1.0.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v1.0.0/wso2apip-api-gateway-1.0.0.zip && \
+    unzip wso2apip-api-gateway-1.0.0.zip
     ```
 
     ### Step 2: Configure the Gateway
@@ -79,21 +79,21 @@ Before you begin, ensure you have:
     Run this command to create the gateway configuration with your environment variables:
 
     ```bash
-    cat > xartifactprefixx-api-gateway-1.0.0/configs/keys.env << 'ENVFILE'
+    cat > wso2apip-api-gateway-1.0.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.xclouddomainx
+    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
 
-    Once you copy the above command from the screen, the `<your-moesif-key>` and `<your-gateway-token>` placeholders will be populated and the `xartifactprefixx-api-gateway-1.0.0/configs/keys.env` file will be created with these environment variables.
+    Once you copy the above command from the screen, the `<your-moesif-key>` and `<your-gateway-token>` placeholders will be populated and the `wso2apip-api-gateway-1.0.0/configs/keys.env` file will be created with these environment variables.
 
     ### Step 3: Start the Gateway
 
     Navigate to the gateway directory and start it using Docker Compose:
 
     ```bash
-    cd xartifactprefixx-api-gateway-1.0.0
+    cd wso2apip-api-gateway-1.0.0
     docker compose --env-file configs/keys.env up
     ```
 
@@ -125,7 +125,7 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 1. Navigate to **projects**.
 
 
-    ![XAPIPLATFORMX header showing Organization dropdown with jamesdoe selected and Select Project button](../../assets/img/api-platform-gateway/gateway/navigate-project.png)
+    ![WSO2 API Platform header showing Organization dropdown with jamesdoe selected and Select Project button](../../assets/img/api-platform-gateway/gateway/navigate-project.png)
 
 
 2. To create a new project for your APIs, click **+ Create Project** and follow the setup steps. Otherwise, select **Default** to continue with the default project.
@@ -139,7 +139,7 @@ In this guide, you will specify a URL to an OpenAPI definition of a sample API t
 4. Select **URL** option and provide the following URL to import the API contract:
 
     ```text
-    https://raw.githubusercontent.com/xgithuborgx/xcloudslugx-samples/refs/heads/main/reading-list-api/openapi.yaml   
+    https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml   
     ```
 
 5. Click **Next** and edit pre-defined values as needed. You can keep the default values for this sample.
@@ -193,7 +193,7 @@ For production environments or specific infrastructure requirements, see the det
 If the gateway doesn't connect:
 
 1. **Verify the token**: Ensure the gateway token is correctly set in `keys.env`
-2. **Check network connectivity**: The gateway needs outbound HTTPS access to `*.xclouddomainx`
+2. **Check network connectivity**: The gateway needs outbound HTTPS access to `*.bijira.dev`
 3. **View logs**: Run `docker compose logs -f` to see gateway logs
 4. **Check firewall**: Ensure port 8443 is accessible
 

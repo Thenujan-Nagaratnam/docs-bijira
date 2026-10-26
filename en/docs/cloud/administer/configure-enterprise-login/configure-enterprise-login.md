@@ -1,13 +1,13 @@
 ---
 title: "Configure enterprise login"
 description: "Enable enterprise login and role-based access control so users from an external identity provider can sign in to API Platform."
-canonical_url: https://xdocshostx/xdocspathx/cloud/administer/configure-enterprise-login/configure-enterprise-login/
-md_url: https://xdocshostx/xdocspathx/cloud/administer/configure-enterprise-login/configure-enterprise-login.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/configure-enterprise-login/configure-enterprise-login/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/configure-enterprise-login/configure-enterprise-login.md
 tags:
   - cloud
   - administer
   - enterprise-login
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -23,7 +23,7 @@ This guide walks you through the steps to configure enterprise login for your or
 Before you proceed with the configuration, set up the following:
 
 - A valid email domain for your organization.
-- Access the [API Platform Console](https://console.xclouddomainx/) via your Google, GitHub, or Microsoft account. If you are a new user, create an organization with a unique organization name. For example, "Stark Industries".
+- Access the [API Platform Console](https://console.bijira.dev/) via your Google, GitHub, or Microsoft account. If you are a new user, create an organization with a unique organization name. For example, "Stark Industries".
 
 ## Configure enterprise login for your API Platform organization
 
@@ -31,7 +31,7 @@ To configure enterprise login for your API Platform organization, follow the ste
 
 - **If you already have a support account with us**, send us your organization name/handle and the email domains specific to your organization through our support portal.
 
-- **If you do not have a support account with us yet**, send an email to `xcloudslugx-help@xemaildomainx` requesting to enable enterprise login for your organization.
+- **If you do not have a support account with us yet**, send an email to `bijira-help@wso2.com` requesting to enable enterprise login for your organization.
 
 !!! tip
     Ensure you include the following information in the request: - Organization name or handle. For example, “Stark Industries” or “starkindustries”. - Email domains specific to your organization. For example, “@stark.com”, “@starkindustries.com”, and “@stark.eu.
@@ -60,7 +60,7 @@ The API Platform support team will perform the necessary configurations and resp
 | ---------------------------- | ---------------------------------------------- |
 | **Name/Host/Alias**          | Specify `@` or leave it blank                  |
 | **Time to Live (TTL)**       | Keep the default value or use `86400`          |
-| **Value/Answer/Destination** | xdomainverificationx:<`verification_code`> |
+| **Value/Answer/Destination** | wso2-domain-verification:<`verification_code`> |
 
 Now, you are ready to bring your own identity to API Platform.
 
@@ -73,16 +73,16 @@ Follow the steps given below to configure the federated IdP:
 1. Sign in to [Asgardeo](https://asgardeo.io/).
 2. To configure a federated enterprise identity provider for your Asgardeo organization, follow the steps in [Asgardeo documentation - Add Standard-Based Login](https://wso2.com/asgardeo/docs/guides/authentication/enterprise-login/).
 3. In the Asgardeo Console left-hand menu, click **Applications**. 
-You will see applications listed with the names, **XENVPREFIXX_LOGIN_FOR_XCLOUDENVX** and **XENVPREFIXX_LOGIN_FOR_XCLOUDENVXDEVPORTAL**.
+You will see applications listed with the names, **WSO2_LOGIN_FOR_BIJIRA** and **WSO2_LOGIN_FOR_BIJIRADEVPORTAL**.
 
 4. In this example, we’ll configure an external identity for the API Platform Console.
-5. Click on the **XENVPREFIXX_LOGIN_FOR_XCLOUDENVX** application.
+5. Click on the **WSO2_LOGIN_FOR_BIJIRA** application.
 6. Click the **Sign-in Method** tab. You can observe the configured connection.
 
 Now, users in your enterprise IdP can sign in to the API Platform Console using their enterprise IDs.
 
 !!! note
-        You can follow the same steps to configure the external identity for the API Platform DevPortal using **XENVPREFIXX_LOGIN_FOR_XCLOUDENVXDEVPORTAL** Application.
+        You can follow the same steps to configure the external identity for the API Platform DevPortal using **WSO2_LOGIN_FOR_BIJIRADEVPORTAL** Application.
 
 
 ## Configure role-based access control for enterprise login
@@ -110,7 +110,7 @@ Before you proceed with the configuration, make sure you complete the following:
 3. To configure the application, follow the steps given below:
 
    1. In the Asgardeo Console left navigation menu, click **Applications**
-   2. Click on the **XENVPREFIXX_LOGIN_FOR_XCLOUDENVX** or **XENVPREFIXX_LOGIN_FOR_XCLOUDENVXDEVPORTAL** application that you want to configure
+   2. Click on the **WSO2_LOGIN_FOR_BIJIRA** or **WSO2_LOGIN_FOR_BIJIRADEVPORTAL** application that you want to configure
    3. Click the **Sign-in Method** tab.
    4. Configure the IdP for login depending on the protocol you selected:
       - For OpenID Connect, follow the instructions in [Enable the OIDC IdP for login](https://wso2.com/asgardeo/docs/guides/authentication/enterprise-login/add-oidc-idp-login/#enable-the-oidc-idp-for-login).
@@ -133,7 +133,7 @@ Before you proceed with the configuration, make sure you complete the following:
 
     - You have permission to perform actions of the organization administrator role.
 
-1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the API Platform Console, go to the top navigation menu and click **Organization**. This takes you to the organization's home page.
 3. In the left navigation menu, click **Settings**. This opens the organization-level settings page.
 4. In the **Access Control** tab, click **Groups**.

@@ -1,14 +1,14 @@
 ---
 title: "Expose a multi-step API workflow as an MCP tool"
 description: "Combine several API calls into one Arazzo workflow, generate an MCP server from it, and expose that server as a governed MCP proxy in AI Workspace."
-canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool/
-md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool.md
+canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool/
+md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/expose-a-multi-step-api-workflow-as-an-mcp-tool.md
 tags:
   - guides
   - ai-and-mcp
   - mcp
   - arazzo
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-08
 content_type: "tutorial"
 ---
@@ -66,7 +66,7 @@ By the end of this guide, you understand:
 
 - The APIs the workflow calls, and their OpenAPI definitions.
 - Docker, to build and run the generated server.
-- [`arazzo-mcp-gen`](https://github.com/xgithuborgx/arazzo-mcp-generator), from the
+- [`arazzo-mcp-gen`](https://github.com/wso2/arazzo-mcp-generator), from the
   releases page.
 - Access to AI Workspace with the **Admin** or **Developer** role.
 - An [AI Gateway](../../cloud/ai-workspace/ai-gateways/setting-up.md) you have set
@@ -327,4 +327,4 @@ The companion sample runs this setup locally using a self-hosted gateway, so you
 can generate an MCP server from an Arazzo workflow and call it through a gateway
 without a cloud account.
 
-[View the sample on GitHub](https://github.com/xgithuborgx/api-platform/tree/main/samples/rest-to-mcp).
+[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/rest-to-mcp).

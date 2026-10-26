@@ -1,15 +1,15 @@
 ---
 title: "Prompt management"
 description: "Shape prompts at the AI Gateway before they reach a model: inject standing instructions, apply templates, and compress text to reduce token usage."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/prompt-management/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/prompt-management.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/prompt-management/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/prompt-management.md
 tags:
   - ai-gateway
   - prompts
   - llm-proxy
   - system-prompt
   - templates
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-26
 content_type: "concept"
 ---
@@ -28,13 +28,13 @@ Order matters when you combine them. A template that builds the prompt and a dec
 
 ## Prompt policies
 
-These policies are documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
+These policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 
 | Policy | What it does |
 |--------|--------------|
-| [Prompt Decorator](https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-decorator) | Injects system instructions or context into prompts at the gateway layer |
-| [Prompt Template](https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-template) | Applies configurable templates to transform prompts before they reach the model |
-| [Prompt Compressor](https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-compressor) | Compresses prompt text to reduce token usage before upstream calls |
+| [Prompt Decorator](https://wso2.com/api-platform/policy-hub/policies/prompt-decorator) | Injects system instructions or context into prompts at the gateway layer |
+| [Prompt Template](https://wso2.com/api-platform/policy-hub/policies/prompt-template) | Applies configurable templates to transform prompts before they reach the model |
+| [Prompt Compressor](https://wso2.com/api-platform/policy-hub/policies/prompt-compressor) | Compresses prompt text to reduce token usage before upstream calls |
 
 ## Related topics
 

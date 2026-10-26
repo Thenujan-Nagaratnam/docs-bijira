@@ -1,15 +1,15 @@
 ---
 title: "Streaming and timeouts"
 description: "How the gateway handles long-lived A2A streaming operations, why route timeouts default to disabled, and how to set agent and per-operation limits."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/agent-governance/streaming-and-timeouts/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/agent-governance/streaming-and-timeouts.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/agent-governance/streaming-and-timeouts/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/agent-governance/streaming-and-timeouts.md
 tags:
   - ai-gateway
   - a2a
   - agents
   - streaming
   - timeouts
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-22
 content_type: "how-to"
 ---

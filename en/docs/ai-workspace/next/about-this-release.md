@@ -1,13 +1,13 @@
 ---
 title: "About this release"
-description: "Features, compatible product versions, key considerations, and known limitations of XAIWORKSPACEX 1.0.0."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/about-this-release/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/about-this-release.md
+description: "Features, compatible product versions, key considerations, and known limitations of WSO2 AI Workspace 1.0.0."
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/about-this-release/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/about-this-release.md
 tags:
   - cloud
   - ai-workspace
   - release-notes
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-05
 content_type: "reference"
 ---
@@ -16,13 +16,13 @@ content_type: "reference"
 
 AI Workspace is the control plane for managing how applications access artificial intelligence (AI) services. Platform teams register [AI Gateway runtimes](ai-gateways/setting-up.md) in it, configure large language model (LLM) [providers](llm-providers/overview.md) and [proxies](llm-proxies/overview.md), attach [AI policies](policies/overview.md), and manage [credentials](secrets-management.md). Developers then point their applications and agents at the deployed endpoints. It runs as a distribution you deploy yourself, keeps its own database, and reaches gateways through explicit deployment rather than automatic propagation.
 
-**XAIWORKSPACEX 1.0.0** is the first AI Workspace release. Every capability listed below is available for the first time, so there is no predecessor to upgrade from.
+**WSO2 AI Workspace 1.0.0** is the first AI Workspace release. Every capability listed below is available for the first time, so there is no predecessor to upgrade from.
 
 For more information on AI Workspace, see the [AI Workspace overview](overview.md).
 
 ## Downloads
 
-Download the AI Workspace distribution from the [XAPIPLATFORMX releases page](https://github.com/xgithuborgx/api-platform/releases). To run it locally with Docker Compose, follow [Get started with AI Workspace](getting-started.md).
+Download the AI Workspace distribution from the [WSO2 API Platform releases page](https://github.com/wso2/api-platform/releases). To run it locally with Docker Compose, follow [Get started with AI Workspace](getting-started.md).
 
 ## New features
 
@@ -206,8 +206,8 @@ AI Workspace deploys artifacts to the AI Gateway and shares a control plane with
 
 | Product | Compatible version |
 |---------|--------------------|
-| XAIGATEWAYX | 1.2.0 |
-| XAPIPORTALX | 1.0.0 |
+| WSO2 AI Gateway | 1.2.0 |
+| WSO2 API Portal | 1.0.0 |
 
 ## Key changes
 
@@ -227,4 +227,4 @@ None recorded against a released version, since this is the first release.
 
 ## Known issues
 
-- [Open AI Workspace issues in GitHub](https://github.com/xgithuborgx/api-platform/issues?q=is%3Aissue%20state%3Aopen%20label%3AArea%2FAIWorkspace)
+- [Open AI Workspace issues in GitHub](https://github.com/wso2/api-platform/issues?q=is%3Aissue%20state%3Aopen%20label%3AArea%2FAIWorkspace)

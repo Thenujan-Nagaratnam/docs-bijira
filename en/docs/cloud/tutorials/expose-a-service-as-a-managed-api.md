@@ -1,13 +1,13 @@
 ---
 title: "Expose a service as a managed API"
 description: "Create, deploy, test, promote, and publish an API proxy in API Platform, then invoke it from the Developer Portal."
-canonical_url: https://xdocshostx/xdocspathx/cloud/tutorials/expose-a-service-as-a-managed-api/
-md_url: https://xdocshostx/xdocspathx/cloud/tutorials/expose-a-service-as-a-managed-api.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/tutorials/expose-a-service-as-a-managed-api/
+md_url: https://wso2.com/api-platform/docs/cloud/tutorials/expose-a-service-as-a-managed-api.md
 tags:
   - cloud
   - tutorials
   - api-proxy
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "tutorial"
 ---
@@ -21,7 +21,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
 ## Prerequisites
 
 - If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -32,7 +32,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
 
 You can create an API proxy by following several methods. In this guide, you will create an API proxy by providing a sample URL.
 
-1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more API Proxies in your project, click **+ Create**. Otherwise, proceed to the next step.
 3. Click the **Import API Proxy** card.
 4. In the **Create API Proxy from Contract** pane, click **Try with sample URL**.
@@ -48,7 +48,7 @@ You can create an API proxy by following several methods. In this guide, you wil
          | **Identifier**      | `reading-list-api-qs`                          |
          | **Base Path**    | `/apim-p/reading-list-api-qs/v1.0`                                    |
          | **Version**    | `1.0`                                       |
-         | **Target**     | `https://apis.xclouddomainx/samples/reading-list-api-service/v1.0`       |
+         | **Target**     | `https://apis.bijira.dev/samples/reading-list-api-service/v1.0`       |
          | **Access Mode** | **External**: API is publicly accessible    |
 
 7. Click **Create**. This creates the component and takes you to the **Overview** page of the component.

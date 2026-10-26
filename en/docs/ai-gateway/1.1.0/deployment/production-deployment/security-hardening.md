@@ -1,15 +1,15 @@
 ---
 title: "Security Hardening"
 description: "Harden API Platform AI Gateway before production: AES-256 at-rest encryption keys, TLS for the listener and upstreams, and management API authentication."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/deployment/production-deployment/security-hardening/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/deployment/production-deployment/security-hardening.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/deployment/production-deployment/security-hardening/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/deployment/production-deployment/security-hardening.md
 tags:
   - ai-gateway
   - production
   - security
   - encryption
   - tls
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-09
 content_type: "how-to"
 ---
@@ -232,7 +232,7 @@ Choose the strategy that matches how your organization handles access.
     ```
 
     !!! note
-        The values in `role_mapping` must match claims the identity provider actually issues in its JSON Web Tokens (JWTs). For the roles the controller recognizes and the operations each one permits, see the [gateway controller management API definition](https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/tags/ai-gateway/v1.1.0/gateway/gateway-controller/api/management-openapi.yaml).
+        The values in `role_mapping` must match claims the identity provider actually issues in its JSON Web Tokens (JWTs). For the roles the controller recognizes and the operations each one permits, see the [gateway controller management API definition](https://raw.githubusercontent.com/wso2/api-platform/refs/tags/ai-gateway/v1.1.0/gateway/gateway-controller/api/management-openapi.yaml).
 
 === "Option B: basic auth with bcrypt"
 

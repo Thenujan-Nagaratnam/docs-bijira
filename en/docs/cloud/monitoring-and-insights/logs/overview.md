@@ -1,13 +1,13 @@
 ---
 title: "Logs overview"
 description: "View runtime and audit logs in API Platform to monitor API proxy activity and user actions while preserving data privacy."
-canonical_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/logs/overview/
-md_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/logs/overview.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/overview.md
 tags:
   - cloud
   - monitoring
   - logs
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "overview"
 ---

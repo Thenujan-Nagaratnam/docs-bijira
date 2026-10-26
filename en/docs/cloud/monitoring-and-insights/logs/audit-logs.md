@@ -1,14 +1,14 @@
 ---
 title: "Audit logs"
 description: "View organization-level audit logs and grant other members access to audit log data in API Platform."
-canonical_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/logs/audit-logs/
-md_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/logs/audit-logs.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/audit-logs/
+md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/logs/audit-logs.md
 tags:
   - cloud
   - monitoring
   - logs
   - audit
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -38,7 +38,7 @@ In API Platform, organization administrators are allowed to view audit logs by d
 
 To view audit logs, follow these steps:
 
-1. Sign in to [API Platform](https://console.xclouddomainx/).
+1. Sign in to [API Platform](https://console.bijira.dev/).
 2. In the API Platform Console, go to the top navigation menu and click **Organization**.
    
     !!! tip

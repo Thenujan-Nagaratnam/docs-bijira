@@ -1,13 +1,13 @@
 ---
 title: "AI agent API discovery"
 description: "Expose published APIs and workflows through llms.txt and machine-readable Markdown endpoints so AI agents can discover and invoke them."
-canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/discover-apis/ai-agent-discovery/
-md_url: https://xdocshostx/xdocspathx/cloud/devportal/discover-apis/ai-agent-discovery.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/discover-apis/ai-agent-discovery/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/discover-apis/ai-agent-discovery.md
 tags:
   - cloud
   - devportal
   - ai-discovery
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "concept"
 ---

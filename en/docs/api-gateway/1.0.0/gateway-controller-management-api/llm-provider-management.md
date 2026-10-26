@@ -1,13 +1,13 @@
 ---
 title: "Management API: LLM Provider Management"
 description: "REST API reference for creating, listing, updating, and deleting LLM provider configurations and API keys in API Platform Gateway."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/gateway-controller-management-api/llm-provider-management/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/gateway-controller-management-api/llm-provider-management.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/gateway-controller-management-api/llm-provider-management/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/gateway-controller-management-api/llm-provider-management.md
 tags:
   - api-gateway
   - management-api
   - llm
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-17
 content_type: "reference"
 ---
@@ -40,10 +40,10 @@ Add a new LLM provider to the Gateway. A provider defines how to interact with a
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "LlmProvider",
   "metadata": {
-    "name": "xsampleslugx-openai-provider"
+    "name": "wso2-openai-provider"
   },
   "spec": {
     "displayName": "OpenAI Provider",
@@ -106,10 +106,10 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "LlmProvider",
   "metadata": {
-    "name": "xsampleslugx-openai-provider"
+    "name": "wso2-openai-provider"
   },
   "spec": {
     "displayName": "OpenAI Provider",
@@ -149,7 +149,7 @@ Required roles: `admin`
     }
   },
   "status": {
-    "id": "xsampleslugx-openai-provider",
+    "id": "wso2-openai-provider",
     "state": "deployed",
     "createdAt": "2026-04-24T07:21:13Z",
     "updatedAt": "2026-04-24T07:21:13Z",
@@ -221,10 +221,10 @@ Required roles: `admin`, `developer`
   "count": 2,
   "providers": [
     {
-      "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+      "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
       "kind": "LlmProvider",
       "metadata": {
-        "name": "xsampleslugx-openai-provider"
+        "name": "wso2-openai-provider"
       },
       "spec": {
         "displayName": "OpenAI Provider",
@@ -264,7 +264,7 @@ Required roles: `admin`, `developer`
         }
       },
       "status": {
-        "id": "xsampleslugx-openai-provider",
+        "id": "wso2-openai-provider",
         "state": "deployed",
         "createdAt": "2026-04-24T07:21:13Z",
         "updatedAt": "2026-04-24T07:21:13Z",
@@ -378,7 +378,7 @@ Status Code **200**
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1alpha1|
+|apiVersion|gateway.api-platform.wso2.com/v1alpha1|
 |kind|LlmProvider|
 |hostRewrite|auto|
 |hostRewrite|manual|
@@ -429,10 +429,10 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "LlmProvider",
   "metadata": {
-    "name": "xsampleslugx-openai-provider"
+    "name": "wso2-openai-provider"
   },
   "spec": {
     "displayName": "OpenAI Provider",
@@ -472,7 +472,7 @@ Required roles: `admin`, `developer`
     }
   },
   "status": {
-    "id": "xsampleslugx-openai-provider",
+    "id": "wso2-openai-provider",
     "state": "deployed",
     "createdAt": "2026-04-24T07:21:13Z",
     "updatedAt": "2026-04-24T07:21:13Z",
@@ -513,10 +513,10 @@ Update an existing LLM provider in the Gateway.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "LlmProvider",
   "metadata": {
-    "name": "xsampleslugx-openai-provider"
+    "name": "wso2-openai-provider"
   },
   "spec": {
     "displayName": "OpenAI Provider",
@@ -580,10 +580,10 @@ Required roles: `admin`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "LlmProvider",
   "metadata": {
-    "name": "xsampleslugx-openai-provider"
+    "name": "wso2-openai-provider"
   },
   "spec": {
     "displayName": "OpenAI Provider",
@@ -623,7 +623,7 @@ Required roles: `admin`
     }
   },
   "status": {
-    "id": "xsampleslugx-openai-provider",
+    "id": "wso2-openai-provider",
     "state": "deployed",
     "createdAt": "2026-04-24T07:21:13Z",
     "updatedAt": "2026-04-24T07:21:13Z",
@@ -682,7 +682,7 @@ Required roles: `admin`
 {
   "status": "success",
   "message": "LLM provider deleted successfully",
-  "id": "xsampleslugx-openai-provider"
+  "id": "wso2-openai-provider"
 }
 ```
 

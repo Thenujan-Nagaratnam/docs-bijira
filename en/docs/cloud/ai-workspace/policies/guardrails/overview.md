@@ -1,13 +1,13 @@
 ---
 title: "AI Workspace guardrails overview"
 description: "Detect unsafe content, mask sensitive data, and enforce content limits on LLM traffic using guardrails configured in AI Workspace."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/guardrails/overview/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/guardrails/overview.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/overview.md
 tags:
   - cloud
   - ai-workspace
   - guardrails
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "overview"
 ---
@@ -94,4 +94,4 @@ When a guardrail blocks a request or response, it returns the following structur
 
 ## Learn More
 
-The [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) is the central registry for all guardrail policies. It contains full documentation, configuration schemas, and the latest versions of each guardrail.
+The [Policy Hub](https://wso2.com/api-platform/policy-hub/) is the central registry for all guardrail policies. It contains full documentation, configuration schemas, and the latest versions of each guardrail.

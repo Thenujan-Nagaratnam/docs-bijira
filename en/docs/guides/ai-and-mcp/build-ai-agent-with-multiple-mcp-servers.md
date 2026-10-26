@@ -1,15 +1,15 @@
 ---
 title: "Build an AI agent that uses aggregated MCP tools from multiple APIs"
-description: "Connect an AI agent to three independently governed MCP servers — CRM, Orders, and Knowledge Base — through the XAIGATEWAYX, with token budgeting and PII masking on every reasoning call."
-canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/
-md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers.md
+description: "Connect an AI agent to three independently governed MCP servers — CRM, Orders, and Knowledge Base — through the WSO2 AI Gateway, with token budgeting and PII masking on every reasoning call."
+canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers/
+md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers.md
 tags:
   - guides
   - ai-and-mcp
   - mcp
   - llm-gateway
   - agent
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-02
 content_type: "tutorial"
 ---
@@ -18,25 +18,25 @@ content_type: "tutorial"
 
 ## Overview
 
-This guide shows you how to connect a Python AI agent to three separately governed MCP servers; a CRM, an order management system, and a knowledge base, all through the XAIGATEWAYX. By the end, you'll have a running agent that can answer multi-step questions like "Find customer C-4821, check their latest order, and tell me if there are any relevant return policy articles" by discovering tools from all three servers at startup and routing each call through the gateway, where authentication, rate limits, and audit logs are enforced automatically.
+This guide shows you how to connect a Python AI agent to three separately governed MCP servers; a CRM, an order management system, and a knowledge base, all through the WSO2 AI Gateway. By the end, you'll have a running agent that can answer multi-step questions like "Find customer C-4821, check their latest order, and tell me if there are any relevant return policy articles" by discovering tools from all three servers at startup and routing each call through the gateway, where authentication, rate limits, and audit logs are enforced automatically.
 
-The agent also calls Claude through a XBRANDX LLM Gateway endpoint. Every reasoning call is token-budgeted, and customer data fetched from the CRM is PII-masked before it reaches Anthropic.
+The agent also calls Claude through a WSO2 LLM Gateway endpoint. Every reasoning call is token-budgeted, and customer data fetched from the CRM is PII-masked before it reaches Anthropic.
 
 ---
 
 ## Key Concepts
 
-Before you start, here are the XBRANDX terms this guide uses.
+Before you start, here are the WSO2 terms this guide uses.
 
-**XBRANDX XCLOUDCODENAMEX** is the cloud API platform where you create and manage all resources in this guide — API proxies, MCP servers, the LLM API, and subscriptions.
+**WSO2 Bijira** is the cloud API platform where you create and manage all resources in this guide — API proxies, MCP servers, the LLM API, and subscriptions.
 
-**API proxy** is a managed endpoint XCLOUDCODENAMEX creates in front of your backend API. It enforces authentication, rate limits, and audit logging on every inbound request before forwarding it to the backend.
+**API proxy** is a managed endpoint Bijira creates in front of your backend API. It enforces authentication, rate limits, and audit logging on every inbound request before forwarding it to the backend.
 
-**MCP server** is a governed endpoint XCLOUDCODENAMEX generates from an existing API proxy. It speaks the Model Context Protocol, so an AI agent can discover the proxy's operations as tools and call them using standard MCP tool calls.
+**MCP server** is a governed endpoint Bijira generates from an existing API proxy. It speaks the Model Context Protocol, so an AI agent can discover the proxy's operations as tools and call them using standard MCP tool calls.
 
 **LLM API** is a governed egress endpoint for calling a third-party LLM provider. Your agent sends every Claude request through this endpoint, where token budgets and guardrails like PII masking are applied before the request leaves your network.
 
-**Application** is a client identity in XCLOUDCODENAMEX. You create one application — `internal-agent` — to represent your agent. All seven APIs (three backends, three MCP servers, one LLM API) are subscribed under this single identity, so every call is attributed to the same application in analytics.
+**Application** is a client identity in Bijira. You create one application — `internal-agent` — to represent your agent. All seven APIs (three backends, three MCP servers, one LLM API) are subscribed under this single identity, so every call is attributed to the same application in analytics.
 
 **Developer Portal** is where you subscribe applications to APIs and generate OAuth2 credentials.
 
@@ -46,13 +46,13 @@ Before you start, here are the XBRANDX terms this guide uses.
 
 ## Prerequisites
 
-- A XCLOUDCODENAMEX account — sign up at [console.xcloudslugx.xwebdomainx](https://console.xcloudslugx.xwebdomainx) if you don't have one
+- A Bijira account — sign up at [console.bijira.wso2.com](https://console.bijira.wso2.com) if you don't have one
 - OpenAPI specifications (or endpoint URLs) for your three backend APIs: CRM, Orders, and Knowledge Base
 - An Anthropic API key, which the LLM Gateway uses to call `api.anthropic.com` on your behalf
 - Python 3.9 or later, pip, and a terminal
 
 !!! note
-    If you don't have real backend APIs, you can use [this](https://github.com/xgithuborgx/api-platform/tree/main/samples/ai-agent-with-mcp/mock-backends) mock server. It provides all three endpoints with synthetic customer, order, and knowledge base data.
+    If you don't have real backend APIs, you can use [this](https://github.com/wso2/api-platform/tree/main/samples/ai-agent-with-mcp/mock-backends) mock server. It provides all three endpoints with synthetic customer, order, and knowledge base data.
 
 ---
 
@@ -66,11 +66,11 @@ When the agent calls Claude through the LLM Gateway, the gateway token-budgets t
 
 ---
 
-## Step 1: Create a XCLOUDCODENAMEX Project
+## Step 1: Create a Bijira Project
 
-All resources in this guide live inside a single XCLOUDCODENAMEX project.
+All resources in this guide live inside a single Bijira project.
 
-1. Sign in to the [XCLOUDCODENAMEX Console](https://console.xcloudslugx.xwebdomainx).
+1. Sign in to the [Bijira Console](https://console.bijira.wso2.com).
 2. Click **+ Create Project**.
 3. Enter the following:
 
@@ -138,7 +138,7 @@ Repeat the steps above with these values:
 
 ## Step 3: Generate an MCP Server from Each API Proxy
 
-XCLOUDCODENAMEX generates an MCP server from an existing API proxy in a few clicks. Tool schemas are derived automatically from the OpenAPI spec you uploaded.
+Bijira generates an MCP server from an existing API proxy in a few clicks. Tool schemas are derived automatically from the OpenAPI spec you uploaded.
 
 #### CRM MCP Server
 
@@ -156,7 +156,7 @@ XCLOUDCODENAMEX generates an MCP server from an existing API proxy in a few clic
     | **API Proxy** | `CRM API` |
     | **API Proxy Version** | `1.0` |
 
-3. Click **Create**. XCLOUDCODENAMEX auto-generates tool definitions from the OpenAPI spec.
+3. Click **Create**. Bijira auto-generates tool definitions from the OpenAPI spec.
 4. Go to **Develop → Routing**. For the `get_customer` tool, click the edit icon and set the description:
 
     > Retrieve the full profile of a customer by their ID. Use when you need to find a customer's name, contact details, or account status.
@@ -258,7 +258,7 @@ The agent uses a single OAuth2 application — `internal-agent` — to authentic
 
 **Create the application:**
 
-1. Open the Developer Portal from the XCLOUDCODENAMEX Console sidebar.
+1. Open the Developer Portal from the Bijira Console sidebar.
 2. Click **Applications → + Create Application**.
 3. Enter the name `internal-agent` and click **Create**.
 
@@ -305,17 +305,17 @@ import anthropic
 from mcp import ClientSession
 from mcp.client.streamable_http import streamablehttp_client
 
-# ── XCLOUDCODENAMEX endpoints ────────────────────────────────────────────────────
+# ── Bijira endpoints ────────────────────────────────────────────────────
 # MCP servers: ingress gateway — obtain from the developer portal
-CRM_MCP_URL    = "https://<org-id>-prod.<region>.xcloudapisdomainx/default/crm-mcp-server/v1.0/mcp"
-ORDERS_MCP_URL = "https://<org-id>-prod.<region>.xcloudapisdomainx/default/orders-mcp-server/v1.0/mcp"
-KB_MCP_URL     = "https://<org-id>-prod.<region>.xcloudapisdomainx/default/kb-mcp-server/v1.0/mcp"
+CRM_MCP_URL    = "https://<org-id>-prod.<region>.bijiraapis.dev/default/crm-mcp-server/v1.0/mcp"
+ORDERS_MCP_URL = "https://<org-id>-prod.<region>.bijiraapis.dev/default/orders-mcp-server/v1.0/mcp"
+KB_MCP_URL     = "https://<org-id>-prod.<region>.bijiraapis.dev/default/kb-mcp-server/v1.0/mcp"
 
-# LLM Gateway: egress gateway - obtain from xcloudslugx console
-LLM_GW_URL     = "https://eg-<org-id>-prod.<region>.xcloudapisdomainx/default/claude-agent-gateway/v1.0"
+# LLM Gateway: egress gateway - obtain from bijira console
+LLM_GW_URL     = "https://eg-<org-id>-prod.<region>.bijiraapis.dev/default/claude-agent-gateway/v1.0"
 
 # ── Credentials ────────────────────────────────────────────────────────
-ACCESS_TOKEN = os.environ["XCLOUDENVX_TOKEN"]
+ACCESS_TOKEN = os.environ["BIJIRA_TOKEN"]
 AUTH_HEADERS = {"Authorization": f"Bearer {ACCESS_TOKEN}"}
 
 MODEL = "<model-of-your-choice>"
@@ -351,7 +351,7 @@ async def run_agent(user_question: str):
               for t in all_tools
           ]
 
-          # XCLOUDCODENAMEX authenticates via Authorization: Bearer, not x-api-key
+          # Bijira authenticates via Authorization: Bearer, not x-api-key
           client = anthropic.Anthropic(
               base_url=LLM_GW_URL,
               api_key="not-used",
@@ -402,7 +402,7 @@ if __name__ == "__main__":
 **Run the agent:**
 
 ```bash
-export XCLOUDENVX_TOKEN="eyJhbGciOiJSU..."
+export BIJIRA_TOKEN="eyJhbGciOiJSU..."
 python agent.py
 ```
 
@@ -416,7 +416,7 @@ python agent.py
 
 1. Run the agent with a direct question about customer C-4821 and confirm the response mentions John Smith, order O-9901, and at least one KB article.
 
-2. Confirm the agent's traffic appears in analytics attributed to `internal-agent`. In the XCLOUDCODENAMEX Console, go to **Insights → API Insights**, to view analytics
+2. Confirm the agent's traffic appears in analytics attributed to `internal-agent`. In the Bijira Console, go to **Insights → API Insights**, to view analytics
 
 !!! note
     Allow a few minutes for traffic to appear in API Insights after the first request.
@@ -427,7 +427,7 @@ python agent.py
 
 | Symptom | Resolution |
 |---|---|
-| `401 Unauthorized` from any MCP server | The `XCLOUDENVX_TOKEN` has expired. Regenerate it in Developer Portal → `internal-agent` → **Production Keys**. |
+| `401 Unauthorized` from any MCP server | The `BIJIRA_TOKEN` has expired. Regenerate it in Developer Portal → `internal-agent` → **Production Keys**. |
 | `401 Unauthorized` from LLM Gateway | Confirm `internal-agent` is subscribed to `claude-agent-gateway`. |
 | `404` from MCP server URL | Check that the URL does not have an `eg-` prefix. MCP server URLs use the ingress gateway; only the LLM API URL has `eg-`. |
 | Rate limit error from LLM Gateway | The 1M token/day budget was exceeded. Increase the limit in **Develop → Policy** on `claude-agent-gateway`, or wait for the hourly window to reset. |
@@ -438,14 +438,14 @@ python agent.py
 ## What You Learned
 
 - Connected a single AI agent to three separate MCP servers.
-- Governed every Claude reasoning call through the XBRANDX LLM Gateway with an hourly token budget and PII masking on CRM data
+- Governed every Claude reasoning call through the WSO2 LLM Gateway with an hourly token budget and PII masking on CRM data
 - Used the `session_map` pattern to route tool calls to the correct MCP server without any hardcoded if/else logic
-- Attributed all agent activities,tool calls and reasoning calls, to a single application identity in XCLOUDCODENAMEX analytics
+- Attributed all agent activities,tool calls and reasoning calls, to a single application identity in Bijira analytics
 
 ---
 
 ## Try the Sample
 
-The companion sample runs this setup locally using the XAIGATEWAYX standalone and WireMock mock backends, no XCLOUDCODENAMEX cloud account needed.
+The companion sample runs this setup locally using the WSO2 AI Gateway standalone and WireMock mock backends, no Bijira cloud account needed.
 
-[View the sample on GitHub](https://github.com/xgithuborgx/api-platform/tree/main/samples/ai-agent-with-mcp)
+[View the sample on GitHub](https://github.com/wso2/api-platform/tree/main/samples/ai-agent-with-mcp)

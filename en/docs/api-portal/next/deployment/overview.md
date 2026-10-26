@@ -1,15 +1,15 @@
 ---
 title: "Production deployment"
 description: "Deploy the API Portal & MCP Hub in production on Kubernetes with Helm or on virtual machines, with an external database and, where you need it, replicated instances."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/deployment/overview/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/deployment/overview.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/deployment/overview/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/deployment/overview.md
 tags:
   - cloud
   - api-portal
   - deployment
   - kubernetes
   - devops
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-06
 content_type: "how-to"
 ---

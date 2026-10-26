@@ -1,13 +1,13 @@
 ---
 title: "LLM cost policy"
 description: "Calculate the USD cost of each LLM call from token usage and pricing tier, for use with LLM cost-based rate limiting."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/rate-limit/llm-cost/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/rate-limit/llm-cost.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/llm-cost/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/llm-cost.md
 tags:
   - cloud
   - ai-workspace
   - rate-limit
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -68,4 +68,4 @@ This policy has no user-configurable parameters. The pricing database path is a 
 ## Related
 
 - [LLM Cost-Based Rate Limit](llm-cost-based-rate-limit.md) — Enforce spending budgets using the calculated cost
-- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version
+- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

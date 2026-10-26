@@ -1,23 +1,23 @@
 ---
 title: "Configure Claude Code with AI Gateway"
 description: "Route Claude Code requests through the AI Gateway using an Anthropic LLM provider and App LLM Proxy to apply guardrails, rate limiting, and analytics."
-canonical_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway/
-md_url: https://xdocshostx/xdocspathx/guides/ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway.md
+canonical_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway/
+md_url: https://wso2.com/api-platform/docs/guides/ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway.md
 tags:
   - guides
   - ai-and-mcp
   - ai-coding-assistants
   - claude-code
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-20
 content_type: "how-to"
 ---
 
 # Configuring Claude Code with AI Gateway
 
-This guide explains how to configure Claude Code to send requests through XAPIPLATFORMX using an AI Gateway, an Anthropic LLM provider, and an App LLM Proxy.
+This guide explains how to configure Claude Code to send requests through WSO2 API Platform using an AI Gateway, an Anthropic LLM provider, and an App LLM Proxy.
 
-By routing requests through XAPIPLATFORMX instead of invoking Anthropic directly, you can apply security, traffic control, and governance policies such as guardrails, rate limiting, analytics, and monitoring. The Gateway acts as an intermediary, forwarding requests from Claude Code to Anthropic while enforcing these controls.
+By routing requests through WSO2 API Platform instead of invoking Anthropic directly, you can apply security, traffic control, and governance policies such as guardrails, rate limiting, analytics, and monitoring. The Gateway acts as an intermediary, forwarding requests from Claude Code to Anthropic while enforcing these controls.
 
 !!! note "Using a Claude Team or Claude Enterprise subscription?"
     This guide covers the API key billing model, where the Gateway holds an Anthropic API key and Anthropic charges per token. If your organization pays for Claude through a subscription instead, the Gateway forwards each developer's Claude token untouched and authenticates the developer against your identity provider. For that setup, see [Configure Claude Code with AI Gateway using a Claude subscription](./claude-code-subscription-configuration-with-ai-gateway.md).
@@ -29,20 +29,20 @@ By routing requests through XAPIPLATFORMX instead of invoking Anthropic directly
 Before you begin, make sure you have:
 
 - An [Anthropic API key](https://platform.claude.com/settings/keys)
-- A XAPIPLATFORMX admin account
-- An organization created in XAPIPLATFORMX
+- A WSO2 API Platform admin account
+- An organization created in WSO2 API Platform
 - [Claude Code](https://code.claude.com/docs/en/overview) installed
 
 ---
 
-## Step 1: Start an AI Gateway on XAPIPLATFORMX
+## Step 1: Start an AI Gateway on WSO2 API Platform
 
 !!! note
     If an AI Gateway is already created and active, continue to Step 2.
 
 If an AI Gateway is not already created, follow these steps:
 
-1. **Log in to the XAPIPLATFORMX Console** as an admin.
+1. **Log in to the WSO2 API Platform Console** as an admin.
 
 2. **Make sure you are at the Organization level.**  
     - Select the organization from the header tab at the top of the page.
@@ -69,7 +69,7 @@ Once the AI Gateway is active, you can continue to create the Anthropic LLM prov
 
 ## Step 2: Create and Deploy an Anthropic LLM Provider
 
-1. **Log in to the XAPIPLATFORMX Console** as an admin.
+1. **Log in to the WSO2 API Platform Console** as an admin.
 
 2. Click **AI Workspace** at the top of the page.
 
@@ -101,7 +101,7 @@ The Anthropic LLM provider is now deployed to the selected AI Gateway.
 
 ## Step 3: Create and Deploy an App LLM Proxy
 
-The App LLM Proxy is the endpoint that Claude Code invokes through XAPIPLATFORMX.
+The App LLM Proxy is the endpoint that Claude Code invokes through WSO2 API Platform.
 
 1. Click **Back to Service Provider** to return to the Anthropic provider overview page.
 
@@ -145,7 +145,7 @@ The App LLM Proxy is now deployed to the selected AI Gateway.
 
 ### Generate an API Key for Claude Code
 
-Claude Code needs an API key from XAPIPLATFORMX to invoke the deployed App LLM Proxy.
+Claude Code needs an API key from WSO2 API Platform to invoke the deployed App LLM Proxy.
 
 1. Click **Back to App LLM Proxy**.
 
@@ -184,7 +184,7 @@ export ANTHROPIC_CUSTOM_HEADERS="X-API-Key: <API PLATFORM API KEY>"
 Replace:
 
 - `<INVOKE URL>` with the Invoke URL copied from the App LLM Proxy overview page
-- `<API PLATFORM API KEY>` with the API key generated from XAPIPLATFORMX for the App LLM Proxy
+- `<API PLATFORM API KEY>` with the API key generated from WSO2 API Platform for the App LLM Proxy
 
 !!! note
     These environment variables apply only to the current terminal session. If you open a new terminal session, you must export them again.
@@ -210,7 +210,7 @@ Replace:
 
 ### Configure SSL Certificate Trust
 
-When using a local XPLATFORMAIGATEWAYX over HTTPS, Claude Code must be able to trust the certificate presented by the Gateway.
+When using a local WSO2 API Platform AI Gateway over HTTPS, Claude Code must be able to trust the certificate presented by the Gateway.
 
 !!! note
     If the AI Gateway uses a valid CA-signed certificate, no additional certificate configuration is required.
@@ -235,7 +235,7 @@ After setting the required environment variables, run Claude Code:
 claude
 ```
 
-Claude Code will now send requests through XAPIPLATFORMX instead of directly calling Anthropic.
+Claude Code will now send requests through WSO2 API Platform instead of directly calling Anthropic.
 
 ---
 
@@ -243,21 +243,21 @@ Claude Code will now send requests through XAPIPLATFORMX instead of directly cal
 
 ### View API Analytics and Insights
 
-By routing Claude Code requests through the XPLATFORMAIGATEWAYX, you automatically gain access to built-in analytics and reporting capabilities.
+By routing Claude Code requests through the WSO2 API Platform AI Gateway, you automatically gain access to built-in analytics and reporting capabilities.
 
-XBRANDX provides integrated analytics, powered by Moesif, and also supports integration with external tools such as the ELK stack (**Elasticsearch**, **Logstash**, **Kibana**) and Choreo Analytics.
+WSO2 provides integrated analytics, powered by Moesif, and also supports integration with external tools such as the ELK stack (**Elasticsearch**, **Logstash**, **Kibana**) and Choreo Analytics.
 
 The following example shows Moesif being used to view analytics.  
 
 [![Moesif Overview dashboard showing unique users, total requests, errors, and LLM traffic metrics with time-series chart](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/analytics-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/analytics-example.png)
 
-For more information on Analytics, refer to the official [XAPIPLATFORMX Documentation](https://xdocshostx/xdocspathx/monitoring-and-insights/integrate-bijira-with-moesif/)
+For more information on Analytics, refer to the official [WSO2 API Platform Documentation](https://wso2.com/api-platform/docs/monitoring-and-insights/integrate-bijira-with-moesif/)
 
 ---
 
-### Implement XAIGATEWAYX Guardrails for Enhanced Control
+### Implement WSO2 AI Gateway Guardrails for Enhanced Control
 
-XPLATFORMAIGATEWAYX guardrails enable granular control over the data exchanged between Claude Code and the Anthropic API.
+WSO2 API Platform AI Gateway guardrails enable granular control over the data exchanged between Claude Code and the Anthropic API.
 
 By applying guardrails, you can enforce security and compliance policies such as:
 
@@ -269,13 +269,13 @@ For example, a **PII Masking Regex Guardrail** can be configured in the request 
 
 [![Claude Code terminal showing phone number redacted as asterisks after PII masking guardrail intercepts prompt](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-guardrail-redacted-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-guardrail-redacted-example.png)
 
-For more information on AI Guardrails, refer to the official [XAPIPLATFORMX Documentation](https://xdocshostx/xdocspathx/ai-gateway/llm/guardrails/pii-masking-regex/)
+For more information on AI Guardrails, refer to the official [WSO2 API Platform Documentation](https://wso2.com/api-platform/docs/ai-gateway/llm/guardrails/pii-masking-regex/)
 
 ---
 
 ### Rate limiting at AI Gateway
 
-XPLATFORMAIGATEWAYX supports request-based and token-based rate limiting for AI APIs. This allows you to control Claude Code usage when requests are routed through the Gateway.
+WSO2 API Platform AI Gateway supports request-based and token-based rate limiting for AI APIs. This allows you to control Claude Code usage when requests are routed through the Gateway.
 
 For example, you can create an AI subscription policy with a limited request count or total token count, and apply it when subscribing to the Anthropic AI API. Once Claude Code invokes the API through that subscription, the Gateway enforces the selected quota automatically. If the configured limit is exceeded, subsequent requests are throttled until the quota resets.
 
@@ -283,13 +283,13 @@ This helps control token consumption and avoid unexpected costs.
 
 [![Claude Code terminal showing prompt retrying with message "Retrying in 2s attempt 6/10" after rate limit reached](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-rate-limit-example.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-rate-limit-example.png)
 
-For more information on Rate Limiting and other policies, refer to the official [XAPIPLATFORMX documentation](https://xdocshostx/xdocspathx/ai-workspace/policies/overview/)
+For more information on Rate Limiting and other policies, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-workspace/policies/overview/)
 
 ---
 
 ### Prompt Decorator
 
-XPLATFORMAIGATEWAYX supports Prompt Decorators, which allow you to modify or enrich prompts before they are sent to the backend AI provider. This is useful for enforcing consistent instructions, adding system-level context, or guiding model behavior without requiring changes in the client application.
+WSO2 API Platform AI Gateway supports Prompt Decorators, which allow you to modify or enrich prompts before they are sent to the backend AI provider. This is useful for enforcing consistent instructions, adding system-level context, or guiding model behavior without requiring changes in the client application.
 
 As a simple example, you can configure a Prompt Decorator in the request flow to prepend a system instruction to all incoming prompts.
 
@@ -301,4 +301,4 @@ The following screenshot shows Claude Code responding to that same prompt with a
 
 [![Claude Code terminal showing short bulleted response after brevity Prompt Decorator is applied](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-prompt-decorator-example-2.png)](../../../assets/img/guides/ai-and-mcp/ai-coding-assistants/claude-code/claude-code-prompt-decorator-example-2.png)
 
-For more information on Prompt Management, refer to the official [XAPIPLATFORMX documentation](https://xdocshostx/xdocspathx/ai-gateway/llm/prompt-management/prompt-decorator/)
+For more information on Prompt Management, refer to the official [WSO2 API Platform documentation](https://wso2.com/api-platform/docs/ai-gateway/llm/prompt-management/prompt-decorator/)

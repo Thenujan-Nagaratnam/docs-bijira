@@ -1,8 +1,8 @@
 ---
 title: "Cost control and budgets"
 description: "Put a monetary ceiling on LLM usage through the AI Gateway: price each call as it passes and reject traffic once a budget is spent."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/cost-control-and-budgets/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/cost-control-and-budgets.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/cost-control-and-budgets/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/cost-control-and-budgets.md
 tags:
   - ai-gateway
   - cost
@@ -10,7 +10,7 @@ tags:
   - spend
   - cost-tracking
   - quota
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-26
 content_type: "concept"
 ---
@@ -29,13 +29,13 @@ Attach them on an `LlmProvider` for a budget that covers every proxy consuming i
 
 ## Cost and budget policies
 
-These policies are documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
+These policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 
 | Policy | What it does |
 |--------|--------------|
-| [LLM Cost](https://xpolicyhubhostx/xpolicyhubpathx/policies/llm-cost) | Calculates the monetary cost of each LLM call and stores it for downstream policies |
-| [Azure LLM Cost](https://xpolicyhubhostx/xpolicyhubpathx/policies/azure-llm-cost) | Calculates the monetary cost of each LLM call made through Azure OpenAI and Azure AI Foundry, mapping deployment names to models and price tiers |
-| [LLM Cost-Based Rate Limit](https://xpolicyhubhostx/xpolicyhubpathx/policies/llm-cost-based-ratelimit) | Enforces monetary budget quotas on LLM usage |
+| [LLM Cost](https://wso2.com/api-platform/policy-hub/policies/llm-cost) | Calculates the monetary cost of each LLM call and stores it for downstream policies |
+| [Azure LLM Cost](https://wso2.com/api-platform/policy-hub/policies/azure-llm-cost) | Calculates the monetary cost of each LLM call made through Azure OpenAI and Azure AI Foundry, mapping deployment names to models and price tiers |
+| [LLM Cost-Based Rate Limit](https://wso2.com/api-platform/policy-hub/policies/llm-cost-based-ratelimit) | Enforces monetary budget quotas on LLM usage |
 
 To cap by token count or request count instead, see [Token based rate limiting](token-based-rate-limiting.md).
 

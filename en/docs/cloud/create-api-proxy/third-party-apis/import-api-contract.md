@@ -1,12 +1,12 @@
 ---
 title: "Import Third-Party API Contract"
-description: "Create an API proxy for a third-party API not in the XAPIPLATFORMX Marketplace by importing its API contract."
-canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/import-api-contract/
-md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/import-api-contract.md
+description: "Create an API proxy for a third-party API not in the WSO2 API Platform Marketplace by importing its API contract."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/import-api-contract/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/import-api-contract.md
 tags:
   - cloud
   - api-proxy
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -21,7 +21,7 @@ Follow these steps to create an API proxy for a third-party API by importing its
 
 ### 1. Access the API Platform Console
 
-1. Sign in to the [API Platform Console](https://console.xclouddomainx/) and select your project.  
+1. Sign in to the [API Platform Console](https://console.bijira.dev/) and select your project.  
 
 ### 2. Import the API Contract
 

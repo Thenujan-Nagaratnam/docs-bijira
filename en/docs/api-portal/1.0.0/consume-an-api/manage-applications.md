@@ -1,13 +1,13 @@
 ---
 title: "Manage applications in the API Portal & MCP Hub"
 description: "Create an application to hold OAuth2 client IDs, edit its name and description, associate API keys for analytics, and delete it."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/consume-an-api/manage-applications/
-md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/consume-an-api/manage-applications.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/consume-an-api/manage-applications/
+md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/consume-an-api/manage-applications.md
 tags:
   - cloud
   - api-portal
   - applications
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-18
 content_type: "how-to"
 ---

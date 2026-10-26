@@ -1,13 +1,13 @@
 ---
 title: "Get started with API Portal & MCP Hub"
 description: "Run the API Portal & MCP Hub locally with Docker Compose, sign in, and publish your first API to the catalog."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/getting-started/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/getting-started.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/getting-started/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/getting-started.md
 tags:
   - cloud
   - api-portal
   - quickstart
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-23
 content_type: "quickstart"
 ---
@@ -28,8 +28,8 @@ The API Portal & MCP Hub is where developers discover, subscribe to, and consume
 Run this command in your terminal to download and unzip the standalone API Portal distribution:
 
 ```bash
-curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/api-portal%2Fv1.0.0/xartifactprefixx-api-portal-1.0.0.zip && \
-unzip xartifactprefixx-api-portal-1.0.0.zip
+curl -sLO https://github.com/wso2/api-platform/releases/download/api-portal%2Fv1.0.0/wso2apip-api-portal-1.0.0.zip && \
+unzip wso2apip-api-portal-1.0.0.zip
 ```
 
 ## Step 2: Run the setup script
@@ -37,7 +37,7 @@ unzip xartifactprefixx-api-portal-1.0.0.zip
 Navigate to the API Portal directory:
 
 ```bash
-cd xartifactprefixx-api-portal-1.0.0
+cd wso2apip-api-portal-1.0.0
 ```
 Run this command to set up the API Portal:
 
@@ -119,7 +119,7 @@ Create the API manifest:
 
 ```yaml
 # api.yaml
-apiVersion: api-portal.api-platform.xcrddomainx/v1
+apiVersion: api-portal.api-platform.wso2.com/v1
 kind: RestApi
 
 metadata:
@@ -153,8 +153,8 @@ spec:
   # Points at the hosted sample backend, so the API works in a fresh portal with
   # no gateway deployed. Front it with a gateway by swapping these for its URL.
   endpoints:
-    sandboxUrl: https://apis.xclouddomainx/samples/reading-list-api-service/v1.0
-    productionUrl: https://apis.xclouddomainx/samples/reading-list-api-service/v1.0
+    sandboxUrl: https://apis.bijira.dev/samples/reading-list-api-service/v1.0
+    productionUrl: https://apis.bijira.dev/samples/reading-list-api-service/v1.0
 ```
 
 Create the OpenAPI definition:
@@ -169,7 +169,7 @@ info:
     Track a personal reading list — add books, update their reading status, and
     remove them when you're done. Open access: no API key required.
 servers:
-  - url: https://apis.xclouddomainx/samples/reading-list-api-service/v1.0
+  - url: https://apis.bijira.dev/samples/reading-list-api-service/v1.0
 components:
   schemas:
     Book:

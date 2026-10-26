@@ -1,14 +1,14 @@
 ---
 title: "AWS Bedrock Guardrail for AI APIs"
-description: "Integrate AWS Bedrock Guardrails with AI API proxies in XAPIPLATFORMX for real-time content safety validation and PII protection."
-canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail/
-md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail.md
+description: "Integrate AWS Bedrock Guardrails with AI API proxies in WSO2 API Platform for real-time content safety validation and PII protection."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/third-party-guardrail-integrations/aws-bedrock-guardrail.md
 tags:
   - cloud
   - ai-gateway
   - guardrails
   - aws
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---

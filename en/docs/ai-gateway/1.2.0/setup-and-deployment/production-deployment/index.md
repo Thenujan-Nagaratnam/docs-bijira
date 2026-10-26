@@ -1,15 +1,15 @@
 ---
 title: "Production Deployment Overview"
 description: "Plan a high-availability production deployment of API Platform AI Gateway on Kubernetes with Helm, an external database, and replicated workloads."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/production-deployment/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/production-deployment.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/production-deployment/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/production-deployment.md
 tags:
   - ai-gateway
   - production
   - deployment
   - kubernetes
   - high-availability
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "concept"
 ---
@@ -106,7 +106,7 @@ helm version
 Download the `values.yaml` that ships with the 1.2.0 gateway chart and use it as the starting point. Every field referenced in this section lives in this file.
 
 ```bash
-curl -o values.yaml https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/tags/ai-gateway/v1.2.0/kubernetes/helm/gateway-helm-chart/values.yaml
+curl -o values.yaml https://raw.githubusercontent.com/wso2/api-platform/refs/tags/ai-gateway/v1.2.0/kubernetes/helm/gateway-helm-chart/values.yaml
 ```
 
 ### Pin the image versions
@@ -126,29 +126,29 @@ gateway:
 !!! note
     Use the same tag for both components. Mixed versions between the controller and the runtime aren't supported. Keep the major version of the image tags aligned with the major version of the Helm chart.
 
-!!! note "XBRANDX subscription users"
-    With a XBRANDX subscription, use image tags that carry the U2 update version as a fourth digit, such as `1.2.0.1`, instead of the base `1.2.0` release. The fourth digit carries patch-level updates delivered through the XBRANDX private registry.
+!!! note "WSO2 subscription users"
+    With a WSO2 subscription, use image tags that carry the U2 update version as a fourth digit, such as `1.2.0.1`, instead of the base `1.2.0` release. The fourth digit carries patch-level updates delivered through the WSO2 private registry.
 
-### Pull images from the XBRANDX private registry
+### Pull images from the WSO2 private registry
 
-With a XBRANDX subscription, images come from `xregistryhostx` instead of the public GHCR registry. One chart field switches this on end to end.
+With a WSO2 subscription, images come from `registry.wso2.com` instead of the public GHCR registry. One chart field switches this on end to end.
 
-Create an image pull Secret in the namespace you install into. Replace `<namespace>` and `<xsampleslugx-email>` with your values, then enter your password or token at the prompt:
+Create an image pull Secret in the namespace you install into. Replace `<namespace>` and `<wso2-email>` with your values, then enter your password or token at the prompt:
 
 ```bash
-read -rsp "XSAMPLEBRANDX password or token: " XENVPREFIXX_TOKEN && echo
-XENVPREFIXX_USER='<xsampleslugx-email>'
+read -rsp "WSO2 password or token: " WSO2_TOKEN && echo
+WSO2_USER='<wso2-email>'
 
 json_escape() { printf '%s' "$1" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g'; }
 
-printf '{"auths":{"xregistryhostx":{"username":"%s","password":"%s"}}}' \
-  "$(json_escape "$XENVPREFIXX_USER")" "$(json_escape "$XENVPREFIXX_TOKEN")" |
-  kubectl create secret generic xsampleslugx-subscription-creds \
+printf '{"auths":{"registry.wso2.com":{"username":"%s","password":"%s"}}}' \
+  "$(json_escape "$WSO2_USER")" "$(json_escape "$WSO2_TOKEN")" |
+  kubectl create secret generic wso2-subscription-creds \
     --namespace <namespace> \
     --type=kubernetes.io/dockerconfigjson \
     --from-file=.dockerconfigjson=/dev/stdin
 
-unset XENVPREFIXX_TOKEN
+unset WSO2_TOKEN
 ```
 
 Reading the password with `read -rs` keeps it off the screen and out of your shell history. Piping the credentials into `kubectl` also keeps it out of the host's process list, where `--docker-password` would expose it. The `json_escape` function escapes double quotes and backslashes, so a token that contains either produces valid JSON.
@@ -156,12 +156,12 @@ Reading the password with `read -rs` keeps it off the screen and out of your she
 Then name that Secret in `values.yaml`:
 
 ```yaml
-xhelmkeyx:
+wso2:
   subscription:
-    imagePullSecret: xsampleslugx-subscription-creds
+    imagePullSecret: wso2-subscription-creds
 ```
 
-Setting this field rewrites every default `ghcr.io/xgithuborgx/api-platform/` repository to `xregistryhostx/xregistryprojectx/` and injects the Secret into the `imagePullSecrets` block of every component. An explicit `image.repository` override, such as an internal mirror, passes through unchanged. Left empty, the chart renders exactly as a non-subscription install.
+Setting this field rewrites every default `ghcr.io/wso2/api-platform/` repository to `registry.wso2.com/wso2-api-platform/` and injects the Secret into the `imagePullSecrets` block of every component. An explicit `image.repository` override, such as an internal mirror, passes through unchanged. Left empty, the chart renders exactly as a non-subscription install.
 
 !!! note
     The chart stores only the name of the Secret, so the credentials themselves stay out of Helm release state.

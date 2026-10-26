@@ -1,13 +1,13 @@
 ---
 title: "LLM Provider Templates"
 description: "Reference for LLM Provider Templates in API Platform AI Gateway, covering built-in templates for OpenAI, Anthropic, Gemini, and more."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/reference/llm-templates/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/reference/llm-templates.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/reference/llm-templates/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/reference/llm-templates.md
 tags:
   - ai-gateway
   - llm
   - reference
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "reference"
 ---
@@ -45,7 +45,7 @@ These templates are automatically loaded when the gateway starts and are immedia
 Each LLM provider template follows a standard YAML structure:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: <template-id>
@@ -91,14 +91,14 @@ Templates support four types of extraction locations:
 The OpenAI template extracts metadata from OpenAI API responses. To connect the gateway to OpenAI, see [OpenAI](../gateway-artifacts/llm-provider/supported-providers/openai.md).
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: openai
 spec:
   displayName: OpenAI
-  groupId: xtemplategroupprefixx-openai
-  managedBy: xtemplateownerx
+  groupId: wso2-openai
+  managedBy: wso2
   version: v1.0
   promptTokens:
     location: payload
@@ -134,14 +134,14 @@ spec:
 The Azure OpenAI template is compatible with Microsoft's Azure OpenAI Service API. To connect the gateway to Azure OpenAI, see [Azure OpenAI](../gateway-artifacts/llm-provider/supported-providers/azure-openai.md).
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: azure-openai
 spec:
   displayName: Azure OpenAI
-  groupId: xtemplategroupprefixx-azure-openai
-  managedBy: xtemplateownerx
+  groupId: wso2-azure-openai
+  managedBy: wso2
   version: v1.0
   promptTokens:
     location: payload
@@ -177,14 +177,14 @@ spec:
 The Anthropic template extracts metadata from Anthropic Claude API responses. To connect the gateway to Anthropic, see [Anthropic](../gateway-artifacts/llm-provider/supported-providers/anthropic.md).
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: anthropic
 spec:
   displayName: Anthropic
-  groupId: xtemplategroupprefixx-anthropic
-  managedBy: xtemplateownerx
+  groupId: wso2-anthropic
+  managedBy: wso2
   version: v1.0
   promptTokens:
     location: payload
@@ -208,14 +208,14 @@ spec:
 The Gemini template is designed for Google's Gemini API. To connect the gateway to Gemini, see [Gemini](../gateway-artifacts/llm-provider/supported-providers/gemini.md).
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: gemini
 spec:
   displayName: Gemini
-  groupId: xtemplategroupprefixx-gemini
-  managedBy: xtemplateownerx
+  groupId: wso2-gemini
+  managedBy: wso2
   version: v1.0
   promptTokens:
     location: payload
@@ -242,14 +242,14 @@ spec:
 The MistralAI template supports Mistral AI's API. To connect the gateway to Mistral AI, see [MistralAI](../gateway-artifacts/llm-provider/supported-providers/mistralai.md).
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: mistralai
 spec:
   displayName: MistralAI
-  groupId: xtemplategroupprefixx-mistralai
-  managedBy: xtemplateownerx
+  groupId: wso2-mistralai
+  managedBy: wso2
   version: v1.0
   promptTokens:
     location: payload
@@ -276,14 +276,14 @@ spec:
 The AWS Bedrock template is designed for the AWS Bedrock unified API. To connect the gateway to Bedrock with either bearer or AWS Signature Version 4 (SigV4) authentication, see [AWS Bedrock](../gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md).
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: awsbedrock
 spec:
   displayName: AWS Bedrock
-  groupId: xtemplategroupprefixx-awsbedrock
-  managedBy: xtemplateownerx
+  groupId: wso2-awsbedrock
+  managedBy: wso2
   version: v1.0
   promptTokens:
     location: payload
@@ -307,14 +307,14 @@ spec:
 The Azure AI Foundry template supports Microsoft's Azure AI Foundry platform. To connect the gateway to Azure AI Foundry, see [Azure AI Foundry](../gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry.md).
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: azureai-foundry
 spec:
   displayName: Azure AI Foundry
-  groupId: xtemplategroupprefixx-azureai-foundry
-  managedBy: xtemplateownerx
+  groupId: wso2-azureai-foundry
+  managedBy: wso2
   version: v1.0
   promptTokens:
     location: payload
@@ -354,7 +354,7 @@ curl -X POST http://localhost:9090/api/management/v1/llm-providers \
   -H "Content-Type: application/yaml" \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProvider
 metadata:
   name: <unique-id>
@@ -424,7 +424,7 @@ curl -X POST http://localhost:9090/api/management/v1/llm-provider-templates \
   -H "Content-Type: application/yaml" \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: custom-provider
@@ -448,7 +448,7 @@ curl -X PUT http://localhost:9090/api/management/v1/llm-provider-templates/custo
   -H "Content-Type: application/yaml" \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: custom-provider
@@ -481,12 +481,12 @@ Use this table to configure an `LlmProviderTemplate` resource.
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `apiVersion` | string | Yes | API version, must be `gateway.api-platform.xcrddomainx/v1` |
+| `apiVersion` | string | Yes | API version, must be `gateway.api-platform.wso2.com/v1` |
 | `kind` | string | Yes | Resource kind, must be `LlmProviderTemplate` |
 | `metadata.name` | string | Yes | Unique identifier for the template (used as template ID) |
 | `spec.displayName` | string | Yes | Human-readable name for the template |
 | `spec.groupId` | string | No | Stable family identifier shared by versions of the same template; defaults to `metadata.name` |
-| `spec.managedBy` | string | No | Template owner; built-in templates use `xtemplateownerx`, while custom templates default to `customer` |
+| `spec.managedBy` | string | No | Template owner; built-in templates use `wso2`, while custom templates default to `customer` |
 | `spec.version` | string | No | Template content version; defaults to `v1.0` |
 | `spec.promptTokens` | object | No | Configuration for extracting prompt/input token count |
 | `spec.completionTokens` | object | No | Configuration for extracting completion/output token count |

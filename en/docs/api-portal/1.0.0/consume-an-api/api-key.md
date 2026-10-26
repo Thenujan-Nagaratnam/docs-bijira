@@ -1,13 +1,13 @@
 ---
 title: "Consume an API secured with an API key"
 description: "Send a generated API key in the header an API's specification declares, and combine it with a subscription token when the API requires one."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/consume-an-api/api-key/
-md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/consume-an-api/api-key.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/consume-an-api/api-key/
+md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/consume-an-api/api-key.md
 tags:
   - cloud
   - api-portal
   - authentication
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-31
 content_type: "how-to"
 ---

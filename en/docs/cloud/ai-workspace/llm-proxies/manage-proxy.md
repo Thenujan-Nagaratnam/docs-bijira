@@ -1,13 +1,13 @@
 ---
 title: "Manage an App LLM proxy"
 description: "Configure provider settings, resources, security, and guardrails for a deployed App LLM proxy, then save, redeploy, or delete it."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/llm-proxies/manage-proxy/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/llm-proxies/manage-proxy.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-proxies/manage-proxy/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-proxies/manage-proxy.md
 tags:
   - cloud
   - ai-workspace
   - llm-proxies
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -205,7 +205,7 @@ Resource-wise guardrails apply to **specific endpoints** only. This section list
     After adding or removing guardrails, you must redeploy the proxy for the changes to take effect. Click **Deploy to Gateway** to apply your changes.
 
 !!! info
-    Learn more about available guardrails in the [Guardrails Overview](../policies/guardrails/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/).
+    Learn more about available guardrails in the [Guardrails Overview](../policies/guardrails/overview.md). For the full list of policies and their specifications, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
 ---
 
@@ -241,4 +241,4 @@ To delete a proxy, click the **delete** icon (trash icon) in the top-right corne
 ## Next Steps
 
 - [Policies Overview](../policies/overview.md) - Learn about all available policies for proxies
-- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) - Browse the full catalog of available guardrails and policies
+- [Policy Hub](https://wso2.com/api-platform/policy-hub/) - Browse the full catalog of available guardrails and policies

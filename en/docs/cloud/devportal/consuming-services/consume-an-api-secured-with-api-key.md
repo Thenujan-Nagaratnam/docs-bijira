@@ -1,13 +1,13 @@
 ---
 title: "Consume an API secured with an API key"
 description: "Generate an API key for a subscribed API and use it to authenticate requests in the api-key header."
-canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/consuming-services/consume-an-api-secured-with-api-key/
-md_url: https://xdocshostx/xdocspathx/cloud/devportal/consuming-services/consume-an-api-secured-with-api-key.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/consuming-services/consume-an-api-secured-with-api-key/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/consuming-services/consume-an-api-secured-with-api-key.md
 tags:
   - cloud
   - devportal
   - authentication
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -29,7 +29,7 @@ To consume an API secured with an API key, ensure that the desired API has API K
 
 1. Ensure the desired API has API Key authentication enabled.
 
-2. Navigate to the [API Platform Developer Portal](https://devportal.xclouddomainx) and sign in.
+2. Navigate to the [API Platform Developer Portal](https://devportal.bijira.dev) and sign in.
 
 3. Click on **Applications** in the Developer Portal sidebar.
 
@@ -62,5 +62,5 @@ Use this API Key to authenticate API requests by including it in the `api-key` h
 
 Example:
 ```bash
-curl -H "api-key: <YOUR_API_KEY>" -X GET "https://my-sample-api.xcloudapisdomainx/greet"
+curl -H "api-key: <YOUR_API_KEY>" -X GET "https://my-sample-api.bijiraapis.dev/greet"
 ```

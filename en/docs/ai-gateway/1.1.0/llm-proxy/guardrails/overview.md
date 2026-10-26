@@ -1,13 +1,13 @@
 ---
 title: "Guardrails overview"
 description: "Overview of AI Gateway guardrails: LLM-aware policies for content filtering, safety, and compliance that run in the LLM Proxy request and response pipeline."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/guardrails/overview/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/guardrails/overview.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/guardrails/overview/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/guardrails/overview.md
 tags:
   - ai-gateway
   - guardrails
   - llm-proxy
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-10
 content_type: "concept"
 ---

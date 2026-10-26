@@ -1,14 +1,14 @@
 ---
 title: "Self-Hosted Gateway architecture"
 description: "Learn how the Self-Hosted Gateway connects to the API Platform control plane through the Gateway Controller and Gateway Runtime components."
-canonical_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/architecture/
-md_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/architecture.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/architecture/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/architecture.md
 tags:
   - cloud
   - api-gateway
   - self-hosted
   - architecture
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "concept"
 ---

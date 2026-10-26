@@ -1,14 +1,14 @@
 ---
 title: "Secure traffic with TLS"
 description: "Give AI Workspace and the Platform API certificates from your own CA, decide where TLS terminates, and make the backend-for-frontend verify the control plane."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/production/tls/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/production/tls.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/production/tls/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/production/tls.md
 tags:
   - ai-workspace
   - production
   - security
   - tls
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-06
 content_type: "how-to"
 ---

@@ -18,7 +18,7 @@ reviews:
   path_instructions:
     - path: "en/docs/**/*.md"
       instructions: >-
-        Apply the XBRANDX documentation style rules in .claude/rules/doc-*.md strictly.
+        Apply the WSO2 documentation style rules in .claude/rules/doc-*.md strictly.
         Report every violation, including low-severity ones.
 chat:
   auto_reply: true

@@ -1,13 +1,13 @@
 ---
 title: "Consume an API secured with OAuth2"
 description: "Generate an OAuth2 access token from an application's consumer key and secret, then use it to invoke a subscribed API."
-canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/consuming-services/consume-an-api-secured-with-oauth2/
-md_url: https://xdocshostx/xdocspathx/cloud/devportal/consuming-services/consume-an-api-secured-with-oauth2.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/consuming-services/consume-an-api-secured-with-oauth2/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/consuming-services/consume-an-api-secured-with-oauth2.md
 tags:
   - cloud
   - devportal
   - authentication
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -26,7 +26,7 @@ Once you create an application, you can generate credentials for it. API Platfor
 
 To generate an access token for **testing purposes**, follow these steps:
 
-1. Navigate to the [API Platform Developer Portal](https://devportal.xclouddomainx) and sign in.
+1. Navigate to the [API Platform Developer Portal](https://devportal.bijira.dev) and sign in.
 
 2. Click on **Applications** in the Developer Portal sidebar.
 
@@ -61,7 +61,7 @@ Use this generated access token to authenticate API requests by including it in 
 Example:
 
 ```bash
-curl -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" -X GET "https://my-sample-api.xcloudapisdomainx/greet"
+curl -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" -X GET "https://my-sample-api.bijiraapis.dev/greet"
 ```
 
 !!! note

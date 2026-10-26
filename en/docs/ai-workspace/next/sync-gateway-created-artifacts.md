@@ -1,13 +1,13 @@
 ---
 title: "Manage Gateway-deployed AI artifacts in AI Workspace"
 description: "Create an LLM provider template, LLM provider, LLM proxy, or MCP proxy on the AI Gateway and view the read-only copy that syncs up to AI Workspace."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/sync-gateway-created-artifacts/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/sync-gateway-created-artifacts.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/sync-gateway-created-artifacts/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/sync-gateway-created-artifacts.md
 tags:
   - cloud
   - ai-workspace
   - ai-gateway
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-30
 content_type: "how-to"
 ---
@@ -81,12 +81,12 @@ Four AI artifact kinds sync from the gateway to AI Workspace. You create them th
 | `LlmProxy` | `/api/management/v1/llm-proxies` | Yes |
 | `Mcp` | `/api/management/v1/mcp-proxies` | Yes |
 
-All manifests use `apiVersion: gateway.api-platform.xcrddomainx/v1`. Project-scoped kinds name their project in an annotation using the project handle:
+All manifests use `apiVersion: gateway.api-platform.wso2.com/v1`. Project-scoped kinds name their project in an annotation using the project handle:
 
 ```yaml
 metadata:
   annotations:
-    "gateway.api-platform.xcrddomainx/project-id": "default"
+    "gateway.api-platform.wso2.com/project-id": "default"
 ```
 
 ### Call the management API
@@ -119,7 +119,7 @@ LlmProviderTemplate ──(spec.template)──▶ LlmProvider ──(spec.provi
 The provider references a template by name, so create the template first. `llm-provider-template.yaml`:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: my-llm-provider-template
@@ -143,12 +143,12 @@ curl --location 'http://localhost:9090/api/management/v1/llm-provider-templates'
 The provider links to the LLM provider template above via `spec.template`. `llm-provider.yaml`:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProvider
 metadata:
   name: my-llm-provider
 spec:
-  displayName: XSAMPLEBRANDX My LLM Provider
+  displayName: WSO2 My LLM Provider
   version: v1.0
   context: /openai-dp-1
   template: my-llm-provider-template   # ← must match the template's metadata.name
@@ -171,14 +171,14 @@ curl --location 'http://localhost:9090/api/management/v1/llm-providers' \
 The proxy belongs to a project (the `project-id` annotation) and links to the LLM provider via `spec.provider.id`. `llm-proxy.yaml`:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProxy
 metadata:
-  name: xsampleslugxcon-assistant
+  name: wso2con-assistant
   annotations:
-    "gateway.api-platform.xcrddomainx/project-id": "default"   # ← must be an existing project
+    "gateway.api-platform.wso2.com/project-id": "default"   # ← must be an existing project
 spec:
-  displayName: XSAMPLEBRANDX Con Assistant
+  displayName: WSO2 Con Assistant
   version: v1.0
   context: "/project-1/assistant"
   provider:
@@ -199,12 +199,12 @@ curl --location 'http://localhost:9090/api/management/v1/llm-proxies' \
 An MCP proxy also belongs to a project but stands on its own (no template or provider prerequisite). `mcp-proxy.yaml`:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: Mcp
 metadata:
   name: everything-mcp-v1.0
   annotations:
-    "gateway.api-platform.xcrddomainx/project-id": "default"
+    "gateway.api-platform.wso2.com/project-id": "default"
 spec:
   displayName: Everything
   version: v1.0
@@ -322,7 +322,7 @@ The sync behaves exactly the same for these gateways: artifacts loaded from file
     ```yaml
     metadata:
       annotations:
-        "gateway.api-platform.xcrddomainx/project-id": "default"
+        "gateway.api-platform.wso2.com/project-id": "default"
     ```
 
 - **A referenced artifact isn't there yet.** An LLM provider needs its template, and an LLM proxy needs its provider. Create them in order: the template, then the provider, then the proxy. The dependent artifact catches up on its own once the artifact it references has synced.

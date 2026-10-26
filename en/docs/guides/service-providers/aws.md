@@ -1,30 +1,30 @@
 ---
 title: "AWS guides"
-description: "Use XAPIPLATFORMX to govern AI traffic to Amazon Bedrock, govern APIs on Amazon API Gateway, and integrate with AWS identity and observability."
-canonical_url: https://xdocshostx/xdocspathx/guides/service-providers/aws/
-md_url: https://xdocshostx/xdocspathx/guides/service-providers/aws.md
+description: "Use WSO2 API Platform to govern AI traffic to Amazon Bedrock, govern APIs on Amazon API Gateway, and integrate with AWS identity and observability."
+canonical_url: https://wso2.com/api-platform/docs/guides/service-providers/aws/
+md_url: https://wso2.com/api-platform/docs/guides/service-providers/aws.md
 tags:
   - guides
   - aws
   - amazon-bedrock
   - amazon-api-gateway
   - service-provider-guides
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-10-21
 content_type: "reference"
 ---
 
 # Build and govern AI workloads and APIs on AWS
 
-XAPIPLATFORMX works alongside the AWS services you already use. Govern AI traffic to Amazon Bedrock, bring APIs running on Amazon API Gateway under one control plane, and run gateways on Amazon EKS with AWS identity and observability.
+WSO2 API Platform works alongside the AWS services you already use. Govern AI traffic to Amazon Bedrock, bring APIs running on Amazon API Gateway under one control plane, and run gateways on Amazon EKS with AWS identity and observability.
 
 ## End-to-end guides and tutorials
 
-Step-by-step guides for AWS. Guides are part of this documentation. Tutorials are published on the XAPIPLATFORMX Learn Hub and written for the product version they name.
+Step-by-step guides for AWS. Guides are part of this documentation. Tutorials are published on the WSO2 API Platform Learn Hub and written for the product version they name.
 
 <div class="vendor-guide-list" markdown="1">
 
-- [Use Amazon Bedrock and Bedrock Guardrails with XAIGATEWAYX](https://xwebdomainx/api-platform/learn/aws-bedrock-llm-guardrails-wso2-ai-gateway/)
+- [Use Amazon Bedrock and Bedrock Guardrails with WSO2 AI Gateway](https://wso2.com/api-platform/learn/aws-bedrock-llm-guardrails-wso2-ai-gateway/)
 
     Register Bedrock in AI Workspace, create an App LLM Proxy, attach a native Bedrock Guardrail, and verify request and response validation.
 
@@ -40,7 +40,7 @@ Step-by-step guides for AWS. Guides are part of this documentation. Tutorials ar
 
 ## AI Gateway with Amazon Bedrock
 
-Route, secure, and govern traffic to foundation models on Amazon Bedrock through XAIGATEWAYX, without changing your client applications.
+Route, secure, and govern traffic to foundation models on Amazon Bedrock through WSO2 AI Gateway, without changing your client applications.
 
 <div class="vendor-cap" markdown="1">
 
@@ -62,7 +62,7 @@ Connect Amazon Bedrock and manage its models and credentials centrally.
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Use Amazon Bedrock and Bedrock Guardrails with XAIGATEWAYX](https://xwebdomainx/api-platform/learn/aws-bedrock-llm-guardrails-wso2-ai-gateway/) <span class="vendor-meta">Learn Hub tutorial</span>
+- [Use Amazon Bedrock and Bedrock Guardrails with WSO2 AI Gateway](https://wso2.com/api-platform/learn/aws-bedrock-llm-guardrails-wso2-ai-gateway/) <span class="vendor-meta">Learn Hub tutorial</span>
 - [Amazon Bedrock provider](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md) <span class="vendor-meta">AI Gateway</span>
 - [Configure an LLM provider](../../ai-workspace/1.0.0/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
 
@@ -78,14 +78,14 @@ Sign requests with AWS Signature Version 4 (SigV4) using IAM credentials, a work
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [AWS Authentication policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-authentication) <span class="vendor-meta">Policy Hub</span>
+- [AWS Authentication policy](https://wso2.com/api-platform/policy-hub/policies/aws-authentication) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
 - [Choose an authentication method](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md#choose-an-authentication-method) <span class="vendor-meta">AI Gateway</span>
-- [AWS Authentication policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-authentication) <span class="vendor-meta">Policy Hub</span>
+- [AWS Authentication policy](https://wso2.com/api-platform/policy-hub/policies/aws-authentication) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
@@ -105,13 +105,13 @@ Enforce the content filters, denied topics, and sensitive-information policies t
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [AWS Bedrock Guardrail policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-bedrock-guardrail) <span class="vendor-meta">Policy Hub</span>
+- [AWS Bedrock Guardrail policy](https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [AWS Bedrock Guardrail policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-bedrock-guardrail) <span class="vendor-meta">Policy Hub</span>
+- [AWS Bedrock Guardrail policy](https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail) <span class="vendor-meta">Policy Hub</span>
 - [Guardrails catalogue](../../ai-gateway/2026.09.24/guardrails/guardrails-catalogue.md) <span class="vendor-meta">AI Gateway</span>
 
 </div>
@@ -142,7 +142,7 @@ Routing, token limits, cost control, and the gateway's other policies work the s
 
 ## Federate with Amazon API Gateway
 
-Manage the APIs you run on Amazon API Gateway from the XBRANDX control plane. XAPIPLATFORMX governs only the API metadata. Consumers continue to call Amazon API Gateway directly.
+Manage the APIs you run on Amazon API Gateway from the WSO2 control plane. WSO2 API Platform governs only the API metadata. Consumers continue to call Amazon API Gateway directly.
 
 <div class="vendor-cap" markdown="1">
 
@@ -249,11 +249,11 @@ Export gateway logs, metrics, and traces through Fluent Bit, an OpenTelemetry Co
 
 ## Architecture and responsibility model
 
-XAPIPLATFORMX and AWS split the work like this:
+WSO2 API Platform and AWS split the work like this:
 
-| Scenario | XBRANDX role | AWS role | Runtime traffic |
+| Scenario | WSO2 role | AWS role | Runtime traffic |
 | --- | --- | --- | --- |
-| Amazon Bedrock through AI Gateway | Proxies and governs AI requests | Hosts the selected model and optional Bedrock guardrail | Goes through XAIGATEWAYX to Amazon Bedrock |
+| Amazon Bedrock through AI Gateway | Proxies and governs AI requests | Hosts the selected model and optional Bedrock guardrail | Goes through WSO2 AI Gateway to Amazon Bedrock |
 | Amazon API Gateway discovery | Control plane, governance, catalog, and compliance | Hosts and runs the API | Goes directly to Amazon API Gateway |
 | Gateway deployed on AWS | Runs the gateway software and policies | Provides compute, workload identity, and observability backends | Depends on the deployed gateway topology |
 

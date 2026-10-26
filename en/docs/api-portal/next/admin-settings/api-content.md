@@ -1,13 +1,13 @@
 ---
 title: "Customize an API's content"
 description: "Replace an API's generated overview page with your own Markdown or Handlebars body, set its icon, and attach downloadable documents."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/api-content/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/api-content.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/api-content/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/api-content.md
 tags:
   - cloud
   - api-portal
   - theming
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-31
 content_type: "how-to"
 ---

@@ -1,13 +1,13 @@
 ---
 title: "MCP Authentication"
 description: "Secure MCP server traffic by validating JWT access tokens and serving OAuth protected resource metadata in AI Gateway."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/mcp-proxy/policies/mcp-authentication/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/mcp-proxy/policies/mcp-authentication.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/mcp-proxy/policies/mcp-authentication/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/mcp-proxy/policies/mcp-authentication.md
 tags:
   - ai-gateway
   - mcp
   - security
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-16
 content_type: "reference"
 ---
@@ -20,7 +20,7 @@ The MCP Authentication policy is designed to secure traffic to Model Context Pro
 
 ## Features
 
-- **Access Token Validation**: Validates JWT access tokens using configured key managers. Please refer the [JWT Authentication Policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/jwt-auth) for more information on how the key validation works.
+- **Access Token Validation**: Validates JWT access tokens using configured key managers. Please refer the [JWT Authentication Policy](https://wso2.com/api-platform/policy-hub/policies/jwt-auth) for more information on how the key validation works.
 - **Protected Resource Metadata**: Intercepts `GET /.well-known/oauth-protected-resource` requests to return resource metadata, including authorization servers and supported scopes.
 - **Standardized Error Handling**: Returns `WWW-Authenticate` headers with `resource_metadata` on authentication failures.
 - **Configurable Validation**: Supports issuer, audience, scope, and custom claim validation.
@@ -116,7 +116,7 @@ skipTlsVerify = false
 Apply MCP authentication to an API using a specific key manager:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: Mcp
 metadata:
     name: mcp-server-api-v1.0
@@ -142,7 +142,7 @@ spec:
 Require specific scopes and audiences:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: Mcp
 metadata:
     name: mcp-server-api-v1.0

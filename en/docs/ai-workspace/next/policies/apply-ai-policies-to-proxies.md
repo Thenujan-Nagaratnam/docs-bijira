@@ -1,13 +1,13 @@
 ---
 title: "Apply AI policies to LLM providers, App LLM proxies, and MCP proxies"
 description: "Sync a custom AI policy from your AI Gateway to your organization and apply it to LLM providers, App LLM proxies, and MCP proxies."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/policies/apply-ai-policies-to-proxies/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/policies/apply-ai-policies-to-proxies.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/policies/apply-ai-policies-to-proxies/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/policies/apply-ai-policies-to-proxies.md
 tags:
   - cloud
   - ai-workspace
   - custom-policy
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-24
 content_type: "how-to"
 ---
@@ -48,7 +48,7 @@ In the **Sync Status** column, each custom AI policy shows one of the following:
 - **Latest Version Available** — the policy is already synced and up to date. No action needed.
 
 !!! note
-    Policy Hub policies, which XBRANDX manages, show **N/A** in the Sync Status column and can't be synced manually.
+    Policy Hub policies, which WSO2 manages, show **N/A** in the Sync Status column and can't be synced manually.
 
 Once synced, the custom AI policy is available organization-wide and can be applied to LLM providers, App LLM proxies, and MCP proxies.
 

@@ -1,13 +1,13 @@
 ---
 title: "Manage environments"
 description: "Create and delete development and production environments for your organization's data planes in API Platform."
-canonical_url: https://xdocshostx/xdocspathx/cloud/administer/manage-environments/manage-environments/
-md_url: https://xdocshostx/xdocspathx/cloud/administer/manage-environments/manage-environments.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/manage-environments/manage-environments/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/manage-environments/manage-environments.md
 tags:
   - cloud
   - administer
   - environments
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -22,7 +22,7 @@ The environments are listed in the order of deployment and promotion. The initia
 
 To create a new environment, follow the steps given below:
 
-1. Sign in to [API Platform](https://console.xclouddomainx/).
+1. Sign in to [API Platform](https://console.bijira.dev/).
 2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. In the left navigation menu, click **Admin** and then click **Environments**.
 4. On the **Environments** page, click **Create** and specify the following details to create a new environment:
@@ -48,7 +48,7 @@ To delete an environment, follow the steps given below:
 !!! warning
     Environment deletion is a permanent, non-reversible operation.
 
-1. Sign in to [API Platform](https://console.xclouddomainx/).
+1. Sign in to [API Platform](https://console.bijira.dev/).
 2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. In the left navigation menu, click **Admin** and then click **Environments**.
 4. In the **Environments** list, click the delete icon corresponding to the environment you want to delete. This displays a confirmation dialog with details on the impact of deletion.

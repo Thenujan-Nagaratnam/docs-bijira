@@ -1,14 +1,14 @@
 ---
 title: "Publish APIs on the Self-Hosted Gateway"
 description: "Compare subscription-based and subscription-less approaches for publishing APIs deployed on the API Platform Self-Hosted Gateway."
-canonical_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/publish-apis/overview/
-md_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/publish-apis/overview.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/publish-apis/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/publish-apis/overview.md
 tags:
   - cloud
   - api-gateway
   - self-hosted
   - publish
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "overview"
 ---

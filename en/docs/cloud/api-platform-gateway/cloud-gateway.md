@@ -1,6 +1,6 @@
 # API Platform Cloud Gateway
 
-API Platform Cloud Gateway is a fully managed, XBRANDX-hosted API gateway that provides instant API deployment with zero infrastructure management.
+API Platform Cloud Gateway is a fully managed, WSO2-hosted API gateway that provides instant API deployment with zero infrastructure management.
 
 ## Overview
 
@@ -11,7 +11,7 @@ The API Platform Cloud Gateway is the default gateway available in your organiza
 | Feature | Description |
 |---------|-------------|
 | **Zero Setup** | No infrastructure provisioning or configuration required |
-| **Fully Managed** | XBRANDX handles all operations, scaling, and maintenance |
+| **Fully Managed** | WSO2 handles all operations, scaling, and maintenance |
 | **High Availability** | Built-in redundancy with automatic failover |
 | **Auto-Scaling** | Automatically scales based on API traffic |
 | **Global Reach** | Available across multiple cloud regions |
@@ -29,7 +29,7 @@ The API Platform Cloud Gateway is the default gateway available in your organiza
                             │
                             ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                  API Platform Cloud Gateway (XSAMPLEBRANDX-Managed)            │
+│                  API Platform Cloud Gateway (WSO2-Managed)            │
 │  ┌─────────────────────────────────────────────────────────┐    │
 │  │              Managed Gateway Cluster                     │    │
 │  │  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐     │    │
@@ -80,12 +80,12 @@ That's it! Your API is immediately available through the API Platform Cloud Gate
 APIs deployed to the API Platform Cloud Gateway are accessible at:
 
 ```
-https://<organization>.gateway.xclouddomainx/<api-context>/<version>
+https://<organization>.gateway.bijira.dev/<api-context>/<version>
 ```
 
 For example:
 ```
-https://acme-corp.gateway.xclouddomainx/orders/v1
+https://acme-corp.gateway.bijira.dev/orders/v1
 ```
 
 ## Included Capabilities

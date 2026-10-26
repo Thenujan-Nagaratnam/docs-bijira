@@ -1,13 +1,13 @@
 ---
 title: "MCP ACL List"
 description: "Control access to MCP tools, resources, and prompts using allow or deny mode with exceptions in API Platform AI Gateway."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/mcp-proxy/policies/mcp-acl-list/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/mcp-proxy/policies/mcp-acl-list.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/mcp-proxy/policies/mcp-acl-list/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/mcp-proxy/policies/mcp-acl-list.md
 tags:
   - ai-gateway
   - mcp
   - policies
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-16
 content_type: "reference"
 ---
@@ -64,7 +64,7 @@ For each capability type (tools, resources, prompts):
 Deny access to certain tools while allowing all others:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -92,7 +92,7 @@ spec:
 Allow access to only whitelisted resources:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -120,7 +120,7 @@ spec:
 Apply different access control rules to different capability types:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0

@@ -1,13 +1,13 @@
 ---
 title: "Security Hardening"
 description: "Configure the necessary security areas before deploying API Platform Gateway to production."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/deployment/production-deployment/security-hardening/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/deployment/production-deployment/security-hardening.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/deployment/production-deployment/security-hardening/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/deployment/production-deployment/security-hardening.md
 tags:
   - security
   - api-management
   - devops
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-11
 content_type: "how-to"
 ---
@@ -204,7 +204,7 @@ Choose an authentication strategy based on your organizational requirements.
     ```
 
     !!! note
-        Role mapping values must correspond to claims present in the JWT issued by your IDP. See the [Gateway Controller OpenAPI reference](https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/tags/gateway/v1.1.0/gateway/gateway-controller/api/management-openapi.yaml) for the full list of supported roles and their permissions.
+        Role mapping values must correspond to claims present in the JWT issued by your IDP. See the [Gateway Controller OpenAPI reference](https://raw.githubusercontent.com/wso2/api-platform/refs/tags/gateway/v1.1.0/gateway/gateway-controller/api/management-openapi.yaml) for the full list of supported roles and their permissions.
 
 === "Option B: Basic Auth with Bcrypt"
 

@@ -1,13 +1,13 @@
 ---
 title: "MCP Rewrite"
 description: "Expose user-facing names for MCP tools, resources, and prompts while mapping them to different backend capability names."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/mcp-proxy/policies/mcp-rewrite/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/mcp-proxy/policies/mcp-rewrite.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/mcp-proxy/policies/mcp-rewrite/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/mcp-proxy/policies/mcp-rewrite.md
 tags:
   - ai-gateway
   - mcp
   - policies
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-16
 content_type: "reference"
 ---
@@ -63,7 +63,7 @@ These parameters are configured per MCP Proxy by the API developer:
 Expose tools with different names than the backend:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -95,7 +95,7 @@ spec:
 Expose resources with user-friendly URIs mapped to backend resources:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0
@@ -127,7 +127,7 @@ spec:
 Rewrite prompts and tools with metadata:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: Mcp
 metadata:
   name: mcp-server-api-v1.0

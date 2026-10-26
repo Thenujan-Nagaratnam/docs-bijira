@@ -1,13 +1,13 @@
 ---
 title: "Manage subscriptions in the API Portal & MCP Hub"
 description: "Subscribe to an API under a plan, use the subscription token it issues, and switch, suspend, or cancel the subscription later."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/consume-an-api/manage-subscriptions/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/consume-an-api/manage-subscriptions.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/consume-an-api/manage-subscriptions/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/consume-an-api/manage-subscriptions.md
 tags:
   - cloud
   - api-portal
   - subscriptions
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-31
 content_type: "how-to"
 ---

@@ -1,13 +1,13 @@
 ---
 title: "Consume API workflows in the Developer Portal"
 description: "Discover and follow published API workflows as a developer or AI agent using the Developer Portal UI, llms.txt, and Arazzo specifications."
-canonical_url: https://xdocshostx/xdocspathx/cloud/devportal/api-workflows/consuming-api-workflows/
-md_url: https://xdocshostx/xdocspathx/cloud/devportal/api-workflows/consuming-api-workflows.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/devportal/api-workflows/consuming-api-workflows/
+md_url: https://wso2.com/api-platform/docs/cloud/devportal/api-workflows/consuming-api-workflows.md
 tags:
   - cloud
   - devportal
   - api-workflows
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---

@@ -1,14 +1,14 @@
 ---
 title: "Data Planes"
 description: "Learn about API Platform's control plane and data plane architecture, including cloud and private data plane deployment models."
-canonical_url: https://xdocshostx/xdocspathx/cloud/bijira-concepts/data-planes/
-md_url: https://xdocshostx/xdocspathx/cloud/bijira-concepts/data-planes.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/data-planes/
+md_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/data-planes.md
 tags:
   - cloud
   - concepts
   - data-planes
   - architecture
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "concept"
 ---
@@ -30,7 +30,7 @@ API Platform supports two types of data planes.
 - **Cloud Data Planes (CDP):** Use a multi-tenant infrastructure to deploy API Proxies, offering a shared yet secure runtime environment.
 - **Private Data Planes (PDP):** Offer dedicated infrastructure for a single organization, providing enhanced privacy and control to meet specific compliance or security requirements.
 
-![XCLOUDCODENAMEX high-level architecture with control plane, cloud data plane, and private data plane](../../assets/img/bijira-concepts/high-level-view.png)
+![Bijira high-level architecture with control plane, cloud data plane, and private data plane](../../assets/img/bijira-concepts/high-level-view.png)
 
 ## Private Data Planes
 
@@ -44,7 +44,7 @@ Minimum infrastructure requirements include:
 - Key vault (secret store)
 - Logging service or log storage
 
-![XCLOUDCODENAMEX private data plane architecture showing firewall, load balancer, system components, project, and infrastructure](../../assets/img/bijira-concepts/private-data-plane-architecture.png)
+![Bijira private data plane architecture showing firewall, load balancer, system components, project, and infrastructure](../../assets/img/bijira-concepts/private-data-plane-architecture.png)
 
 ### System components
 
@@ -84,7 +84,7 @@ All communications between the control plane and the private data plane are secu
 
 The following diagram illustrates the log and observability architecture of an API Platform Azure PDP deployment.
 
-![Browser connecting directly to logging and observability APIs in XCLOUDCODENAMEX cloud and private data planes](../../assets/img/bijira-concepts/observability-architecture.png)
+![Browser connecting directly to logging and observability APIs in Bijira cloud and private data planes](../../assets/img/bijira-concepts/observability-architecture.png)
 
 ---
 
@@ -105,9 +105,9 @@ End-to-end encryption is enforced using Cilium transparent encryption, ensuring 
 
 ### Private Data Plane Management Models
 
-API Platform supports flexible management models for private data planes, facilitating collaboration between XBRANDX and customers across diverse scenarios.
+API Platform supports flexible management models for private data planes, facilitating collaboration between WSO2 and customers across diverse scenarios.
 
-- **XBRANDX Fully Managed – XBRANDX Subscription:** Infrastructure and PDP are hosted under XBRANDX’s subscription.
-- **XBRANDX Fully Managed – Customer Subscription:** Infrastructure is hosted under the customer’s subscription, but XBRANDX manages the PDP.
-- **Customer Self-Managed:** XBRANDX provides installation scripts and updates, while the customer maintains full control of the infrastructure and operations.
+- **WSO2 Fully Managed – WSO2 Subscription:** Infrastructure and PDP are hosted under WSO2’s subscription.
+- **WSO2 Fully Managed – Customer Subscription:** Infrastructure is hosted under the customer’s subscription, but WSO2 manages the PDP.
+- **Customer Self-Managed:** WSO2 provides installation scripts and updates, while the customer maintains full control of the infrastructure and operations.
 

@@ -1,8 +1,8 @@
 ---
 title: "Token based rate limiting"
 description: "Cap LLM consumption through the AI Gateway by the tokens a model processed, so one application cannot exhaust a shared model quota."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/token-based-rate-limiting/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/token-based-rate-limiting.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/token-based-rate-limiting/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/token-based-rate-limiting.md
 tags:
   - ai-gateway
   - rate-limiting
@@ -10,7 +10,7 @@ tags:
   - traffic
   - quota
   - throttling
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-26
 content_type: "concept"
 ---
@@ -29,11 +29,11 @@ Token based limits read usage from the model's response, so they take effect in 
 
 ## Rate limiting policies
 
-This policy is documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
+This policy is documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 
 | Policy | What it does |
 |--------|--------------|
-| [Token-Based Rate Limit](https://xpolicyhubhostx/xpolicyhubpathx/policies/token-based-ratelimit) | Caps usage by token count rather than request count |
+| [Token-Based Rate Limit](https://wso2.com/api-platform/policy-hub/policies/token-based-ratelimit) | Caps usage by token count rather than request count |
 
 To cap spend in currency rather than in tokens, see [Cost control and budgets](cost-control-and-budgets.md). For MCP traffic, which is limited per tool, resource, prompt, or JSON-RPC method, see [MCP governance](mcp-governance.md).
 
@@ -43,8 +43,8 @@ If you also need a ceiling on the number of calls a client can make, the gateway
 
 | Policy | What it does |
 |--------|--------------|
-| [Rate Limit - Basic](https://xpolicyhubhostx/xpolicyhubpathx/policies/basic-ratelimit) | Caps requests per time window |
-| [Rate Limit - Advanced](https://xpolicyhubhostx/xpolicyhubpathx/policies/advanced-ratelimit) | Multi-dimensional quotas with GCRA or fixed-window algorithms, Redis backend support, and weighted limiting |
+| [Rate Limit - Basic](https://wso2.com/api-platform/policy-hub/policies/basic-ratelimit) | Caps requests per time window |
+| [Rate Limit - Advanced](https://wso2.com/api-platform/policy-hub/policies/advanced-ratelimit) | Multi-dimensional quotas with GCRA or fixed-window algorithms, Redis backend support, and weighted limiting |
 
 Use either alongside a token based limit when a client should be held to both a call ceiling and a consumption ceiling.
 

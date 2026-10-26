@@ -1,14 +1,14 @@
 ---
 title: "Regex PII Masking for AI APIs"
-description: "Configure a regex-based PII masking guardrail on AI API proxies in XAPIPLATFORMX to detect and mask sensitive data using custom patterns."
-canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-pii-masking/
-md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-pii-masking.md
+description: "Configure a regex-based PII masking guardrail on AI API proxies in WSO2 API Platform to detect and mask sensitive data using custom patterns."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-pii-masking/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/guardrails/basic-guardrails/regex-pii-masking.md
 tags:
   - cloud
   - ai-gateway
   - guardrails
   - pii
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---

@@ -1,13 +1,13 @@
 ---
 title: "Test GraphQL APIs via the GraphQL Console"
-description: "Test GraphQL API proxy operations in XAPIPLATFORMX using the built-in GraphQL Console with auto-generated test keys."
-canonical_url: https://xdocshostx/xdocspathx/cloud/test-api-proxy/graphql-console/
-md_url: https://xdocshostx/xdocspathx/cloud/test-api-proxy/graphql-console.md
+description: "Test GraphQL API proxy operations in WSO2 API Platform using the built-in GraphQL Console with auto-generated test keys."
+canonical_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/graphql-console/
+md_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/graphql-console.md
 tags:
   - cloud
   - testing
   - graphql
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -18,7 +18,7 @@ API Platform offers an integrated GraphQL Console to test GraphQL API proxies th
 
 Follow these steps to test a GraphQL API proxy using the GraphQL Console:
 
-1. Go to the [API Platform Console](https://console.xclouddomainx/) and log in.
+1. Go to the [API Platform Console](https://console.bijira.dev/) and log in.
 2. Select the project and GraphQL API proxy that you want to test.
 3. Click **Test** in the left navigation menu, then select **Console**. This will open the **GraphQL Console** pane.
 

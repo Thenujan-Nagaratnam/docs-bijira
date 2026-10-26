@@ -1,14 +1,14 @@
 ---
 title: "Token-Based Rate Limiting for AI APIs"
-description: "Configure token-based rate limiting on AI API proxies in XAPIPLATFORMX to control usage and cost per prompt, completion, and total tokens."
-canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/token-ratelimit/
-md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/third-party-apis/token-ratelimit.md
+description: "Configure token-based rate limiting on AI API proxies in WSO2 API Platform to control usage and cost per prompt, completion, and total tokens."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/token-ratelimit/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/third-party-apis/token-ratelimit.md
 tags:
   - cloud
   - api-proxy
   - ai-gateway
   - rate-limiting
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---

@@ -1,14 +1,14 @@
 ---
 title: "Azure Content Safety guardrail in AI Workspace"
 description: "Filter hate speech, sexual content, self-harm, and violence in LLM traffic using Azure Content Safety, configured in AI Workspace."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/guardrails/azure-content-safety/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/guardrails/azure-content-safety.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/azure-content-safety/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/guardrails/azure-content-safety.md
 tags:
   - cloud
   - ai-workspace
   - guardrails
   - azure
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -75,4 +75,4 @@ Content moderation settings are configured independently for the **request** and
 
 - [Guardrails Overview](overview.md)
 - [PII Masking Regex](regex-pii-masking.md) — Lightweight PII masking without external services
-- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version
+- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

@@ -1,13 +1,13 @@
 ---
 title: "Theming the API Portal & MCP Hub"
 description: "Build a custom theme for a view—override styles, layouts, partials, and pages, re-color the portal from a few seed variables, and package it for upload."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/theming/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/theming.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/theming/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/theming.md
 tags:
   - cloud
   - api-portal
   - theming
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-31
 content_type: "how-to"
 ---
@@ -145,7 +145,7 @@ The classes it introduces are styled by a small block appended to `main.css`, al
 
 ### Starting from it
 
-A working copy of this theme sits at [`samples/layouts/green-theme/`](https://github.com/xgithuborgx/api-platform/tree/main/portals/api-portal/samples/layouts/green-theme) in the API Platform repository, and at the same path in the portal distribution. Copy it, change the seeds, and delete any override you don't want:
+A working copy of this theme sits at [`samples/layouts/green-theme/`](https://github.com/wso2/api-platform/tree/main/portals/api-portal/samples/layouts/green-theme) in the API Platform repository, and at the same path in the portal distribution. Copy it, change the seeds, and delete any override you don't want:
 
 ```bash
 cp -r samples/layouts/green-theme/ my-theme/

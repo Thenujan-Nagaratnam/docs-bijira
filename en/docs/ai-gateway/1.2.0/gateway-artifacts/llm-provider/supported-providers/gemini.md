@@ -1,14 +1,14 @@
 ---
 title: "Gemini"
 description: "Connect the AI Gateway to the Gemini API: the values Google supplies, what the gemini template extracts, and OpenAI-format compatibility."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/gemini/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/gemini.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/gemini/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/gateway-artifacts/llm-provider/supported-providers/gemini.md
 tags:
   - ai-gateway
   - llm-provider
   - gemini
   - llm
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-18
 content_type: "how-to"
 ---
@@ -38,14 +38,14 @@ The gateway ships a `gemini` template that tells it where to find token counts a
 The template extracts the following:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProviderTemplate
 metadata:
   name: gemini
 spec:
   displayName: Gemini
-  groupId: xtemplategroupprefixx-gemini
-  managedBy: xtemplateownerx
+  groupId: wso2-gemini
+  managedBy: wso2
   version: v1.0
   promptTokens:
     location: payload
@@ -74,7 +74,7 @@ Gemini reports usage in its own response shape, so this template reads `$.usageM
 Deploy the provider through the management API, following the procedure in [Create and configure an LLM provider](../create-and-configure-an-llm-provider.md). A Gemini provider takes this shape:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProvider
 metadata:
   name: gemini-provider
@@ -107,7 +107,7 @@ The `context` value sets the URL prefix the provider answers on, so this provide
 
 ## OpenAI-format compatibility
 
-Gemini uses its own request and response format. When an LLM proxy routes OpenAI-format requests to this provider, apply the [`openai-to-gemini-transformer`](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-gemini-transformer) policy, which converts between the two.
+Gemini uses its own request and response format. When an LLM proxy routes OpenAI-format requests to this provider, apply the [`openai-to-gemini-transformer`](https://wso2.com/api-platform/policy-hub/policies/openai-to-gemini-transformer) policy, which converts between the two.
 
 The transformer takes two parameters. `model` is required. `apiVersion` is optional and defaults to `v1beta`. This parameter configures the transformer only, and does not supply any part of the endpoint URL.
 

@@ -1,13 +1,13 @@
 ---
 title: "Projects in API Platform"
 description: "Understand projects in API Platform: structure, components, and how components are deployed within a project's namespace."
-canonical_url: https://xdocshostx/xdocspathx/cloud/bijira-concepts/project/
-md_url: https://xdocshostx/xdocspathx/cloud/bijira-concepts/project.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/project/
+md_url: https://wso2.com/api-platform/docs/cloud/bijira-concepts/project.md
 tags:
   - cloud
   - concepts
   - project
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "concept"
 ---
@@ -43,6 +43,6 @@ At deployment time, all components in a project are deployed into a single names
 - **Flexible exposure**: Components can be exposed to the public internet, internally to the organization, or privately within the project only.
 - **Unified management**: API Platform provides tools to manage deployments, scaling, and monitoring for all project components.
 
-A project in API Platform is represented as a **cell** in the [Cell-based architecture](https://github.com/xgithuborgx/reference-architecture/blob/master/reference-architecture-cell-based.md), which enables modular, scalable, and secure application design.
+A project in API Platform is represented as a **cell** in the [Cell-based architecture](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md), which enables modular, scalable, and secure application design.
 
 ![Cell-based project boundary showing components exposed to internet, organization, and project namespace](../../assets/img/bijira-concepts/project.png){.cInlineImage-full}

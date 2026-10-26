@@ -1,14 +1,14 @@
 ---
 title: "Compliance Dashboard"
 description: "Monitor governance policy compliance and run AI compliance analysis for your API proxies, projects, and organization."
-canonical_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/compliance/
-md_url: https://xdocshostx/xdocspathx/cloud/monitoring-and-insights/compliance.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/compliance/
+md_url: https://wso2.com/api-platform/docs/cloud/monitoring-and-insights/compliance.md
 tags:
   - cloud
   - monitoring
   - compliance
   - governance
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---

@@ -360,8 +360,8 @@ onEachPage(function () {
   var labels = { cloud: 'Cloud', hybrid: 'Hybrid', 'self-hosted': 'Self-hosted' };
   var urlParam = 'deployment';
   var descriptions = {
-    cloud: 'XBRANDX hosts the control plane and the gateways.',
-    hybrid: 'XBRANDX hosts the control plane, and you run the gateways.',
+    cloud: 'WSO2 hosts the control plane and the gateways.',
+    hybrid: 'WSO2 hosts the control plane, and you run the gateways.',
     'self-hosted': 'You run the gateways, on their own or with your own control plane.'
   };
 

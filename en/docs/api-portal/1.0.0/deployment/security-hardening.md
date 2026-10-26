@@ -1,14 +1,14 @@
 ---
 title: "Security Hardening"
 description: "Harden an API Portal & MCP Hub production deployment: shared secrets, TLS certificates, identity-provider authentication, scope authorization, and the try-it proxy and upload ceilings."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/deployment/security-hardening/
-md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/deployment/security-hardening.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/deployment/security-hardening/
+md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/deployment/security-hardening.md
 tags:
   - cloud
   - api-portal
   - deployment
   - security
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-06
 content_type: "how-to"
 ---

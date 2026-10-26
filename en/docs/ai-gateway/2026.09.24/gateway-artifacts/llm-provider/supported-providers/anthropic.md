@@ -1,14 +1,14 @@
 ---
 title: "Anthropic"
 description: "Connect the AI Gateway to the Anthropic Messages API: the upstream URL, x-api-key authentication, and the endpoint the provider exposes."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/anthropic/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/anthropic.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/anthropic/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/gateway-artifacts/llm-provider/supported-providers/anthropic.md
 tags:
   - ai-gateway
   - llm-provider
   - anthropic
   - llm
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
@@ -41,7 +41,7 @@ curl -X POST http://localhost:9090/api/management/v1/llm-providers \
   -H "Content-Type: application/yaml" \
   -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProvider
 metadata:
   name: anthropic-provider

@@ -1,21 +1,21 @@
 ---
 title: "API Platform AI Gateway Performance"
 description: "AI Gateway performance test methodology, deployment architecture, metrics, and benchmark results for two-CPU and four-CPU runtimes."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/sizing-and-performance/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/sizing-and-performance.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/sizing-and-performance/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/sizing-and-performance.md
 tags:
   - ai-gateway
   - performance
   - benchmarks
   - guardrails
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "overview"
 ---
 
 # API Platform AI Gateway Performance
 
-The performance of the XPLATFORMAIGATEWAYX was evaluated using the following APIs, all of which invoke a simple Netty HTTP Echo Service as the backend. The Netty-based backend echoes each request after a configurable delay and with a configurable response size, simulating an LLM provider invocation.
+The performance of the WSO2 API Platform AI Gateway was evaluated using the following APIs, all of which invoke a simple Netty HTTP Echo Service as the backend. The Netty-based backend echoes each request after a configurable delay and with a configurable response size, simulating an LLM provider invocation.
 
 - **AI API Auth No Guardrails**: AI API invocation through the AI Gateway with API key authentication enabled and no guardrails applied.
 - **AI API PII Masking**: AI API invocation through the AI Gateway with API key authentication and PII masking enabled for both requests and responses.
@@ -41,7 +41,7 @@ The diagram below shows the deployment architecture used for the performance tes
 | Apache JMeter Client         | `c5.2xlarge`      |   8  |      16      |
 | Apache JMeter Servers        | `c5.2xlarge`      |   8  |      16      |
 | Netty HTTP Backend           | `c5.2xlarge`      |   8  |      16      |
-| XPLATFORMAIGATEWAYX | `c5.4xlarge`      |  16  |      32      |
+| WSO2 API Platform AI Gateway | `c5.4xlarge`      |  16  |      32      |
 
 - The operating system is Amazon Linux 2023.11.
 - Java version is Temurin JDK 21.
@@ -50,7 +50,7 @@ The diagram below shows the deployment architecture used for the performance tes
 
 All scripts used to analyze results are in the following repository.
 
-- [https://github.com/xgithuborgx/performance-common](https://github.com/xgithuborgx/performance-common).
+- [https://github.com/wso2/performance-common](https://github.com/wso2/performance-common).
 
 ## Results
 

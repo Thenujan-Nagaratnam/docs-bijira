@@ -1,13 +1,13 @@
 ---
 title: "Semantic Prompt Guardrail"
 description: "Block semantically similar prompts using embedding-based similarity matching against configured allow and deny phrase lists."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/guardrails/semantic-prompt-guard/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/llm-proxy/guardrails/semantic-prompt-guard.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/guardrails/semantic-prompt-guard/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/guardrails/semantic-prompt-guard.md
 tags:
   - ai-gateway
   - guardrails
   - llm
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-16
 content_type: "reference"
 ---
@@ -131,7 +131,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider
 metadata:
   name: semantic-guard-provider
@@ -211,7 +211,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider
 metadata:
   name: whitelist-provider

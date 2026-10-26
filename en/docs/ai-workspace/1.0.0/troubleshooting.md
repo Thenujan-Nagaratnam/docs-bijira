@@ -1,12 +1,12 @@
 ---
 title: "Troubleshoot AI Workspace"
 description: "Fixes for common AI Workspace problems: a gateway that stays Inactive, or a chat completion request that returns 401 or 403."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/troubleshooting/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/troubleshooting.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/troubleshooting/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/troubleshooting.md
 tags:
   - ai-workspace
   - troubleshooting
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-31
 content_type: "troubleshooting"
 ---

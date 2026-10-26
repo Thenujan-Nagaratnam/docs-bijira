@@ -1,21 +1,21 @@
 ---
 title: "Stripe guides"
-description: "Use XAPIPLATFORMX with Stripe to sell paid subscription plans for your APIs and bill consumers for their usage."
-canonical_url: https://xdocshostx/xdocspathx/guides/service-providers/stripe/
-md_url: https://xdocshostx/xdocspathx/guides/service-providers/stripe.md
+description: "Use WSO2 API Platform with Stripe to sell paid subscription plans for your APIs and bill consumers for their usage."
+canonical_url: https://wso2.com/api-platform/docs/guides/service-providers/stripe/
+md_url: https://wso2.com/api-platform/docs/guides/service-providers/stripe.md
 tags:
   - guides
   - stripe
   - monetization
   - service-provider-guides
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-10-21
 content_type: "reference"
 ---
 
 # Bill for APIs with Stripe
 
-XAPIPLATFORMX works alongside Stripe Billing. Sell paid API subscription plans, and report usage to Stripe for metered billing.
+WSO2 API Platform works alongside Stripe Billing. Sell paid API subscription plans, and report usage to Stripe for metered billing.
 
 ## End-to-end guides
 
@@ -33,7 +33,7 @@ A step-by-step guide for billing with Stripe.
 
 ## Stripe billing for APIs
 
-In XBRANDX Cloud, API Platform creates the Stripe products and prices for your plans and reports usage to Stripe, so you don't write billing code.
+In WSO2 Cloud, API Platform creates the Stripe products and prices for your plans and reports usage to Stripe, so you don't write billing code.
 
 <div class="vendor-cap" markdown="1">
 
@@ -81,11 +81,11 @@ See what each subscriber used and what they were billed.
 
 ## Architecture and responsibility model
 
-XAPIPLATFORMX and Stripe split the work like this:
+WSO2 API Platform and Stripe split the work like this:
 
-| Scenario | XBRANDX role | Stripe role | Runtime traffic |
+| Scenario | WSO2 role | Stripe role | Runtime traffic |
 | --- | --- | --- | --- |
-| API monetization | Manages plans and subscriptions, and syncs per-request usage | Holds products and prices, invoices consumers, and collects payment | API calls go through the XBRANDX gateway, and usage records go to Stripe |
+| API monetization | Manages plans and subscriptions, and syncs per-request usage | Holds products and prices, invoices consumers, and collects payment | API calls go through the WSO2 gateway, and usage records go to Stripe |
 
 ## Learn more
 

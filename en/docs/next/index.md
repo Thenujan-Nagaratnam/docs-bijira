@@ -1,27 +1,27 @@
 ---
-title: "XAPIPLATFORMX Overview (Next)"
-description: "Overview of documentation for XAPIPLATFORMX, the open platform to control APIs, AI, and MCP."
-canonical_url: https://xdocshostx/xdocspathx/next/
-md_url: https://xdocshostx/xdocspathx/next/index.md
+title: "WSO2 API Platform Overview (Next)"
+description: "Overview of documentation for WSO2 API Platform, the open platform to control APIs, AI, and MCP."
+canonical_url: https://wso2.com/api-platform/docs/next/
+md_url: https://wso2.com/api-platform/docs/next/index.md
 tags:
   - api-management
   - ai-gateway
   - platform-overview
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-10
 content_type: "overview"
 ---
 
 !!! warning "You are browsing unreleased documentation"
-    This section documents an **in-development, unreleased** version of the XAPIPLATFORMX. Features, APIs, and configuration described here may change before general availability. For the current stable documentation, go to the [Overview](../index.md).
+    This section documents an **in-development, unreleased** version of the WSO2 API Platform. Features, APIs, and configuration described here may change before general availability. For the current stable documentation, go to the [Overview](../index.md).
 
 # Overview
 
-![XAPIPLATFORMX diagram with SaaS control plane, self-managed control plane, and third-party gateway tiles](../assets/img/overview/platform-overview-light.webp#only-light)
-![XAPIPLATFORMX diagram with SaaS control plane, self-managed control plane, and third-party gateway tiles](../assets/img/overview/platform-overview-dark.webp#only-dark)
+![WSO2 API Platform diagram with SaaS control plane, self-managed control plane, and third-party gateway tiles](../assets/img/overview/platform-overview-light.webp#only-light)
+![WSO2 API Platform diagram with SaaS control plane, self-managed control plane, and third-party gateway tiles](../assets/img/overview/platform-overview-dark.webp#only-dark)
 
-## What is the XAPIPLATFORMX?
-The XAPIPLATFORMX helps you manage, secure, and govern your APIs and AI services. Whether you need to proxy REST APIs, route traffic to LLM providers such as OpenAI or Anthropic, or expose your services as MCP tools for AI agents, the platform provides the tools and controls to do so.
+## What is the WSO2 API Platform?
+The WSO2 API Platform helps you manage, secure, and govern your APIs and AI services. Whether you need to proxy REST APIs, route traffic to LLM providers such as OpenAI or Anthropic, or expose your services as MCP tools for AI agents, the platform provides the tools and controls to do so.
 
 This page explains what the platform offers and helps you determine which path is right for you.
 
@@ -32,7 +32,7 @@ There are two starting points depending on what you need:
 1. [**I want a full, end-to-end platform for managing my APIs and AI services**](#i-want-a-full-end-to-end-platform-for-managing-my-apis-and-ai-services) or,
 2. [**I only want an API or AI gateway (and have no need for a UI or full platform capabilities)**](#i-only-want-an-api-or-ai-gateway-and-have-no-need-for-a-ui-or-full-platform-capabilities)
 
-With XBRANDX’s API Platform, both of these needs can be easily served. Here is a deeper look at how users can get started with either scenario:
+With WSO2’s API Platform, both of these needs can be easily served. Here is a deeper look at how users can get started with either scenario:
 
 ### I want a full, end-to-end platform for managing my APIs and AI services
 
@@ -40,29 +40,29 @@ If you are looking for a web console where you can create APIs, configure AI gat
 
 The next question is: **who runs the infrastructure?**
 
-* **Option A: Cloud (XBRANDX hosts everything)**
+* **Option A: Cloud (WSO2 hosts everything)**
     
-    ![Option A: XBRANDX Cloud control plane with API Gateway and AI Gateway in cloud data plane, connecting to external LLMs and services](../assets/img/overview/option-a-cloud-light.webp#only-light)
-    ![Option A: XBRANDX Cloud control plane with API Gateway and AI Gateway in cloud data plane, connecting to external LLMs and services](../assets/img/overview/option-a-cloud-dark.webp#only-dark)
+    ![Option A: WSO2 Cloud control plane with API Gateway and AI Gateway in cloud data plane, connecting to external LLMs and services](../assets/img/overview/option-a-cloud-light.webp#only-light)
+    ![Option A: WSO2 Cloud control plane with API Gateway and AI Gateway in cloud data plane, connecting to external LLMs and services](../assets/img/overview/option-a-cloud-dark.webp#only-dark)
 
-    The fastest way to get started. XBRANDX runs the control plane (where you design and manage APIs) and the data plane (the gateways, where traffic flows). Sign up and start creating APIs within minutes. There is no infrastructure to manage.
+    The fastest way to get started. WSO2 runs the control plane (where you design and manage APIs) and the data plane (the gateways, where traffic flows). Sign up and start creating APIs within minutes. There is no infrastructure to manage.
 
     * **Best for:** Startups, mid-market companies, AI POCs, and teams that want to ship fast without managing infrastructure.
 
-    * **What is included:** API Control Plane, AI Workspace, API Portal & MCP Hub, Moesif Analytics, API Gateway, and AI Gateway, all managed by XBRANDX.
+    * **What is included:** API Control Plane, AI Workspace, API Portal & MCP Hub, Moesif Analytics, API Gateway, and AI Gateway, all managed by WSO2.
 
     * [Cloud documentation](../cloud/introduction/what-is-bijira.md)
 
-* **Option B: Hybrid (XBRANDX hosts the control plane, you host the gateways)**
+* **Option B: Hybrid (WSO2 hosts the control plane, you host the gateways)**
     
-    ![Option B: XBRANDX Cloud control plane with self-hosted API Gateway and AI Gateway in customer data center, connecting to external LLMs](../assets/img/overview/option-b-hybird-light.webp#only-light)
-    ![Option B: XBRANDX Cloud control plane with self-hosted API Gateway and AI Gateway in customer data center, connecting to external LLMs](../assets/img/overview/option-b-hybird-dark.webp#only-dark)
+    ![Option B: WSO2 Cloud control plane with self-hosted API Gateway and AI Gateway in customer data center, connecting to external LLMs](../assets/img/overview/option-b-hybird-light.webp#only-light)
+    ![Option B: WSO2 Cloud control plane with self-hosted API Gateway and AI Gateway in customer data center, connecting to external LLMs](../assets/img/overview/option-b-hybird-dark.webp#only-dark)
 
     You get the convenience of a cloud managed control plane (the UI where you design and govern APIs), but the gateways run in your own data center or cloud account. API traffic never leaves the infrastructure that you manage. This satisfies the majority of data residency requirements globally.
 
     * **Best for:** Mid-market and enterprise customers who need governance with data privacy. Organizations that want managed convenience but cannot allow traffic to flow through third-party infrastructure.
 
-    * **What is included:** Cloud control plane (AI Workspace, API Portal & MCP Hub, Moesif) managed by XBRANDX, plus self-hosted gateways (API Gateway, AI Gateway) in your environment. You can also federate third-party gateways (AWS, Azure, Kong, Envoy) under the same control plane.
+    * **What is included:** Cloud control plane (AI Workspace, API Portal & MCP Hub, Moesif) managed by WSO2, plus self-hosted gateways (API Gateway, AI Gateway) in your environment. You can also federate third-party gateways (AWS, Azure, Kong, Envoy) under the same control plane.
 
     * [Set up hybrid deployment](../cloud/api-platform-gateway/getting-started.md)
 
@@ -85,8 +85,8 @@ The next question is: **who runs the infrastructure?**
 
 | Feature | Cloud | Hybrid | Self-Managed (API Manager) |
 | :--- | :--- | :--- | :--- |
-| **Control plane** | XBRANDX managed | XBRANDX managed | Customer managed |
-| **Gateways** | XBRANDX managed | Customer managed | Customer managed |
+| **Control plane** | WSO2 managed | WSO2 managed | Customer managed |
+| **Gateways** | WSO2 managed | Customer managed | Customer managed |
 | **API traffic stays in your infrastructure** | No | Yes | Yes |
 | **Setup complexity** | Minimal | Moderate | High |
 | **Web UI for managing APIs** | Yes | Yes | Yes |
@@ -102,8 +102,8 @@ If you do not need a full management console and want a high-performance gateway
 
 There are two standalone gateways:
 
-![Standalone XAPIGATEWAYX routing API consumers to APIs, and AI Gateway with MCP Proxy and LLM Proxy routing AI agents and LLM users to LLM providers and MCP servers](../assets/img/overview/api-gateway-light.webp#only-light)
-![Standalone XAPIGATEWAYX routing API consumers to APIs, and AI Gateway with MCP Proxy and LLM Proxy routing AI agents and LLM users to LLM providers and MCP servers](../assets/img/overview/api-gateway-dark.webp#only-dark)
+![Standalone WSO2 API Gateway routing API consumers to APIs, and AI Gateway with MCP Proxy and LLM Proxy routing AI agents and LLM users to LLM providers and MCP servers](../assets/img/overview/api-gateway-light.webp#only-light)
+![Standalone WSO2 API Gateway routing API consumers to APIs, and AI Gateway with MCP Proxy and LLM Proxy routing AI agents and LLM users to LLM providers and MCP servers](../assets/img/overview/api-gateway-dark.webp#only-dark)
 
 
 * **API Gateway**
@@ -147,8 +147,8 @@ The following is a complete view of all components and where to find their docum
 | :--- | :--- | :--- |
 | **API Gateway** | High-performance, Go-based gateway for API traffic. Handles authentication, rate limiting, transformations, and custom policies. | <ul><li>[Standalone docs](../api-gateway/next/overview.md)</li><li>[Cloud-integrated docs](../cloud/api-platform-gateway/getting-started.md)</li></ul> |
 | **AI Gateway** | Route, secure, and govern outbound LLM traffic. Includes guardrails (PII masking, prompt injection, content safety), multi-provider load balancing, failover, semantic caching, and cost governance (via LLM proxies).<br><br>Govern inbound MCP traffic from AI agents. Generate MCP tools from REST APIs, aggregate tools, and enforce access control and authorization (via MCP proxies). | <ul><li>[Standalone docs](../ai-gateway/next/overview.md)</li><li>[Cloud-integrated docs](../cloud/ai-gateway/overview.md)</li></ul> |
-| **Third-Party Gateways** | Federate existing gateways (AWS, Azure, Kong, and Envoy) into the XBRANDX platform without replacing them. Discover and catalog APIs running on these gateways alongside your XBRANDX managed APIs in a single developer portal. Gain unified observability across all gateway environments, and for supported gateways, publish and deploy API configurations directly from the control plane.|<ul><li>[Federation docs](../cloud/federation/overview.md)</li></ul> |
-| **Policy Hub** | API policies and AI guardrails are distributed through the Policy Hub, an open source repository powered by [github.com/xgithuborgx/gateway-controllers](https://github.com/xgithuborgx/gateway-controllers). The Policy Hub is integrated into Cloud, API Manager (4.7 and above), and the standalone gateways. When a new policy or guardrail is released, it becomes instantly available to all users. |<ul><li>[Policy Hub docs](../policy-hub/overview.md)</li></ul> |
+| **Third-Party Gateways** | Federate existing gateways (AWS, Azure, Kong, and Envoy) into the WSO2 platform without replacing them. Discover and catalog APIs running on these gateways alongside your WSO2 managed APIs in a single developer portal. Gain unified observability across all gateway environments, and for supported gateways, publish and deploy API configurations directly from the control plane.|<ul><li>[Federation docs](../cloud/federation/overview.md)</li></ul> |
+| **Policy Hub** | API policies and AI guardrails are distributed through the Policy Hub, an open source repository powered by [github.com/wso2/gateway-controllers](https://github.com/wso2/gateway-controllers). The Policy Hub is integrated into Cloud, API Manager (4.7 and above), and the standalone gateways. When a new policy or guardrail is released, it becomes instantly available to all users. |<ul><li>[Policy Hub docs](../policy-hub/overview.md)</li></ul> |
 
 ## Choose your path
 
@@ -173,9 +173,9 @@ The following concepts apply across the entire platform:
 
 * [**Projects**](../cloud/bijira-concepts/project.md) — Logical groupings of APIs and services within an organization. Use projects to separate teams, environments, or business domains.
 
-* [**Data Planes**](../cloud/bijira-concepts/data-planes.md) — The gateway runtime environments where your APIs are deployed and traffic is processed. A data plane can be XBRANDX managed (cloud), self-hosted (hybrid or self-managed), or a federated third-party gateway.
+* [**Data Planes**](../cloud/bijira-concepts/data-planes.md) — The gateway runtime environments where your APIs are deployed and traffic is processed. A data plane can be WSO2 managed (cloud), self-hosted (hybrid or self-managed), or a federated third-party gateway.
 
-## Already using XBRANDX?
+## Already using WSO2?
 **API Manager users (4.6 and below):** Your documentation remains at [apim.docs.wso2.com](https://apim.docs.wso2.com/en/latest/). Starting with version 4.7 (April 2026), API Manager connects to the new Go-based platform gateway, the same runtime used by Cloud and Hybrid. You can migrate at your own pace: new projects can use the platform gateway while existing APIs continue running on the Java-based classic gateway. APIM 4.7 still ships with the classic gateway if you are not ready to switch. See the API Manager section for 4.7 and above documentation.
 
-**Cloud (XCLOUDCODENAMEX) users:** You are already on the platform. The hybrid gateway is now available, and improvements ship automatically throughout 2026. Your documentation is in the Cloud section.
+**Cloud (Bijira) users:** You are already on the platform. The hybrid gateway is now available, and improvements ship automatically throughout 2026. Your documentation is in the Cloud section.

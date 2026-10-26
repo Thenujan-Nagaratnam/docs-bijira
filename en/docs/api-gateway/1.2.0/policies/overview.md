@@ -1,13 +1,13 @@
 ---
 title: "API Platform Policies Overview"
-description: "Understand gateway policies in XAPIPLATFORMX: how Go and Python policies execute in the request and response pipeline and how to chain them."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/policies/overview/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/policies/overview.md
+description: "Understand gateway policies in WSO2 API Platform: how Go and Python policies execute in the request and response pipeline and how to chain them."
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/policies/overview/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/policies/overview.md
 tags:
   - api-gateway
   - policies
   - extensibility
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-11
 content_type: "concept"
 ---
@@ -147,7 +147,7 @@ Go policies are referenced in `build.yaml` using the `gomodule` field, which poi
 ```yaml
 policies:
   - name: my-go-policy
-    gomodule: github.com/xgithuborgx/gateway-controllers/policies/my-go-policy@v1
+    gomodule: github.com/wso2/gateway-controllers/policies/my-go-policy@v1
 ```
 
 The **Gateway Builder** resolves these modules, compiles them into the Policy Engine binary, and produces a custom gateway image containing all declared policies.
@@ -194,7 +194,7 @@ Python policies are referenced in `build.yaml` using the `pipPackage` field inst
 ```yaml
 policies:
   - name: my-python-policy
-    pipPackage: github.com/xgithuborgx/gateway-controllers/policies/my-python-policy@v1
+    pipPackage: github.com/wso2/gateway-controllers/policies/my-python-policy@v1
 ```
 
 The Gateway Builder resolves the Python package, installs its dependencies, generates the policy registry, and bundles everything into the gateway image alongside the Python Executor.
@@ -222,45 +222,45 @@ The following table presents the available policies alphabetically.
 <!-- POLICY_TABLE_START -->
 | Policy | Categories | Description |
 |--------|------------|-------------|
-| [Analytics Header Filter](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/analytics-header-filter/v1.0/docs/analytics-header-filter.md) | Logging, Analytics & Monitoring | The Analytics Header Filter policy allows you to control which request and response headers are included in analytics data using allow or deny modes. |
-| [API Key Auth](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/api-key-auth/v1.0/docs/apikey-authentication.md) | Security, AI | Implements API Key Authentication to protect APIs with pre-shared API keys. |
-| [AWS Bedrock Guardrail](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/aws-bedrock-guardrail/v1.0/docs/aws-bedrock-guardrail.md) | Guardrails, AI | Validates request or response body content against AWS Bedrock Guardrails. |
-| [Azure Content Safety Content Moderation](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/azure-content-safety-content-moderation/v1.0/docs/azure-content-safety.md) | Guardrails, AI | Validates request or response body content against Azure Content Safety API for content moderation. |
-| [Basic Auth](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/basic-auth/v1.0/docs/basic-auth.md) | Security, AI | Implements HTTP Basic Authentication to protect APIs with username and password credentials. |
-| [Content Length Guardrail](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/content-length-guardrail/v1.0/docs/content-length.md) | Guardrails, AI | Validates the byte length of request or response body content. |
-| [CORS](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/cors/v1.0/docs/cors.md) | Security, AI, MCP | Cross-Origin Resource Sharing (CORS) policy that handles preflight requests and adds appropriate CORS headers to responses. |
-| [Dynamic Endpoint](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/dynamic-endpoint/v1.0/docs/dynamic-endpoint.md) | Transformation | Routes requests to a named upstream definition at request time. |
-| [Host Rewrite](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/host-rewrite/v1.0/docs/host-rewrite.md) | Transformation | Sets the Host/:authority header sent to the upstream. |
-| [Interceptor Service](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/interceptor-service/v1.0/docs/interceptor-service.md) | Transformation | Invokes a user-defined HTTP interceptor service in the request and/or response phase. |
-| [JSON Schema Guardrail](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/json-schema-guardrail/v1.0/docs/json-schema.md) | Guardrails, AI | Validates request or response body content against a JSON Schema. |
-| [JSON/XML Mediator](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/json-xml-mediator/v1.0/docs/json-xml-mediator.md) | Transformation | Mediates request and response payloads between downstream and upstream JSON/XML formats. |
-| [JWT Auth](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/jwt-auth/v1.0/docs/jwt-authentication.md) | Security, AI | Validates JWT access tokens using one or more JWKS providers (key managers). |
-| [LLM Cost](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/llm-cost/v1.0/docs/llm-cost.md) | AI | Calculates the monetary cost of LLM API calls at response time and stores the result in SharedContext for use by downstream policies. |
-| [LLM Cost Based Ratelimit](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/llm-cost-based-ratelimit/v1.0/docs/llm-cost-based-ratelimit.md) | AI | A specialized rate limiting policy that enforces monetary budget limits on LLM API usage. |
-| [Log Message](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/log-message/v1.0/docs/log-message.md) | Logging, Analytics & Monitoring, MCP | This policy provides the capability to log the payload and headers of a request/response. |
-| [MCP Access Control](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/mcp-acl-list/v1.0/docs/mcp-acl-list.md) | MCP, AI | MCP ACL List policy controls access to tools, resources, and prompts using mode and exceptions. |
-| [MCP Authentication](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/mcp-auth/v1.0/docs/mcp-authentication.md) | MCP, AI, Security | This policy is used to secure traffic to Model Context Protocol server as defined in the specification (https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization). |
-| [MCP Authorization](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/mcp-authz/v1.0/docs/mcp-authorization.md) | MCP, AI, Security | MCP Authorization policy validates access to MCP resources (tools, resources, prompts) and methods based on JWT claims or OAuth scopes provided by the mcp-auth policy. |
-| [MCP Rewrite](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/mcp-rewrite/v1.0/docs/mcp-rewrite.md) | MCP, AI | MCP Rewrite policy defines user-facing tools, resources, and prompts and maps them to backend capability names using optional "target" fields. |
-| [Model Round Robin](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/model-round-robin/v1.0/docs/model-round-robin.md) | AI | Implements round-robin load balancing for AI models. |
-| [Model Weighted Round Robin](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/model-weighted-round-robin/v1.0/docs/model-weighted-round-robin.md) | AI | Implements weighted round-robin load balancing for AI models. |
-| [PII Masking Regex](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/pii-masking-regex/v1.0/docs/pii-masking-regex.md) | Guardrails, AI | Masks or redacts Personally Identifiable Information (PII) from request/response bodies using regex patterns. |
-| [Prompt Compressor](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/prompt-compressor/v0.9/docs/prompt-compressor.md) | AI | Compresses selected prompt text in JSON request bodies before upstream LLM calls. |
-| [Prompt Decorator](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/prompt-decorator/v1.0/docs/prompt-decorator.md) | AI | Dynamically modifies the prompt by applying custom decorations using a configured strategy. |
-| [Prompt Template](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/prompt-template/v1.0/docs/prompt-template.md) | AI | Dynamically modifies the prompt by applying custom templates using a configured strategy. |
-| [Rate Limit - Advanced](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/advanced-ratelimit/v1.0/docs/advanced-ratelimit.md) | Security, AI | Rate limiting policy supporting multiple algorithms (GCRA, Fixed Window), multi-dimensional quotas, weighted rate limiting, flexible key extraction, and both in-memory and Redis backends. |
-| [Rate Limit - Basic](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/basic-ratelimit/v1.0/docs/basic-ratelimit.md) | Security, AI | Simple request rate limiting policy that limits the number of requests per time window. |
-| [Regex Guardrail](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/regex-guardrail/v1.0/docs/regex.md) | Guardrails, AI | Validates request or response body content against a regular expression pattern. |
-| [Remove Headers](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/remove-headers/v1.0/docs/remove-headers.md) | Transformation, MCP | This policy provides the capability to remove headers from either the request or the response. |
-| [Request Rewrite](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/request-rewrite/v1.0/docs/request-rewrite.md) | Transformation | Rewrites incoming requests by updating path, query parameters, and/or HTTP method before forwarding to upstream services. |
-| [Respond](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/respond/v1.0/docs/respond.md) | AI | Returns an immediate response to the client without forwarding the request to the upstream backend. |
-| [Semantic Cache](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/semantic-cache/v1.0/docs/semantic-caching.md) | AI | Implements semantic caching for LLM responses using vector similarity search. |
-| [Semantic Prompt Guard](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/semantic-prompt-guard/v1.0/docs/semantic-prompt-guard.md) | Guardrails, AI | Blocks or allows prompts based on semantic similarity to configured allow/deny phrase embeddings. |
-| [Semantic Tool Filtering](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/semantic-tool-filtering/v1.0/docs/semantic-tool-filtering.md) | Guardrails, AI | Dynamically filters the tools provided within an API request based on their semantic relevance to the user query. |
-| [Sentence Count Guardrail](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/sentence-count-guardrail/v1.0/docs/sentence-count.md) | Guardrails, AI | Validates the sentence count of request or response body content. |
-| [Set Headers](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/set-headers/v1.0/docs/set-headers.md) | Transformation, MCP | This policy provides the capability to set arbitrary headers to either the request or the response. |
-| [Subscription Validation](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/subscription-validation/v1.0/docs/subscription-validation.md) | Security | Validates that incoming requests are associated with an active subscription for the target API. |
-| [Token Based Ratelimit](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/token-based-ratelimit/v1.0/docs/token-based-ratelimit.md) | AI | A specialized rate limiting policy for LLM APIs that enforces usage quotas based on token counts. |
-| [URL Guardrail](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/url-guardrail/v1.0/docs/url.md) | Guardrails, AI | Validates URLs found in request or response body content. |
-| [Word Count Guardrail](https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/word-count-guardrail/v1.0/docs/word-count.md) | Guardrails, AI | Validates the word count of request or response body content. |
+| [Analytics Header Filter](https://github.com/wso2/gateway-controllers/blob/main/docs/analytics-header-filter/v1.0/docs/analytics-header-filter.md) | Logging, Analytics & Monitoring | The Analytics Header Filter policy allows you to control which request and response headers are included in analytics data using allow or deny modes. |
+| [API Key Auth](https://github.com/wso2/gateway-controllers/blob/main/docs/api-key-auth/v1.0/docs/apikey-authentication.md) | Security, AI | Implements API Key Authentication to protect APIs with pre-shared API keys. |
+| [AWS Bedrock Guardrail](https://github.com/wso2/gateway-controllers/blob/main/docs/aws-bedrock-guardrail/v1.0/docs/aws-bedrock-guardrail.md) | Guardrails, AI | Validates request or response body content against AWS Bedrock Guardrails. |
+| [Azure Content Safety Content Moderation](https://github.com/wso2/gateway-controllers/blob/main/docs/azure-content-safety-content-moderation/v1.0/docs/azure-content-safety.md) | Guardrails, AI | Validates request or response body content against Azure Content Safety API for content moderation. |
+| [Basic Auth](https://github.com/wso2/gateway-controllers/blob/main/docs/basic-auth/v1.0/docs/basic-auth.md) | Security, AI | Implements HTTP Basic Authentication to protect APIs with username and password credentials. |
+| [Content Length Guardrail](https://github.com/wso2/gateway-controllers/blob/main/docs/content-length-guardrail/v1.0/docs/content-length.md) | Guardrails, AI | Validates the byte length of request or response body content. |
+| [CORS](https://github.com/wso2/gateway-controllers/blob/main/docs/cors/v1.0/docs/cors.md) | Security, AI, MCP | Cross-Origin Resource Sharing (CORS) policy that handles preflight requests and adds appropriate CORS headers to responses. |
+| [Dynamic Endpoint](https://github.com/wso2/gateway-controllers/blob/main/docs/dynamic-endpoint/v1.0/docs/dynamic-endpoint.md) | Transformation | Routes requests to a named upstream definition at request time. |
+| [Host Rewrite](https://github.com/wso2/gateway-controllers/blob/main/docs/host-rewrite/v1.0/docs/host-rewrite.md) | Transformation | Sets the Host/:authority header sent to the upstream. |
+| [Interceptor Service](https://github.com/wso2/gateway-controllers/blob/main/docs/interceptor-service/v1.0/docs/interceptor-service.md) | Transformation | Invokes a user-defined HTTP interceptor service in the request and/or response phase. |
+| [JSON Schema Guardrail](https://github.com/wso2/gateway-controllers/blob/main/docs/json-schema-guardrail/v1.0/docs/json-schema.md) | Guardrails, AI | Validates request or response body content against a JSON Schema. |
+| [JSON/XML Mediator](https://github.com/wso2/gateway-controllers/blob/main/docs/json-xml-mediator/v1.0/docs/json-xml-mediator.md) | Transformation | Mediates request and response payloads between downstream and upstream JSON/XML formats. |
+| [JWT Auth](https://github.com/wso2/gateway-controllers/blob/main/docs/jwt-auth/v1.0/docs/jwt-authentication.md) | Security, AI | Validates JWT access tokens using one or more JWKS providers (key managers). |
+| [LLM Cost](https://github.com/wso2/gateway-controllers/blob/main/docs/llm-cost/v1.0/docs/llm-cost.md) | AI | Calculates the monetary cost of LLM API calls at response time and stores the result in SharedContext for use by downstream policies. |
+| [LLM Cost Based Ratelimit](https://github.com/wso2/gateway-controllers/blob/main/docs/llm-cost-based-ratelimit/v1.0/docs/llm-cost-based-ratelimit.md) | AI | A specialized rate limiting policy that enforces monetary budget limits on LLM API usage. |
+| [Log Message](https://github.com/wso2/gateway-controllers/blob/main/docs/log-message/v1.0/docs/log-message.md) | Logging, Analytics & Monitoring, MCP | This policy provides the capability to log the payload and headers of a request/response. |
+| [MCP Access Control](https://github.com/wso2/gateway-controllers/blob/main/docs/mcp-acl-list/v1.0/docs/mcp-acl-list.md) | MCP, AI | MCP ACL List policy controls access to tools, resources, and prompts using mode and exceptions. |
+| [MCP Authentication](https://github.com/wso2/gateway-controllers/blob/main/docs/mcp-auth/v1.0/docs/mcp-authentication.md) | MCP, AI, Security | This policy is used to secure traffic to Model Context Protocol server as defined in the specification (https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization). |
+| [MCP Authorization](https://github.com/wso2/gateway-controllers/blob/main/docs/mcp-authz/v1.0/docs/mcp-authorization.md) | MCP, AI, Security | MCP Authorization policy validates access to MCP resources (tools, resources, prompts) and methods based on JWT claims or OAuth scopes provided by the mcp-auth policy. |
+| [MCP Rewrite](https://github.com/wso2/gateway-controllers/blob/main/docs/mcp-rewrite/v1.0/docs/mcp-rewrite.md) | MCP, AI | MCP Rewrite policy defines user-facing tools, resources, and prompts and maps them to backend capability names using optional "target" fields. |
+| [Model Round Robin](https://github.com/wso2/gateway-controllers/blob/main/docs/model-round-robin/v1.0/docs/model-round-robin.md) | AI | Implements round-robin load balancing for AI models. |
+| [Model Weighted Round Robin](https://github.com/wso2/gateway-controllers/blob/main/docs/model-weighted-round-robin/v1.0/docs/model-weighted-round-robin.md) | AI | Implements weighted round-robin load balancing for AI models. |
+| [PII Masking Regex](https://github.com/wso2/gateway-controllers/blob/main/docs/pii-masking-regex/v1.0/docs/pii-masking-regex.md) | Guardrails, AI | Masks or redacts Personally Identifiable Information (PII) from request/response bodies using regex patterns. |
+| [Prompt Compressor](https://github.com/wso2/gateway-controllers/blob/main/docs/prompt-compressor/v0.9/docs/prompt-compressor.md) | AI | Compresses selected prompt text in JSON request bodies before upstream LLM calls. |
+| [Prompt Decorator](https://github.com/wso2/gateway-controllers/blob/main/docs/prompt-decorator/v1.0/docs/prompt-decorator.md) | AI | Dynamically modifies the prompt by applying custom decorations using a configured strategy. |
+| [Prompt Template](https://github.com/wso2/gateway-controllers/blob/main/docs/prompt-template/v1.0/docs/prompt-template.md) | AI | Dynamically modifies the prompt by applying custom templates using a configured strategy. |
+| [Rate Limit - Advanced](https://github.com/wso2/gateway-controllers/blob/main/docs/advanced-ratelimit/v1.0/docs/advanced-ratelimit.md) | Security, AI | Rate limiting policy supporting multiple algorithms (GCRA, Fixed Window), multi-dimensional quotas, weighted rate limiting, flexible key extraction, and both in-memory and Redis backends. |
+| [Rate Limit - Basic](https://github.com/wso2/gateway-controllers/blob/main/docs/basic-ratelimit/v1.0/docs/basic-ratelimit.md) | Security, AI | Simple request rate limiting policy that limits the number of requests per time window. |
+| [Regex Guardrail](https://github.com/wso2/gateway-controllers/blob/main/docs/regex-guardrail/v1.0/docs/regex.md) | Guardrails, AI | Validates request or response body content against a regular expression pattern. |
+| [Remove Headers](https://github.com/wso2/gateway-controllers/blob/main/docs/remove-headers/v1.0/docs/remove-headers.md) | Transformation, MCP | This policy provides the capability to remove headers from either the request or the response. |
+| [Request Rewrite](https://github.com/wso2/gateway-controllers/blob/main/docs/request-rewrite/v1.0/docs/request-rewrite.md) | Transformation | Rewrites incoming requests by updating path, query parameters, and/or HTTP method before forwarding to upstream services. |
+| [Respond](https://github.com/wso2/gateway-controllers/blob/main/docs/respond/v1.0/docs/respond.md) | AI | Returns an immediate response to the client without forwarding the request to the upstream backend. |
+| [Semantic Cache](https://github.com/wso2/gateway-controllers/blob/main/docs/semantic-cache/v1.0/docs/semantic-caching.md) | AI | Implements semantic caching for LLM responses using vector similarity search. |
+| [Semantic Prompt Guard](https://github.com/wso2/gateway-controllers/blob/main/docs/semantic-prompt-guard/v1.0/docs/semantic-prompt-guard.md) | Guardrails, AI | Blocks or allows prompts based on semantic similarity to configured allow/deny phrase embeddings. |
+| [Semantic Tool Filtering](https://github.com/wso2/gateway-controllers/blob/main/docs/semantic-tool-filtering/v1.0/docs/semantic-tool-filtering.md) | Guardrails, AI | Dynamically filters the tools provided within an API request based on their semantic relevance to the user query. |
+| [Sentence Count Guardrail](https://github.com/wso2/gateway-controllers/blob/main/docs/sentence-count-guardrail/v1.0/docs/sentence-count.md) | Guardrails, AI | Validates the sentence count of request or response body content. |
+| [Set Headers](https://github.com/wso2/gateway-controllers/blob/main/docs/set-headers/v1.0/docs/set-headers.md) | Transformation, MCP | This policy provides the capability to set arbitrary headers to either the request or the response. |
+| [Subscription Validation](https://github.com/wso2/gateway-controllers/blob/main/docs/subscription-validation/v1.0/docs/subscription-validation.md) | Security | Validates that incoming requests are associated with an active subscription for the target API. |
+| [Token Based Ratelimit](https://github.com/wso2/gateway-controllers/blob/main/docs/token-based-ratelimit/v1.0/docs/token-based-ratelimit.md) | AI | A specialized rate limiting policy for LLM APIs that enforces usage quotas based on token counts. |
+| [URL Guardrail](https://github.com/wso2/gateway-controllers/blob/main/docs/url-guardrail/v1.0/docs/url.md) | Guardrails, AI | Validates URLs found in request or response body content. |
+| [Word Count Guardrail](https://github.com/wso2/gateway-controllers/blob/main/docs/word-count-guardrail/v1.0/docs/word-count.md) | Guardrails, AI | Validates the word count of request or response body content. |
 <!-- POLICY_TABLE_END -->

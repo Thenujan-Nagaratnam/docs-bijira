@@ -1,14 +1,14 @@
 ---
 title: "Secure an API with role-based access control"
 description: "Implement RBAC for an API proxy by defining permissions, roles, and groups, then verify scope-based access with Asgardeo."
-canonical_url: https://xdocshostx/xdocspathx/cloud/tutorials/secure-an-api-with-role-based-access-control/
-md_url: https://xdocshostx/xdocspathx/cloud/tutorials/secure-an-api-with-role-based-access-control.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/tutorials/secure-an-api-with-role-based-access-control/
+md_url: https://wso2.com/api-platform/docs/cloud/tutorials/secure-an-api-with-role-based-access-control.md
 tags:
   - cloud
   - tutorials
   - rbac
   - security
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "tutorial"
 ---
@@ -40,7 +40,7 @@ Let’s take a look at the steps to implement the scenario described above using
 ### Prerequisites
 
 - If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -49,7 +49,7 @@ Let’s take a look at the steps to implement the scenario described above using
 
 ### Step 1: Create an API proxy component and deploy it
 
-1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. To create an API proxy component, follow the instructions in [Start with Endpoint](../create-api-proxy/my-apis/http/start-with-endpoint.md).
 3. In the left navigation menu, click **Policy**.
 4. Click the **+** in the **API Proxy Contract** and replace the resources with following.

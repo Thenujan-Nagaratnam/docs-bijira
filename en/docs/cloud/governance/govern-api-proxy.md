@@ -1,12 +1,12 @@
 ---
 title: "Govern API Proxies"
-description: "Create rulesets and policies, upload governance documents, and monitor API proxy compliance in XAPIPLATFORMX."
-canonical_url: https://xdocshostx/xdocspathx/cloud/governance/govern-api-proxy/
-md_url: https://xdocshostx/xdocspathx/cloud/governance/govern-api-proxy.md
+description: "Create rulesets and policies, upload governance documents, and monitor API proxy compliance in WSO2 API Platform."
+canonical_url: https://wso2.com/api-platform/docs/cloud/governance/govern-api-proxy/
+md_url: https://wso2.com/api-platform/docs/cloud/governance/govern-api-proxy.md
 tags:
   - cloud
   - governance
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -26,7 +26,7 @@ Rulesets are Spectral YAML-based rule definitions used to validate API artifacts
 
 ### Create a Ruleset
 
-1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click **Admin** and then click **Governance**. This opens the Governance page.
 4. Ensure the **Policies** tab is selected.
@@ -70,7 +70,7 @@ Policies attach one or more rulesets to your organization's API proxies and defi
 
 4. Click **Create**.
 
-![Create Policy form showing name, description, Global applicability, Enforcement Details table with Update state and Notify buttons for On Error, On Warning, and On Info, plus selectable ruleset cards including Sample Ruleset, XBRANDX API Design Guidelines, XBRANDX Style Guidelines, and OWASP Top 10](../../assets/img/governance/add-policy.png)
+![Create Policy form showing name, description, Global applicability, Enforcement Details table with Update state and Notify buttons for On Error, On Warning, and On Info, plus selectable ruleset cards including Sample Ruleset, WSO2 API Design Guidelines, WSO2 Style Guidelines, and OWASP Top 10](../../assets/img/governance/add-policy.png)
 
 ### Enforcement Detail
 

@@ -1,13 +1,13 @@
 ---
 title: "Minimum resource requirements"
 description: "Baseline CPU and memory requirements for AI Workspace setup and production planning."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/setting-up/resource-requirement/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/setting-up/resource-requirement.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/setting-up/resource-requirement/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/setting-up/resource-requirement.md
 tags:
   - ai-workspace
   - setup
   - resources
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-10-03
 content_type: "reference"
 ---

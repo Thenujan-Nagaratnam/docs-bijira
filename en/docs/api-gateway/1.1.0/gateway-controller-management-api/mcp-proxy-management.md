@@ -1,13 +1,13 @@
 ---
 title: "Management API: MCP Proxy Management"
 description: "REST API reference for creating, listing, updating, and deleting MCP proxy configurations in API Platform Gateway."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/gateway-controller-management-api/mcp-proxy-management/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/gateway-controller-management-api/mcp-proxy-management.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/gateway-controller-management-api/mcp-proxy-management/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/gateway-controller-management-api/mcp-proxy-management.md
 tags:
   - api-gateway
   - management-api
   - mcp
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-17
 content_type: "reference"
 ---
@@ -40,7 +40,7 @@ Add a new MCPProxy to the Gateway.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "Mcp",
   "metadata": {
     "name": "everything-mcp-v1.0"
@@ -81,7 +81,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "Mcp",
   "metadata": {
     "name": "everything-mcp-v1.0"
@@ -170,7 +170,7 @@ Required roles: `admin`, `developer`
   "count": 5,
   "mcpProxies": [
     {
-      "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+      "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
       "kind": "Mcp",
       "metadata": {
         "name": "everything-mcp-v1.0"
@@ -317,7 +317,7 @@ Status Code **200**
 
 |Property|Value|
 |---|---|
-|apiVersion|gateway.api-platform.xcrddomainx/v1alpha1|
+|apiVersion|gateway.api-platform.wso2.com/v1alpha1|
 |kind|Mcp|
 |hostRewrite|auto|
 |hostRewrite|manual|
@@ -370,7 +370,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "Mcp",
   "metadata": {
     "name": "everything-mcp-v1.0"
@@ -429,7 +429,7 @@ Update an existing MCPProxy in the Gateway.
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "Mcp",
   "metadata": {
     "name": "everything-mcp-v1.0"
@@ -475,7 +475,7 @@ Required roles: `admin`, `developer`
 
 ```json
 {
-  "apiVersion": "gateway.api-platform.xcrddomainx/v1alpha1",
+  "apiVersion": "gateway.api-platform.wso2.com/v1alpha1",
   "kind": "Mcp",
   "metadata": {
     "name": "everything-mcp-v1.0"

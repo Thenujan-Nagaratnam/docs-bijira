@@ -1,28 +1,28 @@
 ---
 title: "AI Gateway LLM quick start guide"
 description: "Create an AI Gateway and configure an LLM provider through the AI Workspace UI, then send your first request through the gateway."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/llm/quick-start-guide/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/llm/quick-start-guide.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/quick-start-guide.md
 tags:
   - cloud
   - ai-gateway
   - llm
   - quickstart
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-03
 content_type: "quickstart"
 ---
 
 # Quick start guide for LLMs in AI Gateway
 
-The AI Gateway routes, secures, and observes traffic to large language model (LLM) providers such as OpenAI, Anthropic, and Azure OpenAI. On Cloud, you manage it through [AI Workspace](https://ai-workspace.xclouddomainx). You register a gateway runtime, connect an LLM provider, and deploy the configuration.
+The AI Gateway routes, secures, and observes traffic to large language model (LLM) providers such as OpenAI, Anthropic, and Azure OpenAI. On Cloud, you manage it through [AI Workspace](https://ai-workspace.bijira.dev). You register a gateway runtime, connect an LLM provider, and deploy the configuration.
 
 This guide is for developers setting up their first AI Gateway on Cloud. You'll create a gateway, connect an OpenAI provider to it, and send your first request.
 
 ## Before you start
 Before going through this quickstart, make sure you meet the following prerequisites:
 
-- Access to [AI Workspace](https://ai-workspace.xclouddomainx/) with the **Admin** role.
+- Access to [AI Workspace](https://ai-workspace.bijira.dev/) with the **Admin** role.
 - An OpenAI API key.
 - [Docker](https://docs.docker.com/get-docker/) with the Compose plugin. You can check the installed version with the `docker compose version` command.
 - `curl` and `unzip` commands available in the command line.
@@ -35,7 +35,7 @@ An AI Gateway entry in AI Workspace represents one gateway runtime. Registering 
 
 ### Step 1: Sign in to AI Workspace
 
-Open [AI Workspace](https://ai-workspace.xclouddomainx/) and sign in. Then create an Organization and a Project in your Organization.
+Open [AI Workspace](https://ai-workspace.bijira.dev/) and sign in. Then create an Organization and a Project in your Organization.
 
 ### Step 2: Add a gateway
 
@@ -61,16 +61,16 @@ Select the __Quick Start__ tab in the detail page of the newly added gateway's *
 1. Download and unzip the gateway distribution:
 
     ```bash
-    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.1.0/xartifactprefixx-ai-gateway-1.1.0.zip && \
-    unzip xartifactprefixx-ai-gateway-1.1.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip && \
+    unzip wso2apip-ai-gateway-1.1.0.zip
     ```
 
 2. Create the environment file with your registration token. 
 
     ```bash
-    cat > xartifactprefixx-ai-gateway-1.1.0/configs/keys.env << 'ENVFILE'
+    cat > wso2apip-ai-gateway-1.1.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.xclouddomainx
+    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -78,7 +78,7 @@ Select the __Quick Start__ tab in the detail page of the newly added gateway's *
 3. Start the runtime:
 
     ```bash
-    cd xartifactprefixx-ai-gateway-1.1.0 && \
+    cd wso2apip-ai-gateway-1.1.0 && \
     docker compose --env-file configs/keys.env up
     ```
 
@@ -167,5 +167,5 @@ A successful response returns the model's completion.
 
 - [Manage LLM Provider](../../ai-workspace/llm-providers/manage-provider.md): configure access control, rate limiting, and guardrails on the provider you just deployed
 - [Configure App LLM Proxy](../../ai-workspace/llm-proxies/configure-proxy.md): create an application-specific endpoint on top of this provider, with its own guardrails and authentication
-- [LLM Provider Templates](llm-templates.md): the metadata XAPIPLATFORMX extracts for each supported provider
+- [LLM Provider Templates](llm-templates.md): the metadata WSO2 API Platform extracts for each supported provider
 - [AI Workspace Overview](../../ai-workspace/overview.md): everything else the control plane manages

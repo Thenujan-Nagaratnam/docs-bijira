@@ -1,13 +1,13 @@
 ---
 title: "Configure Traffic Logging"
 description: "Emit a structured JSON log line for every API request from the API Platform Gateway — to stdout, a rotating file, or an HTTP log receiver — with no external SaaS and no policy dependency."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/observability/traffic-logging/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.2.0/observability/traffic-logging.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/observability/traffic-logging/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.2.0/observability/traffic-logging.md
 tags:
   - api-gateway
   - observability
   - logging
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-20
 content_type: "how-to"
 ---
@@ -174,7 +174,7 @@ response_body = true
 max_payload_size = 4096
 
 [traffic_logging.file]
-path = "/var/log/xsampleslugx/traffic/traffic.log"
+path = "/var/log/wso2/traffic/traffic.log"
 max_size_mb = 100
 ```
 
@@ -221,7 +221,7 @@ gateway:
       enabled: true
       outputs: ["file"]
       file:
-        path: /var/log/xsampleslugx/traffic/traffic.log
+        path: /var/log/wso2/traffic/traffic.log
         max_size_mb: 100
 ```
 
@@ -230,7 +230,7 @@ renders both the mount and a per-pod `emptyDir`:
 ```yaml
 volumeMounts:
   - name: traffic-log
-    mountPath: /var/log/xsampleslugx
+    mountPath: /var/log/wso2
 volumes:
   - name: traffic-log
     emptyDir:
@@ -242,7 +242,7 @@ Tune it under `gateway.gatewayRuntime.trafficLogVolume`:
 | Value | Default | Description |
 |---|---|---|
 | `enabled` | auto | Auto-derived from whether `outputs` contains `"file"`. Set it explicitly only to override. For example `false` when you mount your own volume. |
-| `mountPath` | `/var/log/xsampleslugx` | Mount point. `traffic_logging.file.path` must sit under this path, or templating fails with an explanatory error rather than producing a pod that cannot start. |
+| `mountPath` | `/var/log/wso2` | Mount point. `traffic_logging.file.path` must sit under this path, or templating fails with an explanatory error rather than producing a pod that cannot start. |
 | `sizeLimit` | `512Mi` | Keep this comfortably above **2 × `max_size_mb`** so rotation bounds the file, not the kubelet. The kubelet's limit **evicts the pod**. |
 | `medium` | (unset) | Set to `"Memory"` for a tmpfs: off disk entirely, but it counts against the container's memory limit. |
 
@@ -397,7 +397,7 @@ selected type is a **startup error**, not a silently unauthenticated `POST` carr
     ```toml
     # Splunk HEC
     [traffic_logging.http]
-    endpoint = "https://splunk.example.com:8088/services/collector/raw?sourcetype=xsampleslugx:gateway:traffic"
+    endpoint = "https://splunk.example.com:8088/services/collector/raw?sourcetype=wso2:gateway:traffic"
 
     [traffic_logging.http.auth]
     type = "header"
@@ -716,7 +716,7 @@ gateway:
         env: "prod"
         apiName: "$ctx:api.name"
       file:
-        path: /var/log/xsampleslugx/traffic/traffic.log
+        path: /var/log/wso2/traffic/traffic.log
         max_size_mb: 100
       http:
         endpoint: https://splunk.example.com:8088/services/collector/raw

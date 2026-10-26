@@ -1,13 +1,13 @@
 ---
 title: "Setup and deployment"
 description: "Install the AI Gateway, configure it, secure its management API, and deploy it at scale on Kubernetes, with sizing guidance from published benchmarks."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/setup-and-deployment/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/setup-and-deployment.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/setup-and-deployment/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/setup-and-deployment.md
 tags:
   - ai-gateway
   - deployment
   - configuration
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "concept"
 ---
@@ -62,6 +62,6 @@ These pages plan a high-availability deployment and size it against published be
 | [Tune the gateway for AI traffic](production-deployment/ai-workload-tuning.md) | Tune API Platform AI Gateway for LLM and MCP traffic: streaming timeouts, body buffers, guardrail limits, cost pricing data, and semantic cache backing. |
 | [Deploy and verify](production-deployment/deploy-and-verify.md) | Install the API Platform AI Gateway Helm chart, confirm the controller and runtime are healthy, route a live LLM request, and run upgrades and rollbacks. |
 | [Connect to AI Workspace](production-deployment/control-plane-connection.md) | Register a production AI Gateway with AI Workspace: the registration token as a Kubernetes Secret, the control plane address, TLS trust, and sync behavior. |
-| [AI Gateway performance](sizing-and-performance/index.md) | Review XPLATFORMAIGATEWAYX performance test methodology, deployment architecture, metrics, and benchmark results for two-CPU and four-CPU gateway runtimes. |
+| [AI Gateway performance](sizing-and-performance/index.md) | Review WSO2 API Platform AI Gateway performance test methodology, deployment architecture, metrics, and benchmark results for two-CPU and four-CPU gateway runtimes. |
 | [AI Gateway runtime with two CPUs](sizing-and-performance/ai-gateway-runtime-with-two-cpus.md) | View API Platform AI Gateway performance benchmark results with a two-CPU gateway runtime, including throughput, average response time, and percentiles. |
 | [AI Gateway runtime with four CPUs](sizing-and-performance/ai-gateway-runtime-with-four-cpus.md) | View API Platform AI Gateway performance benchmark results with a four-CPU gateway runtime, including throughput, average response time, and percentiles. |

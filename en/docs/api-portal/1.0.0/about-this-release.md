@@ -1,13 +1,13 @@
 ---
 title: "About this release"
 description: "What's included in API Portal & MCP Hub 1.0.0: the API and MCP catalog, API workflows, MCP registry, applications, authentication, theming, and the admin UI."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/about-this-release/
-md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/about-this-release.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/about-this-release/
+md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/about-this-release.md
 tags:
   - cloud
   - api-portal
   - release-notes
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-04
 content_type: "release-notes"
 ---
@@ -22,11 +22,11 @@ For more information on the API Portal & MCP Hub, see the [overview](overview.md
 
 ## Downloads
 
-Download the standalone distribution from the XAPIPLATFORMX release page:
+Download the standalone distribution from the WSO2 API Platform release page:
 
 ```bash
-curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/api-portal%2Fv1.0.0/xartifactprefixx-api-portal-1.0.0.zip && \
-unzip xartifactprefixx-api-portal-1.0.0.zip
+curl -sLO https://github.com/wso2/api-platform/releases/download/api-portal%2Fv1.0.0/wso2apip-api-portal-1.0.0.zip && \
+unzip wso2apip-api-portal-1.0.0.zip
 ```
 
 To install and run it, follow the [Getting started](getting-started.md) guide.
@@ -143,7 +143,7 @@ The API Portal & MCP Hub shares a control plane with AI Workspace. The following
 
 | Product | Compatible version |
 |---------|--------------------|
-| XAIWORKSPACEX | 1.0.0 |
+| WSO2 AI Workspace | 1.0.0 |
 
 The distribution bundles the Platform API control plane so the local-auth quickstart works out of the box, and the two are versioned and shipped together—no separate compatibility check is needed. A production deployment that authenticates against an identity provider doesn't need it: the portal's only outbound call to a Platform API is the local-auth login. Full prerequisites are listed in the [Getting started](getting-started.md) guide.
 
@@ -161,4 +161,4 @@ None recorded against a released version, since this is the first release.
 
 ## Known issues
 
-- [API Portal & MCP Hub](https://github.com/xgithuborgx/api-platform/issues?q=is%3Aissue+is%3Aopen+label%3AArea%2FDeveloperPortal)
+- [API Portal & MCP Hub](https://github.com/wso2/api-platform/issues?q=is%3Aissue+is%3Aopen+label%3AArea%2FDeveloperPortal)

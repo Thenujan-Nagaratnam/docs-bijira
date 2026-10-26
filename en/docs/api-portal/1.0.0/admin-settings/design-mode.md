@@ -1,14 +1,14 @@
 ---
 title: "Design Mode"
 description: "Develop and preview API Portal layouts and themes offline, without a running database or identity provider."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/admin-settings/design-mode/
-md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/admin-settings/design-mode.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/admin-settings/design-mode/
+md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/admin-settings/design-mode.md
 tags:
   - cloud
   - api-portal
   - theming
   - design-mode
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-05
 content_type: "how-to"
 ---
@@ -108,7 +108,7 @@ samples/
 ### `api.yaml` format (REST API)
 
 ```yaml
-apiVersion: api-portal.api-platform.xcrddomainx/v1
+apiVersion: api-portal.api-platform.wso2.com/v1
 kind: RestApi
 
 metadata:
@@ -136,7 +136,7 @@ spec:
 ### `api.yaml` format (MCP server)
 
 ```yaml
-apiVersion: api-portal.api-platform.xcrddomainx/v1
+apiVersion: api-portal.api-platform.wso2.com/v1
 kind: MCP
 
 metadata:
@@ -181,7 +181,7 @@ The portal re-reads API definitions from disk on every page request. Edit `api.y
 The Applications page is available in design mode and shows entries from `applications_path`. The format follows the same Kubernetes-style manifest used across all sample files:
 
 ```yaml
-apiVersion: api-portal.api-platform.xcrddomainx/v1
+apiVersion: api-portal.api-platform.wso2.com/v1
 kind: ApplicationList
 items:
 

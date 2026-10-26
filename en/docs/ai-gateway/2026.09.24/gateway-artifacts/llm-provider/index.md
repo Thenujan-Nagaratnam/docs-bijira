@@ -1,13 +1,13 @@
 ---
 title: "LLM provider"
 description: "Connect the AI Gateway to an LLM backend: what an LLM Provider holds, who configures it, and a guide for every provider template it ships."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/gateway-artifacts/llm-provider/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/gateway-artifacts/llm-provider.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/gateway-artifacts/llm-provider/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/gateway-artifacts/llm-provider.md
 tags:
   - ai-gateway
   - llm-provider
   - llm
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "concept"
 ---

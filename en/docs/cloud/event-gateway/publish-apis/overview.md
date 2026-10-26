@@ -1,13 +1,13 @@
 ---
 title: "Publish APIs on the Event Gateway"
 description: "Compare subscription-based and subscription-less approaches for publishing APIs deployed on the Event Gateway."
-canonical_url: https://xdocshostx/xdocspathx/cloud/event-gateway/publish-apis/overview/
-md_url: https://xdocshostx/xdocspathx/cloud/event-gateway/publish-apis/overview.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/event-gateway/publish-apis/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/event-gateway/publish-apis/overview.md
 tags:
   - cloud
   - event-gateway
   - publish
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "overview"
 ---

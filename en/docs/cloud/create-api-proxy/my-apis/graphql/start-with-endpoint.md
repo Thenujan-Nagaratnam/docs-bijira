@@ -1,13 +1,13 @@
 ---
 title: "Create GraphQL API Proxy from an Endpoint"
-description: "Create a GraphQL API proxy from an endpoint URL in XAPIPLATFORMX using schema introspection, then configure, deploy, and test it."
-canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/graphql/start-with-endpoint/
-md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/graphql/start-with-endpoint.md
+description: "Create a GraphQL API proxy from an endpoint URL in WSO2 API Platform using schema introspection, then configure, deploy, and test it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/graphql/start-with-endpoint/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/graphql/start-with-endpoint.md
 tags:
   - cloud
   - api-proxy
   - graphql
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -21,7 +21,7 @@ Unlike traditional REST APIs that require multiple endpoints for different resou
 ## Prerequisites
 
 - If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -32,7 +32,7 @@ Unlike traditional REST APIs that require multiple endpoints for different resou
 
 In this guide, you will create a GraphQL API proxy using an endpoint.
 
-1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
 3. Select **Start with Endpoint**.
 4. Select the API Type as **GraphQL**.

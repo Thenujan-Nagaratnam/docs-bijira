@@ -1,14 +1,14 @@
 ---
 title: "Deploy and Verify"
 description: "Install the API Platform AI Gateway Helm chart, confirm the controller and runtime are healthy, route a live LLM request, and run upgrades and rollbacks."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/deployment/production-deployment/deploy-and-verify/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/deployment/production-deployment/deploy-and-verify.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/deployment/production-deployment/deploy-and-verify/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/deployment/production-deployment/deploy-and-verify.md
 tags:
   - ai-gateway
   - production
   - helm
   - kubernetes
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-09
 content_type: "how-to"
 ---
@@ -20,7 +20,7 @@ content_type: "how-to"
 Render the chart without installing it. This catches the fail-closed encryption check and any malformed values before anything reaches the cluster:
 
 ```bash
-helm template ai-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+helm template ai-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --version 1.0.1 \
   --namespace ai-gateway \
   --values ./values.yaml > /dev/null
@@ -33,7 +33,7 @@ A failure mentioning encryption keys means `gateway.controller.encryptionKeys` i
 === "Open Container Initiative (OCI) registry (recommended)"
 
     ```bash
-    helm install ai-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+    helm install ai-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
       --version 1.0.1 \
       --namespace ai-gateway \
       --create-namespace \
@@ -106,7 +106,7 @@ curl --fail --show-error -X POST http://localhost:9090/api/management/v0.9/llm-p
   -H "Content-Type: application/yaml" \
   --netrc-file controller.netrc \
   --data-binary @- <<EOF
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProvider
 metadata:
   name: openai-provider
@@ -152,7 +152,7 @@ curl --fail --show-error -X POST http://localhost:9090/api/management/v0.9/llm-p
   -H "Content-Type: application/yaml" \
   --netrc-file controller.netrc \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: LlmProxy
 metadata:
   name: openai-assistant
@@ -251,13 +251,13 @@ kubectl get pvc -n ai-gateway
 Review what changed between chart versions:
 
 ```bash
-helm show values oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway --version <new-version>
+helm show values oci://ghcr.io/wso2/api-platform/helm-charts/gateway --version <new-version>
 ```
 
 Diff your release against the new chart. This needs the `helm-diff` plugin:
 
 ```bash
-helm diff upgrade ai-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+helm diff upgrade ai-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --version <new-version> \
   --namespace ai-gateway \
   --values ./values.yaml
@@ -266,7 +266,7 @@ helm diff upgrade ai-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/
 Upgrade:
 
 ```bash
-helm upgrade ai-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+helm upgrade ai-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --version <new-version> \
   --namespace ai-gateway \
   --values ./values.yaml \

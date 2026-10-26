@@ -1,13 +1,13 @@
 ---
 title: "Test WebSocket Endpoints via the WebSocket Console"
-description: "Test WebSocket API proxy endpoints in XAPIPLATFORMX using the built-in WebSocket Console with auto-generated test keys."
-canonical_url: https://xdocshostx/xdocspathx/cloud/test-api-proxy/ws-test-console/
-md_url: https://xdocshostx/xdocspathx/cloud/test-api-proxy/ws-test-console.md
+description: "Test WebSocket API proxy endpoints in WSO2 API Platform using the built-in WebSocket Console with auto-generated test keys."
+canonical_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/ws-test-console/
+md_url: https://wso2.com/api-platform/docs/cloud/test-api-proxy/ws-test-console.md
 tags:
   - cloud
   - testing
   - websocket
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -18,7 +18,7 @@ API Platform offers an integrated WebSocket Console to test WebSocket endpoints 
 
 Follow these steps to test a WebSocket endpoint using the WebSocket Console:
 
-1. Go to the [API Platform Console](https://console.xclouddomainx/) and log in.
+1. Go to the [API Platform Console](https://console.bijira.dev/) and log in.
 2. Select the project and API which you want to test.
 3. Click **Test** in the left navigation menu, then select **Console**. This will open the **WebSocket Console** pane.
 4. In the **Console** pane, select the desired environment from the drop-down menu.

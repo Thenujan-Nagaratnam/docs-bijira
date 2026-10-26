@@ -1,15 +1,15 @@
 ---
 title: "API Platform AI Gateway Overview"
 description: "Manage and secure AI traffic with API Platform AI Gateway: LLM providers, LLM proxies, MCP proxies, A2A agents, and guardrails for AI traffic."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/overview/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/overview.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/overview/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/overview.md
 tags:
   - ai-gateway
   - llm
   - mcp
   - a2a
   - agents
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-23
 content_type: "concept"
 ---

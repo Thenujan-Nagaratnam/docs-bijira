@@ -1,12 +1,12 @@
 ---
 title: "Create REST API Proxy from Scratch"
-description: "Create a REST API proxy from scratch by manually specifying API proxy details in XAPIPLATFORMX, then configure, deploy, and test it."
-canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/http/start-from-scratch/
-md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/http/start-from-scratch.md
+description: "Create a REST API proxy from scratch by manually specifying API proxy details in WSO2 API Platform, then configure, deploy, and test it."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/start-from-scratch/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/start-from-scratch.md
 tags:
   - cloud
   - api-proxy
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -18,7 +18,7 @@ An API proxy acts as an intermediary between an existing API and API Platform, i
 ## Prerequisites
 
 - If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
@@ -29,7 +29,7 @@ An API proxy acts as an intermediary between an existing API and API Platform, i
 
 In this guide, you will create an API proxy from the Scratch.
 
-1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in. This opens the project home page.
+1. Go to [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click + Create. Otherwise, proceed to the next step.
 3. Select **Start from Scratch**.
 4. Specify the following values as API proxy details:

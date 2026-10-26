@@ -1,13 +1,13 @@
 ---
 title: "Token-based rate limit"
 description: "Limit LLM traffic by prompt, completion, or total token consumption within a configurable time window."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/rate-limit/token-based-rate-limit/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/rate-limit/token-based-rate-limit.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/token-based-rate-limit/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/rate-limit/token-based-rate-limit.md
 tags:
   - cloud
   - ai-workspace
   - rate-limit
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -81,4 +81,4 @@ Limit prompt tokens to 50,000 per hour and completion tokens to 20,000 per hour 
 
 - [LLM Cost-Based Rate Limit](llm-cost-based-rate-limit.md) — Enforce monetary spending budgets instead of token counts
 - [Rate Limit - Basic](../other-policies/basic-rate-limit.md) — Simple request count-based rate limiting
-- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version
+- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

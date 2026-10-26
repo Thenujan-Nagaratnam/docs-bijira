@@ -1,13 +1,13 @@
 ---
 title: "Create and configure an LLM provider"
 description: "Create an LLM provider: choose a template, set the upstream URL and credentials, deploy it with the management API, and test the connection."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/gateway-artifacts/llm-provider/create-and-configure-an-llm-provider/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/gateway-artifacts/llm-provider/create-and-configure-an-llm-provider.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/gateway-artifacts/llm-provider/create-and-configure-an-llm-provider/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/gateway-artifacts/llm-provider/create-and-configure-an-llm-provider.md
 tags:
   - ai-gateway
   - llm-provider
   - llm
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
@@ -40,7 +40,7 @@ The definition below deploys an OpenAI provider through the management API. Repl
       -H "Content-Type: application/yaml" \
       -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
       --data-binary @- <<'EOF'
-    apiVersion: gateway.api-platform.xcrddomainx/v1
+    apiVersion: gateway.api-platform.wso2.com/v1
     kind: LlmProvider
     metadata:
       name: openai-provider
@@ -73,7 +73,7 @@ The definition below deploys an OpenAI provider through the management API. Repl
 
     ```powershell
     @'
-    apiVersion: gateway.api-platform.xcrddomainx/v1
+    apiVersion: gateway.api-platform.wso2.com/v1
     kind: LlmProvider
     metadata:
       name: openai-provider

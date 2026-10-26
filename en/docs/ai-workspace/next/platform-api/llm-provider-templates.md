@@ -1,12 +1,12 @@
 ---
 title: "Platform API: LLM provider templates"
 description: "REST API reference for creating, versioning, listing, and deleting LLM provider templates."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/llm-provider-templates/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/llm-provider-templates.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/llm-provider-templates/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/llm-provider-templates.md
 tags:
   - ai-workspace
   - platform-api
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -44,7 +44,7 @@ identified via the JWT token.
 {
   "id": "openai",
   "displayName": "OpenAI",
-  "managedBy": "xtemplateownerx",
+  "managedBy": "wso2",
   "description": "Default OpenAI template",
   "version": "v1.0",
   "openapi": "openapi: 3.0.3\ninfo:\n  title: Provider API\n  version: v1.0\npaths: {}\n",
@@ -140,7 +140,7 @@ Required scopes (the token must carry at least one of): `ap:llm_template:create`
   "id": "openai",
   "groupId": "openai",
   "displayName": "OpenAI",
-  "managedBy": "xtemplateownerx",
+  "managedBy": "wso2",
   "description": "Default OpenAI template",
   "createdBy": "john.doe",
   "updatedBy": "john.doe",
@@ -327,7 +327,7 @@ Retrieves LLM provider templates based on the `query` parameter:
   - `query=groupId:<id>&version:<ver>` -> retrieve a specific template version
 
 All filters are provided via the URL-encoded `query` parameter (e.g.
-`?query=groupId%3Axtemplategroupprefixx-openai%26version%3Av2.0`).
+`?query=groupId%3Awso2-openai%26version%3Av2.0`).
 
 Returns a single `LLMProviderTemplate` only when both `groupId` and `version` are specified; 
 otherwise returns an `LLMProviderTemplateListResponse`.
@@ -345,7 +345,7 @@ Required scopes (the token must carry at least one of): `ap:llm_template:read`, 
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|query|query|string|false|URL-encoded search DSL. `query=latest:true` lists only the latest version of each family; `query=groupId:<id>` lists that family's versions; adding `&version:<ver>` returns the single full template for that version. Terms are `&`-separated `key:value` pairs and the whole value is percent-encoded (e.g. groupId%3Axtemplategroupprefixx-openai%26version%3Av2.0).|
+|query|query|string|false|URL-encoded search DSL. `query=latest:true` lists only the latest version of each family; `query=groupId:<id>` lists that family's versions; adding `&version:<ver>` returns the single full template for that version. Terms are `&`-separated `key:value` pairs and the whole value is percent-encoded (e.g. groupId%3Awso2-openai%26version%3Av2.0).|
 |limit|query|integer|false|Maximum number of items to return per page.|
 |offset|query|integer|false|Zero-based index of the first item to return.|
 
@@ -361,7 +361,7 @@ Required scopes (the token must carry at least one of): `ap:llm_template:read`, 
       "id": "openai",
       "groupId": "openai",
       "displayName": "OpenAI",
-      "managedBy": "xtemplateownerx",
+      "managedBy": "wso2",
       "description": "Default OpenAI template",
       "createdBy": "john.doe",
       "version": "v1.0",
@@ -522,7 +522,7 @@ is rejected. `toTemplateId`, when supplied, must equal the handle
 derived from the family and `toVersion`. Organization is identified via
 the JWT token.
 
-Built-in (XBRANDX-managed) template families are immutable: adding a version
+Built-in (WSO2-managed) template families are immutable: adding a version
 to one is rejected with `403`. To base a custom template on a built-in,
 create a new template (`POST /llm-provider-templates`) instead — it gets
 its own `group_id` and starts at v1.0.
@@ -769,7 +769,7 @@ Required scopes (the token must carry at least one of): `ap:llm_template:read`, 
   "id": "openai",
   "groupId": "openai",
   "displayName": "OpenAI",
-  "managedBy": "xtemplateownerx",
+  "managedBy": "wso2",
   "description": "Default OpenAI template",
   "createdBy": "john.doe",
   "updatedBy": "john.doe",
@@ -916,7 +916,7 @@ version of the template.
 {
   "id": "openai",
   "displayName": "OpenAI",
-  "managedBy": "xtemplateownerx",
+  "managedBy": "wso2",
   "description": "Default OpenAI template",
   "version": "v1.0",
   "openapi": "openapi: 3.0.3\ninfo:\n  title: Provider API\n  version: v1.0\npaths: {}\n",
@@ -1013,7 +1013,7 @@ Required scopes (the token must carry at least one of): `ap:llm_template:update`
   "id": "openai",
   "groupId": "openai",
   "displayName": "OpenAI",
-  "managedBy": "xtemplateownerx",
+  "managedBy": "wso2",
   "description": "Default OpenAI template",
   "createdBy": "john.doe",
   "updatedBy": "john.doe",
@@ -1216,7 +1216,7 @@ Required scopes (the token must carry at least one of): `ap:llm_template:update`
   "id": "openai",
   "groupId": "openai",
   "displayName": "OpenAI",
-  "managedBy": "xtemplateownerx",
+  "managedBy": "wso2",
   "description": "Default OpenAI template",
   "createdBy": "john.doe",
   "updatedBy": "john.doe",

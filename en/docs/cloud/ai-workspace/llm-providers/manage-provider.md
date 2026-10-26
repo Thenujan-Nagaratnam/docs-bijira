@@ -1,13 +1,13 @@
 ---
 title: "Manage an LLM provider"
 description: "Configure connection, access control, security, rate limiting, guardrails, and models for a deployed LLM provider, then redeploy or delete it."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/llm-providers/manage-provider/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/llm-providers/manage-provider.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-providers/manage-provider/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-providers/manage-provider.md
 tags:
   - cloud
   - ai-workspace
   - llm-providers
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -258,7 +258,7 @@ Guardrail parameters cannot be edited in place. To change a guardrail's configur
 !!! warning "Production Impact"
     Guardrail changes require a manual redeploy to take effect on deployed gateways. Test thoroughly in a non-production environment before enabling strict guardrails.
 
-**Learn more:** [Guardrails Overview](../policies/guardrails/overview.md). For the full policy catalog, visit the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/).
+**Learn more:** [Guardrails Overview](../policies/guardrails/overview.md). For the full policy catalog, visit the [Policy Hub](https://wso2.com/api-platform/policy-hub/).
 
 ---
 

@@ -1,13 +1,13 @@
 ---
 title: "Configure an MCP proxy"
 description: "Create an MCP proxy from an upstream MCP server URL and deploy it to a gateway."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/mcp-proxies/configure-proxy/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/mcp-proxies/configure-proxy.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/mcp-proxies/configure-proxy/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/mcp-proxies/configure-proxy.md
 tags:
   - cloud
   - ai-workspace
   - mcp-proxies
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---

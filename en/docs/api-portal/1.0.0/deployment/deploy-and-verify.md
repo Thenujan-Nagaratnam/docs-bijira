@@ -1,14 +1,14 @@
 ---
 title: "Deploy & Verify"
 description: "Install the API Portal & MCP Hub on Kubernetes or virtual machines, confirm instances came up healthy and share sessions, and follow a safe upgrade procedure."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/deployment/deploy-and-verify/
-md_url: https://xdocshostx/xdocspathx/api-portal/1.0.0/deployment/deploy-and-verify.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/deployment/deploy-and-verify/
+md_url: https://wso2.com/api-platform/docs/api-portal/1.0.0/deployment/deploy-and-verify.md
 tags:
   - cloud
   - api-portal
   - deployment
   - kubernetes
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-06
 content_type: "how-to"
 ---

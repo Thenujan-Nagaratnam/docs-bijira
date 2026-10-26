@@ -1,13 +1,13 @@
 ---
 title: "Prompt decorator in AI Workspace"
 description: "Prepend or append system instructions or context to every LLM request, configured in AI Workspace."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/other-policies/prompt-decorator/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/other-policies/prompt-decorator.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-decorator/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-decorator.md
 tags:
   - cloud
   - ai-workspace
   - prompt-management
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -92,4 +92,4 @@ The following configuration prepends a system instruction to every chat completi
 
 - [Policies Overview](../overview.md)
 - [Prompt Template](prompt-template.md) — Apply reusable prompt templates with parameter substitution
-- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version
+- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

@@ -1,13 +1,13 @@
 ---
 title: "Configure a custom external key manager"
 description: "Integrate any OIDC/OAuth2-compliant identity provider with API Platform as a custom external key manager."
-canonical_url: https://xdocshostx/xdocspathx/cloud/administer/configure-an-external-idp/configure-custom-external-idp/
-md_url: https://xdocshostx/xdocspathx/cloud/administer/configure-an-external-idp/configure-custom-external-idp.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-custom-external-idp/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-custom-external-idp.md
 tags:
   - cloud
   - administer
   - key-manager
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -32,12 +32,12 @@ Before you try out this guide, be sure you have the following:
 
 Follow the steps below to add a custom key manager in API Platform:
 
-1. Sign in to the API Platform Console at [https://console.xclouddomainx/](https://console.xclouddomainx).
+1. Sign in to the API Platform Console at [https://console.bijira.dev/](https://console.bijira.dev).
 2. In the left navigation menu, click **Settings**.
 3. In the header, click the **Organization** list. This will open the organization level settings page.
 4. On the **Key Managers** tab, click **+ Key Manager**.
 
-    ![Key Managers page listing XCLOUDCODENAMEX Built-in STS with Add Key Manager button highlighted](../../../assets/img/administer/settings/external-km/add_external_km.png)
+    ![Key Managers page listing Bijira Built-in STS with Add Key Manager button highlighted](../../../assets/img/administer/settings/external-km/add_external_km.png)
 
 5. Select  **Custom** as the key manager.
 
@@ -55,7 +55,7 @@ Follow the steps below to add a custom key manager in API Platform:
 
 Now you have configured your custom key manager as an external key manager in API Platform.
 
-![Key Managers list showing XCLOUDCODENAMEX Built-in STS and newly added custom-key-manager entries](../../../assets/img/administer/settings/external-km/add_external_km_custom_list.png)
+![Key Managers list showing Bijira Built-in STS and newly added custom-key-manager entries](../../../assets/img/administer/settings/external-km/add_external_km_custom_list.png)
 
 ## Step 2: Add the external key manager in API Platform Developer Portal
 

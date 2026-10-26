@@ -1,13 +1,13 @@
 ---
 title: "Configure workflow approvals"
 description: "Set up approval processes for environment promotion and URL customization workflows in API Platform."
-canonical_url: https://xdocshostx/xdocspathx/cloud/workflows/configure-workflow-approvals/
-md_url: https://xdocshostx/xdocspathx/cloud/workflows/configure-workflow-approvals.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/workflows/configure-workflow-approvals/
+md_url: https://wso2.com/api-platform/docs/cloud/workflows/configure-workflow-approvals.md
 tags:
   - cloud
   - workflows
   - approvals
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---

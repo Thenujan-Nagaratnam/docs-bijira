@@ -1,13 +1,13 @@
 ---
 title: "Manage API keys"
 description: "Generate, rotate, revoke, and associate API keys for a subscribed API in the API Portal & MCP Hub."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/consume-an-api/manage-api-keys/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/consume-an-api/manage-api-keys.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/consume-an-api/manage-api-keys/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/consume-an-api/manage-api-keys.md
 tags:
   - cloud
   - api-portal
   - api-keys
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-24
 content_type: "how-to"
 ---

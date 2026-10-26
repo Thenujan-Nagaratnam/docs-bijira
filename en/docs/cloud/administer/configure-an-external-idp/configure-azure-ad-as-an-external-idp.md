@@ -1,14 +1,14 @@
 ---
 title: "Configure Azure AD as an external key manager"
 description: "Connect Microsoft Azure Active Directory (Azure AD) to API Platform and the Developer Portal to manage API access control with scopes."
-canonical_url: https://xdocshostx/xdocspathx/cloud/administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp/
-md_url: https://xdocshostx/xdocspathx/cloud/administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/configure-an-external-idp/configure-azure-ad-as-an-external-idp.md
 tags:
   - cloud
   - administer
   - key-manager
   - azure-ad
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -28,13 +28,13 @@ Before you try out this guide, be sure you have the following:
 
 Follow the steps below to add Azure AD as a key manager in API Platform:
 
-1. Sign in to the API Platform Console at [https://console.xclouddomainx/](https://console.xclouddomainx).
+1. Sign in to the API Platform Console at [https://console.bijira.dev/](https://console.bijira.dev).
 2. In the left navigation menu, click **Settings**.
 3. In the header, click the **Organization** list. This will open the organization level settings page.
 4. On the **Key Managers** tab, click **+ Key Manager**.
 5. Select  **Microsoft Entra ID (Azure AD)** as the key manager.
 
-    ![Key Managers page listing XCLOUDCODENAMEX Built-in STS with Add Key Manager button highlighted](../../../assets/img/administer/settings/external-km/add_external_km.png)
+    ![Key Managers page listing Bijira Built-in STS with Add Key Manager button highlighted](../../../assets/img/administer/settings/external-km/add_external_km.png)
 
 6. Click **Microsoft Entra ID (Azure AD)**.
 
@@ -60,7 +60,7 @@ Follow the steps below to add Azure AD as a key manager in API Platform:
 
 Now you have configured Azure AD as an external key manager in API Platform.
 
-![Key Managers list showing XCLOUDCODENAMEX Built-in STS and newly added external-azure-km entries](../../../assets/img/administer/settings/external-km/add_external_km_azure_list.png)
+![Key Managers list showing Bijira Built-in STS and newly added external-azure-km entries](../../../assets/img/administer/settings/external-km/add_external_km_azure_list.png)
 
 ## Step 2: Add Azure AD as an external key manager in API Platform Developer Portal
 

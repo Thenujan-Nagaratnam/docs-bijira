@@ -1,15 +1,15 @@
 ---
 title: "AI Gateway Quick Start Guide"
 description: "Run the AI Gateway with Docker Compose, deploy an LLM provider, route your first LLM request, and govern the gateway from AI Workspace."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/quick-start-guide/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/quick-start-guide.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/quick-start-guide.md
 tags:
   - ai-gateway
   - llm
   - mcp
   - quickstart
   - docker
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-26
 content_type: "quickstart"
 ---
@@ -49,12 +49,12 @@ The commands below use version `1.2.0`. Substitute the API Platform AI Gateway r
 
     ```bash
     # Download distribution.
-    curl -fL -o xartifactprefixx-ai-gateway-1.2.0.zip https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip
+    curl -fL -o wso2apip-ai-gateway-1.2.0.zip https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
 
     # Unzip the downloaded distribution.
-    unzip xartifactprefixx-ai-gateway-1.2.0.zip
+    unzip wso2apip-ai-gateway-1.2.0.zip
 
-    cd xartifactprefixx-ai-gateway-1.2.0/
+    cd wso2apip-ai-gateway-1.2.0/
 
     # Run the one-time setup. This provisions the Advanced Encryption Standard (AES)-256 at-rest
     # encryption key, the router HTTPS listener certificate, api-platform.env, and the
@@ -77,12 +77,12 @@ The commands below use version `1.2.0`. Substitute the API Platform AI Gateway r
 
     ```powershell
     # Download distribution.
-    Invoke-WebRequest -Uri https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.2.0/xartifactprefixx-ai-gateway-1.2.0.zip -OutFile xartifactprefixx-ai-gateway-1.2.0.zip
+    Invoke-WebRequest -Uri https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip -OutFile wso2apip-ai-gateway-1.2.0.zip
 
     # Unzip the downloaded distribution.
-    Expand-Archive -Path xartifactprefixx-ai-gateway-1.2.0.zip -DestinationPath .
+    Expand-Archive -Path wso2apip-ai-gateway-1.2.0.zip -DestinationPath .
 
-    Set-Location xartifactprefixx-ai-gateway-1.2.0
+    Set-Location wso2apip-ai-gateway-1.2.0
 
     # Run the one-time setup. This provisions the Advanced Encryption Standard (AES)-256 at-rest
     # encryption key, the router HTTPS listener certificate, api-platform.env, and the
@@ -143,7 +143,7 @@ As a platform administrator, deploy an LLM provider for the vendor whose API key
           -H "Content-Type: application/yaml" \
           -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
           --data-binary @- <<'EOF'
-        apiVersion: gateway.api-platform.xcrddomainx/v1
+        apiVersion: gateway.api-platform.wso2.com/v1
         kind: LlmProvider
         metadata:
           name: openai-provider
@@ -176,7 +176,7 @@ As a platform administrator, deploy an LLM provider for the vendor whose API key
 
         ```powershell
         @'
-        apiVersion: gateway.api-platform.xcrddomainx/v1
+        apiVersion: gateway.api-platform.wso2.com/v1
         kind: LlmProvider
         metadata:
           name: openai-provider
@@ -223,7 +223,7 @@ As a platform administrator, deploy an LLM provider for the vendor whose API key
           -H "Content-Type: application/yaml" \
           -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
           --data-binary @- <<'EOF'
-        apiVersion: gateway.api-platform.xcrddomainx/v1
+        apiVersion: gateway.api-platform.wso2.com/v1
         kind: LlmProvider
         metadata:
           name: anthropic-provider
@@ -252,7 +252,7 @@ As a platform administrator, deploy an LLM provider for the vendor whose API key
 
         ```powershell
         @'
-        apiVersion: gateway.api-platform.xcrddomainx/v1
+        apiVersion: gateway.api-platform.wso2.com/v1
         kind: LlmProvider
         metadata:
           name: anthropic-provider
@@ -301,7 +301,7 @@ As a platform administrator, deploy an LLM provider for the vendor whose API key
           -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
           -H "Content-Type: application/yaml" \
           --data-binary @- <<EOF
-        apiVersion: gateway.api-platform.xcrddomainx/v1
+        apiVersion: gateway.api-platform.wso2.com/v1
         kind: Secret
         metadata:
           name: bedrock-api-key
@@ -321,7 +321,7 @@ As a platform administrator, deploy an LLM provider for the vendor whose API key
           -u "$ADMIN_USERNAME:$ADMIN_PASSWORD" \
           -H "Content-Type: application/yaml" \
           --data-binary @- <<EOF
-        apiVersion: gateway.api-platform.xcrddomainx/v1
+        apiVersion: gateway.api-platform.wso2.com/v1
         kind: LlmProvider
         metadata:
           name: bedrock-provider
@@ -357,7 +357,7 @@ As a platform administrator, deploy an LLM provider for the vendor whose API key
         $env:AWS_BEARER_TOKEN_BEDROCK = "<bedrock-api-key>"
 
         @"
-        apiVersion: gateway.api-platform.xcrddomainx/v1
+        apiVersion: gateway.api-platform.wso2.com/v1
         kind: Secret
         metadata:
           name: bedrock-api-key
@@ -378,7 +378,7 @@ As a platform administrator, deploy an LLM provider for the vendor whose API key
 
         ```powershell
         @"
-        apiVersion: gateway.api-platform.xcrddomainx/v1
+        apiVersion: gateway.api-platform.wso2.com/v1
         kind: LlmProvider
         metadata:
           name: bedrock-provider
@@ -479,7 +479,7 @@ This stops the containers and removes the `controller-data` volume. The next sta
 
 - Expose a provider to your applications through a proxy that has its own context and policies: [LLM proxy](gateway-artifacts/llm-proxy.md)
 - Route to more than one provider, with failover: [Multi-provider routing](routing/multi-provider-routing.md)
-- Add guardrails to a proxy, such as [PII masking](https://xpolicyhubhostx/xpolicyhubpathx/policies/pii-masking-regex) or a [JSON schema guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/json-schema-guardrail)
+- Add guardrails to a proxy, such as [PII masking](https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex) or a [JSON schema guardrail](https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail)
 - Expose an MCP server through the gateway: [MCP proxy](gateway-artifacts/mcp-proxy.md)
 - Govern AI traffic across all your gateways from the control plane: [AI Workspace overview](../../ai-workspace/next/overview.md)
 - Take this gateway to production on Kubernetes: [Production deployment overview](./setup-and-deployment/production-deployment/index.md)

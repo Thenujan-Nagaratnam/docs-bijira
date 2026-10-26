@@ -1,13 +1,13 @@
 ---
 title: "Artifact types"
 description: "Choose which artifact types—APIs, Model Context Protocol (MCP) servers, and API workflows—the API Portal & MCP Hub serves, via the api_portal.artifacts table in config.toml."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/setting-up/artifact-types/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/setting-up/artifact-types.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/setting-up/artifact-types/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/setting-up/artifact-types.md
 tags:
   - cloud
   - api-portal
   - configuration
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-31
 content_type: "concept"
 ---

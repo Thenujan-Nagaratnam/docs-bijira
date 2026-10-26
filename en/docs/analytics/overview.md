@@ -1,42 +1,42 @@
 ---
 title: "API analytics with Moesif"
 description: "Integrate Moesif Basic for real-time traffic observability, alerting, and analytics dashboards across APIs, LLM proxies, and MCP servers."
-canonical_url: https://xdocshostx/xdocspathx/analytics/overview/
-md_url: https://xdocshostx/xdocspathx/analytics/overview.md
+canonical_url: https://wso2.com/api-platform/docs/analytics/overview/
+md_url: https://wso2.com/api-platform/docs/analytics/overview.md
 tags:
   - analytics
   - moesif
   - api-management
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-03
 content_type: "overview"
 ---
   
-Moesif Basic provides a frictionless and integrated API analytics experience in XAPIPLATFORMX at no additional expense under your current XBRANDX subscription. Without any complex setup or instrumentation, you get real-time observability and telemetry across heterogeneous API environments. You can leverage this unified telemetry plane to monitor traffic, audit system behaviors, diagnose infrastructure latencies, and more. XBRANDX gateways directly integrate with and route telemetry to Moesif, helping enterprise architects eliminate the overhead associated with constructing bespoke analytical pipelines.
+Moesif Basic provides a frictionless and integrated API analytics experience in WSO2 API Platform at no additional expense under your current WSO2 subscription. Without any complex setup or instrumentation, you get real-time observability and telemetry across heterogeneous API environments. You can leverage this unified telemetry plane to monitor traffic, audit system behaviors, diagnose infrastructure latencies, and more. WSO2 gateways directly integrate with and route telemetry to Moesif, helping enterprise architects eliminate the overhead associated with constructing bespoke analytical pipelines.
 
-This document describes the setup processes and the available features to help you get started with Moesif in XAPIPLATFORMX. 
+This document describes the setup processes and the available features to help you get started with Moesif in WSO2 API Platform. 
 
 ## Setup and access configurations
 
 Moesif is available in: 
 
-* SaaS/cloud-managed endpoints in XCLOUDNAMEX  
+* SaaS/cloud-managed endpoints in WSO2 API Platform Cloud  
 * Self-managed, hybrid deployments using the self-hosted API Platform Gateway and API Manager
 
-### SaaS control plane in XCLOUDNAMEX
+### SaaS control plane in WSO2 API Platform Cloud
 
 For managed SaaS environments, setup is executed entirely through the cloud Console.
 
 When you create an organization using the Console, you can start using Moesif Basic right away without any additional steps. To access it, from the organization or project view in the Console, select **Insights** and then **API Insights** in the navigation menu.
 
-### Self-Hosted Platform Gateway (XAPIPLATFORMX)
+### Self-Hosted Platform Gateway (WSO2 API Platform)
 
 For self-hosted Platform API and AI gateways, follow these instructions:
 
-* [Moesif Analytics in API Gateway](https://xdocshostx/xdocspathx/api-gateway/analytics/moesif-analytics/)  
-* [Moesif Analytics in AI Gateway](https://xdocshostx/xdocspathx/ai-gateway/analytics/moesif-analytics/) 
+* [Moesif Analytics in API Gateway](https://wso2.com/api-platform/docs/api-gateway/analytics/moesif-analytics/)  
+* [Moesif Analytics in AI Gateway](https://wso2.com/api-platform/docs/ai-gateway/analytics/moesif-analytics/) 
 
-### Self-Managed XAPIMANAGERX
+### Self-Managed WSO2 API Manager
 
 Follow the instructions in [Moesif Analytics Integration in API Manager docs](https://apim.docs.wso2.com/en/latest/monitoring/api-analytics/moesif-analytics/moesif-integration-guide/).
 

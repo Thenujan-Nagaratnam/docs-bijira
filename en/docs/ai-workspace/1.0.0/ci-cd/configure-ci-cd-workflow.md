@@ -1,13 +1,13 @@
 ---
 title: "Configure an AI Workspace CI/CD workflow"
 description: "Use the ap CLI to validate and apply AI Workspace artifacts such as LLM providers, App LLM proxies, and MCP proxies from project files."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/ci-cd/configure-ci-cd-workflow/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/ci-cd/configure-ci-cd-workflow.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/ci-cd/configure-ci-cd-workflow/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/ci-cd/configure-ci-cd-workflow.md
 tags:
   - cloud
   - ai-workspace
   - ci-cd
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-08
 content_type: "how-to"
 ---
@@ -54,9 +54,9 @@ The AI Workspace CLI supports `basic`, `oauth`, and `api-key` authentication. En
 
 | Auth type | Environment variables |
 |-----------|-----------------------|
-| `basic` | `XENVPREFIXXAP_AIWORKSPACE_USERNAME`, `XENVPREFIXXAP_AIWORKSPACE_PASSWORD` |
-| `oauth` | `XENVPREFIXXAP_AIWORKSPACE_TOKEN` |
-| `api-key` | `XENVPREFIXXAP_AIWORKSPACE_API_KEY` |
+| `basic` | `WSO2AP_AIWORKSPACE_USERNAME`, `WSO2AP_AIWORKSPACE_PASSWORD` |
+| `oauth` | `WSO2AP_AIWORKSPACE_TOKEN` |
+| `api-key` | `WSO2AP_AIWORKSPACE_API_KEY` |
 
 ## Configure the gateway connection
 
@@ -109,18 +109,18 @@ Create a project if you don't already have one.
 === "Example"
     ```shell
     ap project init \
-      --display-name xsampleslugx-claude-proxy \
+      --display-name wso2-claude-proxy \
       --type LLM-Proxy \
       --version v1.0 \
       --context /customer-support
 
-    cd xsampleslugx-claude-proxy
+    cd wso2-claude-proxy
     ```
 
 The project contains the files used by the AI Workspace build and apply commands.
 
 ```text
-xsampleslugx-claude-proxy/
+wso2-claude-proxy/
 |-- metadata.yaml
 |-- runtime.yaml
 |-- definition.yaml
@@ -147,7 +147,7 @@ For example, an App LLM proxy can define its metadata and intended gateways in `
 ```yaml
 kind: LlmProxyMetadata
 metadata:
-  name: xsampleslugx-claude-proxy
+  name: wso2-claude-proxy
 spec:
   displayName: Customer Support Proxy
   version: v1.0
@@ -162,9 +162,9 @@ The corresponding `runtime.yaml` uses the same artifact name and the matching ru
 ```yaml
 kind: LlmProxy
 metadata:
-  name: xsampleslugx-claude-proxy
+  name: wso2-claude-proxy
 spec:
-  context: /xsampleslugx-claude-proxy
+  context: /wso2-claude-proxy
   description: Proxy endpoint for the customer support assistant.
   provider:
     id: openai-provider
@@ -191,7 +191,7 @@ Run `ap ai-workspace build` to validate the project files. If you run the comman
     ap ai-workspace build
 
     # From another directory
-    ap ai-workspace build -f /path/to/xsampleslugx-claude-proxy
+    ap ai-workspace build -f /path/to/wso2-claude-proxy
     ```
 
 The build command validates that:
@@ -212,7 +212,7 @@ Apply `runtime.yaml` to the selected gateway so the runtime changes described in
 
 === "Example"
     ```shell
-    ap gateway apply -f /path/to/xsampleslugx-claude-proxy/runtime.yaml
+    ap gateway apply -f /path/to/wso2-claude-proxy/runtime.yaml
     ```
 
 This deploys or updates the runtime artifact on the active gateway. The AI Workspace apply step is separate and can be run before or after the gateway apply step in the same pipeline, depending on how you structure promotion for the environment.
@@ -261,7 +261,7 @@ For App LLM proxies and MCP proxies, include the project ID.
 
     # From another directory
     ap ai-workspace apply \
-      -f /path/to/xsampleslugx-claude-proxy \
+      -f /path/to/wso2-claude-proxy \
       --project-id customer-support-project
     ```
 
@@ -332,14 +332,14 @@ The following example validates an App LLM proxy or MCP proxy project, applies t
     ap gateway use --display-name "dev-gw"
     ap ai-workspace use --display-name "dev-aiws"
 
-    ap ai-workspace build -f /path/to/xsampleslugx-claude-proxy
+    ap ai-workspace build -f /path/to/wso2-claude-proxy
 
-    ap gateway apply -f /path/to/xsampleslugx-claude-proxy/runtime.yaml
+    ap gateway apply -f /path/to/wso2-claude-proxy/runtime.yaml
 
     ap ai-workspace apply \
-      -f /path/to/xsampleslugx-claude-proxy \
+      -f /path/to/wso2-claude-proxy \
       --project-id customer-support-project \
-      --env-file /path/to/xsampleslugx-claude-proxy/values.env
+      --env-file /path/to/wso2-claude-proxy/values.env
     ```
 
 For an LLM provider project, omit `--project-id`.

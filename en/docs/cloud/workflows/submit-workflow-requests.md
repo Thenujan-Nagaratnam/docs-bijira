@@ -1,13 +1,13 @@
 ---
 title: "Submit workflow approval requests"
 description: "Request approval to promote an API proxy or configure a custom URL when a workflow approval is required."
-canonical_url: https://xdocshostx/xdocspathx/cloud/workflows/submit-workflow-requests/
-md_url: https://xdocshostx/xdocspathx/cloud/workflows/submit-workflow-requests.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/workflows/submit-workflow-requests/
+md_url: https://wso2.com/api-platform/docs/cloud/workflows/submit-workflow-requests.md
 tags:
   - cloud
   - workflows
   - approvals
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---

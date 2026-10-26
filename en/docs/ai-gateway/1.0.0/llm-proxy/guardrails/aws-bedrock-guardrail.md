@@ -1,13 +1,13 @@
 ---
 title: "AWS Bedrock Guardrail"
 description: "Validate LLM request and response content against AWS Bedrock Guardrails for content filtering, topic detection, and PII masking."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/llm-proxy/guardrails/aws-bedrock-guardrail/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.0.0/llm-proxy/guardrails/aws-bedrock-guardrail.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/llm-proxy/guardrails/aws-bedrock-guardrail/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.0.0/llm-proxy/guardrails/aws-bedrock-guardrail.md
 tags:
   - ai-gateway
   - guardrails
   - aws
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-16
 content_type: "reference"
 ---
@@ -129,7 +129,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic YWRtaW46YWRtaW4=" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider
 metadata:
   name: bedrock-guardrail-provider

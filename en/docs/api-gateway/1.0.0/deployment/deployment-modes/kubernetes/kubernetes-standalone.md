@@ -1,14 +1,14 @@
 ---
 title: "Deploy in Kubernetes Standalone Mode"
 description: "Install and manage API Platform Gateway on Kubernetes using the standalone Helm chart, without the Gateway Operator."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/deployment/deployment-modes/kubernetes/kubernetes-standalone/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.0.0/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/deployment/deployment-modes/kubernetes/kubernetes-standalone/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.0.0/deployment/deployment-modes/kubernetes/kubernetes-standalone.md
 tags:
   - api-gateway
   - kubernetes
   - deployment
   - helm
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-17
 content_type: "how-to"
 ---
@@ -31,7 +31,7 @@ The gateway chart deploys the runtime components used by API Platform Gateway (c
 
 Chart reference:
 
-- OCI chart: `oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway`
+- OCI chart: `oci://ghcr.io/wso2/api-platform/helm-charts/gateway`
 - Local chart (repo): `kubernetes/helm/gateway-helm-chart`
 
 ## Prerequisites
@@ -66,7 +66,7 @@ Use one of the following patterns.
 ### Default install
 
 ```bash
-helm install ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --set gateway.developmentMode=true
 ```
 
@@ -75,7 +75,7 @@ helm install ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gatew
 ```bash
 kubectl create namespace api-gateway
 
-helm install ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --namespace api-gateway \
   --set gateway.developmentMode=true
 ```
@@ -83,7 +83,7 @@ helm install ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gatew
 ### Install with control-plane overrides
 
 ```bash
-helm install ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --set gateway.controller.controlPlane.host="platform.example.com" \
   --set gateway.controller.controlPlane.port=8443 \
   --set gateway.controller.controlPlane.token.value="your-token-here" \
@@ -93,7 +93,7 @@ helm install ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gatew
 ### Install with a values file
 
 ```bash
-helm install ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   -f custom-values.yaml
 ```
 
@@ -119,7 +119,7 @@ kubectl logs -l app.kubernetes.io/component=gateway-runtime
 Upgrade:
 
 ```bash
-helm upgrade ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway -f custom-values.yaml
+helm upgrade ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway -f custom-values.yaml
 ```
 
 Uninstall:
@@ -154,7 +154,7 @@ Refer to inline comments in chart `values.yaml` for all supported fields.
 ### Option 1: cert-manager (recommended)
 
 ```bash
-helm install ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --set gateway.controller.tls.enabled=true
 ```
 
@@ -184,7 +184,7 @@ kubectl create secret tls gateway-tls \
   --cert=path/to/tls.crt \
   --key=path/to/tls.key
 
-helm install ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --set gateway.controller.tls.enabled=true \
   --set gateway.controller.tls.certificateProvider=secret \
   --set gateway.controller.tls.secret.name=gateway-tls
@@ -199,7 +199,7 @@ kubectl create secret generic upstream-ca-certs \
   --from-file=ca1.crt=path/to/ca1.crt \
   --from-file=ca2.crt=path/to/ca2.crt
 
-helm install ap-gateway oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway \
+helm install ap-gateway oci://ghcr.io/wso2/api-platform/helm-charts/gateway \
   --set gateway.controller.upstreamCerts.enabled=true \
   --set gateway.controller.upstreamCerts.secretName=upstream-ca-certs
 ```
@@ -224,7 +224,7 @@ curl -X POST http://localhost:9090/api/management/v0.9/rest-apis \
   -u admin:admin \
   -H "Content-Type: application/yaml" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: RestApi
 metadata:
   name: reading-list-api-v1.0
@@ -234,14 +234,14 @@ spec:
   context: /reading-list/$version
   upstream:
     main:
-      url: https://apis.xclouddomainx/samples/reading-list-api-service/v1.0
+      url: https://apis.bijira.dev/samples/reading-list-api-service/v1.0
   policies:
     - name: set-headers
       version: v1
       params:
         request:
           headers:
-            - name: x-xheaderprefixx-apip-gateway-version
+            - name: x-wso2-apip-gateway-version
               value: v1.0.0
         response:
           headers:

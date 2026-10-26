@@ -1,14 +1,14 @@
 ---
 title: "Customize gateway policies with the API Platform CLI"
 description: "Use the ap CLI to build a custom gateway image with selected Policy Hub and local policies via a build.yaml file."
-canonical_url: https://xdocshostx/xdocspathx/tools/cli/customizing-gateway-policies/
-md_url: https://xdocshostx/xdocspathx/tools/cli/customizing-gateway-policies.md
+canonical_url: https://wso2.com/api-platform/docs/tools/cli/customizing-gateway-policies/
+md_url: https://wso2.com/api-platform/docs/tools/cli/customizing-gateway-policies.md
 tags:
   - tools
   - cli
   - gateway
   - policies
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -50,14 +50,14 @@ gateway:
   version: 1.0.4
   # Optional: override base images
   images:
-    builder: "internal-registry.company.com/xsampleslugx/gateway-builder:1.0.5" # Optional: override base image
-    controller: "internal-registry.company.com/xsampleslugx/gateway-controller:1.0.5" # Optional: override base image
-    runtime: "internal-registry.company.com/xsampleslugx/gateway-runtime:1.0.5" # Optional: override base image
+    builder: "internal-registry.company.com/wso2/gateway-builder:1.0.5" # Optional: override base image
+    controller: "internal-registry.company.com/wso2/gateway-controller:1.0.5" # Optional: override base image
+    runtime: "internal-registry.company.com/wso2/gateway-runtime:1.0.5" # Optional: override base image
 policies:
   - name: api-key-auth
     filePath: api-key-auth-v0.1.0 # Local
   - name: respond
-    gomodule: github.com/xgithuborgx/gateway-controllers/policies/respond@v0.1.0 # Hub
+    gomodule: github.com/wso2/gateway-controllers/policies/respond@v0.1.0 # Hub
 ```
 
 Policies defined with a `filePath` are treated as **local policies**:

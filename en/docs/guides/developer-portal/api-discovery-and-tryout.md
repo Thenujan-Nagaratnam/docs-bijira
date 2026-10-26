@@ -1,13 +1,13 @@
 ---
 title: "Go from zero to a working API call using the Developer Portal"
 description: "Discover an API in the Developer Portal, try it with an API key, then subscribe to a plan to generate a subscription token and apply rate limits."
-canonical_url: https://xdocshostx/xdocspathx/guides/developer-portal/api-discovery-and-tryout/
-md_url: https://xdocshostx/xdocspathx/guides/developer-portal/api-discovery-and-tryout.md
+canonical_url: https://wso2.com/api-platform/docs/guides/developer-portal/api-discovery-and-tryout/
+md_url: https://wso2.com/api-platform/docs/guides/developer-portal/api-discovery-and-tryout.md
 tags:
   - guides
   - developer-portal
   - api-discovery
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "tutorial"
 ---
@@ -29,7 +29,7 @@ In this guide, you will walk through a scenario where a developer new to a team 
 
 ## Prerequisites
 
-- A XAPIPLATFORMX account. [Sign up for free](https://xwebdomainx/api-platform/).
+- A WSO2 API Platform account. [Sign up for free](https://wso2.com/api-platform/).
 - `curl` or Postman for testing.
 
 ## Architecture
@@ -43,7 +43,7 @@ In this guide, you will walk through a scenario where a developer new to a team 
                |                    |
                v                    v
 +-------------------------+   +---------------------------------------------+
-|  XSAMPLEBRANDX DEVELOPER PORTAL  |   |  XSAMPLEBRANDX API GATEWAY                           |
+|  WSO2 DEVELOPER PORTAL  |   |  WSO2 API GATEWAY                           |
 |     catalog · docs      |   |  API key · subscription token · rate limit  |
 |                         |   |                                             |
 +-------------------------+   +---------------------------------------------+
@@ -53,7 +53,7 @@ In this guide, you will walk through a scenario where a developer new to a team 
                               [Orders API backend]
 ```
 
-The diagram shows how a new developer uses the XDEVPORTALX to discover APIs, obtain credentials, and subscribe to APIs, then makes authenticated and rate-limited API calls through the XAPIGATEWAYX to the backend services.
+The diagram shows how a new developer uses the WSO2 Developer Portal to discover APIs, obtain credentials, and subscribe to APIs, then makes authenticated and rate-limited API calls through the WSO2 API Gateway to the backend services.
 
 ## Step 1: Navigate to the Developer Portal and search for the Orders API
 

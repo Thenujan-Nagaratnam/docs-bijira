@@ -1,13 +1,13 @@
 ---
 title: "Design and Customize API Proxies"
-description: "Customize an API proxy in XAPIPLATFORMX's interactive UI: add or remove resources, map resources, and manage policies."
-canonical_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/policy/overview/
-md_url: https://xdocshostx/xdocspathx/cloud/develop-api-proxy/policy/overview.md
+description: "Customize an API proxy in WSO2 API Platform's interactive UI: add or remove resources, map resources, and manage policies."
+canonical_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/develop-api-proxy/policy/overview.md
 tags:
   - cloud
   - api-proxy
   - policy
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "overview"
 ---

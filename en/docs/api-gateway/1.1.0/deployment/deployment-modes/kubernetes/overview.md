@@ -1,23 +1,23 @@
 ---
 title: "API Platform Kubernetes Gateway (V2.0.0)"
 description: "Overview of API Platform Kubernetes Gateway V2.0.0 deployment modes: standalone, operator-managed, and Kubernetes Gateway API workflows."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/deployment/deployment-modes/kubernetes/overview/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/deployment/deployment-modes/kubernetes/overview.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/deployment/deployment-modes/kubernetes/overview/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/deployment/deployment-modes/kubernetes/overview.md
 tags:
   - api-gateway
   - kubernetes
   - deployment
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-19
 content_type: "overview"
 ---
 
 # API Platform Kubernetes Gateway (V2.0.0)
 
-API Platform Gateway is the latest evolution of the XBRANDX Kubernetes gateway experience.  
-If you are coming from XBRANDX Kubernetes gateway `1.3.0`, treat this as the successor track with a broader API Platform integration model and improved Kubernetes-native workflows.
+API Platform Gateway is the latest evolution of the WSO2 Kubernetes gateway experience.  
+If you are coming from WSO2 Kubernetes gateway `1.3.0`, treat this as the successor track with a broader API Platform integration model and improved Kubernetes-native workflows.
 
-- Previous generation (reference): [XAPKX 1.3.0 docs](https://apk.docs.wso2.com/en/latest/)
+- Previous generation (reference): [WSO2 APK 1.3.0 docs](https://apk.docs.wso2.com/en/latest/)
 - Current generation: API Platform Kubernetes Gateway V2.0.0 (this documentation set)
 
 ## What Is New in V2.0.0
@@ -41,7 +41,7 @@ If you are coming from XBRANDX Kubernetes gateway `1.3.0`, treat this as the suc
 
 ### Flexible API Exposure Model
 
-- Supports both XBRANDX-native CRDs and the standard Kubernetes Gateway API, avoiding vendor lock-in.
+- Supports both WSO2-native CRDs and the standard Kubernetes Gateway API, avoiding vendor lock-in.
 
 ### Extensible Policy Engine
 
@@ -94,7 +94,7 @@ Use this mode when you want operator-managed lifecycle, declarative resources, a
 
 API Platform Kubernetes Gateway V2.0.0 supports attaching policies to APIs deployed in either mode. Policies control request/response mediation, rate limiting, authentication, and other gateway behaviors.
 
-For a full reference on available policies and how to configure them, see [Policy Configuration Overview](https://xdocshostx/xdocspathx/api-gateway/policies/overview/).
+For a full reference on available policies and how to configure them, see [Policy Configuration Overview](https://wso2.com/api-platform/docs/api-gateway/policies/overview/).
 
 ## Next Steps
 

@@ -1,15 +1,15 @@
 ---
 title: "Analytics"
 description: "Publish AI Gateway request and response data to an analytics backend, and control which headers leave the gateway with it."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/analytics/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/analytics.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/analytics/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/analytics.md
 tags:
   - ai-gateway
   - analytics
   - observability
   - spend
   - cost-tracking
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-13
 content_type: "concept"
 ---
@@ -30,4 +30,4 @@ This section contains the following pages:
 | [OpenTelemetry analytics](opentelemetry-analytics.md) | Export analytics events as OpenTelemetry Protocol (OTLP) log records to an OpenTelemetry Collector or any OTLP-compatible backend. |
 | [Analytics header filter](analytics-header-filter.md) | Control which request and response headers are sent to analytics backends using allow or deny mode in API Platform AI Gateway. |
 
-Moesif analytics and the analytics header filter configure a policy from the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../policy-hub/overview.md).
+Moesif analytics and the analytics header filter configure a policy from the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../policy-hub/overview.md).

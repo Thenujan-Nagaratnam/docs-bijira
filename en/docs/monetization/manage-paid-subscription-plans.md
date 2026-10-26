@@ -1,13 +1,13 @@
 ---
 title: "Manage paid subscription plans"
 description: "Create paid subscription plans with Stripe pricing models, assign them to APIs, and publish the API to the Developer Portal."
-canonical_url: https://xdocshostx/xdocspathx/monetization/manage-paid-subscription-plans/
-md_url: https://xdocshostx/xdocspathx/monetization/manage-paid-subscription-plans.md
+canonical_url: https://wso2.com/api-platform/docs/monetization/manage-paid-subscription-plans/
+md_url: https://wso2.com/api-platform/docs/monetization/manage-paid-subscription-plans.md
 tags:
   - cloud
   - monetization
   - subscription-plans
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -46,7 +46,7 @@ API Platform supports the following pricing models for paid subscription plans.
 
 ## Step 1: Create a Paid Subscription Plan
 
-1. Sign in to the [API Platform Console](https://console.xclouddomainx/).
+1. Sign in to the [API Platform Console](https://console.bijira.dev/).
 2. In the API Platform Console header, go to the **Organization** list and select your organization.
 3. In the left navigation menu, click **Admin** and then click **Settings**. This opens the organization-level settings page.
 4. Click the **Subscription Plans** tab.

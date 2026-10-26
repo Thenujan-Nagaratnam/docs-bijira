@@ -1,13 +1,13 @@
 ---
 title: "Manage views in the API Portal & MCP Hub"
 description: "Create, edit, and delete views to scope which labelled APIs are visible to different audiences in the API Portal & MCP Hub."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/manage-views/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/manage-views.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/manage-views/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/manage-views.md
 tags:
   - cloud
   - api-portal
   - views
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-23
 content_type: "how-to"
 ---

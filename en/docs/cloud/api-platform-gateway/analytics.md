@@ -10,7 +10,7 @@ API Platform provides comprehensive analytics for your Self-Hosted Gateway, givi
 
 To view analytics for your Self-Hosted Gateway:
 
-1. Sign in to the [API Platform Console](https://console.xclouddomainx).
+1. Sign in to the [API Platform Console](https://console.bijira.dev).
 2. Select your organization and project.
 3. In the left navigation, go to **Insights** and select **API Insights**.
 4. Select the environment associated with your Self-Hosted Gateway.
@@ -90,7 +90,7 @@ View live traffic logs:
 docker compose logs -f gateway
 
 # Kubernetes deployment
-kubectl logs -f deployment/gateway -n xcloudslugx-gateway
+kubectl logs -f deployment/gateway -n bijira-gateway
 ```
 
 ## Integrating with Moesif
@@ -186,7 +186,7 @@ To scrape metrics with Prometheus, add this to your `prometheus.yml`:
 
 ```yaml
 scrape_configs:
-  - job_name: 'xcloudslugx-gateway'
+  - job_name: 'bijira-gateway'
     static_configs:
       - targets: ['gateway-host:9091']
     metrics_path: /metrics

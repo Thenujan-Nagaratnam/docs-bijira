@@ -1,13 +1,13 @@
 ---
 title: "Manage CD pipelines"
 description: "Create, edit, and assign continuous deployment pipelines to control the environment promotion order for your projects."
-canonical_url: https://xdocshostx/xdocspathx/cloud/administer/manage-cd-pipelines/manage-cd-pipelines/
-md_url: https://xdocshostx/xdocspathx/cloud/administer/manage-cd-pipelines/manage-cd-pipelines.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/administer/manage-cd-pipelines/manage-cd-pipelines/
+md_url: https://wso2.com/api-platform/docs/cloud/administer/manage-cd-pipelines/manage-cd-pipelines.md
 tags:
   - cloud
   - administer
   - cd-pipelines
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-23
 content_type: "how-to"
 ---
@@ -22,7 +22,7 @@ Environments within an organization are applied to projects in the order specifi
 
 To create a new pipeline, follow the steps given below:
 
-1. Sign in to [API Platform](https://console.xclouddomainx/).
+1. Sign in to [API Platform](https://console.bijira.dev/).
 2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
 4. On the **CD Pipelines** page, click **+ Create Pipeline** and specify the following details required to create a new pipeline:
@@ -39,7 +39,7 @@ To create a new pipeline, follow the steps given below:
 
 To edit a pipeline, follow the steps given below:
 
-1. Sign in to [API Platform](https://console.xclouddomainx/).
+1. Sign in to [API Platform](https://console.bijira.dev/).
 2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
 4. Click the edit icon corresponding to the pipeline you want to edit.
@@ -56,7 +56,7 @@ To delete a pipeline, follow the steps given below:
 !!! info "Note"
     The **default** continuous deployment pipeline of the organization cannot be deleted.
 
-1. Sign in to [API Platform](https://console.xclouddomainx/).
+1. Sign in to [API Platform](https://console.bijira.dev/).
 2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
 4. Click the delete icon corresponding to the pipeline you want to delete. This displays a confirmation dialog with details on the impact of deletion.
@@ -71,7 +71,7 @@ To delete a pipeline, follow the steps given below:
 
 To add a pipeline to a project, follow the steps given below:
 
-1. Sign in to [API Platform](https://console.xclouddomainx/).
+1. Sign in to [API Platform](https://console.bijira.dev/).
 2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. Click the project you want to add the pipeline.
 4. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
@@ -82,7 +82,7 @@ To add a pipeline to a project, follow the steps given below:
 
 To remove a pipeline from a project, follow the steps given below:
 
-1. Sign in to [API Platform](https://console.xclouddomainx/).
+1. Sign in to [API Platform](https://console.bijira.dev/).
 2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. Click the project you want to remove the pipeline.
 4. In the left navigation menu, click **Admin** and then click **CD Pipelines**.
@@ -94,7 +94,7 @@ To remove a pipeline from a project, follow the steps given below:
 
 To change the default pipeline of a project, follow the steps given below:
 
-1. Sign in to [API Platform](https://console.xclouddomainx/).
+1. Sign in to [API Platform](https://console.bijira.dev/).
 2. In the API Platform Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. Click the project you want to change the default pipeline.
 4. In the left navigation menu, click **Admin** and then click **CD Pipelines**.

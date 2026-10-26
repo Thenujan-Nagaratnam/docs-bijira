@@ -1,12 +1,12 @@
 ---
 title: "API Governance Overview"
-description: "Understand XAPIPLATFORMX's governance concepts: rulesets, policies, and documents for enforcing API compliance at scale."
-canonical_url: https://xdocshostx/xdocspathx/cloud/governance/overview/
-md_url: https://xdocshostx/xdocspathx/cloud/governance/overview.md
+description: "Understand WSO2 API Platform's governance concepts: rulesets, policies, and documents for enforcing API compliance at scale."
+canonical_url: https://wso2.com/api-platform/docs/cloud/governance/overview/
+md_url: https://wso2.com/api-platform/docs/cloud/governance/overview.md
 tags:
   - cloud
   - governance
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "concept"
 ---

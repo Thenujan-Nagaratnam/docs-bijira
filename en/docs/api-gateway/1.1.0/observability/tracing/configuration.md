@@ -1,13 +1,13 @@
 ---
 title: "Tracing Configuration Options"
 description: "Configure distributed tracing for API Platform Gateway: sampling rates, OTLP collector endpoints, and batch export settings."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/observability/tracing/configuration/
-md_url: https://xdocshostx/xdocspathx/api-gateway/1.1.0/observability/tracing/configuration.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/observability/tracing/configuration/
+md_url: https://wso2.com/api-platform/docs/api-gateway/1.1.0/observability/tracing/configuration.md
 tags:
   - api-gateway
   - observability
   - tracing
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-17
 content_type: "reference"
 ---

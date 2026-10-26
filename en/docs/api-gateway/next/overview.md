@@ -1,13 +1,13 @@
 ---
 title: "API Platform Gateway Overview"
 description: "Learn the architecture and components of API Platform Gateway: Gateway Controller, Gateway Runtime, Policy Engine, default ports, and the ap CLI."
-canonical_url: https://xdocshostx/xdocspathx/api-gateway/next/overview/
-md_url: https://xdocshostx/xdocspathx/api-gateway/next/overview.md
+canonical_url: https://wso2.com/api-platform/docs/api-gateway/next/overview/
+md_url: https://wso2.com/api-platform/docs/api-gateway/next/overview.md
 tags:
   - api-gateway
   - architecture
   - api-management
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-11
 content_type: "concept"
 ---
@@ -74,7 +74,7 @@ Policies allow you to intercept and transform API traffic at the Gateway-Runtime
 
 Policies can be applied to request and response flows to handle concerns like authentication, rate limiting, header manipulation, and more.
 
-The complete and up-to-date policy catalogue — with configuration references and examples — is maintained in the gateway-controllers repository: https://github.com/xgithuborgx/gateway-controllers/blob/main/docs/README.md
+The complete and up-to-date policy catalogue — with configuration references and examples — is maintained in the gateway-controllers repository: https://github.com/wso2/gateway-controllers/blob/main/docs/README.md
 
 You can extend the gateway with your own policies or include specific policies from the catalogue by building a custom gateway image using the `ap` CLI. See [Building the Gateway with Custom Policies](./policies/custom-policies/building-gateway-with-custom-policies.md).
 

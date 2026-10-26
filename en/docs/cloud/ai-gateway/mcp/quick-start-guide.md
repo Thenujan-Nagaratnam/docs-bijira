@@ -1,21 +1,21 @@
 ---
 title: "AI Gateway MCP quick start guide"
 description: "Create an AI Gateway and connect an MCP proxy through the AI Workspace UI, then reach it from an MCP client."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/mcp/quick-start-guide/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/mcp/quick-start-guide.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/quick-start-guide/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/mcp/quick-start-guide.md
 tags:
   - cloud
   - ai-gateway
   - mcp
   - quickstart
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-03
 content_type: "quickstart"
 ---
 
 # Quick start guide for MCP in AI Gateway
 
-The AI Gateway routes, secures, and observes Model Context Protocol (MCP) traffic to upstream MCP servers. On Cloud, you manage it through [AI Workspace](https://ai-workspace.xclouddomainx). You register a gateway runtime, connect an MCP proxy to an upstream server, and deploy the configuration.
+The AI Gateway routes, secures, and observes Model Context Protocol (MCP) traffic to upstream MCP servers. On Cloud, you manage it through [AI Workspace](https://ai-workspace.bijira.dev). You register a gateway runtime, connect an MCP proxy to an upstream server, and deploy the configuration.
 
 This guide is for developers setting up their first MCP Proxy on Cloud. You'll create a gateway, point a Proxy at an existing remote MCP server, and connect an MCP client to interact.
 
@@ -23,7 +23,7 @@ This guide is for developers setting up their first MCP Proxy on Cloud. You'll c
 
 Before going through this quickstart, make sure you meet the following prerequisites:
 
-- Access to [AI Workspace](https://ai-workspace.xclouddomainx/) with the **Admin** or **Developer** role.
+- Access to [AI Workspace](https://ai-workspace.bijira.dev/) with the **Admin** or **Developer** role.
 - [Docker](https://docs.docker.com/get-docker/) with the Compose plugin. You can check the installed version with the `docker compose version` command.
 - `curl` and `unzip` commands available in the command line.
 - Port `8443` available on your machine. For more information, see [Default Ports in AI Gateway](../../../ai-gateway/1.2.0/reference/default-ports.md).
@@ -35,7 +35,7 @@ An AI Gateway entry in AI Workspace represents one gateway runtime. Registering 
 
 ### Step 1: Sign in to AI Workspace
 
-Open [AI Workspace](https://ai-workspace.xclouddomainx/) and sign in. Then create an Organization and a Project in your Organization.
+Open [AI Workspace](https://ai-workspace.bijira.dev/) and sign in. Then create an Organization and a Project in your Organization.
 
 ### Step 2: Add a gateway
 
@@ -61,16 +61,16 @@ Select the __Quick Start__ tab in the detail page of the newly added gateway's *
 1. Download and unzip the gateway distribution:
 
     ```bash
-    curl -sLO https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.1.0/xartifactprefixx-ai-gateway-1.1.0.zip && \
-    unzip xartifactprefixx-ai-gateway-1.1.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip && \
+    unzip wso2apip-ai-gateway-1.1.0.zip
     ```
 
 2. Create the environment file with your registration token:
 
     ```bash
-    cat > xartifactprefixx-ai-gateway-1.1.0/configs/keys.env << 'ENVFILE'
+    cat > wso2apip-ai-gateway-1.1.0/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.xclouddomainx
+    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
@@ -78,7 +78,7 @@ Select the __Quick Start__ tab in the detail page of the newly added gateway's *
 3. Start the runtime:
 
     ```bash
-    cd xartifactprefixx-ai-gateway-1.1.0 && \
+    cd wso2apip-ai-gateway-1.1.0 && \
     docker compose --env-file configs/keys.env up
     ```
 

@@ -1,13 +1,13 @@
 ---
 title: "Create REST API Proxy from GitHub"
-description: "Create and auto-build a REST API proxy from a GitHub repository using a component.yaml file in XAPIPLATFORMX."
-canonical_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/http/import-api-from-github/
-md_url: https://xdocshostx/xdocspathx/cloud/create-api-proxy/my-apis/http/import-api-from-github.md
+description: "Create and auto-build a REST API proxy from a GitHub repository using a component.yaml file in WSO2 API Platform."
+canonical_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/import-api-from-github/
+md_url: https://wso2.com/api-platform/docs/cloud/create-api-proxy/my-apis/http/import-api-from-github.md
 tags:
   - cloud
   - api-proxy
   - github
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-18
 content_type: "how-to"
 ---
@@ -19,14 +19,14 @@ An API proxy acts as an intermediary between an existing API and API Platform, i
 ## Prerequisites
 
 1. If you're signing in to the API Platform Console for the first time, create an organization:
-    1. Go to [API Platform Console](https://console.xclouddomainx/) and sign in using your preferred method.
+    1. Go to [API Platform Console](https://console.bijira.dev/) and sign in using your preferred method.
     2. Enter a unique organization name. For example, `Stark Industries`.
     3. Read and accept the privacy policy and terms of use.
     4. Click **Create**.
 
     This creates the organization and opens the **Project Home** page of the default project created for you.
 
-2. Fork the [API Platform samples repository](https://github.com/xgithuborgx/xcloudslugx-samples), which contains the [sample proxy source](https://github.com/xgithuborgx/xcloudslugx-samples/tree/main/reading-list-api).
+2. Fork the [API Platform samples repository](https://github.com/wso2/bijira-samples), which contains the [sample proxy source](https://github.com/wso2/bijira-samples/tree/main/reading-list-api).
 
 ## Configure component.yaml
 
@@ -56,7 +56,7 @@ proxy:
 
 You can create an API proxy either by selecting the source from a GitHub repository, uploading an OpenAPI specification file, or providing an OpenAPI specification URL. This guide demonstrates how to create an API proxy using a GitHub repository as the source.
 
-1. Go to the [API Platform Console](https://console.xclouddomainx/) and sign in. This opens the project home page.
+1. Go to the [API Platform Console](https://console.bijira.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click **+ Create**. Otherwise, proceed to the next step.
 3. Select Import API Contract and click on GitHub tab.
 4. Click on **Authorize With GitHub** card under **Connect a Git Repository** section to connect your GitHub account.
@@ -77,7 +77,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
     | **Field**              | **Value**          |
     |------------------------|--------------------|
     | **Organization**       | Your GitHub account|
-    | **Repository**         | xcloudslugx-samples     |
+    | **Repository**         | bijira-samples     |
     | **Branch**             | **`main`**         |
     | **API Directory**      | /reading-list-api |
 
@@ -93,7 +93,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
     |-----------------|--------------------------------------------|
     | **Name**     | `Reading List API`                                   |
     | **Version**     | `1.0`                                      |
-    | **Target**      | `https://apis.xclouddomainx/samples/reading-list-api-service/v1.0`|
+    | **Target**      | `https://apis.bijira.dev/samples/reading-list-api-service/v1.0`|
 
 7. Click **Create**. This creates the API proxy component and takes you to the **Overview** page.
 

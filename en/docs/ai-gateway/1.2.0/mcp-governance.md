@@ -1,14 +1,14 @@
 ---
 title: "MCP governance"
 description: "Control what an AI agent can reach through an MCP proxy: authenticate callers, authorize per tool, restrict and rename the tool list, and rate limit calls."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/mcp-governance/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/mcp-governance.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/mcp-governance/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/mcp-governance.md
 tags:
   - ai-gateway
   - mcp
   - access-control
   - authorization
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-26
 content_type: "concept"
 ---
@@ -25,16 +25,16 @@ Authentication and authorization run before a call reaches the server: the first
 
 ## MCP policies
 
-These policies are documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
+These policies are documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../policy-hub/overview.md).
 
 | Policy | What it does |
 |--------|--------------|
-| [MCP Authentication](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-auth) | Secures MCP server traffic per the MCP specification authorization profile |
-| [MCP Authorization](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-authz) | Validates access to MCP tools, resources, and prompts using JWT claims or OAuth scopes |
-| [MCP Access Control](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-acl-list) | Controls which tools, resources, and prompts a caller can reach using allow/deny lists |
-| [MCP Rewrite](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-rewrite) | Defines user-facing tool names and maps them to backend capability names |
-| [MCP Rate Limit](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-ratelimit) | Applies rate limits to MCP traffic per tool, resource, prompt, or JSON-RPC method |
-| [Semantic Tool Filtering](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-tool-filtering) | Filters MCP tools to only those semantically relevant to the user query |
+| [MCP Authentication](https://wso2.com/api-platform/policy-hub/policies/mcp-auth) | Secures MCP server traffic per the MCP specification authorization profile |
+| [MCP Authorization](https://wso2.com/api-platform/policy-hub/policies/mcp-authz) | Validates access to MCP tools, resources, and prompts using JWT claims or OAuth scopes |
+| [MCP Access Control](https://wso2.com/api-platform/policy-hub/policies/mcp-acl-list) | Controls which tools, resources, and prompts a caller can reach using allow/deny lists |
+| [MCP Rewrite](https://wso2.com/api-platform/policy-hub/policies/mcp-rewrite) | Defines user-facing tool names and maps them to backend capability names |
+| [MCP Rate Limit](https://wso2.com/api-platform/policy-hub/policies/mcp-ratelimit) | Applies rate limits to MCP traffic per tool, resource, prompt, or JSON-RPC method |
+| [Semantic Tool Filtering](https://wso2.com/api-platform/policy-hub/policies/semantic-tool-filtering) | Filters MCP tools to only those semantically relevant to the user query |
 
 ## Related topics
 

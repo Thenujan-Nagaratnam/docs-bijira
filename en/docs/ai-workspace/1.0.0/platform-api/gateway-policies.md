@@ -1,12 +1,12 @@
 ---
 title: "Platform API: Gateway policies"
 description: "REST API reference for syncing, listing, and deleting custom gateway policies."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/gateway-policies/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/platform-api/gateway-policies.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/gateway-policies/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/platform-api/gateway-policies.md
 tags:
   - ai-workspace
   - platform-api
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -115,7 +115,7 @@ Required scopes (the token must carry at least one of): `ap:gateway_custom_polic
 
 ```shell
 
-curl -X POST https://localhost:9243/api/v0.9/gateway-custom-policies/sync?gatewayId=prod-gateway-01&policyName=set-xsampleslugx-headers&policyVersion=1.0.0 \
+curl -X POST https://localhost:9243/api/v0.9/gateway-custom-policies/sync?gatewayId=prod-gateway-01&policyName=set-wso2-headers&policyVersion=1.0.0 \
   -H 'Authorization: Bearer {access_token}' \
   -H 'Accept: application/json'
 

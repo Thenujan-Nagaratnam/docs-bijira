@@ -1,22 +1,22 @@
 ---
 title: "Google guides"
-description: "Use XAPIPLATFORMX to route Google Gemini CLI through AI Gateway, govern Gemini model traffic, and send gateway telemetry to Google Cloud."
-canonical_url: https://xdocshostx/xdocspathx/guides/service-providers/google/
-md_url: https://xdocshostx/xdocspathx/guides/service-providers/google.md
+description: "Use WSO2 API Platform to route Google Gemini CLI through AI Gateway, govern Gemini model traffic, and send gateway telemetry to Google Cloud."
+canonical_url: https://wso2.com/api-platform/docs/guides/service-providers/google/
+md_url: https://wso2.com/api-platform/docs/guides/service-providers/google.md
 tags:
   - guides
   - google
   - gemini
   - gemini-cli
   - service-provider-guides
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-10-21
 content_type: "reference"
 ---
 
 # Govern Gemini models and Gemini CLI
 
-XAPIPLATFORMX works alongside the Google products and services you already use. Govern Gemini model traffic, route Gemini CLI through AI Gateway, and send gateway telemetry to Google Cloud.
+WSO2 API Platform works alongside the Google products and services you already use. Govern Gemini model traffic, route Gemini CLI through AI Gateway, and send gateway telemetry to Google Cloud.
 
 ## End-to-end guides
 
@@ -34,7 +34,7 @@ A step-by-step guide for Gemini CLI.
 
 ## AI Gateway with Gemini models
 
-Route, secure, and govern traffic to Gemini models through XAIGATEWAYX, including traffic from Gemini CLI.
+Route, secure, and govern traffic to Gemini models through WSO2 AI Gateway, including traffic from Gemini CLI.
 
 <div class="vendor-cap" markdown="1">
 
@@ -67,7 +67,7 @@ Keep clients on the OpenAI request format. A transformer policy converts request
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
 - [OpenAI-format compatibility](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/gemini.md#openai-format-compatibility) <span class="vendor-meta">AI Gateway</span>
-- [OpenAI to Gemini transformer policy](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-gemini-transformer) <span class="vendor-meta">Policy Hub</span>
+- [OpenAI to Gemini transformer policy](https://wso2.com/api-platform/policy-hub/policies/openai-to-gemini-transformer) <span class="vendor-meta">Policy Hub</span>
 
 </div>
 
@@ -113,12 +113,12 @@ Point the collector at Cloud Monitoring for metrics and at Cloud Trace for trace
 
 ## Architecture and responsibility model
 
-XAPIPLATFORMX and Google split the work like this:
+WSO2 API Platform and Google split the work like this:
 
-| Scenario | XBRANDX role | Google role | Runtime traffic |
+| Scenario | WSO2 role | Google role | Runtime traffic |
 | --- | --- | --- | --- |
-| Gemini CLI through AI Gateway | Authenticates developers and applies guardrails, rate limits, and analytics | Hosts the Gemini models and bills the API key | Goes through XAIGATEWAYX to the Gemini API |
-| Applications calling Gemini models | Proxies and governs LLM requests | Hosts the Gemini models | Goes through XAIGATEWAYX to the Gemini API |
+| Gemini CLI through AI Gateway | Authenticates developers and applies guardrails, rate limits, and analytics | Hosts the Gemini models and bills the API key | Goes through WSO2 AI Gateway to the Gemini API |
+| Applications calling Gemini models | Proxies and governs LLM requests | Hosts the Gemini models | Goes through WSO2 AI Gateway to the Gemini API |
 | Gateway telemetry in Google Cloud | Emits metrics and traces from the gateway | Stores and displays the telemetry | The collector sends telemetry to Google Cloud without affecting API traffic |
 
 ## Learn more

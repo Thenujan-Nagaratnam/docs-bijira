@@ -1,14 +1,14 @@
 ---
 title: "MCP Registry API"
 description: "Discover and publish MCP servers through the API Portal & MCP Hub's implementation of the Model Context Protocol registry specification."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/mcp-registry/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/mcp-registry.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/mcp-registry/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/mcp-registry.md
 tags:
   - cloud
   - api-portal
   - mcp
   - rest-api
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-31
 content_type: "reference"
 ---
@@ -117,7 +117,7 @@ Notes on the fields:
 
 - `remotes` falls back to a single `streamable-http` entry built from the server's production URL when the stored payload declares none.
 - `status` is one of `active`, `deprecated`, or `deleted`, mapping to the portal's published, deprecated, and deleted states.
-- `io.api-platform/mcp-capabilities` is a XBRANDX extension and is present only on responses that load the server's schema—the list endpoint omits it, so fetch a specific version when you need the tool list.
+- `io.api-platform/mcp-capabilities` is a WSO2 extension and is present only on responses that load the server's schema—the list endpoint omits it, so fetch a specific version when you need the tool list.
 
 ## Publishing endpoints
 

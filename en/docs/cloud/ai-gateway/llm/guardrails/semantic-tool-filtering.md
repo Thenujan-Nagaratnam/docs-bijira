@@ -1,15 +1,15 @@
 ---
 title: "Semantic tool filtering"
 description: "Dynamically filter the tools in an LLM request based on their semantic relevance to the user query to reduce tokens and improve response quality."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/llm/guardrails/semantic-tool-filtering/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-gateway/llm/guardrails/semantic-tool-filtering.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/semantic-tool-filtering/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-gateway/llm/guardrails/semantic-tool-filtering.md
 tags:
   - cloud
   - ai-gateway
   - guardrails
   - semantic
   - mcp
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -72,7 +72,7 @@ Add the following entry to the `policies` section in `/gateway/build.yaml`:
 
 ```yaml
 - name: semantic-tool-filtering
-  gomodule: github.com/xgithuborgx/gateway-controllers/policies/semantic-tool-filtering@v0
+  gomodule: github.com/wso2/gateway-controllers/policies/semantic-tool-filtering@v0
 ```
 
 ## Reference Scenarios

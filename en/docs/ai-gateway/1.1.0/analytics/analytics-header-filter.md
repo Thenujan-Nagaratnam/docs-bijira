@@ -1,13 +1,13 @@
 ---
 title: "Analytics Header Filter"
 description: "Control which request and response headers are sent to analytics backends using allow or deny mode in API Platform AI Gateway."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/analytics/analytics-header-filter/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.1.0/analytics/analytics-header-filter.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/analytics/analytics-header-filter/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.1.0/analytics/analytics-header-filter.md
 tags:
   - ai-gateway
   - analytics
   - policies
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-16
 content_type: "reference"
 ---
@@ -73,7 +73,7 @@ curl -X POST http://localhost:9090/llm-providers \
   -H "Content-Type: application/yaml" \
   -H "Authorization: Basic <base64-credentials>" \
   --data-binary @- <<'EOF'
-apiVersion: gateway.api-platform.xcrddomainx/v1alpha1
+apiVersion: gateway.api-platform.wso2.com/v1alpha1
 kind: LlmProvider
 metadata:
   name: openai-provider

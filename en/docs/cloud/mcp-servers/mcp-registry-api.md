@@ -1,13 +1,13 @@
 ---
 title: "Use the MCP Registry API"
 description: "Query the public MCP Registry API to list MCP servers, server versions, and connection details for your organization."
-canonical_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/mcp-registry-api/
-md_url: https://xdocshostx/xdocspathx/cloud/mcp-servers/mcp-registry-api.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/mcp-registry-api/
+md_url: https://wso2.com/api-platform/docs/cloud/mcp-servers/mcp-registry-api.md
 tags:
   - cloud
   - ai-workspace
   - mcp-registry
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "reference"
 ---
@@ -21,7 +21,7 @@ The discovery endpoints are **public** and require no authentication.
 ## Base URL
 
 ```
-https://mcphub.xclouddomainx/<org_handle>/registry/v0.1
+https://mcphub.bijira.dev/<org_handle>/registry/v0.1
 ```
 
 Replace `<org_handle>` with your organization's handle.
@@ -49,7 +49,7 @@ GET /v0.1/servers
 **Example — list all MCP servers for an organization**
 
 ```bash
-curl https://mcphub.xclouddomainx/<org_handle>/registry/v0.1/servers
+curl https://mcphub.bijira.dev/<org_handle>/registry/v0.1/servers
 ```
 
 ---
@@ -93,7 +93,7 @@ The response from `GET /v0.1/servers` and the version endpoints follows this str
         "remotes": [
           {
             "type": "streamable-http",
-            "url": "https://mcphub.xclouddomainx/t/<org_handle>/weather-tools/1.0.0"
+            "url": "https://mcphub.bijira.dev/t/<org_handle>/weather-tools/1.0.0"
           }
         ]
       }
@@ -112,7 +112,7 @@ The response from `GET /v0.1/servers` and the version endpoints follows this str
 Results are returned in pages of up to 30 (default) or up to 100 (maximum, using the `limit` parameter). `metadata.nextCursor` is only present in the response when there are more results beyond the current page. If all servers fit within the page size, `nextCursor` will not appear in the response.
 
 ```bash
-curl "https://mcphub.xclouddomainx/<org_handle>/registry/v0.1/servers?cursor=<nextCursor>"
+curl "https://mcphub.bijira.dev/<org_handle>/registry/v0.1/servers?cursor=<nextCursor>"
 ```
 
 Continue until `metadata.nextCursor` is absent or empty, which indicates the last page.

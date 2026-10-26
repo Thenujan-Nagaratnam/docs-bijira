@@ -1,14 +1,14 @@
 ---
 title: "Expose an agent"
 description: "Configure an Agent's context, upstream, and A2A transports, and learn the gateway paths each of the eleven A2A 1.0 operations is served at."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/agent-governance/expose-an-agent/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/agent-governance/expose-an-agent.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/agent-governance/expose-an-agent/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/agent-governance/expose-an-agent.md
 tags:
   - ai-gateway
   - a2a
   - agents
   - routing
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-09-22
 content_type: "how-to"
 ---
@@ -22,7 +22,7 @@ An `Agent` gives an upstream Agent2Agent (A2A) agent an address on the gateway a
 A complete agent needs a display name, a version, an upstream, and an `a2a` block:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: Agent
 metadata:
   name: trip-planner-v1.0

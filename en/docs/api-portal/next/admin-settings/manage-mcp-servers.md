@@ -1,13 +1,13 @@
 ---
 title: "Manage MCP servers in the API Portal & MCP Hub"
 description: "Add, edit, publish, deprecate, and delete the MCP servers exposed in the API Portal & MCP Hub."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/manage-mcp-servers/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/admin-settings/manage-mcp-servers.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/manage-mcp-servers/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/admin-settings/manage-mcp-servers.md
 tags:
   - cloud
   - api-portal
   - mcp
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-23
 content_type: "how-to"
 ---

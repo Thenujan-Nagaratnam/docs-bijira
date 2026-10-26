@@ -1,13 +1,13 @@
 ---
 title: "Prompt template in AI Workspace"
 description: "Apply reusable, parameterized prompt templates to LLM requests using template:// references, configured in AI Workspace."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/other-policies/prompt-template/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/other-policies/prompt-template.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-template/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/other-policies/prompt-template.md
 tags:
   - cloud
   - ai-workspace
   - prompt-management
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -92,4 +92,4 @@ When a client calls `template://translate?from=English&to=Spanish&text=Hello`, t
 
 - [Policies Overview](../overview.md)
 - [Prompt Decorator](prompt-decorator.md) — Inject fixed content into prompts without client-side changes
-- [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/) — Full policy specification and latest version
+- [Policy Hub](https://wso2.com/api-platform/policy-hub/) — Full policy specification and latest version

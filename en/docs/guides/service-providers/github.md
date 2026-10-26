@@ -1,22 +1,22 @@
 ---
 title: "GitHub guides"
-description: "Use XAPIPLATFORMX to route GitHub Copilot through AI Gateway, create API proxies from GitHub repositories, and design APIs with Copilot in VS Code."
-canonical_url: https://xdocshostx/xdocspathx/guides/service-providers/github/
-md_url: https://xdocshostx/xdocspathx/guides/service-providers/github.md
+description: "Use WSO2 API Platform to route GitHub Copilot through AI Gateway, create API proxies from GitHub repositories, and design APIs with Copilot in VS Code."
+canonical_url: https://wso2.com/api-platform/docs/guides/service-providers/github/
+md_url: https://wso2.com/api-platform/docs/guides/service-providers/github.md
 tags:
   - guides
   - github
   - github-copilot
   - vs-code
   - service-provider-guides
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-10-21
 content_type: "reference"
 ---
 
 # Govern GitHub Copilot and build APIs from GitHub
 
-XAPIPLATFORMX works alongside the GitHub tools you already use. Route GitHub Copilot through AI Gateway, build API proxies from GitHub repositories, and design governed APIs with Copilot in VS Code.
+WSO2 API Platform works alongside the GitHub tools you already use. Route GitHub Copilot through AI Gateway, build API proxies from GitHub repositories, and design governed APIs with Copilot in VS Code.
 
 ## End-to-end guides
 
@@ -34,7 +34,7 @@ A step-by-step guide for GitHub Copilot.
 
 ## AI Gateway with GitHub Copilot
 
-With the bring-your-own-key (BYOK) option, GitHub Copilot sends requests for your model to an LLM proxy on XAIGATEWAYX. Requests for GitHub-hosted models still go directly to GitHub.
+With the bring-your-own-key (BYOK) option, GitHub Copilot sends requests for your model to an LLM proxy on WSO2 AI Gateway. Requests for GitHub-hosted models still go directly to GitHub.
 
 <div class="vendor-cap" markdown="1">
 
@@ -105,12 +105,12 @@ Draft a specification with Copilot, then review and fix governance findings.
 
 ## Architecture and responsibility model
 
-XAPIPLATFORMX and GitHub split the work like this:
+WSO2 API Platform and GitHub split the work like this:
 
-| Scenario | XBRANDX role | GitHub role | Runtime traffic |
+| Scenario | WSO2 role | GitHub role | Runtime traffic |
 | --- | --- | --- | --- |
-| GitHub Copilot through AI Gateway | Authenticates developers and applies guardrails, rate limits, and analytics | Provides the Copilot clients | BYOK model requests go through XAIGATEWAYX to the model provider |
-| API proxy from a GitHub repository | Builds, deploys, and manages the API proxy | Hosts the source and configuration | API traffic goes through the XBRANDX gateway, not through GitHub |
+| GitHub Copilot through AI Gateway | Authenticates developers and applies guardrails, rate limits, and analytics | Provides the Copilot clients | BYOK model requests go through WSO2 AI Gateway to the model provider |
+| API proxy from a GitHub repository | Builds, deploys, and manages the API proxy | Hosts the source and configuration | API traffic goes through the WSO2 gateway, not through GitHub |
 | API design with Copilot in VS Code | Provides the API Designer extension and governance rules | Provides Copilot Chat | Runs in the developer's editor, with no API traffic involved |
 
 ## Learn more

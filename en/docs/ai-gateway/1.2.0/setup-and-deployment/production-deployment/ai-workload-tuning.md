@@ -1,15 +1,15 @@
 ---
 title: "Tune the Gateway for AI Traffic"
 description: "Tune API Platform AI Gateway for LLM and MCP traffic: streaming timeouts, body buffers, guardrail limits, cost pricing data, and semantic cache backing."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/production-deployment/ai-workload-tuning/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/setup-and-deployment/production-deployment/ai-workload-tuning.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/production-deployment/ai-workload-tuning/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/setup-and-deployment/production-deployment/ai-workload-tuning.md
 tags:
   - ai-gateway
   - production
   - llm
   - streaming
   - guardrails
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
@@ -81,7 +81,7 @@ gateway:
         timeout: 30s
 ```
 
-- `python_executor.timeout` bounds a single policy execution. Guardrails that call an external service spend most of that budget on the network call. [Azure Content Safety](https://xpolicyhubhostx/xpolicyhubpathx/policies/azure-content-safety-content-moderation), [AWS Bedrock guardrails](https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-bedrock-guardrail), and a [semantic prompt guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard) that generates embeddings all behave this way. Raise the timeout when the guardrail service is slow or distant. Keep it below `route_timeout_ms`, so the route timeout stays the outer bound.
+- `python_executor.timeout` bounds a single policy execution. Guardrails that call an external service spend most of that budget on the network call. [Azure Content Safety](https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation), [AWS Bedrock guardrails](https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail), and a [semantic prompt guardrail](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) that generates embeddings all behave this way. Raise the timeout when the guardrail service is slow or distant. Keep it below `route_timeout_ms`, so the route timeout stays the outer bound.
 - `route_cache_action: RETAIN` keeps the route cache warm across requests. Leave it at `RETAIN`.
 
 Guardrails that reach an external service add that service's latency and its failure modes to every request. Deploy the guardrail service in the same region as the gateway, and check what your chosen guardrail does when the service is unreachable before you rely on it in production.
@@ -129,7 +129,7 @@ Cost figures are only as accurate as this file. Treat it as data to review on a 
 
 ## Provision infrastructure for semantic caching
 
-[Semantic caching](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-cache) depends on two external services that the gateway chart doesn't deploy, so provision both before you enable the policy:
+[Semantic caching](https://wso2.com/api-platform/policy-hub/policies/semantic-cache) depends on two external services that the gateway chart doesn't deploy, so provision both before you enable the policy:
 
 - **A vector database** — Redis or Milvus — that stores the cached responses and their embeddings. Size it for your retention window, place it in the same region as the gateway, and secure it: it holds prompt and completion content in full.
 - **An embedding provider** — OpenAI, Mistral, or Azure OpenAI — called on every request that reaches the policy. Its latency is added to every cache miss, and its API key is stored as a gateway secret, encrypted with the key from [Security hardening](./security-hardening.md).

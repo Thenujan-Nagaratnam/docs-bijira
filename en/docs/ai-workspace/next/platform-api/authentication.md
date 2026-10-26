@@ -1,14 +1,14 @@
 ---
 title: "Platform API: Authentication"
-description: "JWT bearer authentication, required claims, and the OAuth2 scope reference for the XAPIPLATFORMX Platform API."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/authentication/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/platform-api/authentication.md
+description: "JWT bearer authentication, required claims, and the OAuth2 scope reference for the WSO2 API Platform Platform API."
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/authentication/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/platform-api/authentication.md
 tags:
   - ai-workspace
   - platform-api
   - security
   - authentication
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-07
 content_type: "reference"
 ---
@@ -46,7 +46,7 @@ configuration section is read; the others are ignored.
 |---|---|---|---|
 | `file` | The built-in login endpoint issues RS256 JWTs for locally configured users | `auth.jwt.public_key_file` | Quickstart, air-gapped setup |
 | `external_token` | Tokens are minted outside the Platform API by a trusted issuer | `auth.jwt.public_key_file` | Existing token service |
-| `idp` | An external Identity Provider's token endpoint | The IDP's JWKS (`auth.idp.jwks_url`) | Production (Asgardeo, Keycloak, Auth0, Entra ID, XISSHORTX) |
+| `idp` | An external Identity Provider's token endpoint | The IDP's JWKS (`auth.idp.jwks_url`) | Production (Asgardeo, Keycloak, Auth0, Entra ID, WSO2 IS) |
 
 **Supported signing algorithms**: `RS256`, `RS384`, `RS512` (RSA) and, in IDP mode, `ES256`,
 `ES384`, `ES512` (ECDSA). Symmetric (`HS*`) and unsigned (`none`) tokens are always rejected.

@@ -1,13 +1,13 @@
 ---
 title: "Write an AI policy for the Self-Hosted Gateway"
 description: "Implement a custom AI policy that handles both streaming (SSE) and non-streaming LLM request and response bodies."
-canonical_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/writing-an-ai-policy/
-md_url: https://xdocshostx/xdocspathx/cloud/ai-workspace/policies/writing-an-ai-policy.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/writing-an-ai-policy/
+md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/policies/writing-an-ai-policy.md
 tags:
   - cloud
   - ai-workspace
   - custom-policy
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -16,7 +16,7 @@ content_type: "how-to"
 
 AI policies allow you to inspect, control, and modify traffic going to and from Large Language Models (LLMs), such as OpenAI, Anthropic, or other providers.
 
-AI policies use the same `Policy` interface as standard gateway policies. For full API details, see the [SDK Documentation](https://pkg.go.dev/github.com/xgithuborgx/api-platform/sdk/core/policy/v1alpha2).
+AI policies use the same `Policy` interface as standard gateway policies. For full API details, see the [SDK Documentation](https://pkg.go.dev/github.com/wso2/api-platform/sdk/core/policy/v1alpha2).
 
 The key difference is how you handle LLM request and response bodies, especially:
 
@@ -63,7 +63,7 @@ package myaipolicy
 import (
     "context"
 
-    policy "github.com/xgithuborgx/api-platform/sdk/core/policy/v1alpha2"
+    policy "github.com/wso2/api-platform/sdk/core/policy/v1alpha2"
 )
 
 type MyAIPolicy struct{}

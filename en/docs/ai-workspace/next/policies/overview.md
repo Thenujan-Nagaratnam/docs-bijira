@@ -1,14 +1,14 @@
 ---
 title: "AI Workspace policies overview"
 description: "What AI and MCP policies you can attach to LLM providers and proxies in AI Workspace, where each one is applied, and how the rate limit policies cap requests, tokens, and spend."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/next/policies/overview/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/next/policies/overview.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/next/policies/overview/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/next/policies/overview.md
 tags:
   - cloud
   - ai-workspace
   - policies
   - rate-limit
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-31
 content_type: "overview"
 ---
@@ -17,7 +17,7 @@ content_type: "overview"
 
 AI Workspace is where you attach policies to your large language model (LLM) providers and App LLM proxies and deploy them. The AI Gateway is what enforces them at request time.
 
-That split runs through this section. This page covers what's available to attach and where it takes effect in the workspace. For what a policy does to a request, its configuration fields, and its error behavior, follow each policy through to the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/), the registry that holds the specification and version history for every policy listed here.
+That split runs through this section. This page covers what's available to attach and where it takes effect in the workspace. For what a policy does to a request, its configuration fields, and its error behavior, follow each policy through to the [Policy Hub](https://wso2.com/api-platform/policy-hub/), the registry that holds the specification and version history for every policy listed here.
 
 Rate limiting is the exception: it's documented in full on this page, under [Rate limiting](#rate-limiting).
 
@@ -57,19 +57,19 @@ Guardrails inspect and act on request and response content:
 
 | Guardrail | What it does |
 |-----------|--------------|
-| [Semantic prompt guard](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-prompt-guard) | Blocks or allows prompts by semantic similarity to configured phrases. Needs an embedding provider. |
-| [PII masking regex](https://xpolicyhubhostx/xpolicyhubpathx/policies/pii-masking-regex) | Masks personally identifiable information (PII) using regex patterns, and restores it in the response. |
-| [Azure content safety](https://xpolicyhubhostx/xpolicyhubpathx/policies/azure-content-safety-content-moderation) | Filters harmful content using Azure Content Safety moderation. Needs an Azure subscription. |
-| [Granite Guardian prompt injection](https://xpolicyhubhostx/xpolicyhubpathx/policies/granite-guardian-prompt-injection) | Detects prompt injection and jailbreak attempts using IBM Granite Guardian, and rejects flagged requests. Needs a Granite Guardian inference endpoint. |
-| [NeMo Guard content safety](https://xpolicyhubhostx/xpolicyhubpathx/policies/nvidia-nemoguard-content-safety) | Classifies requests and responses across NVIDIA NeMo Guard safety categories. Needs a NeMo Guard inference endpoint. |
-| [Word count](https://xpolicyhubhostx/xpolicyhubpathx/policies/word-count-guardrail) | Enforces word count limits on prompts or responses. |
-| [Sentence count](https://xpolicyhubhostx/xpolicyhubpathx/policies/sentence-count-guardrail) | Enforces sentence count limits on prompts or responses. |
-| [Content length](https://xpolicyhubhostx/xpolicyhubpathx/policies/content-length-guardrail) | Enforces byte-length limits on prompts or responses. |
-| [JSON schema](https://xpolicyhubhostx/xpolicyhubpathx/policies/json-schema-guardrail) | Validates content against a JSON schema. |
-| [Regex](https://xpolicyhubhostx/xpolicyhubpathx/policies/regex-guardrail) | Blocks or allows content matching a regular expression. |
-| [URL](https://xpolicyhubhostx/xpolicyhubpathx/policies/url-guardrail) | Validates URLs found in content. |
-| [AWS Bedrock guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/aws-bedrock-guardrail) | Applies an AWS Bedrock guardrail to requests and responses. |
-| [Semantic tool filtering](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-tool-filtering) | Filters the tools exposed to a model by semantic relevance to the user query. |
+| [Semantic prompt guard](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) | Blocks or allows prompts by semantic similarity to configured phrases. Needs an embedding provider. |
+| [PII masking regex](https://wso2.com/api-platform/policy-hub/policies/pii-masking-regex) | Masks personally identifiable information (PII) using regex patterns, and restores it in the response. |
+| [Azure content safety](https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation) | Filters harmful content using Azure Content Safety moderation. Needs an Azure subscription. |
+| [Granite Guardian prompt injection](https://wso2.com/api-platform/policy-hub/policies/granite-guardian-prompt-injection) | Detects prompt injection and jailbreak attempts using IBM Granite Guardian, and rejects flagged requests. Needs a Granite Guardian inference endpoint. |
+| [NeMo Guard content safety](https://wso2.com/api-platform/policy-hub/policies/nvidia-nemoguard-content-safety) | Classifies requests and responses across NVIDIA NeMo Guard safety categories. Needs a NeMo Guard inference endpoint. |
+| [Word count](https://wso2.com/api-platform/policy-hub/policies/word-count-guardrail) | Enforces word count limits on prompts or responses. |
+| [Sentence count](https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail) | Enforces sentence count limits on prompts or responses. |
+| [Content length](https://wso2.com/api-platform/policy-hub/policies/content-length-guardrail) | Enforces byte-length limits on prompts or responses. |
+| [JSON schema](https://wso2.com/api-platform/policy-hub/policies/json-schema-guardrail) | Validates content against a JSON schema. |
+| [Regex](https://wso2.com/api-platform/policy-hub/policies/regex-guardrail) | Blocks or allows content matching a regular expression. |
+| [URL](https://wso2.com/api-platform/policy-hub/policies/url-guardrail) | Validates URLs found in content. |
+| [AWS Bedrock guardrail](https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail) | Applies an AWS Bedrock guardrail to requests and responses. |
+| [Semantic tool filtering](https://wso2.com/api-platform/policy-hub/policies/semantic-tool-filtering) | Filters the tools exposed to a model by semantic relevance to the user query. |
 
 ### Traffic management and prompt policies
 
@@ -77,26 +77,26 @@ These policies shape how requests are routed and composed:
 
 | Policy | What it does |
 |--------|--------------|
-| [Model round robin](https://xpolicyhubhostx/xpolicyhubpathx/policies/model-round-robin) | Distributes requests across models in round-robin order. |
-| [Model weighted round robin](https://xpolicyhubhostx/xpolicyhubpathx/policies/model-weighted-round-robin) | Distributes requests across models by assigned weight. |
-| [LLM header router](https://xpolicyhubhostx/xpolicyhubpathx/policies/llm-header-router) | Selects the target provider from a request header, so one OpenAI-shaped endpoint can fan out to several providers. |
-| [Prompt decorator](https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-decorator) | Prepends or appends content to every request. |
-| [Prompt template](https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-template) | Applies reusable parameterized prompt templates. |
-| [Prompt compressor](https://xpolicyhubhostx/xpolicyhubpathx/policies/prompt-compressor) | Compresses selected prompt text before the upstream call, using JSONPath targeting and rule-based thresholds. |
-| [Semantic caching](https://xpolicyhubhostx/xpolicyhubpathx/policies/semantic-cache) | Caches responses and serves them for semantically similar requests. |
-| [Respond](https://xpolicyhubhostx/xpolicyhubpathx/policies/respond) | Returns a response immediately without calling the upstream, for mocking and short-circuit logic. |
+| [Model round robin](https://wso2.com/api-platform/policy-hub/policies/model-round-robin) | Distributes requests across models in round-robin order. |
+| [Model weighted round robin](https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin) | Distributes requests across models by assigned weight. |
+| [LLM header router](https://wso2.com/api-platform/policy-hub/policies/llm-header-router) | Selects the target provider from a request header, so one OpenAI-shaped endpoint can fan out to several providers. |
+| [Prompt decorator](https://wso2.com/api-platform/policy-hub/policies/prompt-decorator) | Prepends or appends content to every request. |
+| [Prompt template](https://wso2.com/api-platform/policy-hub/policies/prompt-template) | Applies reusable parameterized prompt templates. |
+| [Prompt compressor](https://wso2.com/api-platform/policy-hub/policies/prompt-compressor) | Compresses selected prompt text before the upstream call, using JSONPath targeting and rule-based thresholds. |
+| [Semantic caching](https://wso2.com/api-platform/policy-hub/policies/semantic-cache) | Caches responses and serves them for semantically similar requests. |
+| [Respond](https://wso2.com/api-platform/policy-hub/policies/respond) | Returns a response immediately without calling the upstream, for mocking and short-circuit logic. |
 
 ### Provider transformation policies
 
-These policies translate an OpenAI Chat Completions request into another provider's API shape, and translate the response back. Pair them with the [LLM header router](https://xpolicyhubhostx/xpolicyhubpathx/policies/llm-header-router) to route one endpoint across several providers, or use one on its own to point a single OpenAI-shaped endpoint at a different provider. For an end-to-end example configured on the gateway, see [Multi-provider routing](../../../ai-gateway/next/routing/multi-provider-routing.md).
+These policies translate an OpenAI Chat Completions request into another provider's API shape, and translate the response back. Pair them with the [LLM header router](https://wso2.com/api-platform/policy-hub/policies/llm-header-router) to route one endpoint across several providers, or use one on its own to point a single OpenAI-shaped endpoint at a different provider. For an end-to-end example configured on the gateway, see [Multi-provider routing](../../../ai-gateway/next/routing/multi-provider-routing.md).
 
 | Policy | Target provider |
 |--------|-----------------|
-| [OpenAI to Anthropic transformer](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-anthropic-transformer) | Anthropic Messages API |
-| [OpenAI to Azure OpenAI transformer](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-azure-openai-transformer) | Azure OpenAI |
-| [OpenAI to Bedrock transformer](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-bedrock-transformer) | AWS Bedrock Converse |
-| [OpenAI to Gemini transformer](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-gemini-transformer) | Google Gemini `generateContent` |
-| [OpenAI to Mistral transformer](https://xpolicyhubhostx/xpolicyhubpathx/policies/openai-to-mistral-transformer) | Mistral |
+| [OpenAI to Anthropic transformer](https://wso2.com/api-platform/policy-hub/policies/openai-to-anthropic-transformer) | Anthropic Messages API |
+| [OpenAI to Azure OpenAI transformer](https://wso2.com/api-platform/policy-hub/policies/openai-to-azure-openai-transformer) | Azure OpenAI |
+| [OpenAI to Bedrock transformer](https://wso2.com/api-platform/policy-hub/policies/openai-to-bedrock-transformer) | AWS Bedrock Converse |
+| [OpenAI to Gemini transformer](https://wso2.com/api-platform/policy-hub/policies/openai-to-gemini-transformer) | Google Gemini `generateContent` |
+| [OpenAI to Mistral transformer](https://wso2.com/api-platform/policy-hub/policies/openai-to-mistral-transformer) | Mistral |
 
 ## Rate limiting
 
@@ -104,11 +104,11 @@ AI services bill per token, so uncontrolled usage turns into unexpected cost. AI
 
 | Policy | Caps | Specification |
 |--------|------|---------------|
-| [Rate limit - basic](#rate-limit-basic) | Request count | [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/policies/basic-ratelimit) |
-| [Rate limit - advanced](#rate-limit-advanced) | Request count, with multi-dimensional and weighted quotas | [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/policies/advanced-ratelimit) |
-| [Token-based rate limit](#token-based-rate-limit) | Prompt, completion, or total tokens | [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/policies/token-based-ratelimit) |
-| [LLM cost](#llm-cost) | Nothing on its own — calculates the cost other policies spend against | [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/policies/llm-cost) |
-| [LLM cost-based rate limit](#llm-cost-based-rate-limit) | Monetary spend in USD | [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/policies/llm-cost-based-ratelimit) |
+| [Rate limit - basic](#rate-limit-basic) | Request count | [Policy Hub](https://wso2.com/api-platform/policy-hub/policies/basic-ratelimit) |
+| [Rate limit - advanced](#rate-limit-advanced) | Request count, with multi-dimensional and weighted quotas | [Policy Hub](https://wso2.com/api-platform/policy-hub/policies/advanced-ratelimit) |
+| [Token-based rate limit](#token-based-rate-limit) | Prompt, completion, or total tokens | [Policy Hub](https://wso2.com/api-platform/policy-hub/policies/token-based-ratelimit) |
+| [LLM cost](#llm-cost) | Nothing on its own — calculates the cost other policies spend against | [Policy Hub](https://wso2.com/api-platform/policy-hub/policies/llm-cost) |
+| [LLM cost-based rate limit](#llm-cost-based-rate-limit) | Monetary spend in USD | [Policy Hub](https://wso2.com/api-platform/policy-hub/policies/llm-cost-based-ratelimit) |
 
 You attach all of them through the **Guardrails** tab of an LLM provider or App LLM proxy. LLM providers also have a built-in **Rate Limiting** tab that caps requests and tokens without attaching a policy — see [Rate limiting on a provider](../llm-providers/manage-provider.md#rate-limiting) for that tab. Use a policy when you need a per-route cap, token categories counted separately, or a spending budget.
 
@@ -153,7 +153,7 @@ Caps request count like the basic policy, with more control over how requests ar
 !!! warning "Redis failures disable quota enforcement"
     With a Redis-backed counter, a Redis outage stops quotas being enforced rather than blocking traffic. Requests pass through unrestricted for as long as Redis is unreachable, which can drive unbounded upstream traffic and LLM spend. Alert on Redis availability, and pair the policy with a limit that doesn't depend on Redis — an in-memory rate limit, or a [token-based](#token-based-rate-limit) or [LLM cost-based](#llm-cost-based-rate-limit) limit — if you need a ceiling that survives the outage.
 
-For the full configuration schema, see [Rate limit - advanced](https://xpolicyhubhostx/xpolicyhubpathx/policies/advanced-ratelimit) in the Policy Hub.
+For the full configuration schema, see [Rate limit - advanced](https://wso2.com/api-platform/policy-hub/policies/advanced-ratelimit) in the Policy Hub.
 
 ### Token-based rate limit
 
@@ -267,15 +267,15 @@ These policies attach to Model Context Protocol (MCP) proxies. To attach them in
 
 | Policy | What it does |
 |--------|--------------|
-| [MCP access control](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-acl-list) | Allows or denies access to specific tools and resources. |
-| [MCP authentication](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-auth) | Authenticates callers of the MCP proxy. |
-| [MCP authorization](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-authz) | Authorizes tool and resource calls against the caller's privileges. |
-| [MCP rewrite](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-rewrite) | Rewrites tool and resource definitions before they reach the client. |
-| [MCP rate limit](https://xpolicyhubhostx/xpolicyhubpathx/policies/mcp-ratelimit) | Limits the rate of MCP tool and method calls. |
-| [CORS](https://xpolicyhubhostx/xpolicyhubpathx/policies/cors) | Handles cross-origin resource sharing (CORS) preflight requests and adds CORS response headers. |
-| [Set headers](https://xpolicyhubhostx/xpolicyhubpathx/policies/set-headers) | Sets or appends request and response headers. |
-| [Remove headers](https://xpolicyhubhostx/xpolicyhubpathx/policies/remove-headers) | Removes request or response headers by name. |
-| [Log message](https://xpolicyhubhostx/xpolicyhubpathx/policies/log-message) | Logs request and response headers and payloads, including each chunk of a streaming response. |
+| [MCP access control](https://wso2.com/api-platform/policy-hub/policies/mcp-acl-list) | Allows or denies access to specific tools and resources. |
+| [MCP authentication](https://wso2.com/api-platform/policy-hub/policies/mcp-auth) | Authenticates callers of the MCP proxy. |
+| [MCP authorization](https://wso2.com/api-platform/policy-hub/policies/mcp-authz) | Authorizes tool and resource calls against the caller's privileges. |
+| [MCP rewrite](https://wso2.com/api-platform/policy-hub/policies/mcp-rewrite) | Rewrites tool and resource definitions before they reach the client. |
+| [MCP rate limit](https://wso2.com/api-platform/policy-hub/policies/mcp-ratelimit) | Limits the rate of MCP tool and method calls. |
+| [CORS](https://wso2.com/api-platform/policy-hub/policies/cors) | Handles cross-origin resource sharing (CORS) preflight requests and adds CORS response headers. |
+| [Set headers](https://wso2.com/api-platform/policy-hub/policies/set-headers) | Sets or appends request and response headers. |
+| [Remove headers](https://wso2.com/api-platform/policy-hub/policies/remove-headers) | Removes request or response headers by name. |
+| [Log message](https://wso2.com/api-platform/policy-hub/policies/log-message) | Logs request and response headers and payloads, including each chunk of a streaming response. |
 
 ## Custom policies
 
@@ -289,4 +289,4 @@ To build and roll one out end to end:
 
 ## Policy Hub
 
-The policies in AI Workspace are powered by the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx/), a central registry of available policies and their versions. Visit it to browse every available policy alongside its documentation and configuration schema.
+The policies in AI Workspace are powered by the [Policy Hub](https://wso2.com/api-platform/policy-hub/), a central registry of available policies and their versions. Visit it to browse every available policy alongside its documentation and configuration schema.

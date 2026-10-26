@@ -1,15 +1,15 @@
 ---
 title: "Multi model routing"
 description: "Distribute LLM proxy traffic across a pool of models with round robin or weighted round robin, and move off a model that starts returning errors."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/routing/multi-model-routing/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/routing/multi-model-routing.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/routing/multi-model-routing/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/routing/multi-model-routing.md
 tags:
   - ai-gateway
   - routing
   - load-balancing
   - failover
   - llm
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-20
 content_type: "how-to"
 ---
@@ -43,7 +43,7 @@ operationPolicies:
 
 The policy rewrites the model at the location defined by the provider template. It can rewrite a model in the request payload, a header, a query parameter, or a path parameter.
 
-See [Model Round Robin](https://xpolicyhubhostx/xpolicyhubpathx/policies/model-round-robin) for its complete configuration.
+See [Model Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-round-robin) for its complete configuration.
 
 ## Weighted round robin
 
@@ -68,7 +68,7 @@ operationPolicies:
 
 This example produces the repeating sequence `gpt-4o`, `gpt-4o`, `claude-sonnet-4-5-20250929` while both targets are available. It provides proportional deterministic distribution, not random or performance-based load balancing.
 
-See [Model Weighted Round Robin](https://xpolicyhubhostx/xpolicyhubpathx/policies/model-weighted-round-robin) for its complete configuration.
+See [Model Weighted Round Robin](https://wso2.com/api-platform/policy-hub/policies/model-weighted-round-robin) for its complete configuration.
 
 ## What happens when a model fails
 

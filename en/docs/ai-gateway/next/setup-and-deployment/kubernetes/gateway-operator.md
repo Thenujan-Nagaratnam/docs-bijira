@@ -1,20 +1,20 @@
 ---
 title: "Kubernetes Operator for API Platform Gateway"
 description: "Deploy API Platform AI Gateway on Kubernetes using the Gateway Operator with platform CRDs or the Kubernetes Gateway API."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/setup-and-deployment/kubernetes/gateway-operator/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/setup-and-deployment/kubernetes/gateway-operator.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/setup-and-deployment/kubernetes/gateway-operator/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/setup-and-deployment/kubernetes/gateway-operator.md
 tags:
   - ai-gateway
   - kubernetes
   - deployment
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "how-to"
 ---
 
 # Kubernetes Operator for API Platform Gateway
 
-The XPLATFORMGATEWAYX Operator enables native Kubernetes deployment using a GitOps-friendly, operator-based model. It manages the full lifecycle of API gateways and REST APIs. You can use **either** platform CRDs **or** the **Kubernetes Gateway API** on the same operator build.
+The WSO2 API Platform Gateway Operator enables native Kubernetes deployment using a GitOps-friendly, operator-based model. It manages the full lifecycle of API gateways and REST APIs. You can use **either** platform CRDs **or** the **Kubernetes Gateway API** on the same operator build.
 
 ## Overview
 
@@ -64,7 +64,7 @@ helm upgrade --install \
 ### 2. Install Gateway Operator
 
 ```sh
-helm install my-gateway-operator oci://ghcr.io/xgithuborgx/api-platform/helm-charts/gateway-operator --version 0.6.0
+helm install my-gateway-operator oci://ghcr.io/wso2/api-platform/helm-charts/gateway-operator --version 0.6.0
 ```
 
 ## Deploying an API Gateway
@@ -72,7 +72,7 @@ helm install my-gateway-operator oci://ghcr.io/xgithuborgx/api-platform/helm-cha
 Create an `APIGateway` resource to bootstrap gateway components:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: APIGateway
 metadata:
   name: cluster-gateway
@@ -107,7 +107,7 @@ spec:
 Apply the sample APIGateway:
 
 ```sh
-kubectl apply -f https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/heads/main/kubernetes/gateway-operator/config/samples/api_v1_apigateway.yaml
+kubectl apply -f https://raw.githubusercontent.com/wso2/api-platform/refs/heads/main/kubernetes/gateway-operator/config/samples/api_v1_apigateway.yaml
 
 kubectl get apigateway -n default -o json | jq '.items[0].status'
 ```
@@ -117,7 +117,7 @@ kubectl get apigateway -n default -o json | jq '.items[0].status'
 Define APIs using the `RestApi` custom resource:
 
 ```yaml
-apiVersion: gateway.api-platform.xcrddomainx/v1
+apiVersion: gateway.api-platform.wso2.com/v1
 kind: RestApi
 metadata:
   name: my-api
@@ -140,7 +140,7 @@ spec:
 Apply the sample RestApi:
 
 ```sh
-kubectl apply -f https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/heads/main/kubernetes/gateway-operator/config/samples/api_v1_restapi.yaml
+kubectl apply -f https://raw.githubusercontent.com/wso2/api-platform/refs/heads/main/kubernetes/gateway-operator/config/samples/api_v1_restapi.yaml
 
 kubectl get restapi -n default -o json | jq '.items[0].status'
 ```
@@ -161,9 +161,9 @@ Use this when you prefer standard Gateway API resources instead of `APIGateway` 
 
 - **Gateway Operator** Helm install with RBAC for `gateway.networking.k8s.io` (included in the operator chart).
 - **Gateway API CRDs** in the cluster (cloud add-on, another controller, or `--set gatewayApi.installStandardCRDs=true` on a greenfield cluster where no conflicting CRD owner exists).
-- **`GatewayClass`** whose `metadata.name` is listed in **`gatewayApi.managedGatewayClassNames`** (default includes `xgatewayclassx`).
-- **`spec.controllerName`** on the `GatewayClass` should match the operator (`gateway.api-platform.xcrddomainx/gateway-operator`) so the operator can set **`Accepted`** status on the class.
-- **cert-manager** if you add **Certificate** / **Issuer** via per-Gateway Helm values (not included in the minimal YAMLs below; extend with a `ConfigMap` and **`gateway.api-platform.xcrddomainx/helm-values-configmap`** on the `Gateway` when needed).
+- **`GatewayClass`** whose `metadata.name` is listed in **`gatewayApi.managedGatewayClassNames`** (default includes `wso2-api-platform`).
+- **`spec.controllerName`** on the `GatewayClass` should match the operator (`gateway.api-platform.wso2.com/gateway-operator`) so the operator can set **`Accepted`** status on the class.
+- **cert-manager** if you add **Certificate** / **Issuer** via per-Gateway Helm values (not included in the minimal YAMLs below; extend with a `ConfigMap` and **`gateway.api-platform.wso2.com/helm-values-configmap`** on the `Gateway` when needed).
 - A **`Service`** backend referenced from **`HTTPRoute.spec.rules[].backendRefs`**.
 
 ### 1. Namespace
@@ -184,15 +184,15 @@ metadata:
 apiVersion: gateway.networking.k8s.io/v1
 kind: GatewayClass
 metadata:
-  name: xgatewayclassx
+  name: wso2-api-platform
 spec:
-  controllerName: gateway.api-platform.xcrddomainx/gateway-operator
+  controllerName: gateway.api-platform.wso2.com/gateway-operator
 ```
 
 ### 3. Gateway
 
 !!! warning "Pre-create the encryption key Secret"
-    At-rest encryption is mandatory and fail-closed. The operator installs the gateway into the **Gateway's own namespace**, so the AES-256 key Secret must exist in that namespace (`gateway-api-demo` below) before you apply the `Gateway`, and the per-Gateway values must enable it (`gateway.controller.encryptionKeys.enabled: true` with a `secretName`). Create it as shown in [Security Hardening → Encryption Keys](https://xdocshostx/xdocspathx/api-gateway/deployment/production-deployment/security-hardening/#encryption-keys), using `-n gateway-api-demo`.
+    At-rest encryption is mandatory and fail-closed. The operator installs the gateway into the **Gateway's own namespace**, so the AES-256 key Secret must exist in that namespace (`gateway-api-demo` below) before you apply the `Gateway`, and the per-Gateway values must enable it (`gateway.controller.encryptionKeys.enabled: true` with a `secretName`). Create it as shown in [Security Hardening → Encryption Keys](https://wso2.com/api-platform/docs/api-gateway/deployment/production-deployment/security-hardening/#encryption-keys), using `-n gateway-api-demo`.
 
 ```yaml
 # Per-Gateway Helm values enabling at-rest encryption (mandatory, fail-closed).
@@ -219,13 +219,13 @@ metadata:
   namespace: gateway-api-demo
   annotations:
     # Per-Gateway Helm overrides (here: mandatory at-rest encryption). ConfigMap key must be values.yaml.
-    gateway.api-platform.xcrddomainx/helm-values-configmap: platform-gw-values
+    gateway.api-platform.wso2.com/helm-values-configmap: platform-gw-values
     # Prevent this Gateway from matching RestApi CRs intended for APIGateway (CRD mode) in mixed demos.
-    gateway.api-platform.xcrddomainx/api-selector: '{"scope":"LabelSelector","matchLabels":{"gateway.api-platform.xcrddomainx/restapi-target":"k8s"}}'
+    gateway.api-platform.wso2.com/api-selector: '{"scope":"LabelSelector","matchLabels":{"gateway.api-platform.wso2.com/restapi-target":"k8s"}}'
   labels:
     app.kubernetes.io/part-of: gateway-api-operator-demo
 spec:
-  gatewayClassName: xgatewayclassx
+  gatewayClassName: wso2-api-platform
   infrastructure:
     labels:
       environment: dev
@@ -270,7 +270,7 @@ spec:
     spec:
       containers:
         - name: sample-backend
-          image: ghcr.io/xgithuborgx/api-platform/sample-service:latest
+          image: ghcr.io/wso2/api-platform/sample-service:latest
           args:
             - "-addr"
             - ":9080"
@@ -306,7 +306,7 @@ Wait until the **Gateway** is **Programmed** and gateway workloads are **Ready**
 
 ```yaml
 # Operator maps this route to APIConfigData and calls gateway-controller /api/management/v1/rest-apis.
-# Default REST handle is namespace-name: gateway-api-demo-hello-api (override with gateway.api-platform.xcrddomainx/api-handle).
+# Default REST handle is namespace-name: gateway-api-demo-hello-api (override with gateway.api-platform.wso2.com/api-handle).
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
@@ -315,9 +315,9 @@ metadata:
   labels:
     app.kubernetes.io/part-of: gateway-api-operator-demo
   annotations:
-    gateway.api-platform.xcrddomainx/api-version: "v1.0"
-    gateway.api-platform.xcrddomainx/context: "/hello-context"
-    gateway.api-platform.xcrddomainx/display-name: "Hello API"
+    gateway.api-platform.wso2.com/api-version: "v1.0"
+    gateway.api-platform.wso2.com/context: "/hello-context"
+    gateway.api-platform.wso2.com/display-name: "Hello API"
 spec:
   parentRefs:
     - group: gateway.networking.k8s.io
@@ -352,7 +352,7 @@ metadata:
   labels:
     app.kubernetes.io/part-of: gateway-api-operator-demo
   annotations:
-    gateway.api-platform.xcrddomainx/display-name: "Hello API 2"
+    gateway.api-platform.wso2.com/display-name: "Hello API 2"
 spec:
   parentRefs:
     - group: gateway.networking.k8s.io
@@ -378,11 +378,11 @@ Verify: `kubectl get gateway,httproute -n gateway-api-demo`, wait for parent con
 
 ### HTTPRoute annotations (payload metadata)
 
-Common annotations on `HTTPRoute` are copied into the **`api.yaml`** payload (for example **`gateway.api-platform.xcrddomainx/context`**, **`api-version`**, **`api-handle`**, **`display-name`**, **`project-id`**). If **`context`** is omitted or only whitespace, it defaults to **`/`**. If a rule **`match`** omits **`method`**, the operator emits all RestApi-supported verbs for that path: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS.
+Common annotations on `HTTPRoute` are copied into the **`api.yaml`** payload (for example **`gateway.api-platform.wso2.com/context`**, **`api-version`**, **`api-handle`**, **`display-name`**, **`project-id`**). If **`context`** is omitted or only whitespace, it defaults to **`/`**. If a rule **`match`** omits **`method`**, the operator emits all RestApi-supported verbs for that path: GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS.
 
 ### Mixed clusters (`RestApi` + `Gateway`)
 
-If you run **both** `APIGateway`-selected **`RestApi`** resources and **Gateway API** routes, keep the **`gateway.api-platform.xcrddomainx/api-selector`** annotation on the **`Gateway`** (as in the YAML above) so this gateway does not select `RestApi` CRs meant for another `APIGateway`.
+If you run **both** `APIGateway`-selected **`RestApi`** resources and **Gateway API** routes, keep the **`gateway.api-platform.wso2.com/api-selector`** annotation on the **`Gateway`** (as in the YAML above) so this gateway does not select `RestApi` CRs meant for another `APIGateway`.
 
 ### Test API Endpoints
 
@@ -404,7 +404,7 @@ For APIs connecting to backends with self-signed certificates:
 ### 1. Download the Certificate
 
 ```sh
-curl -X GET "https://raw.githubusercontent.com/xgithuborgx/api-platform/refs/heads/main/gateway/resources/secure-backend/test-backend-certs/test-backend.crt" \
+curl -X GET "https://raw.githubusercontent.com/wso2/api-platform/refs/heads/main/gateway/resources/secure-backend/test-backend-certs/test-backend.crt" \
   -o /tmp/test-backend.crt
 ```
 
@@ -470,14 +470,14 @@ metadata:
   name: platform-gw
   namespace: gateway-api-demo
   annotations:
-    gateway.api-platform.xcrddomainx/helm-values-configmap: gateway-custom-config
+    gateway.api-platform.wso2.com/helm-values-configmap: gateway-custom-config
     # ... other annotations (e.g. api-selector) as needed
 spec:
-  gatewayClassName: xgatewayclassx
+  gatewayClassName: wso2-api-platform
   # listeners, infrastructure, ...
 ```
 
-The operator reads **`metadata.annotations[gateway.api-platform.xcrddomainx/helm-values-configmap]`**, loads **`ConfigMap.data["values.yaml"]`**, and merges it into the Helm values used for **`{metadata.name}-gateway`**, same merge rules as **`APIGateway.spec.configRef`**.
+The operator reads **`metadata.annotations[gateway.api-platform.wso2.com/helm-values-configmap]`**, loads **`ConfigMap.data["values.yaml"]`**, and merges it into the Helm values used for **`{metadata.name}-gateway`**, same merge rules as **`APIGateway.spec.configRef`**.
 
 ## Architecture
 

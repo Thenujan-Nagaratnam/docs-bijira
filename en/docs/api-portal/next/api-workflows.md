@@ -1,13 +1,13 @@
 ---
 title: "API workflows in the API Portal & MCP Hub"
 description: "Find a published API workflow, read its steps in the portal, and hand it to an AI agent through the generated agent prompt or the Arazzo specification."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/api-workflows/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/api-workflows.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/api-workflows/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/api-workflows.md
 tags:
   - cloud
   - api-portal
   - api-workflows
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-31
 content_type: "how-to"
 ---

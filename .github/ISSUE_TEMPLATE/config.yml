@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
 - name: '🐛 Product Issue'
-  about: Report a bug in the XAPIPLATFORMX product.
-  url: https://github.com/xgithuborgx/api-platform/issues/new/choose
+  about: Report a bug in the WSO2 API Platform product.
+  url: https://github.com/wso2/api-platform/issues/new/choose
 - name: 'General Question'
   url: https://stackoverflow.com/questions/tagged/wso2
   about: "If you have a question then please ask on Stack Overflow. Chat with the community to get quick clarifications for your questions."
-- name: Chat on XBRANDX Discord Channel
+- name: Chat on WSO2 Discord Channel
   url: https://discord.com/invite/Xa5VubmThw
   about: "Chat about anything else with the community."

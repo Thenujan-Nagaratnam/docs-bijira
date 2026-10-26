@@ -1,14 +1,14 @@
 ---
 title: "Monetize MCP Tools with the Self-Hosted Gateway"
-description: "Front an MCP server with the XBRANDX self-hosted AI gateway, publish per-tool-call usage to Moesif, and connect Stripe to bill AI agents for the MCP tools they call."
-canonical_url: https://xdocshostx/xdocspathx/guides/monetization/mcp-tool-monetization/
-md_url: https://xdocshostx/xdocspathx/guides/monetization/mcp-tool-monetization.md
+description: "Front an MCP server with the WSO2 self-hosted AI gateway, publish per-tool-call usage to Moesif, and connect Stripe to bill AI agents for the MCP tools they call."
+canonical_url: https://wso2.com/api-platform/docs/guides/monetization/mcp-tool-monetization/
+md_url: https://wso2.com/api-platform/docs/guides/monetization/mcp-tool-monetization.md
 tags:
   - guides
   - monetization
   - mcp
   - ai-gateway
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-07
 content_type: "tutorial"
 ---
@@ -17,7 +17,7 @@ content_type: "tutorial"
 
 ## Overview
 
-This guide shows you how to monetize Model Context Protocol (MCP) tools exposed through the XAPIPLATFORMX self-hosted gateway. Instead of charging for raw REST endpoints, you charge AI agents and applications for the MCP tool calls they make. The gateway authenticates every tool call, captures it as an analytics event, and publishes it to Moesif, where you define usage-based billing meters and connect a billing provider such as Stripe to invoice consumers automatically.
+This guide shows you how to monetize Model Context Protocol (MCP) tools exposed through the WSO2 API Platform self-hosted gateway. Instead of charging for raw REST endpoints, you charge AI agents and applications for the MCP tool calls they make. The gateway authenticates every tool call, captures it as an analytics event, and publishes it to Moesif, where you define usage-based billing meters and connect a billing provider such as Stripe to invoice consumers automatically.
 
 By the end, you'll have a self-hosted AI gateway fronting an MCP server, MCP tool traffic flowing through it, and per-tool-call usage published to Moesif and ready to bill.
 
@@ -30,7 +30,7 @@ By the end, you'll have a self-hosted AI gateway fronting an MCP server, MCP too
 
 Before you start, here are the terms this guide uses:
 
-**Self-hosted AI gateway** is the XPLATFORMAIGATEWAYX distribution you run in your own environment with Docker Compose. It hosts MCP proxies and enforces authentication, rate limiting, and analytics.
+**Self-hosted AI gateway** is the WSO2 API Platform AI Gateway distribution you run in your own environment with Docker Compose. It hosts MCP proxies and enforces authentication, rate limiting, and analytics.
 
 **MCP proxy** is the gateway resource that fronts a backend MCP server. It exposes the backend's tools, resources, and prompts to MCP clients under a single governed endpoint.
 
@@ -38,7 +38,7 @@ Before you start, here are the terms this guide uses:
 
 **Analytics publisher** is the gateway component that asynchronously captures each request as an analytics event and publishes it to an external analytics platform. Today the supported publisher is Moesif.
 
-**Moesif** is the analytics and monetization platform XAPIPLATFORMX integrates with. It receives tool-call events, applies usage-based billing meters, and connects to a billing provider.
+**Moesif** is the analytics and monetization platform WSO2 API Platform integrates with. It receives tool-call events, applies usage-based billing meters, and connects to a billing provider.
 
 **Billing provider** is the payment platform (such as Stripe, Recurly, or Chargebee) that Moesif connects to for invoicing and payment collection.
 
@@ -69,7 +69,7 @@ MCP client (AI agent / app)
     v
 
 +-----------------------------------+
-|      XSAMPLEBRANDX self-hosted AI Gateway   |
+|      WSO2 self-hosted AI Gateway   |
 |  MCP auth · routing · analytics    |
 +-----------------------------------+
 
@@ -98,13 +98,13 @@ Download and start the AI gateway distribution with Docker Compose.
 
 ```bash
 # Download the distribution.
-wget https://github.com/xgithuborgx/api-platform/releases/download/ai-gateway/v1.1.0/xartifactprefixx-ai-gateway-1.1.0.zip
+wget https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip
 
 # Unzip the downloaded distribution.
-unzip xartifactprefixx-ai-gateway-1.1.0.zip
+unzip wso2apip-ai-gateway-1.1.0.zip
 
 # Start the complete stack.
-cd xartifactprefixx-ai-gateway-1.1.0/
+cd wso2apip-ai-gateway-1.1.0/
 docker compose -p ai-gateway up -d
 
 # Verify the gateway controller admin endpoint is running.
@@ -138,7 +138,7 @@ Start the sample MCP server, then deploy an MCP proxy that fronts it and require
       -H "Content-Type: application/yaml" \
       -H "Authorization: Basic YWRtaW46YWRtaW4=" \
       --data-binary @- <<'EOF'
-    apiVersion: gateway.api-platform.xcrddomainx/v1
+    apiVersion: gateway.api-platform.wso2.com/v1
     kind: Mcp
     metadata:
       name: everything-mcp-v1.0
@@ -273,7 +273,7 @@ Connect Moesif to Stripe so metered usage is converted into invoices and payment
 3. Map your Moesif billing meter to a Stripe product and price.
 4. Save the integration.
 
-**Expected result:** Moesif reports metered MCP tool usage to Stripe, which issues invoices and collects payment from subscribed consumers. XAPIPLATFORMX never stores payment details.
+**Expected result:** Moesif reports metered MCP tool usage to Stripe, which issues invoices and collects payment from subscribed consumers. WSO2 API Platform never stores payment details.
 
 !!! note
     Moesif also integrates with Recurly, Chargebee, and Zuora. The same metered usage data drives billing regardless of the provider you choose. See the [Analytics and Monetization overview](../../analytics-and-monetization/overview.md) for the full list of capabilities.
@@ -312,7 +312,7 @@ Connect Moesif to Stripe so metered usage is converted into invoices and payment
 
 ## What you learned
 
-- Ran the XBRANDX self-hosted AI gateway and deployed an authenticated MCP proxy in front of a backend MCP server.
+- Ran the WSO2 self-hosted AI gateway and deployed an authenticated MCP proxy in front of a backend MCP server.
 - Enabled the gateway analytics publisher and configured Moesif to receive every MCP tool call as a usage event, without adding latency.
 - Created a usage-based billing meter in Moesif that counts MCP tool calls per consumer.
 - Connected Stripe as the billing provider so metered tool usage is invoiced and collected automatically.

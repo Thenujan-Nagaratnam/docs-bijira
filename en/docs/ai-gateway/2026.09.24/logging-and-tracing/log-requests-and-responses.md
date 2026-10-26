@@ -1,15 +1,15 @@
 ---
 title: "Log requests and responses"
 description: "Record the payload and headers of traffic passing through the AI Gateway, as a log line per request or through a policy on chosen operations."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/next/logging-and-tracing/log-requests-and-responses/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/next/logging-and-tracing/log-requests-and-responses.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/next/logging-and-tracing/log-requests-and-responses/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/next/logging-and-tracing/log-requests-and-responses.md
 tags:
   - ai-gateway
   - logging
   - observability
   - traffic-logging
   - audit
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-26
 content_type: "concept"
 ---
@@ -38,11 +38,11 @@ Prompts and completions carry whatever your users typed, so a log of them is as 
 
 ## Traffic logging policies
 
-This policy is documented in the [Policy Hub](https://xpolicyhubhostx/xpolicyhubpathx), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../policy-hub/overview.md).
+This policy is documented in the [Policy Hub](https://wso2.com/api-platform/policy-hub), the versioned reference for every API Platform policy. For policy categories and how policies chain, see the [Policy Hub overview](../../../policy-hub/overview.md).
 
 | Policy | What it does |
 |--------|--------------|
-| [Log Message](https://xpolicyhubhostx/xpolicyhubpathx/policies/log-message) | Logs request/response payload and headers |
+| [Log Message](https://wso2.com/api-platform/policy-hub/policies/log-message) | Logs request/response payload and headers |
 
 ## Related topics
 

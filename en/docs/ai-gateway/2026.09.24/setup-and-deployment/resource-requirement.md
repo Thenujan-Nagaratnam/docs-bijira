@@ -1,13 +1,13 @@
 ---
 title: "Minimum resource requirements"
 description: "Baseline CPU and memory requirements for AI Gateway setup and production planning."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/2026.09.24/setup-and-deployment/resource-requirement/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/2026.09.24/setup-and-deployment/resource-requirement.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/2026.09.24/setup-and-deployment/resource-requirement/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/2026.09.24/setup-and-deployment/resource-requirement.md
 tags:
   - ai-gateway
   - setup
   - resources
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-10-03
 content_type: "reference"
 ---

@@ -1,13 +1,13 @@
 ---
 title: "Organization Content"
 description: "Get, apply, reset, and download an organization's theme assets via the API Portal REST API."
-canonical_url: https://xdocshostx/xdocspathx/api-portal/next/rest-api/organization-content/
-md_url: https://xdocshostx/xdocspathx/api-portal/next/rest-api/organization-content.md
+canonical_url: https://wso2.com/api-platform/docs/api-portal/next/rest-api/organization-content/
+md_url: https://wso2.com/api-platform/docs/api-portal/next/rest-api/organization-content.md
 tags:
   - cloud
   - api-portal
   - rest-api
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-24
 content_type: "reference"
 ---

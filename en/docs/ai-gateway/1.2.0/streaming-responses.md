@@ -1,8 +1,8 @@
 ---
 title: "Stream responses"
 description: "Stream responses chunk by chunk through LLM providers, LLM proxies, and MCP proxies, and how policies, analytics, and token usage behave."
-canonical_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/streaming-responses/
-md_url: https://xdocshostx/xdocspathx/ai-gateway/1.2.0/streaming-responses.md
+canonical_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/streaming-responses/
+md_url: https://wso2.com/api-platform/docs/ai-gateway/1.2.0/streaming-responses.md
 tags:
   - ai-gateway
   - llm
@@ -10,7 +10,7 @@ tags:
   - streaming
   - sse
   - chunked
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-08-17
 content_type: "concept"
 ---
@@ -102,6 +102,6 @@ If a streamed response carries no `usage` block, the gateway has no token counts
 
 - [Quick Start Guide](quick-start-guide.md) — deploy a provider and a proxy, then send your first request
 - [MCP proxy](gateway-artifacts/mcp-proxy.md) — deploy an MCP proxy
-- [Sentence Count Guardrail](https://xpolicyhubhostx/xpolicyhubpathx/policies/sentence-count-guardrail) — a guardrail that gates a stream until it can evaluate the content
+- [Sentence Count Guardrail](https://wso2.com/api-platform/policy-hub/policies/sentence-count-guardrail) — a guardrail that gates a stream until it can evaluate the content
 - [Timeouts and resilience](timeouts-and-resilience.md) — a streamed response holds the route open, so the route timeout matters more than it does for a single reply
 - [Log requests and responses](logging-and-tracing/log-requests-and-responses.md) — what a streamed exchange looks like when the traffic content is recorded

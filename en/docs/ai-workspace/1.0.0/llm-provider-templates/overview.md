@@ -1,13 +1,13 @@
 ---
 title: "LLM provider templates overview"
 description: "Learn how LLM provider templates capture endpoint, authentication, OpenAPI, and token mapping configuration as reusable blueprints for creating LLM providers in AI Workspace."
-canonical_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/llm-provider-templates/overview/
-md_url: https://xdocshostx/xdocspathx/ai-workspace/1.0.0/llm-provider-templates/overview.md
+canonical_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/llm-provider-templates/overview/
+md_url: https://wso2.com/api-platform/docs/ai-workspace/1.0.0/llm-provider-templates/overview.md
 tags:
   - cloud
   - ai-workspace
   - llm-provider-templates
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-07-10
 content_type: "overview"
 ---

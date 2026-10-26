@@ -1,14 +1,14 @@
 ---
 title: "Build the Self-Hosted Gateway with custom policies"
 description: "Install the AP CLI, configure build.yaml, and build a custom Self-Hosted Gateway image that includes your custom policies."
-canonical_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/build-gateway-with-custom-policies/
-md_url: https://xdocshostx/xdocspathx/cloud/api-platform-gateway/build-gateway-with-custom-policies.md
+canonical_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/build-gateway-with-custom-policies/
+md_url: https://wso2.com/api-platform/docs/cloud/api-platform-gateway/build-gateway-with-custom-policies.md
 tags:
   - cloud
   - api-gateway
   - self-hosted
   - custom-policy
-author: XDOCSTEAMX
+author: WSO2 API Platform Documentation Team
 last_updated: 2026-06-22
 content_type: "how-to"
 ---
@@ -17,7 +17,7 @@ content_type: "how-to"
 
 ## Install the AP CLI Tool
 
-The `ap` CLI tool is used to build a custom gateway image with your own policies. Download the binary for your platform from the [AP CLI releases page](https://github.com/xgithuborgx/api-platform/releases/tag/ap%2Fv0.7.0) and follow the steps below to install it.
+The `ap` CLI tool is used to build a custom gateway image with your own policies. Download the binary for your platform from the [AP CLI releases page](https://github.com/wso2/api-platform/releases/tag/ap%2Fv0.7.0) and follow the steps below to install it.
 
 === "macOS / Linux"
 
@@ -96,7 +96,7 @@ The `ap` CLI tool is used to build a custom gateway image with your own policies
 The `build.yaml` file is already included in the unzipped gateway package. It declares the gateway version and the list of policies to include. Edit this file to add your custom policies before building the gateway image.
 
 !!! tip "Sample Custom Policies"
-    XBRANDX provides a set of sample custom policies to help you get started. You can find them in the [api-platform sample policies repository](https://github.com/xgithuborgx/api-platform/tree/main/gateway/sample-policies).
+    WSO2 provides a set of sample custom policies to help you get started. You can find them in the [api-platform sample policies repository](https://github.com/wso2/api-platform/tree/main/gateway/sample-policies).
 
 ### Structure
 
@@ -115,7 +115,7 @@ Each policy entry uses one of two source types:
 
 | Field | Description |
 |---|---|
-| `gomodule` | Go module reference for policy hub managed policies (e.g., `github.com/xgithuborgx/gateway-controllers/policies/cors@v1`) |
+| `gomodule` | Go module reference for policy hub managed policies (e.g., `github.com/wso2/gateway-controllers/policies/cors@v1`) |
 | `filePath` | Relative path from `build.yaml` to a local custom policy directory |
 
 ### Adding a Custom Policy
@@ -157,8 +157,8 @@ Once the build completes, the output lists the two image names produced. For exa
 
 ```text
 ✓ Built gateway images with 1 policies:
-  • ghcr.io/xgithuborgx/api-platform/gateway-v1.0.0-gateway-runtime:1.0.0
-  • ghcr.io/xgithuborgx/api-platform/gateway-v1.0.0-gateway-controller:1.0.0
+  • ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-runtime:1.0.0
+  • ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-controller:1.0.0
 ```
 
 A `build-manifest.yaml` file is also written alongside `build.yaml`, recording the resolved versions of all policies included in the build.
@@ -172,10 +172,10 @@ Locate the `gateway-controller` and `gateway-runtime` services and replace their
 ```yaml
 services:
   gateway-controller:
-    image: ghcr.io/xgithuborgx/api-platform/gateway-v1.0.0-gateway-controller:1.0.0  # (1)
+    image: ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-controller:1.0.0  # (1)
 
   gateway-runtime:
-    image: ghcr.io/xgithuborgx/api-platform/gateway-v1.0.0-gateway-runtime:1.0.0     # (2)
+    image: ghcr.io/wso2/api-platform/gateway-v1.0.0-gateway-runtime:1.0.0     # (2)
 ```
 
 1. Replace with the `gateway-controller` image name from your build output.
