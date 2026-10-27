@@ -233,7 +233,7 @@ Choose the strategy that matches how your organization handles access.
     Set `audience` to the value your identity provider puts in the `aud` claim of tokens it issues for the gateway controller. If you leave `audience` empty, the controller accepts tokens issued for any audience and logs a warning at startup. For details on `audience`, `roles_claim`, and `role_mapping`, see [Secure the management API](../secure-the-management-api.md).
 
     !!! note
-        The values in `role_mapping` must match claims the identity provider actually issues in its JSON Web Tokens (JWTs). For the roles the controller recognizes and the operations each one permits, see the [gateway controller management API definition](https://raw.githubusercontent.com/wso2/api-platform/refs/tags/ai-gateway/v1.2.0/gateway/gateway-controller/api/management-openapi.yaml).
+        The values in `role_mapping` must match claims the identity provider actually issues in its JSON Web Tokens (JWTs). For the roles the controller recognizes and the operations each one permits, see the [gateway controller management API definition](https://raw.githubusercontent.com/wso2/api-platform/refs/tags/{{ release.release_tag }}/gateway/gateway-controller/api/management-openapi.yaml).
 
 === "Option B: basic auth with bcrypt"
 

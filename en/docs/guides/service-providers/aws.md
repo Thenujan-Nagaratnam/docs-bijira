@@ -63,8 +63,8 @@ Connect Amazon Bedrock and manage its models and credentials centrally.
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
 - [Use Amazon Bedrock and Bedrock Guardrails with WSO2 AI Gateway](https://wso2.com/api-platform/learn/aws-bedrock-llm-guardrails-wso2-ai-gateway/) <span class="vendor-meta">Learn Hub tutorial</span>
-- [Amazon Bedrock provider](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md) <span class="vendor-meta">AI Gateway</span>
-- [Configure an LLM provider](../../ai-workspace/1.0.0/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
+- [Amazon Bedrock provider](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md) <span class="vendor-meta">AI Gateway</span>
+- [Configure an LLM provider](../../ai-workspace/{{ latest.ai_workspace }}/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
 
 </div>
 
@@ -84,7 +84,7 @@ Sign requests with AWS Signature Version 4 (SigV4) using IAM credentials, a work
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Choose an authentication method](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md#choose-an-authentication-method) <span class="vendor-meta">AI Gateway</span>
+- [Choose an authentication method](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md#choose-an-authentication-method) <span class="vendor-meta">AI Gateway</span>
 - [AWS Authentication policy](https://wso2.com/api-platform/policy-hub/policies/aws-authentication) <span class="vendor-meta">Policy Hub</span>
 
 </div>
@@ -112,7 +112,7 @@ Enforce the content filters, denied topics, and sensitive-information policies t
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
 - [AWS Bedrock Guardrail policy](https://wso2.com/api-platform/policy-hub/policies/aws-bedrock-guardrail) <span class="vendor-meta">Policy Hub</span>
-- [Guardrails catalogue](../../ai-gateway/2026.09.24/guardrails/guardrails-catalogue.md) <span class="vendor-meta">AI Gateway</span>
+- [Guardrails catalogue](../../ai-gateway/{{ latest.ai_gateway }}/guardrails/guardrails-catalogue.md) <span class="vendor-meta">AI Gateway</span>
 
 </div>
 
@@ -132,7 +132,7 @@ Routing, token limits, cost control, and the other AI Workspace policies work th
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-Routing, token limits, cost control, and the gateway's other policies work the same way for every provider. See the [AI Gateway documentation](../../ai-gateway/2026.09.24/overview.md).
+Routing, token limits, cost control, and the gateway's other policies work the same way for every provider. See the [AI Gateway documentation](../../ai-gateway/{{ latest.ai_gateway }}/overview.md).
 
 </div>
 
@@ -197,11 +197,11 @@ The Kubernetes deployment docs aren't specific to AWS, but they apply to Amazon 
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Kubernetes deployment modes](../../ai-gateway/2026.09.24/setup-and-deployment/kubernetes/index.md) <span class="vendor-meta">AI Gateway</span>
-- [Kubernetes Operator](../../ai-gateway/2026.09.24/setup-and-deployment/kubernetes/gateway-operator.md) <span class="vendor-meta">AI Gateway</span>
-- [Production deployment](../../ai-gateway/2026.09.24/setup-and-deployment/production-deployment/index.md) <span class="vendor-meta">AI Gateway</span>
-- [Security hardening](../../ai-gateway/2026.09.24/setup-and-deployment/production-deployment/security-hardening.md) <span class="vendor-meta">AI Gateway</span>
-- [Performance benchmarks on EKS](../../api-gateway/1.2.0/performance/overview.md) <span class="vendor-meta">API Gateway</span>
+- [Kubernetes deployment modes](../../ai-gateway/{{ latest.ai_gateway }}/setup-and-deployment/kubernetes/index.md) <span class="vendor-meta">AI Gateway</span>
+- [Kubernetes Operator](../../ai-gateway/{{ latest.ai_gateway }}/setup-and-deployment/kubernetes/gateway-operator.md) <span class="vendor-meta">AI Gateway</span>
+- [Production deployment](../../ai-gateway/{{ latest.ai_gateway }}/setup-and-deployment/production-deployment/index.md) <span class="vendor-meta">AI Gateway</span>
+- [Security hardening](../../ai-gateway/{{ latest.ai_gateway }}/setup-and-deployment/production-deployment/security-hardening.md) <span class="vendor-meta">AI Gateway</span>
+- [Performance benchmarks on EKS](../../api-gateway/{{ latest.api_gateway }}/performance/overview.md) <span class="vendor-meta">API Gateway</span>
 
 </div>
 
@@ -215,9 +215,9 @@ Give each gateway workload a dedicated IAM role. For EKS, prefer EKS Pod Identit
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Default AWS credential chain](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md#default-credential-chain) <span class="vendor-meta">AI Gateway</span>
-- [IAM roles for service accounts](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md#iam-roles-for-service-accounts) <span class="vendor-meta">AI Gateway</span>
-- [AWS STS role assumption](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md#sts-assumerole) <span class="vendor-meta">AI Gateway</span>
+- [Default AWS credential chain](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md#default-credential-chain) <span class="vendor-meta">AI Gateway</span>
+- [IAM roles for service accounts](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md#iam-roles-for-service-accounts) <span class="vendor-meta">AI Gateway</span>
+- [AWS STS role assumption](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/aws-bedrock.md#sts-assumerole) <span class="vendor-meta">AI Gateway</span>
 
 </div>
 
@@ -238,10 +238,10 @@ Export gateway logs, metrics, and traces through Fluent Bit, an OpenTelemetry Co
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Send AI Gateway logs to CloudWatch](../../ai-gateway/2026.09.24/logging-and-tracing/gateway-logs.md#cloud-native-solutions) <span class="vendor-meta">AI Gateway</span>
-- [Send AI Gateway traces to X-Ray](../../ai-gateway/2026.09.24/logging-and-tracing/tracing.md#cloud-native-tracing-solutions) <span class="vendor-meta">AI Gateway</span>
-- [Send API Gateway metrics to CloudWatch](../../api-gateway/1.2.0/observability/metrics/alternative-backends.md#aws-cloudwatch) <span class="vendor-meta">API Gateway</span>
-- [Send API Gateway traces to X-Ray](../../api-gateway/1.2.0/observability/tracing/alternative-backends.md#aws-x-ray) <span class="vendor-meta">API Gateway</span>
+- [Send AI Gateway logs to CloudWatch](../../ai-gateway/{{ latest.ai_gateway }}/logging-and-tracing/gateway-logs.md#cloud-native-solutions) <span class="vendor-meta">AI Gateway</span>
+- [Send AI Gateway traces to X-Ray](../../ai-gateway/{{ latest.ai_gateway }}/logging-and-tracing/tracing.md#cloud-native-tracing-solutions) <span class="vendor-meta">AI Gateway</span>
+- [Send API Gateway metrics to CloudWatch](../../api-gateway/{{ latest.api_gateway }}/observability/metrics/alternative-backends.md#aws-cloudwatch) <span class="vendor-meta">API Gateway</span>
+- [Send API Gateway traces to X-Ray](../../api-gateway/{{ latest.api_gateway }}/observability/tracing/alternative-backends.md#aws-x-ray) <span class="vendor-meta">API Gateway</span>
 
 </div>
 

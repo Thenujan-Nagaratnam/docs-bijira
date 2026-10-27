@@ -26,7 +26,7 @@ This section is for platform engineers and site reliability engineers who run AP
 For a single-host evaluation, follow the [quick start guide](../../quick-start-guide.md) instead. For the other ways to run the gateway, see [Immutable Gateway](../immutable-gateway.md) and [Kubernetes deployment modes](../kubernetes/index.md).
 
 !!! info "Version-pinned instructions"
-    Every command and configuration key on these pages is taken from the `ai-gateway/v1.2.0` release tag and Helm chart `1.2.0`. Chart fields change between releases, so follow the pages for the AI Gateway version you deploy.
+    Every command and configuration key on these pages is taken from the `{{ release.release_tag }}` release tag and Helm chart `1.2.0`. Chart fields change between releases, so follow the pages for the AI Gateway version you deploy.
 
 ## What you deploy
 
@@ -106,7 +106,7 @@ helm version
 Download the `values.yaml` that ships with the 1.2.0 gateway chart and use it as the starting point. Every field referenced in this section lives in this file.
 
 ```bash
-curl -o values.yaml https://raw.githubusercontent.com/wso2/api-platform/refs/tags/ai-gateway/v1.2.0/kubernetes/helm/gateway-helm-chart/values.yaml
+curl -o values.yaml https://raw.githubusercontent.com/wso2/api-platform/refs/tags/{{ release.release_tag }}/kubernetes/helm/gateway-helm-chart/values.yaml
 ```
 
 ### Pin the image versions

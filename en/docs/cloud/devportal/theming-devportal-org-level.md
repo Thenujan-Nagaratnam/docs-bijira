@@ -89,7 +89,7 @@ Go through the following steps to customize the theme of the Devportal in the or
                                 subscribe, and get going in minutes.
                             </p>
                             <div class="hero-buttons d-flex gap-3">
-                                <a href="{{baseUrl}}/apis" class="common-btn-primary common-btn-secondary">Browse our APIs →</a>
+                                <a href="{% raw %}{{baseUrl}}{% endraw %}/apis" class="common-btn-primary common-btn-secondary">Browse our APIs →</a>
                             </div>
                         </div>
                     </div>

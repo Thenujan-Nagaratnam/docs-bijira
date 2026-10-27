@@ -51,14 +51,14 @@ This part downloads AI Workspace, runs its setup script, starts the stack with D
 Run this command in your terminal to download and unzip AI Workspace:
 
 ```bash
-curl -sLO https://github.com/wso2/api-platform/releases/download/portals/ai-workspace/v1.0.0/wso2apip-ai-workspace-1.0.0.zip && \
-unzip wso2apip-ai-workspace-1.0.0.zip
+curl -sLO https://github.com/wso2/api-platform/releases/download/{{ release.release_tag }}/{{ release.package }}.zip && \
+unzip {{ release.package }}.zip
 ```
 
 Then move into the extracted directory:
 
 ```bash
-cd wso2apip-ai-workspace-1.0.0
+cd {{ release.package }}
 ```
 
 This directory contains the Docker Compose file, configuration templates, database schema scripts, and the setup script you run next.
@@ -196,21 +196,21 @@ Its **Configure the gateway** command includes a single-use registration token. 
 1. **Download the gateway:**
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip && \
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ release.ai_gateway_release_tag }}/{{ release.ai_gateway_package }}.zip && \
+    unzip {{ release.ai_gateway_package }}.zip
     ```
 
 2. **Set up the gateway.** This one-time script provisions the Advanced Encryption Standard (AES)-256 at-rest encryption key, the gateway's HTTPS listener certificate, the gateway-controller admin credentials, and `api-platform.env`. Like AI Workspace, the gateway fails closed if any of these is missing. The admin password is printed once. Copy it: it authenticates directly to the gateway controller, which this guide doesn't use again.
 
     ```bash
-    cd wso2apip-ai-gateway-1.2.0 && ./scripts/setup.sh
+    cd {{ release.ai_gateway_package }} && ./scripts/setup.sh
     ```
 
     !!! note "Running on Windows"
         Use the PowerShell setup script instead. It takes the same flags and provisions the same files:
 
         ```powershell
-        cd wso2apip-ai-gateway-1.2.0
+        cd {{ release.ai_gateway_package }}
         powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
         ```
 

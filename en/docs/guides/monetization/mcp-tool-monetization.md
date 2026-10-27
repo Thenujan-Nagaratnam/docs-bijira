@@ -98,13 +98,13 @@ Download and start the AI gateway distribution with Docker Compose.
 
 ```bash
 # Download the distribution.
-wget https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip
+wget https://github.com/wso2/api-platform/releases/download/{{ shared.ai_gateway.release_tag }}/{{ shared.ai_gateway.package }}.zip
 
 # Unzip the downloaded distribution.
-unzip wso2apip-ai-gateway-1.1.0.zip
+unzip {{ shared.ai_gateway.package }}.zip
 
 # Start the complete stack.
-cd wso2apip-ai-gateway-1.1.0/
+cd {{ shared.ai_gateway.package }}/
 docker compose -p ai-gateway up -d
 
 # Verify the gateway controller admin endpoint is running.
@@ -206,7 +206,7 @@ Analytics is configured entirely in the gateway `config.toml` and enabled at the
 **Expected result:** The gateway is configured to publish every MCP tool call as an analytics event to your Moesif application.
 
 !!! note
-    Analytics events are collected asynchronously and batched before publishing, so enabling analytics does not add latency to tool calls. For the full list of publisher and gRPC event server parameters, see [Configure Moesif Analytics](../../api-gateway/1.1.0/analytics/moesif-analytics.md).
+    Analytics events are collected asynchronously and batched before publishing, so enabling analytics does not add latency to tool calls. For the full list of publisher and gRPC event server parameters, see [Configure Moesif Analytics](../../api-gateway/{{ latest.api_gateway }}/analytics/moesif-analytics.md).
 
 ---
 
@@ -221,7 +221,7 @@ docker compose -p ai-gateway up -d
 **Expected result:** The gateway restarts with analytics enabled. The policy-engine logs show the ALS server listening on the configured `server_port` (18090).
 
 !!! tip "Protect sensitive headers"
-    Before sending production traffic to Moesif, attach the [Analytics Header Filter](../../api-gateway/1.1.0/analytics/analytics-header-filter.md) policy to the MCP proxy to strip authentication tokens and other sensitive headers from the published events. Use `deny` mode to exclude headers such as `Authorization`.
+    Before sending production traffic to Moesif, attach the [Analytics Header Filter](../../api-gateway/{{ latest.api_gateway }}/analytics/analytics-header-filter.md) policy to the MCP proxy to strip authentication tokens and other sensitive headers from the published events. Use `deny` mode to exclude headers such as `Authorization`.
 
 ---
 
@@ -322,7 +322,7 @@ Connect Moesif to Stripe so metered usage is converted into invoices and payment
 ## Next steps
 
 - [MCP Authentication](../../ai-gateway/1.1.0/mcp-proxy/policies/mcp-authentication.md) — configure key managers, scopes, and audiences to control which consumers can call your tools.
-- [Configure Moesif Analytics](../../api-gateway/1.1.0/analytics/moesif-analytics.md) — tune publish intervals, batching, and the gRPC event server for production traffic.
+- [Configure Moesif Analytics](../../api-gateway/{{ latest.api_gateway }}/analytics/moesif-analytics.md) — tune publish intervals, batching, and the gRPC event server for production traffic.
 - [Analytics and Monetization with Moesif](../../analytics-and-monetization/overview.md) — explore quotas, prepaid credits, behavioral alerts, and embedded metrics.
 - [Monetize a REST API with Stripe](api-monetization.md) — compare the cloud gateway monetization flow for REST APIs.
 

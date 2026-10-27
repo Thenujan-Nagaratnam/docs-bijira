@@ -45,20 +45,20 @@ the CLI will:
 
 Download the archive for your platform from the [releases page](https://github.com/wso2/arazzo-mcp-generator/releases), or use the install commands below.
 
-The commands below install version `0.1.0`. Substitute another version number in the URL to install a different release.
+The commands below install version `{{ shared.arazzo_mcp_gen.version }}`. Substitute another version number in the URL to install a different release.
 
 === "macOS (Apple Silicon)"
 
     Download the archive:
 
     ```bash
-    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-darwin-arm64.zip
+    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/{{ shared.arazzo_mcp_gen.version }}/arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-darwin-arm64.zip
     ```
 
     Extract it:
 
     ```bash
-    unzip arazzo-mcp-gen-0.1.0-darwin-arm64.zip
+    unzip arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-darwin-arm64.zip
     ```
 
     Move the binary to a folder on your `PATH`, so you can run `arazzo-mcp-gen` from anywhere:
@@ -72,13 +72,13 @@ The commands below install version `0.1.0`. Substitute another version number in
     Download the archive:
 
     ```bash
-    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-darwin-amd64.zip
+    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/{{ shared.arazzo_mcp_gen.version }}/arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-darwin-amd64.zip
     ```
 
     Extract it:
 
     ```bash
-    unzip arazzo-mcp-gen-0.1.0-darwin-amd64.zip
+    unzip arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-darwin-amd64.zip
     ```
 
     Move the binary to a folder on your `PATH`, so you can run `arazzo-mcp-gen` from anywhere:
@@ -92,13 +92,13 @@ The commands below install version `0.1.0`. Substitute another version number in
     Download the archive:
 
     ```bash
-    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-linux-amd64.zip
+    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/{{ shared.arazzo_mcp_gen.version }}/arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-linux-amd64.zip
     ```
 
     Extract it:
 
     ```bash
-    unzip arazzo-mcp-gen-0.1.0-linux-amd64.zip
+    unzip arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-linux-amd64.zip
     ```
 
     Move the binary to a folder on your `PATH`, so you can run `arazzo-mcp-gen` from anywhere:
@@ -112,13 +112,13 @@ The commands below install version `0.1.0`. Substitute another version number in
     Download the archive:
 
     ```bash
-    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-linux-arm64.zip
+    curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/{{ shared.arazzo_mcp_gen.version }}/arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-linux-arm64.zip
     ```
 
     Extract it:
 
     ```bash
-    unzip arazzo-mcp-gen-0.1.0-linux-arm64.zip
+    unzip arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-linux-arm64.zip
     ```
 
     Move the binary to a folder on your `PATH`, so you can run `arazzo-mcp-gen` from anywhere:
@@ -132,13 +132,13 @@ The commands below install version `0.1.0`. Substitute another version number in
     Download the archive:
 
     ```powershell
-    Invoke-WebRequest -Uri https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/arazzo-mcp-gen-0.1.0-windows-amd64.zip -OutFile arazzo-mcp-gen-0.1.0-windows-amd64.zip
+    Invoke-WebRequest -Uri https://github.com/wso2/arazzo-mcp-generator/releases/download/{{ shared.arazzo_mcp_gen.version }}/arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-windows-amd64.zip -OutFile arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-windows-amd64.zip
     ```
 
     Extract it:
 
     ```powershell
-    Expand-Archive -Path arazzo-mcp-gen-0.1.0-windows-amd64.zip -DestinationPath .
+    Expand-Archive -Path arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-windows-amd64.zip -DestinationPath .
     ```
 
     Move `arazzo-mcp-gen.exe` to a folder on your `PATH` to run it from anywhere, or run it from the folder you extracted it into.
@@ -165,11 +165,11 @@ arazzo-mcp-gen --version
 Each release includes `checksums.txt`, which lists a fingerprint for every published archive. Comparing your copy against that list confirms the download arrived intact. Run this from the folder holding the archive:
 
 ```bash
-curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/0.1.0/checksums.txt
+curl -LO https://github.com/wso2/arazzo-mcp-generator/releases/download/{{ shared.arazzo_mcp_gen.version }}/checksums.txt
 shasum -a 256 -c checksums.txt --ignore-missing
 ```
 
-An intact archive reports `OK`. Delete the archive when you're done: `rm arazzo-mcp-gen-0.1.0-*.zip`.
+An intact archive reports `OK`. Delete the archive when you're done: `rm arazzo-mcp-gen-{{ shared.arazzo_mcp_gen.version }}-*.zip`.
 
 ## User scenario: end-to-end walkthrough
 

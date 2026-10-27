@@ -70,8 +70,8 @@ Before you begin, ensure you have:
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v1.0.0/wso2apip-api-gateway-1.0.0.zip && \
-    unzip wso2apip-api-gateway-1.0.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ shared.api_gateway.release_tag }}/{{ shared.api_gateway.package }}.zip && \
+    unzip {{ shared.api_gateway.package }}.zip
     ```
 
     ### Step 2: Configure the Gateway
@@ -79,21 +79,21 @@ Before you begin, ensure you have:
     Run this command to create the gateway configuration with your environment variables:
 
     ```bash
-    cat > wso2apip-api-gateway-1.0.0/configs/keys.env << 'ENVFILE'
+    cat > {{ shared.api_gateway.package }}/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
     GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
     ENVFILE
     ```
 
-    Once you copy the above command from the screen, the `<your-moesif-key>` and `<your-gateway-token>` placeholders will be populated and the `wso2apip-api-gateway-1.0.0/configs/keys.env` file will be created with these environment variables.
+    Once you copy the above command from the screen, the `<your-moesif-key>` and `<your-gateway-token>` placeholders will be populated and the `{{ shared.api_gateway.package }}/configs/keys.env` file will be created with these environment variables.
 
     ### Step 3: Start the Gateway
 
     Navigate to the gateway directory and start it using Docker Compose:
 
     ```bash
-    cd wso2apip-api-gateway-1.0.0
+    cd {{ shared.api_gateway.package }}
     docker compose --env-file configs/keys.env up
     ```
 

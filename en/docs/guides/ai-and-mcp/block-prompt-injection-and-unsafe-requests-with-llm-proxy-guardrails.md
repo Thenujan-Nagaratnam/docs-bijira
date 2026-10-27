@@ -111,15 +111,15 @@ The AI gateway is the runtime that hosts your proxy and enforces your guardrails
 2. Click **Add Gateway**. On the **Get Started** panel, download the gateway using the Docker tab's command:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip && \
-    unzip wso2apip-ai-gateway-1.1.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ shared.ai_gateway.release_tag }}/{{ shared.ai_gateway.package }}.zip && \
+    unzip {{ shared.ai_gateway.package }}.zip
     ```
 
 3. Click **View Gateway configurations** (the icon next to **Get Started**), then **Download keys.env file**, and save it as `configs/keys.env` inside the extracted directory. It already contains your real registration token and Moesif key — no manual editing needed.
 4. Start the gateway:
 
     ```bash
-    cd wso2apip-ai-gateway-1.1.0
+    cd {{ shared.ai_gateway.package }}
     docker compose --env-file configs/keys.env up
     ```
 

@@ -25,8 +25,8 @@ For more information on the API Portal & MCP Hub, see the [overview](overview.md
 Download the standalone distribution from the WSO2 API Platform release page:
 
 ```bash
-curl -sLO https://github.com/wso2/api-platform/releases/download/api-portal%2Fv1.0.0/wso2apip-api-portal-1.0.0.zip && \
-unzip wso2apip-api-portal-1.0.0.zip
+curl -sLO https://github.com/wso2/api-platform/releases/download/{{ release.release_tag | replace("/", "%2F") }}/{{ release.package }}.zip && \
+unzip {{ release.package }}.zip
 ```
 
 To install and run it, follow the [Getting started](getting-started.md) guide.

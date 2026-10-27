@@ -46,16 +46,16 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v1.0.0/wso2apip-api-gateway-1.0.0.zip && \
-    unzip wso2apip-api-gateway-1.0.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ shared.api_gateway.release_tag }}/{{ shared.api_gateway.package }}.zip && \
+    unzip {{ shared.api_gateway.package }}.zip
     ```
 
     ### Step 2: Configure the Gateway
 
-    Run this command to create `wso2apip-api-gateway-1.0.0/configs/keys.env` with the required environment variables:
+    Run this command to create `{{ shared.api_gateway.package }}/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > wso2apip-api-gateway-1.0.0/configs/keys.env << 'ENVFILE'
+    cat > {{ shared.api_gateway.package }}/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
     GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
@@ -67,7 +67,7 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     1. Navigate to the gateway folder:
 
         ```bash
-        cd wso2apip-api-gateway-1.0.0
+        cd {{ shared.api_gateway.package }}
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:
@@ -111,16 +111,16 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/gateway/v1.0.0/wso2apip-api-gateway-1.0.0.zip && \
-    unzip wso2apip-api-gateway-1.0.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ shared.api_gateway.release_tag }}/{{ shared.api_gateway.package }}.zip && \
+    unzip {{ shared.api_gateway.package }}.zip
     ```
 
     ### Step 2: Configure the Gateway
 
-    Run this command to create `wso2apip-api-gateway-1.0.0/configs/keys.env` with the required environment variables:
+    Run this command to create `{{ shared.api_gateway.package }}/configs/keys.env` with the required environment variables:
 
     ```bash
-    cat > wso2apip-api-gateway-1.0.0/configs/keys.env << 'ENVFILE'
+    cat > {{ shared.api_gateway.package }}/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
     GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
@@ -135,7 +135,7 @@ This guide provides detailed instructions for deploying the API Platform Self-Ho
     1. Navigate to the gateway folder:
 
         ```bash
-        cd wso2apip-api-gateway-1.0.0
+        cd {{ shared.api_gateway.package }}
         ```
 
     2. Run this command to start the gateway using the `configs/keys.env` file created in Step 2:

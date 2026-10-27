@@ -1,0 +1,13 @@
+# API Portal next release values. Pages in docs/api-portal/next/ use them as
+# {{ release.<name> }}. Change a value here, not in the pages.
+
+# These docs install the latest released package, wso2apip-api-portal-1.0.0.
+version: next
+# GitHub release tag in https://github.com/wso2/api-platform/releases/download/<tag>/
+release_tag: api-portal/v1.0.0
+# Release package name, without .zip. It is also the folder the zip extracts to.
+package: wso2apip-api-portal-1.0.0
+
+# The API Gateway release these docs pair with.
+api_gateway_release_tag: gateway/v1.2.0
+api_gateway_package: wso2apip-api-gateway-1.2.0

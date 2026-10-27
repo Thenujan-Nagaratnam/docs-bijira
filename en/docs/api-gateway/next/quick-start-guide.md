@@ -39,12 +39,12 @@ docker compose version
 
 ```bash
 # Download distribution.
-wget https://github.com/wso2/api-platform/releases/download/gateway/v1.2.0/wso2apip-api-gateway-1.2.0.zip
+wget https://github.com/wso2/api-platform/releases/download/{{ release.release_tag }}/{{ release.package }}.zip
 
 # Unzip the downloaded distribution.
-unzip wso2apip-api-gateway-1.2.0.zip
+unzip {{ release.package }}.zip
 
-cd wso2apip-api-gateway-1.2.0/
+cd {{ release.package }}/
 
 # Run the one-time setup. This provisions the AES-256 at-rest encryption key,
 # the router HTTPS listener certificate, api-platform.env, and the gateway-controller

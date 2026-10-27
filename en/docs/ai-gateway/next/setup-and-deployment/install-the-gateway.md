@@ -34,22 +34,22 @@ Select the context you're installing in, then follow the steps in that tab.
 
     ```bash
     # Download distribution.
-    curl -fL -o wso2apip-ai-gateway-1.2.0.zip https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
+    curl -fL -o {{ release.package }}.zip https://github.com/wso2/api-platform/releases/download/{{ release.release_tag }}/{{ release.package }}.zip
 
     # Unzip the downloaded distribution.
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    unzip {{ release.package }}.zip
 
-    cd wso2apip-ai-gateway-1.2.0/
+    cd {{ release.package }}/
     ```
 
     On Windows, download and unpack the distribution with PowerShell:
 
     ```powershell
-    Invoke-WebRequest -Uri https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip -OutFile wso2apip-ai-gateway-1.2.0.zip
+    Invoke-WebRequest -Uri https://github.com/wso2/api-platform/releases/download/{{ release.release_tag }}/{{ release.package }}.zip -OutFile {{ release.package }}.zip
 
-    Expand-Archive -Path wso2apip-ai-gateway-1.2.0.zip -DestinationPath .
+    Expand-Archive -Path {{ release.package }}.zip -DestinationPath .
 
-    Set-Location wso2apip-ai-gateway-1.2.0
+    Set-Location {{ release.package }}
     ```
 
     **Step 2: Run the one-time setup**
@@ -106,22 +106,22 @@ Select the context you're installing in, then follow the steps in that tab.
 
     ```bash
     # Download distribution.
-    curl -fL -o wso2apip-ai-gateway-1.2.0.zip https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
+    curl -fL -o {{ release.package }}.zip https://github.com/wso2/api-platform/releases/download/{{ release.release_tag }}/{{ release.package }}.zip
 
     # Unzip the downloaded distribution.
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    unzip {{ release.package }}.zip
 
-    cd wso2apip-ai-gateway-1.2.0/
+    cd {{ release.package }}/
     ```
 
     On Windows, download and unpack the distribution with PowerShell:
 
     ```powershell
-    Invoke-WebRequest -Uri https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip -OutFile wso2apip-ai-gateway-1.2.0.zip
+    Invoke-WebRequest -Uri https://github.com/wso2/api-platform/releases/download/{{ release.release_tag }}/{{ release.package }}.zip -OutFile {{ release.package }}.zip
 
-    Expand-Archive -Path wso2apip-ai-gateway-1.2.0.zip -DestinationPath .
+    Expand-Archive -Path {{ release.package }}.zip -DestinationPath .
 
-    Set-Location wso2apip-ai-gateway-1.2.0
+    Set-Location {{ release.package }}
     ```
 
     **Step 2: Run the one-time setup**
@@ -181,22 +181,22 @@ Select the context you're installing in, then follow the steps in that tab.
 
     ```bash
     # Download distribution.
-    curl -fL -o wso2apip-ai-gateway-1.2.0.zip https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip
+    curl -fL -o {{ release.package }}.zip https://github.com/wso2/api-platform/releases/download/{{ release.release_tag }}/{{ release.package }}.zip
 
     # Unzip the downloaded distribution.
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    unzip {{ release.package }}.zip
 
-    cd wso2apip-ai-gateway-1.2.0/
+    cd {{ release.package }}/
     ```
 
     On Windows, download and unpack the distribution with PowerShell:
 
     ```powershell
-    Invoke-WebRequest -Uri https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip -OutFile wso2apip-ai-gateway-1.2.0.zip
+    Invoke-WebRequest -Uri https://github.com/wso2/api-platform/releases/download/{{ release.release_tag }}/{{ release.package }}.zip -OutFile {{ release.package }}.zip
 
-    Expand-Archive -Path wso2apip-ai-gateway-1.2.0.zip -DestinationPath .
+    Expand-Archive -Path {{ release.package }}.zip -DestinationPath .
 
-    Set-Location wso2apip-ai-gateway-1.2.0
+    Set-Location {{ release.package }}
     ```
 
     **Step 2: Run the one-time setup**

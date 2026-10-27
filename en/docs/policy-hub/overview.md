@@ -128,4 +128,4 @@ Every policy in the hub is versioned on its own track. When a new version ships,
 
 ## Extending the Hub
 
-The [API Platform CLI can build a custom gateway image](../api-gateway/1.1.0/policies/custom-policies/building-gateway-with-custom-policies.md) that bundles any combination of hub policies and policies you write yourself. So you can fill your requirement gaps, if any, with local implementations, and contribute them to Policy Hub.
+The [API Platform CLI can build a custom gateway image](../api-gateway/{{ latest.api_gateway }}/policies/custom-policies/building-gateway-with-custom-policies.md) that bundles any combination of hub policies and policies you write yourself. So you can fill your requirement gaps, if any, with local implementations, and contribute them to Policy Hub.

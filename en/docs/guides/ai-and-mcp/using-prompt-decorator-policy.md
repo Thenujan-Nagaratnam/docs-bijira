@@ -273,7 +273,7 @@ Use the API key and invoke URL from Step 7 for all requests below.
 
 - [Enforce token-based rate limiting on an LLM proxy](enforce-token-based-rate-limiting-on-an-llm-proxy.md) — cap token consumption on the same proxy so no single application drains your budget
 - [Set up a governed multi-model LLM proxy with cost controls and failover](set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md) — extend this proxy with model round-robin distribution, PII masking, and semantic caching
-- [Prompt decorator policy reference](https://wso2.com/api-platform/docs/ai-gateway/1.1.0/llm-proxy/prompt-management/prompt-decorator/) — full parameter reference for chat and text decoration, prepend and append behavior, and JSONPath expressions
+- [Prompt decorator policy reference](https://wso2.com/api-platform/docs/ai-gateway/{{ latest.ai_gateway }}/llm-proxy/prompt-management/prompt-decorator/) — full parameter reference for chat and text decoration, prepend and append behavior, and JSONPath expressions
 
 ## Try the sample
 

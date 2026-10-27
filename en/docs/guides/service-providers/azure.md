@@ -42,9 +42,9 @@ Point the gateway at your Azure deployment. The gateway stores the deployment ke
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Azure OpenAI provider](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/azure-openai.md) <span class="vendor-meta">AI Gateway</span>
-- [Azure AI Foundry provider](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry.md) <span class="vendor-meta">AI Gateway</span>
-- [Configure an LLM provider](../../ai-workspace/1.0.0/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
+- [Azure OpenAI provider](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/azure-openai.md) <span class="vendor-meta">AI Gateway</span>
+- [Azure AI Foundry provider](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/azure-ai-foundry.md) <span class="vendor-meta">AI Gateway</span>
+- [Configure an LLM provider](../../ai-workspace/{{ latest.ai_workspace }}/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
 
 </div>
 
@@ -65,7 +65,7 @@ Keep clients on the OpenAI request format while the gateway routes to your Azure
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [OpenAI-format compatibility](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/azure-openai.md#openai-format-compatibility) <span class="vendor-meta">AI Gateway</span>
+- [OpenAI-format compatibility](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/azure-openai.md#openai-format-compatibility) <span class="vendor-meta">AI Gateway</span>
 
 </div>
 
@@ -80,7 +80,7 @@ The Azure LLM Cost policy maps each call to your deployment's pricing, so Azure 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
 - [Azure LLM Cost policy](https://wso2.com/api-platform/policy-hub/policies/azure-llm-cost) <span class="vendor-meta">Policy Hub</span>
-- [Cost control and budgets](../../ai-gateway/2026.09.24/cost-control-and-budgets.md) <span class="vendor-meta">AI Gateway</span>
+- [Cost control and budgets](../../ai-gateway/{{ latest.ai_gateway }}/cost-control-and-budgets.md) <span class="vendor-meta">AI Gateway</span>
 
 </div>
 
@@ -108,7 +108,7 @@ Check prompts and responses against Azure AI Content Safety categories and sever
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
 - [Azure Content Safety policy](https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation) <span class="vendor-meta">Policy Hub</span>
-- [Guardrails catalogue](../../ai-gateway/2026.09.24/guardrails/guardrails-catalogue.md) <span class="vendor-meta">AI Gateway</span>
+- [Guardrails catalogue](../../ai-gateway/{{ latest.ai_gateway }}/guardrails/guardrails-catalogue.md) <span class="vendor-meta">AI Gateway</span>
 
 </div>
 
@@ -135,8 +135,8 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Semantic caching](../../ai-gateway/2026.09.24/semantic-caching.md) <span class="vendor-meta">AI Gateway</span>
-- [Embedding providers for semantic caching](../../ai-gateway/2026.09.24/setup-and-deployment/production-deployment/ai-workload-tuning.md#provision-infrastructure-for-semantic-caching) <span class="vendor-meta">AI Gateway</span>
+- [Semantic caching](../../ai-gateway/{{ latest.ai_gateway }}/semantic-caching.md) <span class="vendor-meta">AI Gateway</span>
+- [Embedding providers for semantic caching](../../ai-gateway/{{ latest.ai_gateway }}/setup-and-deployment/production-deployment/ai-workload-tuning.md#provision-infrastructure-for-semantic-caching) <span class="vendor-meta">AI Gateway</span>
 - [Semantic Cache policy](https://wso2.com/api-platform/policy-hub/policies/semantic-cache) <span class="vendor-meta">Policy Hub</span>
 - [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
@@ -158,7 +158,7 @@ Routing, token limits, cost control, and the other AI Workspace policies work th
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-Routing, token limits, cost control, and the gateway's other policies work the same way for every provider. See the [AI Gateway documentation](../../ai-gateway/2026.09.24/overview.md).
+Routing, token limits, cost control, and the gateway's other policies work the same way for every provider. See the [AI Gateway documentation](../../ai-gateway/{{ latest.ai_gateway }}/overview.md).
 
 </div>
 
@@ -199,9 +199,9 @@ Point the collector at Azure Monitor.
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Send API Gateway metrics to Azure Monitor](../../api-gateway/1.2.0/observability/metrics/alternative-backends.md#azure-monitor) <span class="vendor-meta">API Gateway</span>
-- [Send API Gateway traces to Azure Monitor](../../api-gateway/1.2.0/observability/tracing/alternative-backends.md#azure-monitor) <span class="vendor-meta">API Gateway</span>
-- [Send AI Gateway traces to Azure Monitor](../../ai-gateway/2026.09.24/logging-and-tracing/tracing.md#cloud-native-tracing-solutions) <span class="vendor-meta">AI Gateway</span>
+- [Send API Gateway metrics to Azure Monitor](../../api-gateway/{{ latest.api_gateway }}/observability/metrics/alternative-backends.md#azure-monitor) <span class="vendor-meta">API Gateway</span>
+- [Send API Gateway traces to Azure Monitor](../../api-gateway/{{ latest.api_gateway }}/observability/tracing/alternative-backends.md#azure-monitor) <span class="vendor-meta">API Gateway</span>
+- [Send AI Gateway traces to Azure Monitor](../../ai-gateway/{{ latest.ai_gateway }}/logging-and-tracing/tracing.md#cloud-native-tracing-solutions) <span class="vendor-meta">AI Gateway</span>
 
 </div>
 

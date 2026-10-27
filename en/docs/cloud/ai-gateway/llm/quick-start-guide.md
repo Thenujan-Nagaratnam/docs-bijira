@@ -26,7 +26,7 @@ Before going through this quickstart, make sure you meet the following prerequis
 - An OpenAI API key.
 - [Docker](https://docs.docker.com/get-docker/) with the Compose plugin. You can check the installed version with the `docker compose version` command.
 - `curl` and `unzip` commands available in the command line.
-- Port `8443` available on your machine. For more information, see [Default Ports in AI Gateway](../../../ai-gateway/1.2.0/reference/default-ports.md).
+- Port `8443` available on your machine. For more information, see [Default Ports in AI Gateway](../../../ai-gateway/{{ latest.ai_gateway }}/reference/default-ports.md).
 
 
 ## Create an AI Gateway
@@ -61,14 +61,14 @@ Select the __Quick Start__ tab in the detail page of the newly added gateway's *
 1. Download and unzip the gateway distribution:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip && \
-    unzip wso2apip-ai-gateway-1.1.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ shared.ai_gateway.release_tag }}/{{ shared.ai_gateway.package }}.zip && \
+    unzip {{ shared.ai_gateway.package }}.zip
     ```
 
 2. Create the environment file with your registration token. 
 
     ```bash
-    cat > wso2apip-ai-gateway-1.1.0/configs/keys.env << 'ENVFILE'
+    cat > {{ shared.ai_gateway.package }}/configs/keys.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
     GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
     GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
@@ -78,7 +78,7 @@ Select the __Quick Start__ tab in the detail page of the newly added gateway's *
 3. Start the runtime:
 
     ```bash
-    cd wso2apip-ai-gateway-1.1.0 && \
+    cd {{ shared.ai_gateway.package }} && \
     docker compose --env-file configs/keys.env up
     ```
 

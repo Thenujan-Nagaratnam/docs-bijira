@@ -91,8 +91,8 @@ Connect the Anthropic API. The gateway holds the Anthropic key, so developers an
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Anthropic provider](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/anthropic.md) <span class="vendor-meta">AI Gateway</span>
-- [Configure an LLM provider](../../ai-workspace/1.0.0/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
+- [Anthropic provider](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/anthropic.md) <span class="vendor-meta">AI Gateway</span>
+- [Configure an LLM provider](../../ai-workspace/{{ latest.ai_workspace }}/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
 
 </div>
 
@@ -112,7 +112,7 @@ Routing, token limits, cost control, and the other AI Workspace policies work th
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-Routing, token limits, cost control, and the gateway's other policies work the same way for every provider. See the [AI Gateway documentation](../../ai-gateway/2026.09.24/overview.md).
+Routing, token limits, cost control, and the gateway's other policies work the same way for every provider. See the [AI Gateway documentation](../../ai-gateway/{{ latest.ai_gateway }}/overview.md).
 
 </div>
 
@@ -143,9 +143,9 @@ Put an MCP proxy in front of an MCP server, and control which tools Claude can c
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [MCP proxy](../../ai-gateway/2026.09.24/gateway-artifacts/mcp-proxy.md) <span class="vendor-meta">AI Gateway</span>
-- [MCP governance](../../ai-gateway/2026.09.24/mcp-governance.md) <span class="vendor-meta">AI Gateway</span>
-- [MCP proxies overview](../../ai-workspace/1.0.0/mcp-proxies/overview.md) <span class="vendor-meta">AI Workspace</span>
+- [MCP proxy](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/mcp-proxy.md) <span class="vendor-meta">AI Gateway</span>
+- [MCP governance](../../ai-gateway/{{ latest.ai_gateway }}/mcp-governance.md) <span class="vendor-meta">AI Gateway</span>
+- [MCP proxies overview](../../ai-workspace/{{ latest.ai_workspace }}/mcp-proxies/overview.md) <span class="vendor-meta">AI Workspace</span>
 
 </div>
 

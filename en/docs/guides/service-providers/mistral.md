@@ -41,8 +41,8 @@ Register the Mistral API with the gateway, which stores the API key on behalf of
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [MistralAI provider](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/mistralai.md) <span class="vendor-meta">AI Gateway</span>
-- [Configure an LLM provider](../../ai-workspace/1.0.0/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
+- [MistralAI provider](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/mistralai.md) <span class="vendor-meta">AI Gateway</span>
+- [Configure an LLM provider](../../ai-workspace/{{ latest.ai_workspace }}/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
 
 </div>
 
@@ -62,7 +62,7 @@ Keep clients on the OpenAI request format while the gateway routes to Mistral.
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [OpenAI-format compatibility](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/mistralai.md#openai-format-compatibility) <span class="vendor-meta">AI Gateway</span>
+- [OpenAI-format compatibility](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/mistralai.md#openai-format-compatibility) <span class="vendor-meta">AI Gateway</span>
 
 </div>
 
@@ -89,8 +89,8 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Semantic caching](../../ai-gateway/2026.09.24/semantic-caching.md) <span class="vendor-meta">AI Gateway</span>
-- [Embedding providers for semantic caching](../../ai-gateway/2026.09.24/setup-and-deployment/production-deployment/ai-workload-tuning.md#provision-infrastructure-for-semantic-caching) <span class="vendor-meta">AI Gateway</span>
+- [Semantic caching](../../ai-gateway/{{ latest.ai_gateway }}/semantic-caching.md) <span class="vendor-meta">AI Gateway</span>
+- [Embedding providers for semantic caching](../../ai-gateway/{{ latest.ai_gateway }}/setup-and-deployment/production-deployment/ai-workload-tuning.md#provision-infrastructure-for-semantic-caching) <span class="vendor-meta">AI Gateway</span>
 - [Semantic Cache policy](https://wso2.com/api-platform/policy-hub/policies/semantic-cache) <span class="vendor-meta">Policy Hub</span>
 - [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
@@ -112,7 +112,7 @@ Routing, token limits, cost control, and the other AI Workspace policies work th
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-Routing, token limits, cost control, and the gateway's other policies work the same way for every provider. See the [AI Gateway documentation](../../ai-gateway/2026.09.24/overview.md).
+Routing, token limits, cost control, and the gateway's other policies work the same way for every provider. See the [AI Gateway documentation](../../ai-gateway/{{ latest.ai_gateway }}/overview.md).
 
 </div>
 

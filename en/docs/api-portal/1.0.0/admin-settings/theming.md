@@ -135,7 +135,7 @@ The dark hero, the sidebar gradient, borders, and the text ramp all follow from 
 `partials/header.hbs` swaps the logo image for text and an icon, which shows that branding doesn't require shipping a new asset:
 
 ```handlebars
-<a class="navbar-brand d-flex align-items-center brand-wordmark" href="{{baseUrl}}">
+<a class="navbar-brand d-flex align-items-center brand-wordmark" href="{% raw %}{{baseUrl}}{% endraw %}">
   <i class="bi bi-water brand-wordmark-icon" aria-hidden="true"></i>
   <span class="brand-wordmark-text">Green</span>
 </a>

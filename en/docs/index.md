@@ -98,9 +98,9 @@ The next question is: **who runs the infrastructure?**
 
 Yes. Apart from the full API Manager stack, you can run individual control plane components on your own infrastructure and connect them to your self-hosted gateways:
 
-* **AI Workspace**—A self-hosted control plane for AI traffic. Connect AI Gateway runtimes and configure LLM providers, App LLM proxies, and MCP proxies. Apply guardrails and rate limits, manage secrets, and deploy the configuration to one or more gateways. See [AI Workspace documentation](ai-workspace/1.0.0/overview.md).
+* **AI Workspace**—A self-hosted control plane for AI traffic. Connect AI Gateway runtimes and configure LLM providers, App LLM proxies, and MCP proxies. Apply guardrails and rate limits, manage secrets, and deploy the configuration to one or more gateways. See [AI Workspace documentation](ai-workspace/{{ latest.ai_workspace }}/overview.md).
 
-* **API Portal**—A self-hosted developer portal where consumers discover APIs and MCP servers, create applications, and manage subscriptions and keys. See [API Portal documentation](api-portal/1.0.0/overview.md).
+* **API Portal**—A self-hosted developer portal where consumers discover APIs and MCP servers, create applications, and manage subscriptions and keys. See [API Portal documentation](api-portal/{{ latest.api_portal }}/overview.md).
 
 Run these components when you want centralized governance in your own environment without adopting the entire platform.
 
@@ -115,13 +115,13 @@ There are two standalone gateways:
 
 * **API Gateway**
     For traditional API traffic including REST, WebSocket, and GraphQL. Apply authentication, rate limiting, request and response transformations, and custom policies. Everything is configured through YAML files and CLI commands.
-    * [API Gateway documentation](api-gateway/1.1.0/overview.md)
+    * [API Gateway documentation](api-gateway/{{ latest.api_gateway }}/overview.md)
 
 * **AI Gateway**
     For AI traffic. The AI Gateway provides two capabilities:
     * **LLM Proxy** routes traffic to LLM providers such as OpenAI, Anthropic, Azure OpenAI, Mistral, and AWS Bedrock. You can apply guardrails including PII masking, prompt injection protection, and content safety checks. It also supports multi-provider load balancing, failover, semantic caching, and token-based rate limiting.
     * **MCP Proxy** governs how AI agents access your services through the Model Context Protocol. You can generate MCP tools from REST APIs, aggregate tools from multiple servers, and enforce access control and authorization.
-    * [AI Gateway documentation](ai-gateway/1.1.0/overview.md)
+    * [AI Gateway documentation](ai-gateway/{{ latest.ai_gateway }}/overview.md)
 
 ## What is the difference between standalone mode and platform mode?
 The API Gateway and AI Gateway can run in two modes: as part of the platform (Cloud, Hybrid, or API Manager) or in standalone mode. These are not different products. They are the same gateway, built on the same Go-based runtime and the same policy engine. The difference is in how you configure and interact with them.
@@ -145,15 +145,15 @@ The following is a complete view of all components and where to find their docum
 | Component | What it does | Docs |
 | :--- | :--- | :--- |
 | **API Control Plane** | Design, publish, version, and govern APIs through the web UI and configuration files. Enforce policies across all connected gateways. | Part of [Cloud](cloud/introduction/what-is-bijira.md) and [API Manager](api-manager/overview.md) |
-| **AI Workspace** | The enterprise control plane for AI. Manage LLM providers, MCP servers, and generative AI (GenAI) applications. Configure cost and token-based rate limits, enforce guardrails, and view AI consumption insights at the organizational level. Connected to one or more AI Gateways. Available in Cloud and as a self-hosted control plane. | <ul><li>[Cloud AI Workspace docs](cloud/ai-workspace/overview.md)</li><li>[Self-hosted AI Workspace docs](ai-workspace/1.0.0/overview.md)</li></ul> |
-| **API Portal and MCP Hub** | Developer-facing portal for API discovery, subscription management, software development kit (SDK) generation, and theming. Includes agentic consumption capabilities for AI agents, such as the `llms.txt` endpoint, MCP registry, and Arazzo workflow support. Available in Cloud and as a self-hosted portal. | <ul><li>[Cloud API Portal docs](cloud/devportal/theming-devportal-with-ai.md)</li><li>[Self-hosted API Portal docs](api-portal/1.0.0/overview.md)</li></ul> |
+| **AI Workspace** | The enterprise control plane for AI. Manage LLM providers, MCP servers, and generative AI (GenAI) applications. Configure cost and token-based rate limits, enforce guardrails, and view AI consumption insights at the organizational level. Connected to one or more AI Gateways. Available in Cloud and as a self-hosted control plane. | <ul><li>[Cloud AI Workspace docs](cloud/ai-workspace/overview.md)</li><li>[Self-hosted AI Workspace docs](ai-workspace/{{ latest.ai_workspace }}/overview.md)</li></ul> |
+| **API Portal and MCP Hub** | Developer-facing portal for API discovery, subscription management, software development kit (SDK) generation, and theming. Includes agentic consumption capabilities for AI agents, such as the `llms.txt` endpoint, MCP registry, and Arazzo workflow support. Available in Cloud and as a self-hosted portal. | <ul><li>[Cloud API Portal docs](cloud/devportal/theming-devportal-with-ai.md)</li><li>[Self-hosted API Portal docs](api-portal/{{ latest.api_portal }}/overview.md)</li></ul> |
 | **Analytics and Monetization** | Traffic monitoring, runtime and audit logs, usage tracking, and API monetization with usage-based billing. Powered by Moesif. | [Analytics docs](analytics-and-monetization/overview.md) |
 
 ### Gateway components
 | Component | What it does | Docs |
 | :--- | :--- | :--- |
-| **API Gateway** | High-performance, Go-based gateway for API traffic. Handles authentication, rate limiting, transformations, and custom policies. | <ul><li>[Standalone docs](api-gateway/1.1.0/overview.md)</li><li>[Cloud-integrated docs](cloud/api-platform-gateway/getting-started.md)</li></ul> |
-| **AI Gateway** | Route, secure, and govern outbound LLM traffic. Includes guardrails (PII masking, prompt injection, content safety), multi-provider load balancing, failover, semantic caching, and cost governance (via LLM proxies).<br><br>Govern inbound MCP traffic from AI agents. Generate MCP tools from REST APIs, aggregate tools, and enforce access control and authorization (via MCP proxies). | <ul><li>[Standalone docs](ai-gateway/1.1.0/overview.md)</li><li>[Cloud-integrated docs](cloud/ai-gateway/overview.md)</li></ul> |
+| **API Gateway** | High-performance, Go-based gateway for API traffic. Handles authentication, rate limiting, transformations, and custom policies. | <ul><li>[Standalone docs](api-gateway/{{ latest.api_gateway }}/overview.md)</li><li>[Cloud-integrated docs](cloud/api-platform-gateway/getting-started.md)</li></ul> |
+| **AI Gateway** | Route, secure, and govern outbound LLM traffic. Includes guardrails (PII masking, prompt injection, content safety), multi-provider load balancing, failover, semantic caching, and cost governance (via LLM proxies).<br><br>Govern inbound MCP traffic from AI agents. Generate MCP tools from REST APIs, aggregate tools, and enforce access control and authorization (via MCP proxies). | <ul><li>[Standalone docs](ai-gateway/{{ latest.ai_gateway }}/overview.md)</li><li>[Cloud-integrated docs](cloud/ai-gateway/overview.md)</li></ul> |
 | **Third-Party Gateways** | Federate existing gateways (AWS, Azure, Kong, and Envoy) into the WSO2 platform without replacing them. Discover and catalog APIs running on these gateways alongside your WSO2 managed APIs in a single developer portal. Gain unified observability across all gateway environments, and for supported gateways, publish and deploy API configurations directly from the control plane.|<ul><li>[Federation docs](cloud/federation/overview.md)</li></ul> |
 | **Policy Hub** | API policies and AI guardrails are distributed through the Policy Hub, an open source repository powered by [github.com/wso2/gateway-controllers](https://github.com/wso2/gateway-controllers). The Policy Hub is integrated into Cloud, API Manager (4.7 and above), and the standalone gateways. When a new policy or guardrail is released, it becomes instantly available to all users. |<ul><li>[Policy Hub docs](policy-hub/overview.md)</li></ul> |
 
@@ -164,14 +164,14 @@ The following is a complete view of all components and where to find their docum
 | Get up and running fast with a managed cloud platform | [Cloud](cloud/introduction/what-is-bijira.md) |
 | Use a cloud control plane but keep API traffic in my infrastructure | [Hybrid setup](cloud/api-platform-gateway/getting-started.md) |
 | Run everything on my own infrastructure with a UI | [API Manager](api-manager/overview.md) |
-| Run a lightweight API gateway with no UI | [API Gateway](api-gateway/1.1.0/overview.md) |
+| Run a lightweight API gateway with no UI | [API Gateway](api-gateway/{{ latest.api_gateway }}/overview.md) |
 | Govern LLM traffic (rate limits, guardrails, cost control) | [AI Gateway LLM Proxy](ai-gateway/1.1.0/llm-proxy/quick-start-guide.md) |
 | Expose my APIs as MCP tools for AI agents | [AI Gateway MCP Proxy](ai-gateway/1.1.0/mcp-proxy/quick-start-guide.md) |
 | Govern MCP traffic (inbound + outbound) | [AI Gateway MCP Proxy](ai-gateway/1.1.0/mcp-proxy/quick-start-guide.md) |
 | Manage LLM providers and AI policies at the organizational level | [AI Workspace](cloud/ai-workspace/overview.md) |
-| Run a self-hosted control plane for AI gateways, LLM providers, and AI policies | [Self-hosted AI Workspace](ai-workspace/1.0.0/overview.md) |
+| Run a self-hosted control plane for AI gateways, LLM providers, and AI policies | [Self-hosted AI Workspace](ai-workspace/{{ latest.ai_workspace }}/overview.md) |
 | Set up a developer portal for API discovery | [API Portal](cloud/devportal/theming-devportal-with-ai.md) |
-| Run a self-hosted developer portal | [Self-hosted API Portal](api-portal/1.0.0/overview.md) |
+| Run a self-hosted developer portal | [Self-hosted API Portal](api-portal/{{ latest.api_portal }}/overview.md) |
 | Monitor traffic and monetize my APIs | [Analytics and Monetization](analytics-and-monetization/overview.md) |
 | Follow end-to-end scenario walkthroughs | [Guides](guides/overview.md) |
 

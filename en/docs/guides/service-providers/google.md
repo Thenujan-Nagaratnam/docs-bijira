@@ -51,8 +51,8 @@ Register the Gemini API with the gateway. Applications call the gateway and neve
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Gemini provider](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/gemini.md) <span class="vendor-meta">AI Gateway</span>
-- [Configure an LLM provider](../../ai-workspace/1.0.0/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
+- [Gemini provider](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/gemini.md) <span class="vendor-meta">AI Gateway</span>
+- [Configure an LLM provider](../../ai-workspace/{{ latest.ai_workspace }}/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
 
 </div>
 
@@ -66,7 +66,7 @@ Keep clients on the OpenAI request format. A transformer policy converts request
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [OpenAI-format compatibility](../../ai-gateway/2026.09.24/gateway-artifacts/llm-provider/supported-providers/gemini.md#openai-format-compatibility) <span class="vendor-meta">AI Gateway</span>
+- [OpenAI-format compatibility](../../ai-gateway/{{ latest.ai_gateway }}/gateway-artifacts/llm-provider/supported-providers/gemini.md#openai-format-compatibility) <span class="vendor-meta">AI Gateway</span>
 - [OpenAI to Gemini transformer policy](https://wso2.com/api-platform/policy-hub/policies/openai-to-gemini-transformer) <span class="vendor-meta">Policy Hub</span>
 
 </div>
@@ -81,7 +81,7 @@ Routing, token limits, cost control, and the other AI Workspace policies work th
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-Routing, token limits, cost control, and the gateway's other policies work the same way for every provider. See the [AI Gateway documentation](../../ai-gateway/2026.09.24/overview.md).
+Routing, token limits, cost control, and the gateway's other policies work the same way for every provider. See the [AI Gateway documentation](../../ai-gateway/{{ latest.ai_gateway }}/overview.md).
 
 </div>
 
@@ -103,9 +103,9 @@ Point the collector at Cloud Monitoring for metrics and at Cloud Trace for trace
 
 <div class="vendor-links" data-deployments="self-hosted" markdown="1">
 
-- [Send API Gateway metrics to Cloud Monitoring](../../api-gateway/1.2.0/observability/metrics/alternative-backends.md#google-cloud-monitoring) <span class="vendor-meta">API Gateway</span>
-- [Send API Gateway traces to Cloud Trace](../../api-gateway/1.2.0/observability/tracing/alternative-backends.md#google-cloud-trace) <span class="vendor-meta">API Gateway</span>
-- [Send AI Gateway traces to Cloud Trace](../../ai-gateway/2026.09.24/logging-and-tracing/tracing.md#cloud-native-tracing-solutions) <span class="vendor-meta">AI Gateway</span>
+- [Send API Gateway metrics to Cloud Monitoring](../../api-gateway/{{ latest.api_gateway }}/observability/metrics/alternative-backends.md#google-cloud-monitoring) <span class="vendor-meta">API Gateway</span>
+- [Send API Gateway traces to Cloud Trace](../../api-gateway/{{ latest.api_gateway }}/observability/tracing/alternative-backends.md#google-cloud-trace) <span class="vendor-meta">API Gateway</span>
+- [Send AI Gateway traces to Cloud Trace](../../ai-gateway/{{ latest.ai_gateway }}/logging-and-tracing/tracing.md#cloud-native-tracing-solutions) <span class="vendor-meta">AI Gateway</span>
 
 </div>
 

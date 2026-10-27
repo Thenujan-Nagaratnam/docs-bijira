@@ -44,7 +44,7 @@ You want a lightweight gateway that you can download and run immediately. There 
 
 | Guide | What you will do |
 | :--- | :--- |
-| [API Gateway: Getting started](api-gateway/1.1.0/quick-start-guide.md) | Configure your first API proxy using YAML and start routing traffic. |
+| [API Gateway: Getting started](api-gateway/{{ latest.api_gateway }}/quick-start-guide.md) | Configure your first API proxy using YAML and start routing traffic. |
 
 **For AI traffic (LLMs and MCP):**
 
@@ -72,7 +72,7 @@ Once you have completed a quick start guide, here is where to go next:
 
 | I want to... | Go here |
 | :--- | :--- |
-| Explore the full feature docs for my product | [Cloud](cloud/introduction/what-is-bijira.md) · [API Manager](api-manager/overview.md) · [API Gateway](api-gateway/1.1.0/overview.md) · [AI Gateway](ai-gateway/1.1.0/overview.md) |
+| Explore the full feature docs for my product | [Cloud](cloud/introduction/what-is-bijira.md) · [API Manager](api-manager/overview.md) · [API Gateway](api-gateway/{{ latest.api_gateway }}/overview.md) · [AI Gateway](ai-gateway/{{ latest.ai_gateway }}/overview.md) |
 | Follow end-to-end scenarios spanning multiple components | [Guides](guides/overview.md) |
 | Try runnable code samples | [Samples](cloud/samples/samples-overview.md) |
 | Understand platform concepts (organizations, projects, data planes) | [Concepts](cloud/bijira-concepts/organization.md) |

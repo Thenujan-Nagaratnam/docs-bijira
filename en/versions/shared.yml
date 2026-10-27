@@ -1,0 +1,24 @@
+# Values for pages outside the product version folders (Cloud, guides, tools).
+# Pages use them as {{ shared.<name>.<key> }}. Change a value here, not in the pages.
+#
+# These pages describe the setup steps of a specific release, so update a value
+# together with the steps that use it, not automatically on every release.
+
+# AI Gateway release the Cloud AI Gateway and AI Workspace pages and the guides install.
+ai_gateway:
+  release_tag: ai-gateway/v1.1.0
+  package: wso2apip-ai-gateway-1.1.0
+
+# API Gateway release the Cloud API Platform Gateway pages install.
+api_gateway:
+  release_tag: gateway/v1.0.0
+  package: wso2apip-api-gateway-1.0.0
+
+# Event Gateway release the Cloud Event Gateway pages install.
+event_gateway:
+  release_tag: event-gateway/v0.8.0
+  package: wso2apip-event-gateway-0.8.0
+
+# Arazzo MCP generator CLI release the tools quick start installs.
+arazzo_mcp_gen:
+  version: 0.1.0

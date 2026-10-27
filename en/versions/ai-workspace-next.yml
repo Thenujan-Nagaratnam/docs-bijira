@@ -1,0 +1,13 @@
+# AI Workspace next release values. Pages in docs/ai-workspace/next/ use them as
+# {{ release.<name> }}. Change a value here, not in the pages.
+
+# These docs install the latest released package, wso2apip-ai-workspace-1.0.0.
+version: next
+# GitHub release tag in https://github.com/wso2/api-platform/releases/download/<tag>/
+release_tag: portals/ai-workspace/v1.0.0
+# Release package name, without .zip. It is also the folder the zip extracts to.
+package: wso2apip-ai-workspace-1.0.0
+
+# The AI Gateway release these docs pair with.
+ai_gateway_release_tag: ai-gateway/v1.2.0
+ai_gateway_package: wso2apip-ai-gateway-1.2.0

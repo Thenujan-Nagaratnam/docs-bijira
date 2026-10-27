@@ -22,7 +22,7 @@ Each guide gives you:
 - A way to verify that everything works end to end
 - A runnable companion sample, where available
 
-Use guides to see how components such as AI Gateway, AI Workspace, Developer Portal, and MCP Hub work together. For details on a single feature, see the product documentation for [Cloud](../cloud/introduction/what-is-bijira.md), [API Manager](../api-manager/overview.md), [AI Gateway](../ai-gateway/1.1.0/overview.md), or [API Portal](../api-portal/1.0.0/overview.md).
+Use guides to see how components such as AI Gateway, AI Workspace, Developer Portal, and MCP Hub work together. For details on a single feature, see the product documentation for [Cloud](../cloud/introduction/what-is-bijira.md), [API Manager](../api-manager/overview.md), [AI Gateway](../ai-gateway/{{ latest.ai_gateway }}/overview.md), or [API Portal](../api-portal/{{ latest.api_portal }}/overview.md).
 
 ## Explore what you can build
 

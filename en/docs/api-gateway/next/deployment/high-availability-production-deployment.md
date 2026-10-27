@@ -118,7 +118,7 @@ If you are using the [bottom-up deployment](./deploying-apis/bottom-up-api-deplo
 Download the default `values.yaml` for the gateway Helm chart and use it as the starting point for your production configuration. All steps in this guide reference fields within this file.
 
 ```bash
-curl -o values.yaml https://raw.githubusercontent.com/wso2/api-platform/refs/tags/gateway/v1.1.0/kubernetes/helm/gateway-helm-chart/values.yaml
+curl -o values.yaml https://raw.githubusercontent.com/wso2/api-platform/refs/tags/{{ release.release_tag }}/kubernetes/helm/gateway-helm-chart/values.yaml
 ```
 
 ### Pin the Image Versions

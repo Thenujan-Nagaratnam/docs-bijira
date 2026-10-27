@@ -103,7 +103,7 @@ stream_idle_timeout     = "5m"
 idle_timeout            = "1h"
 ```
 
-- Configuration source model update: direct `APIP_*` runtime overrides are removed in favor of `{{ env }}` / `{{ file }}` interpolation in `config.toml`, with required env vars supplied via env files.
+- Configuration source model update: direct `APIP_*` runtime overrides are removed in favor of `{% raw %}{{ env }}{% endraw %}` / `{% raw %}{{ file }}{% endraw %}` interpolation in `config.toml`, with required env vars supplied via env files.
 
 ### Fixed
 

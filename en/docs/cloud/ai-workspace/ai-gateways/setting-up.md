@@ -147,8 +147,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip && \
-    unzip wso2apip-ai-gateway-1.1.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ shared.ai_gateway.release_tag }}/{{ shared.ai_gateway.package }}.zip && \
+    unzip {{ shared.ai_gateway.package }}.zip
     ```
 
     **Step 2: Configure the Gateway**
@@ -160,7 +160,7 @@ The Get Started section provides setup instructions for multiple deployment opti
     1. Navigate to the gateway folder:
 
         ```bash
-        cd wso2apip-ai-gateway-1.1.0
+        cd {{ shared.ai_gateway.package }}
         ```
 
     2. Run this command to start the gateway using the environment file created in Step 2:
@@ -180,8 +180,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip && \
-    unzip wso2apip-ai-gateway-1.1.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ shared.ai_gateway.release_tag }}/{{ shared.ai_gateway.package }}.zip && \
+    unzip {{ shared.ai_gateway.package }}.zip
     ```
 
     **Step 2: Configure the Gateway**
@@ -193,7 +193,7 @@ The Get Started section provides setup instructions for multiple deployment opti
     1. Navigate to the gateway folder:
 
         ```bash
-        cd wso2apip-ai-gateway-1.1.0
+        cd {{ shared.ai_gateway.package }}
         ```
 
     2. Run this command to start the gateway using the environment file created in Step 2:

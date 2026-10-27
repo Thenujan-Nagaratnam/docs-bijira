@@ -1,0 +1,9 @@
+# Newest release of each product, LTS or STS. Pages outside the version folders
+# link to it as {{ latest.<product> }}, for example
+# [AI Gateway docs](ai-gateway/{{ latest.ai_gateway }}/overview.md).
+# Change a value here when a product ships a new release.
+
+ai_gateway: "2026.09.24"
+api_gateway: "1.2.0"
+api_portal: "1.0.0"
+ai_workspace: "1.0.0"

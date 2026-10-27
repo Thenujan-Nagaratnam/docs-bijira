@@ -101,8 +101,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0-rc/wso2apip-ai-gateway-1.2.0-rc.zip && \
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ release.ai_gateway_release_tag }}/{{ release.ai_gateway_package }}.zip && \
+    unzip {{ release.ai_gateway_package }}.zip
     ```
 
     **Step 2: Set up the gateway**
@@ -110,13 +110,13 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run the one-time setup script. It provisions the AES-256 at-rest encryption key, the router HTTPS listener certificate, the gateway-controller admin credentials, and `api-platform.env` — all required before the first start (the gateway has no demo mode and fails closed if a required key, certificate, or credential is missing). The admin password is printed once — copy it:
 
     ```bash
-    cd wso2apip-ai-gateway-1.2.0 && ./scripts/setup.sh
+    cd {{ release.ai_gateway_package }} && ./scripts/setup.sh
     ```
 
     On Windows, use the PowerShell setup script instead — it takes the same flags and provisions the same files:
 
     ```powershell
-    cd wso2apip-ai-gateway-1.2.0
+    cd {{ release.ai_gateway_package }}
     powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
     ```
 
@@ -164,8 +164,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0-rc/wso2apip-ai-gateway-1.2.0-rc.zip && \
-    unzip wso2apip-ai-gateway-1.2.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ release.ai_gateway_release_tag }}/{{ release.ai_gateway_package }}.zip && \
+    unzip {{ release.ai_gateway_package }}.zip
     ```
 
     **Step 2: Set up the gateway**
@@ -173,13 +173,13 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run the one-time setup script. It provisions the AES-256 at-rest encryption key, the router HTTPS listener certificate, the gateway-controller admin credentials, and `api-platform.env` — all required before the first start (the gateway has no demo mode and fails closed if a required key, certificate, or credential is missing). The admin password is printed once — copy it:
 
     ```bash
-    cd wso2apip-ai-gateway-1.2.0 && ./scripts/setup.sh
+    cd {{ release.ai_gateway_package }} && ./scripts/setup.sh
     ```
 
     On Windows, use the PowerShell setup script instead — it takes the same flags and provisions the same files:
 
     ```powershell
-    cd wso2apip-ai-gateway-1.2.0
+    cd {{ release.ai_gateway_package }}
     powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
     ```
 
@@ -215,8 +215,8 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run this command in your terminal to download the gateway:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0-rc2/wso2apip-ai-gateway-1.2.0-rc2.zip && \
-    unzip wso2apip-ai-gateway-1.2.0-rc2.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ release.ai_gateway_release_tag }}/{{ release.ai_gateway_package }}.zip && \
+    unzip {{ release.ai_gateway_package }}.zip
     ```
 
     **Step 2: Set up the gateway**
@@ -224,13 +224,13 @@ The Get Started section provides setup instructions for multiple deployment opti
     Run the one-time setup script. It provisions the AES-256 at-rest encryption key, the router HTTPS listener certificate, the gateway-controller admin credentials, and `api-platform.env` — all required before the first start (the gateway has no demo mode and fails closed if a required key, certificate, or credential is missing). The admin password is printed once — copy it:
 
     ```bash
-    cd wso2apip-ai-gateway-1.2.0 && ./scripts/setup.sh
+    cd {{ release.ai_gateway_package }} && ./scripts/setup.sh
     ```
 
     On Windows, use the PowerShell setup script instead — it takes the same flags and provisions the same files:
 
     ```powershell
-    cd wso2apip-ai-gateway-1.2.0
+    cd {{ release.ai_gateway_package }}
     powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
     ```
 

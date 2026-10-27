@@ -114,11 +114,11 @@ Run these on the machine where the gateway will run. Copy each command from the 
 1. **Download the gateway:**
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip && \
-    unzip wso2apip-ai-gateway-1.1.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/{{ shared.ai_gateway.release_tag }}/{{ shared.ai_gateway.package }}.zip && \
+    unzip {{ shared.ai_gateway.package }}.zip
     ```
 
-2. **Configure the gateway.** Create `wso2apip-ai-gateway-1.1.0/configs/keys.env`. Copying from the **Quick Start** tab fills in the registration token and the analytics key:
+2. **Configure the gateway.** Create `{{ shared.ai_gateway.package }}/configs/keys.env`. Copying from the **Quick Start** tab fills in the registration token and the analytics key:
 
     ```bash
     MOESIF_KEY=<filled in for you>
@@ -131,7 +131,7 @@ Run these on the machine where the gateway will run. Copy each command from the 
 3. **Start the gateway.** It runs in the foreground, so use a second terminal for the rest of this guide:
 
     ```bash
-    cd wso2apip-ai-gateway-1.1.0
+    cd {{ shared.ai_gateway.package }}
     docker compose --env-file configs/keys.env up
     ```
 

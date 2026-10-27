@@ -3,7 +3,22 @@ import os
 import json
 import hashlib
 
+import jinja2
+import yaml
+from mkdocs.exceptions import PluginError
+
 _HOOKS_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Page variables. A page writes {{ release.package }} or {{ latest.ai_gateway }}
+# instead of a literal value, and on_page_markdown fills it in:
+#   release - versions/<product>-<version>.yml for the page's version folder
+#   shared  - versions/shared.yml, for pages outside the version folders
+#   latest  - versions/latest.yml, the newest release of each product, LTS or STS
+# An unknown name stops the build. Wrap literal {{ }} text in {% raw %}.
+_DATA_DIR = os.path.join(_HOOKS_DIR, "versions")
+# Same newline handling as the markdownextradata plugin this replaces.
+_jinja = jinja2.Environment(undefined=jinja2.StrictUndefined)
+_yaml_cache: dict[str, dict] = {}
 
 # Populated in on_pre_build; used by on_post_page and on_post_build.
 _partial_hashes: dict[str, str] = {}
@@ -226,12 +241,63 @@ def _drop_tags_from_search(page):
         page.meta["tags"] = []
 
 
+def _load_yaml(path: str) -> dict:
+    if path not in _yaml_cache:
+        data = {}
+        if os.path.exists(path):
+            with open(path, encoding="utf-8") as f:
+                data = yaml.safe_load(f) or {}
+        _yaml_cache[path] = data
+    return _yaml_cache[path]
+
+
+def _page_variables(page, config) -> dict:
+    """Return the release, shared, and latest variables for a page."""
+    parts = page.file.src_path.replace(os.sep, "/").split("/")
+    release = {}
+    if len(parts) > 2:
+        release = _load_yaml(os.path.join(_DATA_DIR, f"{parts[0]}-{parts[1]}.yml"))
+    return {
+        "release": release,
+        "shared": _load_yaml(os.path.join(_DATA_DIR, "shared.yml")),
+        "latest": _load_yaml(os.path.join(_DATA_DIR, "latest.yml")),
+    }
+
+
+_UNRENDERED_RE = re.compile(r"\{\{\s*(?:release|shared|latest)\.")
+
+
+def _render_variables(markdown, page, config):
+    try:
+        rendered = _jinja.from_string(markdown).render(_page_variables(page, config))
+    except jinja2.TemplateError as e:
+        parts = page.file.src_path.replace(os.sep, "/").split("/")
+        release_file = f"versions/{parts[0]}-{parts[1]}.yml" if len(parts) > 2 else "none"
+        line = f" (line {e.lineno})" if getattr(e, "lineno", None) else ""
+        raise PluginError(
+            f"{page.file.src_path}{line}: {e}. Check the name against versions/shared.yml, versions/latest.yml, and this "
+            f"page's release file ({release_file}). If the {{{{ }}}} text is literal, wrap it "
+            f"in {{% raw %}}...{{% endraw %}}."
+        )
+    # A variable inside {% raw %} is left as typed; catch it instead of publishing it.
+    leftover = _UNRENDERED_RE.search(rendered)
+    if leftover:
+        line = rendered.count("\n", 0, leftover.start()) + 1
+        raise PluginError(
+            f"{page.file.src_path}: a page variable near output line {line} is inside "
+            f"{{% raw %}}...{{% endraw %}}, so it isn't filled in. Move it out of the raw block."
+        )
+    return rendered
+
+
 def on_page_markdown(markdown, page, config, **kwargs):
-    """Write Markdown files to a parallel .md file in the build output.
+    """Fill in page variables, then write the Markdown to a parallel .md file.
 
     For example, it creates the file `SITE_DIR/cloud/ai-gateway/overview.md`
-    alongside the HTML page.
+    alongside the HTML page, with the variables already filled in.
     """
+    markdown = _render_variables(markdown, page, config)
+
     # Keep tags out of the search index (see helper above).
     _drop_tags_from_search(page)
 
