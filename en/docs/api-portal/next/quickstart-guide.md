@@ -765,7 +765,7 @@ Look for an entry in the `servers` array for the server you just added:
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "Everything MCP Server",
-        "version": "1.0",
+        "version": "v1.0",
         "description": "A reference MCP server that exercises the whole protocol — tools, prompts, resources, and sampling. Built for developers testing an MCP client, with a pizza-ordering flow standing in for a real workload.",
         "remotes": [
           {
@@ -878,7 +878,7 @@ The `servers` array now includes both versions:
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "Everything MCP Server",
-        "version": "1.0",
+        "version": "v1.0",
         "description": "A reference MCP server that exercises the whole protocol — tools, prompts, resources, and sampling. Built for developers testing an MCP client, with a pizza-ordering flow standing in for a real workload.",
         "remotes": [
           {

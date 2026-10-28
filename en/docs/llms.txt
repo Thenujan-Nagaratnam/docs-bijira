@@ -129,7 +129,7 @@
 
 - [AI Workspace Overview](https://wso2.com/api-platform/docs/cloud/ai-workspace/overview.md): The organizational control plane for AI: manage LLM providers, MCP proxies, GenAI applications, and AI policies centrally across connected AI Gateways
 - [AI Workspace Getting Started](https://wso2.com/api-platform/docs/cloud/ai-workspace/getting-started.md): Set up an AI Workspace, connect it to an AI Gateway, and configure your first LLM provider
-- [AI Workspace Quickstart](https://wso2.com/api-platform/docs/cloud/ai-workspace/quickstart.md): Connect an AI Gateway to AI Workspace, configure an LLM provider and an MCP proxy, and call both through the AI Gateway
+- [AI Workspace Quick Start Guide](https://wso2.com/api-platform/docs/cloud/ai-workspace/quickstart.md): Connect an AI Gateway to AI Workspace, configure an LLM provider and an MCP proxy, and call both through the AI Gateway
 - [Setting Up AI Gateways](https://wso2.com/api-platform/docs/cloud/ai-workspace/ai-gateways/setting-up.md): Connect a self-hosted AI Gateway runtime to the AI Workspace control plane
 - [LLM Providers Overview](https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-providers/overview.md): What an LLM Provider is: a managed connection to an LLM backend with credentials, access control, and org-level policies
 - [Configure LLM Provider](https://wso2.com/api-platform/docs/cloud/ai-workspace/llm-providers/configure-provider.md): Add a new LLM provider in AI Workspace
@@ -162,7 +162,7 @@
 
 - [AI Workspace Overview](https://wso2.com/api-platform/docs/ai-workspace/1.0.0/overview.md): The self-hosted control plane for AI: manage LLM providers, MCP proxies, GenAI applications, and AI policies, deployed with Docker Compose
 - [About this release](https://wso2.com/api-platform/docs/ai-workspace/1.0.0/about-this-release.md): Features, compatible product versions, key considerations, and known limitations of WSO2 AI Workspace 1.0.0.
-- [AI Workspace Get Started](https://wso2.com/api-platform/docs/ai-workspace/1.0.0/getting-started.md): Run AI Workspace locally with Docker Compose, connect an AI Gateway, configure an LLM provider, and run a real prompt through it
+- [AI Workspace Quick Start Guide](https://wso2.com/api-platform/docs/ai-workspace/1.0.0/getting-started.md): Run AI Workspace locally with Docker Compose, connect an AI Gateway, configure an LLM provider, and run a real prompt through it
 - [AI Workspace configuration and environment interpolation](https://wso2.com/api-platform/docs/ai-workspace/1.0.0/setting-up/configuration.md): How AI Workspace and the Platform API load config.toml, inject environment values and mounted files through interpolation tokens, and keep secrets out of it.
 - [Change the ports AI Workspace uses](https://wso2.com/api-platform/docs/ai-workspace/1.0.0/setting-up/ports.md): Move the AI Workspace and Platform API off their default ports, either by remapping the published host port or by changing the port each service listens on.
 - [Connect a database to the Platform API](https://wso2.com/api-platform/docs/ai-workspace/1.0.0/setting-up/database.md): Move the Platform API from SQLite onto PostgreSQL or SQL Server: create the database, configure the connection, secure it with TLS, and tune the pool.
@@ -250,7 +250,7 @@
 
 ## Self-Hosted and Third-Party Gateways
 
-- [Self-Hosted Gateway Getting Started](https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started.md): Connect a self-hosted gateway to the cloud control plane (hybrid deployment)
+- [Self-Hosted Gateway Quick Start Guide](https://wso2.com/api-platform/docs/cloud/api-platform-gateway/getting-started.md): Connect a self-hosted gateway to the cloud control plane (hybrid deployment)
 - [Self-Hosted Gateway Architecture](https://wso2.com/api-platform/docs/cloud/api-platform-gateway/architecture.md): Architecture of a self-hosted gateway connected to the cloud control plane
 - [Self-Hosted Gateway Setting Up](https://wso2.com/api-platform/docs/cloud/api-platform-gateway/setting-up.md): Configure environment, certificates, and networking for a self-hosted gateway
 - [Adding and Managing Policies](https://wso2.com/api-platform/docs/cloud/api-platform-gateway/manage-policies.md): Apply and manage policies on a self-hosted gateway
@@ -268,7 +268,7 @@
 ## Event Gateway
 
 - [Event Gateway Overview](https://wso2.com/api-platform/docs/cloud/event-gateway/overview.md): Gateway for event-driven APIs: bridges WebSocket, WebHook, and SSE with message brokers like Kafka, MQTT, and Solace
-- [Event Gateway Getting Started](https://wso2.com/api-platform/docs/cloud/event-gateway/getting-started.md): Set up and publish your first event-driven API through the Event Gateway
+- [Event Gateway Quick Start Guide](https://wso2.com/api-platform/docs/cloud/event-gateway/getting-started.md): Set up and publish your first event-driven API through the Event Gateway
 - [Event Gateway Setting Up](https://wso2.com/api-platform/docs/cloud/event-gateway/setting-up.md): Deploy the Event Gateway in production environments
 - [Publish APIs Overview (Event Gateway)](https://wso2.com/api-platform/docs/cloud/event-gateway/publish-apis/overview.md): How to publish event-driven APIs through the Event Gateway
 - [Subscription Based APIs (Event Gateway)](https://wso2.com/api-platform/docs/cloud/event-gateway/publish-apis/subscription-based-apis.md): Publish subscription-gated event APIs
@@ -590,7 +590,7 @@
 - [API Platform CLI Quick Start](https://wso2.com/api-platform/docs/tools/cli/quick-start-guide.md): Get started with the `ap` command-line interface
 - [Customizing Gateway Policies with CLI](https://wso2.com/api-platform/docs/tools/cli/customizing-gateway-policies.md): Use the CLI to add and remove policies from a gateway image
 - [API Platform CLI Reference](https://wso2.com/api-platform/docs/tools/cli/reference.md): Full command reference for the `ap` CLI
-- [VS Code API Designer: Getting Started](https://wso2.com/api-platform/docs/tools/vscode-api-design/getting-started.md): Install and configure the WSO2 VS Code extension for API design
+- [VS Code API Designer: Quick Start Guide](https://wso2.com/api-platform/docs/tools/vscode-api-design/getting-started.md): Install and configure the WSO2 VS Code extension for API design
 - [VS Code: Design APIs](https://wso2.com/api-platform/docs/tools/vscode-api-design/design-apis.md): Design and edit OpenAPI specifications with AI assistance in VS Code
 - [VS Code: Govern APIs](https://wso2.com/api-platform/docs/tools/vscode-api-design/govern-apis.md): Apply governance rules to API designs directly from VS Code
 - [VS Code: End-to-End Tutorial](https://wso2.com/api-platform/docs/tools/vscode-api-design/end-to-end-tutorial.md): Full walkthrough: draft, design, govern, and fix an OpenAPI specification using API Designer and GitHub Copilot
