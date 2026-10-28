@@ -22,7 +22,7 @@ The portal is a standalone product. A production deployment needs the portal and
 
 The section has two parts. The Production Readiness pages explain what each part of a production deployment requires, independent of where you run it: [Security Hardening](security-hardening.md), [Database Configuration](database-configuration.md), [Resources & Scaling](resources-and-scaling.md), [Control Plane Connection](control-plane-connection.md), and [Verify & Upgrade](deploy-and-verify.md). The deployment guides then apply them end to end, with the configuration for one platform: [Deploy on VMs](deploy-on-vms.md), [Deploy on Kubernetes](deploy-on-kubernetes.md), and [Deploy on OpenShift](openshift.md). The requirements and failure modes are the same on every platform; only the delivery changes.
 
-The single-instance walkthrough in [Getting started](../getting-started.md) is the right shape for evaluation and development, not for production.
+The single-instance walkthrough in the [quick start guide](../quickstart-guide.md) is the right shape for evaluation and development, not for production.
 
 ## Running more than one instance
 

@@ -206,7 +206,6 @@ nav:
     - AI Workspace:
         - Overview: cloud/ai-workspace/overview.md
         - Quick Start Guide: cloud/ai-workspace/quickstart.md
-        - Getting Started: cloud/ai-workspace/getting-started.md
         - AI Gateways:
             - Setting Up: cloud/ai-workspace/ai-gateways/setting-up.md
         - LLM Providers:
@@ -315,6 +314,7 @@ nav:
     - API Platform Samples:
         - Samples Overview: cloud/samples/samples-overview.md
     - Developer Portal:
+        - Quick Start Guide: guides/developer-portal/api-discovery-and-tryout.md
         - Theming Developer Portal:
             - Theming with AI: cloud/devportal/theming-devportal-with-ai.md
             - Theming Manually:
@@ -1112,7 +1112,6 @@ nav:
         - Concepts: api-portal/next/concepts.md
         - Quick Start Guide: api-portal/next/quickstart-guide.md
         # Stand the portal up, in the order an operator does it.
-        - Getting Started: api-portal/next/getting-started.md
         - Setting Up:
             - Configuration & Interpolation: api-portal/next/setting-up/configuration.md
             - Minimum resource requirements: api-portal/next/setting-up/resource-requirement.md
@@ -1208,7 +1207,6 @@ nav:
         - Concepts: api-portal/1.0.0/concepts.md
         - Quick Start Guide: api-portal/1.0.0/quickstart-guide.md
         # Stand the portal up, in the order an operator does it.
-        - Getting Started: api-portal/1.0.0/getting-started.md
         - Setting Up:
             - Configuration & Interpolation: api-portal/1.0.0/setting-up/configuration.md
             - Minimum resource requirements: api-portal/1.0.0/setting-up/resource-requirement.md
@@ -1484,7 +1482,7 @@ nav:
   - Monetization:
     - Overview: monetization/overview.md
     - Monetizing APIs:
-        - Getting Started: monetization/getting-started.md
+        - Connect Stripe: monetization/getting-started.md
         - Manage Paid Subscription Plans: monetization/manage-paid-subscription-plans.md
     - Consume Monetized APIs:
         - Subscribe to a Paid Plan: monetization/subscribe-to-paid-plan.md
@@ -1550,7 +1548,8 @@ nav:
         - Quick Start Guide: tools/arazzo-mcp-gen-cli/quick-start-guide.md
         - Reference: tools/arazzo-mcp-gen-cli/reference.md
     - VS Code Arazzo Visualizer:
-        - Getting Started: tools/vscode-arazzo-visualizer/getting-started.md
+        - Overview: tools/vscode-arazzo-visualizer/getting-started.md
+        - Quick Start Guide: tools/vscode-arazzo-visualizer/quick-start-guide.md
   - FAQ: faq.md
   - Glossary: glossary.md
 
@@ -1597,6 +1596,11 @@ plugins:
   - markdownextradata: {}
   - redirects:
       redirect_maps:
+        # Cloud AI Workspace: Getting Started merged into the quick start guide
+        cloud/ai-workspace/getting-started.md: cloud/ai-workspace/quickstart.md
+        # API Portal: Getting Started merged into the quick start guide
+        api-portal/1.0.0/getting-started.md: api-portal/1.0.0/quickstart-guide.md
+        api-portal/next/getting-started.md: api-portal/next/quickstart-guide.md
         # API Portal: overview + documentation pages merged into Browse APIs
         api-portal/next/discover-apis/api-overview.md: api-portal/next/discover-apis/browse-apis.md
         api-portal/next/discover-apis/api-documentations.md: api-portal/next/discover-apis/browse-apis.md
@@ -2012,7 +2016,7 @@ plugins:
         ai-workspace/ai-gateways/setting-up.md: cloud/ai-workspace/ai-gateways/setting-up.md
         ai-workspace/configure-inbound-auth.md: cloud/ai-workspace/configure-inbound-auth.md
         ai-workspace/genai-applications.md: cloud/ai-workspace/genai-applications.md
-        ai-workspace/getting-started.md: cloud/ai-workspace/getting-started.md
+        ai-workspace/getting-started.md: cloud/ai-workspace/quickstart.md
         ai-workspace/insights.md: cloud/ai-workspace/insights.md
         ai-workspace/overview.md: cloud/ai-workspace/overview.md
         ai-workspace/using-sdks.md: cloud/ai-workspace/using-sdks.md
