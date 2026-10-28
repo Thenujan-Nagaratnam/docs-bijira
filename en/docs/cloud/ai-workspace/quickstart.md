@@ -88,16 +88,17 @@ An AI Gateway is the runtime that enforces authentication, rate limits, and guar
 ### Step 3: Register the gateway
 
 1. Navigate to **AI Gateways** in the left navigation menu.
-2. Click **Add AI Gateway**.
+2. Click **Add Gateway**.
 3. Fill in the gateway details:
+    - **Gateway Version**: keep the latest version, for example `AI-Gateway v1.2`.
+    - **Environment**: select **Development**.
     - **Name**: a unique name, for example `dev-ai-gateway`.
     - **Description**: optional.
-    - **URL**: keep the pre-filled `https://localhost:8443`. This is the address the gateway is reachable at once it's running. AI Workspace uses this to build the Invoke URL and MCP Proxy URL you'll call from your own terminal later in this guide. Use an address your terminal can actually reach, not `host.docker.internal`. That hostname only resolves from inside a container, not from your host machine.
-    - **Associated Environment**: select **Development**.
+    - **URL**: enter `https://localhost:8443`. This is the address the gateway is reachable at once it's running. AI Workspace uses this to build the Invoke URL and MCP Proxy URL you'll call from your own terminal later in this guide. Use an address your terminal can actually reach, not `host.docker.internal`. That hostname only resolves from inside a container, not from your host machine.
 
-    ![Add AI Gateway form with a name, the localhost URL, and the Development environment](../../assets/img/ai-gateway/ai-workspace/quickstart/add-ai-gateway-form.png)
+    ![Add AI Gateway form with AI-Gateway v1.2, the Development environment, a name, and the localhost URL](../../assets/img/ai-gateway/ai-workspace/quickstart/add-ai-gateway-form.png)
 
-4. Click **Add Gateway**.
+4. Click **Add AI Gateway**.
 
 !!! note "Environment dropdown empty?"
     The **AI Service** onboarding in Part 1 didn't finish. Complete it in the Console, then come back to this step.
