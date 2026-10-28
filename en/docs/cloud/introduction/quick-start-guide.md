@@ -65,7 +65,7 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
    ```http
    https://raw.githubusercontent.com/wso2/docs-bijira/refs/heads/main/en/docs/assets/files/sample-api.yaml
    ```
-3. **Create API Proxy from Contract** page will be opened. Under **Gateway Type**, select **WSO2 Managed Gateway**, and then click **Create** to complete the API proxy creation process.
+3. On the **Create API Proxy from Contract** page, under **Gateway Type**, select **WSO2 Managed Gateway**, and then click **Create**.
     ![Create API Proxy from Contract form with name Sample API, identifier, version, base path, description, HTTP type, WSO2 Managed Gateway selected, and target URL](../../assets/img/introduction/create-api-proxy-from-contract.png)
 
 ## Step 3: Test the API Proxy
@@ -112,7 +112,9 @@ Now that your API is deployed in both development and production environments an
 
 1. In the left navigation menu, click **Develop** and then click **Lifecycle**. This opens the **Lifecycle** page, where you can see the different lifecycle stages of the API. The current lifecycle stage is **Created**.
 2. Click **Publish**.
-3. In the **Publish API** dialog, under **Endpoints**, select the API's URL from the **Production Endpoint URL** list. Then click **Confirm** to proceed with publishing the API with the specified display name. If you want to change the display name, make the necessary changes and then click **Confirm**. This changes the API lifecycle state to **Published**.
+3. In the **Publish API** dialog, under **Endpoints**, select the API's URL from the **Production Endpoint URL** list.
+4. Optional: Change the display name.
+5. Click **Confirm**. This changes the API lifecycle state to **Published**.
 
 You can observe that the API lifecycle stage has changed to **Published**. Now the API is available for consumption. API consumers can consume the API via the API Platform Developer Portal.
 

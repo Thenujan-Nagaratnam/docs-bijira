@@ -45,6 +45,8 @@ Before you begin, ensure you have:
 5. Click **+ Add Self-Hosted Gateway**.
 6. Provide the following details:
 
+    - **Type**: Select **API Gateway**
+    - **Gateway Version**: Select **api-gateway v1.2**
     - **Name**: A unique name for your gateway
     - **Description**: Optional description
     - **URL**: The URL where your gateway will be accessible (e.g., `https://localhost:8443`)
@@ -107,7 +109,7 @@ Before you begin, ensure you have:
     docker compose ps
 
     # Check gateway health
-    curl http://localhost:9002/health
+    curl http://localhost:9094/api/admin/v1/health
     ```
 
     The gateway should show as **Active** in the API Platform Console under **Gateways**.

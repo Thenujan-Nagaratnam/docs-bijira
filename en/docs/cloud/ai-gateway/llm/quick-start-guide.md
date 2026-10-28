@@ -153,7 +153,7 @@ to send an authenticated request to your LLM through the gateway.
 Send an authenticated request through the gateway with your API key in the request header. For example, here we send a request to OpenAI API's `/chat/completions` endpoint:
 
 ```bash
-curl -X POST "https://localhost:8443/my-openai-provider/ask-ai/chat/completions" \
+curl -k -X POST "https://localhost:8443/my-openai-provider/ask-ai/chat/completions" \
   -H "Content-Type: application/json" \
   -H "X-API-Key: 9f736716ebd31d9706s83c10d9aec691ddc0e2d8b2413xx86f5a3db3461b4d80" \
   -d '{
