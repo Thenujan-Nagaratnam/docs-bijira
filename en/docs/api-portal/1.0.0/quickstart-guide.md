@@ -763,7 +763,7 @@ Look for an entry in the `servers` array for the server you just added:
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "Everything MCP Server",
-        "version": "1.0",
+        "version": "v1.0",
         "description": "A reference MCP server that exercises the whole protocol — tools, prompts, resources, and sampling. Built for developers testing an MCP client, with a pizza-ordering flow standing in for a real workload.",
         "remotes": [
           {
@@ -876,7 +876,7 @@ The `servers` array now includes both versions:
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "Everything MCP Server",
-        "version": "1.0",
+        "version": "v1.0",
         "description": "A reference MCP server that exercises the whole protocol — tools, prompts, resources, and sampling. Built for developers testing an MCP client, with a pizza-ordering flow standing in for a real workload.",
         "remotes": [
           {
@@ -922,7 +922,7 @@ The `servers` array now includes both versions:
 ## Next steps
 
 - See the [getting started guide for API Portal and MCP Hub](./getting-started.md).
-- To route MCP traffic through a gateway, with authentication and access control, see the [MCP Proxy quickstart guide](../../ai-gateway/1.0.0/mcp-proxy/quick-start-guide.md).
+- To route MCP traffic through a gateway, with authentication and access control, see the [MCP proxy documentation](../../ai-gateway/1.2.0/gateway-artifacts/mcp-proxy.md).
 - See [Manage APIs](admin-settings/manage-apis.md) and [Manage MCP Servers](admin-settings/manage-mcp-servers.md) for the full admin reference for editing, publishing, deprecating, and deleting APIs and MCP servers. 
 - See [MCP Registry API](mcp-registry.md) for the full discovery and publishing reference, including how to update or delete a published version.
 - For information about the consumer side of your published APIs and MCP servers, like subscribing, getting a token, and calling an artifact, see [Manage Subscriptions](consume-an-api/manage-subscriptions.md) and [Connect to an MCP Server](mcp-servers/connect-to-an-mcp-server.md).

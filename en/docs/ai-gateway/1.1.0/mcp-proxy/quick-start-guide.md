@@ -90,7 +90,7 @@ curl http://localhost:9094/health
 Start the sample MCP server
 
 ```bash
-docker run -p 3001:3001 --name everything --network ai-gateway_gateway-network rakhitharr/mcp-everything:v3
+docker run -d -p 3001:3001 --name everything --network ai-gateway_gateway-network rakhitharr/mcp-everything:v3
 ```
 
 Run the following command to deploy the MCP proxy.

@@ -61,25 +61,30 @@ Select the __Quick Start__ tab in the detail page of the newly added gateway's *
 1. Download and unzip the gateway distribution:
 
     ```bash
-    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.1.0/wso2apip-ai-gateway-1.1.0.zip && \
-    unzip wso2apip-ai-gateway-1.1.0.zip
+    curl -sLO https://github.com/wso2/api-platform/releases/download/ai-gateway/v1.2.0/wso2apip-ai-gateway-1.2.0.zip && \
+    unzip wso2apip-ai-gateway-1.2.0.zip
     ```
 
-2. Create the environment file with your registration token:
+2. Run the one-time setup script:
 
     ```bash
-    cat > wso2apip-ai-gateway-1.1.0/configs/keys.env << 'ENVFILE'
+    cd wso2apip-ai-gateway-1.2.0 && ./scripts/setup.sh
+    ```
+
+3. Add your registration token to the environment file:
+
+    ```bash
+    cat >> api-platform.env << 'ENVFILE'
     MOESIF_KEY=<your-moesif-key>
-    GATEWAY_CONTROLPLANE_HOST=connect.bijira.dev
-    GATEWAY_REGISTRATION_TOKEN=<your-gateway-token>
+    APIP_GW_CONTROLLER_CONTROLPLANE_HOST=connect.bijira.dev
+    APIP_GW_CONTROLLER_CONTROLPLANE_TOKEN=<your-gateway-token>
     ENVFILE
     ```
 
-3. Start the runtime:
+4. Start the runtime:
 
     ```bash
-    cd wso2apip-ai-gateway-1.1.0 && \
-    docker compose --env-file configs/keys.env up
+    docker compose --env-file api-platform.env up
     ```
 
 ### Step 4: Verify the gateway is active
