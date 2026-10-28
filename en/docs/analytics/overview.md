@@ -44,9 +44,10 @@ Follow the instructions in [Moesif Analytics Integration in API Manager docs](ht
 
 To see your first API calls in Moesif, follow these steps:
 
-1. Set up Moesif for your deployment, as described in [Setup and access configurations](#setup-and-access-configurations).
-2. Send a few requests through your gateway. To deploy an API and invoke it, follow the quick start guide for [API Platform Cloud](../cloud/introduction/quick-start-guide.md), the [API Gateway](../api-gateway/1.2.0/quick-start-guide.md), or the [AI Gateway](../ai-gateway/1.2.0/quick-start-guide.md).
-3. Open the analytics dashboards. In API Platform Cloud, select **Insights**, then **API Insights**. For a self-hosted gateway, open your Moesif dashboard.
+1. Deploy an API and invoke it. Follow the quick start guide for [API Platform Cloud](../cloud/introduction/quick-start-guide.md), the [API Gateway](../api-gateway/1.2.0/quick-start-guide.md), or the [AI Gateway](../ai-gateway/1.2.0/quick-start-guide.md).
+2. Set up Moesif for your deployment, as described in [Setup and access configurations](#setup-and-access-configurations). For a self-hosted gateway, add the Moesif configuration to the gateway's `config.toml` file and restart the gateway.
+3. Send a few more requests through your gateway.
+4. Open the analytics dashboards. In API Platform Cloud, select **Insights**, then **API Insights**. For a self-hosted gateway, open your Moesif dashboard.
 
 New to Moesif? Start with the [Moesif overview](https://www.moesif.com/docs/getting-started/overview/) and [API observability](https://www.moesif.com/docs/getting-started/api-observability/) guides.
 

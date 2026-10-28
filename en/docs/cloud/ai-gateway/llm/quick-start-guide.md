@@ -150,12 +150,12 @@ to send an authenticated request to your LLM through the gateway.
 
 ### Step 3: Send a request
 
-Send an authenticated request through the gateway with your API key in the request header. For example, here we send a request to OpenAI API's `/chat/completions` endpoint:
+Send an authenticated request through the gateway with your API key in the request header. For example, here we send a request to OpenAI API's `/chat/completions` endpoint. Replace `<api-key>` with the key you generated. The `-k` flag skips certificate verification because the local gateway uses a self-signed certificate. Don't use `-k` with a gateway that has a certificate from a trusted certificate authority (CA).
 
 ```bash
 curl -k -X POST "https://localhost:8443/my-openai-provider/ask-ai/chat/completions" \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: 9f736716ebd31d9706s83c10d9aec691ddc0e2d8b2413xx86f5a3db3461b4d80" \
+  -H "X-API-Key: <api-key>" \
   -d '{
   "model": "gpt-4o-mini",
   "messages": [

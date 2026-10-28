@@ -52,6 +52,8 @@ Before you begin, ensure you have:
     - **URL**: The URL where your gateway will be accessible (e.g., `https://localhost:8443`)
     - **Associated Environment**: Select the environment for this gateway
 
+    The completed form looks like this:
+
     ![Add Self-Hosted Gateway form with API Gateway type selected, Gateway Version set to api-gateway v1.2, and the name, URL, and environment fields](../../assets/img/api-platform-gateway/gateway/gateway-add.png)
 
 7. Click **Add** and you will be navigated to the Gateway View Page.
@@ -62,6 +64,8 @@ Before you begin, ensure you have:
 
     !!! note
         Be sure to copy the commands from the Quick Start section, since the keys are auto-generated for you.
+
+    The **Quick Start** tab shows the download command in step 1, and the setup, configuration, and start commands in steps 2 to 4:
 
     ![Gateway detail page showing Configurations tab with Quick Start, Virtual Machine, Docker, and Kubernetes tabs and Step 1 download command](../../assets/img/api-platform-gateway/gateway/gateway-view1.png)
     ![Gateway setup steps 2 to 4 showing the setup script, the api-platform.env configuration command, and the docker compose start command](../../assets/img/api-platform-gateway/gateway/gateway-view2.png)

@@ -65,8 +65,9 @@ In this tutorial, you will use API Platform to expose a service as an API proxy 
    ```http
    https://raw.githubusercontent.com/wso2/docs-bijira/refs/heads/main/en/docs/assets/files/sample-api.yaml
    ```
-3. On the **Create API Proxy from Contract** page, under **Gateway Type**, select **WSO2 Managed Gateway**, and then click **Create**.
-    ![Create API Proxy from Contract form with name Sample API, identifier, version, base path, description, HTTP type, WSO2 Managed Gateway selected, and target URL](../../assets/img/introduction/create-api-proxy-from-contract.png)
+3. On the **Create API Proxy from Contract** page, under **Gateway Type**, select **WSO2 Managed Gateway**, and then click **Create**. The completed form looks like this:
+
+    ![Create API Proxy from Contract form with name, identifier, version, base path, description, HTTP type, WSO2 Managed Gateway, and target URL](../../assets/img/introduction/create-api-proxy-from-contract.png)
 
 ## Step 3: Test the API Proxy
 
@@ -123,7 +124,8 @@ You can observe that the API lifecycle stage has changed to **Published**. Now t
 <!-- TODO: Need to improve the documentation after devportal is refined with snaps and steps -->
 To generate credentials for the published API and invoke it via the Developer Portal, follow these steps.
 
-1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the Sample API published to the API Platform Developer Portal.
+1. In the **Lifecycle Management** pane, click **Go to DevPortal**. This takes you to the Sample API published to the API Platform Developer Portal. The **Go to DevPortal** link is on the lifecycle page:
+
     ![Lifecycle page showing the API in the Published state, with Created, Pre-released, Published, Deprecated, and Retired stages, and Go to Devportal highlighted](../../assets/img/introduction/go-to-developer-portal.png)
 2. Subscribe to the API and Generate credentials.
     1. In the Developer Portal left navigation menu, click **Applications**.

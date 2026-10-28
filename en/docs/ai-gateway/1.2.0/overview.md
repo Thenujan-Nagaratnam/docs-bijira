@@ -35,7 +35,7 @@ Two roles share the gateway. A platform administrator configures LLM providers, 
 You can run the AI Gateway in two ways:
 
 - **Standalone:** You configure LLM providers, LLM proxies, and MCP proxies through YAML files or the gateway's REST API. The gateway doesn't need a control plane.
-- **Connected to AI Workspace:** The gateway still runs in your infrastructure, and you manage its artifacts from AI Workspace. AI Workspace runs either in API Platform Cloud or on your own infrastructure. To connect to AI Workspace in API Platform Cloud, follow the [AI Gateway LLM quick start guide in API Platform Cloud](../../cloud/ai-gateway/llm/quick-start-guide.md). For a self-hosted AI Workspace, see [Connect to AI Workspace](setup-and-deployment/production-deployment/control-plane-connection.md).
+- **Connected to AI Workspace:** The gateway still runs in your infrastructure, and you manage its artifacts from AI Workspace. AI Workspace runs either in API Platform Cloud or on your infrastructure. To connect to AI Workspace in API Platform Cloud, follow the [AI Gateway LLM quick start guide in API Platform Cloud](../../cloud/ai-gateway/llm/quick-start-guide.md). For a self-hosted AI Workspace, see [Connect to AI Workspace](setup-and-deployment/production-deployment/control-plane-connection.md).
 
 ## Where to go next
 

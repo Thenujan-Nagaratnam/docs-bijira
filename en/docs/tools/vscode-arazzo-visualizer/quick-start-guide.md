@@ -15,7 +15,7 @@ content_type: "quickstart"
 
 # Arazzo Visualizer quick start guide
 
-This guide shows API developers how to visualize and run an [Arazzo](https://spec.openapis.org/arazzo/latest.html) workflow in VS Code. You install Arazzo Visualizer, create a two-step workflow against a public sample API, view it as a diagram, and run it with **Try with curl**.
+This guide shows you how to visualize and run an [Arazzo](https://spec.openapis.org/arazzo/latest.html) workflow in VS Code. You install Arazzo Visualizer, create a two-step workflow against a public sample API, view it as a diagram, and run it with **Try with curl**.
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ info:
   description: Lists the books in the reading list, then fetches the first book by its ID.
 sourceDescriptions:
   - name: readingListApi
-    url: https://raw.githubusercontent.com/wso2/bijira-samples/refs/heads/main/reading-list-api/openapi.yaml
+    url: https://raw.githubusercontent.com/wso2/bijira-samples/a912b603983909644121ceae1c3bb110bd5ec0a4/reading-list-api/openapi.yaml
     type: openapi
 workflows:
   - workflowId: getFirstBook
@@ -74,7 +74,7 @@ The workflow calls the `listBooks` operation, passes the first book's ID to the 
 
 ## Step 3: Open the visualizer
 
-With `reading-list.arazzo.yaml` open in the editor, click the **Open Arazzo Visualizer** icon in the editor toolbar. You can also open the Command Palette (<kbd>Ctrl+Shift+P</kbd> on Windows and Linux, <kbd>Cmd+Shift+P</kbd> on macOS) and run **ArazzoDesigner: Open Arazzo Visualizer**.
+With `reading-list.arazzo.yaml` open in the editor, click the **Open Arazzo Visualizer** icon in the editor toolbar. You can also open the **Command Palette** (<kbd>Ctrl+Shift+P</kbd> on Windows and Linux, <kbd>Cmd+Shift+P</kbd> on macOS) and run **ArazzoDesigner: Open Arazzo Visualizer**.
 
 The visualizer opens beside the file and shows the `getFirstBook` workflow with its two steps. Select a step to see its request, outputs, and success criteria. When you edit the file, the diagram updates.
 

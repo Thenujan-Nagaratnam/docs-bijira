@@ -96,6 +96,8 @@ An AI Gateway is the runtime that enforces authentication, rate limits, and guar
     - **Description**: optional.
     - **URL**: enter `https://localhost:8443`. This is the address the gateway is reachable at once it's running. AI Workspace uses this to build the Invoke URL and MCP Proxy URL you'll call from your own terminal later in this guide. Use an address your terminal can actually reach, not `host.docker.internal`. That hostname only resolves from inside a container, not from your host machine.
 
+    The completed form looks like this:
+
     ![Add AI Gateway form with AI-Gateway v1.2, the Development environment, a name, and the localhost URL](../../assets/img/ai-gateway/ai-workspace/quickstart/add-ai-gateway-form.png)
 
 4. Click **Add AI Gateway**.

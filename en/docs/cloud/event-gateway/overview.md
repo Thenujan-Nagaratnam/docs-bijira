@@ -21,7 +21,7 @@ The Event Gateway is a self-hosted runtime that performs **Protocol Mediation** 
 
 ## Quick Start
 
-- [Getting Started](getting-started.md) - Create an event gateway in the API Platform Console, download and start the gateway, and deploy a WEBSUB API proxy
+- [Quick start guide](getting-started.md) - Create an event gateway in the API Platform Console, download and start the gateway, and deploy a WEBSUB API proxy
 
 ## What is Protocol Mediation?
 
@@ -58,7 +58,7 @@ A WebSub API exposes two resources:
 
 | Section | Description                                                                   |
 |---------|-------------------------------------------------------------------------------|
-| [Getting Started](getting-started.md) | Quick setup: create the event gateway, deploy a WEBSUB API proxy, and test it |
+| [Quick start guide](getting-started.md) | Quick setup: create the event gateway, deploy a WEBSUB API proxy, and test it |
 | [Setting Up](setting-up.md) | Production deployment on VM, Docker, or Kubernetes                            |
 | [Publish APIs](publish-apis/overview.md) | Publish APIs to the Developer Portal with subscription support                |
 | [Troubleshooting](troubleshooting.md) | Common issues and solutions                                                   |
