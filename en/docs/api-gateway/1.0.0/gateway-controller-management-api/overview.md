@@ -17,8 +17,8 @@ The Gateway Controller Management API is a RESTful API for managing configuratio
 
 The API exposes the following endpoints:
 
-* `http://localhost:9090/api/management/v0.9`
-* `http://gateway-controller:9090/api/management/v0.9`
+* `http://localhost:9090`
+* `http://gateway-controller:9090`
 
 ## Table of Contents
 
