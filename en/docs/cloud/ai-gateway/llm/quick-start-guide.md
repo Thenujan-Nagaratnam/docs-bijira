@@ -40,17 +40,18 @@ Open [AI Workspace](https://ai-workspace.bijira.dev/) and sign in. Then create a
 ### Step 2: Add a gateway
 
 1. Click **AI Gateways** in the left navigation menu.
-2. Click **Add AI Gateway**.
+2. Click **Add Gateway**.
 3. Fill in the gateway details:
 
     | Field | Value |
     |---|---|
+    | **Gateway Version** | Keep the latest version, for example `AI-Gateway v1.2` |
+    | **Environment** | Select an environment, for example `Development` |
     | **Name** | A unique name for the gateway |
     | **Description** | An optional description of the gateway |
     | **URL** | The gateway URL. The gateway runtime is accessible at this endpoint, for example `https://localhost:8443` |
-    | **Associated Environment** | Select an environment, for example `Development` |
 
-4. Click **Add Gateway**.
+4. Click **Add AI Gateway**.
 
 The gateway detail screen opens. 
 
