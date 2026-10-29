@@ -72,7 +72,9 @@ Select the __Quick Start__ tab in the detail page of the newly added gateway's *
     cd wso2apip-ai-gateway-1.2.0 && ./scripts/setup.sh
     ```
 
-3. Add your registration token to the environment file:
+3. Add the control plane settings to the environment file. The setup script in the previous step creates `api-platform.env` with the other settings the gateway needs, so this command appends to it with `cat >>`. Don't create the file with only these three settings, or the gateway can't connect to AI Workspace.
+
+    Copy this command from the **Quick Start** tab on the gateway's detail page. The copied command already contains your Moesif key (`MOESIF_KEY`) and gateway registration token (`APIP_GW_CONTROLLER_CONTROLPLANE_TOKEN`), so you don't need to replace the placeholders shown here:
 
     ```bash
     cat >> api-platform.env << 'ENVFILE'

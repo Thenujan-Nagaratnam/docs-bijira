@@ -111,7 +111,7 @@ Now that your API is deployed in both development and production environments an
 
 ## Step 5: Publish the API Proxy
 
-1. In the left navigation menu, click **Develop** and then click **Lifecycle**. This opens the **Lifecycle** page, where you can see the different lifecycle stages of the API. The current lifecycle stage is **Created**.
+1. In the left navigation menu, click **Manage** and then click **Lifecycle**. This opens the **Lifecycle** page, where you can see the different lifecycle stages of the API. The current lifecycle stage is **Created**.
 2. Click **Publish**.
 3. In the **Publish API** dialog, under **Endpoints**, select the API's URL from the **Production Endpoint URL** list.
 4. Optional: Change the display name.
