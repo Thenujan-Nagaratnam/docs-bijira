@@ -1,0 +1,377 @@
+# Direct rebrand mapping for the API Platform docs (wso2/docs-bijira, main).
+#
+# scripts/rebrand/direct.py apply --write rewrites the docs in one step: each
+# rule finds a pattern and replaces it with its value. Values use {variables}
+# from the vars section, and a variable can use other variables.
+#
+# Every variable defaults to today's value, so a run with the defaults must
+# change nothing. direct.py verify checks the rules against today.yml. To rebrand, change the vars.
+# Variables for code values (identifiers, domains) should change only when the
+# product itself ships the new name.
+
+# Files the rules apply to.
+scope:
+  paths:
+    - en/docs
+    - en/mkdocs.yml
+    - en/theme/material/partials
+    - en/theme/material/templates
+    - en/markdown-link-check-config.json
+    - README.md
+    - pull_request_template.md
+    - setup-dev.sh
+    - .github
+    - .coderabbit.yaml
+    - .claude/rules
+  extensions: [".md", ".yml", ".yaml", ".html", ".txt", ".json", ".sh", ".js", ".svg"]
+
+vars:
+
+  # --- brand ---
+  # Brand name in prose, for example "xxxxx". Root for most product names.
+  brand: "WSO2"
+  # What follows the brand in the legal entity name, including any trailing period, for example "Labs Inc.".
+  legal_suffix: "LLC."
+  # Full legal entity in copyright lines. Override it if the legal name doesn't start with the brand.
+  legal_name: "{brand} {legal_suffix}"
+  # Lowercase brand slug for URLs and sample names, for example "xxxxx".
+  brand_slug: "wso2"
+
+  # --- products ---
+  # Replaces "WSO2 API Platform".
+  api_platform: "{brand} API Platform"
+  # Page frontmatter author, replaces "WSO2 API Platform Documentation Team".
+  docs_team: "{api_platform} Documentation Team"
+  # Replaces "WSO2 API Gateway" and "WSO2 Gateway".
+  api_gateway: "{brand} API Gateway"
+  # Replaces "WSO2 API Platform Gateway". Set it to {api_gateway} to merge the two names.
+  platform_gateway: "{brand} API Platform Gateway"
+  # Replaces "WSO2 AI Gateway".
+  ai_gateway: "{brand} AI Gateway"
+  # Replaces "WSO2 API Platform AI Gateway". Set it to {ai_gateway} to merge the two names.
+  platform_ai_gateway: "{brand} API Platform AI Gateway"
+  # Replaces "WSO2 AI Workspace".
+  ai_workspace: "{brand} AI Workspace"
+  # Replaces "WSO2 Kubernetes Gateway".
+  kubernetes_gateway: "{brand} Kubernetes Gateway"
+  # Replaces "WSO2 API Portal".
+  api_portal: "{brand} API Portal"
+  # Replaces "WSO2 Developer Portal".
+  dev_portal: "{brand} Developer Portal"
+  # Replaces "WSO2 API Platform Developer Portal". Set it to {dev_portal} to merge the two names.
+  platform_dev_portal: "{brand} API Platform Developer Portal"
+  # Replaces "WSO2 Policy Hub".
+  policy_hub: "{brand} Policy Hub"
+  # Replaces "WSO2 API Platform Policy Hub". Set it to {policy_hub} to merge the two names.
+  platform_policy_hub: "{brand} API Platform Policy Hub"
+  # Replaces "WSO2 API Platform Cloud".
+  cloud_name: "{brand} API Platform Cloud"
+  # Replaces the "Bijira" product name in prose. Set it to {cloud_name} to retire the codename.
+  cloud_codename: "Bijira"
+  # Replaces "WSO2 API Manager".
+  api_manager: "{brand} API Manager"
+  # Replaces "WSO2 APIM".
+  apim_short: "{brand} APIM"
+  # Replaces "WSO2 Micro Gateway" (legacy product).
+  micro_gateway: "{brand} Micro Gateway"
+  # Replaces "WSO2 APK" (legacy product).
+  apk: "{brand} APK"
+  # Replaces "WSO2 Identity Server".
+  identity_server: "{brand} Identity Server"
+  # Replaces "WSO2 IS".
+  is_short: "{brand} IS"
+  # "WSO2" inside code samples, such as sample display names like "WSO2 OpenAI Provider".
+  sample_brand: "{brand}"
+  # Lowercase "wso2" inside sample values, such as wso2-openai-provider and /var/log/wso2.
+  sample_slug: "{brand_slug}"
+
+  # --- domains ---
+  # Company website domain. Also replaces wso2.org.
+  web_domain: "wso2.com"
+  # Domain in email addresses such as documentation@wso2.com.
+  email_domain: "{web_domain}"
+  # Host of the docs site, as in https://wso2.com/api-platform/docs.
+  docs_host: "{web_domain}"
+  # Base path of the docs site on {docs_host}.
+  docs_path: "api-platform/docs"
+  # Host of Policy Hub, as in https://wso2.com/api-platform/policy-hub.
+  policy_hub_host: "{web_domain}"
+  # Base path of Policy Hub on {policy_hub_host}.
+  policy_hub_path: "api-platform/policy-hub"
+  # Cloud console and portal domain (console.bijira.dev, devportal.bijira.dev).
+  cloud_domain: "bijira.dev"
+  # Cloud gateway domain that customer traffic uses (*.bijiraapis.dev).
+  cloud_apis_domain: "bijiraapis.dev"
+
+  # --- community ---
+  # Discord invite code in discord.com/invite/wso2.
+  discord_invite: "wso2"
+  # X (Twitter) handle.
+  x_handle: "wso2"
+  # YouTube user in youtube.com/user/WSO2TechFlicks.
+  youtube_channel: "WSO2TechFlicks"
+  # LinkedIn company in linkedin.com/company/wso2.
+  linkedin_company: "wso2"
+
+  # --- identifiers ---
+  # GitHub org in github.com, raw.githubusercontent.com, ghcr.io, and pkg.go.dev paths.
+  github_org: "wso2"
+  # Name of this docs repository.
+  docs_repo: "docs-bijira"
+  # Domain suffix of Kubernetes API groups and annotations, as in gateway.api-platform.wso2.com.
+  crd_domain: "wso2.com"
+  # Private container registry host.
+  registry_host: "registry.wso2.com"
+  # Project path on the private registry, as in registry.wso2.com/wso2-api-platform.
+  registry_project: "wso2-api-platform"
+  # Domain of JWT claim URIs and the API Manager issuer, as in http://wso2.org/claims/apiname and wso2.org/products/am.
+  claim_domain: "wso2.org"
+  # Environment variable prefix, as in WSO2AP_GW_TOKEN and WSO2_TOKEN.
+  env_prefix: "WSO2"
+  # Uppercase cloud name in environment variables, as in BIJIRA_TOKEN.
+  cloud_env: "BIJIRA"
+  # Lowercase cloud name in identifiers, as in bijira-gateway and /etc/bijira.
+  cloud_slug: "bijira"
+  # HTTP header prefix, as in x-wso2-apip-gateway-version.
+  header_prefix: "wso2"
+  # Release file prefix, as in wso2apip-ai-gateway-1.2.0.zip.
+  artifact_prefix: "wso2apip"
+  # Top-level Helm values key, as in wso2.subscription.imagePullSecret.
+  helm_key: "wso2"
+  # Analytics attribute namespace, as in wso2.api.id and wso2.analytics.
+  telemetry_prefix: "wso2"
+  # VS Code Marketplace publisher ID, as in WSO2.api-designer.
+  vscode_publisher: "WSO2"
+  # API Manager product slug in sample hostnames, as in apim-wso2am.example.com.
+  apim_slug: "wso2am"
+  # Default Kubernetes GatewayClass name the gateway operator watches.
+  gateway_class: "wso2-api-platform"
+  # Name of the DNS TXT record that verifies a custom domain in the cloud console.
+  domain_verification: "wso2-domain-verification"
+  # Prefix of built-in LLM provider template group IDs, as in groupId wso2-openai.
+  template_group_prefix: "wso2"
+  # managedBy value of built-in templates.
+  template_owner: "wso2"
+  # Heading anchors such as
+  brand_anchor: "{brand_slug}"
+
+# Text that must never change. Applied before any rule.
+masks:
+  - id: license-header
+    find: '(?m)^.*(?:Copyright \(c\)|licenses this file to you|All Rights Reserved).*$'
+  - id: other-docs-sites
+    find: '\b(?:apim|mg|apk)\.docs\.wso2\.com[^\s)\]\"''<>`]*'
+  - id: asgardeo-choreo-docs
+    find: '\bwso2\.com/(?:asgardeo|choreo)/[^\s)\]\"''<>`]*'
+  - id: stackoverflow-tag
+    find: 'stackoverflow\.com/questions/tagged/wso2'
+  - id: external-blog-slug
+    find: '[A-Za-z0-9-]*guardrails-wso2-ai-gateway'
+  - id: ruleset-file
+    find: '\bwso2_rest_api_design_guidelines\b'
+  - id: internal-resources
+    find: 'wso2-secure-engineering-guidelines|WSO2-Training'
+  - id: data-uri
+    find: 'data:[\w/+.-]+;base64,[A-Za-z0-9+/=]+'
+  - id: mixed-case-host
+    find: 'console\.Bijira\.dev'
+  - id: bijira-doc-paths
+    find: 'what-is-bijira|bijira-concepts|integrate-bijira-with-moesif|secure-api-access-with-bijira-sts|between-(?:the-)?bijira-gateway-and|bijiratheme|/bijira/docs|try-bijira'
+
+# Applied in order. context: any, prose, or code (code = Markdown code blocks and
+# inline code). when: optional regex a line must match. \1 refers to a find group.
+# label: optional words added to the commit subject in direct.py commits.
+# The heading-anchor rule is last so its commit follows the heading renames.
+rules:
+  - id: legal-link
+    label: in the copyright link
+    find: '>WSO2</a> LLC\.'
+    replace: '>{brand}</a> {legal_suffix}'
+  - id: legal-name
+    find: '\bWSO2 (?:LLC|Inc)\.?'
+    replace: '{legal_name}'
+  - id: github-org
+    find: '(?<![\w.-])((?:https?://)?(?:www\.)?(?:github\.com|raw\.githubusercontent\.com|ghcr\.io|pkg\.go\.dev/github\.com)/)wso2(?=[/\s)\]\"''#?:`<]|$)'
+    replace: '\1{github_org}'
+  - id: crd-domain
+    find: '\.api-platform\.wso2\.com\b'
+    replace: '.api-platform.{crd_domain}'
+  - id: registry-host
+    find: '\bregistry\.wso2\.com\b'
+    replace: '{registry_host}'
+  - id: registry-project
+    find: '(?<=xregistryhostx/)wso2-api-platform\b'
+    replace: '{registry_project}'
+  - id: claim-domain
+    find: '\bwso2\.org(?=/claims|/products/)'
+    replace: '{claim_domain}'
+  - id: email-domain
+    find: '(?<=@)wso2\.com\b'
+    replace: '{email_domain}'
+  - id: docs-url
+    find: '(?<![\w.-])(?:www\.)?wso2\.com/api-platform/docs\b'
+    replace: '{docs_host}/{docs_path}'
+  - id: docs-url-legacy
+    find: '(?<![\w.-])(?:www\.)?wso2\.com(?=/bijira/docs)'
+    replace: '{docs_host}'
+  - id: policy-hub-url
+    find: '(?<![\w.-])(?:www\.)?wso2\.com/api-platform/policy-hub\b'
+    replace: '{policy_hub_host}/{policy_hub_path}'
+  - id: discord
+    find: 'discord\.com/invite/wso2\b'
+    replace: 'discord.com/invite/{discord_invite}'
+  - id: x-handle
+    find: '(?:(?<=twitter\.com/)|(?<=x\.com/)|(?<=screen_name=))wso2\b'
+    replace: '{x_handle}'
+  - id: youtube
+    find: '(?<=youtube\.com/user/)WSO2TechFlicks\b'
+    replace: '{youtube_channel}'
+  - id: linkedin
+    find: '(?<=linkedin\.com/company/)wso2\b'
+    replace: '{linkedin_company}'
+  - id: web-domain
+    find: '\bwso2\.(?:com|org)\b'
+    replace: '{web_domain}'
+  - id: cloud-apis-domain
+    find: '(?i)\bbijiraapis\.dev\b'
+    replace: '{cloud_apis_domain}'
+  - id: cloud-domain
+    find: '(?i)\bbijira\.dev\b'
+    replace: '{cloud_domain}'
+  - id: docs-repo
+    find: '\bdocs-bijira\b'
+    replace: '{docs_repo}'
+  - id: repo-name-org
+    find: '(?<=repo_name: )wso2(?=/)'
+    replace: '{github_org}'
+  - id: vscode-publisher
+    find: '(?<=itemName=)WSO2(?=\.)'
+    replace: '{vscode_publisher}'
+  - id: env-prefix
+    find: '\bWSO2(?=AP_|_[A-Z0-9])'
+    replace: '{env_prefix}'
+  - id: cloud-env
+    find: 'BIJIRA'
+    replace: '{cloud_env}'
+  - id: header-prefix
+    find: '(?i)(?<=\bx-)wso2(?=-)'
+    replace: '{header_prefix}'
+  - id: artifact-prefix
+    find: '\bwso2apip(?=-)'
+    replace: '{artifact_prefix}'
+  - id: helm-key-path
+    find: '\bwso2(?=\.subscription\.imagePullSecret)'
+    replace: '{helm_key}'
+  - id: helm-key-yaml
+    find: '(?m)^(\s*)wso2:(?=\s*(?:#.*)?$)'
+    replace: '\1{helm_key}:'
+  - id: telemetry-prefix
+    find: '\bwso2(?=\.(?:\*|(?:api|application|subscription|analytics|gen_ai|mcp|upstream|latency|correlation|response|request|error|project)\b))'
+    replace: '{telemetry_prefix}'
+  - id: apim-slug
+    find: '\bwso2am\b'
+    replace: '{apim_slug}'
+  - id: gateway-class
+    find: '\bwso2-api-platform\b'
+    replace: '{gateway_class}'
+  - id: domain-verification
+    find: '\bwso2-domain-verification\b'
+    replace: '{domain_verification}'
+  - id: template-group
+    find: '(?:(?<![A-Za-z0-9])|(?<=%3A))wso2(?=-[a-z])'
+    replace: '{template_group_prefix}'
+    when: 'groupId'
+  - id: template-owner
+    find: '(?<=managedBy: )wso2\b|(?<=\"managedBy\": \")wso2\b|(?<=[''`])wso2(?=[''`])'
+    replace: '{template_owner}'
+    when: '(?i)managedBy|built-in|managed by'
+  - id: docs-team
+    find: '\bWSO2 API Platform Documentation Team\b'
+    replace: '{docs_team}'
+  - id: cloud-name
+    find: '\bWSO2 API Platform Cloud\b'
+    replace: '{cloud_name}'
+  - id: platform-ai-gateway
+    find: '\bWSO2 API Platform AI Gateway\b'
+    replace: '{platform_ai_gateway}'
+  - id: ai-gateway
+    find: '\bWSO2 AI Gateway\b'
+    replace: '{ai_gateway}'
+  - id: platform-gateway
+    find: '\bWSO2 API Platform Gateway\b'
+    replace: '{platform_gateway}'
+  - id: api-gateway
+    find: '\bWSO2 (?:API )?Gateway\b'
+    replace: '{api_gateway}'
+  - id: platform-dev-portal
+    find: '\bWSO2 API Platform Developer Portal\b'
+    replace: '{platform_dev_portal}'
+  - id: dev-portal
+    find: '\bWSO2 Developer Portal\b'
+    replace: '{dev_portal}'
+  - id: platform-policy-hub
+    find: '\bWSO2 API Platform Policy Hub\b'
+    replace: '{platform_policy_hub}'
+  - id: policy-hub
+    find: '\bWSO2 Policy Hub\b'
+    replace: '{policy_hub}'
+  - id: api-portal
+    find: '\bWSO2 API Portal\b'
+    replace: '{api_portal}'
+  - id: ai-workspace
+    find: '\bWSO2 AI Workspace\b'
+    replace: '{ai_workspace}'
+  - id: k8s-gateway
+    find: '\bWSO2 Kubernetes Gateway\b'
+    replace: '{kubernetes_gateway}'
+  - id: api-manager
+    find: '\bWSO2 API Manager\b'
+    replace: '{api_manager}'
+  - id: apim-short
+    find: '\bWSO2 APIM\b'
+    replace: '{apim_short}'
+  - id: micro-gateway
+    find: '\bWSO2 Micro Gateway\b'
+    replace: '{micro_gateway}'
+  - id: apk
+    find: '\bWSO2 APK\b'
+    replace: '{apk}'
+  - id: identity-server
+    find: '\bWSO2 Identity Server\b'
+    replace: '{identity_server}'
+  - id: is-short
+    find: '\bWSO2 IS\b'
+    replace: '{is_short}'
+  - id: api-platform
+    find: '\bWSO2 API Platform\b'
+    replace: '{api_platform}'
+  - id: cloud-codename
+    find: '\bBijira\b'
+    replace: '{cloud_codename}'
+  - id: cloud-slug
+    find: '(?i)bijira'
+    replace: '{cloud_slug}'
+  - id: brand-code
+    label: in code samples
+    find: '(?:(?<![A-Za-z0-9])|(?<=%3A))WSO2'
+    replace: '{sample_brand}'
+    context: code
+  - id: brand-prose
+    label: in text
+    find: '(?:(?<![A-Za-z0-9])|(?<=%3A))WSO2'
+    replace: '{brand}'
+    context: prose
+  - id: slug-code
+    label: in code samples
+    find: '(?:(?<![A-Za-z0-9])|(?<=%3A))wso2'
+    replace: '{sample_slug}'
+    context: code
+  - id: slug-prose
+    label: in text
+    find: '(?:(?<![A-Za-z0-9])|(?<=%3A))wso2'
+    replace: '{brand_slug}'
+    context: prose
+  - id: heading-anchor
+    label: in heading links
+    find: '(?<=#)wso2-'
+    replace: '{brand_anchor}-'

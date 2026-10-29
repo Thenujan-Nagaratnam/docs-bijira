@@ -1,0 +1,17 @@
+# Which versions can be rebranded.
+#
+# The skill finds your local clones in this order:
+#   1. Environment variables: DOCS_REBRAND_API_PLATFORM_REPO (wso2/docs-bijira)
+#      and DOCS_REBRAND_API_MANAGER_REPO (wso2/docs-apim).
+#   2. A repo path below, if you set one.
+#   3. The clone you run it from.
+# Version worktrees go next to the clone, in rebrand-worktrees/, unless
+# DOCS_REBRAND_WORKTREE_DIR is set. The WSO2 remote is found automatically.
+
+sites:
+  api-platform:
+    repo:
+    versions: [main]
+  api-manager:
+    repo:
+    versions: [master, "4.7.0", "4.6.0", "4.5.0", "4.4.0", "4.3.0", "4.2.0", "4.1.0", "4.0.0", "3.2.0", "3.1.0", "3.0.0"]

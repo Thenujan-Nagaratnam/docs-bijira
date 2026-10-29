@@ -1,0 +1,20 @@
+# Final names for the rebrand. Fill these in once they're decided.
+# Each key overrides the variable of the same name in mappings/*.yml; a key a
+# mapping doesn't have is ignored, and an empty value keeps the mapping's value.
+# Product names default to "<brand> <descriptor>", so most need no entry here.
+
+# Required
+brand:          # for example: xxxxx
+legal_suffix:   # what follows the brand in the legal name, for example: Labs Inc
+brand_slug:     # lowercase brand for sample names and heading links, for example: xxxxx
+
+# Optional: override a product name only if it isn't "<brand> <descriptor>".
+# api_platform: "{brand} API Platform"
+# api_manager: "{brand} API Manager"
+# identity_server: "{brand} Identity Server"
+# micro_integrator: "{brand} Micro Integrator"
+# cloud_codename: Bijira        # API Platform Cloud; set to "{brand} API Platform Cloud" to retire Bijira
+
+# Code values (domains, GitHub org, packages, image names, ...) stay at today's
+# value. Change one only when the product ships the new name, for example:
+# web_domain: xxxxx.com

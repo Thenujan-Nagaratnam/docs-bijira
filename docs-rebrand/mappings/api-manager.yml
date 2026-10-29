@@ -1,0 +1,352 @@
+# Direct rebrand mapping for the API Manager docs (wso2/docs-apim).
+#
+# scripts/rebrand/direct.py apply --write rewrites the docs in one step: each
+# rule finds a pattern and replaces it with its value. Values use {variables}
+# from the vars section, and a variable can use other variables.
+#
+# Every variable defaults to today's value, so a run with the defaults must
+# change nothing. direct.py verify checks the rules against today.yml.
+# Variables for code values (packages, keystores, databases, headers, file and
+# image names, example hostnames) change only when the product itself ships
+# the new name.
+
+# Files the rules apply to. Downloadable samples under en/docs/assets are code
+# and stay as they are.
+scope:
+  paths:
+    - en/docs
+    - en/mkdocs.yml
+    - en/theme/material
+    - README.md
+  extensions: [".md", ".html", ".yml"]
+  exclude:
+    - en/docs/assets
+
+vars:
+
+  # --- brand ---
+  # Brand name in prose, for example "xxxxx". Root for most product names.
+  brand: "WSO2"
+  # What follows the brand in the legal entity name, for example "Labs Inc.".
+  legal_suffix: "LLC"
+  # Full legal entity name. Override it if the legal name doesn't start with the brand.
+  legal_name: "{brand} {legal_suffix}"
+  # The former legal entity name that still appears in older text.
+  legal_name_old: "{brand} Inc"
+  # Lowercase brand for sample names and heading links, for example "xxxxx".
+  brand_slug: "wso2"
+  # Heading links such as #configuring-wso2-api-manager. Must match how MkDocs
+  # turns the renamed heading into a link.
+  brand_anchor: "{brand_slug}"
+  # "WSO2" inside code samples, such as sample display names.
+  sample_brand: "{brand}"
+
+  # --- products ---
+  api_manager: "{brand} API Manager"
+  api_m: "{brand} API-M"
+  apim_short: "{brand} APIM"
+  identity_server: "{brand} Identity Server"
+  is_short: "{brand} IS"
+  micro_integrator: "{brand} Micro Integrator"
+  mi_short: "{brand} MI"
+  api_controller: "{brand} API Controller"
+  apictl_upper: "{brand} APICTL"
+  integration_studio: "{brand} Integration Studio"
+  streaming_integrator: "{brand} Streaming Integrator"
+  enterprise_integrator: "{brand} Enterprise Integrator"
+  ei_short: "{brand} EI"
+  esb: "{brand} ESB"
+  carbon: "{brand} Carbon"
+  ai_gateway: "{brand} AI Gateway"
+  api_platform: "{brand} API Platform"
+  kubernetes_gateway: "{brand} Kubernetes Gateway"
+
+  # The API Platform cloud product name, and its lowercase form in repository names.
+  cloud_codename: "Bijira"
+  cloud_slug: "bijira"
+
+  # --- websites ---
+  # Company website, as in https://wso2.com and www.wso2.com.
+  web_domain: "wso2.com"
+  # Older company website, as in https://wso2.org.
+  web_org_domain: "wso2.org"
+  # This site, apim.docs.wso2.com.
+  apim_docs_host: "apim.docs.{web_domain}"
+  # Helm chart repository host.
+  helm_host: "helm.{web_domain}"
+  # Private container registry host.
+  registry_host: "registry.{web_domain}"
+  # Maven repository host.
+  maven_host: "maven.{web_org_domain}"
+  # Discord invite code in discord.com/invite/wso2.
+  discord_invite: "wso2"
+
+  # --- code values: change only when the product ships the new name ---
+  # Example hostnames in deployment samples, as in gw.wso2.com and websocket.wso2.com.
+  example_domain: "wso2.com"
+  # Domain of JWT claim URIs, as in http://wso2.org/claims/role.
+  claim_domain: "wso2.org"
+  # GitHub organizations, as in github.com/wso2 and github.com/wso2-extensions.
+  github_org: "wso2"
+  github_ext_org: "wso2-extensions"
+  # Docker Hub organization, as in wso2/wso2am.
+  docker_org: "wso2"
+  # Java package and Maven group prefix, as in org.wso2.carbon.
+  java_namespace: "org.wso2"
+  # Logger names that spell the package with hyphens, as in org-wso2-carbon.
+  java_namespace_dashed: "org-wso2"
+  # Default keystore, password, and container user, as in wso2carbon.jks.
+  carbon_default: "wso2carbon"
+  # Uppercase form of the default keystore alias, as in WSO2CARBON.
+  carbon_default_upper: "WSO2CARBON"
+  # Uppercase identifiers: database names, environment variables, as in WSO2AM_DB and WSO2_SERVER_HOME.
+  ident_upper: "WSO2"
+  # Lowercase identifiers left after the rules above, as in wso2-ca-cert and wso2_apim_logs.
+  ident_lower: "wso2"
+  # Mixed-case identifiers, as in the sample password Wso2@am70.
+  ident_title: "Wso2"
+  # OpenAPI extensions and HTTP headers, as in x-wso2-cors and X-WSO2-Tenant.
+  header_prefix: "wso2"
+  header_prefix_upper: "WSO2"
+  # Product file, folder, and image names, as in wso2am-4.7.0 and wso2/wso2am-tm.
+  apim_slug: "wso2am"
+  is_slug: "wso2is"
+  mi_slug: "wso2mi"
+  # API Platform gateway packages, as in wso2apip-api-gateway-1.2.0.
+  apip_slug: "wso2apip"
+  # API Controller configuration folder, as in ~/.wso2apictl.
+  apictl_dir: ".wso2apictl"
+  # Server start script, as in wso2server.sh.
+  server_script: "wso2server"
+
+# Text that must never change. Applied before any rule.
+masks:
+  # License and copyright headers in existing files.
+  - id: license-header
+    find: '(?m)^.*(?:Copyright \(c\)|licenses this file to you|All Rights Reserved).*$'
+  # Other WSO2 docs sites move on their own schedule.
+  - id: other-docs-sites
+    find: '\b(?:is|mi|ei|apk|mg|updates)\.docs\.wso2\.com[^\s)\]"''<>`]*|(?<![\w.])docs\.wso2\.com[^\s)\]"''<>`]*'
+  # XML namespaces of Carbon components.
+  - id: carbon-xml-namespaces
+    find: '(?:[a-z0-9-]+\.)+carbon\.wso2\.org[^\s"''<>]*'
+  # Relative links to other doc pages whose file names contain "wso2"; renaming them changes URLs.
+  - id: doc-paths
+    find: '(?<=\]\()(?!https?:|mailto:)[^)#\s]*wso2[^)#\s]*'
+  - id: doc-paths-html
+    find: '(?<=href=")(?!https?:|mailto:)[^"#]*wso2[^"#]*'
+  # External names: an Asgardeo organization, and OSGi build versions of third-party libraries.
+  - id: asgardeo-org
+    find: '(?<=/t/)wso2[\w-]*'
+  - id: osgi-version-suffix
+    find: '[._]wso2v\d+'
+  # Page file paths that contain "wso2", in the nav, redirects, and includes.
+  - id: doc-file-paths
+    find: '[\w./-]*wso2[\w./-]*\.md\b'
+  # Embedded base64 data.
+  - id: data-uri
+    find: 'data:[\w/+.-]+;base64,[A-Za-z0-9+/=]+'
+  # Third-party names.
+  - id: stackoverflow-tag
+    find: 'stackoverflow\.com/questions/tagged/wso2[\w-]*'
+
+# Applied in order. context: any, prose, or code (code = Markdown code blocks and
+# inline code). when: optional regex a line must match. \1 refers to a find group.
+# label: optional words added to the commit subject in direct.py commits.
+rules:
+  # --- legal entity ---
+  - id: legal-link
+    label: in the copyright link
+    find: '>WSO2</a> LLC\b'
+    replace: '>{brand}</a> {legal_suffix}'
+  - id: legal-name
+    find: '\bWSO2 LLC\b'
+    replace: '{legal_name}'
+  - id: legal-name-old
+    find: '\bWSO2 Inc\b'
+    replace: '{legal_name_old}'
+
+  # --- code values ---
+  - id: java-namespace
+    find: '(?:(?<![\w.])|(?<=-D))org\.wso2(?=\.)'
+    replace: '{java_namespace}'
+  - id: java-namespace-dashed
+    find: '\borg-wso2(?=-)'
+    replace: '{java_namespace_dashed}'
+  - id: carbon-default
+    find: '\bwso2carbon\b'
+    replace: '{carbon_default}'
+  - id: carbon-default-upper
+    find: '\bWSO2CARBON(?=\b|_)'
+    replace: '{carbon_default_upper}'
+  - id: header-prefix
+    find: '(?<=\bx-)wso2(?=-)'
+    replace: '{header_prefix}'
+  - id: header-prefix-upper
+    find: '(?<=\bX-)WSO2(?=-)'
+    replace: '{header_prefix_upper}'
+  - id: apictl-dir
+    find: '\.wso2apictl\b'
+    replace: '{apictl_dir}'
+  - id: server-script
+    find: '\bwso2server(?=\.(?:sh|bat)\b)'
+    replace: '{server_script}'
+  - id: docker-org
+    find: '(?<![\w./-])wso2(?=/wso2(?:am|is|mi))'
+    replace: '{docker_org}'
+  - id: apip-slug
+    find: '\bwso2apip(?=-)'
+    replace: '{apip_slug}'
+  - id: apim-slug
+    find: '\bwso2am(?=\b|-)'
+    replace: '{apim_slug}'
+  - id: is-slug
+    find: '\bwso2is(?=\b|-|\d)'
+    replace: '{is_slug}'
+  - id: mi-slug
+    find: '\bwso2mi(?=\b|-)'
+    replace: '{mi_slug}'
+  - id: ident-upper
+    find: '(?<![A-Za-z0-9-])WSO2(?=[A-Z0-9_])'
+    replace: '{ident_upper}'
+
+  - id: ident-compound
+    find: '(?<![A-Za-z0-9])wso2(?=[A-Za-z0-9.])'
+    replace: '{ident_lower}'
+    when: 'wso2[A-Za-z0-9]|-Dwso2\.'
+  - id: system-property
+    find: '(?<=-D)wso2(?=\.)'
+    replace: '{ident_lower}'
+  - id: ident-title
+    find: '(?<![A-Za-z0-9])Wso2(?=[@A-Za-z0-9])'
+    replace: '{ident_title}'
+
+  # --- GitHub, Docker, and websites ---
+  - id: github-ext-org
+    find: '(?<=github\.com/)wso2-extensions\b'
+    replace: '{github_ext_org}'
+  - id: github-org
+    find: '(?<![\w.-])((?:https?://)?(?:www\.)?(?:github\.com|raw\.githubusercontent\.com)/)wso2(?=[/\s)\]"''#?:`<]|$)'
+    replace: '\1{github_org}'
+  - id: discord
+    find: 'discord\.com/invite/wso2\b'
+    replace: 'discord.com/invite/{discord_invite}'
+  - id: claim-domain
+    find: '\bwso2\.org(?=/claims)'
+    replace: '{claim_domain}'
+  - id: apim-docs-host
+    find: '\bapim\.docs\.wso2\.com\b'
+    replace: '{apim_docs_host}'
+  - id: helm-host
+    find: '\bhelm\.wso2\.com\b'
+    replace: '{helm_host}'
+  - id: registry-host
+    find: '\bregistry\.wso2\.com\b'
+    replace: '{registry_host}'
+  - id: maven-host
+    find: '\bmaven\.wso2\.org\b'
+    replace: '{maven_host}'
+  - id: web-domain-services
+    find: '(?<![\w.-])((?:www|support|developer|dev-tools|product-dist|ai-subscriptions)\.)wso2\.com\b'
+    replace: '\1{web_domain}'
+  - id: web-domain
+    find: '(?<![\w.-])wso2\.com\b'
+    replace: '{web_domain}'
+  - id: web-org-domain
+    find: '(?:(?<![\w.-])|(?<=%2F))((?:www|svn)\.)?wso2\.org\b'
+    replace: '\1{web_org_domain}'
+  - id: example-domain
+    find: '(?<=\.)wso2\.com\b'
+    replace: '{example_domain}'
+
+  # --- heading links ---
+  - id: heading-anchor
+    find: '(?<=#)([\w-]*?)wso2(?=[\w-]*)'
+    replace: '\1{brand_anchor}'
+    when: '#[\w-]*wso2'
+
+  # --- product names (longest phrase first) ---
+  - id: api-manager
+    find: '\bWSO2 API Manager\b'
+    replace: '{api_manager}'
+  - id: api-m
+    find: '\bWSO2 API-M\b'
+    replace: '{api_m}'
+  - id: apim-short
+    find: '\bWSO2 APIM\b'
+    replace: '{apim_short}'
+  - id: identity-server
+    find: '\bWSO2 Identity Server\b'
+    replace: '{identity_server}'
+  - id: is-short
+    find: '\bWSO2 IS\b'
+    replace: '{is_short}'
+  - id: micro-integrator
+    find: '\bWSO2 Micro Integrator\b'
+    replace: '{micro_integrator}'
+  - id: mi-short
+    find: '\bWSO2 MI\b'
+    replace: '{mi_short}'
+  - id: api-controller
+    find: '\bWSO2 API Controller\b'
+    replace: '{api_controller}'
+  - id: apictl-upper
+    find: '\bWSO2 APICTL\b'
+    replace: '{apictl_upper}'
+  - id: integration-studio
+    find: '\bWSO2 Integration Studio\b'
+    replace: '{integration_studio}'
+  - id: streaming-integrator
+    find: '\bWSO2 Streaming Integrator\b'
+    replace: '{streaming_integrator}'
+  - id: enterprise-integrator
+    find: '\bWSO2 Enterprise Integrator\b'
+    replace: '{enterprise_integrator}'
+  - id: ei-short
+    find: '\bWSO2 EI\b'
+    replace: '{ei_short}'
+  - id: esb
+    find: '\bWSO2 ESB\b'
+    replace: '{esb}'
+  - id: carbon
+    find: '\bWSO2 Carbon\b'
+    replace: '{carbon}'
+  - id: ai-gateway
+    find: '\bWSO2 AI Gateway\b'
+    replace: '{ai_gateway}'
+  - id: api-platform
+    find: '\bWSO2 API Platform\b'
+    replace: '{api_platform}'
+  - id: kubernetes-gateway
+    find: '\bWSO2 Kubernetes Gateway\b'
+    replace: '{kubernetes_gateway}'
+
+  # --- the API Platform cloud product ---
+  - id: cloud-codename
+    find: '\bBijira\b'
+    replace: '{cloud_codename}'
+  - id: cloud-slug
+    find: '(?i)bijira'
+    replace: '{cloud_slug}'
+
+  # --- whatever is left of the brand ---
+  - id: brand-code
+    label: in code samples
+    find: '(?<![A-Za-z0-9])WSO2'
+    replace: '{sample_brand}'
+    context: code
+  - id: brand-prose
+    label: in text
+    find: '(?<![A-Za-z0-9])WSO2'
+    replace: '{brand}'
+    context: prose
+  - id: ident-lower
+    label: in code samples
+    find: '(?<![A-Za-z0-9])wso2(?![A-Za-z0-9])'
+    replace: '{ident_lower}'
+    context: code
+  - id: slug-prose
+    label: in text
+    find: '(?<![A-Za-z0-9])wso2(?![A-Za-z0-9])'
+    replace: '{brand_slug}'
+    context: prose
