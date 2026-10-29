@@ -15,9 +15,14 @@ product gets a different name. Mentions are approximate, across API Platform
 
 ## API Platform docs
 
+"API Platform" is renamed to "API Management". Set `platform` (and `platform_anchor`, its heading-link form) once, and every API Platform name follows: "WSO2 API Platform Gateway" becomes "<brand> API Management Gateway", and "API Platform" without the brand (about 1,600 mentions, such as "API Platform Console" and the site name) becomes "API Management". To keep one of the longer names, override its variable in `names.yml`.
+
 | Current | Mentions | Variable |
 | --- | --- | --- |
-| WSO2 API Platform | 240 | `api_platform` |
+| WSO2 API Platform | 240 | `api_platform` (`<brand> {platform}`) |
+| API Platform, without the brand, in text | about 1,600 | `platform` |
+| API Platform, without the brand, in code samples | 7 | `sample_platform` (defaults to `platform`) |
+| `#...api-platform...` in heading links | 4 | `platform_anchor` |
 | WSO2 API Platform Documentation Team (page author) | 1,081 | `docs_team` |
 | WSO2 API Platform Cloud | 14 | `cloud_name` |
 | WSO2 API Platform Gateway | 20 | `platform_gateway` |
@@ -86,7 +91,10 @@ To rename any of these differently, add a rule and a variable to `mappings/api-m
 
 ## Decisions needed
 
-- Bijira: keep, or replace with `<brand> API Platform Cloud`?
+- Bijira: keep, or replace with `<brand> API Management Cloud`?
+- Names built on "API Platform" (Gateway, AI Gateway, Developer Portal, Policy Hub, Cloud, Console, CLI, STS): all follow `platform` by default. Do any keep "API Platform" or take another name?
+- Lowercase `api-platform` in URLs, CRD groups, Helm charts, and the GatewayClass is a code value and stays.
+- In the API Manager docs, "WSO2 API Platform for Kubernetes" (the full name of APK) keeps "API Platform" through `apk_platform`.
 - Asgardeo, Choreo, Choreo Connect, Devant, Moesif, Ballerina: keep the names?
 - Micro Integrator, Integration Studio, Streaming Integrator, Carbon: carry over as `<brand> …`, or new names?
 - Older products in old versions: rename, or leave as historical names?

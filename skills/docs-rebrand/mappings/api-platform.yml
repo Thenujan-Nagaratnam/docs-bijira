@@ -38,18 +38,23 @@ vars:
   brand_slug: "wso2"
 
   # --- products ---
+  # The platform's product name without the brand, for example "API Management". Every
+  # "API Platform" product name is built from it, and bare "API Platform" in text becomes it.
+  platform: "API Platform"
+  # How {platform} appears in heading links: lowercase, spaces as hyphens, for example "api-management".
+  platform_anchor: "api-platform"
   # Replaces "WSO2 API Platform".
-  api_platform: "{brand} API Platform"
+  api_platform: "{brand} {platform}"
   # Page frontmatter author, replaces "WSO2 API Platform Documentation Team".
   docs_team: "{api_platform} Documentation Team"
   # Replaces "WSO2 API Gateway" and "WSO2 Gateway".
   api_gateway: "{brand} API Gateway"
   # Replaces "WSO2 API Platform Gateway". Set it to {api_gateway} to merge the two names.
-  platform_gateway: "{brand} API Platform Gateway"
+  platform_gateway: "{brand} {platform} Gateway"
   # Replaces "WSO2 AI Gateway".
   ai_gateway: "{brand} AI Gateway"
   # Replaces "WSO2 API Platform AI Gateway". Set it to {ai_gateway} to merge the two names.
-  platform_ai_gateway: "{brand} API Platform AI Gateway"
+  platform_ai_gateway: "{brand} {platform} AI Gateway"
   # Replaces "WSO2 AI Workspace".
   ai_workspace: "{brand} AI Workspace"
   # Replaces "WSO2 Kubernetes Gateway".
@@ -59,13 +64,13 @@ vars:
   # Replaces "WSO2 Developer Portal".
   dev_portal: "{brand} Developer Portal"
   # Replaces "WSO2 API Platform Developer Portal". Set it to {dev_portal} to merge the two names.
-  platform_dev_portal: "{brand} API Platform Developer Portal"
+  platform_dev_portal: "{brand} {platform} Developer Portal"
   # Replaces "WSO2 Policy Hub".
   policy_hub: "{brand} Policy Hub"
   # Replaces "WSO2 API Platform Policy Hub". Set it to {policy_hub} to merge the two names.
-  platform_policy_hub: "{brand} API Platform Policy Hub"
+  platform_policy_hub: "{brand} {platform} Policy Hub"
   # Replaces "WSO2 API Platform Cloud".
-  cloud_name: "{brand} API Platform Cloud"
+  cloud_name: "{brand} {platform} Cloud"
   # Replaces the "Bijira" product name in prose. Set it to {cloud_name} to retire the codename.
   cloud_codename: "Bijira"
   # Replaces "WSO2 API Manager".
@@ -82,6 +87,8 @@ vars:
   is_short: "{brand} IS"
   # "WSO2" inside code samples, such as sample display names like "WSO2 OpenAI Provider".
   sample_brand: "{brand}"
+  # "API Platform" inside code samples, such as display names and CLI output. Set it to "API Platform" to keep code samples as they are.
+  sample_platform: "{platform}"
   # Lowercase "wso2" inside sample values, such as wso2-openai-provider and /var/log/wso2.
   sample_slug: "{brand_slug}"
 
@@ -408,6 +415,18 @@ rules:
   - id: api-platform
     find: '\bWSO2 API Platform\b'
     replace: '{api_platform}'
+  # "API Platform" without the brand, in text, as in "API Platform Console" and the site name -> {platform}. Runs after every "WSO2 API Platform ..." rule.
+  - id: platform-name
+    label: without the brand, in text
+    find: '\bAPI Platform\b'
+    replace: '{platform}'
+    context: prose
+  # "API Platform" without the brand, inside code samples -> {sample_platform}.
+  - id: platform-name-code
+    label: without the brand, in code samples
+    find: '\bAPI Platform\b'
+    replace: '{sample_platform}'
+    context: code
   # The product name "Bijira" -> {cloud_codename} (default: Bijira).
   - id: cloud-codename
     find: '\bBijira\b'
@@ -445,3 +464,8 @@ rules:
     label: in heading links
     find: '(?<=#)wso2-'
     replace: '{brand_anchor}-'
+  # "api-platform" in heading links, as in #...-in-api-platform -> {platform_anchor}. Runs after heading-anchor, so "#wso2-api-platform-..." gets both.
+  - id: platform-anchor
+    label: in heading links
+    find: '(?<=#)([a-z0-9\x01-]*?)api-platform(?=[a-z0-9-]*\))'
+    replace: '\1{platform_anchor}'

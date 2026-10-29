@@ -8,12 +8,17 @@ brand:          # for example: xxxxx
 legal_suffix:   # what follows the brand in the legal name, for example: Labs Inc
 brand_slug:     # lowercase brand for sample names and heading links, for example: xxxxx
 
+# API Platform is renamed to API Management.
+platform: API Management          # every "API Platform" product name follows this
+platform_anchor: api-management   # the same name in heading links: lowercase, hyphens for spaces
+
 # Optional: override a product name only if it isn't "<brand> <descriptor>".
-# api_platform: "{brand} API Platform"
+# api_platform: "{brand} {platform}"
+# platform_gateway: "{brand} {platform} Gateway"   # set to "{brand} API Platform Gateway" to keep the old name
 # api_manager: "{brand} API Manager"
 # identity_server: "{brand} Identity Server"
 # micro_integrator: "{brand} Micro Integrator"
-# cloud_codename: Bijira        # API Platform Cloud; set to "{brand} API Platform Cloud" to retire Bijira
+# cloud_codename: Bijira        # API Platform Cloud; set to "{brand} {platform} Cloud" to retire Bijira
 
 # Code values (domains, GitHub org, packages, image names, ...) stay at today's
 # value. Change one only when the product ships the new name, for example:

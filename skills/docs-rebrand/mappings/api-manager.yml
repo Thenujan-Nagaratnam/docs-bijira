@@ -58,7 +58,11 @@ vars:
   esb: "{brand} ESB"
   carbon: "{brand} Carbon"
   ai_gateway: "{brand} AI Gateway"
-  api_platform: "{brand} API Platform"
+  # The API Platform product name without the brand, for example "API Management".
+  platform: "API Platform"
+  api_platform: "{brand} {platform}"
+  # "WSO2 API Platform" in the APK product's full name, "WSO2 API Platform for Kubernetes". It keeps "API Platform" when {platform} changes.
+  apk_platform: "{brand} API Platform"
   kubernetes_gateway: "{brand} Kubernetes Gateway"
 
   # The API Platform cloud product name, and its lowercase form in repository names.
@@ -365,10 +369,21 @@ rules:
   - id: ai-gateway
     find: '\bWSO2 AI Gateway\b'
     replace: '{ai_gateway}'
+  # "WSO2 API Platform" in "WSO2 API Platform for Kubernetes", the full name of APK -> {apk_platform}. Runs before api-platform.
+  - id: apk-full-name
+    label: in "API Platform for Kubernetes"
+    find: '\bWSO2 API Platform(?= [Ff]or Kubernetes\b)'
+    replace: '{apk_platform}'
   # "WSO2 API Platform" -> {api_platform}.
   - id: api-platform
     find: '\bWSO2 API Platform\b'
     replace: '{api_platform}'
+  # "API Platform" without the brand, in text, as in "API Platform Gateway" -> {platform}.
+  - id: platform-name
+    label: without the brand, in text
+    find: '\bAPI Platform\b'
+    replace: '{platform}'
+    context: prose
   # "WSO2 Kubernetes Gateway" -> {kubernetes_gateway}.
   - id: kubernetes-gateway
     find: '\bWSO2 Kubernetes Gateway\b'
