@@ -121,32 +121,34 @@ vars:
 
 # Text that must never change. Applied before any rule.
 masks:
-  # License and copyright headers in existing files.
+  # Keeps license and copyright headers in existing files as they are.
   - id: license-header
     find: '(?m)^.*(?:Copyright \(c\)|licenses this file to you|All Rights Reserved).*$'
-  # Other WSO2 docs sites move on their own schedule.
+  # Keeps links to other WSO2 docs sites (is.docs, mi.docs, ei.docs, apk.docs, mg.docs, updates.docs, docs.wso2.com).
   - id: other-docs-sites
     find: '\b(?:is|mi|ei|apk|mg|updates)\.docs\.wso2\.com[^\s)\]"''<>`]*|(?<![\w.])docs\.wso2\.com[^\s)\]"''<>`]*'
-  # XML namespaces of Carbon components.
+  # Keeps Carbon XML namespaces such as services.mgt.tenant.carbon.wso2.org; they are code.
   - id: carbon-xml-namespaces
     find: '(?:[a-z0-9-]+\.)+carbon\.wso2\.org[^\s"''<>]*'
-  # Relative links to other doc pages whose file names contain "wso2"; renaming them changes URLs.
+  # Keeps relative Markdown links to pages whose file names contain "wso2"; renaming them would change URLs.
   - id: doc-paths
     find: '(?<=\]\()(?!https?:|mailto:)[^)#\s]*wso2[^)#\s]*'
+  # Same as doc-paths, for HTML href links.
   - id: doc-paths-html
     find: '(?<=href=")(?!https?:|mailto:)[^"#]*wso2[^"#]*'
-  # External names: an Asgardeo organization, and OSGi build versions of third-party libraries.
+  # Keeps the Asgardeo organization name in token URLs, such as /t/wso2devtools.
   - id: asgardeo-org
     find: '(?<=/t/)wso2[\w-]*'
+  # Keeps OSGi build versions of third-party libraries, such as axis2_1.6.1.wso2v16.
   - id: osgi-version-suffix
     find: '[._]wso2v\d+'
-  # Page file paths that contain "wso2", in the nav, redirects, and includes.
+  # Keeps .md file paths that contain "wso2" in the nav, redirects, and includes.
   - id: doc-file-paths
     find: '[\w./-]*wso2[\w./-]*\.md\b'
-  # Embedded base64 data.
+  # Keeps embedded base64 images; they are data, not text.
   - id: data-uri
     find: 'data:[\w/+.-]+;base64,[A-Za-z0-9+/=]+'
-  # Third-party names.
+  # Keeps the Stack Overflow "wso2" tag, a third-party name.
   - id: stackoverflow-tag
     find: 'stackoverflow\.com/questions/tagged/wso2[\w-]*'
 
@@ -155,196 +157,253 @@ masks:
 # label: optional words added to the commit subject in direct.py commits.
 rules:
   # --- legal entity ---
+  # Copyright footer ">WSO2</a> LLC": the brand goes inside the link and the legal suffix after it.
   - id: legal-link
     label: in the copyright link
     find: '>WSO2</a> LLC\b'
     replace: '>{brand}</a> {legal_suffix}'
+  # "WSO2 LLC" -> {legal_name}.
   - id: legal-name
     find: '\bWSO2 LLC\b'
     replace: '{legal_name}'
+  # The former entity name "WSO2 Inc" -> {legal_name_old}.
   - id: legal-name-old
     find: '\bWSO2 Inc\b'
     replace: '{legal_name_old}'
 
   # --- code values ---
+  # Java packages and Maven groups "org.wso2.", including "-Dorg.wso2." properties -> {java_namespace}. Code value: stays the same unless the variable is changed.
   - id: java-namespace
     find: '(?:(?<![\w.])|(?<=-D))org\.wso2(?=\.)'
     replace: '{java_namespace}'
+  # Logger names that spell the package with hyphens, "org-wso2-" -> {java_namespace_dashed}. Code value: stays the same unless the variable is changed.
   - id: java-namespace-dashed
     find: '\borg-wso2(?=-)'
     replace: '{java_namespace_dashed}'
+  # Default keystore, password, alias, and container user "wso2carbon" -> {carbon_default}. Code value: stays the same unless the variable is changed.
   - id: carbon-default
     find: '\bwso2carbon\b'
     replace: '{carbon_default}'
+  # Uppercase keystore alias "WSO2CARBON" -> {carbon_default_upper}. Code value: stays the same unless the variable is changed.
   - id: carbon-default-upper
     find: '\bWSO2CARBON(?=\b|_)'
     replace: '{carbon_default_upper}'
+  # OpenAPI extensions and headers "x-wso2-..." -> {header_prefix}. Code value: stays the same unless the variable is changed.
   - id: header-prefix
     find: '(?<=\bx-)wso2(?=-)'
     replace: '{header_prefix}'
+  # Uppercase headers "X-WSO2-..." -> {header_prefix_upper}. Code value: stays the same unless the variable is changed.
   - id: header-prefix-upper
     find: '(?<=\bX-)WSO2(?=-)'
     replace: '{header_prefix_upper}'
+  # API Controller configuration folder ".wso2apictl" -> {apictl_dir}. Code value: stays the same unless the variable is changed.
   - id: apictl-dir
     find: '\.wso2apictl\b'
     replace: '{apictl_dir}'
+  # Server start script "wso2server.sh" or ".bat" -> {server_script}. Code value: stays the same unless the variable is changed.
   - id: server-script
     find: '\bwso2server(?=\.(?:sh|bat)\b)'
     replace: '{server_script}'
+  # Docker Hub org "wso2/" before wso2am, wso2is, and wso2mi images -> {docker_org}. Runs before the product slugs. Code value: stays the same unless the variable is changed.
   - id: docker-org
     find: '(?<![\w./-])wso2(?=/wso2(?:am|is|mi))'
     replace: '{docker_org}'
+  # API Platform gateway packages "wso2apip-..." -> {apip_slug}. Code value: stays the same unless the variable is changed.
   - id: apip-slug
     find: '\bwso2apip(?=-)'
     replace: '{apip_slug}'
+  # API Manager file, folder, and image names "wso2am..." -> {apim_slug}. Code value: stays the same unless the variable is changed.
   - id: apim-slug
     find: '\bwso2am(?=\b|-)'
     replace: '{apim_slug}'
+  # Identity Server file and image names "wso2is..." -> {is_slug}. Code value: stays the same unless the variable is changed.
   - id: is-slug
     find: '\bwso2is(?=\b|-|\d)'
     replace: '{is_slug}'
+  # Micro Integrator file and image names "wso2mi..." -> {mi_slug}. Code value: stays the same unless the variable is changed.
   - id: mi-slug
     find: '\bwso2mi(?=\b|-)'
     replace: '{mi_slug}'
+  # Uppercase identifiers such as WSO2AM_DB and WSO2_SERVER_HOME -> {ident_upper}. Code value: stays the same unless the variable is changed.
   - id: ident-upper
     find: '(?<![A-Za-z0-9-])WSO2(?=[A-Z0-9_])'
     replace: '{ident_upper}'
 
+  # Lowercase "wso2" fused into longer identifiers, such as wso2user, wso2truststore.jks, and wso2apim -> {ident_lower}. Code value: stays the same unless the variable is changed.
   - id: ident-compound
     find: '(?<![A-Za-z0-9])wso2(?=[A-Za-z0-9.])'
     replace: '{ident_lower}'
     when: 'wso2[A-Za-z0-9]|-Dwso2\.'
+  # Java system properties "-Dwso2." -> {ident_lower}. Code value: stays the same unless the variable is changed.
   - id: system-property
     find: '(?<=-D)wso2(?=\.)'
     replace: '{ident_lower}'
+  # Mixed-case identifiers such as the sample password "Wso2@am70" -> {ident_title}. Code value: stays the same unless the variable is changed.
   - id: ident-title
     find: '(?<![A-Za-z0-9])Wso2(?=[@A-Za-z0-9])'
     replace: '{ident_title}'
 
   # --- GitHub, Docker, and websites ---
+  # GitHub org "wso2-extensions" -> {github_ext_org}. Code value: stays the same unless the variable is changed.
   - id: github-ext-org
     find: '(?<=github\.com/)wso2-extensions\b'
     replace: '{github_ext_org}'
+  # The "wso2" org in github.com and raw.githubusercontent.com paths -> {github_org}. Code value: stays the same unless the variable is changed.
   - id: github-org
     find: '(?<![\w.-])((?:https?://)?(?:www\.)?(?:github\.com|raw\.githubusercontent\.com)/)wso2(?=[/\s)\]"''#?:`<]|$)'
     replace: '\1{github_org}'
+  # Discord invite code in discord.com/invite/wso2 -> {discord_invite}. Code value: stays the same unless the variable is changed.
   - id: discord
     find: 'discord\.com/invite/wso2\b'
     replace: 'discord.com/invite/{discord_invite}'
+  # JWT claim URIs "wso2.org/claims" -> {claim_domain}. Code value: stays the same unless the variable is changed.
   - id: claim-domain
     find: '\bwso2\.org(?=/claims)'
     replace: '{claim_domain}'
+  # This site, apim.docs.wso2.com -> {apim_docs_host}. Code value: stays the same unless the variable is changed.
   - id: apim-docs-host
     find: '\bapim\.docs\.wso2\.com\b'
     replace: '{apim_docs_host}'
+  # Helm chart repository helm.wso2.com -> {helm_host}. Code value: stays the same unless the variable is changed.
   - id: helm-host
     find: '\bhelm\.wso2\.com\b'
     replace: '{helm_host}'
+  # Private container registry registry.wso2.com -> {registry_host}. Code value: stays the same unless the variable is changed.
   - id: registry-host
     find: '\bregistry\.wso2\.com\b'
     replace: '{registry_host}'
+  # Maven repository maven.wso2.org -> {maven_host}. Code value: stays the same unless the variable is changed.
   - id: maven-host
     find: '\bmaven\.wso2\.org\b'
     replace: '{maven_host}'
+  # Real WSO2 services (www., support., developer., dev-tools., product-dist., ai-subscriptions.) -> their subdomain + {web_domain}. Code value: stays the same unless the variable is changed.
   - id: web-domain-services
     find: '(?<![\w.-])((?:www|support|developer|dev-tools|product-dist|ai-subscriptions)\.)wso2\.com\b'
     replace: '\1{web_domain}'
+  # The company website wso2.com -> {web_domain}. Code value: stays the same unless the variable is changed.
   - id: web-domain
     find: '(?<![\w.-])wso2\.com\b'
     replace: '{web_domain}'
+  # The older website wso2.org (also www., svn., and URL-encoded) -> {web_org_domain}. Code value: stays the same unless the variable is changed.
   - id: web-org-domain
     find: '(?:(?<![\w.-])|(?<=%2F))((?:www|svn)\.)?wso2\.org\b'
     replace: '\1{web_org_domain}'
+  # Every other "*.wso2.com" host, the example hostnames in deployment samples such as gw.wso2.com -> {example_domain}. Code value: stays the same unless the variable is changed.
   - id: example-domain
     find: '(?<=\.)wso2\.com\b'
     replace: '{example_domain}'
 
   # --- heading links ---
+  # Heading links "#...wso2..." -> {brand_anchor}, with "a"/"an" fixed to match the renamed heading.
   - id: heading-anchor
     find: '(?<=#)([\w-]*?)wso2(?=[\w-]*)'
     replace: '\1{brand_anchor}'
     when: '#[\w-]*wso2'
 
   # --- product names (longest phrase first) ---
+  # "WSO2 API Manager" -> {api_manager}.
   - id: api-manager
     find: '\bWSO2 API Manager\b'
     replace: '{api_manager}'
+  # "WSO2 API-M" -> {api_m}.
   - id: api-m
     find: '\bWSO2 API-M\b'
     replace: '{api_m}'
+  # "WSO2 APIM" -> {apim_short}.
   - id: apim-short
     find: '\bWSO2 APIM\b'
     replace: '{apim_short}'
+  # "WSO2 Identity Server" -> {identity_server}.
   - id: identity-server
     find: '\bWSO2 Identity Server\b'
     replace: '{identity_server}'
+  # "WSO2 IS" -> {is_short}.
   - id: is-short
     find: '\bWSO2 IS\b'
     replace: '{is_short}'
+  # "WSO2 Micro Integrator" -> {micro_integrator}.
   - id: micro-integrator
     find: '\bWSO2 Micro Integrator\b'
     replace: '{micro_integrator}'
+  # "WSO2 MI" -> {mi_short}.
   - id: mi-short
     find: '\bWSO2 MI\b'
     replace: '{mi_short}'
+  # "WSO2 API Controller" -> {api_controller}.
   - id: api-controller
     find: '\bWSO2 API Controller\b'
     replace: '{api_controller}'
+  # "WSO2 APICTL" -> {apictl_upper}.
   - id: apictl-upper
     find: '\bWSO2 APICTL\b'
     replace: '{apictl_upper}'
+  # "WSO2 Integration Studio" -> {integration_studio}.
   - id: integration-studio
     find: '\bWSO2 Integration Studio\b'
     replace: '{integration_studio}'
+  # "WSO2 Streaming Integrator" -> {streaming_integrator}.
   - id: streaming-integrator
     find: '\bWSO2 Streaming Integrator\b'
     replace: '{streaming_integrator}'
+  # "WSO2 Enterprise Integrator" -> {enterprise_integrator}.
   - id: enterprise-integrator
     find: '\bWSO2 Enterprise Integrator\b'
     replace: '{enterprise_integrator}'
+  # "WSO2 EI" -> {ei_short}.
   - id: ei-short
     find: '\bWSO2 EI\b'
     replace: '{ei_short}'
+  # "WSO2 ESB" -> {esb}.
   - id: esb
     find: '\bWSO2 ESB\b'
     replace: '{esb}'
+  # "WSO2 Carbon" -> {carbon}.
   - id: carbon
     find: '\bWSO2 Carbon\b'
     replace: '{carbon}'
+  # "WSO2 AI Gateway" -> {ai_gateway}.
   - id: ai-gateway
     find: '\bWSO2 AI Gateway\b'
     replace: '{ai_gateway}'
+  # "WSO2 API Platform" -> {api_platform}.
   - id: api-platform
     find: '\bWSO2 API Platform\b'
     replace: '{api_platform}'
+  # "WSO2 Kubernetes Gateway" -> {kubernetes_gateway}.
   - id: kubernetes-gateway
     find: '\bWSO2 Kubernetes Gateway\b'
     replace: '{kubernetes_gateway}'
 
   # --- the API Platform cloud product ---
+  # The product name "Bijira" -> {cloud_codename} (default: Bijira).
   - id: cloud-codename
     find: '\bBijira\b'
     replace: '{cloud_codename}'
+  # Lowercase "bijira" in names such as the bijira-samples repository -> {cloud_slug}. Code value: stays the same unless the variable is changed.
   - id: cloud-slug
     find: '(?i)bijira'
     replace: '{cloud_slug}'
 
   # --- whatever is left of the brand ---
+  # Any "WSO2" still left inside code samples, such as sample display names -> {sample_brand}.
   - id: brand-code
     label: in code samples
     find: '(?<![A-Za-z0-9])WSO2'
     replace: '{sample_brand}'
     context: code
+  # Any "WSO2" still left in text, such as "WSO2 Traffic Manager" -> {brand}.
   - id: brand-prose
     label: in text
     find: '(?<![A-Za-z0-9])WSO2'
     replace: '{brand}'
     context: prose
+  # Any lowercase "wso2" still left in code samples -> {ident_lower}. Code value: stays the same unless the variable is changed.
   - id: ident-lower
     label: in code samples
     find: '(?<![A-Za-z0-9])wso2(?![A-Za-z0-9])'
     replace: '{ident_lower}'
     context: code
+  # Any lowercase "wso2" still left in text -> {brand_slug}.
   - id: slug-prose
     label: in text
     find: '(?<![A-Za-z0-9])wso2(?![A-Za-z0-9])'
