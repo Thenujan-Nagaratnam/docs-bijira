@@ -16,7 +16,7 @@ the site before and after to compare warnings.
 
 ## Setup
 
-Install by placing this folder at `~/.claude/skills/docs-rebrand/`. Each person needs local clones of `wso2/docs-bijira` and `wso2/docs-apim`, git, and Python 3 with PyYAML. The skill finds a clone in this order:
+This skill is installed as the `docs-rebrand` plugin; see the README in its repository. Each person needs local clones of `wso2/docs-bijira` and `wso2/docs-apim`, git, and Python 3 with PyYAML. The skill finds a clone in this order:
 
 1. The environment variables `DOCS_REBRAND_API_PLATFORM_REPO` and `DOCS_REBRAND_API_MANAGER_REPO`
 2. A `repo` path in `config.yml`
@@ -41,23 +41,23 @@ Version worktrees go next to the clone, in `rebrand-worktrees/`, unless `DOCS_RE
 2. **Check first.** Run from inside the site's clone, or set the environment variables:
 
    ```sh
-   python3 ~/.claude/skills/docs-rebrand/scripts/rebrand_version.py <site> <version> --check-only
+   python3 ${CLAUDE_SKILL_DIR}/scripts/rebrand_version.py <site> <version> --check-only
    ```
 
    This fetches the branch into the local repo from `config.yml`, creates `<worktree_dir>/<site>-<version>` on branch `rebrand/<site>-<version>`, and runs both checks. The user's own checkout isn't touched. The first run per site also creates a build environment in `~/.cache/docs-rebrand/`.
 
-   If the user is inside a checkout of the version, run `rebrand_version.py --here --check-only` instead; the site and version are detected. To use another existing checkout, add `--repo <path>`. It uses that folder as it is, with no fetch and no worktree, on whatever branch is checked out. It needs a clean working tree, and it warns if the branch doesn't look like the version named.
+   If the user is inside a checkout of the version, run `python3 ${CLAUDE_SKILL_DIR}/scripts/rebrand_version.py --here --check-only` instead; the site and version are detected. To use another existing checkout, add `--repo <path>`. It uses that folder as it is, with no fetch and no worktree, on whatever branch is checked out. It needs a clean working tree, and it warns if the branch doesn't look like the version named.
 3. **If `verify` fails**, a rule changes text it shouldn't. Find the rule from the printed line and narrow it, or add a mask. Don't change `*.today.yml`.
 4. **If `check` fails**, some WSO2 text has no rule. Decide for each printed line, then rerun step 2:
    - **Brand or product name in text:** add or extend a product rule.
    - **Code value** (package, password, file, image, database, header, environment variable, example hostname): add a rule that maps it to a variable whose default is today's value, so it doesn't change unless someone sets that variable.
    - **A name WSO2 doesn't own, or a file path:** add a mask.
    Keep the rules shared across versions, and rerun `--check-only` on the versions already done to confirm they still pass.
-5. **Confirm the names.** `names.yml` must have `brand`, `legal_suffix`, and `brand_slug`. If they're empty, ask the user. For a dry run, pass a test file with `--names`, for example one that sets the brand to `Acme`.
+5. **Confirm the names.** `${CLAUDE_SKILL_DIR}/names.yml` must have `brand`, `legal_suffix`, and `brand_slug`. If they're empty, ask the user. For a dry run, pass a test file with `--names`, for example one that sets the brand to `Acme`.
 6. **Apply and build:**
 
    ```sh
-   python3 ~/.claude/skills/docs-rebrand/scripts/rebrand_version.py <site> <version> --build
+   python3 ${CLAUDE_SKILL_DIR}/scripts/rebrand_version.py <site> <version> --build
    ```
 
    This applies the names as one commit per rule, such as "Rebrand: replace "WSO2 API Manager" with "Acme API Manager"", then builds before and after. It must report 0 new warnings. Use `--no-commit` to leave the changes uncommitted instead.

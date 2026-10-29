@@ -1,0 +1,14 @@
+{
+  "name": "wso2-docs-rebrand",
+  "description": "Claude Code tools for the WSO2 API Platform and API Manager docs.",
+  "owner": {
+    "name": "WSO2 API Platform Documentation Team"
+  },
+  "plugins": [
+    {
+      "name": "docs-rebrand",
+      "source": "./",
+      "description": "Rebrand the WSO2 API Platform and API Manager docs from WSO2 to the new company name, one site and version at a time."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "docs-rebrand",
+  "description": "Rebrand the WSO2 API Platform and API Manager docs from WSO2 to the new company name, one site and version at a time.",
+  "author": { "name": "WSO2 API Platform Documentation Team" },
+  "keywords": ["docs", "rebrand", "wso2", "api-manager", "api-platform"]
+}

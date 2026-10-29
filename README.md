@@ -21,15 +21,21 @@ It never pushes or opens a pull request.
    python3 -m pip install pyyaml
    ```
 
-2. **Install the skill.** Clone this branch and link the skill folder into your Claude Code skills, so a `git pull` keeps it up to date:
+2. **Install the plugin.** In Claude Code, add this marketplace, then install the plugin from it:
 
-   ```sh
-   git clone -b rebrand-skill --single-branch https://github.com/Thenujan-Nagaratnam/docs-bijira.git ~/docs-rebrand-skill
-   mkdir -p ~/.claude/skills
-   ln -s ~/docs-rebrand-skill/docs-rebrand ~/.claude/skills/docs-rebrand
+   ```text
+   /plugin marketplace add Thenujan-Nagaratnam/docs-bijira#rebrand-skill
+   /plugin install docs-rebrand@wso2-docs-rebrand
    ```
 
-   Claude Code lists `docs-rebrand` among its skills in the next session.
+   Or from a terminal:
+
+   ```sh
+   claude plugin marketplace add Thenujan-Nagaratnam/docs-bijira#rebrand-skill
+   claude plugin install docs-rebrand@wso2-docs-rebrand
+   ```
+
+   Run `/reload-plugins` or start a new session, and `docs-rebrand` appears among your skills.
 
 3. **Have local clones of both docs repositories.** Each needs a remote that points at the WSO2 repository (`wso2/docs-bijira` or `wso2/docs-apim`). The remote can have any name, such as `upstream` or `origin`. If yours is a fork, add one:
 
@@ -37,7 +43,7 @@ It never pushes or opens a pull request.
    git -C ~/path/to/docs-apim remote add upstream https://github.com/wso2/docs-apim.git
    ```
 
-   The skill uses the clone you run it from. To run it from anywhere else, set:
+   The skill uses the clone you run Claude Code in. To run it from anywhere else, set:
 
    ```sh
    export DOCS_REBRAND_API_PLATFORM_REPO=~/path/to/docs-bijira
@@ -45,9 +51,17 @@ It never pushes or opens a pull request.
    export DOCS_REBRAND_WORKTREE_DIR=~/path/to/rebrand-worktrees   # optional; default: next to the clone
    ```
 
-4. **Fill in the final names** in `docs-rebrand/names.yml` once they're decided: `brand`, `legal_suffix`, and `brand_slug`. Until then, use a test names file for dry runs (see below).
-
 Each site gets a build environment in `~/.cache/docs-rebrand/` the first time it runs, which takes a few minutes.
+
+### Update
+
+The final names live in `skills/docs-rebrand/names.yml` in this repository, so everyone gets them with the plugin. When the names or rules change, update your copy:
+
+```text
+/plugin marketplace update wso2-docs-rebrand
+```
+
+Then open `/plugin`, go to the **Installed** tab, and select **Update now**. Or turn on auto-update for the marketplace under `/plugin` > **Marketplaces**.
 
 ## Use it
 
@@ -61,21 +75,23 @@ Open Claude Code inside your docs-apim or docs-bijira clone, and ask, for exampl
 
 ### Or run the script
 
-From inside the matching clone:
+From inside the matching clone, with the path to the installed skill (Claude Code keeps it under `~/.claude/plugins/cache/wso2-docs-rebrand/docs-rebrand/`):
 
 ```sh
+SKILL=$(ls -d ~/.claude/plugins/cache/wso2-docs-rebrand/docs-rebrand/*/skills/docs-rebrand | tail -1)
+
 # Check that the rules cover a version (no changes are made)
-python3 ~/.claude/skills/docs-rebrand/scripts/rebrand_version.py api-manager 4.5.0 --check-only
+python3 $SKILL/scripts/rebrand_version.py api-manager 4.5.0 --check-only
 
 # Rebrand a version and compare builds
-python3 ~/.claude/skills/docs-rebrand/scripts/rebrand_version.py api-manager 4.6.0 --build
+python3 $SKILL/scripts/rebrand_version.py api-manager 4.6.0 --build
 
 # Dry run with test names instead of names.yml
 printf 'brand: Acme\nlegal_suffix: Labs Inc\nbrand_slug: acme\n' > /tmp/test-names.yml
-python3 ~/.claude/skills/docs-rebrand/scripts/rebrand_version.py api-platform main --build --names /tmp/test-names.yml
+python3 $SKILL/scripts/rebrand_version.py api-platform main --build --names /tmp/test-names.yml
 
 # Use the current checkout as it is, with the site and version detected
-python3 ~/.claude/skills/docs-rebrand/scripts/rebrand_version.py --here --check-only
+python3 $SKILL/scripts/rebrand_version.py --here --check-only
 ```
 
 | Option | What it does |
@@ -116,11 +132,11 @@ Page file names and URLs are never renamed.
 
 | Path | Contents |
 | --- | --- |
-| `docs-rebrand/SKILL.md` | Instructions Claude follows |
-| `docs-rebrand/scripts/rebrand_version.py` | The command: one site and version, end to end |
-| `docs-rebrand/scripts/rebrand.py` | The rewrite engine (`verify`, `check`, `apply`, `commits`) |
-| `docs-rebrand/mappings/api-platform.yml`, `api-manager.yml` | Each site's rules, protected patterns, file scope, and name variables |
-| `docs-rebrand/mappings/*.today.yml` | Today's names, used to check the rules. Don't edit. |
-| `docs-rebrand/names.yml` | The final names. Fill these in. |
-| `docs-rebrand/config.yml` | Versions, and optional clone paths |
-| `docs-rebrand/references/` | Product name mappings, known problems and fixes, and the launch-day checklist |
+| `.claude-plugin/marketplace.json`, `plugin.json` | The marketplace and the plugin |
+| `skills/docs-rebrand/SKILL.md` | Instructions Claude follows |
+| `skills/docs-rebrand/scripts/rebrand_version.py` | The command: one site and version, end to end |
+| `skills/docs-rebrand/scripts/rebrand.py` | The rewrite engine (`verify`, `check`, `apply`, `commits`) |
+| `skills/docs-rebrand/mappings/` | Each site's rules, protected patterns, file scope, and name variables, plus today's names used to check them |
+| `skills/docs-rebrand/names.yml` | The final names. Fill these in here, in the repository. |
+| `skills/docs-rebrand/config.yml` | Versions, and optional clone paths |
+| `skills/docs-rebrand/references/` | Product name mappings, known problems and fixes, and the launch-day checklist |
