@@ -15,7 +15,7 @@ content_type: "reference"
 
 # API Portal configuration and environment interpolation
 
-The API Portal & MCP Hub reads its configuration from a TOML file (`config.toml`) layered over built-in defaults. The quickstart runs it alongside a Platform API, which reads the same file, so both are covered here — a standalone production deployment needs only the portal's own section.
+The API Portal & MCP Hub reads its configuration from a TOML file (`config.toml`) layered over built-in defaults. The quick start guide runs it alongside a Platform API, which reads the same file, so both are covered here — a standalone production deployment needs only the portal's own section.
 
 This page explains how each service loads its config file. It also covers how environment values and mounted files are injected through interpolation tokens, and how to keep sensitive values out of the file. For the full reference of every supported key, see [Configurations](../references/configurations.md). For provisioning the keys, certificates, and credentials those tokens resolve to, see the [quick start guide](../quickstart-guide.md).
 

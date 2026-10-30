@@ -19,7 +19,7 @@ API Platform provides a complete solution for transforming existing APIs into in
 In this tutorial, you will use API Platform to create an MCP Server from an HTTP backend, test it using the MCP Playground, publish it, and connect it with an MCP client.
 
 !!! info "Watch the video walkthrough"
-    [Check out this quick start on YouTube](https://youtu.be/xwa-7ZUfxRc?rel=0) or watch below.
+    [Check out this quick start guide on YouTube](https://youtu.be/xwa-7ZUfxRc?rel=0) or watch below.
 
 <iframe 
   width="100%" 

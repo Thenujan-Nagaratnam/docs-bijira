@@ -19,7 +19,7 @@ WSO2 API Platform simplifies securely exposing existing services as managed APIs
 In this tutorial, you will use API Platform to expose a service as an API proxy and publish it to the API Platform Developer Portal for application developers to consume.
 
 !!! info "Watch the video walkthrough"
-    [Check out this quick start on YouTube](https://youtu.be/kElzVeJPlRs?rel=0) or watch below.
+    [Check out this quick start guide on YouTube](https://youtu.be/kElzVeJPlRs?rel=0) or watch below.
 
 <iframe 
   width="100%" 

@@ -19,7 +19,7 @@ The Event Gateway is a self-hosted runtime that performs **Protocol Mediation** 
 !!! note "A self-hosted gateway in API Platform Cloud"
     You run the Event Gateway in your own infrastructure, and it connects to the API Platform Cloud control plane. API Platform Cloud also supports a self-hosted [API Gateway](../api-platform-gateway/architecture.md) and [AI Gateway](../ai-gateway/overview.md).
 
-## Quick Start
+## Quick start guide
 
 - [Quick start guide](getting-started.md) - Create an event gateway in the API Platform Console, download and start the gateway, and deploy a WEBSUB API proxy
 

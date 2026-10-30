@@ -105,7 +105,7 @@ Within your [organization](admin-settings/organization-settings.md) you can defi
 
 ## Setting up
 
-Beyond the Docker Compose quick start, a production deployment typically needs:
+Beyond the Docker Compose setup in the quick start guide, a production deployment typically needs:
 
 | Topic | Covers |
 |---|---|

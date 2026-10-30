@@ -31,7 +31,7 @@ Replication is what turns a production deployment into a highly available one. W
 A production deployment runs against an external database — PostgreSQL or SQL Server. Both support replication, so either works whether you run one instance or several.
 
 !!! note "Change the shipped default"
-    The distribution ships pointing at SQLite so the quickstart works with no external dependency. That is an evaluation default; move to PostgreSQL or SQL Server before you deploy. See [Database Configuration](database-configuration.md).
+    The distribution ships pointing at SQLite so the quick start guide works with no external dependency. That is an evaluation default; move to PostgreSQL or SQL Server before you deploy. See [Database Configuration](database-configuration.md).
 
 A single production instance is a legitimate deployment — it just has no redundancy, so every restart, upgrade, and host failure is an outage. Everything in this section except [Resources & Scaling](resources-and-scaling.md) applies to it unchanged.
 

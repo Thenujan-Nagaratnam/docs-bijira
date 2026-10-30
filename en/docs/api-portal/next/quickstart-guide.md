@@ -1,5 +1,5 @@
 ---
-title: "Quick start for API Portal and MCP Hub"
+title: "API Portal and MCP Hub quick start guide"
 description: "Install the API Portal and MCP Hub with Docker, then add an API and an MCP server through the admin UI and through GitOps."
 canonical_url: https://wso2.com/api-platform/docs/api-portal/next/quickstart-guide/
 md_url: https://wso2.com/api-platform/docs/api-portal/next/quickstart-guide.md
@@ -13,7 +13,7 @@ last_updated: 2026-09-11
 content_type: "quickstart"
 ---
 
-# Quick start for API Portal and MCP Hub
+# API Portal and MCP Hub quick start guide
 
 API Portal and MCP Hub allows developers to discover, subscribe to, and consume the APIs and Model Context Protocol (MCP) servers you publish. This guide is for developers who want to publish to it end to end. You'll install the Portal with Docker, then add one API and one MCP server in two ways: 
 
@@ -30,7 +30,7 @@ This guide assumes basic familiarity with Docker, YAML, and the command line. Se
 - Subscription plan
 
 ## Before you start
-Before going through this quickstart, complete the following prerequisites:
+Before going through this quick start guide, complete the following prerequisites:
 
 - Install [Docker](https://docs.docker.com/get-docker/) with the Compose plugin. You can check the installed version with the `docker compose version` command.
 - `openssl`, `curl`, `unzip`, and `jq` are available to use in the command line.

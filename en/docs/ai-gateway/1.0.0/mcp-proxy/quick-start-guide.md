@@ -12,10 +12,10 @@ last_updated: 2026-08-05
 content_type: "quickstart"
 ---
 
-## Quick Start
+## MCP proxy quick start guide
 
 !!! info "Watch the video walkthrough"
-    [Check out this quick start on YouTube](https://youtu.be/xt6RIax__dU?rel=0) or watch below.
+    [Check out this quick start guide on YouTube](https://youtu.be/xt6RIax__dU?rel=0) or watch below.
 
 <iframe 
   width="100%" 

@@ -50,13 +50,13 @@ You want a lightweight gateway that you can download and run immediately. No con
 
 | Guide | What you will do |
 | :--- | :--- |
-| [API Gateway: Quick start](api-gateway/1.2.0/quick-start-guide.md) | Configure your first API proxy using YAML and start routing traffic. |
+| [API Gateway: Quick start guide](api-gateway/1.2.0/quick-start-guide.md) | Configure your first API proxy using YAML and start routing traffic. |
 
 **For AI traffic (LLMs and MCP):**
 
 | Guide | What you will do |
 | :--- | :--- |
-| [AI Gateway: Quick start](ai-gateway/1.2.0/quick-start-guide.md) | Configure an LLM provider and route your first LLM request through the gateway. |
+| [AI Gateway: Quick start guide](ai-gateway/1.2.0/quick-start-guide.md) | Configure an LLM provider and route your first LLM request through the gateway. |
 | [MCP proxy](ai-gateway/1.2.0/gateway-artifacts/mcp-proxy.md) | Expose an MCP server through the gateway and connect to it from an MCP client. |
 
 ### I want to govern AI services at the organizational level
@@ -64,15 +64,15 @@ You already have gateways running and now want centralized management of LLM pro
 
 | Guide | What you will do |
 | :--- | :--- |
-| [AI Workspace in the cloud: Quick start](cloud/ai-workspace/quickstart.md) | Connect an AI Gateway to AI Workspace, configure an LLM provider and an MCP proxy, and call both through the gateway. |
-| [Self-hosted AI Workspace: Quick start](ai-workspace/1.0.0/getting-started.md) | Run AI Workspace locally with Docker Compose, connect an AI Gateway, and send a prompt through an LLM provider. |
+| [AI Workspace in the cloud: Quick start guide](cloud/ai-workspace/quickstart.md) | Connect an AI Gateway to AI Workspace, configure an LLM provider and an MCP proxy, and call both through the gateway. |
+| [Self-hosted AI Workspace: Quick start guide](ai-workspace/1.0.0/getting-started.md) | Run AI Workspace locally with Docker Compose, connect an AI Gateway, and send a prompt through an LLM provider. |
 
 ### I want to publish APIs and MCP servers in a developer portal
 You want a catalog where developers discover, subscribe to, and try your APIs and MCP servers.
 
 | Guide | What you will do |
 | :--- | :--- |
-| [API Portal and MCP Hub: Quick start](api-portal/1.0.0/quickstart-guide.md) | Run the self-hosted API Portal and MCP Hub, then publish an API and an MCP server to its catalog. |
+| [API Portal and MCP Hub: Quick start guide](api-portal/1.0.0/quickstart-guide.md) | Run the self-hosted API Portal and MCP Hub, then publish an API and an MCP server to its catalog. |
 | [Use the Developer Portal as a consumer](guides/developer-portal/api-discovery-and-tryout.md) | Discover an API in the cloud Developer Portal, try it, subscribe to a plan, and invoke it. |
 
 ### I want to analyze API traffic
@@ -89,7 +89,7 @@ You want to track API usage, set up paid subscription plans, and implement usage
 | :--- | :--- |
 | [Monetize a REST API with Stripe](guides/monetization/api-monetization.md) | Connect Stripe, add a paid subscription plan to an API, subscribe to it from the Developer Portal, and check the billed usage. |
 
-## After your first quick start
+## After your first quick start guide
 Once you have completed a quick start guide, here is where to go next:
 
 | I want to... | Go here |

@@ -21,7 +21,7 @@ This guide is for developers setting up their first MCP Proxy on Cloud. You'll c
 
 ## Before you start
 
-Before going through this quickstart, make sure you meet the following prerequisites:
+Before going through this quick start guide, make sure you meet the following prerequisites:
 
 - Access to [AI Workspace](https://ai-workspace.bijira.dev/) with the **Admin** or **Developer** role.
 - [Docker](https://docs.docker.com/get-docker/) with the Compose plugin. You can check the installed version with the `docker compose version` command.

@@ -34,4 +34,4 @@ The deployment guide provides this baseline request and limit for the API Portal
 ## Related
 
 - [Resources and scaling](../deployment/resources-and-scaling.md)
-- [Quick start for API Portal and MCP Hub](../quickstart-guide.md)
+- [API Portal and MCP Hub quick start guide](../quickstart-guide.md)

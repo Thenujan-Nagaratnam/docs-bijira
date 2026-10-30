@@ -18,7 +18,7 @@ Arazzo Visualizer helps you understand, edit, and run Arazzo Specification workf
 
 It turns Arazzo files into interactive diagrams, keeps the diagram in sync with your code, and includes a built-in runner engine so you can try workflows against real APIs without leaving the editor.
 
-## Quick Start
+## Quick start guide
 
 To install the extension and run a sample workflow, see the [Arazzo Visualizer quick start guide](quick-start-guide.md).
 

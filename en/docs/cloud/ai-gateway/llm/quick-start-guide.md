@@ -20,7 +20,7 @@ The AI Gateway routes, secures, and observes traffic to large language model (LL
 This guide is for developers setting up their first AI Gateway on Cloud. You'll create a gateway, connect an OpenAI provider to it, and send your first request.
 
 ## Before you start
-Before going through this quickstart, make sure you meet the following prerequisites:
+Before going through this quick start guide, make sure you meet the following prerequisites:
 
 - Access to [AI Workspace](https://ai-workspace.bijira.dev/) with the **Admin** role.
 - An OpenAI API key.
