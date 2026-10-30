@@ -5,7 +5,7 @@
 
 # Required
 brand:          # product brand, as in "xxxxx AI Gateway" and "xxxxx subscription". For example: xxxxx
-company:        # the company, where "WSO2" means the company ("WSO2 provides", "managed by WSO2"). For example: xxxxx Labs
+company: "{brand} Labs"   # where "WSO2" means the company ("WSO2 provides", "managed by WSO2")
 brand_slug:     # lowercase brand for sample names and heading links, for example: xxxxx
 
 # The legal name is "<company> <legal_suffix>", for example "xxxxx Labs LLC".
