@@ -145,7 +145,7 @@ The API Portal & MCP Hub shares a control plane with AI Workspace. The following
 |---------|--------------------|
 | WSO2 AI Workspace | 1.0.0 |
 
-The distribution bundles the Platform API control plane so the local-auth quick start guide works out of the box, and the two are versioned and shipped together—no separate compatibility check is needed. A production deployment that authenticates against an identity provider doesn't need it: the portal's only outbound call to a Platform API is the local-auth login. Full prerequisites are listed in the [quick start guide](quickstart-guide.md).
+The distribution bundles the Platform API control plane so the local-auth quick start guide works out of the box, and the two are versioned and shipped together—no separate compatibility check is needed. A production deployment that authenticates against an identity provider doesn't need the bundled Platform API for login. To propagate credential and plan changes to gateways, it still needs a webhook subscriber, such as an existing Platform API, a gateway, or your own handler. See [Control plane connection](deployment/control-plane-connection.md). Full prerequisites are listed in the [quick start guide](quickstart-guide.md).
 
 ## Key changes
 
