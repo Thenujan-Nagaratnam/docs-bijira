@@ -161,13 +161,17 @@ def resolve_vars(raw):
 
 
 class Rewriter:
-    def __init__(self, mapping, values):
+    def __init__(self, mapping, values, blank_kept=False):
         self.masks = [re.compile(m["find"]) for m in mapping["masks"]]
         self.rules = []
         for rule in mapping["rules"]:
             # Fill in {variables}; escape backslashes in values so only \1-style
             # group references in the rule itself are special.
             template = VAR_RE.sub(lambda m: values[m.group(1)].replace("\\", "\\\\"), rule["replace"])
+            # A keep rule protects text as it is. check blanks it instead, because
+            # kept text is covered, not left over.
+            if rule.get("keep") and blank_kept:
+                template = ""
             self.rules.append({
                 "id": rule["id"],
                 "find": re.compile(rule["find"]),
@@ -266,10 +270,10 @@ def _anchor_article(prefix, replacement):
     return prefix[: m.start(2)] + article + "-" + value
 
 
-def run(values, write_files, counts=None):
+def run(values, write_files, counts=None, blank_kept=False):
     """Rewrite every scoped file; return {path: (old, new)} for files that change."""
     mapping = load_mapping()
-    rewriter = Rewriter(mapping, values)
+    rewriter = Rewriter(mapping, values, blank_kept)
     counts = counts if counts is not None else collections.Counter()
     changed = {}
     for path in files_in_scope(mapping):
@@ -328,7 +332,7 @@ def cmd_check(args):
     mapping = load_mapping()
     masks = [re.compile(m["find"]) for m in mapping["masks"]]
     hits = []
-    for path, (_, new) in run(values, False).items():
+    for path, (_, new) in run(values, False, blank_kept=True).items():
         for rx in masks:
             new = rx.sub("", new)
         for line in new.splitlines():

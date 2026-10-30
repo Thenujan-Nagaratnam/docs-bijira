@@ -30,7 +30,7 @@ vars:
   # --- brand ---
   # Brand name in prose, for example "xxxxx". Root for most product names.
   brand: "WSO2"
-  # The company name in text, where "WSO2" means the company rather than a label: "WSO2 provides", "managed by WSO2", "WSO2's". For example "xxxxx Labs".
+  # The company name in text, where "WSO2" means the company rather than a label: "WSO2 provides", "managed by WSO2". "WSO2's" takes the brand, because it usually comes before a product, as in "WSO2's Centralized API Management". For example "xxxxx Labs".
   company: "{brand}"
   # The legal entity type that follows the company name.
   legal_suffix: "LLC"
@@ -204,6 +204,12 @@ masks:
 # label: optional words added to the commit subject in direct.py commits.
 # The heading-anchor rule is last so its commit follows the heading renames.
 rules:
+  # Values the product itself defines, kept as they are: the container user "wso2", the default log folder /var/log/wso2, the "wso2-crd" label value, GitHub references such as [wso2/gateway-controllers#307], and mirrored image paths.
+  - id: product-values
+    label: product values
+    find: '(?<=user \(`)wso2(?=`\))|(?<=user \()wso2(?=\))|/var/log/wso2\b|(?<=restapi-target: )wso2-crd\b|(?<=restapi-target":")wso2-crd\b|(?<=\[)wso2(?=/[\w.-]+#\d+\])|(?<=registry\.company\.com/)wso2(?=/)'
+    replace: '\g<0>'
+    keep: true
   # Copyright footer ">WSO2</a> LLC.": the company name goes inside the link and the legal entity type after it.
   - id: legal-link
     label: in the copyright link
@@ -289,6 +295,12 @@ rules:
   - id: repo-name-org
     find: '(?<=repo_name: )wso2(?=/)'
     replace: '{github_org}'
+  # Every other web address, kept exactly as it is, so links to articles, source files, profiles, and pages keep working. Also covers {{base_path}} links to doc pages and images (including the {base_path}} and {{base_bath}} typos), and single-quoted href='...' paths. Runs after the domain and GitHub rules, which still apply: "\x01<n>\x01" is the engine's marker for text an earlier rule already replaced, so an address whose start a domain rule replaced is still kept. Local and example addresses in samples aren't kept, and heading links after "#" still follow renamed headings.
+  - id: url-keep
+    label: in web addresses
+    find: '(?i)(?:https?://(?!localhost\b|[\w.-]*example\.(?:com|org)\b)|\x01\d+\x01(?=[/.?])|\{\{?\s*base_[pb]ath\s*\}\}|(?<=href='')(?!https?:))[^\s)\]"''<>`#]*'
+    replace: '\g<0>'
+    keep: true
   # VS Code Marketplace publisher ID "WSO2." in itemName -> {vscode_publisher}. Code value: stays the same unless the variable is changed.
   - id: vscode-publisher
     find: '(?<=itemName=)WSO2(?=\.)'
@@ -443,22 +455,16 @@ rules:
   - id: cloud-slug
     find: '(?i)bijira'
     replace: '{cloud_slug}'
-  # "WSO2's", where the company owns something -> {company}, as in "xxxxx Labs's subscription".
-  - id: company-possessive
-    label: as the company
-    find: '(?<![\w./-])WSO2(?=[''’]s\b)'
-    replace: '{company}'
-    context: prose
   # "WSO2" doing something, as in "WSO2 provides", "WSO2 hosts", "WSO2 and customers" -> {company}.
   - id: company-acts
-    label: as the company
+    label: as the company doing something
     find: '(?<![\w./-])WSO2(?= (?:provides|hosts|runs|manages|publishes|handles|shipped|upgrades|offers|maintains|recommends|supports|releases|delivers|develops|owns|operates|gives|is|has|does|will|can|and)\b)'
     replace: '{company}'
     context: prose
   # "WSO2" followed by punctuation or "to", as in "managed by WSO2," or "want WSO2 to host it" -> {company}. A line ending in "WSO2" is left to the brand rule, because a product name can wrap onto the next line.
   - id: company-object
-    label: as the company
-    find: '(?<![\w./-])WSO2(?=\)|[,.;:!?](?!\w)| (?:to|so|plus|or)\b)'
+    label: as the company after a word such as by
+    find: '(?<![\w./-])WSO2(?=\)|<|[,.;:!?](?!\w)| (?:to|so|plus|or)\b)|(?<=name="author" content=")WSO2(?=")'
     replace: '{company}'
     context: prose
   # Any "WSO2" still left inside code samples, such as sample display names -> {sample_brand}.

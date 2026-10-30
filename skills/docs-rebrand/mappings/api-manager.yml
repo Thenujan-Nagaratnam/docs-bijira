@@ -27,7 +27,7 @@ vars:
   # --- brand ---
   # Brand name in prose, for example "xxxxx". Root for most product names.
   brand: "WSO2"
-  # The company name in text, where "WSO2" means the company rather than a label: "WSO2 provides", "managed by WSO2", "WSO2's". For example "xxxxx Labs".
+  # The company name in text, where "WSO2" means the company rather than a label: "WSO2 provides", "managed by WSO2". "WSO2's" takes the brand, because it usually comes before a product, as in "WSO2's Centralized API Management". For example "xxxxx Labs".
   company: "{brand}"
   # The legal entity type that follows the company name.
   legal_suffix: "LLC"
@@ -151,6 +151,12 @@ masks:
   # Keeps .md file paths that contain "wso2" in the nav, redirects, and includes.
   - id: doc-file-paths
     find: '[\w./-]*wso2[\w./-]*\.md\b'
+  # Keeps anchors left over from the old Confluence docs, such as #...forWSO2APIManager-...; they don't match any heading.
+  - id: confluence-anchors
+    find: '(?<=#)[A-Za-z0-9()_.%-]*[a-z(]WSO2[A-Za-z0-9_]*'
+  # Keeps doc page paths in the home page cards, as in "url": "install-and-setup/upgrading-wso2-api-manager/".
+  - id: json-doc-paths
+    find: '(?<="url": ")[^"]*'
   # Keeps embedded base64 images; they are data, not text.
   - id: data-uri
     find: 'data:[\w/+.-]+;base64,[A-Za-z0-9+/=]+'
@@ -163,6 +169,12 @@ masks:
 # label: optional words added to the commit subject in direct.py commits.
 rules:
   # --- legal entity ---
+  # Values the product itself defines, kept as they are: key manager types (WSO2-IS, WSO2-IS-7), the WSO2-Identity-User header, WSO2-ALL-TENANTS, the default realm WSO2.ORG, LDAP names (dc=wso2), server output and its setting (meta_server:WSO2, Server=WSO2 Carbon Server, server="WSO2 Carbon Server", the version service response), the "wso2" folder inside a product home (<SI_HOME>/wso2/server), default install folders (/Library/WSO2, C:\Program Files\WSO2), Integration Studio download names, link text that names a repository, as in [wso2-am-stripe-plugin](https://github.com/...), the container group in --chown=wso2carbon:wso2, Kibana dashboard IDs (wso2-mi-overall), Prometheus metric names (org_wso2_...), the Server: WSO2-PassThrough-HTTP header, wso2_com.xml (named after the wso2.com domain), and the wso2-docs GitHub org.
+  - id: product-values
+    label: product values
+    find: '\bWSO2-(?:IS-7|IS|Identity-User|ALL-TENANTS)\b|\bWSO2\.ORG\b|(?i:(?<=dc=)wso2\b)|(?<=meta_server:)WSO2|(?<=Server=)WSO2(?= Carbon Server)|(?<=server=")WSO2(?= Carbon Server)|(?<=<return>)WSO2(?= API Manager-)|(?i:(?:(?<=_HOME>/)|(?<=_HOME\}/)|(?<=_HOME/))wso2)(?=/)|(?<=/Library/)WSO2(?=/)|(?<=Program Files\\)WSO2(?=\\)|\bWSO2(?=-Integration-Studio-\d)|(?<=\[)[\w.-]*wso2[\w.-]*(?=\]\(https?://)|(?<=--chown=wso2carbon:)wso2\b|\bwso2-mi-[\w-]+|(?<=\borg_)wso2(?=_)|\bWSO2(?=-PassThrough-HTTP)|\bwso2_com\.xml\b|\bwso2-docs(?=/WSO2_EI)'
+    replace: '\g<0>'
+    keep: true
   # Copyright footer ">WSO2</a> LLC": the company name goes inside the link and the legal entity type after it.
   - id: legal-link
     label: in the copyright link
@@ -210,9 +222,9 @@ rules:
   - id: server-script
     find: '\bwso2server(?=\.(?:sh|bat)\b)'
     replace: '{server_script}'
-  # Docker Hub org "wso2/" before wso2am, wso2is, and wso2mi images -> {docker_org}. Runs before the product slugs. Code value: stays the same unless the variable is changed.
+  # Docker Hub org "wso2/" before product images such as wso2am, wso2is, wso2mi, wso2si, and choreo-connect-adapter, or any image with a version tag -> {docker_org}. Runs before the product slugs. Code value: stays the same unless the variable is changed.
   - id: docker-org
-    find: '(?<![\w./-])wso2(?=/wso2(?:am|is|mi))'
+    find: '(?<![\w./-])wso2(?=/(?:wso2[a-z]|choreo-connect-[a-z]+|[a-z][\w.-]*:\d))'
     replace: '{docker_org}'
   # API Platform gateway packages "wso2apip-..." -> {apip_slug}. Code value: stays the same unless the variable is changed.
   - id: apip-slug
@@ -230,9 +242,9 @@ rules:
   - id: mi-slug
     find: '\bwso2mi(?=\b|-)'
     replace: '{mi_slug}'
-  # Uppercase identifiers such as WSO2AM_DB and WSO2_SERVER_HOME -> {ident_upper}. Code value: stays the same unless the variable is changed.
+  # Uppercase identifiers such as WSO2AM_DB and WSO2_SERVER_HOME, also with escaped underscores (WSO2\_CARBON\_DB) -> {ident_upper}. Code value: stays the same unless the variable is changed.
   - id: ident-upper
-    find: '(?<![A-Za-z0-9-])WSO2(?=[A-Z0-9_])'
+    find: '(?<![A-Za-z0-9-])WSO2(?=[A-Z0-9_]|\\_)'
     replace: '{ident_upper}'
 
   # Lowercase "wso2" fused into longer identifiers, such as wso2user, wso2truststore.jks, and wso2apim -> {ident_lower}. Code value: stays the same unless the variable is changed.
@@ -240,6 +252,14 @@ rules:
     find: '(?<![A-Za-z0-9])wso2(?=[A-Za-z0-9.])'
     replace: '{ident_lower}'
     when: 'wso2[A-Za-z0-9]|-Dwso2\.'
+  # Configuration keys that start with "wso2.", such as wso2.carbon, wso2.datasources, and wso2.transport.http -> {ident_lower}. Code value: stays the same unless the variable is changed.
+  - id: config-key
+    find: '(?<![\w/.@-])wso2(?=\.(?!com\b|org\b|github\b)[a-z])'
+    replace: '{ident_lower}'
+  # The org in mkdocs.yml "repo_name: wso2/..." -> {github_org}. Code value: stays the same unless the variable is changed.
+  - id: repo-name-org
+    find: '(?<=repo_name: )wso2(?=/)'
+    replace: '{github_org}'
   # Java system properties "-Dwso2." -> {ident_lower}. Code value: stays the same unless the variable is changed.
   - id: system-property
     find: '(?<=-D)wso2(?=\.)'
@@ -300,6 +320,12 @@ rules:
     replace: '{example_domain}'
 
   # --- heading links ---
+  # Every other web address, kept exactly as it is, so links to articles, source files, profiles, and pages keep working. Also covers {{base_path}} links to doc pages and images (including the {base_path}} and {{base_bath}} typos), and single-quoted href='...' paths. Runs after the domain and GitHub rules, which still apply: "\x01<n>\x01" is the engine's marker for text an earlier rule already replaced, so an address whose start a domain rule replaced is still kept. Local and example addresses in samples aren't kept, and heading links after "#" still follow renamed headings.
+  - id: url-keep
+    label: in web addresses
+    find: '(?i)(?:https?://(?!localhost\b|[\w.-]*example\.(?:com|org)\b)|\x01\d+\x01(?=[/.?])|\{\{?\s*base_[pb]ath\s*\}\}|(?<=href='')(?!https?:))[^\s)\]"''<>`#]*'
+    replace: '\g<0>'
+    keep: true
   # Heading links "#...wso2..." -> {brand_anchor}, with "a"/"an" fixed to match the renamed heading.
   - id: heading-anchor
     find: '(?<=#)([\w-]*?)wso2(?=[\w-]*)'
@@ -307,9 +333,9 @@ rules:
     when: '#[\w-]*wso2'
 
   # --- product names (longest phrase first) ---
-  # "WSO2 API Manager" -> {api_manager}.
+  # "WSO2 API Manager" -> {api_manager}, including the typo with no space before it, as in "ofWSO2 API Manager".
   - id: api-manager
-    find: '\bWSO2 API Manager\b'
+    find: '(?:\b|(?<=[a-z]))WSO2 API Manager\b'
     replace: '{api_manager}'
   # "WSO2 API-M" -> {api_m}.
   - id: api-m
@@ -402,24 +428,30 @@ rules:
     replace: '{cloud_slug}'
 
   # --- whatever is left of the brand ---
-  # "WSO2's", where the company owns something -> {company}, as in "xxxxx Labs's subscription".
-  - id: company-possessive
-    label: as the company
-    find: '(?<![\w./-])WSO2(?=[''’]s\b)'
-    replace: '{company}'
-    context: prose
   # "WSO2" doing something, as in "WSO2 provides", "WSO2 hosts", "WSO2 and customers" -> {company}.
   - id: company-acts
-    label: as the company
+    label: as the company doing something
     find: '(?<![\w./-])WSO2(?= (?:provides|hosts|runs|manages|publishes|handles|shipped|upgrades|offers|maintains|recommends|supports|releases|delivers|develops|owns|operates|gives|is|has|does|will|can|and)\b)'
     replace: '{company}'
     context: prose
   # "WSO2" followed by punctuation or "to", as in "managed by WSO2," or "want WSO2 to host it" -> {company}. A line ending in "WSO2" is left to the brand rule, because a product name can wrap onto the next line.
   - id: company-object
-    label: as the company
-    find: '(?<![\w./-])WSO2(?=\)|[,.;:!?](?!\w)| (?:to|so|plus|or)\b)'
+    label: as the company after a word such as by
+    find: '(?<![\w./-])WSO2(?=\)|<|[,.;:!?](?!\w)| (?:to|so|plus|or)\b)|(?<=name="author" content=")WSO2(?=")'
     replace: '{company}'
     context: prose
+  # "wso2" or "WSO2" at the end of a longer sample name in code, as in slwso2 and mailtoWSO2 -> {ident_lower} or {ident_upper}. Code value: stays the same unless the variable is changed.
+  - id: ident-suffix
+    label: in sample names
+    find: '(?<=[a-z])wso2\b'
+    replace: '{ident_lower}'
+    context: code
+  # The same, for uppercase "WSO2" -> {ident_upper}.
+  - id: ident-suffix-upper
+    label: in sample names
+    find: '(?<=[a-z])WSO2\b'
+    replace: '{ident_upper}'
+    context: code
   # Any "WSO2" still left inside code samples, such as sample display names -> {sample_brand}.
   - id: brand-code
     label: in code samples

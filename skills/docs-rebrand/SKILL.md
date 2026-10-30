@@ -61,14 +61,16 @@ Version worktrees go next to the clone, in `rebrand-worktrees/`, unless `DOCS_RE
    ```
 
    This applies the names as one commit per rule, such as "Rebrand: replace "WSO2 API Manager" with "Acme API Manager"", then builds before and after. It must report 0 new warnings. Use `--no-commit` to leave the changes uncommitted instead.
-7. **Report:** the branch, the number of commits, the files changed, the warning comparison, and anything that needs a decision. Don't push or open a pull request unless asked, and don't add a Co-Authored-By trailer to commits.
+7. **Read the changes.** The checks can't tell whether a change is right. Go through every distinct change in the diff (`git diff --word-diff`), and look for link addresses that changed, product values (folders, file names, IDs, headers, metric names, server output) that changed, and company or brand forms that read wrong. Fix the rules and rerun from step 2.
+8. **Report:** the branch, the number of commits, the files changed, the warning comparison, and anything that needs a decision. Don't push or open a pull request unless asked, and don't add a Co-Authored-By trailer to commits.
 
 ## Rules of thumb
 
 - **Three forms of the name.** Product names and labels take the brand ("xxxxx AI Gateway", "xxxxx subscription"). "WSO2" meaning the company takes `company` ("xxxxx Labs provides", "managed by xxxxx Labs"). The copyright footer takes the legal name, `<company> <legal_suffix>` ("xxxxx Labs LLC"). License headers in source files stay as they are.
 - **People-facing names change; code values don't.** Product names, the legal name, site names, and example display names change. Packages (`org.wso2.*`), default credentials (`wso2carbon`), file and image names (`wso2am-4.7.0`, `wso2/wso2am`), database names (`WSO2AM_DB`), headers (`x-wso2-`), environment variables, and example hostnames (`gw.wso2.com`) keep today's value through their variables.
 - **Never rename file paths or URLs.** Masks protect page file names, links to other WSO2 docs sites, and license headers.
-- **A rule set is only trusted for a version after `verify` and `check` pass on it.** API Manager rules were built on 4.7.0 and proven on 4.6.0; older versions may need more rules.
+- **A rule set is only trusted for a version after `verify` and `check` pass on it and its changes have been read.** Every listed version passes both checks, and the changes in API Platform `main` and API Manager `master`, 4.7.0 to 3.0.0 were read by hand.
+- **Never change a link address.** `url-keep` protects every `https://` address and `{{base_path}}` path. Only heading links after `#` follow renamed headings.
 - **To undo a test run**, remove the worktree and delete its `rebrand/<site>-<version>` branch.
 
 ## Known decisions still open

@@ -123,10 +123,11 @@ Page file names and URLs are never renamed.
 
 | Site and version | Status |
 | --- | --- |
-| API Platform `main` | Checks pass |
-| API Manager 4.7.0 | Checks pass; a test build had the same 85 warnings as the original |
-| API Manager 4.6.0 | Checks pass; a full test run made 22 commits with the same 25 warnings before and after |
-| API Manager `master`, 4.5.0 to 3.0.0 | Not checked yet. Older versions may need more rules; the skill explains how to add them. |
+| API Platform `main` | Checks pass; changes read by hand; a test build had the same 43 warnings and 1,830 pages before and after |
+| API Manager 4.7.0 | Checks pass; changes read by hand; a test build had the same 85 warnings and 1,319 pages before and after |
+| API Manager `master`, 4.6.0 to 3.0.0 | Checks pass; changes read by hand |
+
+Builds with `--build` use one environment per site. API Manager 3.0.0 and other old versions may need older theme packages, so their build can fail before the rebrand too.
 
 ## Files
 
