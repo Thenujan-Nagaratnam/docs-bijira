@@ -42,7 +42,7 @@ You can run the AI Gateway in two ways:
 
 ## Where to go next
 
-- To install the gateway and route a first request through it, see [Quick Start Guide](quick-start-guide.md).
+- To install the gateway and route a first request through it, see the [quick start guide](quick-start-guide.md).
 - To learn which artifacts a request passes through, see [How it works](how-it-works.md).
 - To expose an MCP server through the gateway, see [MCP proxy](gateway-artifacts/mcp-proxy.md).
 - To put an A2A agent behind the gateway, see [Agent governance](agent-governance/index.md).

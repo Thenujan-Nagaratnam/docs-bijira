@@ -590,11 +590,11 @@
 - [API Platform CLI Quick Start](https://wso2.com/api-platform/docs/tools/cli/quick-start-guide.md): Get started with the `ap` command-line interface
 - [Customizing Gateway Policies with CLI](https://wso2.com/api-platform/docs/tools/cli/customizing-gateway-policies.md): Use the CLI to add and remove policies from a gateway image
 - [API Platform CLI Reference](https://wso2.com/api-platform/docs/tools/cli/reference.md): Full command reference for the `ap` CLI
-- [VS Code API Designer: Quick Start Guide](https://wso2.com/api-platform/docs/tools/vscode-api-design/getting-started.md): Install and configure the WSO2 VS Code extension for API design
+- [VS Code API Designer Quick Start Guide](https://wso2.com/api-platform/docs/tools/vscode-api-design/getting-started.md): Install and configure the WSO2 VS Code extension for API design
 - [VS Code: Design APIs](https://wso2.com/api-platform/docs/tools/vscode-api-design/design-apis.md): Design and edit OpenAPI specifications with AI assistance in VS Code
 - [VS Code: Govern APIs](https://wso2.com/api-platform/docs/tools/vscode-api-design/govern-apis.md): Apply governance rules to API designs directly from VS Code
 - [VS Code: End-to-End Tutorial](https://wso2.com/api-platform/docs/tools/vscode-api-design/end-to-end-tutorial.md): Full walkthrough: draft, design, govern, and fix an OpenAPI specification using API Designer and GitHub Copilot
 - [Arazzo MCP Generator CLI Quick Start](https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/quick-start-guide.md): Convert an Arazzo specification into a Dockerized Python MCP server using the arazzo-mcp-gen CLI
 - [Arazzo MCP Generator CLI Reference](https://wso2.com/api-platform/docs/tools/arazzo-mcp-gen-cli/reference.md): Full command reference for arazzo-mcp-gen: validate, inspect, visualize, and mcp-server generate
 - [VS Code Arazzo Visualizer: Overview](https://wso2.com/api-platform/docs/tools/vscode-arazzo-visualizer/getting-started.md): Visualize, edit, and run Arazzo workflow specifications as interactive diagrams directly inside VS Code
-- [VS Code Arazzo Visualizer: Quick Start Guide](https://wso2.com/api-platform/docs/tools/vscode-arazzo-visualizer/quick-start-guide.md): Install the extension, open a sample Arazzo workflow as a diagram, and run it with Try with curl
+- [VS Code Arazzo Visualizer Quick Start Guide](https://wso2.com/api-platform/docs/tools/vscode-arazzo-visualizer/quick-start-guide.md): Install the extension, open a sample Arazzo workflow as a diagram, and run it with Try with curl

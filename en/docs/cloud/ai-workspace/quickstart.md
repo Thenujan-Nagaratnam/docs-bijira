@@ -1,5 +1,5 @@
 ---
-title: "Get started with AI Workspace"
+title: "AI Workspace quick start guide"
 description: "Connect an AI Gateway to AI Workspace, configure an LLM provider and an MCP proxy, and call both through the AI Gateway."
 canonical_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/quickstart/
 md_url: https://wso2.com/api-platform/docs/cloud/ai-workspace/quickstart.md
@@ -16,7 +16,7 @@ last_updated: 2026-09-09
 content_type: "quickstart"
 ---
 
-# Get started with AI Workspace
+# AI Workspace quick start guide
 
 AI Workspace, hosted by WSO2, provides a central control plane for your AI infrastructure. It lets you manage:
 

@@ -21,8 +21,8 @@ The AI Gateway is the standalone runtime plane for routing, securing, and observ
 
 ## Quick Start
 
-- [LLM Quick Start Guide](llm/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to LLM providers like OpenAI
-- [MCP Quick Start Guide](mcp/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to MCP servers
+- [LLM quick start guide](llm/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to LLM providers like OpenAI
+- [MCP quick start guide](mcp/quick-start-guide.md) - Set up the gateway, verify the controller admin health endpoint, and route traffic to MCP servers
 
 ## Key Concepts
 

@@ -18,8 +18,8 @@ A gateway for managing and securing AI traffic, including Large Language Model (
 
 ## Quick Start
 
-- [LLM Quick Start Guide](./llm-proxy/quick-start-guide.md)—Install the gateway, confirm the Gateway Controller admin health endpoint reports it healthy, and route traffic to an LLM provider such as OpenAI.
-- [MCP Quick Start Guide](./mcp-proxy/quick-start-guide.md)—Install the gateway, confirm the Gateway Controller admin health endpoint reports it healthy, and route traffic to an MCP server.
+- [LLM quick start guide](./llm-proxy/quick-start-guide.md)—Install the gateway, confirm the Gateway Controller admin health endpoint reports it healthy, and route traffic to an LLM provider such as OpenAI.
+- [MCP quick start guide](./mcp-proxy/quick-start-guide.md)—Install the gateway, confirm the Gateway Controller admin health endpoint reports it healthy, and route traffic to an MCP server.
 
 ## Deployment options
 
