@@ -53,7 +53,7 @@ Version worktrees go next to the clone, in `rebrand-worktrees/`, unless `DOCS_RE
    - **Code value** (package, password, file, image, database, header, environment variable, example hostname): add a rule that maps it to a variable whose default is today's value, so it doesn't change unless someone sets that variable.
    - **A name WSO2 doesn't own, or a file path:** add a mask.
    Keep the rules shared across versions, and rerun `--check-only` on the versions already done to confirm they still pass.
-5. **Confirm the names.** `${CLAUDE_SKILL_DIR}/names.yml` must have `brand`, `legal_suffix`, and `brand_slug`. If they're empty, ask the user. For a dry run, pass a test file with `--names`, for example one that sets the brand to `Acme`.
+5. **Confirm the names.** `${CLAUDE_SKILL_DIR}/names.yml` must have `brand`, `company`, and `brand_slug`. If they're empty, ask the user. For a dry run, pass a test file with `--names`, for example one that sets the brand to `Acme`.
 6. **Apply and build:**
 
    ```sh
@@ -65,6 +65,7 @@ Version worktrees go next to the clone, in `rebrand-worktrees/`, unless `DOCS_RE
 
 ## Rules of thumb
 
+- **Three forms of the name.** Product names and labels take the brand ("xxxxx AI Gateway", "xxxxx subscription"). "WSO2" meaning the company takes `company` ("xxxxx Labs provides", "managed by xxxxx Labs"). The copyright footer takes the legal name, `<company> <legal_suffix>` ("xxxxx Labs LLC"). License headers in source files stay as they are.
 - **People-facing names change; code values don't.** Product names, the legal name, site names, and example display names change. Packages (`org.wso2.*`), default credentials (`wso2carbon`), file and image names (`wso2am-4.7.0`, `wso2/wso2am`), database names (`WSO2AM_DB`), headers (`x-wso2-`), environment variables, and example hostnames (`gw.wso2.com`) keep today's value through their variables.
 - **Never rename file paths or URLs.** Masks protect page file names, links to other WSO2 docs sites, and license headers.
 - **A rule set is only trusted for a version after `verify` and `check` pass on it.** API Manager rules were built on 4.7.0 and proven on 4.6.0; older versions may need more rules.

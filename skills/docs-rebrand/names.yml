@@ -4,9 +4,13 @@
 # Product names default to "<brand> <descriptor>", so most need no entry here.
 
 # Required
-brand:          # for example: xxxxx
-legal_suffix:   # what follows the brand in the legal name, for example: Labs Inc
+brand:          # product brand, as in "xxxxx AI Gateway" and "xxxxx subscription". For example: xxxxx
+company:        # the company, where "WSO2" means the company ("WSO2 provides", "managed by WSO2"). For example: xxxxx Labs
 brand_slug:     # lowercase brand for sample names and heading links, for example: xxxxx
+
+# The legal name is "<company> <legal_suffix>", for example "xxxxx Labs LLC".
+legal_suffix: LLC
+legal_name_old: "{legal_name}"   # older "WSO2 Inc" text takes the current legal name
 
 # API Platform is renamed to API Management.
 platform: API Management          # every "API Platform" product name follows this

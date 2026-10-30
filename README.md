@@ -87,7 +87,7 @@ python3 $SKILL/scripts/rebrand_version.py api-manager 4.5.0 --check-only
 python3 $SKILL/scripts/rebrand_version.py api-manager 4.6.0 --build
 
 # Dry run with test names instead of names.yml
-printf 'brand: Acme\nlegal_suffix: Labs Inc\nbrand_slug: acme\n' > /tmp/test-names.yml
+printf 'brand: Acme\ncompany: Acme Labs\nbrand_slug: acme\n' > /tmp/test-names.yml
 python3 $SKILL/scripts/rebrand_version.py api-platform main --build --names /tmp/test-names.yml
 
 # Use the current checkout as it is, with the site and version detected

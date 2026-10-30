@@ -1,8 +1,10 @@
 # Today's value of every variable in api-platform.yml. Don't edit this to rebrand;
 # verify uses it to prove the rules reproduce today's docs exactly.
 "brand": "WSO2"
-"legal_suffix": "LLC."
-"legal_name": "{brand} {legal_suffix}"
+"company": "{brand}"
+"legal_suffix": "LLC"
+"legal_name": "{company} {legal_suffix}"
+"legal_name_old": "{brand} Inc"
 "brand_slug": "wso2"
 "platform": "API Platform"
 "platform_anchor": "api-platform"

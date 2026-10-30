@@ -27,10 +27,12 @@ vars:
   # --- brand ---
   # Brand name in prose, for example "xxxxx". Root for most product names.
   brand: "WSO2"
-  # What follows the brand in the legal entity name, for example "Labs Inc.".
+  # The company name in text, where "WSO2" means the company rather than a label: "WSO2 provides", "managed by WSO2", "WSO2's". For example "xxxxx Labs".
+  company: "{brand}"
+  # The legal entity type that follows the company name.
   legal_suffix: "LLC"
-  # Full legal entity name. Override it if the legal name doesn't start with the brand.
-  legal_name: "{brand} {legal_suffix}"
+  # Full legal entity name, as in the copyright footer, for example "xxxxx Labs LLC".
+  legal_name: "{company} {legal_suffix}"
   # The former legal entity name that still appears in older text.
   legal_name_old: "{brand} Inc"
   # Lowercase brand for sample names and heading links, for example "xxxxx".
@@ -161,11 +163,11 @@ masks:
 # label: optional words added to the commit subject in direct.py commits.
 rules:
   # --- legal entity ---
-  # Copyright footer ">WSO2</a> LLC": the brand goes inside the link and the legal suffix after it.
+  # Copyright footer ">WSO2</a> LLC": the company name goes inside the link and the legal entity type after it.
   - id: legal-link
     label: in the copyright link
     find: '>WSO2</a> LLC\b'
-    replace: '>{brand}</a> {legal_suffix}'
+    replace: '>{company}</a> {legal_suffix}'
   # "WSO2 LLC" -> {legal_name}.
   - id: legal-name
     find: '\bWSO2 LLC\b'
@@ -400,6 +402,24 @@ rules:
     replace: '{cloud_slug}'
 
   # --- whatever is left of the brand ---
+  # "WSO2's", where the company owns something -> {company}, as in "xxxxx Labs's subscription".
+  - id: company-possessive
+    label: as the company
+    find: '(?<![\w./-])WSO2(?=[''’]s\b)'
+    replace: '{company}'
+    context: prose
+  # "WSO2" doing something, as in "WSO2 provides", "WSO2 hosts", "WSO2 and customers" -> {company}.
+  - id: company-acts
+    label: as the company
+    find: '(?<![\w./-])WSO2(?= (?:provides|hosts|runs|manages|publishes|handles|shipped|upgrades|offers|maintains|recommends|supports|releases|delivers|develops|owns|operates|gives|is|has|does|will|can|and)\b)'
+    replace: '{company}'
+    context: prose
+  # "WSO2" followed by punctuation or "to", as in "managed by WSO2," or "want WSO2 to host it" -> {company}. A line ending in "WSO2" is left to the brand rule, because a product name can wrap onto the next line.
+  - id: company-object
+    label: as the company
+    find: '(?<![\w./-])WSO2(?=\)|[,.;:!?](?!\w)| (?:to|so|plus|or)\b)'
+    replace: '{company}'
+    context: prose
   # Any "WSO2" still left inside code samples, such as sample display names -> {sample_brand}.
   - id: brand-code
     label: in code samples

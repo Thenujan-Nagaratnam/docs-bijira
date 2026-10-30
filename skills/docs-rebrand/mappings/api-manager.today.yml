@@ -1,8 +1,9 @@
 # Today's value of every variable in api-manager.yml. Don't edit this to rebrand;
 # verify uses it to prove the rules reproduce today's docs exactly.
 "brand": "WSO2"
+"company": "{brand}"
 "legal_suffix": "LLC"
-"legal_name": "{brand} {legal_suffix}"
+"legal_name": "{company} {legal_suffix}"
 "legal_name_old": "{brand} Inc"
 "brand_slug": "wso2"
 "brand_anchor": "{brand_slug}"

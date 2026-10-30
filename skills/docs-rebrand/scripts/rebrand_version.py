@@ -239,7 +239,7 @@ def main():
         return
 
     names = load_yaml(args.names) or {}
-    missing = [k for k in ("brand", "legal_suffix", "brand_slug") if not names.get(k)]
+    missing = [k for k in ("brand", "company", "brand_slug") if not names.get(k)]
     if missing:
         sys.exit(f"Set {', '.join(missing)} in {args.names} before applying.")
     engine_names = engine + ["--names", args.names]

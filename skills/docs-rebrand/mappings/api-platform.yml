@@ -30,10 +30,14 @@ vars:
   # --- brand ---
   # Brand name in prose, for example "xxxxx". Root for most product names.
   brand: "WSO2"
-  # What follows the brand in the legal entity name, including any trailing period, for example "Labs Inc.".
-  legal_suffix: "LLC."
-  # Full legal entity in copyright lines. Override it if the legal name doesn't start with the brand.
-  legal_name: "{brand} {legal_suffix}"
+  # The company name in text, where "WSO2" means the company rather than a label: "WSO2 provides", "managed by WSO2", "WSO2's". For example "xxxxx Labs".
+  company: "{brand}"
+  # The legal entity type that follows the company name.
+  legal_suffix: "LLC"
+  # Full legal entity name, as in the copyright footer, for example "xxxxx Labs LLC".
+  legal_name: "{company} {legal_suffix}"
+  # The former legal entity name that still appears in older text.
+  legal_name_old: "{brand} Inc"
   # Lowercase brand slug for URLs and sample names, for example "xxxxx".
   brand_slug: "wso2"
 
@@ -200,15 +204,19 @@ masks:
 # label: optional words added to the commit subject in direct.py commits.
 # The heading-anchor rule is last so its commit follows the heading renames.
 rules:
-  # Copyright footer ">WSO2</a> LLC.": the brand goes inside the link and the legal suffix after it.
+  # Copyright footer ">WSO2</a> LLC.": the company name goes inside the link and the legal entity type after it.
   - id: legal-link
     label: in the copyright link
-    find: '>WSO2</a> LLC\.'
-    replace: '>{brand}</a> {legal_suffix}'
-  # "WSO2 LLC" and "WSO2 Inc" -> {legal_name}.
+    find: '>WSO2</a> LLC\b'
+    replace: '>{company}</a> {legal_suffix}'
+  # "WSO2 LLC" -> {legal_name}.
   - id: legal-name
-    find: '\bWSO2 (?:LLC|Inc)\.?'
+    find: '\bWSO2 LLC\b'
     replace: '{legal_name}'
+  # The former entity name "WSO2 Inc" -> {legal_name_old}.
+  - id: legal-name-old
+    find: '\bWSO2 Inc\b'
+    replace: '{legal_name_old}'
   # The "wso2" org in github.com, raw.githubusercontent.com, ghcr.io, and pkg.go.dev paths -> {github_org}. Code value: stays the same unless the variable is changed.
   - id: github-org
     find: '(?<![\w.-])((?:https?://)?(?:www\.)?(?:github\.com|raw\.githubusercontent\.com|ghcr\.io|pkg\.go\.dev/github\.com)/)wso2(?=[/\s)\]\"''#?:`<]|$)'
@@ -435,6 +443,24 @@ rules:
   - id: cloud-slug
     find: '(?i)bijira'
     replace: '{cloud_slug}'
+  # "WSO2's", where the company owns something -> {company}, as in "xxxxx Labs's subscription".
+  - id: company-possessive
+    label: as the company
+    find: '(?<![\w./-])WSO2(?=[''’]s\b)'
+    replace: '{company}'
+    context: prose
+  # "WSO2" doing something, as in "WSO2 provides", "WSO2 hosts", "WSO2 and customers" -> {company}.
+  - id: company-acts
+    label: as the company
+    find: '(?<![\w./-])WSO2(?= (?:provides|hosts|runs|manages|publishes|handles|shipped|upgrades|offers|maintains|recommends|supports|releases|delivers|develops|owns|operates|gives|is|has|does|will|can|and)\b)'
+    replace: '{company}'
+    context: prose
+  # "WSO2" followed by punctuation or "to", as in "managed by WSO2," or "want WSO2 to host it" -> {company}. A line ending in "WSO2" is left to the brand rule, because a product name can wrap onto the next line.
+  - id: company-object
+    label: as the company
+    find: '(?<![\w./-])WSO2(?=\)|[,.;:!?](?!\w)| (?:to|so|plus|or)\b)'
+    replace: '{company}'
+    context: prose
   # Any "WSO2" still left inside code samples, such as sample display names -> {sample_brand}.
   - id: brand-code
     label: in code samples

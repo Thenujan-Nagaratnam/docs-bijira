@@ -10,7 +10,9 @@ product gets a different name. Mentions are approximate, across API Platform
 | Current | New | Variable |
 | --- | --- | --- |
 | WSO2 | `<brand>` | `brand` |
-| WSO2 LLC (copyright footer) | `<brand> <legal_suffix>` | `legal_name` |
+| WSO2 LLC (copyright footer) | `<company> <legal_suffix>`, for example xxxxx Labs LLC | `legal_name` |
+| WSO2 meaning the company ("WSO2 provides", "managed by WSO2", "WSO2's") | xxxxx Labs | `company` |
+| WSO2 as a label ("WSO2 subscription", "WSO2 private registry") and in product names | xxxxx | `brand` |
 | WSO2 Inc (older text, 48) | `<brand> Inc` by default | `legal_name_old` (API Manager) |
 
 ## API Platform docs
