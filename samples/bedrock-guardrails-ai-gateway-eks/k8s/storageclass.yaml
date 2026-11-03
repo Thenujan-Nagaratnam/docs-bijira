@@ -1,0 +1,12 @@
+# Amazon EBS storage class for EKS Auto Mode, which has no default storage class.
+# The gateway controller stores its SQLite database on a volume from this class.
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: auto-ebs-sc
+provisioner: ebs.csi.eks.amazonaws.com
+volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Delete
+parameters:
+  type: gp3
+  encrypted: "true"

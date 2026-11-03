@@ -1,0 +1,56 @@
+# Values for the WSO2 AI Gateway Helm chart, version 2026.09.24.
+# scripts/install-gateway.sh fills in the ${...} values from the Terraform outputs
+# and adds the admin user's bcrypt hash from a separate, temporary values file.
+
+serviceAccount:
+  create: true
+  name: ai-gateway            # Must match the EKS Pod Identity association
+
+gateway:
+  config:
+    controller:
+      encryption:
+        providers:
+          - type: aesgcm
+            keys:
+              - version: aesgcm256-v1
+                file: /app/data/aesgcm-keys/default-aesgcm256-v1.bin
+      logging:
+        level: info
+        format: json
+    policy_engine:
+      logging:
+        level: info           # Debug logs can record prompts and completions
+        format: json
+
+  # Gateway-wide allowlist for the aws-bedrock-guardrail policy. The controller
+  # rejects any attachment that selects another Region, another guardrail,
+  # or a credential mode other than the pod's IAM role.
+  config_toml: |
+    awsbedrock_allowed_regions       = ["${AWS_REGION}"]
+    awsbedrock_allowed_guardrail_ids = ["${BASELINE_GUARDRAIL_ID}", "${SUPPORT_GUARDRAIL_ID}"]
+    awsbedrock_allowed_auth_types    = ["default-credential-chain"]
+
+  controller:
+    image:
+      tag: "2026.09.24"
+    encryptionKeys:
+      enabled: true
+      secretName: gateway-encryption-keys
+      mountPath: /app/data/aesgcm-keys
+    tls:
+      enabled: true
+      certificateProvider: secret
+      secret:
+        name: gateway-tls
+        certKey: tls.crt
+        keyKey: tls.key
+    persistence:
+      enabled: true
+      storageClass: auto-ebs-sc
+
+  gatewayRuntime:
+    image:
+      tag: "2026.09.24"
+    service:
+      type: ClusterIP         # Reachable only from inside the cluster
