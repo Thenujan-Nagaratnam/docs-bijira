@@ -9,7 +9,7 @@ tags:
   - codex
   - service-provider-guides
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-10-21
+last_updated: 2026-11-26
 content_type: "reference"
 ---
 
@@ -25,7 +25,7 @@ A step-by-step guide for Codex CLI.
 
 - [Configure OpenAI Codex CLI with AI Gateway](../ai-and-mcp/ai-coding-assistants/codex-configuration-with-ai-gateway.md)
 
-    Route Codex CLI requests through an OpenAI provider and an App LLM Proxy.
+    Route Codex CLI requests through a self-hosted gateway and an OpenAI LLM service provider.
 
     Guide · Codex CLI · Hybrid
 
@@ -49,8 +49,8 @@ Register the OpenAI API with the gateway. The gateway keeps the API key, not you
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
-- [Call OpenAI through the gateway](../../cloud/ai-workspace/using-sdks.md#openai) <span class="vendor-meta">AI Workspace</span>
+- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">Agent control plane</span>
+- [Call OpenAI through the gateway](../../cloud/ai-workspace/using-sdks.md#openai) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
@@ -71,7 +71,7 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Semantic cache policy](../../cloud/ai-workspace/policies/other-policies/semantic-cache.md) <span class="vendor-meta">AI Workspace</span>
+- [Semantic cache policy](../../cloud/ai-workspace/policies/other-policies/semantic-cache.md) <span class="vendor-meta">Agent control plane</span>
 - [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
 </div>
@@ -95,7 +95,7 @@ Token limits, semantic caching, and the other AI API policies work the same way 
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-Routing, token limits, cost control, and the other AI Workspace policies work the same way for every provider. See the [AI Workspace overview](../../cloud/ai-workspace/overview.md).
+Routing, token limits, cost control, and the other guardrails in the agent control plane work the same way for every provider. See the [agent control plane overview](../../cloud/ai-workspace/overview.md).
 
 </div>
 
