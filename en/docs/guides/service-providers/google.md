@@ -10,7 +10,7 @@ tags:
   - gemini-cli
   - service-provider-guides
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-10-21
+last_updated: 2026-11-26
 content_type: "reference"
 ---
 
@@ -26,7 +26,7 @@ A step-by-step guide for Gemini CLI.
 
 - [Configure Google Gemini CLI with AI Gateway](../ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway.md)
 
-    Route Gemini CLI requests through a Gemini provider and an App LLM Proxy.
+    Route Gemini CLI requests through a self-hosted gateway and a Gemini LLM service provider.
 
     Guide · Gemini CLI · Hybrid
 
@@ -44,8 +44,8 @@ Register the Gemini API with the gateway. Applications call the gateway and neve
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
-- [Call Gemini through the gateway](../../cloud/ai-workspace/using-sdks.md#gemini) <span class="vendor-meta">AI Workspace</span>
+- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">Agent control plane</span>
+- [Call Gemini through the gateway](../../cloud/ai-workspace/using-sdks.md#gemini) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
@@ -75,7 +75,7 @@ Keep clients on the OpenAI request format. A transformer policy converts request
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-Routing, token limits, cost control, and the other AI Workspace policies work the same way for every provider. See the [AI Workspace overview](../../cloud/ai-workspace/overview.md).
+Routing, token limits, cost control, and the other guardrails in the agent control plane work the same way for every provider. See the [agent control plane overview](../../cloud/ai-workspace/overview.md).
 
 </div>
 
