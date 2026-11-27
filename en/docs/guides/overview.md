@@ -55,7 +55,7 @@ Route, secure, and control cost for requests to LLM providers.
 
     Put a token quota on an LLM service provider to protect your budget.
 
-- [Block prompt injection and unsafe requests with LLM proxy guardrails](ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md)
+- [Block prompt injection and unsafe requests with LLM provider guardrails](ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md)
 
     Chain guardrails to reject unsafe prompts before they reach your model.
 

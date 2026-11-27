@@ -849,7 +849,7 @@ nav:
             - Observe LLM Traffic on the AI Gateway: guides/ai-and-mcp/observe-llm-traffic.md
             - Enforce a Consistent AI Persona with the Prompt Decorator Policy: guides/ai-and-mcp/using-prompt-decorator-policy.md
             - Reduce MCP Tool Poisoning Risk with the MCP Access Control Policy: guides/ai-and-mcp/block-mcp-tool-poisoning-with-the-mcp-access-control-policy.md
-            - Block Prompt Injection and Unsafe Requests with LLM Proxy Guardrails: guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md
+            - Block Prompt Injection and Unsafe Requests with LLM Provider Guardrails: guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md
             - Build an AI App with Claude Code that Calls Governed Backend APIs: guides/ai-and-mcp/build-ai-app-with-claude-code.md
             - Build an AI Agent That Uses Aggregated MCP Tools from Multiple APIs: guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers.md
             - Convert a REST API into an MCP Tool and Use It in Claude Desktop: guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
@@ -975,7 +975,7 @@ nav:
             - Observe LLM Traffic on the AI Gateway: guides/ai-and-mcp/observe-llm-traffic.md
             - Enforce a Consistent AI Persona with the Prompt Decorator Policy: guides/ai-and-mcp/using-prompt-decorator-policy.md
             - Reduce MCP Tool Poisoning Risk with the MCP Access Control Policy: guides/ai-and-mcp/block-mcp-tool-poisoning-with-the-mcp-access-control-policy.md
-            - Block Prompt Injection and Unsafe Requests with LLM Proxy Guardrails: guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md
+            - Block Prompt Injection and Unsafe Requests with LLM Provider Guardrails: guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md
             - Build an AI App with Claude Code that Calls Governed Backend APIs: guides/ai-and-mcp/build-ai-app-with-claude-code.md
             - Build an AI Agent That Uses Aggregated MCP Tools from Multiple APIs: guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers.md
             - Convert a REST API into an MCP Tool and Use It in Claude Desktop: guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
@@ -1211,7 +1211,7 @@ nav:
             - Observe LLM Traffic on the AI Gateway: guides/ai-and-mcp/observe-llm-traffic.md
             - Enforce a Consistent AI Persona with the Prompt Decorator Policy: guides/ai-and-mcp/using-prompt-decorator-policy.md
             - Reduce MCP Tool Poisoning Risk with the MCP Access Control Policy: guides/ai-and-mcp/block-mcp-tool-poisoning-with-the-mcp-access-control-policy.md
-            - Block Prompt Injection and Unsafe Requests with LLM Proxy Guardrails: guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md
+            - Block Prompt Injection and Unsafe Requests with LLM Provider Guardrails: guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md
             - Build an AI App with Claude Code that Calls Governed Backend APIs: guides/ai-and-mcp/build-ai-app-with-claude-code.md
             - Build an AI Agent That Uses Aggregated MCP Tools from Multiple APIs: guides/ai-and-mcp/build-ai-agent-with-multiple-mcp-servers.md
             - Convert a REST API into an MCP Tool and Use It in Claude Desktop: guides/ai-and-mcp/convert-rest-api-to-mcp-server.md
@@ -1771,7 +1771,7 @@ nav:
         - Govern LLM Traffic:
             - Set up a Governed Multi-Model LLM Provider with Cost Controls and Failover: guides/ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md
             - Enforce Token-Based Rate Limiting on an LLM Service Provider: guides/ai-and-mcp/enforce-token-based-rate-limiting-on-an-llm-proxy.md
-            - Block Prompt Injection and Unsafe Requests with LLM Proxy Guardrails: guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md
+            - Block Prompt Injection and Unsafe Requests with LLM Provider Guardrails: guides/ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md
             - Enforce a Consistent AI Persona with the Prompt Decorator Policy: guides/ai-and-mcp/using-prompt-decorator-policy.md
             - Observe LLM Traffic on the AI Gateway: guides/ai-and-mcp/observe-llm-traffic.md
         - Configure AI Coding Assistants with AI Gateway:
