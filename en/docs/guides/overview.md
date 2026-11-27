@@ -1,19 +1,19 @@
 ---
 title: "Guides overview"
-description: "Step-by-step guides for WSO2 API Platform, grouped by goal and by service provider, such as AWS, Azure, Anthropic, OpenAI, Google, and GitHub."
+description: "Step-by-step guides for Choreo API Platform, grouped by goal and by service provider, such as AWS, Azure, Anthropic, OpenAI, Google, and GitHub."
 canonical_url: https://wso2.com/api-platform/docs/guides/overview/
 md_url: https://wso2.com/api-platform/docs/guides/overview.md
 tags:
   - guides
   - overview
-author: WSO2 API Platform Documentation Team
+author: Choreo API Platform Documentation Team
 last_updated: 2026-11-26
 content_type: "overview"
 ---
 
 # Guides
 
-Guides are end-to-end walkthroughs built around real scenarios. Each guide takes you from an empty project to a working, governed API, AI, or MCP setup on WSO2 API Platform.
+Guides are end-to-end walkthroughs built around real scenarios. Each guide takes you from an empty project to a working, governed API, AI, or MCP setup on Choreo API Platform.
 
 Each guide gives you:
 
@@ -22,7 +22,7 @@ Each guide gives you:
 - A way to verify that everything works end to end
 - A runnable companion sample, where available
 
-Use guides to see how components such as AI Gateway, AI Workspace, Developer Portal, and MCP Hub work together. For details on a single feature, see the product documentation for [Cloud](../cloud/introduction/what-is-bijira.md), [API Manager](../api-manager/overview.md), [AI Gateway](../ai-gateway/1.1.0/overview.md), or [API Portal](../api-portal/1.0.0/overview.md).
+Use guides to see how components such as AI Gateway, the agent control plane, Developer Portal, and MCP Hub work together. For details on a single feature, see the product documentation for [Cloud](../cloud/introduction/what-is-bijira.md), [AI Gateway](../ai-gateway/1.1.0/overview.md), or [API Portal](../api-portal/1.0.0/overview.md).
 
 ## Explore what you can build
 
@@ -365,7 +365,7 @@ Clone runnable sample apps for these guides from GitHub.
 
 ---
 
-New to WSO2 API Platform? Start with a quick start guide, or ask the community for help.
+New to Choreo API Platform? Start with a quick start guide, or ask the community for help.
 
 [Get started &rarr;](../get-started.md)
 
