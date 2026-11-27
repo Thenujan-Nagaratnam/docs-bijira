@@ -10,7 +10,7 @@ tags:
   - amazon-api-gateway
   - service-provider-guides
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-10-21
+last_updated: 2026-11-26
 content_type: "reference"
 ---
 
@@ -26,7 +26,7 @@ Step-by-step guides for AWS. Guides are part of this documentation. Tutorials ar
 
 - [Use Amazon Bedrock and Bedrock Guardrails with WSO2 AI Gateway](https://wso2.com/api-platform/learn/aws-bedrock-llm-guardrails-wso2-ai-gateway/)
 
-    Register Bedrock in AI Workspace, create an App LLM Proxy, attach a native Bedrock Guardrail, and verify request and response validation.
+    Add Bedrock as an LLM service provider, attach a native Bedrock Guardrail, and verify request and response validation.
 
     Learn Hub tutorial · Amazon Bedrock · Self-hosted
 
@@ -56,7 +56,7 @@ Connect Amazon Bedrock and manage its models and credentials centrally.
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md) <span class="vendor-meta">AI Workspace</span>
+- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
@@ -126,7 +126,7 @@ Token limits, semantic caching, and the other AI API policies work the same way 
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-Routing, token limits, cost control, and the other AI Workspace policies work the same way for every provider. See the [AI Workspace overview](../../cloud/ai-workspace/overview.md).
+Routing, token limits, cost control, and the other guardrails in the agent control plane work the same way for every provider. See the [agent control plane overview](../../cloud/ai-workspace/overview.md).
 
 </div>
 
@@ -191,7 +191,7 @@ The Kubernetes deployment docs aren't specific to AWS, but they apply to Amazon 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
 - [Set up a self-hosted gateway](../../cloud/api-platform-gateway/setting-up.md) <span class="vendor-meta">Cloud console</span>
-- [Set up an AI Gateway](../../cloud/ai-workspace/ai-gateways/setting-up.md) <span class="vendor-meta">AI Workspace</span>
+- [Set up an AI Gateway](../../cloud/ai-workspace/ai-gateways/setting-up.md) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
