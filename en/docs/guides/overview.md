@@ -51,7 +51,7 @@ Route, secure, and control cost for requests to LLM providers.
 
     Spread traffic across models with per-team token budgets, PII masking, and caching.
 
-- [Enforce token-based rate limiting on an LLM proxy](ai-and-mcp/enforce-token-based-rate-limiting-on-an-llm-proxy.md)
+- [Enforce token-based rate limiting on an LLM service provider](ai-and-mcp/enforce-token-based-rate-limiting-on-an-llm-proxy.md)
 
     Put a token quota on an LLM proxy to protect your provider budget.
 
