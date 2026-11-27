@@ -7,7 +7,7 @@ tags:
   - guides
   - overview
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-10-20
+last_updated: 2026-11-26
 content_type: "overview"
 ---
 
@@ -49,7 +49,7 @@ Route, secure, and control cost for requests to LLM providers.
 
 - [Set up a governed multi-model LLM provider with cost controls and failover](ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md)
 
-    Spread traffic across models with per-team token budgets, PII masking, and caching.
+    Spread traffic across models with per-app token limits, PII masking, and caching.
 
 - [Enforce token-based rate limiting on an LLM service provider](ai-and-mcp/enforce-token-based-rate-limiting-on-an-llm-proxy.md)
 
@@ -131,7 +131,7 @@ Route Claude Code, Gemini CLI, Codex, and GitHub Copilot traffic through AI Gate
 
 - [Configure Claude Code with AI Gateway](ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway.md)
 
-    Route Claude Code requests through AI Gateway with an App LLM Proxy.
+    Route Claude Code requests through AI Gateway with an LLM service provider.
 
 - [Configure Claude Code with AI Gateway using a Claude subscription](ai-and-mcp/ai-coding-assistants/claude-code-subscription-configuration-with-ai-gateway.md)
 
@@ -139,15 +139,15 @@ Route Claude Code, Gemini CLI, Codex, and GitHub Copilot traffic through AI Gate
 
 - [Configure Google Gemini CLI with AI Gateway](ai-and-mcp/ai-coding-assistants/gemini-cli-configuration-with-ai-gateway.md)
 
-    Route Gemini CLI requests through AI Gateway with an App LLM Proxy.
+    Route Gemini CLI requests through AI Gateway with an LLM service provider.
 
 - [Configure OpenAI Codex CLI with AI Gateway](ai-and-mcp/ai-coding-assistants/codex-configuration-with-ai-gateway.md)
 
-    Route Codex CLI requests through AI Gateway with an App LLM Proxy.
+    Route Codex CLI requests through AI Gateway with an LLM service provider.
 
 - [Configure GitHub Copilot with AI Gateway](ai-and-mcp/ai-coding-assistants/github-copilot-configuration-with-ai-gateway.md)
 
-    Route GitHub Copilot CLI and Copilot Chat in VS Code requests through AI Gateway with an App LLM Proxy.
+    Route GitHub Copilot CLI and Copilot Chat in VS Code requests through AI Gateway with an LLM service provider.
 
 </div>
 
