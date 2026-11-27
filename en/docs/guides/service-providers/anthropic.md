@@ -11,7 +11,7 @@ tags:
   - claude-desktop
   - service-provider-guides
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-10-21
+last_updated: 2026-11-26
 content_type: "reference"
 ---
 
@@ -27,7 +27,7 @@ Step-by-step guides for Claude Code and Claude Desktop. Guides are part of this 
 
 - [Configure Claude Code with AI Gateway](../ai-and-mcp/ai-coding-assistants/claude-code-configuration-with-ai-gateway.md)
 
-    Route Claude Code requests through an Anthropic provider and an App LLM Proxy.
+    Route Claude Code requests through a self-hosted gateway and an Anthropic LLM service provider.
 
     Guide · Anthropic API key · Hybrid
 
@@ -84,8 +84,8 @@ Connect the Anthropic API. The gateway holds the Anthropic key, so developers an
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
-- [Call Anthropic through the gateway](../../cloud/ai-workspace/using-sdks.md#anthropic) <span class="vendor-meta">AI Workspace</span>
+- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">Agent control plane</span>
+- [Call Anthropic through the gateway](../../cloud/ai-workspace/using-sdks.md#anthropic) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
@@ -106,7 +106,7 @@ Token limits, semantic caching, and the other AI API policies work the same way 
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-Routing, token limits, cost control, and the other AI Workspace policies work the same way for every provider. See the [AI Workspace overview](../../cloud/ai-workspace/overview.md).
+Routing, token limits, cost control, and the other guardrails in the agent control plane work the same way for every provider. See the [agent control plane overview](../../cloud/ai-workspace/overview.md).
 
 </div>
 
@@ -136,8 +136,8 @@ Put an MCP proxy in front of an MCP server, and control which tools Claude can c
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [MCP proxies overview](../../cloud/ai-workspace/mcp-proxies/overview.md) <span class="vendor-meta">AI Workspace</span>
-- [Configure an MCP proxy](../../cloud/ai-workspace/mcp-proxies/configure-proxy.md) <span class="vendor-meta">AI Workspace</span>
+- [MCP proxies overview](../../cloud/ai-workspace/mcp-proxies/overview.md) <span class="vendor-meta">Agent control plane</span>
+- [Configure an MCP proxy](../../cloud/ai-workspace/mcp-proxies/configure-proxy.md) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
