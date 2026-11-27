@@ -10,7 +10,7 @@ tags:
   - vs-code
   - service-provider-guides
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-10-21
+last_updated: 2026-11-26
 content_type: "reference"
 ---
 
@@ -26,7 +26,7 @@ A step-by-step guide for GitHub Copilot.
 
 - [Configure GitHub Copilot with AI Gateway](../ai-and-mcp/ai-coding-assistants/github-copilot-configuration-with-ai-gateway.md)
 
-    Route GitHub Copilot CLI and Copilot Chat in VS Code through an App LLM Proxy.
+    Route GitHub Copilot CLI and Copilot Chat in VS Code through a self-hosted gateway and an OpenAI LLM service provider.
 
     Guide · GitHub Copilot · Hybrid
 
@@ -34,7 +34,7 @@ A step-by-step guide for GitHub Copilot.
 
 ## AI Gateway with GitHub Copilot
 
-With the bring-your-own-key (BYOK) option, GitHub Copilot sends requests for your model to an LLM proxy on WSO2 AI Gateway. Requests for GitHub-hosted models still go directly to GitHub.
+With the bring-your-own-key (BYOK) option, GitHub Copilot sends requests for your model to an LLM service provider on WSO2 AI Gateway. Requests for GitHub-hosted models still go directly to GitHub.
 
 <div class="vendor-cap" markdown="1">
 
@@ -45,7 +45,7 @@ The Copilot guide uses an OpenAI provider.
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
 - [Configure GitHub Copilot with AI Gateway](../ai-and-mcp/ai-coding-assistants/github-copilot-configuration-with-ai-gateway.md) <span class="vendor-meta">End-to-end guide</span>
-- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
+- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
@@ -59,7 +59,7 @@ The Copilot guide uses an OpenAI provider.
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-Routing, token limits, cost control, and the other AI Workspace policies work the same way for every provider. See the [AI Workspace overview](../../cloud/ai-workspace/overview.md).
+Routing, token limits, cost control, and the other guardrails in the agent control plane work the same way for every provider. See the [agent control plane overview](../../cloud/ai-workspace/overview.md).
 
 </div>
 
