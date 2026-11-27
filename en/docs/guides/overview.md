@@ -47,13 +47,13 @@ The guides below are grouped by use case. Whether you want to secure and manage 
 
 Route, secure, and control cost for requests to LLM providers.
 
-- [Set up a governed multi-model LLM proxy with cost controls and failover](ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md)
+- [Set up a governed multi-model LLM provider with cost controls and failover](ai-and-mcp/set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md)
 
     Spread traffic across models with per-team token budgets, PII masking, and caching.
 
 - [Enforce token-based rate limiting on an LLM service provider](ai-and-mcp/enforce-token-based-rate-limiting-on-an-llm-proxy.md)
 
-    Put a token quota on an LLM proxy to protect your provider budget.
+    Put a token quota on an LLM service provider to protect your budget.
 
 - [Block prompt injection and unsafe requests with LLM proxy guardrails](ai-and-mcp/block-prompt-injection-and-unsafe-requests-with-llm-proxy-guardrails.md)
 

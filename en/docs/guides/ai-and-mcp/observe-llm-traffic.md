@@ -152,7 +152,7 @@ Then work down the panels:
 
 - [Insights overview](../../cloud/monitoring-and-insights/insights.md): every dashboard, metric, and chart available in Insights
 - [Enforce token-based rate limiting on an LLM service provider](enforce-token-based-rate-limiting-on-an-llm-proxy.md): act on the token figures by capping consumption per window
-- [Set up a governed multi-model LLM proxy with cost controls and failover](set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md): distribute traffic across models, then confirm the split in **Traffic Share by Model**
+- [Set up a governed multi-model LLM provider with cost controls and failover](set-up-a-governed-multi-model-llm-proxy-with-cost-controls-and-failover.md): distribute traffic across models, then confirm the split in **Traffic Share by Model**
 - [Guardrails overview](../../cloud/ai-workspace/policies/guardrails/overview.md): add guardrails, then watch them in **Guardrail Triggers**
 
 ## Try the samples
