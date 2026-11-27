@@ -10,7 +10,7 @@ tags:
   - entra-id
   - service-provider-guides
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-10-21
+last_updated: 2026-11-26
 content_type: "reference"
 ---
 
@@ -36,7 +36,7 @@ Point the gateway at your Azure deployment. The gateway stores the deployment ke
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
+- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
@@ -58,8 +58,8 @@ Keep clients on the OpenAI request format while the gateway routes to your Azure
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Call Azure OpenAI through the gateway](../../cloud/ai-workspace/using-sdks.md#azure-openai) <span class="vendor-meta">AI Workspace</span>
-- [Call Azure AI Foundry through the gateway](../../cloud/ai-workspace/using-sdks.md#azure-ai-foundry) <span class="vendor-meta">AI Workspace</span>
+- [Call Azure OpenAI through the gateway](../../cloud/ai-workspace/using-sdks.md#azure-openai) <span class="vendor-meta">Agent control plane</span>
+- [Call Azure AI Foundry through the gateway](../../cloud/ai-workspace/using-sdks.md#azure-ai-foundry) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
@@ -100,7 +100,7 @@ Check prompts and responses against Azure AI Content Safety categories and sever
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Azure Content Safety guardrail](../../cloud/ai-workspace/policies/guardrails/azure-content-safety.md) <span class="vendor-meta">AI Workspace</span>
+- [Azure Content Safety guardrail](../../cloud/ai-workspace/policies/guardrails/azure-content-safety.md) <span class="vendor-meta">Agent control plane</span>
 - [Azure Content Safety policy](https://wso2.com/api-platform/policy-hub/policies/azure-content-safety-content-moderation) <span class="vendor-meta">Policy Hub</span>
 
 </div>
@@ -128,7 +128,7 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Semantic cache policy](../../cloud/ai-workspace/policies/other-policies/semantic-cache.md) <span class="vendor-meta">AI Workspace</span>
+- [Semantic cache policy](../../cloud/ai-workspace/policies/other-policies/semantic-cache.md) <span class="vendor-meta">Agent control plane</span>
 - [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
 </div>
@@ -152,7 +152,7 @@ Token limits, semantic caching, and the other AI API policies work the same way 
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-Routing, token limits, cost control, and the other AI Workspace policies work the same way for every provider. See the [AI Workspace overview](../../cloud/ai-workspace/overview.md).
+Routing, token limits, cost control, and the other guardrails in the agent control plane work the same way for every provider. See the [agent control plane overview](../../cloud/ai-workspace/overview.md).
 
 </div>
 
