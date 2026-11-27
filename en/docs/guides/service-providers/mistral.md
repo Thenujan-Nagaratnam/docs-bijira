@@ -8,7 +8,7 @@ tags:
   - mistral
   - service-provider-guides
 author: WSO2 API Platform Documentation Team
-last_updated: 2026-10-21
+last_updated: 2026-11-26
 content_type: "reference"
 ---
 
@@ -34,8 +34,8 @@ Register the Mistral API with the gateway, which stores the API key on behalf of
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">AI Workspace</span>
-- [AI Workspace quickstart with Mistral](../../cloud/ai-workspace/quickstart.md) <span class="vendor-meta">AI Workspace</span>
+- [Configure an LLM provider](../../cloud/ai-workspace/llm-providers/configure-provider.md#authentication) <span class="vendor-meta">Agent control plane</span>
+- [Agent control plane quickstart with Mistral](../../cloud/ai-workspace/quickstart.md) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
@@ -56,7 +56,7 @@ Keep clients on the OpenAI request format while the gateway routes to Mistral.
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Call Mistral AI through the gateway](../../cloud/ai-workspace/using-sdks.md#mistral-ai) <span class="vendor-meta">AI Workspace</span>
+- [Call Mistral AI through the gateway](../../cloud/ai-workspace/using-sdks.md#mistral-ai) <span class="vendor-meta">Agent control plane</span>
 
 </div>
 
@@ -82,7 +82,7 @@ Semantic caching and the semantic prompt guard compare prompts by meaning, and c
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-- [Semantic cache policy](../../cloud/ai-workspace/policies/other-policies/semantic-cache.md) <span class="vendor-meta">AI Workspace</span>
+- [Semantic cache policy](../../cloud/ai-workspace/policies/other-policies/semantic-cache.md) <span class="vendor-meta">Agent control plane</span>
 - [Semantic prompt guard policy](https://wso2.com/api-platform/policy-hub/policies/semantic-prompt-guard) <span class="vendor-meta">Policy Hub</span>
 
 </div>
@@ -106,7 +106,7 @@ Token limits, semantic caching, and the other AI API policies work the same way 
 
 <div class="vendor-links" data-deployments="hybrid" markdown="1">
 
-Routing, token limits, cost control, and the other AI Workspace policies work the same way for every provider. See the [AI Workspace overview](../../cloud/ai-workspace/overview.md).
+Routing, token limits, cost control, and the other guardrails in the agent control plane work the same way for every provider. See the [agent control plane overview](../../cloud/ai-workspace/overview.md).
 
 </div>
 
