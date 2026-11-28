@@ -20,8 +20,8 @@
 <rect x="493.33333333333337" y="128" width="122.66666666666667" height="84" rx="12" fill="#FFFFFF" stroke="rgba(11,22,51,.10)" stroke-width="1" filter="url(#sh)"/>
 <rect x="540.6666666666667" y="140" width="28" height="28" rx="8.4" fill="#F4F6FA" stroke="none" stroke-width="1"/>
 <g transform="translate(554.6666666666667 154.0) scale(0.6416666666666667) translate(-12 -12)"><path d="M12 20V10 M18 20V4 M6 20v-4" fill="none" stroke="#0B1633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
-<text x="554.6666666666667" y="186" font-size="11" font-weight="600" fill="#0B1633" text-anchor="middle">Moesif analytics</text>
-<text x="554.6666666666667" y="200" font-size="9.5" font-weight="400" fill="#5A6072" text-anchor="middle">connected separately</text>
+<text x="554.6666666666667" y="186" font-size="11" font-weight="600" fill="#0B1633" text-anchor="middle">Analytics and</text>
+<text x="554.6666666666667" y="200" font-size="9.5" font-weight="400" fill="#5A6072" text-anchor="middle">Monetization</text>
 <line x1="424.0" y1="224" x2="424.0" y2="268" stroke="#1F4FFF" stroke-opacity=".5" stroke-width="2.25" stroke-dasharray="6 4" marker-end="url(#ah-c)"/>
 <text x="436.0" y="250.0" font-size="10.5" font-weight="600" fill="#0B1633" text-anchor="start">deploys APIs and policies</text>
 <rect x="220" y="268" width="408" height="128" rx="18" fill="#FFFFFF" stroke="rgba(11,22,51,.10)" stroke-width="1.25"/>
@@ -30,7 +30,7 @@
 <rect x="246" y="324.0" width="40" height="40" rx="12" fill="#FFFFFF" stroke="none" stroke-width="1"/>
 <g transform="translate(266 344.0) scale(0.8333333333333334) translate(-12 -12)"><path d="M5 12h14 M12 5l7 7-7 7" fill="none" stroke="#0B1633" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
 <text x="302" y="334.0" font-size="14" font-weight="600" fill="#0B1633" text-anchor="start">API Gateway</text>
-<text x="302" y="353.0" font-size="11" font-weight="400" fill="#5A6072" text-anchor="start">Self-hosted, Go-based platform gateway</text>
+<text x="302" y="353.0" font-size="11" font-weight="400" fill="#5A6072" text-anchor="start">Self-hosted platform gateway</text>
 <text x="302" y="368.0" font-size="11" font-weight="400" fill="#5A6072" text-anchor="start">Third-party gateways can also connect</text>
 <rect x="208" y="44" width="432" height="364" rx="22" fill="none" stroke="#0B1633" stroke-width="1.5" stroke-dasharray="7 5"/>
 <text x="228" y="68" font-size="9.5" font-weight="600" fill="#0B1633" text-anchor="start" font-family="'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace" letter-spacing=".12em">YOUR INFRASTRUCTURE</text>
